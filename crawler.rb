@@ -36,7 +36,7 @@ workers.worker { |ref| get_document(ref) }
 t1 = Time.now
 puts "Started at: #{t1}"
 
-%w[bibxml bibxml2 bibxml3 bibxml4].each do |dir|
+%w[bibxml bibxml2 bibxml3 bibxml4 bibxml5 bibxml6].each do |dir|
   url = "https://xml2rfc.tools.ietf.org/public/rfc/#{dir}/"
   resp = Net::HTTP.get URI(url)
   index = Nokogiri::HTML resp
