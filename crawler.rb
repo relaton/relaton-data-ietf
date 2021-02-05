@@ -15,12 +15,12 @@ def fetch_document(uri, attempts)
   resp
 end
 
-def get_document(ref) # rubocop:disable Metrics/MethodLength
+def get_document(ref)
   file = 'data/' + ref.split('/').last
-  if File.exist? file
-    warn "File #{file} exist"
-    return
-  end
+  # if File.exist? file
+  #   warn "File #{file} exist"
+  #   return
+  # end
 
   resp = fetch_document URI(ref), 3
   File.write file, resp # , encoding: 'UTF-8'
