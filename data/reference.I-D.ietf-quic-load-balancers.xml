@@ -3,22 +3,15 @@
 <reference anchor='I-D.ietf-quic-load-balancers'>
 <front>
 <title>QUIC-LB: Generating Routable QUIC Connection IDs</title>
-
 <author initials='M' surname='Duke' fullname='Martin Duke'>
-    <organization />
+<organization />
 </author>
-
 <author initials='N' surname='Banks' fullname='Nick Banks'>
-    <organization />
+<organization />
 </author>
-
-<date month='October' day='30' year='2020' />
-
-<abstract><t>QUIC connection IDs allow continuation of connections across address/ port 4-tuple changes, and can store routing information for stateless or low-state load balancers.  They also can prevent linkability of connections across deliberate address migration through the use of protected communications between client and server.  This creates issues for load-balancing intermediaries.  This specification standardizes methods for encoding routing information given a small set of configuration parameters.  This framework also enables offload of other QUIC functions to trusted intermediaries, given the explicit cooperation of the QUIC server.</t></abstract>
-
+<date year='2021' month='February' day='04' />
+<abstract><t>The QUIC protocol design is resistant to transparent packet inspection, injection, and modification by intermediaries.  However, the server can explicitly cooperate with network services by agreeing to certain conventions and/or sharing state with those services. This specification provides a standardized means of solving three problems: (1) maintaining routability to servers via a low-state load balancer even when the connection IDs in use change; (2) explicit encoding of the connection ID length in all packets to assist hardware accelerators; and (3) injection of QUIC Retry packets by an anti-Denial-of-Service agent on behalf of the server.</t></abstract>
 </front>
-
-<seriesInfo name='Internet-Draft' value='draft-ietf-quic-load-balancers-05' />
-<format type='TXT'
-        target='http://www.ietf.org/internet-drafts/draft-ietf-quic-load-balancers-05.txt' />
+<seriesInfo name='Internet-Draft' value='draft-ietf-quic-load-balancers-06'/>
+<format type='TXT' target='https://www.ietf.org/internet-drafts/draft-ietf-quic-load-balancers-06.txt'/>
 </reference>
