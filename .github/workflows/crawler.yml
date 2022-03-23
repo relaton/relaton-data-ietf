@@ -4,6 +4,7 @@ on:
   push:
   schedule:
     - cron: '0 13 * * *'
+  workflow_dispatch:
 
 jobs:
   crawl:
@@ -15,7 +16,7 @@ jobs:
       - name: Use Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.4
+          ruby-version: 3.0
       - name: Use cahed gems
         uses: actions/cache@v2
         with:
