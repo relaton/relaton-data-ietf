@@ -1,0 +1,101 @@
+---
+id: draftmitchellintarearfc5837bis01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Extending ICMP for Interface and Next-Hop Identification
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mitchell-intarea-rfc5837bis-01
+docidentifier:
+- content: draft-mitchell-intarea-rfc5837bis
+  type: Internet-Draft
+- content: draft-mitchell-intarea-rfc5837bis-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mitchell-intarea-rfc5837bis
+date:
+- type: published
+  at: '2026-03-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jon
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Mitchell
+      completename:
+        language: en
+        content: Jon Mitchell
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google LLC
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo defines data structures that can be appended to selected
+       ICMP messages.  The ICMP extensions defined herein can be used to
+       identify any combination of the following: the IP interface upon
+       which a datagram arrived, the sub-IP component of an IP interface
+       upon which a datagram arrived, the IP interface through which the
+       datagram would have been forwarded had it been forwardable, the sub-
+       IP component of an IP interface through which the datagram would have
+       been forwarded had it been forwardable, and the IP next hop to which
+       the datagram would have been forwarded.
+
+       Devices can use this ICMP extension to identify interfaces and their
+       components by any combination of the following: ifIndex, IPv4
+       address, IPv6 address, name, and MTU.  ICMP-aware devices can use
+       these extensions to identify both numbered and unnumbered interfaces.
+
+       This document obsoletes RFC 5837.  To preserve strict backward
+       compatibility with legacy implementations, it preserves the original
+       Interface Information Object (Class-Num 2) as defined in RFC 5837,
+       and introduces a new Extended Interface Information Object to
+       accommodate new interface roles.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mitchell-intarea-rfc5837bis-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mitchell-intarea-rfc5837bis-00
+    docidentifier:
+    - content: draft-mitchell-intarea-rfc5837bis-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mitchell-intarea-rfc5837bis-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,84 @@
+---
+id: draftcarletonworkloadauthzgrant00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Workload Authorization Grant
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-00
+docidentifier:
+- content: draft-carleton-workload-authz-grant
+  type: Internet-Draft
+- content: draft-carleton-workload-authz-grant-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.carleton-workload-authz-grant
+date:
+- type: published
+  at: '2026-08-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Paul
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Carleton
+      completename:
+        language: en
+        content: Paul Carleton
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Anthropic
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document profiles the Agent Identity Management System (AIMS)
+       framework for agent platforms that host many agent instances per
+       customer.  Each agent is identified by an opaque, non-reassignable
+       agent identifier; the agent obtains access tokens by presenting a JWT
+       authorization grant (RFC 7523), signed by the platform's per-tenancy
+       issuer, in the assertion parameter at the authorization server
+       protecting the resource server.  Trust is established once, by
+       reference to the issuer's published metadata and keys; agent creation
+       requires no per-agent step at the authorization server or resource
+       server; and authorization is expressed over platform-asserted agent
+       properties that resource servers map locally to permissions.  This
+       profile addresses agents acting on their own behalf; access on behalf
+       of a user or other principal is out of scope, though the design is
+       intended to compose with existing delegation mechanisms in which the
+       agent appears as the actor.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-carleton-workload-authz-grant-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

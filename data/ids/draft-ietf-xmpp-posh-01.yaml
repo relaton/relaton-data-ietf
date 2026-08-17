@@ -1,0 +1,133 @@
+---
+id: draftietfxmppposh01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: PKIX over Secure HTTP (POSH)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-xmpp-posh-01
+docidentifier:
+- content: draft-ietf-xmpp-posh
+  type: Internet-Draft
+- content: draft-ietf-xmpp-posh-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-xmpp-posh
+date:
+- type: published
+  at: '2014-06-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Matthew
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: M. A.
+      surname:
+        language: en
+        content: Miller
+      completename:
+        language: en
+        content: Matthew A. Miller
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Saint-Andre
+      completename:
+        language: en
+        content: Peter Saint-Andre
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Experience has shown that it is extremely difficult to deploy proper
+       PKIX certificates for TLS in multi-tenanted environments, since
+       certification authorities will not issue certificates for hosted
+       domains to hosting services, hosted domains do not want hosting
+       services to hold their private keys, and hosting services wish to
+       avoid liability for holding those keys.  As a result, domains hosted
+       in multi-tenanted environments often deploy non-HTTP applications
+       such as email and instant messaging using certificates that identify
+       the hosting service, not the hosted domain.  Such deployments force
+       end users and peer services to accept a certificate with an improper
+       identifier, resulting in obvious security implications.  This
+       document defines two methods that make it easier to deploy
+       certificates for proper server identity checking in non-HTTP
+       application protocols.  The first method enables the TLS client
+       associated with a user agent or peer application server to obtain the
+       end-entity certificate of a hosted domain over secure HTTP as an
+       alternative to standard PKIX techniques.  The second method enables a
+       hosted domain to securely delegate a non-HTTP application to a
+       hosting service using redirects provided by HTTPS itself or by a
+       pointer in a file served over HTTPS at the hosted domain.  While this
+       approach was developed for use in the Extensible Messaging and
+       Presence Protocol (XMPP) as a Domain Name Association prooftype, it
+       can be applied to any non-HTTP application protocol.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-xmpp-posh-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-xmpp-posh-00
+    docidentifier:
+    - content: draft-ietf-xmpp-posh-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-xmpp-posh-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-xmpp-posh-02
+    docidentifier:
+    - content: draft-ietf-xmpp-posh-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-xmpp-posh-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

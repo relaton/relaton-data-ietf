@@ -1,0 +1,122 @@
+---
+id: draftkrosembonedalta01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Asymmetric Loss-Tolerant Authentication
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-krose-mboned-alta-01
+docidentifier:
+- content: draft-krose-mboned-alta
+  type: Internet-Draft
+- content: draft-krose-mboned-alta-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.krose-mboned-alta
+date:
+- type: published
+  at: '2019-07-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kyle
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Rose
+      completename:
+        language: en
+        content: Kyle Rose
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Akamai Technologies, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jake
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Holland
+      completename:
+        language: en
+        content: Jake Holland
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Akamai Technologies, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Establishing authenticity of a stream of datagrams in the presence of
+       multiple receivers is naively achieved through the use of per-packet
+       asymmetric digital signatures, but at high computational cost for
+       both senders and receivers.  Timed Efficient Stream Loss-Tolerant
+       Authentication (TESLA) instead employs relatively cheap symmetric
+       authentication, achieving asymmetry via time-delayed key disclosure,
+       while adding latency to verification and imposing requirements on
+       time synchronization between receivers and the sender to prevent
+       forgery.  This document introduces Asymmetric Loss-Tolerant
+       Authentication (ALTA), which employs an acyclic graph of message
+       authentication codes (MACs) transmitted alongside data payloads, with
+       redundancy to enable authentication of all received payloads in the
+       presence of certain patterns of loss, along with regularly paced
+       digital signatures.  ALTA requires no time synchronization and
+       enables authentication of payloads as soon as sufficient
+       authentication material has been received.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-krose-mboned-alta-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-krose-mboned-alta-00
+    docidentifier:
+    - content: draft-krose-mboned-alta-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-krose-mboned-alta-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

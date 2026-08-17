@@ -1,0 +1,82 @@
+---
+id: draftmoskowitzadsbauth
+schema_version: v1.5.6
+formattedref:
+  content: draft-moskowitz-ads-b-auth
+title:
+- language: en
+  script: Latn
+  content: ADS-B Authentication
+docidentifier:
+- content: draft-moskowitz-ads-b-auth
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Automatic Dependent Surveillance – Broadcast (ADS-B) is a
+       surveillance technology mandated in many airspaces.  It is now widely
+       deployed but suffers from a lack of security and privacy.  From a
+       security point of view, it is relatively easy to spoof ADS-B messages
+       with readily available hardware and software.  From a privacy point
+       of view, every ADS-B message contains the aircraft's assigned 24-bit
+       ICAO address, a unique identifier that can be cross-referenced with
+       external databases (e.g. aircraft registries) to reveal the owner,
+       and can be used to track when and where a specific aircraft has
+       flown.  In addition, the main transmission medium used for ADS-B, the
+       1090 MHz frequency, on which messages are broadcast using the
+       Extended Squitter (1090ES) format, is approaching saturation in some
+       parts of the world due to the volume of ADS-B and other protocol
+       messages, resulting in packet loss in certain areas.
+
+       This paper presents the IETF TESLA protocol along with X.509
+       certificates issued by ICAO member states for each aircraft to
+       authenticate all ADS-B messaging.  It leverages the 8PSK phase
+       overlay (PO) scheme proposed in the Minimum Operational Performance
+       Standards (MOPS) for ADS-B (RTCA [DO-260C]), which enables 1090ES
+       ADS-B transmissions to convey three times more information, to
+       support the transmission of the extra security information required
+       by the authentication scheme.  By doing so, the impact of
+       authentication on channel usage is negligible.  Beyond message
+       authentication, this scheme protocol has two important additional
+       benefits: 1) the possibility to implement a Flight Authorization
+       scheme, allowing ATC and intercepting aircraft to not only
+       authenticate an aircraft but to verify that it is authorizes to
+       conduct that flight and 2) a privacy-preserving methodology that
+       assigns random 24-bit identifiers to designated aircraft while still
+       enabling blind authentication of their ADS-B transmissions.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-moskowitz-ads-b-auth-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-moskowitz-ads-b-auth-00
+    docidentifier:
+    - content: draft-moskowitz-ads-b-auth-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-moskowitz-ads-b-auth-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-moskowitz-ads-b-auth-01
+    docidentifier:
+    - content: draft-moskowitz-ads-b-auth-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-moskowitz-ads-b-auth-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-moskowitz-ads-b-auth-02
+    docidentifier:
+    - content: draft-moskowitz-ads-b-auth-02
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,90 @@
+---
+id: drafthoodagtpbindings00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'AGTP Transport Bindings: TCP/TLS and QUIC'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-bindings-00
+docidentifier:
+- content: draft-hood-agtp-bindings
+  type: Internet-Draft
+- content: draft-hood-agtp-bindings-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hood-agtp-bindings
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hood
+      completename:
+        language: en
+        content: Chris Hood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nomotic, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Agent Transfer Protocol (AGTP) base specification defines AGTP
+       semantics independently of any specific transport.  This document
+       specifies the AGTP transport bindings for TCP with TLS 1.3 and for
+       QUIC, defining how AGTP requests and responses are carried over each
+       transport, how TLS mutual authentication composes with AGTP identity,
+       and how connection lifecycle events map to AGTP session semantics.
+
+       A central concern for the QUIC binding is replay safety.  QUIC
+       supports 0-RTT early data, which is replayable by design.  AGTP
+       requests carry authority-scoped actions; a replayed action method
+       could re-trigger authorized work without the requesting agent's
+       intent.  This document defines an AGTP-specific replay-safety
+       profile: early data is permitted only for safe idempotent methods
+       (QUERY, DISCOVER) and *MUST NOT* be used for action methods (EXECUTE,
+       DELEGATE, PURCHASE, TRANSACT, and the lifecycle methods).
+
+       This document follows the pattern established by HTTP: protocol
+       semantics defined independently of transport ([RFC9110] for HTTP),
+       with transport-specific bindings in separate documents.  AGTP
+       semantics are defined in [AGTP]; this document defines the transport
+       mechanics.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hood-agtp-bindings-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,83 @@
+---
+id: draftyakungoauthagentattestation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Agent Credential Attestation Protocol (ACAP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yakung-oauth-agent-attestation-00
+docidentifier:
+- content: draft-yakung-oauth-agent-attestation
+  type: Internet-Draft
+- content: draft-yakung-oauth-agent-attestation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.yakung-oauth-agent-attestation
+date:
+- type: published
+  at: '2026-03-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chudah
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Yakung
+      completename:
+        language: en
+        content: Chudah Yakung
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Attest
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Agent Credential Attestation Protocol
+       (ACAP), a cryptographic credentialing protocol for autonomous AI
+       agent pipelines.  An ACAP credential is a short-lived JSON Web Token
+       (JWT) signed with RS256 that carries scope-limited permissions
+       together with a SHA-256 hash of the original human instruction that
+       initiated the task.  Credentials may be delegated to child agents;
+       each delegation narrows scope, cannot outlive its parent, increments
+       a delegation depth counter, and extends a tamper-evident chain of
+       token identifiers.  Every lifecycle event is recorded in an append-
+       only, hash-chained audit log.
+
+       This document specifies the credential format, issuance rules,
+       delegation rules, verification algorithm, revocation semantics,
+       human-in-the-loop approval protocol, and audit log structure.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-yakung-oauth-agent-attestation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

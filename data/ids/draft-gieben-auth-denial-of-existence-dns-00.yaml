@@ -1,0 +1,122 @@
+---
+id: draftgiebenauthdenialofexistencedns00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Authenticated Denial of Existence in the DNS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gieben-auth-denial-of-existence-dns-00
+docidentifier:
+- content: draft-gieben-auth-denial-of-existence-dns
+  type: Internet-Draft
+- content: draft-gieben-auth-denial-of-existence-dns-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gieben-auth-denial-of-existence-dns
+date:
+- type: published
+  at: '2012-08-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: R
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: R. M.
+      surname:
+        language: en
+        content: Gieben
+      completename:
+        language: en
+        content: R. (Miek) Gieben
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Matthijs
+      - language: en
+        script: Latn
+        initial: W
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: W. M.
+      surname:
+        language: en
+        content: Mekking
+      completename:
+        language: en
+        content: Matthijs Mekking
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Authenticated denial of existence allows a resolver to validate that
+       a certain domain name does not exist.  It is also used to signal that
+       a domain name exists, but does not have the specific RR type you were
+       asking for.  This document attempts to answer two simple questions.
+
+       When returning a negative DNSSEC response, a name server sometimes
+       includes up to two NSEC records.  With NSEC3 the maximum amount is
+       three.
+
+       o  Why do you need up to two NSEC records?
+
+       o  And why does NSEC3 sometimes require an extra record?
+
+       The answer to the questions hinges on the concept of wildcards and
+       the "closest encloser".  With NSEC, the name that is the "closest
+       encloser" is implicitly given in the record that also denies the
+       existence of the domain name.  With NSEC3, due to its hashing, this
+       information has to be given explicitly to a resolver.  It needs one
+       record to tell the resolver the closest encloser and then another to
+       deny the existence of the domain name.  Both NSEC and NSEC3 may need
+       yet another record to deny or assert a wildcard presence.  This
+       results in a maximum of two NSEC and three NSEC3 records,
+       respectively.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-gieben-auth-denial-of-existence-dns-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gieben-auth-denial-of-existence-dns-01
+    docidentifier:
+    - content: draft-gieben-auth-denial-of-existence-dns-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gieben-auth-denial-of-existence-dns-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

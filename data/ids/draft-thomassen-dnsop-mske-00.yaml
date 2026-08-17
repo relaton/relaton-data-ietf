@@ -1,0 +1,87 @@
+---
+id: draftthomassendnsopmske00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DNSSEC Multi-Signer Key Exchange (MSKE)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-mske-00
+docidentifier:
+- content: draft-thomassen-dnsop-mske
+  type: Internet-Draft
+- content: draft-thomassen-dnsop-mske-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.thomassen-dnsop-mske
+date:
+- type: published
+  at: '2022-10-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Thomassen
+      completename:
+        language: en
+        content: Peter Thomassen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Secure Systems Engineering, deSEC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Answering DNSKEY/CDS/CDNSKEY queries in an [RFC8901] multi-signer
+       DNSSEC configuration requires all operators to serve not only their
+       own public key information, but also include each other's public
+       keys.  This ensures that clients obtain a consistent view of the
+       DNSSEC configuration regardless of who is answering a given query.
+       In order to enable operators to import the keys needed for assembling
+       these responses, a method for discovering them is necessary.
+
+       This document specifies how DNS operators can announce which are the
+       keys they intend to use for signing a given zone (DNSKEY) and which
+       keys are designated for secure entry into the zone (CDS/CDNSKEY).  It
+       further introduces the CNS record type to facilitate proactive
+       discovery of the aforementioned signals.  Taken together, these parts
+       function as an authenticated multi-signer key-exchange (MSKE) scheme.
+
+       This MSKE mechanism uses the signaling mechanism introduced in
+       [I-D.ietf-dnsop-dnssec-bootstrapping] to complete the automated
+       workflows described in [I-D.ietf-dnsop-dnssec-automation].</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-thomassen-dnsop-mske-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

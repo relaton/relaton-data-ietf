@@ -1,0 +1,58 @@
+---
+id: draftrosenidrrtcnort
+schema_version: v1.5.6
+formattedref:
+  content: draft-rosen-idr-rtc-no-rt
+title:
+- language: en
+  script: Latn
+  content: Route Target Constrained Distribution of Routes with no Route Targets
+docidentifier:
+- content: draft-rosen-idr-rtc-no-rt
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>BGP routes sometimes carry an "Extended Communities" path attribute.
+       An Extended Communities path attribute can contain one or more "Route
+       Targets" (RTs).  By means of a procedure known as "RT Constrained
+       Distribution" (RTC), a BGP speaker can send BGP UPDATE messages that
+       express its interest in a particular set of RTs.  Generally, RTC has
+       been applied only to address families whose routes always carry RTs.
+       When RTC is applied to such an address family, a BGP speaker
+       expressing its interest in a particular set of RTs is indicating that
+       it wants to receive all and only the routes of that address family
+       that have at least one of the RTs of interest.  However, there are
+       scenarios in which the originator of a route chooses not to include
+       any RTs at all, assuming that the distribution of a route with no RTs
+       at all will be unaffected by RTC.  This has led to interoperability
+       problems in the field, where the originator of a route assumes that
+       RTC will not affect the distribution of the route, but intermediate
+       BGP speakers refuse to distribute that route because it does not
+       carry any RT of interest.  The purpose of this document is to clarify
+       the effect of the RTC mechanism on routes that do not have any RTs.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rosen-idr-rtc-no-rt-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosen-idr-rtc-no-rt-00
+    docidentifier:
+    - content: draft-rosen-idr-rtc-no-rt-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rosen-idr-rtc-no-rt-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosen-idr-rtc-no-rt-01
+    docidentifier:
+    - content: draft-rosen-idr-rtc-no-rt-01
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,174 @@
+---
+id: drafthomburgdeleg01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Extensible Delegation for DNS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-01
+docidentifier:
+- content: draft-homburg-deleg
+  type: Internet-Draft
+- content: draft-homburg-deleg-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.homburg-deleg
+date:
+- type: published
+  at: '2025-04-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Philip
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Homburg
+      completename:
+        language: en
+        content: Philip Homburg
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NLnet Labs
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tim
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Wicinski
+      completename:
+        language: en
+        content: Tim Wicinski
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cox Communications
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jesse
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: van Zutphen
+      completename:
+        language: en
+        content: Jesse van Zutphen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: University of Amsterdam
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Willem
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Toorop
+      completename:
+        language: en
+        content: Willem Toorop
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NLnet Labs
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document proposes a mechanism for extensible delegations in the
+       DNS.  The mechanism realizes delegations with resource record sets
+       placed below a _deleg label in the apex of the delegating zone.  This
+       authoritative delegation point can be aliased to other names using
+       CNAME and DNAME.  This document proposes a new DNS resource record
+       type, IDELEG, which is based on the SVCB and inherits extensibility
+       from it.
+
+       IDELEG RRsets containing delegation information will be returned in
+       the authority section in referral responses from supportive
+       authoritative name servers.  Lack of support in the authoritative
+       name servers, forwarders or other components, does not obstruct
+       obtaining the delegation information for resolvers, as it is
+       originally authoritative information that can be queried for
+       directly.  None, mixed or full deployment of the mechanism on
+       authoritative name servers are all fully functional, allowing for the
+       mechanism to be incrementally deployed on the authoritative name
+       servers.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-homburg-deleg-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-00
+    docidentifier:
+    - content: draft-homburg-deleg-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-homburg-deleg-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,206 @@
+---
+id: draftietflsrospflslinkinfinity24
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Advertising Unreachable Links in OSPF
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-24
+docidentifier:
+- content: draft-ietf-lsr-ospf-ls-link-infinity
+  type: Internet-Draft
+- content: draft-ietf-lsr-ospf-ls-link-infinity-24
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
+date:
+- type: published
+  at: '2026-03-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Liyan
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Gong
+      completename:
+        language: en
+        content: Liyan Gong
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Weiqiang
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Weiqiang Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Changwang
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Lin
+      completename:
+        language: en
+        content: Changwang Lin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: New H3C Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Acee
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Lindem
+      completename:
+        language: en
+        content: Acee Lindem
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arrcus, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ran
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Ran Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+version:
+- content: '24'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>OSPF Router Link State Advertisements (LSAs) use fixed-format
+       encodings that always include advertised links in the default SPF
+       (Shortest Path First) computation.  For non-default SPF computations,
+       e.g., flexible algorithms as described in RFC 9350, advertised OSPF
+       links are used in the default SPF computation even if this is not
+       intended.  In order to advertise these links and not use them in the
+       base SPF calculation, the metric LSLinkInfinity (0xffff) is used to
+       specify that the link is unreachable.
+
+       MaxReachableLinkMetric (0xfffe) is defined to provide backward
+       compatible reachability in specifications that previously specified
+       advertisement of MaxLinkMetric (0xffff).  This document updates RFC
+       5443, RFC 6987, and RFC 8770 with respect to the advertisement of
+       MaxReachableLinkMetric (0xfffe) rather than MaxLinkMetric (0xffff).</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-lsr-ospf-ls-link-infinity-23
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-23
+    docidentifier:
+    - content: draft-ietf-lsr-ospf-ls-link-infinity-23
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-lsr-ospf-ls-link-infinity-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-25
+    docidentifier:
+    - content: draft-ietf-lsr-ospf-ls-link-infinity-25
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-lsr-ospf-ls-link-infinity-24
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

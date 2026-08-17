@@ -1,0 +1,111 @@
+---
+id: draftietfipsecmeikev2qralt09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Mixing Preshared Keys in the IKE_INTERMEDIATE and in the CREATE_CHILD_SA
+    Exchanges of IKEv2 for Post-quantum Security
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-ikev2-qr-alt-09
+docidentifier:
+- content: draft-ietf-ipsecme-ikev2-qr-alt
+  type: Internet-Draft
+- content: draft-ietf-ipsecme-ikev2-qr-alt-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-ipsecme-ikev2-qr-alt
+date:
+- type: published
+  at: '2025-05-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Valery
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Smyslov
+      completename:
+        language: en
+        content: Valery Smyslov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ELVIS-PLUS
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An Internet Key Exchange protocol version 2 (IKEv2) extension defined
+       in RFC8784 allows IPsec traffic to be protected against someone
+       storing VPN communications today and decrypting them later, when (and
+       if) a Cryptographically Relevant Quantum Computer (CRQC) is
+       available.  The protection is achieved by means of a Post-quantum
+       Preshared Key (PPK) which is mixed into the session keys calculation.
+       However, this protection does not cover an initial IKEv2 Security
+       Association (SA), which might be unacceptable in some scenarios.
+       This specification defines an alternative way to provide protection
+       against quantum computers, which is similar to the solution defined
+       in RFC8784, but also protects the initial IKEv2 SA.
+
+       RFC8784 assumes that PPKs are static and thus they are only used when
+       an initial IKEv2 SA is created.  If a fresh PPK is available before
+       the IKE SA expired, then the only way to use it is to delete the
+       current IKE SA and create a new one from scratch, which is
+       inefficient.  This specification defines a way to use PPKs in active
+       IKEv2 SAs for creating additional IPsec SAs and rekey operations.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-qr-alt-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-ikev2-qr-alt-08
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-qr-alt-08
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-qr-alt-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-ikev2-qr-alt-10
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-qr-alt-10
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-ipsecme-ikev2-qr-alt-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

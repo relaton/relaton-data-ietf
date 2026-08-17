@@ -1,0 +1,121 @@
+---
+id: drafthopleyx402canonicalisationjcsv104
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: JCS Canonicalisation Discipline for Agentic-Payment Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-canonicalisation-jcs-v1-04
+docidentifier:
+- content: draft-hopley-x402-canonicalisation-jcs-v1
+  type: Internet-Draft
+- content: draft-hopley-x402-canonicalisation-jcs-v1-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hopley-x402-canonicalisation-jcs-v1
+date:
+- type: published
+  at: '2026-05-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: H. C.
+      surname:
+        language: en
+        content: Mr
+      completename:
+        language: en
+        content: MR CHRISTOPHER HOPLEY
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AlgoVoi
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a canonicalisation discipline for agentic-
+       payment receipt formats.  The discipline pins JSON Canonicalization
+       Scheme (JCS, RFC 8785) as the canonical preimage form, plus a small
+       set of schema-normalisation rules that must be applied before
+       canonicalisation to preserve byte-determinism across independent
+       implementations and across statutory retention periods.
+
+       The discipline is identified by the URN
+       urn:x402:canonicalisation:jcs-rfc8785-v1.  Receipt formats that
+       reference this discipline carry an in-band canon_version field
+       recording the version under which they were emitted, enabling year-N
+       re-verification of retained bytes without dependence on an out-of-
+       band rule registry.
+
+       The discipline is byte-for-byte cross-validated across eight
+       independent JCS implementations in eight programming languages:
+       Python (rfc8785), TypeScript (canonicalize), Go (gowebpki/jcs), Rust
+       (serde_jcs), Java (cyberphone/json-canonicalization, by the RFC 8785
+       editor), PHP (root23/php-json-canonicalization), C#/.NET
+       (Baqhub.Packages.JsonCanonicalization), and Ruby (json-
+       canonicalization).  The attestation record covering 192 byte-for-byte
+       agreements is published at the AlgoVoi conformance vectors
+       repository.
+
+       This document is normatively referenced by [draft-hopley-x402-
+       compliance-receipt], [draft-hopley-x402-refund-receipt], and
+       successor AlgoVoi-authored receipt-format Internet-Drafts.  It is
+       complementary to [draft-vauban-x402-stark-receipts], which uses a
+       compatible canonicalisation discipline for its cryptographic
+       settlement proofs.
+
+       This document is an Independent Submission filed per RFC 4846 and is
+       intended for publication as Informational.  It is not an IETF
+       Standards Track document, does not represent IETF community
+       consensus, and has not been subject to review by an IETF Working
+       Group.  Change control resides with the document author.  The
+       canonicalisation discipline specified is one approach among possible
+       alternatives; implementers may choose this approach, alternative
+       approaches, or hybrid approaches as appropriate to their
+       requirements.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hopley-x402-canonicalisation-jcs-v1-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-canonicalisation-jcs-v1-03
+    docidentifier:
+    - content: draft-hopley-x402-canonicalisation-jcs-v1-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hopley-x402-canonicalisation-jcs-v1-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

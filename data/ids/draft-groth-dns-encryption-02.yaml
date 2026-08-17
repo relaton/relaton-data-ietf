@@ -1,0 +1,81 @@
+---
+id: draftgrothdnsencryption02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DNS Encryption
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-groth-dns-encryption-02
+docidentifier:
+- content: draft-groth-dns-encryption
+  type: Internet-Draft
+- content: draft-groth-dns-encryption-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.groth-dns-encryption
+date:
+- type: published
+  at: '2008-07-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Duane
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Groth
+      completename:
+        language: en
+        content: Duane Groth
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ITUA Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document requests IANA registration of a new DNS OpCode and
+    ErrorCode type in facilitating encryption of DNS requests and
+    replies and feed back to the client if plain text requests are not
+    acceptable. Once this OpCode is seen the DNS server attempts to
+    decrypt the request using its private OpenPGP key. Inside the
+    encrypted packet is the AES key which the client expects to be used
+    when the server encrypts a response. A server may advertise that it
+    is capable of DNS encryption by returning OpenPGP fingerprints in
+    TXT records using a similar format to Public Key Association (PKA).
+    The full pubic keys are returned from DNS servers by using a CERT
+    request against the host name(s) of the domain's NS records or via
+    OpenPGP key servers.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-groth-dns-encryption-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,212 @@
+---
+id: draftietfspringmplspathsegment09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Path Segment in MPLS Based Segment Routing Network
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-mpls-path-segment-09
+docidentifier:
+- content: draft-ietf-spring-mpls-path-segment
+  type: Internet-Draft
+- content: draft-ietf-spring-mpls-path-segment-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-spring-mpls-path-segment
+date:
+- type: published
+  at: '2023-06-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Weiqiang
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Weiqiang Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Han
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Han Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Cheng
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Cheng Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co., Ltd
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rakesh
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Gandhi
+      completename:
+        language: en
+        content: Rakesh Gandhi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Royi
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Zigler
+      completename:
+        language: en
+        content: Royi Zigler
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Broadcom
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A Segment Routing (SR) path is identified by an SR segment list.
+       Only the complete segment list can identify the end-to-end SR path,
+       and a sub-set of segments from the segment list cannot distinguish
+       one SR path from another as they may be partially congruent.  SR path
+       identification is a pre-requisite for various use-cases such as
+       Performance Measurement (PM), bidirectional paths correlation, and
+       end-to-end 1+1 path protection.
+
+       In SR for MPLS data plane (SR-MPLS), the segment identifiers are
+       stripped from the packet through label popping as the packet transits
+       the network.  This means that when a packet reaches the egress of the
+       SR path, it is not possible to determine on which SR path it
+       traversed the network.
+
+       This document defines a new type of segment that is referred to as
+       Path Segment, which is used to identify an SR path in an SR-MPLS
+       network.  When used, it is inserted by the ingress node of the SR
+       path and immediately follows the last segment identifier in the
+       segment list of the SR path.  The Path Segment is preserved until it
+       reaches the egress node for SR path identification and correlation.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-spring-mpls-path-segment-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-mpls-path-segment-08
+    docidentifier:
+    - content: draft-ietf-spring-mpls-path-segment-08
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-spring-mpls-path-segment-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-mpls-path-segment-10
+    docidentifier:
+    - content: draft-ietf-spring-mpls-path-segment-10
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-spring-mpls-path-segment-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

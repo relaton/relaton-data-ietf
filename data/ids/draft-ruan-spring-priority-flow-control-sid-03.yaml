@@ -1,0 +1,214 @@
+---
+id: draftruanspringpriorityflowcontrolsid03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SRv6 behavior extention for Flow Control in WAN
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ruan-spring-priority-flow-control-sid-03
+docidentifier:
+- content: draft-ruan-spring-priority-flow-control-sid
+  type: Internet-Draft
+- content: draft-ruan-spring-priority-flow-control-sid-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ruan-spring-priority-flow-control-sid
+date:
+- type: published
+  at: '2026-02-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zheng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Ruan
+      completename:
+        language: en
+        content: Zheng Ruan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yao
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Liu
+      completename:
+        language: en
+        content: Yao Liu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mengyao
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Han
+      completename:
+        language: en
+        content: Mengyao Han
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Han
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Zhengxin
+      completename:
+        language: en
+        content: Han Zhengxin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Liu
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: Ying
+      completename:
+        language: en
+        content: Liu Ying
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In the wake of the continuous emergence of novel AI technologies,
+       including collaborative training, distributed inference and the like,
+       the scenario in which different data centers communicate via the RDMA
+       (Remote Direct Memory Access) protocol has emerged as a new
+       requirement. similar to data center networks, wide area networks
+       (WANs) should also be equipped with certain flow control
+       capabilities, nodes in the wide area network (WAN) need to quickly
+       and accurately notify upstream traffic nodes of their congestion
+       status.  Upon receiving the congestion notification, upstream nodes
+       can take responsive actions to mitigate network congestion.  By
+       extending SRv6[RFC 8986] technology, specific services can be carried
+       over SRv6 policies, which enables the precise delivery and response
+       of congestion signals.
+
+       For traffic carried over SRv6 policies, the service traffic path is
+       explicitly orchestrated via the Segment List in the SRH header.  By
+       parsing the sequence of the Segment List, downstream nodes or
+       controllers can accurately identify the upstream nodes and interfaces
+       corresponding to the current traffic, thus enabling the rapid
+       notification of congestion information to the upstream.  Since each
+       SID in the Segment List is a 128-bit IPv6 address that represents a
+       specific behaviour (e.g., End, End.X), extending existing behaviours
+       to mark their capability to receive and process congestion signals
+       allows flexible control over the delivery mode of congestion signals
+       in the WAN.
+
+       The specific packet formats and contents of congestion signals vary
+       in various ways and are continuously being updated.  This document
+       takes the most commonly used PFC backpressure notification mechanism
+       as an example to elaborate on the overall workflow of WAN congestion
+       information notification and the extensions to the SRv6 protocol.
+       PFC technology is widely deployed in RoCEv2 networks within data
+       centers to report congestion signals.  By leveraging SRv6 and NRP
+       technologies, it is possible to effectively control the propagation
+       range and path of PFC backpressure signals in wide area networks,
+       thereby avoiding issues such as deadlocks and the excessive
+       propagation of congestion scope.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ruan-spring-priority-flow-control-sid-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ruan-spring-priority-flow-control-sid-02
+    docidentifier:
+    - content: draft-ruan-spring-priority-flow-control-sid-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ruan-spring-priority-flow-control-sid-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

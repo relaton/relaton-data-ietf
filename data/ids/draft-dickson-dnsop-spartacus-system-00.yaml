@@ -1,0 +1,85 @@
+---
+id: draftdicksondnsopspartacussystem00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: System to transport DNS over HTTP using JSON
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dickson-dnsop-spartacus-system-00
+docidentifier:
+- content: draft-dickson-dnsop-spartacus-system
+  type: Internet-Draft
+- content: draft-dickson-dnsop-spartacus-system-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dickson-dnsop-spartacus-system
+date:
+- type: published
+  at: '2014-10-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Brian
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Dickson
+      completename:
+        language: en
+        content: Brian Dickson
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This is the SPARTACUS DNS gateway system.  It is designed to
+       facilitate the transport of DNS messages opaquely, across problematic
+       sections of the Internet.  It uses JSON encoding, and HTTP(S) as the
+       protocol for transport.
+
+       The main criteria of SPARTACUS is that it preserve DNS messages
+       verbatim, and that only properly formatted DNS messages are passed.
+
+       There are two modes (so far) defined: DNS forwarder (dns clients
+       point to a local gateway, which forwards to a remote gateway for
+       sending to a DNS resolver); and transparent proxy (DNS packets are
+       intercepted, passed to a local gateway, which sends them to the
+       remote gateway, with original destination IP address etc. encoded,
+       and used by the remote gateway as the destination).
+
+       DNS messages are NAT-friendly, so changes to IP or UDP headers do not
+       impact them.  Thus, SPARTACUS does not interfere with TSIG, SIG(0),
+       or Eastlake Cookies.
+
+       This document describes the system, the components, and behavior,
+       with examples.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dickson-dnsop-spartacus-system-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

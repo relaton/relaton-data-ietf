@@ -1,0 +1,151 @@
+---
+id: draftzimmermanntcpmreorderingreaction00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Making TCP Adaptively Robust to Non-Congestion Events
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zimmermann-tcpm-reordering-reaction-00
+docidentifier:
+- content: draft-zimmermann-tcpm-reordering-reaction
+  type: Internet-Draft
+- content: draft-zimmermann-tcpm-reordering-reaction-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zimmermann-tcpm-reordering-reaction
+date:
+- type: published
+  at: '2013-11-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexander
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Zimmermann
+      completename:
+        language: en
+        content: Alexander Zimmermann
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lennart
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Schulte
+      completename:
+        language: en
+        content: Lennart Schulte
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Carsten
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Wolff
+      completename:
+        language: en
+        content: Carsten Wolff
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Arnd
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Hannemann
+      completename:
+        language: en
+        content: Arnd Hannemann
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies an adaptive Non-Congestion Robustness (aNCR)
+       mechanism for TCP.  In the absence of explicit congestion
+       notification from the network, TCP uses only packet loss as an
+       indication of congestion.  One of the signals TCP uses to determine
+       loss is the arrival of three duplicate acknowledgments.  However,
+       this heuristic is not always correct, notably in the case when paths
+       reorder packets.  This results in degraded performance.
+
+       TCP-aNCR is designed to mitigate this performance degradation by
+       adaptively increasing the number of duplicate acknowledgments
+       required to trigger loss recovery, based on the current state of the
+       connection, in an effort to better disambiguate true segment loss
+       from segment reordering.  This document specifies the changes to TCP
+       and TCP-NCR (on which this specification build on) and discusses the
+       costs and benefits of these modifications.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-zimmermann-tcpm-reordering-reaction-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zimmermann-tcpm-reordering-reaction-01
+    docidentifier:
+    - content: draft-zimmermann-tcpm-reordering-reaction-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zimmermann-tcpm-reordering-reaction-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,101 @@
+---
+id: draftjaufeerallybgplgcap01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An in-band BGP mechanism for looking-glass address discovery
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-jaufeerally-bgp-lg-cap-01
+docidentifier:
+- content: draft-jaufeerally-bgp-lg-cap
+  type: Internet-Draft
+- content: draft-jaufeerally-bgp-lg-cap-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.jaufeerally-bgp-lg-cap
+date:
+- type: published
+  at: '2021-07-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rayhaan
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Jaufeerally
+      completename:
+        language: en
+        content: Rayhaan Jaufeerally
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: TBD
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Autonomous Systems (ASes) that peer with one another using the Border
+       Gateway Protocol (BGP) RFC 4271 [RFC4271] do not have an automated
+       way to tell if the prefixes announced over a particular peering link
+       are acceped by the peer.  One way in which an AS operator can verify
+       acceptance of routes by a peer is using a looking glass which may be
+       provided by the peer, however this introduces manual toil in the
+       operation and turnup of peering links, and does not allow for
+       continued validation to ensure there are no regressions.  Looking
+       glasses are often manually found by browsing the website of the peer
+       or via a database of peering participants.
+
+       This document proposes a new in-band mechanism for transmitting
+       administrative data between BGP peers, and defines one such use case
+       for propagating looking glass addresses.  This is done via a new
+       Address Family Identifier (AFI) which carries a message that we
+       define here, inside the Multi Protocol (MP_REACH and MP_UNREACH) path
+       attribute
+
+       The looking glass that we expose via the proposed mechanism conforms
+       to that defined in RFC 8522 [RFC8522].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-jaufeerally-bgp-lg-cap-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-jaufeerally-bgp-lg-cap-00
+    docidentifier:
+    - content: draft-jaufeerally-bgp-lg-cap-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-jaufeerally-bgp-lg-cap-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,140 @@
+---
+id: draftmelegassimvpsddosresilience01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Volume-Independent DDoS Detection via Coherence-BFD: The MVPS DDoS Resilience
+    Profile'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-melegassi-mvps-ddos-resilience-01
+docidentifier:
+- content: draft-melegassi-mvps-ddos-resilience
+  type: Internet-Draft
+- content: draft-melegassi-mvps-ddos-resilience-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.melegassi-mvps-ddos-resilience
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leonardo
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: L. M.
+      surname:
+        language: en
+        content: Costa
+      completename:
+        language: en
+        content: Leonardo Melegassi Costa
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Catellix
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies how the Multi-Vantage Path Synchrony
+       (MVPS) framework [I-D.melegassi-ippm-mvps-bundle] and its
+       sub-tick variant Coherence-BFD
+       [I-D.melegassi-coherence-bfd] detect volumetric and
+       distributed Denial-of-Service (DDoS) attacks in time bounded
+       by (M-1)*T_tick, INDEPENDENT of the attack rate in packets-
+       per-second or bits-per-second.
+
+       Three theorems are proved:
+
+          Theorem D1 (Volume-Independence).  Detection latency is a
+          function of the control-tick period T_tick and the
+          M-multiplier confirmation count alone; it does not grow
+          with attack volume.
+
+          Theorem D2 (Distributed-Attack Bound).  The framework
+          detects up to floor((k-1)/2) simultaneous regional
+          attacks under cell-aware minimax aggregation, where k is
+          the number of coherence cells.
+
+          Theorem D3 (Broker NIC Sizing).  Under the three
+          architectural invariants of Section 3, broker NIC sizing
+          is independent of attack volume; it is determined only
+          by the legitimate telemetry packets-per-second.
+
+       This revision (-01) adds three layers of validation:
+
+         (a) Canonical: formal proofs of D1-D3 with falsification
+             protocols, connection to GDDP geometric-precision
+             bounds, and Fisher Information limits.
+
+         (b) Empirical: SHA-256-anchored receipts for all 11
+             simulation scenarios plus real-data validation.
+
+         (c) Real data: 9 alarm-days across 5 anycast DNS
+             prefixes over 30 days of BGP data, ALL
+             correlated with independently documented
+             public Internet events (DENIC DNSSEC outage,
+             Seacom/EASSy submarine cable breaks, Google
+             Search global outage, Railway/GCP platform
+             suspension).  Plus 92 067 RIPE Atlas RTT
+             measurements confirming M-multiplier noise
+             elimination (4.2% single-tick FPR to 0% at
+             M=3).</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-melegassi-mvps-ddos-resilience-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-melegassi-mvps-ddos-resilience-00
+    docidentifier:
+    - content: draft-melegassi-mvps-ddos-resilience-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-melegassi-mvps-ddos-resilience-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-melegassi-mvps-ddos-resilience-02
+    docidentifier:
+    - content: draft-melegassi-mvps-ddos-resilience-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-melegassi-mvps-ddos-resilience-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,246 @@
+---
+id: draftirtficnrgicnlowpan10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: ICN Adaptation to LoWPAN Networks (ICN LoWPAN)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-irtf-icnrg-icnlowpan-10
+docidentifier:
+- content: draft-irtf-icnrg-icnlowpan
+  type: Internet-Draft
+- content: draft-irtf-icnrg-icnlowpan-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.irtf-icnrg-icnlowpan
+date:
+- type: published
+  at: '2021-02-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Cenk
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Gündoğan
+      completename:
+        language: en
+        content: Cenk Gündoğan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HAW Hamburg
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Thomas
+      - language: en
+        script: Latn
+        initial: T
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: T. C.
+      surname:
+        language: en
+        content: Schmidt
+      completename:
+        language: en
+        content: Thomas C. Schmidt
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HAW Hamburg
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Matthias
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Wählisch
+      completename:
+        language: en
+        content: Matthias Wählisch
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: |-
+            link-lab & FU
+                  Berlin
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christopher
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Scherb
+      completename:
+        language: en
+        content: Christopher Scherb
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: |-
+            University of
+                  Basel
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Claudio
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Marxer
+      completename:
+        language: en
+        content: Claudio Marxer
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: |-
+            University of
+                  Basel
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christian
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Tschudin
+      completename:
+        language: en
+        content: Christian Tschudin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: |-
+            University of
+                  Basel
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a convergence layer for CCNx and NDN over IEEE
+       802.15.4 LoWPAN networks.  A new frame format is specified to adapt
+       CCNx and NDN packets to the small MTU size of IEEE 802.15.4.  For
+       that, syntactic and semantic changes to the TLV-based header formats
+       are described.  To support compatibility with other LoWPAN
+       technologies that may coexist on a wireless medium, the dispatching
+       scheme provided by 6LoWPAN is extended to include new dispatch types
+       for CCNx and NDN.  Additionally, the fragmentation component of the
+       6LoWPAN dispatching framework is applied to ICN chunks.  In its
+       second part, the document defines stateless and stateful compression
+       schemes to improve efficiency on constrained links.  Stateless
+       compression reduces TLV expressions to static header fields for
+       common use cases.  Stateful compression schemes elide state local to
+       the LoWPAN and replace names in data packets by short local
+       identifiers.
+
+       This document is a product of the IRTF Information-Centric Networking
+       Research Group (ICNRG).</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-irtf-icnrg-icnlowpan-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-irtf-icnrg-icnlowpan-09
+    docidentifier:
+    - content: draft-irtf-icnrg-icnlowpan-09
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-irtf-icnrg-icnlowpan-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-irtf-icnrg-icnlowpan-11
+    docidentifier:
+    - content: draft-irtf-icnrg-icnlowpan-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-irtf-icnrg-icnlowpan-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

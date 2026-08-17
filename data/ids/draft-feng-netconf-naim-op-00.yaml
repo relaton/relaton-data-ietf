@@ -1,0 +1,88 @@
+---
+id: draftfengnetconfnaimop00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Operation Intent Intermediate Representation for AI-Assisted Network Management
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-feng-netconf-naim-op-00
+docidentifier:
+- content: draft-feng-netconf-naim-op
+  type: Internet-Draft
+- content: draft-feng-netconf-naim-op-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.feng-netconf-naim-op
+date:
+- type: published
+  at: '2026-07-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chong
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Feng
+      completename:
+        language: en
+        content: Chong Feng
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Operation IR, a protocol-neutral intermediate
+       representation for runtime network operations in the NAIM
+       architecture.  Operation IR serves as an AI-friendly operation layer
+       between AI agents or LLM-based systems and the underlying network
+       management protocols.  It captures write operations, retrieval, RPC/
+       action invocation, filtering, transaction metadata, precondition
+       verification, compensation semantics, and optional expression-based
+       values.
+
+       Operation IR is designed to be consumed by any upstream mechanism
+       capable of generating structured operation intent, including but not
+       limited to MCP tool invocations, function calling interfaces, and
+       agent-to-agent communication protocols.  The translation of Operation
+       IR into protocol-specific messages is performed deterministically by
+       a Handler component, keeping the AI agent in the role of intent
+       encoder rather than protocol executor.
+
+       This document also defines context completeness classes for the
+       Originator (AI agent) side, validation feedback requirements, and an
+       execution preview mode intended to improve safety and operator trust.
+       It standardizes semantic expectations and interoperability
+       boundaries, but does not standardize proprietary dialogue policies,
+       implementation-specific scheduling internals, automatic compensation
+       derivation algorithms, or private execution-engine logic.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-feng-netconf-naim-op-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

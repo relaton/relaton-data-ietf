@@ -1,0 +1,43 @@
+---
+id: draftbhatiakarpospfiplayerprotection
+schema_version: v1.5.6
+formattedref:
+  content: draft-bhatia-karp-ospf-ip-layer-protection
+title:
+- language: en
+  script: Latn
+  content: Security Extension for OSPFv2 when using Manual Key Management
+docidentifier:
+- content: draft-bhatia-karp-ospf-ip-layer-protection
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The current OSPFv2 cryptographic authentication mechanism as defined
+    in the OSPF standards is vulnerable to both inter-session and intra-
+    session replay attacks when its uses manual keying.  Additionally,
+    the existing cryptographic authentication schemes do not cover the IP
+    header.  This omission can be exploited to carry out various types of
+    attacks.
+
+    This draft proposes an authentication scheme based on a challenge-
+    response mechanism that will protect OSPFv2 from both inter and intra
+    replay attacks when its using manual keys for securing its protocol
+    packets.  For comparison, an approach based on making sequence
+    numbers unique is presented.  Later we also describe some changes in
+    the cryptographic hash computation so that we eliminate most attacks
+    that result because of OSPFv2 not protecting the IP header.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bhatia-karp-ospf-ip-layer-protection-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bhatia-karp-ospf-ip-layer-protection-03
+    docidentifier:
+    - content: draft-bhatia-karp-ospf-ip-layer-protection-03
+      type: Internet-Draft
+      primary: true

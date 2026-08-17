@@ -1,0 +1,90 @@
+---
+id: draftschrockeppresentationbinding00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Presentation Binding for Human-Authorization Receipts: Proving the Human
+    Approved What They Saw'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-presentation-binding-00
+docidentifier:
+- content: draft-schrock-ep-presentation-binding
+  type: Internet-Draft
+- content: draft-schrock-ep-presentation-binding-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.schrock-ep-presentation-binding
+date:
+- type: published
+  at: '2026-07-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Iman
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Schrock
+      completename:
+        language: en
+        content: Iman Schrock
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EMILIA Protocol, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A human-authorization receipt proves a named person produced a user-
+       verified signature over a digest that commits to an exact action.  It
+       does not prove the surface that person signed on DISPLAYED that
+       action honestly.  If a signing interface shows a benign summary while
+       committing a different action, the resulting receipt is laundered
+       authority: cryptographically valid and semantically false, which is
+       worse than no receipt at all.  This is the presentation attack, and
+       it is the deepest unsolved problem in authorization evidence, because
+       a signature cannot attest to pixels.  This document narrows the gap
+       with two additive, offline-checkable pieces that touch no existing
+       receipt format: a DETERMINISTIC RENDERER, a pure function from the
+       canonical action to a byte-identical human-readable rendering, so a
+       verifier RE-DERIVES the rendering from the signed bytes and rejects
+       any surface that showed something else; and a DISPLAY ATTESTATION, a
+       signed claim by the signing client binding the rendering it showed to
+       the action it committed.  Neither eliminates the presentation attack
+       (nothing purely digital can), but together they convert "trust the
+       vendor's UI" into "verify the rendering was the honest function of
+       the signed action," and they make the residual risk explicit rather
+       than hidden.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-schrock-ep-presentation-binding-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

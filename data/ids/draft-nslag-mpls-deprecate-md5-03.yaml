@@ -1,0 +1,214 @@
+---
+id: draftnslagmplsdeprecatemd503
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Deprecating MD5 for LDP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-nslag-mpls-deprecate-md5-03
+docidentifier:
+- content: draft-nslag-mpls-deprecate-md5
+  type: Internet-Draft
+- content: draft-nslag-mpls-deprecate-md5-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.nslag-mpls-deprecate-md5
+date:
+- type: published
+  at: '2018-09-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Loa
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Andersson
+      completename:
+        language: en
+        content: Loa Andersson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Bronze Dragon Consulting
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stewart
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bryant
+      completename:
+        language: en
+        content: Stewart Bryant
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrew
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: A. G.
+      surname:
+        language: en
+        content: Malis
+      completename:
+        language: en
+        content: Andrew G. Malis
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nicolai
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Leymann
+      completename:
+        language: en
+        content: Nicolai Leymann
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Deutsche Telekom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: George
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Swallow
+      completename:
+        language: en
+        content: George Swallow
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When the MPLS Label Distribution Protocol (LDP) was specified circa
+       1999, there were very strong requirements that LDP should use a
+       cryptographic hash function to sign LDP protocol messages.  MD5 was
+       widely used at that time, and was the obvious choices.
+
+       However, even when this decision was being taken there were concerns
+       as to whether MD5 was a strong enough signing option.  This
+       discussion was briefly reflected in section 5.1 of RFC 5036 [RFC5036]
+       (and also in RFC 3036 [RFC3036]).
+
+       Over time it has been shown that MD5 can be compromised.  Thus, there
+       is a concern shared in the security community and the working groups
+       responsible for the development of the LDP protocol that LDP is no
+       longer adequately secured.
+
+       This document deprecates MD5 as the signing method for LDP messages.
+       The document also selects a future method to secure LDP messages -
+       the choice is TCP-AO.  In addition, we specify that the TBD
+       cryptographic mechanism is to be the default TCP-AO security method.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-nslag-mpls-deprecate-md5-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nslag-mpls-deprecate-md5-02
+    docidentifier:
+    - content: draft-nslag-mpls-deprecate-md5-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-nslag-mpls-deprecate-md5-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nslag-mpls-deprecate-md5-04
+    docidentifier:
+    - content: draft-nslag-mpls-deprecate-md5-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-nslag-mpls-deprecate-md5-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

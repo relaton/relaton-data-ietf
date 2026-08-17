@@ -1,0 +1,178 @@
+---
+id: draftietftcpmrack14
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The RACK-TLP loss detection algorithm for TCP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rack-14
+docidentifier:
+- content: draft-ietf-tcpm-rack
+  type: Internet-Draft
+- content: draft-ietf-tcpm-rack-14
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tcpm-rack
+date:
+- type: published
+  at: '2020-12-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yuchung
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Yuchung Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Neal
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Cardwell
+      completename:
+        language: en
+        content: Neal Cardwell
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nandita
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Dukkipati
+      completename:
+        language: en
+        content: Nandita Dukkipati
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Priyaranjan
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Jha
+      completename:
+        language: en
+        content: Priyaranjan Jha
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc
+version:
+- content: '14'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document presents the RACK-TLP loss detection algorithm for TCP.
+       RACK-TLP uses per-segment transmit timestamps and selective
+       acknowledgements (SACK) and has two parts: RACK ("Recent
+       ACKnowledgment") starts fast recovery quickly using time-based
+       inferences derived from ACK feedback.  TLP ("Tail Loss Probe")
+       leverages RACK and sends a probe packet to trigger ACK feedback to
+       avoid retransmission timeout (RTO) events.  Compared to the widely
+       used DUPACK threshold approach, RACK-TLP detects losses more
+       efficiently when there are application-limited flights of data, lost
+       retransmissions, or data packet reordering events.  It is intended to
+       be an alternative to the DUPACK threshold approach.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-tcpm-rack-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rack-13
+    docidentifier:
+    - content: draft-ietf-tcpm-rack-13
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-tcpm-rack-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rack-15
+    docidentifier:
+    - content: draft-ietf-tcpm-rack-15
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tcpm-rack-14
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,91 @@
+---
+id: draftmcguinnessoauthactorprofile00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: OAuth Actor Profile for Delegation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-profile-00
+docidentifier:
+- content: draft-mcguinness-oauth-actor-profile
+  type: Internet-Draft
+- content: draft-mcguinness-oauth-actor-profile-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mcguinness-oauth-actor-profile
+date:
+- type: published
+  at: '2026-04-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Karl
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: McGuinness
+      completename:
+        language: en
+        content: Karl McGuinness
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>OAuth deployments increasingly involve agents and workloads acting on
+       behalf of human users across organizational boundaries.  Existing
+       specifications provide relevant building blocks (notably the act
+       claim from RFC 8693 Token Exchange) but do not define a consistent
+       profile for representing delegated actor relationships across JWT
+       assertion grants (RFC 7523), JWT access tokens (RFC 9068), and
+       Transaction Tokens, nor for classifying actor entity types or
+       signaling support between authorization servers and resource servers.
+       The result is inconsistent actor representation and actor-
+       representation interoperability gaps that force deployments to rely
+       on proprietary conventions.
+
+       This document defines the OAuth Actor Profile for Delegation.  It
+       specifies a common act claim structure extended with sub_profile for
+       entity-type classification, processing rules for authorization
+       servers and resource servers across the three token families and
+       their Token Exchange inputs, and OAuth discovery metadata parameters
+       for advertising actor-profile support.  The profile applies uniformly
+       across token types and integrates with existing sender-constraint
+       mechanisms (DPoP, mTLS).  It does not standardize the policies by
+       which systems determine whether a given actor is permitted to act for
+       a subject; those decisions remain deployment-specific.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mcguinness-oauth-actor-profile-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

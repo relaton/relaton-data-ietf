@@ -1,0 +1,93 @@
+---
+id: draftayestatoshorttcp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: On reducing the number of TimeOuts for short-lived TCP connections
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ayesta-to-short-tcp-00
+docidentifier:
+- content: draft-ayesta-to-short-tcp
+  type: Internet-Draft
+- content: draft-ayesta-to-short-tcp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ayesta-to-short-tcp
+date:
+- type: published
+  at: '2002-10-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Urtzi
+      - language: en
+        script: Latn
+        initial: U
+      formatted_initials:
+        language: en
+        content: U.
+      surname:
+        language: en
+        content: Ayesta
+      completename:
+        language: en
+        content: Urtzi Ayesta
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Konstantin
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Avrachenkov
+      completename:
+        language: en
+        content: Konstantin Avrachenkov
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document shows that short TCP sessions are prone to timeout. In
+    particular, one single segment loss will provoke TCP to timeout if the
+    document size is below certain threshold. This document analyzes the
+    benefit of TCP modifications such as Limited Transmit Algorithm
+    [RFC3042] and Increasing Initial Window [RFC2414] in the context of
+    short-lived TCP transfers. However TCP remains vulnerable to the losses
+    at the very end of the transmission. Therefore we suggest complementary
+    modifications to Limited Transmit Algorithm to recover effectively from
+    losses at the end of the TCP transfer.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ayesta-to-short-tcp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,120 @@
+---
+id: draftietftcpimplrestart00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Issues in TCP Slow-Start Restart After Idle
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpimpl-restart-00
+docidentifier:
+- content: draft-ietf-tcpimpl-restart
+  type: Internet-Draft
+- content: draft-ietf-tcpimpl-restart-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tcpimpl-restart
+date:
+- type: published
+  at: '1998-04-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: J. D.
+      surname:
+        language: en
+        content: Touch
+      completename:
+        language: en
+        content: Dr. Joseph D. Touch
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Heidemann
+      completename:
+        language: en
+        content: John Heidemann
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Amy
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Hughes
+      completename:
+        language: en
+        content: Amy Hughes
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Joe Touch
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This draft discusses variations in the TCP 'slow-start restart' (SSR)\n
+    \  algorithm, and the unintended failure of some variations to properly\n   restart
+    in some environments. SSR is intended to avoid line-rate\n   bursts after idle
+    periods, where TCP accumulates permission to send\n   in the form of ACKs, but
+    does not consume that permission\n   immediately. SSR's original 'restart after
+    send is idle' is commonly\n   implemented as 'restart after receive is idle'.
+    The latter\n   unintentionally fails to restart for bidirectional connections
+    where\n   the sender's burst is triggered by a reverse-path data packet, such\n
+    \  as in persistent HTTP. Both the former and latter are shown to permit\n   bursts
+    in other circumstances. Three solutions are discussed, and\n   their implementations
+    evaluated.\n \n   This document is a product of the LSAM project at ISI.  Comments
+    are\n   solicited and should be addressed to the authors.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tcpimpl-restart-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

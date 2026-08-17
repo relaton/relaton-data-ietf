@@ -1,0 +1,154 @@
+---
+id: draftchuangdkimreplayproblem01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DKIM Replay Problem Statement and Scenarios
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chuang-dkim-replay-problem-01
+docidentifier:
+- content: draft-chuang-dkim-replay-problem
+  type: Internet-Draft
+- content: draft-chuang-dkim-replay-problem-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chuang-dkim-replay-problem
+date:
+- type: published
+  at: '2023-02-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Chuang
+      completename:
+        language: en
+        content: Wei Chuang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Allen
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Robin
+      completename:
+        language: en
+        content: Allen Robin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bron
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Gondwana
+      completename:
+        language: en
+        content: Bron Gondwana
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fastmail Pty Ltd
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DomainKeys Identified Mail (DKIM, RFC6376) claims some responsibility
+       for a message by associating a domain and protecting the integrity of
+       the covered portion of a message during transit through a digital
+       signature.  DKIM survives basic email relaying.  In a Replay Attack,
+       the recipient of a DKIM-signed message sends the message further, to
+       other recipients, while retaining the original, validating signature,
+       thereby seeking to leverage the reputation of the original signer.
+       This document discusses the damage this causes to email delivery and
+       interoperability, and the associated Mail Flows.  A significant
+       challenge to mitigating this problem is that it is difficult for
+       Receivers to differentiate between legitimate forwarding flows and
+       DKIM Replay.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-chuang-dkim-replay-problem-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-dkim-replay-problem-00
+    docidentifier:
+    - content: draft-chuang-dkim-replay-problem-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-chuang-dkim-replay-problem-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-dkim-replay-problem-02
+    docidentifier:
+    - content: draft-chuang-dkim-replay-problem-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chuang-dkim-replay-problem-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

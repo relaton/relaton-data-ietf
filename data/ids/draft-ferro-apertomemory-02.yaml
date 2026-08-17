@@ -1,0 +1,95 @@
+---
+id: draftferroapertomemory02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The ApertoMemory Format: Portable, Client-Side-Encrypted AI Memory'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ferro-apertomemory-02
+docidentifier:
+- content: draft-ferro-apertomemory
+  type: Internet-Draft
+- content: draft-ferro-apertomemory-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ferro-apertomemory
+date:
+- type: published
+  at: '2026-07-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrea
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ferro
+      completename:
+        language: en
+        content: Andrea Ferro
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>AI assistants and agents accumulate long-term memory about their
+       users.  This memory is typically stored in proprietary, provider-held
+       silos: it cannot be moved between tools, its integrity cannot be
+       verified, and its confidentiality depends entirely on the provider.
+       This document specifies the ApertoMemory format: a canonical, signed,
+       client-side-encrypted representation of AI memory objects, together
+       with a portable single-file export container.  Memory objects are
+       encoded in deterministic CBOR, signed with COSE_Sign1, and encrypted
+       with COSE_Encrypt0 under keys derived from and controlled by the
+       user.  A storage or synchronisation server handling ApertoMemory
+       objects has zero access to their content, authorship, or semantic
+       timestamps.
+
+       This revision specifies format_version 2, which cryptographically
+       binds every signature to the author it claims and to the cleartext
+       envelope around it, and derives trust from which key verified an
+       object rather than from a declared field. format_version 1, described
+       by earlier revisions of this document, carries a known forgeable-
+       provenance defect and MUST NOT be implemented for new deployments.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ferro-apertomemory-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-apertomemory-01
+    docidentifier:
+    - content: draft-ferro-apertomemory-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ferro-apertomemory-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

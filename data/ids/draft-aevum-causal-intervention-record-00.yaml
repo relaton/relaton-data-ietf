@@ -1,0 +1,96 @@
+---
+id: draftaevumcausalinterventionrecord00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Physically Annotated Causal Record (PACR): A Wire Format for Verifiable
+    Causal Intervention Events'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-aevum-causal-intervention-record-00
+docidentifier:
+- content: draft-aevum-causal-intervention-record
+  type: Internet-Draft
+- content: draft-aevum-causal-intervention-record-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.aevum-causal-intervention-record
+date:
+- type: published
+  at: '2026-04-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: TSOI
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: L. K.
+      surname:
+        language: en
+        content: Tsoi
+      completename:
+        language: en
+        content: TSOI KWAI LAP
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aevum Network
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Physically Annotated Causal Record (PACR),
+       a wire-format protocol for representing one verifiable causal-
+       intervention event between autonomous agents.  A PACR is a six-tuple
+       (ι, Π, Λ, Ω, Γ, P) binding a causal identity, a set of causal
+       predecessors, a thermodynamic Landauer cost, an energy-time-space
+       resource triple, a cognitive complexity split, and an opaque payload.
+       The opaque payload optionally carries a one-byte intervention tag
+       classifying the event under Pearl's do-calculus hierarchy (Observe /
+       Do-Physical / Do-Digital / Do-Chemical / Do-Genetic /
+       Counterfactual).
+
+       PACR is intended as the smallest sufficient statistic for a
+       replayable, rights-aware claim about a single causal step performed
+       by an autonomous agent on a digital, physical, or biological
+       substrate.  It is complementary to AgentCard (draft-aevum-agentcard):
+       AgentCard declares an agent's identity and capabilities; PACR records
+       what an agent actually did and at what physical cost.
+
+       PACR records form a content-addressed directed acyclic graph through
+       their predecessor set.  Causal order is determined solely by the
+       predecessor edges; no wall-clock timestamp is required for ordering.
+       This makes the format suitable for distributed multi-agent systems
+       where clock skew and partial ordering are unavoidable.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-aevum-causal-intervention-record-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

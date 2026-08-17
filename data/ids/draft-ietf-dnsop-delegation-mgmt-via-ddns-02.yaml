@@ -1,0 +1,156 @@
+---
+id: draftietfdnsopdelegationmgmtviaddns02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Automating DNS Delegation Management via DDNS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-delegation-mgmt-via-ddns-02
+docidentifier:
+- content: draft-ietf-dnsop-delegation-mgmt-via-ddns
+  type: Internet-Draft
+- content: draft-ietf-dnsop-delegation-mgmt-via-ddns-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-dnsop-delegation-mgmt-via-ddns
+date:
+- type: published
+  at: '2026-06-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Johan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Stenstam
+      completename:
+        language: en
+        content: Johan Stenstam
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Erik
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Bergström
+      completename:
+        language: en
+        content: Erik Bergström
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leon
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Fernandez
+      completename:
+        language: en
+        content: Leon Fernandez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Delegation information (i.e. the NS RRset, possible glue, possible DS
+       records) should always be kept in sync between child zone and parent
+       zone.  However, in practice that is not always the case.
+
+       When the delegation information is not in sync the child zone is
+       usually working fine, but without the amount of redundancy that the
+       zone owner likely expects to have.  Hence, should any further
+       problems ensue it could have catastrophic consequences.
+
+       The DNS name space has lived with this problem for decades and it
+       never goes away.  Or, rather, it will never go away until a fully
+       automated mechanism for how to keep the information in sync
+       automatically is deployed.
+
+       This document proposes such a mechanism based on DNS Dynamic Updates
+       (DDNS) secured with SIG(0) signatures, sent from the child to the
+       parent across the zone cut.  The target of the update is discovered
+       via the DSYNC record defined in [RFC9859].
+
+       TO BE REMOVED: This document is being collaborated on in Github at:
+       https://github.com/johanix/draft-ietf-dnsop-delegation-mgmt-via-ddns
+       (https://github.com/johanix/draft-ietf-dnsop-delegation-mgmt-via-
+       ddns).  The most recent working version of the document, open issues,
+       etc, should all be available there.  The authors (gratefully) accept
+       pull requests.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-delegation-mgmt-via-ddns-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-delegation-mgmt-via-ddns-01
+    docidentifier:
+    - content: draft-ietf-dnsop-delegation-mgmt-via-ddns-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-dnsop-delegation-mgmt-via-ddns-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

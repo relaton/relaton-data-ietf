@@ -1,0 +1,110 @@
+---
+id: draftsatosooscap04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Constitutional AI Protocol (CAP) for Agentic AI Systems
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sato-soos-cap-04
+docidentifier:
+- content: draft-sato-soos-cap
+  type: Internet-Draft
+- content: draft-sato-soos-cap-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sato-soos-cap
+date:
+- type: published
+  at: '2026-06-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tom
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: Sato
+      completename:
+        language: en
+        content: Tom Sato
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: MyAuberge K.K.
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An AI agent's authorization system determines what it is permitted
+       to do.  A human principal's escalation decision determines what
+       they authorize.  Neither of these is sufficient on its own: a
+       Cedar policy can permit market manipulation; a human principal can
+       authorize fraud.  Authorization systems answer the question "who
+       decided?"  The Constitutional AI Protocol answers a different
+       question: "was that decision lawful?"
+
+       CAP defines a Constitutional Layer that evaluates every AI action
+       request and every human authorization decision against a three-tier
+       prohibition model -- before Cedar evaluates the action and before
+       the system executes the human's decision.  Tier 0 prohibitions are
+       derived from near-universal treaty consensus and are unconditional:
+       no agent, operator, or human principal can authorize them.  Tier 1
+       prohibitions are jurisdiction-specific and operator-declared.  Tier
+       2 prohibitions are voluntary operator ethical standards.
+
+       This document also specifies the Prohibition Clearance Mechanism
+       (PCM): the process by which specific Tier 0 and Tier 1 prohibition
+       classes may be cleared for specific deployment contexts --
+       either at implementation time by the operator or by formal
+       regulatory authority -- while preserving an absolute prohibition
+       floor for CSAM and genocide facilitation under any circumstances.
+
+       The Sovereign Object OS (SOOS) is the reference implementation of
+       the Governance Execution Controller (GEC) pattern on which CAP is
+       built.
+
+       CAP also defines the GEC Policy Transparency Disclosure (PTD): a
+       signed, queryable, tier-structured document through which any
+       external party may determine which laws and regulations a GEC is
+       actively enforcing, at what authority tier, and under whose
+       governance.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sato-soos-cap-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sato-soos-cap-03
+    docidentifier:
+    - content: draft-sato-soos-cap-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sato-soos-cap-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

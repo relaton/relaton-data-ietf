@@ -1,0 +1,94 @@
+---
+id: draftasaditcpspa00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: TCP In-Band Single Packet Authentication (TCP-SPA)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-asadi-tcp-spa-00
+docidentifier:
+- content: draft-asadi-tcp-spa
+  type: Internet-Draft
+- content: draft-asadi-tcp-spa-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.asadi-tcp-spa
+date:
+- type: published
+  at: '2026-02-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Amin
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Asadi
+      completename:
+        language: en
+        content: Amin Asadi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Individual
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a mechanism called TCP In-Band Single Packet
+       Authentication (TCP-SPA).  A client that wishes to open a TCP
+       connection to a protected server embeds a compact Message
+       Authentication Code (MAC) inside the TCP SYN packet itself, carried
+       as an experimental TCP option (kind 253, per [RFC6994]).  The server
+       verifies the MAC at the earliest possible point in the network stack
+       — before a socket is allocated or the TCP handshake proceeds — and
+       drops the SYN if verification fails.
+
+       This approach differs from existing Single Packet Authentication
+       (SPA) systems in that no out-of-band authentication packet is
+       required: authentication and connection establishment are a single
+       atomic step.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-asadi-tcp-spa-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-asadi-tcp-spa-01
+    docidentifier:
+    - content: draft-asadi-tcp-spa-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-asadi-tcp-spa-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

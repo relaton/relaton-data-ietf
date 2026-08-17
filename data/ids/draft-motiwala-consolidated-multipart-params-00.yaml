@@ -1,0 +1,80 @@
+---
+id: draftmotiwalaconsolidatedmultipartparams00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Consolidated Parameters Part for Multipart/Form-Data
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-motiwala-consolidated-multipart-params-00
+docidentifier:
+- content: draft-motiwala-consolidated-multipart-params
+  type: Internet-Draft
+- content: draft-motiwala-consolidated-multipart-params-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.motiwala-consolidated-multipart-params
+date:
+- type: published
+  at: '2025-12-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: Yusuf
+      completename:
+        language: en
+        content: Yusuf
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: mesibo
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a deployment pattern for reducing overhead in
+       multipart/form-data requests that include both file uploads and
+       numerous text parameters. The approach consolidates multiple text
+       fields into one or more application/x-www-form-urlencoded parts
+       inside the multipart body.
+
+       This technique requires no changes to existing HTTP, MIME, or form
+       specifications and is fully compatible with RFC 7578. It uses only
+       existing, standardized Content-Type values in their already-defined
+       manner, making it immediately deployable with current infrastructure.
+
+       The pattern guarantees backward compatibility: servers that don't recognize
+       it still receive all parameters as standard form data. RFC 7578
+       defines multipart/form-data but does not specify optimization
+       strategies; this document fills that gap.
+
+       This document records the pattern, processing rules, and deployment
+       considerations, and reports implementation experience from production
+       systems processing millions of uploads daily.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-motiwala-consolidated-multipart-params-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

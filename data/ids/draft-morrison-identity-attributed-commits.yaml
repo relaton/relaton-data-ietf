@@ -1,0 +1,65 @@
+---
+id: draftmorrisonidentityattributedcommits
+schema_version: v1.5.6
+formattedref:
+  content: draft-morrison-identity-attributed-commits
+title:
+- language: en
+  script: Latn
+  content: Identity-Attributed Git Commits via Tier-Structured Trailers
+docidentifier:
+- content: draft-morrison-identity-attributed-commits
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a git commit trailer grammar for identity-
+       attributed contributions using the ~handle identity primitive defined
+       in [MCPDNS].  The grammar binds sovereign actors, automated bots, and
+       AI instruments to specific commits via three tier-structured trailers
+       (Acted-By, Executed-By, Drafted-With) and three optional
+       cryptographic trailers (Identity-Signature, Identity-Key-Id,
+       Identity-Anchor).  The signature is computed with Ed25519 over the
+       commit's tree hash rather than its commit hash, preserving
+       attribution across rebase, cherry-pick, and squash merge operations.
+       Conformant parsers reject cross-tier category errors (e.g., an
+       Instrument-tier handle in an Acted-By slot) as malformed.  The
+       mechanism is provider-neutral, depends only on DNS [RFC1035] and the
+       ~handle resolution algorithm of [MCPDNS], and requires no central
+       authority or platform-specific verification service.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-00
+    docidentifier:
+    - content: draft-morrison-identity-attributed-commits-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-01
+    docidentifier:
+    - content: draft-morrison-identity-attributed-commits-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-morrison-identity-attributed-commits-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-02
+    docidentifier:
+    - content: draft-morrison-identity-attributed-commits-02
+      type: Internet-Draft
+      primary: true

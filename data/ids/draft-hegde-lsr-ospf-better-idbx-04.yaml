@@ -1,0 +1,146 @@
+---
+id: drafthegdelsrospfbetteridbx04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Improved OSPF Database Exchange Procedure
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hegde-lsr-ospf-better-idbx-04
+docidentifier:
+- content: draft-hegde-lsr-ospf-better-idbx
+  type: Internet-Draft
+- content: draft-hegde-lsr-ospf-better-idbx-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hegde-lsr-ospf-better-idbx
+date:
+- type: published
+  at: '2024-07-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shraddha
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Hegde
+      completename:
+        language: en
+        content: Shraddha Hegde
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tony
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Przygienda
+      completename:
+        language: en
+        content: Tony Przygienda
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Acee
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Lindem
+      completename:
+        language: en
+        content: Acee Lindem
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: LabN Consulting LLC
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When an OSPF router undergoes restart, previous instances of LSAs
+       belonging to that router may remain in the databases of other routers
+       in the OSPF domain until such LSAs are aged out.  Hence, when the
+       restarting router joins the network again, neighboring routers re-
+       establish adjacencies while the restarting router is still bringing-
+       up its interfaces and adjacencies and generates LSAs with sequence
+       numbers that may be lower than the stale LSAs.  Such stale LSAs may
+       be interpreted as bi-directional connectivity before the initial
+       database exchanges are finished and genuine bi-directional LSA
+       connectivity exists.  Such incorrect interpretation may lead to,
+       among other things, transient traffic packet drops.  This document
+       suggests improvements in the OSPF database exchange process to
+       prevent such problems due to stale LSA utilization.  The solution
+       does not preclude changes in the existing standard but presents an
+       extension that will prevent this scenario.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hegde-lsr-ospf-better-idbx-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hegde-lsr-ospf-better-idbx-03
+    docidentifier:
+    - content: draft-hegde-lsr-ospf-better-idbx-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hegde-lsr-ospf-better-idbx-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

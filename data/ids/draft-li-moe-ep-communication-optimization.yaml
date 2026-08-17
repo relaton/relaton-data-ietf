@@ -1,0 +1,40 @@
+---
+id: draftlimoeepcommunicationoptimization
+schema_version: v1.5.6
+formattedref:
+  content: draft-li-moe-ep-communication-optimization
+title:
+- language: en
+  script: Latn
+  content: Communication Optimization for MoE Expert Parallelism in Distributed Training
+docidentifier:
+- content: draft-li-moe-ep-communication-optimization
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a communication optimization mechanism for
+       Mixture of Experts (MoE) Expert Parallelism (EP) in distributed
+       training environments.  It defines two core mechanisms: (1) an
+       adaptive communication mode selection that dynamically chooses
+       between Data-Centric and Expert-Centric All-to-All communication
+       patterns based on a comparison of expert parameter size versus token
+       data size, minimizing cross-node communication volume; (2) a
+       priority-based co-scheduling strategy for All-to-All and AllReduce
+       collective communications, combined with chunked transmission and in-
+       network aggregation acceleration, to eliminate bandwidth contention
+       and reduce overall training latency.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-li-moe-ep-communication-optimization-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-moe-ep-communication-optimization-00
+    docidentifier:
+    - content: draft-li-moe-ep-communication-optimization-00
+      type: Internet-Draft
+      primary: true

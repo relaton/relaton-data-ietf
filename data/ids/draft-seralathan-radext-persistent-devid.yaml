@@ -1,0 +1,63 @@
+---
+id: draftseralathanradextpersistentdevid
+schema_version: v1.5.6
+formattedref:
+  content: draft-seralathan-radext-persistent-devid
+title:
+- language: en
+  script: Latn
+  content: RADIUS Chargeable-Device-Identity and Persistent Device Identification
+    in MAC-Randomized Environments
+docidentifier:
+- content: draft-seralathan-radext-persistent-devid
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a Chargeable-Device-Identity (CDI) -- a
+       privacy- preserving, rotating device correlator carried in existing
+       RADIUS Class attributes -- that enables Network Access Control (NAC)
+       systems to maintain device session correlation across Media Access
+       Control (MAC) address changes.  Modern operating systems randomize
+       MAC addresses by default, disrupting RADIUS-based authentication,
+       authorization, and accounting workflows that rely on the Calling-
+       Station-Id attribute as a persistent device identifier.
+
+       CDI is modeled after the Chargeable-User-Identity (CUI) defined in
+       RFC 4372, providing an analogous device-level correlator with
+       explicit privacy controls: epoch-based rotation limits long-term
+       tracking, HMAC construction prevents identifier reversal by
+       intermediate systems, and transport within the Class attribute
+       ensures immediate deployability on existing infrastructure.
+
+       This document additionally defines a new RADIUS attribute,
+       Persistent-Device-Id, for deployments that require explicit device
+       identity semantics beyond what the opaque Class attribute can
+       provide.  The Class-based CDI mechanism is the RECOMMENDED approach
+       for immediate deployment; the dedicated attribute provides a
+       migration path for future interoperability.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-seralathan-radext-persistent-devid-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-seralathan-radext-persistent-devid-00
+    docidentifier:
+    - content: draft-seralathan-radext-persistent-devid-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-seralathan-radext-persistent-devid-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-seralathan-radext-persistent-devid-01
+    docidentifier:
+    - content: draft-seralathan-radext-persistent-devid-01
+      type: Internet-Draft
+      primary: true

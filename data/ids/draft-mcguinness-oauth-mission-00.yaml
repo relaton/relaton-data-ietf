@@ -1,0 +1,91 @@
+---
+id: draftmcguinnessoauthmission00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Mission-Bound Authorization for OAuth 2.0
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-mission-00
+docidentifier:
+- content: draft-mcguinness-oauth-mission
+  type: Internet-Draft
+- content: draft-mcguinness-oauth-mission-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mcguinness-oauth-mission
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Karl
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: McGuinness
+      completename:
+        language: en
+        content: Karl McGuinness
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An AI agent is typically given a mission: a task to pursue on a
+       user's behalf.  OAuth 2.0 issues access tokens for individual
+       resource requests, but it has no durable, approved artifact that ties
+       those tokens to the one task a user actually authorized.  As a
+       result, an agent's authority is a collection of independently
+       obtained tokens with no shared, auditable boundary, and a user's
+       approval is disconnected from what the agent later does.
+
+       This document defines a Mission: a structured, human-approved,
+       integrity-bound authorization artifact for OAuth 2.0.  A client
+       submits a Mission Intent through Pushed Authorization Requests; the
+       Authorization Server derives Rich Authorization Requests
+       authorization details from it, binds the approved task and its
+       derived authority to the Approver's consent through two integrity
+       anchors, and records a durable Mission.  Every access token derived
+       under the Mission carries that authority and a "mission" claim, and
+       issuance is gated on the Mission's lifecycle state.  Optional
+       capabilities represent delegation among agents with the OAuth Actor
+       Profile and, as specified by a companion, let a single Mission be
+       honored across trust domains.  This is the issuance and governance
+       "mission layer" left unspecified by agent-identity work for OAuth;
+       runtime enforcement of each action is a separate, optional layer.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mcguinness-oauth-mission-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

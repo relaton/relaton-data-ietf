@@ -1,0 +1,94 @@
+---
+id: draftrampalliscittcapsuleprovenancebinding00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Binding Per-Action Authorization and Memory Provenance into Agent Action
+    Capsules
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-rampalli-scitt-capsule-provenance-binding-00
+docidentifier:
+- content: draft-rampalli-scitt-capsule-provenance-binding
+  type: Internet-Draft
+- content: draft-rampalli-scitt-capsule-provenance-binding-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.rampalli-scitt-capsule-provenance-binding
+date:
+- type: published
+  at: '2026-07-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: KARTHIK
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Karthik
+      completename:
+        language: en
+        content: KARTHIK RAMPALLI
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Glyphzero, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Agent Action Capsule (AAC) profile (draft-mih-scitt-agent-action-
+       capsule) records what an autonomous agent actually did -- executed,
+       blocked, denied, errored, or timed out -- with a structural binding
+       that prevents an attempt from being presented as a completion.  AAC
+       deliberately does not define the authority that permitted an action;
+       it carries that authority as an opaque reference.  Two companion
+       profiles supply what that reference can point to: a per-action
+       authorization profile (draft-rampalli-aiagent-authz-hmac) records
+       that an action was permitted (the "may"), and a memory-provenance
+       profile (draft-rampalli-aiagent-memory-provenance) records the source
+       and trust state of the belief on which the agent acted (the "why-
+       believed").
+
+       This document specifies how the latter two are bound into an AAC
+       Capsule.  It defines (a) what the AAC "disposition.authority"
+       reference MAY resolve to, (b) a namespaced, payload-only extension
+       carrying an authorization-token reference, a memory chain root, and a
+       quarantine attestation, and (c) an OPTIONAL divergence-class value,
+       drawn from the per-action profile, that explains a non-executing AAC
+       verdict.  The binding uses only mechanisms AAC already provides --
+       the opaque authority reference and the payload-extension namespacing
+       convention -- and changes neither AAC's closed protected-header claim
+       set nor its Class 1 verification.  The result is a single verifiable
+       record that answers "may," "did," and "why-believed" together.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-rampalli-scitt-capsule-provenance-binding-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

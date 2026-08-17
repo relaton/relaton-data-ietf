@@ -1,0 +1,87 @@
+---
+id: draftmaurettehmtftp06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'HMTFTP: HKDF-Derived TFTP with Optional AEAD Protection (v0.7)'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-06
+docidentifier:
+- content: draft-maurette-hmtftp
+  type: Internet-Draft
+- content: draft-maurette-hmtftp-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.maurette-hmtftp
+date:
+- type: published
+  at: '2026-03-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: Maurette
+      completename:
+        language: en
+        content: Maurette
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: IUT R&T Bethune
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP.
+       It preserves the TFTP transfer model (RRQ/WRQ, DATA, ACK, ERROR, and
+       OACK option acknowledgment) and replaces text options with binary
+       TLVs.  HMTFTP defines optional AEAD protection for DATA payloads
+       using HKDF-derived keys from a pre-shared key (PSK).
+
+       This document describes transfer behavior, extension processing
+       rules, key derivation, nonce construction, and operational guidance
+       for experimental implementations intended to facilitate
+       interoperability.
+
+       This document requests IANA actions for a UDP service name/port and
+       registries for TLV Types and Ciphersuites.  Until assignment, TBD1 is
+       used as the default UDP port value.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-maurette-hmtftp-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-05
+    docidentifier:
+    - content: draft-maurette-hmtftp-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-maurette-hmtftp-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

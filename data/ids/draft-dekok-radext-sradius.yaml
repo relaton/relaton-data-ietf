@@ -1,0 +1,42 @@
+---
+id: draftdekokradextsradius
+schema_version: v1.5.6
+formattedref:
+  content: draft-dekok-radext-sradius
+title:
+- language: en
+  script: Latn
+  content: Secure RADIUS
+docidentifier:
+- content: draft-dekok-radext-sradius
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Secure RADIUS (SRADIUS), which is a transport
+       profile for RADIUS.  There are three changes from traditional RADIUS
+       transport protocols.  First, TLS transport is required and insecure
+       transports are forbidden.  Second, the shared secret is no longer
+       used, and all MD5-based packet signing and attribute obfuscation
+       methods are therefore no longer necessary.  Finally, the now unused
+       Authenticator field is repurposed to contain an explict request /
+       response identifier, called a Token.
+
+       SRADIUS connections can transport all RADIUS attributes.
+       Implementation of SRADIUS requires only minor changes to packet
+       encoder and decoder functionality.  Nothing else is changed from
+       traditional RADIUS.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dekok-radext-sradius-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dekok-radext-sradius-00
+    docidentifier:
+    - content: draft-dekok-radext-sradius-00
+      type: Internet-Draft
+      primary: true

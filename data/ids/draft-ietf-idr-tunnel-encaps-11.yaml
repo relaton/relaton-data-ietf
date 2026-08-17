@@ -1,0 +1,163 @@
+---
+id: draftietfidrtunnelencaps11
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The BGP Tunnel Encapsulation Attribute
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-tunnel-encaps-11
+docidentifier:
+- content: draft-ietf-idr-tunnel-encaps
+  type: Internet-Draft
+- content: draft-ietf-idr-tunnel-encaps-11
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-tunnel-encaps
+date:
+- type: published
+  at: '2019-02-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Eric
+      - language: en
+        script: Latn
+        initial: E
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: E. C.
+      surname:
+        language: en
+        content: Rosen
+      completename:
+        language: en
+        content: Eric C. Rosen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Keyur
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Patel
+      completename:
+        language: en
+        content: Keyur Patel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arrcus, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gunter
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Van de Velde
+      completename:
+        language: en
+        content: Gunter Van de Velde
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia
+version:
+- content: '11'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RFC 5512 defines a BGP Path Attribute known as the "Tunnel
+       Encapsulation Attribute".  This attribute allows one to specify a set
+       of tunnels.  For each such tunnel, the attribute can provide the
+       information needed to create the tunnel and the corresponding
+       encapsulation header.  The attribute can also provide information
+       that aids in choosing whether a particular packet is to be sent
+       through a particular tunnel.  RFC 5512 states that the attribute is
+       only carried in BGP UPDATEs that have the "Encapsulation Subsequent
+       Address Family (Encapsulation SAFI)".  This document deprecates the
+       Encapsulation SAFI (which has never been used in production), and
+       specifies semantics for the attribute when it is carried in UPDATEs
+       of certain other SAFIs.  This document adds support for additional
+       tunnel types, and allows a remote tunnel endpoint address to be
+       specified for each tunnel.  This document also provides support for
+       specifying fields of any inner or outer encapsulations that may be
+       used by a particular tunnel.
+
+       This document obsoletes RFC 5512.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-tunnel-encaps-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-tunnel-encaps-10
+    docidentifier:
+    - content: draft-ietf-idr-tunnel-encaps-10
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-tunnel-encaps-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-tunnel-encaps-12
+    docidentifier:
+    - content: draft-ietf-idr-tunnel-encaps-12
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-tunnel-encaps-11
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

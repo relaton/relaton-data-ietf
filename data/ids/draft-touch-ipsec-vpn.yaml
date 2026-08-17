@@ -1,0 +1,45 @@
+---
+id: drafttouchipsecvpn
+schema_version: v1.5.6
+formattedref:
+  content: draft-touch-ipsec-vpn
+title:
+- language: en
+  script: Latn
+  content: Use of IPsec Transport Mode for Dynamic Routing
+docidentifier:
+- content: draft-touch-ipsec-vpn
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>IPsec can secure the links of a multihop network to protect communication
+    between trusted components, e.g., for a secure virtual network (VN), overlay,
+    or virtual private network (VPN).  Virtual links established by IPsec tunnel mode
+    can conflict with routing and forwarding inside VNs because IP routing depends
+    on references to interfaces and next-hop IP addresses.  The IPsec tunnel mode
+    specification is ambiguous on this issue, so even compliant implementations cannot
+    be trusted to avoid conflicts.  An alternative to tunnel mode uses non-IPsec IPIP
+    encapsulation together with IPsec transport mode, which we call IIPtran.  IPIP
+    encapsulation occurs as a separate initial step, as the result of a forwarding
+    lookup of the VN packet.  IPsec transport mode processes the resulting (tunneled)
+    IP packet with an SA determined through a security association database (SAD)
+    match on the tunnel header.  IIPtran supports dynamic routing inside the VN without
+    changes to the current IPsec architecture.  IIPtran demonstrates how to configure
+    any compliant IPsec implementation to avoid the aforementioned conflicts.  IIPtran
+    is also compared to several alternative mechanisms for VN routing and their respective
+    impact on IPsec, routing, policy enforcement, and interactions with the Internet
+    Key Exchange (IKE).  This memo provides information for the Internet community.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-touch-ipsec-vpn-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-touch-ipsec-vpn-07
+    docidentifier:
+    - content: draft-touch-ipsec-vpn-07
+      type: Internet-Draft
+      primary: true

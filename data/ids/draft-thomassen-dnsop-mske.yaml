@@ -1,0 +1,47 @@
+---
+id: draftthomassendnsopmske
+schema_version: v1.5.6
+formattedref:
+  content: draft-thomassen-dnsop-mske
+title:
+- language: en
+  script: Latn
+  content: DNSSEC Multi-Signer Key Exchange (MSKE)
+docidentifier:
+- content: draft-thomassen-dnsop-mske
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Answering DNSKEY/CDS/CDNSKEY queries in an [RFC8901] multi-signer
+       DNSSEC configuration requires all operators to serve not only their
+       own public key information, but also include each other's public
+       keys.  This ensures that clients obtain a consistent view of the
+       DNSSEC configuration regardless of who is answering a given query.
+       In order to enable operators to import the keys needed for assembling
+       these responses, a method for discovering them is necessary.
+
+       This document specifies how DNS operators can announce which are the
+       keys they intend to use for signing a given zone (DNSKEY) and which
+       keys are designated for secure entry into the zone (CDS/CDNSKEY).  It
+       further introduces the CNS record type to facilitate proactive
+       discovery of the aforementioned signals.  Taken together, these parts
+       function as an authenticated multi-signer key-exchange (MSKE) scheme.
+
+       This MSKE mechanism uses the signaling mechanism introduced in
+       [I-D.ietf-dnsop-dnssec-bootstrapping] to complete the automated
+       workflows described in [I-D.ietf-dnsop-dnssec-automation].</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-thomassen-dnsop-mske-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-mske-00
+    docidentifier:
+    - content: draft-thomassen-dnsop-mske-00
+      type: Internet-Draft
+      primary: true

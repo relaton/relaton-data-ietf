@@ -1,0 +1,163 @@
+---
+id: BCP156
+schema_version: v1.5.6
+type: standard
+formattedref:
+  content: BCP156
+title:
+- language: en
+  script: Latn
+  content: Best Current Practice 156
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/bcp156
+docidentifier:
+- content: BCP 156
+  type: IETF
+  primary: true
+docnumber: BCP156
+language:
+- en
+script:
+- Latn
+relation:
+- type: includes
+  bibitem:
+    type: standard
+    title:
+    - content: Recommendations for Transport-Protocol Port Randomization
+      type: main
+    source:
+    - type: src
+      content: https://www.rfc-editor.org/info/rfc6056
+    docidentifier:
+    - content: RFC 6056
+      type: IETF
+      primary: true
+    - content: 10.17487/RFC6056
+      type: DOI
+    docnumber: RFC6056
+    date:
+    - type: published
+      at: 2011-01
+    contributor:
+    - role:
+      - type: author
+      person:
+        name:
+          forename:
+          - language: en
+            script: Latn
+            initial: M
+          formatted_initials:
+            language: en
+            script: Latn
+            content: M.
+          surname:
+            language: en
+            script: Latn
+            content: Larsen
+          completename:
+            language: en
+            script: Latn
+            content: M. Larsen
+    - role:
+      - type: author
+      person:
+        name:
+          forename:
+          - language: en
+            script: Latn
+            initial: F
+          formatted_initials:
+            language: en
+            script: Latn
+            content: F.
+          surname:
+            language: en
+            script: Latn
+            content: Gont
+          completename:
+            language: en
+            script: Latn
+            content: F. Gont
+    - role:
+      - type: publisher
+      organization:
+        name:
+        - language: en
+          content: RFC Publisher
+    - role:
+      - type: authorizer
+      organization:
+        name:
+        - language: en
+          content: RFC Series
+    - role:
+      - type: author
+        description:
+        - content: committee
+      organization:
+        name:
+        - language: en
+          content: Internet Engineering Task Force
+        subdivision:
+        - name:
+          - content: Transport and Services Working Group
+          identifier:
+          - content: tsvwg
+          type: workgroup
+        abbreviation:
+          language: en
+          content: IETF
+    language:
+    - en
+    script:
+    - Latn
+    abstract:
+    - language: en
+      script: Latn
+      content: <p>During the last few years, awareness has been raised about a number
+        of "blind" attacks that can be performed against the Transmission Control
+        Protocol (TCP) and similar protocols.  The consequences of these attacks range
+        from throughput reduction to broken connections or data corruption.  These
+        attacks rely on the attacker's ability to guess or know the five-tuple (Protocol,
+        Source Address, Destination Address, Source Port, Destination Port) that identifies
+        the transport protocol instance to be attacked.  This document describes a
+        number of simple and efficient methods for the selection of the client port
+        number, such that the possibility of an attacker guessing the exact value
+        is reduced.  While this is not a replacement for cryptographic methods for
+        protecting the transport-protocol instance, the aforementioned port selection
+        algorithms provide improved security with very little effort and without any
+        key management overhead.  The algorithms described in this document are local
+        policies that may be incrementally deployed and that do not violate the specifications
+        of any of the transport protocols that may benefit from them, such as TCP,
+        UDP, UDP-lite, Stream Control Transmission Protocol (SCTP), Datagram Congestion
+        Control Protocol (DCCP), and RTP (provided that the RTP application explicitly
+        signals the RTP and RTCP port numbers).  This memo documents an Internet Best
+        Current Practice.</p>
+    status:
+      stage:
+        content: BEST CURRENT PRACTICE
+    series:
+    - title:
+      - content: BCP
+      number: '156'
+    - title:
+      - content: RFC
+      number: '6056'
+    - type: stream
+      title:
+      - content: IETF
+    keyword:
+    - vocab:
+        content: tcp
+    - vocab:
+        content: transmission control protocl
+    - vocab:
+        content: blind attacks
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf

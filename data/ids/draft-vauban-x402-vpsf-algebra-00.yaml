@@ -1,0 +1,103 @@
+---
+id: draftvaubanx402vpsfalgebra00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: VPSF Claim Algebra for x402 Payment Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-vpsf-algebra-00
+docidentifier:
+- content: draft-vauban-x402-vpsf-algebra
+  type: Internet-Draft
+- content: draft-vauban-x402-vpsf-algebra-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vauban-x402-vpsf-algebra
+date:
+- type: published
+  at: '2026-05-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Vauban
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Research
+      completename:
+        language: en
+        content: Vauban Research
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vauban Research
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The x402 protocol ([X402-V2]) defines three wire messages for HTTP-
+       native payment flows but provides no composability model for payment
+       receipts.  A recipient holding a SettlementReceipt and a
+       DelegationGrant cannot natively express that the settlement satisfies
+       a delegated spending condition, or that a RefundClaim negates an
+       earlier SettlementReceipt, without bespoke facilitator-side logic.
+       As automated payment pipelines grow, the absence of a normative
+       composability layer leads to fragmented, non-interoperable
+       verification surfaces.
+
+       This document specifies the Vauban Proof Stack Framework (VPSF) Claim
+       Algebra for x402 payment receipts: a grammar of five composition
+       operators (Conjunction, Implication, Aggregation, Selective
+       Disclosure, Revocation; abbreviated ∧, →, ⊕, ▷, ¬) applied over the
+       four canonical Payment Claim types (PaymentIntent, SettlementReceipt,
+       RefundClaim, DelegationGrant) defined in [LIFECYCLE-FSM].  The
+       algebra is chain-agnostic by invariant; the Starknet-based proof
+       system described in [STARK-RECEIPTS] is the first reference
+       implementation.  Composability is grounded in the JCS canonical
+       preimage discipline ([RFC8785]), ensuring operator results are
+       deterministic and cross-implementation consistent.  An open-source
+       Rust implementation is provided in [VAUBAN-CRATE].</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-vauban-x402-vpsf-algebra-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-vpsf-algebra-01
+    docidentifier:
+    - content: draft-vauban-x402-vpsf-algebra-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vauban-x402-vpsf-algebra-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

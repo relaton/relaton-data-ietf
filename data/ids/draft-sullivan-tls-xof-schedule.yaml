@@ -1,0 +1,38 @@
+---
+id: draftsullivantlsxofschedule
+schema_version: v1.5.6
+formattedref:
+  content: draft-sullivan-tls-xof-schedule
+title:
+- language: en
+  script: Latn
+  content: XOF-based key schedules for TLS 1.3
+docidentifier:
+- content: draft-sullivan-tls-xof-schedule
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>TLS 1.3 runs its entire key schedule on HKDF over SHA-2.  This
+       document defines an extension that replaces that schedule with one
+       built on an extendable-output function (XOF): the negotiated KDF
+       governs every derivation, the Finished and binder MACs, and the
+       transcript hash, so no SHA-2 remains in the key schedule.  The cipher
+       suites, AEAD algorithms, state machine, and record layer are
+       unchanged, and a connection without the extension uses HKDF as today.
+       Two KDFs are defined, SHAKE256 and the reduced-round TurboSHAKE256.
+       This document updates RFC 9258.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sullivan-tls-xof-schedule-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-tls-xof-schedule-00
+    docidentifier:
+    - content: draft-sullivan-tls-xof-schedule-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,91 @@
+---
+id: draftpelovicmpv6sec01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: ICMPv6 Secure Segment Treatment Notifications
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pelov-icmpv6-sec-01
+docidentifier:
+- content: draft-pelov-icmpv6-sec
+  type: Internet-Draft
+- content: draft-pelov-icmpv6-sec-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.pelov-icmpv6-sec
+date:
+- type: published
+  at: '2026-06-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexander
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Pelov
+      completename:
+        language: en
+        content: Alexander Pelov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: IMT Atlantique
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A packet can cross an IPv6 segment whose properties - long delay,
+       scheduled contacts, a strict size budget - defeat the feedback an
+       endpoint normally relies on.  This document defines ICMPv6-SEC
+       (SECure Segment Treatment), an ICMPv6 message that a segment boundary
+       sends to a packet's source when the packet is not prepared for such a
+       segment.  The message carries a COSE-signed Segment Descriptor: a
+       compact CBOR object stating which segment is meant, how long the
+       statement is valid, and what treatment future packets require.  A
+       receiver applies a descriptor only after verifying the signature, the
+       validity window, and that the signer is authorized for the segment.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-pelov-icmpv6-sec-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pelov-icmpv6-sec-00
+    docidentifier:
+    - content: draft-pelov-icmpv6-sec-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-pelov-icmpv6-sec-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,99 @@
+---
+id: draftranjbarregextrdapsubordinatereferrals01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Redirecting RDAP Queries to Holder-Designated Servers for Subordinate Resources
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ranjbar-regext-rdap-subordinate-referrals-01
+docidentifier:
+- content: draft-ranjbar-regext-rdap-subordinate-referrals
+  type: Internet-Draft
+- content: draft-ranjbar-regext-rdap-subordinate-referrals-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ranjbar-regext-rdap-subordinate-referrals
+date:
+- type: published
+  at: '2026-07-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kaveh
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Ranjbar
+      completename:
+        language: en
+        content: Kaveh Ranjbar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Whisper Security
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Registration Data Access Protocol (RDAP) queries can be resolved from
+       the IANA bootstrap registries down to the most specific object held
+       by a registry operator's RDAP service.  Where the holder of a
+       registered resource maintains registration data for resources
+       subordinate to it, such as DNS names below a registered domain or
+       more-specific networks below an address allocation, and operates a
+       conformant RDAP service for that data, there is currently no
+       discoverable referral from the registry's response to the holder's
+       service.  This document describes an optional, holder-designated
+       referral for subordinate resources, carried by a pair of directional
+       RDAP link relations, "rdap-base-down" and "rdap-base-up", whose
+       targets are the base URL of a downstream RDAP service and the base
+       URL of the covering registry service, respectively.  The holder-
+       designated subordinate referral is the primary application, but the
+       same relations serve related base-URL discovery needs, including
+       delegated and hybrid RPKI referrals.  It is written as input to
+       draft-ietf-regext-rdap-referrals and its content may be merged into
+       that document.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ranjbar-regext-rdap-subordinate-referrals-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ranjbar-regext-rdap-subordinate-referrals-00
+    docidentifier:
+    - content: draft-ranjbar-regext-rdap-subordinate-referrals-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ranjbar-regext-rdap-subordinate-referrals-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

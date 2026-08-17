@@ -1,0 +1,114 @@
+---
+id: draftlipeargciphertextinferencetoolmcp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Ciphertext-Based AI Inference Tool Design for the Model Context Protocol
+    (MCP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-pearg-ciphertext-inference-tool-mcp-00
+docidentifier:
+- content: draft-li-pearg-ciphertext-inference-tool-mcp
+  type: Internet-Draft
+- content: draft-li-pearg-ciphertext-inference-tool-mcp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-pearg-ciphertext-inference-tool-mcp
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: LUN
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Lun
+      completename:
+        language: en
+        content: LUN LI
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yaowei
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Tu
+      completename:
+        language: en
+        content: Yaowei Tu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: National University of Singapore
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Model Context Protocol (MCP) enables AI-powered tools to interact
+       with autonomous agents and Large Language Models (LLMs), but
+       currently processes user inputs and inference results in plaintext.
+       This could introduce some privacy risks and violates the principle of
+       least privilege when processing user data.  This contribution
+       specifies a ciphertext-based AI inference extension for MCP.  The
+       design leverages Homomorphic Encryption (HE) to allow an MCP server
+       or remote tool to perform inference directly on encrypted data
+       without accessing the plaintext.  The server receives encrypted
+       payloads, computes over ciphertexts using an evaluation key, and
+       returns an encrypted result that only the MCP client can decrypt.  To
+       ensure interoperability across various network environments, this
+       document defines a JSON-RPC message format independent of the
+       underlying transport layer (supporting both local stdio and remote
+       Server-Sent Events).  The format extends the existing MCP 'tools/
+       call' method with fields for encrypted payloads, algorithm
+       identifiers, and key references.  Additionally, this document
+       discusses security considerations, key management, and implementation
+       trade-offs.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-pearg-ciphertext-inference-tool-mcp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

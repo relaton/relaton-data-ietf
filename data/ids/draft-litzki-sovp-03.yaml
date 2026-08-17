@@ -1,0 +1,106 @@
+---
+id: draftlitzkisovp03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Sovereign Validation Protocol (SOVP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-litzki-sovp-03
+docidentifier:
+- content: draft-litzki-sovp
+  type: Internet-Draft
+- content: draft-litzki-sovp-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.litzki-sovp
+date:
+- type: published
+  at: '2026-06-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Thorsten
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Litzki
+      completename:
+        language: en
+        content: Thorsten Litzki
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Litzki Systems LLC
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Sovereign Validation Protocol (SOVP), a
+       protocol for cryptographic verification of publisher-provided
+       identity metadata bound to DNS-anchored Ed25519 public keys.  SOVP
+       enables consuming agents, gateways, and federated infrastructure
+       components to verify the origin and integrity of machine-readable
+       declarations published by a domain prior to ingestion, allowing
+       deployments to reject unauthenticated data before application-level
+       processing occurs.
+
+       SOVP is designed to operate as a verification layer beneath existing
+       trust frameworks, federation architectures, and governance systems.
+       It does not replace these systems.  It provides the cryptographic
+       infrastructure evidence upon which higher-layer trust decisions may
+       be grounded.
+
+       SOVP defines a deterministic verification procedure based on RFC 8785
+       JSON Canonicalization Scheme (JCS), Ed25519 signatures, DNS-based key
+       publication, and optional HTTP transport mechanisms.  The protocol
+       defines data structures, cryptographic procedures, operational modes,
+       and associated DNS and HTTP mechanisms.
+
+       The reference implementation provides signing and verification
+       primitives, DNS TXT resolution, and HTTP retrieval of identity
+       documents.  Full gateway enforcement behavior is implementation-
+       defined.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-litzki-sovp-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-litzki-sovp-02
+    docidentifier:
+    - content: draft-litzki-sovp-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-litzki-sovp-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

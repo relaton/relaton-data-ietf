@@ -1,0 +1,238 @@
+---
+id: drafttruskovskylampspqhybridx50902
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Multiple Public-Key Algorithm X.509 Certificates
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-truskovsky-lamps-pq-hybrid-x509-02
+docidentifier:
+- content: draft-truskovsky-lamps-pq-hybrid-x509
+  type: Internet-Draft
+- content: draft-truskovsky-lamps-pq-hybrid-x509-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.truskovsky-lamps-pq-hybrid-x509
+date:
+- type: published
+  at: '2023-08-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexander
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Truskovsky
+      completename:
+        language: en
+        content: Alexander Truskovsky
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ISARA Corporation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Daniel
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Van Geest
+      completename:
+        language: en
+        content: Daniel Van Geest
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ISARA Corporation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Scott
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Fluhrer
+      completename:
+        language: en
+        content: Scott Fluhrer
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Panos
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Kampanakis
+      completename:
+        language: en
+        content: Panos Kampanakis
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mike
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Ounsworth
+      completename:
+        language: en
+        content: Mike Ounsworth
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Entrust Datacard, Ltd
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Serge
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Mister
+      completename:
+        language: en
+        content: Serge Mister
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Entrust Datacard, Ltd
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Tombstone notice:
+
+       This draft is no longer being pursued at the IETF.  A variant of this
+       proposal was adopted in [itu-t-x509-2019], which allows two keys to
+       be placed in a certificate but only one used at a time.  The major
+       downside of this proposal is that it requires the large PQC key to be
+       sent even to legacy clients which will not use it.  Additionally,
+       this proposal does not present a generic encoding for the multiple
+       signatures produced by the multiple keys contained in a hybrid
+       certificate, leaving the responsibility to dependent protocols and
+       applications for how to carry multiple signatures and how to signal
+       that multiple signatures should have been present in order to detect
+       stripping attacks.  As such, this document represents only a partial
+       solution to the dual-signature problem.  How, and whether, to
+       implement dual-signatures is an active and ongoing discussion topic
+       at the IETF and work continues in this area across several working
+       groups.  The PQUIP WG serves as a central location for all PQC-
+       related discussion.
+
+       Original abstract:
+
+       This document describes a method of embedding alternative sets of
+       cryptographic materials into X.509v3 digital certificates, X.509v2
+       Certificate Revocation Lists (CRLs), and PKCS #10 Certificate Signing
+       Requests (CSRs).  The embedded alternative cryptographic materials
+       allow a Public Key Infrastructure (PKI) to use multiple cryptographic
+       algorithms in a single object, and allow it to transition to the new
+       cryptographic algorithms while maintaining backwards compatibility
+       with systems using the existing algorithms.  Three X.509 extensions
+       and three PKCS #10 attributes are defined, and the signing and
+       verification procedures for the alternative cryptographic material
+       contained in the extensions and attributes are detailed.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-truskovsky-lamps-pq-hybrid-x509-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-truskovsky-lamps-pq-hybrid-x509-01
+    docidentifier:
+    - content: draft-truskovsky-lamps-pq-hybrid-x509-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-truskovsky-lamps-pq-hybrid-x509-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

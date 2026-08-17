@@ -1,0 +1,167 @@
+---
+id: draftxuintareavulnerabilitiesforgedicmp02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Problem Statement for Cross-Layer Vulnerabilities due to Forged ICMP Errors
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-xu-intarea-vulnerabilities-forged-icmp-02
+docidentifier:
+- content: draft-xu-intarea-vulnerabilities-forged-icmp
+  type: Internet-Draft
+- content: draft-xu-intarea-vulnerabilities-forged-icmp-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.xu-intarea-vulnerabilities-forged-icmp
+date:
+- type: published
+  at: '2026-05-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Xu
+      completename:
+        language: en
+        content: Ke Xu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University & Zhongguancun Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xuewei
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Feng
+      completename:
+        language: en
+        content: Xuewei Feng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Qi
+      completename:
+        language: en
+        content: Li Qi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University & Zhongguancun Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhaoxi
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhaoxi Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>ICMP error messages are vital for network reliability, providing
+       feedback on issues such as unreachable hosts or fragmentation
+       requirements.  They help devices adapt dynamically, support
+       troubleshooting, and enable essential functions like Path MTU
+       Discovery.  However, off-path attackers on the Internet may forge
+       ICMP error messages to bypass legitimate validation mechanisms,
+       causing the victim's TCP/IP stack to misinterpret network conditions
+       and exposing critical vulnerabilities.  This document analyzes how
+       such forged ICMP errors can be exploited by off-path attackers to
+       induce cross-layer interactions within the victim's TCP/IP stack,
+       leading to four classes of vulnerabilities: information leakage,
+       desynchronization of shared variables, semantic gaps, and identity
+       deception.  These ICMP-based attacks allow off-path attackers to
+       manipulate network traffic, disrupt communication flows, and
+       compromise both infrastructure and user privacy, without being on the
+       direct communication path.  The document concludes with proposed
+       countermeasures and recommendations for protocol evolution.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-xu-intarea-vulnerabilities-forged-icmp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xu-intarea-vulnerabilities-forged-icmp-01
+    docidentifier:
+    - content: draft-xu-intarea-vulnerabilities-forged-icmp-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-xu-intarea-vulnerabilities-forged-icmp-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

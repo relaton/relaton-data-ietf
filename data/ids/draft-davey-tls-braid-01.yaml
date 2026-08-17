@@ -1,0 +1,112 @@
+---
+id: draftdaveytlsbraid01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Bound Routing, Authority, and Identity Data (BRAID): Independent Circuit
+    Breakers for Long-Lived TLS Certificates'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-davey-tls-braid-01
+docidentifier:
+- content: draft-davey-tls-braid
+  type: Internet-Draft
+- content: draft-davey-tls-braid-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.davey-tls-braid
+date:
+- type: published
+  at: '2026-07-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: George
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Davey
+      completename:
+        language: en
+        content: George Davey
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Davey Group LLC
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines BRAID, a negotiated profile for publicly
+       trusted TLS server certificates that adds one or more independent
+       circuit breakers to a certificate.  Each circuit breaker is an
+       authorization held by a party the domain owner appoints; withdrawing
+       any required authorization causes the certificate to stop validating.
+       Because a certificate can be invalidated promptly and without the
+       participation of the issuing certification authority, its natural
+       validity period no longer has to be short in order to bound exposure.
+
+       The base mechanism is deliberately static.  The domain owner
+       publishes a DNSSEC-signed BRAID Anchor listing the public keys
+       authorized to authenticate the domain, and thereafter does nothing;
+       the certificate remains valid until the owner withdraws an entry.
+       Steady-state operation requires no periodic reissuance, no periodic
+       re-minting of credentials, and no online status service.  Short-
+       interval credential refresh is defined as an optional enhancement
+       that tightens revocation latency, not as a requirement.
+
+       Because the Anchor authorizes credential keys rather than the end-
+       entity key itself, impersonating a BRAID-protected domain requires
+       both the end-entity private key and the ability to publish in the
+       owner's DNSSEC-signed zone.  This document calls that the Two-Control
+       Property, and it is the principal security difference between BRAID
+       and publishing an end-entity certificate association directly in DNS.
+
+       BRAID support is negotiated in the handshake, so a BRAID certificate
+       is presented only to a client that offered to validate it; every
+       other client is served an ordinary certificate and is unaffected.
+       Optional strands bind a certificate to an authorized routing origin
+       and to an appointed third-party witness.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-davey-tls-braid-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-davey-tls-braid-00
+    docidentifier:
+    - content: draft-davey-tls-braid-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-davey-tls-braid-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

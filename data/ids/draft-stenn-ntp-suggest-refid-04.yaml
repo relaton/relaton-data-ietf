@@ -1,0 +1,110 @@
+---
+id: draftstennntpsuggestrefid04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Network Time Protocol Suggest REFID Extension Field
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-suggest-refid-04
+docidentifier:
+- content: draft-stenn-ntp-suggest-refid
+  type: Internet-Draft
+- content: draft-stenn-ntp-suggest-refid-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.stenn-ntp-suggest-refid
+date:
+- type: published
+  at: '2018-10-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Harlan
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Stenn
+      completename:
+        language: en
+        content: Harlan Stenn
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Network Time Foundation
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>NTP has been widely used through several revisions, with the latest
+       being RFC 5905 [RFC5905].  A core component of the protocol and the
+       algorithms is the Reference ID, or REFID, which is used to identify
+       the source of time used for synchronization.  Traditionally, when the
+       source of time was another system the REFID was the IPv4 address of
+       that other system.  The core purpose of the REFID is to prevent a
+       one-degree timing loop, where if A has several timing sources that
+       include B, if B decides to get its time from A we don't want A then
+       deciding to get its time from B.  The REFID is considered to be
+       "public data" and is a vital core-component of the base NTP packet.
+       If a system's REFID is the IPv4 address of its system peer, an
+       attacker can try to use that information to send spoofed time packets
+       to either or both the target or the target's server, attempting to
+       cause a disruption in time service.  This proposal is a backward-
+       compatible way for a time source to tell its peers or clients "If you
+       use me as your system peer, use this nonce as your REFID."  This
+       nonce SHOULD be untraceable to the original system, and if it is used
+       as the REFID this type of attack is prevented.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-stenn-ntp-suggest-refid-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-suggest-refid-03
+    docidentifier:
+    - content: draft-stenn-ntp-suggest-refid-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-stenn-ntp-suggest-refid-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-suggest-refid-05
+    docidentifier:
+    - content: draft-stenn-ntp-suggest-refid-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-stenn-ntp-suggest-refid-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

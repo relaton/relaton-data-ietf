@@ -1,0 +1,50 @@
+---
+id: draftsusidropsrpkirpincrementalvalidation
+schema_version: v1.5.6
+formattedref:
+  content: draft-su-sidrops-rpki-rp-incremental-validation
+title:
+- language: en
+  script: Latn
+  content: A Publication-Point-Based Incremental Validation Procedure for RPKI Relying
+    Parties
+docidentifier:
+- content: draft-su-sidrops-rpki-rp-incremental-validation
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RPKI Relying Parties commonly perform top-down validation of the RPKI
+       certificate tree after repository synchronization.  Existing
+       repository synchronization mechanisms can update the local repository
+       incrementally, avoiding a complete retrieval of all repository data.
+       However, after such an incremental repository update, an RP
+       implementation may still repeat full top-down validation over the
+       local repository.  It means that the RP starts from the trust anchors
+       and performs complete validation checks for all currently reachable
+       RPKI objects encountered during the traversal.  Repeating such
+       validation for objects whose validation inputs have not changed can
+       introduce unnecessary validation overhead.
+
+       This document specifies a publication-point-based incremental
+       validation procedure for RPKI RPs.  The procedure is intended to
+       reduce redundant validation work after incremental repository
+       synchronization, while preserving the same validation result as a
+       full top-down validation over the same repository snapshot, trust
+       anchor set, validation policy, and validation time.  This document
+       does not change the syntax or validation semantics of any RPKI
+       object.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-su-sidrops-rpki-rp-incremental-validation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-su-sidrops-rpki-rp-incremental-validation-00
+    docidentifier:
+    - content: draft-su-sidrops-rpki-rp-incremental-validation-00
+      type: Internet-Draft
+      primary: true

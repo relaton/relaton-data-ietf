@@ -1,0 +1,207 @@
+---
+id: draftietfrtgwgmultisegmentsdwan02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Multi-segment SD-WAN via Cloud DCs
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-multisegment-sdwan-02
+docidentifier:
+- content: draft-ietf-rtgwg-multisegment-sdwan
+  type: Internet-Draft
+- content: draft-ietf-rtgwg-multisegment-sdwan-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-rtgwg-multisegment-sdwan
+date:
+- type: published
+  at: '2025-02-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kausik
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Majumdar
+      completename:
+        language: en
+        content: Kausik Majumdar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Oracle
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Linda
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Dunbar
+      completename:
+        language: en
+        content: Linda Dunbar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Futurewei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Venkit
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Kasiviswanathan
+      completename:
+        language: en
+        content: Venkit Kasiviswanathan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arista
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ashok
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ramchandra
+      completename:
+        language: en
+        content: Ashok Ramchandra
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Aseem
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Choudhary
+      completename:
+        language: en
+        content: Aseem Choudhary
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aviatrix
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a method for SD-WAN Customer Premises
+       Equipment (CPEs) to use GENEVE encapsulation (RFC8926) to
+       transport IPsec-encrypted packets across a Cloud Backbone
+       without requiring decryption at Cloud Gateways (GWs). In this
+       approach, SD-WAN CPEs encapsulate IPsec-encrypted payloads
+       within GENEVE headers and forward them to their nearest Cloud
+       GWs. These Cloud GWs then steer the encrypted traffic through
+       the Cloud Backbone while preserving its confidentiality,
+       ensuring seamless transport to the destination Cloud GWs. The
+       egress Cloud GWs subsequently deliver the original IPsec-
+       encrypted payloads to the receiving CPEs. This mechanism
+       enables the Cloud Backbone to interconnect multiple SD-WAN
+       segments efficiently, eliminating the need for Cloud GWs to
+       decrypt and re-encrypt payloads, thus enhancing the
+       performance.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-rtgwg-multisegment-sdwan-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-multisegment-sdwan-01
+    docidentifier:
+    - content: draft-ietf-rtgwg-multisegment-sdwan-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-rtgwg-multisegment-sdwan-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-multisegment-sdwan-03
+    docidentifier:
+    - content: draft-ietf-rtgwg-multisegment-sdwan-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-rtgwg-multisegment-sdwan-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,183 @@
+---
+id: draftgengacmesm2dualcertrotation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: ACME STAR Extension for SM2 Dual-Certificate Automated Key Rotation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-geng-acme-sm2dualcert-rotation-00
+docidentifier:
+- content: draft-geng-acme-sm2dualcert-rotation
+  type: Internet-Draft
+- content: draft-geng-acme-sm2dualcert-rotation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.geng-acme-sm2dualcert-rotation
+date:
+- type: published
+  at: '2026-07-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Feng
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Geng
+      completename:
+        language: en
+        content: Feng Geng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Panyu
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Wu
+      completename:
+        language: en
+        content: Panyu Wu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guilin
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: WANG
+      completename:
+        language: en
+        content: Guilin WANG
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: 陈鑫
+      completename:
+        language: en
+        content: 陈鑫
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: TrustAsia
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The SM2 dual-certificate system, specified in [GMT.0034-2014],
+       employs a dual-certificate architecture in which each entity holds
+       both a signature certificate and an encryption certificate.  The
+       encryption private key is generated and escrowed by the Key
+       Management Center (KMC).
+
+       This document defines an *ACME Profile* that adapts the core protocol
+       of [RFC8555] to the specific deployment scenario of SM2 dual-
+       certificate management in the ShangMi (SM) ecosystem.  Building upon
+       the dual-certificate foundation framework defined in [I-D.geng-acme-
+       sm2dualcert-extension], this document defines a STAR extension for
+       the ACME protocol that enables *synchronized short-term automatic
+       renewal* of SM2 dual certificates.  The signature certificate follows
+       [RFC8739] (ACME STAR) for automatic renewal with the same key pair;
+       the encryption certificate achieves automated key rotation with a
+       fresh key pair per epoch based on *Asynchronous Remote Key Generation
+       (ARKG)* [Frymann2020].
+
+       This extension establishes a *unified ARKG seed chain key derivation
+       system*: the KMC holds a seed seed_kmc and derives all encryption
+       certificate key pairs (pk_i, sk_i) for all epochs via the ARKG
+       algorithm, enabling stateless, lightweight KMC operations.  On this
+       basis, this extension provides *two private key delivery modes*:
+
+       *  *Mode A (ARKG Envelope Delivery)*: delivers sk_i to the client via
+          a digital envelope, fully inheriting the envelope mechanism of the
+          base framework.
+
+       *  *Mode B (ARKG Offline DH Derivation)*: the initial private key is
+          obtained via envelope delivery; subsequent private keys are
+          derived offline by the client, providing key insulation security
+          properties.
+
+       Both modes share the same ARKG cryptographic infrastructure,
+       differing only in the final delivery mechanism of the private key.
+       Deployers may choose according to their requirements, with full
+       compatibility and coexistence achieved through ACME directory object
+       negotiation.
+
+       *Document Positioning*: This document is intended for the *specific
+       SM ecosystem* as a practical guide and interoperability reference,
+       and does not seek to become a general Internet standard.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-geng-acme-sm2dualcert-rotation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

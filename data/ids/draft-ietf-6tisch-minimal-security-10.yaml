@@ -1,0 +1,180 @@
+---
+id: draftietf6tischminimalsecurity10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Minimal Security Framework for 6TiSCH
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-6tisch-minimal-security-10
+docidentifier:
+- content: draft-ietf-6tisch-minimal-security
+  type: Internet-Draft
+- content: draft-ietf-6tisch-minimal-security-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-6tisch-minimal-security
+date:
+- type: published
+  at: '2019-04-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Vučinić
+      completename:
+        language: en
+        content: Mališa Vučinić
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Inria
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jonathan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Simon
+      completename:
+        language: en
+        content: Jonathan Simon
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Analog Devices
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kris
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Pister
+      completename:
+        language: en
+        content: Kris Pister
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: University of California Berkeley
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Michael
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Richardson
+      completename:
+        language: en
+        content: Michael Richardson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sandelman Software Works
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes the minimal framework required for a new
+       device, called "pledge", to securely join a 6TiSCH (IPv6 over the
+       TSCH mode of IEEE 802.15.4e) network.  The framework requires that
+       the pledge and the JRC (join registrar/coordinator, a central
+       entity), share a symmetric key.  How this key is provisioned is out
+       of scope of this document.  Through a single CoAP (Constrained
+       Application Protocol) request-response exchange secured by OSCORE
+       (Object Security for Constrained RESTful Environments), the pledge
+       requests admission into the network and the JRC configures it with
+       link-layer keying material and other parameters.  The JRC may at any
+       time update the parameters through another request-response exchange
+       secured by OSCORE.  This specification defines the Constrained Join
+       Protocol and its CBOR (Concise Binary Object Representation) data
+       structures, and configures the rest of the 6TiSCH communication stack
+       for this join process to occur in a secure manner.  Additional
+       security mechanisms may be added on top of this minimal framework.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-6tisch-minimal-security-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6tisch-minimal-security-09
+    docidentifier:
+    - content: draft-ietf-6tisch-minimal-security-09
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-6tisch-minimal-security-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6tisch-minimal-security-11
+    docidentifier:
+    - content: draft-ietf-6tisch-minimal-security-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-6tisch-minimal-security-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

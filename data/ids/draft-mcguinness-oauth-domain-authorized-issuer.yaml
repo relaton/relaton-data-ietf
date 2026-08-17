@@ -1,0 +1,51 @@
+---
+id: draftmcguinnessoauthdomainauthorizedissuer
+schema_version: v1.5.6
+formattedref:
+  content: draft-mcguinness-oauth-domain-authorized-issuer
+title:
+- language: en
+  script: Latn
+  content: OAuth Domain-Authorized Issuer Trust Method
+docidentifier:
+- content: draft-mcguinness-oauth-domain-authorized-issuer
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Domain-Authorized Issuer (DAI) Trust
+       Method: a subject_namespace_authorization Trust Method for the OAuth
+       Identity Assertion Trust Framework in which the owner of a subject
+       namespace (typically a DNS domain) publishes a policy listing the
+       OAuth authorization servers it authorizes to assert identities in
+       that namespace.  The mechanism uses the DNS-based authority-
+       publication pattern operators already deploy for CAA, MTA-STS, SPF,
+       and DKIM.  A Resource Authorization Server uses the published policy
+       to verify that an identity assertion's issuer is authorized for the
+       asserted subject namespace.
+
+       The lookup defined by this document is verifier-side: given an
+       identity assertion in hand, the Resource Authorization Server locates
+       the Subject Authority's issuer authorization policy.  Client-side
+       discovery of which Assertion Issuer to use before an assertion exists
+       is a separate use case and is deferred to future work.
+
+       This document also defines the Issuer Authorization Policy wire
+       format that the Trust Method consumes.  The parent trust framework
+       specification owns the generic Trust Policy document, Trust Method
+       category structure, cross-category combination rule, and Subject
+       Authority Determination concept.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-domain-authorized-issuer-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-domain-authorized-issuer-00
+    docidentifier:
+    - content: draft-mcguinness-oauth-domain-authorized-issuer-00
+      type: Internet-Draft
+      primary: true

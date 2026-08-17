@@ -1,0 +1,49 @@
+---
+id: draftburlsmtac
+schema_version: v1.5.6
+formattedref:
+  content: draft-burls-mtac
+title:
+- language: en
+  script: Latn
+  content: 'Merkle Tree Agent Certificates (MTAC): Batch-Issued Post-Quantum Identity
+    Credentials for AI Agents'
+docidentifier:
+- content: draft-burls-mtac
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Merkle Tree Agent Certificates (MTAC), a
+       credential format and issuance profile in which a certificate
+       authority commits a batch of AI agent identity credentials to a
+       Merkle tree, signs only the tree head with the post-quantum signature
+       algorithm ML-DSA-65, and distributes a per-credential inclusion
+       proof.  A relying party verifies a credential offline against the
+       signed tree head without contacting the issuer.  Each batch root is
+       additionally co-signed by an independently keyed witness, providing
+       per-batch integrity and continuity attestation, and its root can be
+       corroborated against an independent public record.
+
+       MTAC defines the leaf structure, its deterministic encoding, the leaf
+       hash preimage, the signed tree head wire format, the witness co-
+       signature, and an optional challenge-response proof of possession
+       that binds a credential to a holder key.  Test vectors are provided.
+       This document specifies a credential issuance and verification
+       mechanism.  Declared scopes carried in a credential are self-reported
+       parameters recorded at issuance; this document does not specify a
+       runtime authorization mechanism.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-burls-mtac-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-burls-mtac-00
+    docidentifier:
+    - content: draft-burls-mtac-00
+      type: Internet-Draft
+      primary: true

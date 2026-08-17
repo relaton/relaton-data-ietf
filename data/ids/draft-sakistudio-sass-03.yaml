@@ -1,0 +1,111 @@
+---
+id: draftsakistudiosass03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SakiAgentSSH Secure Protocol Specification
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sakistudio-sass-03
+docidentifier:
+- content: draft-sakistudio-sass
+  type: Internet-Draft
+- content: draft-sakistudio-sass-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sakistudio-sass
+date:
+- type: published
+  at: '2026-06-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: HUA
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: Hua
+      completename:
+        language: en
+        content: HUA CHANG
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Saki Studio
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes the Saki Agent Secure Stream (SASS) protocol,
+       version 1.4.  SASS is an application-layer overlay protocol for
+       authenticated remote command execution, streaming process I/O, and
+       binary file transfer between trusted agents.
+
+       To ensure strict self-containment and compatibility with IETF
+       standard specifications, SASS defines a decoupled "Control-Transport
+       Decoupling" architecture.  The SASS Core defines an abstract SASS
+       Abstract Messaging Model (SAMM) utilizing standard CBOR (RFC 8949)
+       and JSON as baseline serializations.
+
+       Following the precedent of TLS 1.0 (RFC 2246) inheriting and refining
+       SSL 3.0, SASS v1.4 formalizes its security evolution through four
+       major incremental milestones: Active Threat Defense (v1.1), Forward-
+       Secure Audit Hash Chains (v1.2), modular Control-Transport Decoupling
+       (v1.3) incorporating tls-exporter Channel Binding (RFC 9266) and
+       Zero-Allocation Tarpit streams, and Total Response Mapping (v1.4)
+       with 6-Response state machine convergence and Safety Gradient loss
+       bounding.
+
+       SASS v1.4 achieves the Version Dominance milestone: a comparative
+       claim between protocol versions based on Second-order Stochastic
+       Dominance (SSD) [RS1970].  yielding strict SSD improvement.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sakistudio-sass-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sakistudio-sass-02
+    docidentifier:
+    - content: draft-sakistudio-sass-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-sakistudio-sass-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sakistudio-sass-04
+    docidentifier:
+    - content: draft-sakistudio-sass-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sakistudio-sass-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

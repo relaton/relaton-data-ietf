@@ -1,0 +1,93 @@
+---
+id: draftprabhunmrgpromptschemallm00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Framework for Normalizing Multi-Vendor Network Inputs for LLM-Assisted
+    Network Management
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-prabhu-nmrg-prompt-schema-llm-00
+docidentifier:
+- content: draft-prabhu-nmrg-prompt-schema-llm
+  type: Internet-Draft
+- content: draft-prabhu-nmrg-prompt-schema-llm-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.prabhu-nmrg-prompt-schema-llm
+date:
+- type: published
+  at: '2026-05-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shailesh
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Prabhu
+      completename:
+        language: en
+        content: Shailesh Prabhu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Large Language Models (LLMs) are increasingly used to assist network
+       management tasks such as troubleshooting, intent translation, and
+       automation.  Network operations, however, rely on data from many
+       vendors and sources: CLI output, configuration snippets, telemetry,
+       alarms, and vendor-specific APIs.  These inputs differ in format,
+       structure, and semantics, which makes it difficult to present a
+       consistent interface to an LLM.  This document describes a framework
+       for standardizing such multi-vendor inputs for LLM-assisted network
+       management.  Incoming messages from multi-vendor network elements are
+       first handled by an Input Classifier, which determines the nature of
+       each input and assigns it to one of three categories: performance,
+       configuration, or response, using a hybrid approach (rule-based
+       classification first, with escalation to a Small Language Model (SLM)
+       when rules are insufficient).  The classified input is then passed to
+       the corresponding Structurer among the Performance Structurer,
+       Configuration Structurer, and Response Structurer, each of which
+       produces a normalized, structured representation (typically with SLM
+       assistance and optional confidence scoring).  That structured output
+       is fed to a Prompt Schema Generator, which creates a structured,
+       vendor-agnostic schema and supplies schema-aligned prompts to the
+       central LLM.  This document specifies the architecture and component
+       roles for use in design and implementation.  It does not define a
+       wire protocol; it is published for informational purposes.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-prabhu-nmrg-prompt-schema-llm-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

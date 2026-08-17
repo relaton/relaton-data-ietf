@@ -1,0 +1,136 @@
+---
+id: draftrfcxmlrfcswl103k
+schema_version: v1.5.6
+formattedref:
+  content: draft-rfcxml-rfc-swl-103k
+title:
+- language: en
+  script: Latn
+  content: SW103K PROTOCOL
+docidentifier:
+- content: draft-rfcxml-rfc-swl-103k
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification defines a new protocol sw103k addresses challenges
+       in networks with limited bandwidth, latency constraints, and data
+       integrity concerns.  It provides compression and decompression to
+       optimize bandwidth utilization in environments such as Data centers,
+       internet exchange points, and mobile communications.  The protocol
+       operates at the data link layer with a custom frame format including
+       SW103K and HAVI headers.  Key features include:
+
+       - Batch processing of 103 packets with compression - Merkle tree-
+       based integrity verification (merklesw103k root hash) - QoS
+       mechanisms with 8-bit priority field - Security features including
+       AES-256-GCM encryption - Physical layer synchronization with +-1us
+       accuracy
+
+       Jutifying why sw103k is unique:
+
+       The sw103k protocol is a Layer-2 mechanism that applies stateful
+       compression to complete payloads using shared context between
+       communicating entities.
+
+       The protocol assumes that traffic in constrained networks is often
+       structured and repetitive and therefore allows endpoints to provision
+       payload templates,
+
+       dictionaries, and delta-encoding state prior to data exchange.
+
+       During operation, payloads may be represented by compact identifiers
+       together with fields that describe deviations from previously
+       established state.
+
+       For traffic patterns that conform to these assumptions,
+
+       this approach can substantially reduce the number of transmitted
+       octets and may achieve compression ratios on the order of 103:1
+       for selected telemetry and control messages.  By operating
+       independently of IP version, transport protocol, and application
+       encoding,
+
+       sw103k is intended to reduce airtime usage, energy consumption, and
+       the need for fragmentation in environments where link capacity and
+       device resources are limited.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-00
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-01
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-02
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-03
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-04
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-05
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rfcxml-rfc-swl-103k-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-06
+    docidentifier:
+    - content: draft-rfcxml-rfc-swl-103k-06
+      type: Internet-Draft
+      primary: true

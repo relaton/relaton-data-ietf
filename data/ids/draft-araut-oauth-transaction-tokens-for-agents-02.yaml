@@ -1,0 +1,110 @@
+---
+id: draftarautoauthtransactiontokensforagents02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Transaction Tokens For Agents
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-araut-oauth-transaction-tokens-for-agents-02
+docidentifier:
+- content: draft-araut-oauth-transaction-tokens-for-agents
+  type: Internet-Draft
+- content: draft-araut-oauth-transaction-tokens-for-agents-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.araut-oauth-transaction-tokens-for-agents
+date:
+- type: published
+  at: '2026-05-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ashay
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Raut
+      completename:
+        language: en
+        content: Ashay Raut
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies an extension to the to support agent context
+       propagation within Transaction Tokens for agent-based workloads.  The
+       extension defines the use of the act field to identify the agent
+       performing the action, and leverages the existing sub field (as
+       defined in the base Transaction Tokens specification) to represent
+       the principal.  The sub field is populated according to the rules
+       specified in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-
+       transaction-tokens/draft-ietf-oauth-transaction-tokens.html), based
+       on the 'subject_token' provided in the token request.  For autonomous
+       agents operating independently, the sub field represents the agent
+       itself.  These mechanisms enable services within the call graph to
+       make more granular access control decisions, thereby enhancing
+       security.  This document specifies an extension to OAuth Transaction
+       Tokens OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-transaction-
+       tokens/draft-ietf-oauth-transaction-tokens.html) to support agent
+       context propagation within Transaction Tokens for agent-based
+       workloads.  The extension defines the agentic_ctx claim, a structured
+       JWT claim that carries chain-level metadata required for multi-agent
+       flow integrity and MAY contain additional deployment-specific agent
+       context.  The extension addresses two deployment patterns: single-
+       agent flows where one agent acts on behalf of a user within a
+       transaction, and multi-agent flows where multiple agents collaborate
+       across a call chain.  In multi-agent scenarios, the Transaction Token
+       is replaced at each agent transition by the Transaction Token
+       Service, updating the agentic_ctx claim while preserving the
+       immutable identity context (sub and act claims) established at
+       transaction initiation.  This specification leverages the existing
+       act claim as defined in RFC8693
+       (https://datatracker.ietf.org/doc/html/rfc8693) and the sub claim as
+       defined in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-
+       transaction-tokens/draft-ietf-oauth-transaction-tokens.html).  It
+       does not define new token types or grant types; it operates entirely
+       within the existing Transaction Token issuance and replacement
+       mechanisms defined by the base specification.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-araut-oauth-transaction-tokens-for-agents-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-araut-oauth-transaction-tokens-for-agents-01
+    docidentifier:
+    - content: draft-araut-oauth-transaction-tokens-for-agents-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-araut-oauth-transaction-tokens-for-agents-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

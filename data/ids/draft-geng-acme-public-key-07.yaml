@@ -1,0 +1,167 @@
+---
+id: draftgengacmepublickey07
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Automated Certificate Management Environment (ACME) Extension for Public
+    Key Challenges
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-07
+docidentifier:
+- content: draft-geng-acme-public-key
+  type: Internet-Draft
+- content: draft-geng-acme-public-key-07
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.geng-acme-public-key
+date:
+- type: published
+  at: '2026-06-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Feng
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Geng
+      completename:
+        language: en
+        content: Feng Geng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Panyu
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Wu
+      completename:
+        language: en
+        content: Panyu Wu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Liang
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Xia
+      completename:
+        language: en
+        content: Liang Xia
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: 陈鑫
+      completename:
+        language: en
+        content: 陈鑫
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: TrustAsia
+version:
+- content: '07'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Automatic Certificate Management Environment (ACME) [RFC8555]
+       requires a PKCS#10 Certificate Signing Request (CSR) at the
+       finalization stage.  This document defines a new ACME challenge type,
+       "pk-01", that allows a client to prove possession of a private key
+       directly, without constructing a CSR.  The primary motivation is to
+       support key types that cannot generate CSR self-signatures, notably
+       post-quantum Key Encapsulation Mechanism (KEM) keys.  The client
+       declares the public key via a popKey field in the "newOrder" request;
+       the server attaches the "pk-01" challenge to existing identifier
+       authorizations.  When all required authorizations are satisfied, the
+       ACME server issues a certificate using the validated public key and
+       the authorized identifiers, eliminating the need for a CSR in the
+       finalization stage.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-geng-acme-public-key-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-06
+    docidentifier:
+    - content: draft-geng-acme-public-key-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-geng-acme-public-key-07
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

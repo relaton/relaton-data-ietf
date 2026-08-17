@@ -1,0 +1,171 @@
+---
+id: draftclaiseopsawgipfixorderedie01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Ordered Information Element Export in IP Flow Information Export (IPFIX)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-claise-opsawg-ipfix-ordered-ie-01
+docidentifier:
+- content: draft-claise-opsawg-ipfix-ordered-ie
+  type: Internet-Draft
+- content: draft-claise-opsawg-ipfix-ordered-ie-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.claise-opsawg-ipfix-ordered-ie
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Claise
+      completename:
+        language: en
+        content: Benoît Claise
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Everything OPS & Arrcus
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Paul
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Aitken
+      completename:
+        language: en
+        content: Paul Aitken
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ciena
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Holger
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Keller
+      completename:
+        language: en
+        content: Holger Keller
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Deutsche Telekom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yao
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Liu
+      completename:
+        language: en
+        content: Yao Liu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The IP Flow Information Export (IPFIX) protocol allows the same
+       Information Element to appear multiple times in a Template Record.
+       RFC 7011 states that multiple occurrences of the same Information
+       Element SHOULD follow the logical order of their treatments by the
+       Metering Process; however, no protocol mechanism exists for the
+       Exporting Process to explicitly signal to the Collecting Process that
+       this ordering is guaranteed.  Without such a guarantee, the
+       Collecting Process cannot safely interpret repeated Information
+       Elements as ordered observations.  This document describes the
+       problem, presents use cases, analyzes candidate solutions, and
+       specifies a mechanism -- a new Ordered Set type -- that establishes
+       an end-to-end ordering guarantee: the Metering Process records
+       repeated Information Element values in the order the corresponding
+       observations are made, the Exporting Process preserves and signals
+       this guarantee, and the Collecting Process interprets the n-th
+       occurrence of an Information Element as corresponding to the n-th
+       observation by the Metering Process at the Observation Point.  This
+       document updates RFC 7011, RFC 5476, and RFC 6183.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-claise-opsawg-ipfix-ordered-ie-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-claise-opsawg-ipfix-ordered-ie-00
+    docidentifier:
+    - content: draft-claise-opsawg-ipfix-ordered-ie-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-claise-opsawg-ipfix-ordered-ie-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

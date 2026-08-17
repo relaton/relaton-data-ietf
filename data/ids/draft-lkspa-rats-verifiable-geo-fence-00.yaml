@@ -1,0 +1,206 @@
+---
+id: draftlksparatsverifiablegeofence00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Privacy Preserving Verifiable Geofencing with Residency Proofs for Sovereign
+    Workloads
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-00
+docidentifier:
+- content: draft-lkspa-rats-verifiable-geo-fence
+  type: Internet-Draft
+- content: draft-lkspa-rats-verifiable-geo-fence-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.lkspa-rats-verifiable-geo-fence
+date:
+- type: published
+  at: '2026-03-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ramki
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Krishnan
+      completename:
+        language: en
+        content: Ramki Krishnan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: JPMorgan Chase & Co.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ned
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Smith
+      completename:
+        language: en
+        content: Ned Smith
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Intel
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Lopez
+      completename:
+        language: en
+        content: Diego Lopez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telefonica
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Prasad
+      completename:
+        language: en
+        content: A Prasad
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Oracle
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Srinivasa
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Addepalli
+      completename:
+        language: en
+        content: Srinivasa Addepalli
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aryaka
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Modern cloud and distributed computing rely heavily on software-only
+       identities and bearer tokens that are easily stolen, replayed, or
+       used from unauthorized locations.  Furthermore, traditional methods
+       of location verification — such as IP-address-based geolocation — are
+       easily spoofed via VPNs or proxies and significantly compromise
+       infrastructure security and privacy for sovereign workloads and high-
+       assurance environments.
+
+       This document defines the *Verifiable Geofencing Attestation Profile
+       (V-GAP)*, a profile of the RATS Architecture {{!RFC9334}}, that
+       solves these challenges through hardware-rooted cryptographic
+       verifiability.  A host machine runs a Workload Identity Agent for
+       managing the workload identities on that platform.  This profile
+       replaces implicit trust and spoofable indicators with
+       cryptographically verifiable hardware-rooted Evidence of integrity
+       and location for this agent.  Critically, this framework prioritizes
+       location privacy by utilizing Zero-Knowledge Proofs (ZKPs), allowing
+       a workload to prove it is within a compliant zone without disclosing
+       precise coordinates.
+
+       By binding software identities to persistent silicon identities and
+       verified physical residency, V-GAP establishes a silicon-to-workload
+       chain of trust.  It ensures that sensitive operations are only
+       performed by authorized workloads running on untampered hardware in
+       cryptographically verified, privacy-preserving geographic boundaries,
+       fulfilling the high-assurance requirements of the WIMSE Architecture
+       {{!I-D.ietf-wimse-architecture}}.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-lkspa-rats-verifiable-geo-fence-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-01
+    docidentifier:
+    - content: draft-lkspa-rats-verifiable-geo-fence-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-lkspa-rats-verifiable-geo-fence-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

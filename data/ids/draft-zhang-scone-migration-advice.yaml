@@ -1,0 +1,40 @@
+---
+id: draftzhangsconemigrationadvice
+schema_version: v1.5.6
+formattedref:
+  content: draft-zhang-scone-migration-advice
+title:
+- language: en
+  script: Latn
+  content: Endpoint Handling of SCONE Throughput Advice Across QUIC Path Changes
+docidentifier:
+- content: draft-zhang-scone-migration-advice
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>SCONE throughput advice is scoped to the path and direction in which
+       it is received.  When a QUIC connection changes path, the endpoint
+       can retain an old advice value while that value is no longer
+       applicable to the active path.  This document describes endpoint-
+       local handling of that transition.  It focuses on the distinction
+       between retained advice and active-path advice, the interval in which
+       no fresh path-applicable advice is available, and the observability
+       needed to avoid treating historical advice as current guidance.  This
+       document defines no new SCONE protocol elements, does not modify QUIC
+       path validation, does not define an application API, and does not
+       change congestion control behavior.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhang-scone-migration-advice-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-scone-migration-advice-00
+    docidentifier:
+    - content: draft-zhang-scone-migration-advice-00
+      type: Internet-Draft
+      primary: true

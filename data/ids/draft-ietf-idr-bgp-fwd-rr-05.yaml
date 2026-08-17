@@ -1,0 +1,120 @@
+---
+id: draftietfidrbgpfwdrr05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Route Reflector with Next Hop Self
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-fwd-rr-05
+docidentifier:
+- content: draft-ietf-idr-bgp-fwd-rr
+  type: Internet-Draft
+- content: draft-ietf-idr-bgp-fwd-rr-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-bgp-fwd-rr
+date:
+- type: published
+  at: '2026-02-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kaliraj
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Vairavakkalai
+      completename:
+        language: en
+        content: Kaliraj Vairavakkalai
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Natrajan
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Venkataraman
+      completename:
+        language: en
+        content: Natrajan Venkataraman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The procedures in BGP Route Reflection (RR) spec RFC4456 primarily
+       deal with scenarios where the RR is reflecting BGP routes with next
+       hop unchanged.  In some deployments like Inter-AS Option C
+       (Section 10, RFC4364), the ABRs may perform RR functionality with
+       nexthop set to self.  If adequate precautions are not taken, the
+       RFC4456 procedures can result in traffic forwarding loop in such
+       deployments.
+
+       This document illustrates one such looping scenario, and specifies
+       approaches to minimize possiblity of traffic forwarding loop in such
+       deployments.  An example with Inter-AS Option C (Section 10, RFC4364)
+       deployment is used, where RR with next hop self is used at redundant
+       ABRs when they re-advertise BGP transport family routes between
+       multiple IGP domains.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-bgp-fwd-rr-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-fwd-rr-04
+    docidentifier:
+    - content: draft-ietf-idr-bgp-fwd-rr-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-bgp-fwd-rr-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

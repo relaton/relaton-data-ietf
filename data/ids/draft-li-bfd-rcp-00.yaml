@@ -1,0 +1,232 @@
+---
+id: draftlibfdrcp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BFD Considerations for Redundant Control Planes
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-bfd-rcp-00
+docidentifier:
+- content: draft-li-bfd-rcp
+  type: Internet-Draft
+- content: draft-li-bfd-rcp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-bfd-rcp
+date:
+- type: published
+  at: '2026-07-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiqiang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhiqiang Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Wei Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guoying
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Guoying Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xun
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Sun
+      completename:
+        language: en
+        content: Xun Sun
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Inesa
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chunhao
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Chunhao Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SAIA
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In systems with redundant control plane processors, Bidirectional
+       Forwarding Detection (BFD) sessions are typically managed by a single
+       active processor.  When that processor fails and a standby takes
+       over, BFD sessions may be interrupted long enough for remote peers to
+       declare failure, even though the forwarding plane remains
+       operational.
+
+       This document describes requirements and operational considerations
+       for preserving BFD sessions across control plane switchover events.
+       It discusses how BFD session state can be maintained on a standby
+       processor and how BFD processing can be resumed by the standby within
+       the BFD Detection Time, without requiring cooperation from or
+       signaling to remote BFD peers.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-bfd-rcp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

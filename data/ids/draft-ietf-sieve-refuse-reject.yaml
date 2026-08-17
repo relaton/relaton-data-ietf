@@ -1,0 +1,36 @@
+---
+id: draftietfsieverefusereject
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-sieve-refuse-reject
+title:
+- language: en
+  script: Latn
+  content: 'Sieve Email Filtering: Reject and Extended Reject Extensions'
+docidentifier:
+- content: draft-ietf-sieve-refuse-reject
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo updates the definition of the Sieve mail filtering language "reject" extension, originally defined in RFC 3028.
+
+     A "Joe-job" is a spam run forged to appear as though it came from an innocent party, who is then generally flooded by automated bounces, Message Disposition Notifications (MDNs), and personal messages with complaints. The original Sieve "reject" action defined in RFC 3028 required use of MDNs for rejecting messages, thus contributing to the flood of Joe-job spam to victims of Joe-jobs.
+
+     This memo updates the definition of the "reject" action to allow messages to be refused during the SMTP transaction, and defines the "ereject" action to require messages to be refused during the SMTP transaction, if possible.
+
+     The "ereject" action is intended to replace the "reject" action wherever possible. The "ereject" action is similar to "reject", but will always favor protocol-level message rejection. [STANDARDS-TRACK]</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-sieve-refuse-reject-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sieve-refuse-reject-09
+    docidentifier:
+    - content: draft-ietf-sieve-refuse-reject-09
+      type: Internet-Draft
+      primary: true

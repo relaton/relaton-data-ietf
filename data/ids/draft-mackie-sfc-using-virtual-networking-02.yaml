@@ -1,0 +1,252 @@
+---
+id: draftmackiesfcusingvirtualnetworking02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Service Function Chains Using Virtual Networking
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mackie-sfc-using-virtual-networking-02
+docidentifier:
+- content: draft-mackie-sfc-using-virtual-networking
+  type: Internet-Draft
+- content: draft-mackie-sfc-using-virtual-networking-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mackie-sfc-using-virtual-networking
+date:
+- type: published
+  at: '2014-10-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stuart
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Mackie
+      completename:
+        language: en
+        content: Stuart Mackie
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bruno
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Rijsman
+      completename:
+        language: en
+        content: Bruno Rijsman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Maria
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Napierala
+      completename:
+        language: en
+        content: Maria Napierala
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AT&T
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Daino
+      completename:
+        language: en
+        content: Diego Daino
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telecom Italia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: D. R.
+      surname:
+        language: en
+        content: Lopez
+      completename:
+        language: en
+        content: Diego R. Lopez
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Daniel
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Bernier
+      completename:
+        language: en
+        content: Daniel Bernier
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Bell Canada
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Walter
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Haeffner
+      completename:
+        language: en
+        content: Walter Haeffner
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vodafone
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes how service function chains (SFC) can be
+       applied to traffic flows using routing in a virtual (overlay)
+       network to steer traffic between service nodes. Chains can include
+       services running in routers, on physical appliances or in virtual
+       machines. Service chains have applicability at the subscriber edge,
+       business edge and in multi-tenant datacenters. The routing function
+       into SFCs and between service functions within an SFC can be
+       performed by physical devices (routers), be virtualized inside
+       hypervisors, or run as part of a host OS.
+
+       The architecture uses a controller to calculate and install routes
+       to implement an SFC, based on a topological model of the chain and
+       knowledge of the network addresses that should pass through the
+       chain. An advantage of the approach is that SFCs can be implemented
+       without alteration to today's BGP standard, and without change to
+       the current operation of routers.
+
+       Service chains need to support load balancing between network
+       functions, and symmetric forward and reverse paths are required when
+       stateful services are involved. This document shows how these
+       requirements can be met by using VRFs at the ingress and egress of
+       each service instance and by performing load balancing after the
+       egress of each service as part of the routing function.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mackie-sfc-using-virtual-networking-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mackie-sfc-using-virtual-networking-01
+    docidentifier:
+    - content: draft-mackie-sfc-using-virtual-networking-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mackie-sfc-using-virtual-networking-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

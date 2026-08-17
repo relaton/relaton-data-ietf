@@ -1,0 +1,55 @@
+---
+id: draftahearnseal
+schema_version: v1.5.6
+formattedref:
+  content: draft-ahearn-seal
+title:
+- language: en
+  script: Latn
+  content: Signed Email Authentication Layer (SEAL)
+docidentifier:
+- content: draft-ahearn-seal
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Signed Email Authentication Layer (SEAL), a
+       cryptographically signed identity envelope carried within a new
+       message header field, SEAL-Envelope.  SEAL provides a stable,
+       forwarding-resilient identity assertion that binds the origin domain
+       to a specific message instance using the SEAL-MSGID header, which
+       contains a SEAL-protected copy of the [RFC5322] Message-ID present at
+       message creation time.  After SEAL-MSGID is set, intermediaries may
+       modify or discard the visible [RFC5322] Message-ID header without
+       affecting SEAL validity.  SEAL also records the canonical [RFC5322]
+       From header value in the envelope, enabling detection of From
+       rewriting without affecting SEAL validity.  SEAL is designed to
+       complement current approaches such as DKIM, DMARC, and ARC by
+       reducing their dependency on mutable message components and by
+       providing a canonical, tamper-evident identity layer that can remain
+       valid across many common transformations.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ahearn-seal-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ahearn-seal-00
+    docidentifier:
+    - content: draft-ahearn-seal-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ahearn-seal-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ahearn-seal-01
+    docidentifier:
+    - content: draft-ahearn-seal-01
+      type: Internet-Draft
+      primary: true

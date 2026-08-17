@@ -1,0 +1,72 @@
+---
+id: drafthomburgdnsopdettl00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Add TTLs to DNS errors
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-homburg-dnsop-dettl-00
+docidentifier:
+- content: draft-homburg-dnsop-dettl
+  type: Internet-Draft
+- content: draft-homburg-dnsop-dettl-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.homburg-dnsop-dettl
+date:
+- type: published
+  at: '2026-06-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Philip
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Homburg
+      completename:
+        language: en
+        content: Philip Homburg
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When a DNS server replies an error other than NXDOMAIN, there is no
+       mechanism to specify how long this error can be cached by the
+       recepient.  This document introduces a mechanism where a server can
+       specify the time to live (TTL) of an error by adding a SOA record to
+       the additional section of a reply.  Clients can use this TTL at their
+       discretion.  In particular, clients can limit the TTL to a maximum
+       value, impose a minimum value or just ignore the TTL value all
+       together.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-homburg-dnsop-dettl-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

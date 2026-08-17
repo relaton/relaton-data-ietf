@@ -1,0 +1,102 @@
+---
+id: drafthoodagtpdiscovery01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AGTP Agent Discovery and Name Service
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-discovery-01
+docidentifier:
+- content: draft-hood-agtp-discovery
+  type: Internet-Draft
+- content: draft-hood-agtp-discovery-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hood-agtp-discovery
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hood
+      completename:
+        language: en
+        content: Chris Hood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nomotic, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Agent Transfer Protocol (AGTP) enables agents to communicate once
+       they know each other's canonical identifiers.  This document
+       specifies two layered mechanisms by which agents find each other and
+       by which human-readable names resolve to Canonical Agent-IDs: the
+       DISCOVER method, which queries for agents matching a capability
+       description, and the Agent Name Service (ANS), which provides
+       governed name-to-Agent-ID resolution.
+
+       The architectural relationship is layered.  AGTP-Presence
+       [AGTP-PRESENCE] provides ambient awareness of agents within
+       visibility scopes as a substrate property.  DISCOVER operates over
+       the Presence substrate to query the live population.  ANS provides
+       human-readable name resolution, analogous to DNS for the web, with
+       name authorities federating across organizational boundaries.  This
+       document also introduces Anticipatory Discovery Services (ADS) as a
+       forward-looking composition pattern where application-layer services
+       preload agent awareness based on observed operational signals.
+
+       DISCOVER and ANS together provide the application-layer interfaces
+       for discovery and naming that compose with the substrate-level
+       ambient discovery defined in [AGTP-PRESENCE].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hood-agtp-discovery-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-discovery-00
+    docidentifier:
+    - content: draft-hood-agtp-discovery-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hood-agtp-discovery-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

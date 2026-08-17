@@ -1,0 +1,96 @@
+---
+id: draftsullivancfrgraae00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Random-Access Authenticated Encryption
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sullivan-cfrg-raae-00
+docidentifier:
+- content: draft-sullivan-cfrg-raae
+  type: Internet-Draft
+- content: draft-sullivan-cfrg-raae-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sullivan-cfrg-raae
+date:
+- type: published
+  at: '2026-03-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nick
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Sullivan
+      completename:
+        language: en
+        content: Nick Sullivan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cryptography Consulting LLC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Random-Access Authenticated Encryption (raAE),
+       a mechanism for encrypting segmented content that supports decryption
+       of individual segments without processing others, selective re-
+       encryption of individual segments in place, and content-level
+       integrity via an accumulator binding all segment authentication tags.
+       raAE is parameterized over an Authenticated Encryption with
+       Associated Data (AEAD) algorithm, a key derivation function (KDF),
+       segment size, epoch length, and nonce generation mode.
+
+       raAE does not define wire formats, IANA registries, or key
+       management; applications instantiate it with a chosen parameter set
+       and protocol identifier.  This document also defines "raAE-v1", a
+       concrete profile with test vectors, supporting five AEAD algorithms:
+       AES-256-GCM, ChaCha20-Poly1305, AES-256-GCM-SIV, AEGIS-256, and
+       AEGIS-256X2, each with HKDF-SHA-256 and 65536-octet segments.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-sullivan-cfrg-raae-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-cfrg-raae-01
+    docidentifier:
+    - content: draft-sullivan-cfrg-raae-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sullivan-cfrg-raae-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

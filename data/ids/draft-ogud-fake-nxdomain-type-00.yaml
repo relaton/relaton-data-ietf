@@ -1,0 +1,101 @@
+---
+id: draftogudfakenxdomaintype00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Signaling NSEC record owner name nonexistence
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ogud-fake-nxdomain-type-00
+docidentifier:
+- content: draft-ogud-fake-nxdomain-type
+  type: Internet-Draft
+- content: draft-ogud-fake-nxdomain-type-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ogud-fake-nxdomain-type
+date:
+- type: published
+  at: '2015-05-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Guðmundsson
+      completename:
+        language: en
+        content: Ólafur Guðmundsson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CloudFlare Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Filippo
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Valsorda
+      completename:
+        language: en
+        content: Filippo Valsorda
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CloudFlare Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DNSSEC was to large extent designed for off-line signing.  A number
+       of new opportunities arise when on-line signing is used.  In negative
+       answers case there is no real need for the wildcard proof and the
+       server can just state that the queried name and type do not exist in
+       a single NSEC/NSEC3 record.  But such a minimally covering NSEC
+       record that shares the name with the query name can not set the
+       NXDOMAIN RCODE.  Still, some applications want to explicitly know if
+       the name does exist.  This document allocates a new DNS RRtype that
+       can be used to signal nonexistence of the owner names of NSEC/NSEC3
+       records.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ogud-fake-nxdomain-type-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

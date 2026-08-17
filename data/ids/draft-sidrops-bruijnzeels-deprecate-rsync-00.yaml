@@ -1,0 +1,94 @@
+---
+id: draftsidropsbruijnzeelsdeprecatersync00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Resource Public Key Infrastructure (RPKI) Repository Requirements
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sidrops-bruijnzeels-deprecate-rsync-00
+docidentifier:
+- content: draft-sidrops-bruijnzeels-deprecate-rsync
+  type: Internet-Draft
+- content: draft-sidrops-bruijnzeels-deprecate-rsync-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sidrops-bruijnzeels-deprecate-rsync
+date:
+- type: published
+  at: '2019-11-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tim
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Bruijnzeels
+      completename:
+        language: en
+        content: Tim Bruijnzeels
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NLnet Labs
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document updates the profile for the structure of the Resource
+       Public Key Infrastructure (RPKI) distributed repository [RFC6481] by
+       describing how the RPKI Repository Delta Protocol (RRDP) [RFC8182]
+       can be used, and stipulating that repositories which are made
+       available over RRDP are no longer required to be available over
+       rsync.
+
+       The Profile for X.509 PKIX Resource Certificates [RFC6487] uses rsync
+       URIs in the Authority Information Access, Subject Information Access,
+       and CRL Distribution Points extensions.  This document leaves this
+       unchanged, meaning that rsync URIs are still used for naming and
+       finding objects in the RPKI.  However, it is no longer guaranteed
+       that objects can be retrieved using these URIs.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-sidrops-bruijnzeels-deprecate-rsync-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sidrops-bruijnzeels-deprecate-rsync-01
+    docidentifier:
+    - content: draft-sidrops-bruijnzeels-deprecate-rsync-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sidrops-bruijnzeels-deprecate-rsync-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

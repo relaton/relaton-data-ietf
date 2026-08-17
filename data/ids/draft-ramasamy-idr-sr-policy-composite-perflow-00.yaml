@@ -1,0 +1,164 @@
+---
+id: draftramasamyidrsrpolicycompositeperflow00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'BGP Extensions for SRv6 Per-Flow Traffic Engineering: Composite Candidate
+    Path and Forwarding-Class Signaling'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ramasamy-idr-sr-policy-composite-perflow-00
+docidentifier:
+- content: draft-ramasamy-idr-sr-policy-composite-perflow
+  type: Internet-Draft
+- content: draft-ramasamy-idr-sr-policy-composite-perflow-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ramasamy-idr-sr-policy-composite-perflow
+date:
+- type: published
+  at: '2026-05-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Selvamani
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Ramasamy
+      completename:
+        language: en
+        content: Selvamani Ramasamy
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nexthop AI
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Manoharan
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Sundaramoorthy
+      completename:
+        language: en
+        content: Manoharan Sundaramoorthy
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nexthop AI
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shyam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Sethuram
+      completename:
+        language: en
+        content: Shyam Sethuram
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nexthop AI
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Venkit
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Kasiviswanathan
+      completename:
+        language: en
+        content: Venkit Kasiviswanathan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nexthop AI
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Segment Routing Policy Architecture (RFC 9256) defines the
+       concept of a Composite Candidate Path, which enables a parent SR
+       Policy to recursively steer traffic into a set of constituent SR
+       Policies.  Section 8.6 of RFC 9256 further defines per-flow steering,
+       in which packets are classified into a Forwarding Class value by a
+       Quality-of-Service classifier at the headend, and that Forwarding
+       Class value selects a specific constituent SR Policy, identified by
+       its color, for forwarding.
+
+       RFC 9830 specifies how BGP distributes SR Policy Candidate Paths but
+       explicitly excludes composite Candidate Paths from its scope.
+       Consequently, no standard BGP mechanism currently exists to
+       distribute a parent per-flow SR Policy -- including its Forwarding-
+       Class-to-color mapping table -- to headend nodes.  This document
+       defines two new sub-TLVs for the BGP Tunnel Encapsulation Attribute
+       (SR Policy type, Tunnel Type 15): the Constituent SR Policy sub-TLV
+       and the nested Per-Flow Forwarding Class sub-TLV.  Together, these
+       extensions allow a controller to distribute a fully specified
+       composite or per-flow Candidate Path to headend routers via BGP.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ramasamy-idr-sr-policy-composite-perflow-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

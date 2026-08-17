@@ -1,0 +1,64 @@
+---
+id: drafthaynesnfsv4recalldevice
+schema_version: v1.5.6
+formattedref:
+  content: draft-haynes-nfsv4-recalldevice
+title:
+- language: en
+  script: Latn
+  content: Deviceid-Scoped Layout Recall for NFSv4.2
+docidentifier:
+- content: draft-haynes-nfsv4-recalldevice
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Parallel Network File System (pNFS) allows the metadata server to
+       recall a layout from a client by file id, by file system id, or
+       across all of a client's layouts.  It also lets the server delete a
+       deviceid via CB_NOTIFY_DEVICEID.  It does not provide a mechanism for
+       the metadata server to recall, in a single operation, all layouts
+       that reference a specific deviceid.  This document presents an
+       extension to RFC7862 that adds a deviceid-scoped layout recall: a
+       single CB_LAYOUTRECALL operation recalls every layout a client holds
+       that references a given deviceid, leaving unrelated layouts in place.
+       Without this capability, device unavailability can trigger large
+       volumes of failed WRITE and LAYOUTERROR traffic, and administrators
+       lack a surgical way to retire a deviceid without disturbing layouts
+       that reference healthy devices.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-haynes-nfsv4-recalldevice-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-recalldevice-00
+    docidentifier:
+    - content: draft-haynes-nfsv4-recalldevice-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-haynes-nfsv4-recalldevice-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-recalldevice-01
+    docidentifier:
+    - content: draft-haynes-nfsv4-recalldevice-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-haynes-nfsv4-recalldevice-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-recalldevice-02
+    docidentifier:
+    - content: draft-haynes-nfsv4-recalldevice-02
+      type: Internet-Draft
+      primary: true

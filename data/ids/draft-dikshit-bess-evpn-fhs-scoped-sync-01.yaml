@@ -1,0 +1,99 @@
+---
+id: draftdikshitbessevpnfhsscopedsync01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Scoped Sync for EVPN First-Hop-Security DHCP Snoop Routes
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-bess-evpn-fhs-scoped-sync-01
+docidentifier:
+- content: draft-dikshit-bess-evpn-fhs-scoped-sync
+  type: Internet-Draft
+- content: draft-dikshit-bess-evpn-fhs-scoped-sync-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dikshit-bess-evpn-fhs-scoped-sync
+date:
+- type: published
+  at: '2026-07-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Saumya
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dikshit
+      completename:
+        language: en
+        content: Saumya Dikshit
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>[I-D.ietf-bess-evpn-first-hop-security] defines a new EVPN Route
+       Type, the DHCP Snoop Route (DSR), to synchronize DHCP snoop
+       MAC/IP bindings across EVPN Provider Edge (PE) devices so that
+       First Hop Security (FHS) functions such as Dynamic ARP Inspection,
+       Neighbor Discovery Inspection, and IPv4/IPv6 Source Guard continue
+       to operate correctly across EVPN multihoming and host mobility
+       events.  As specified, a DSR is distributed to every PE
+       participating in the EVPN Broadcast Domain (BD) in which it was
+       learned.  In deployments where a single EVPN BD spans many
+       geographically or administratively distinct fabrics interconnected
+       over a WAN, this "flood to the whole BD" behavior distributes
+       client IP/MAC binding information -- and therefore knowledge of
+       which hosts exist behind which access switches -- well beyond the
+       set of fabrics that actually need it for FHS purposes.  This
+       document defines a Sync-Scope Extended Community that an
+       originating PE MAY attach to a DSR to restrict its distribution to
+       an explicitly identified subset of participating fabrics, and
+       specifies the associated PE processing rules.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dikshit-bess-evpn-fhs-scoped-sync-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dikshit-bess-evpn-fhs-scoped-sync-00
+    docidentifier:
+    - content: draft-dikshit-bess-evpn-fhs-scoped-sync-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dikshit-bess-evpn-fhs-scoped-sync-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

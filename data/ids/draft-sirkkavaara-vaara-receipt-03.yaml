@@ -1,0 +1,110 @@
+---
+id: draftsirkkavaaravaarareceipt03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Agent
+    Actions'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-03
+docidentifier:
+- content: draft-sirkkavaara-vaara-receipt
+  type: Internet-Draft
+- content: draft-sirkkavaara-vaara-receipt-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sirkkavaara-vaara-receipt
+date:
+- type: published
+  at: '2026-06-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Henri
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Sirkkavaara
+      completename:
+        language: en
+        content: Henri Sirkkavaara
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vaara
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies vaara.receipt/v1, a signed and independently
+       recomputable record that binds a decision about an agent action to
+       the evidence the decision was made on, and optionally to one or more
+       external timestamp anchors.  The format is canonicalized with the
+       JSON Canonicalization Scheme (JCS) so that any third party can
+       recompute its digests and verify its signature without access to the
+       issuer.
+
+       The receipt's trust is root-agnostic: the same record is verifiable
+       with or without a hardware trusted execution environment and is re-
+       expressible as an IETF RATS Entity Attestation Result.  Downstream
+       specifications (a payment rail, a compliance regime, a framework
+       integration) define profiles that pin to a version of this document
+       and add only their own evidence schema; they do not redefine the
+       envelope.  The format described here is deployed, and its receipts
+       are independently recomputable from public conformance vectors that
+       ship with standalone checkers importing no issuer code.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sirkkavaara-vaara-receipt-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-02
+    docidentifier:
+    - content: draft-sirkkavaara-vaara-receipt-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-sirkkavaara-vaara-receipt-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-04
+    docidentifier:
+    - content: draft-sirkkavaara-vaara-receipt-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sirkkavaara-vaara-receipt-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

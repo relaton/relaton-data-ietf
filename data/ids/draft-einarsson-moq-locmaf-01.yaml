@@ -1,0 +1,95 @@
+---
+id: drafteinarssonmoqlocmaf01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Low Overhead CMAF for Media over QUIC (LOCMAF)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-einarsson-moq-locmaf-01
+docidentifier:
+- content: draft-einarsson-moq-locmaf
+  type: Internet-Draft
+- content: draft-einarsson-moq-locmaf-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.einarsson-moq-locmaf
+date:
+- type: published
+  at: '2026-07-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Einarsson
+      completename:
+        language: en
+        content: Torbjörn Einarsson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Eyevinn Technology
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies LOCMAF (Low Overhead CMAF for Media over
+       QUIC), a compact packaging for low-latency CMAF media carried end-to-
+       end as MoQ Transport (MOQT) Object payloads, with per-object overhead
+       comparable to the Low Overhead Container (LOC).  LOCMAF carries the
+       CMAF chunk head metadata from a single moof (movie fragment) as a
+       small set of tagged fields, while leaving the sample data (mdat)
+       untouched.  Boxes that may surround the moof in a CMAF chunk — styp
+       (segment type), prft (producer reference time), and any number of
+       emsg (event message) boxes — are carried verbatim, each through a
+       generic box element (a genBox).  The first Object of each MOQT group
+       carries a full reference; subsequent Objects in the same group carry
+       only the differences.  The receiver reconstructs CMAF chunks that are
+       decode-equivalent to the sender input, including the encryption
+       metadata required by CMAF DRM (Common Encryption) pipelines, and a
+       canonical byte-identical reconstruction — independent of the
+       encoder's representation choices — is defined for conformance
+       testing.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-einarsson-moq-locmaf-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-einarsson-moq-locmaf-00
+    docidentifier:
+    - content: draft-einarsson-moq-locmaf-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-einarsson-moq-locmaf-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

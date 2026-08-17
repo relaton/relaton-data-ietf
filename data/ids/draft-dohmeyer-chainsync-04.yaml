@@ -1,0 +1,96 @@
+---
+id: draftdohmeyerchainsync04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'ChainSync: A Synchronization Protocol for Strict Sequential Execution
+    in Linear Distributed Pipelines'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dohmeyer-chainsync-04
+docidentifier:
+- content: draft-dohmeyer-chainsync
+  type: Internet-Draft
+- content: draft-dohmeyer-chainsync-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dohmeyer-chainsync
+date:
+- type: published
+  at: '2026-07-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Douglas
+      - language: en
+        script: Latn
+        initial: D
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: D. R.
+      surname:
+        language: en
+        content: Dohmeyer
+      completename:
+        language: en
+        content: Douglas Russell Dohmeyer
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Researcher
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>ChainSync is a lightweight application-layer protocol that runs over
+       reliable TCP connections to synchronize a fixed linear chain of
+       distributed processes such that they execute their local tasks in
+       strict sequential order and only after every process in the chain has
+       confirmed it is ready.  The protocol has four phases: 1) a forward
+       "readiness" wave, 2) a backward "start" wave, 3) a forward
+       "execution" wave, and 4) a backward exit wave.
+
+       The design guarantees strict ordering even when nodes become ready at
+       very different times and requires only point-to-point TCP connections
+       along the chain, thus no central coordinator is needed.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dohmeyer-chainsync-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dohmeyer-chainsync-03
+    docidentifier:
+    - content: draft-dohmeyer-chainsync-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dohmeyer-chainsync-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

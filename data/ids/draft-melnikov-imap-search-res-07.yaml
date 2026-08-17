@@ -1,0 +1,74 @@
+---
+id: draftmelnikovimapsearchres07
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: IMAP Extension for Referencing the Last SEARCH Result
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-melnikov-imap-search-res-07
+docidentifier:
+- content: draft-melnikov-imap-search-res
+  type: Internet-Draft
+- content: draft-melnikov-imap-search-res-07
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.melnikov-imap-search-res
+date:
+- type: published
+  at: '2008-01-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexey
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Melnikov
+      completename:
+        language: en
+        content: Alexey Melnikov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Isode Ltd.
+version:
+- content: '07'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Many IMAP clients use the result of a SEARCH command as the input to perform another operation, for example, fetching the found messages, deleting them, or copying them to another mailbox.
+
+     This can be achieved using standard IMAP operations described in RFC 3501; however, this would be suboptimal. The server will send the list of found messages to the client; after that, the client will have to parse the list, reformat it, and send it back to the server. The client can't pipeline the SEARCH command with the subsequent command, and, as a result, the server might not be able to perform some optimizations.
+
+     This document proposes an IMAP extension that allows a client to tell a server to use the result of a SEARCH (or Unique Identifier (UID) SEARCH) command as an input to any subsequent command. [STANDARDS-TRACK]</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-melnikov-imap-search-res-07
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

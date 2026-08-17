@@ -1,0 +1,39 @@
+---
+id: draftbhattacharyapimfastrecovery
+schema_version: v1.5.6
+formattedref:
+  content: draft-bhattacharya-pim-fast-recovery
+title:
+- language: en
+  script: Latn
+  content: PIM fast recovery mechanism
+docidentifier:
+- content: draft-bhattacharya-pim-fast-recovery
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When a PIM router reboots, either because of uncontrolled
+       failover or because of ISSU, it needs to reconcile the
+       PIM entries. For this, rebooting router sends PIM hello with
+       new GenId. In reponse, neighbors send a new hello and replay
+       PIM J/P message. Regardless an application maintaing full mroute
+       states, the rebooting route must wait for this replay to complete
+       only after which it can mark the oif reconciliation complete.
+       This process is undeterministic today. This draft proposes a
+       new mechanism to achieve a faster reconcilaition time. For this
+       a new Hello option and a new message type has been introduced.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bhattacharya-pim-fast-recovery-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bhattacharya-pim-fast-recovery-00
+    docidentifier:
+    - content: draft-bhattacharya-pim-fast-recovery-00
+      type: Internet-Draft
+      primary: true

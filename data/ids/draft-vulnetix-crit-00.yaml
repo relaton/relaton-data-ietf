@@ -1,0 +1,101 @@
+---
+id: draftvulnetixcrit00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Cloud Resource Identifier Templates (CRIT)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vulnetix-crit-00
+docidentifier:
+- content: draft-vulnetix-crit
+  type: Internet-Draft
+- content: draft-vulnetix-crit-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vulnetix-crit
+date:
+- type: published
+  at: '2026-03-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christopher
+      - language: en
+        script: Latn
+        initial: C
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: C. D.
+      surname:
+        language: en
+        content: Langton
+      completename:
+        language: en
+        content: Christopher Daniel Langton
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vulnetix
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Cloud Resource Identifier Templates
+       (CRIT) format.  A CRIT record provides a machine-readable,
+       parameterised template for locating cloud-native resources affected
+       by a known vulnerability.  CRITs do not define cloud resource
+       identifier schemas; those are defined normatively by each cloud
+       provider.  CRITs define a variable system for expressing partially-
+       known or consumer-resolved values within those provider-defined
+       schemas, together with temporal, remediation, and detection metadata
+       sufficient to determine exposure status and drive remediation
+       workflows.
+
+       Each CRIT record is bound to exactly one vulnerability identifier.
+       Cross-provider and multi-resource-type coverage of a single
+       vulnerability is expressed as a set of CRIT records sharing the same
+       vulnerability identifier, each independently specifying the provider-
+       specific fix details, propagation mechanism, and detection strategy
+       applicable to that resource type.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-vulnetix-crit-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vulnetix-crit-01
+    docidentifier:
+    - content: draft-vulnetix-crit-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vulnetix-crit-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

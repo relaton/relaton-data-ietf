@@ -1,0 +1,159 @@
+---
+id: RFC6356
+schema_version: v1.5.6
+type: standard
+title:
+- content: Coupled Congestion Control for Multipath Transport Protocols
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc6356
+docidentifier:
+- content: RFC 6356
+  type: IETF
+  primary: true
+- content: 10.17487/RFC6356
+  type: DOI
+docnumber: RFC6356
+date:
+- type: published
+  at: 2011-10
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        script: Latn
+        content: C.
+      surname:
+        language: en
+        script: Latn
+        content: Raiciu
+      completename:
+        language: en
+        script: Latn
+        content: C. Raiciu
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        script: Latn
+        content: M.
+      surname:
+        language: en
+        script: Latn
+        content: Handley
+      completename:
+        language: en
+        script: Latn
+        content: M. Handley
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        script: Latn
+        content: D.
+      surname:
+        language: en
+        script: Latn
+        content: Wischik
+      completename:
+        language: en
+        script: Latn
+        content: D. Wischik
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Multipath TCP
+      identifier:
+      - content: mptcp
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>Often endpoints are connected by multiple paths, but communications
+    are usually restricted to a single path per connection. Resource usage within
+    the network would be more efficient were it possible for these multiple paths
+    to be used concurrently. Multipath TCP is a proposal to achieve multipath transport
+    in TCP.</p><p>New congestion control algorithms are needed for multipath transport
+    protocols such as Multipath TCP, as single path algorithms have a series of issues
+    in the multipath context. One of the prominent problems is that running existing
+    algorithms such as standard TCP independently on each path would give the multipath
+    flow more than its fair share at a bottleneck link traversed by more than one
+    of its subflows. Further, it is desirable that a source with multiple paths available
+    will transfer more traffic using the least congested of the paths, achieving a
+    property called "resource pooling" where a bundle of links effectively behaves
+    like one shared link with bigger capacity. This would increase the overall efficiency
+    of the network and also its robustness to failure.</p><p>This document presents
+    a congestion control algorithm that couples the congestion control algorithms
+    running on different subflows by linking their increase functions, and dynamically
+    controls the overall aggressiveness of the multipath flow. The result is a practical
+    algorithm that is fair to TCP at bottlenecks while moving traffic away from congested
+    links. This document defines an Experimental Protocol for the Internet community.</p>
+status:
+  stage:
+    content: EXPERIMENTAL
+series:
+- title:
+  - content: RFC
+  number: '6356'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: multipath
+- vocab:
+    content: tcp
+- vocab:
+    content: congestion control
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

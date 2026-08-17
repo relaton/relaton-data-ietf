@@ -1,0 +1,40 @@
+---
+id: draftunderysipauth
+schema_version: v1.5.6
+formattedref:
+  content: draft-undery-sip-auth
+title:
+- language: en
+  script: Latn
+  content: Enhanced Usage of HTTP Digest Authentication for SIP
+docidentifier:
+- content: draft-undery-sip-auth
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>HTTP Digest has some shortcomings if applied for SIP. Firstly, SIP
+    \nUA has serious difficulties to distinguish the source of \nAuthentication-Info
+    and Proxy-Authentication-Info headers in SIP \nforking situations. This is due
+    to the absence of the ‘realm’ \nparameter in these headers. Secondly, HTTP authentication
+    is \nparticularly vulnerable against MITM bid-down attacks on the list of \nalgorithms
+    (e.g., MD-5, SHA-1) or the desired security level (auth, \nauth-int). Thirdly,
+    HTTP authentication provides limited integrity \nprotection of only the message
+    body. In SIP, important information \ncan be carried in many of the headers that
+    may need integrity \nprotection. This draft proposes to add the realm parameter
+    in the *-\nAuthentication-Info headers, recommends a format for computing the
+    \nnonce for detection of bid-down attack and proposes a mechanism for \nintegrity
+    protection of SIP headers using MIME body.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-undery-sip-auth-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-undery-sip-auth-01
+    docidentifier:
+    - content: draft-undery-sip-auth-01
+      type: Internet-Draft
+      primary: true

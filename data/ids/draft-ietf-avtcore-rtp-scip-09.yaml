@@ -1,0 +1,153 @@
+---
+id: draftietfavtcorertpscip09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RTP Payload Format for the Secure Communication Interoperability Protocol
+    (SCIP) Codec
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-scip-09
+docidentifier:
+- content: draft-ietf-avtcore-rtp-scip
+  type: Internet-Draft
+- content: draft-ietf-avtcore-rtp-scip-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-avtcore-rtp-scip
+date:
+- type: published
+  at: '2024-02-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dan
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Hanson
+      completename:
+        language: en
+        content: Dan Hanson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: General Dynamics Mission Systems, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: MikeFaller
+      completename:
+        language: en
+        content: MikeFaller
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: General Dynamics Mission Systems, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Keith
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Maver
+      completename:
+        language: en
+        content: Keith Maver
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: General Dynamics Mission Systems, Inc.
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes the RTP payload format of the Secure
+       Communication Interoperability Protocol (SCIP).  SCIP is an
+       application layer protocol that provides end-to-end capability
+       exchange, packetization/de-packetization of media, reliable
+       transport, and payload encryption.
+
+       SCIP handles packetization/de-packetization of the encrypted media
+       and acts as a tunneling protocol, treating SCIP payloads as opaque
+       octets to be encapsulated within RTP payloads prior to transmission
+       or decapsulated on reception.  SCIP payloads are sized to fit within
+       the maximum transmission unit (MTU) when transported over RTP thereby
+       avoiding fragmentation.
+
+       SCIP transmits encrypted traffic and does not require the use of
+       Secure RTP (SRTP) for payload protection.  SCIP also provides for
+       reliable transport at the application layer, so it is not necessary
+       to negotiate RTCP retransmission capabilities.
+
+       To establish reliable communications using SCIP over RTP, it is
+       important that middle boxes avoid parsing or modifying SCIP payloads.
+       Because SCIP payloads are confidentiality and integrity protected and
+       are only decipherable by the originating and receiving SCIP devices,
+       modification of the payload by middle boxes would be detected as an
+       integrity failure in SCIP devices, resulting in retransmission and/or
+       communication failure.  Middle boxes do not need to parse the SCIP
+       payloads to correctly transport them.  Not only is parsing
+       unnecessary to tunnel/detunnel SCIP within RTP, but the parsing and
+       filtering of SCIP payloads by middle boxes would likely lead to
+       ossification of the evolving SCIP protocol.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-avtcore-rtp-scip-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-scip-08
+    docidentifier:
+    - content: draft-ietf-avtcore-rtp-scip-08
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-avtcore-rtp-scip-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

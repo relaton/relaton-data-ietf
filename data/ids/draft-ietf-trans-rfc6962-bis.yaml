@@ -1,0 +1,496 @@
+---
+id: draftietftransrfc6962bis
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-trans-rfc6962-bis
+title:
+- language: en
+  script: Latn
+  content: Certificate Transparency Version 2.0
+docidentifier:
+- content: draft-ietf-trans-rfc6962-bis
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes version 2.0 of the Certificate Transparency (CT) protocol for publicly logging the existence of Transport Layer Security (TLS) server certificates as they are issued or observed, in a manner that allows anyone to audit certification authority (CA) activity and notice the issuance of suspect certificates as well as to audit the certificate logs themselves. The intent is that eventually clients would refuse to honor certificates that do not appear in a log, effectively forcing CAs to add all issued certificates to the logs.
+
+     This document obsoletes RFC 6962. It also specifies a new TLS extension that is used to send various CT log artifacts.
+
+     Logs are network services that implement the protocol operations for submissions and queries that are defined in this document.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-00
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-01
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-02
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-03
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-04
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-05
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-06
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-07
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-08
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-09
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-10
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-11
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-12
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-13
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-13
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-14
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-14
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-15
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-15
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-16
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-16
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-16
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-17
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-17
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-17
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-18
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-18
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-18
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-19
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-19
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-20
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-20
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-21
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-21
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-21
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-22
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-22
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-22
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-23
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-23
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-23
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-24
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-24
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-24
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-25
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-25
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-26
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-26
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-26
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-27
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-27
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-27
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-28
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-28
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-28
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-29
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-29
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-29
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-30
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-30
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-30
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-31
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-31
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-31
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-32
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-32
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-32
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-33
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-33
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-33
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-34
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-34
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-34
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-35
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-35
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-35
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-36
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-36
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-36
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-37
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-37
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-37
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-38
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-38
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-38
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-39
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-39
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-39
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-40
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-40
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-40
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-41
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-41
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-41
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-trans-rfc6962-bis-42
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-trans-rfc6962-bis-42
+    docidentifier:
+    - content: draft-ietf-trans-rfc6962-bis-42
+      type: Internet-Draft
+      primary: true

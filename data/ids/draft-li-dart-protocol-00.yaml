@@ -1,0 +1,121 @@
+---
+id: draftlidartprotocol00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'DART: Domain-Aware Routing Technology Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-dart-protocol-00
+docidentifier:
+- content: draft-li-dart-protocol
+  type: Internet-Draft
+- content: draft-li-dart-protocol-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-dart-protocol
+date:
+- type: published
+  at: '2025-09-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: 李实
+      completename:
+        language: en
+        content: 李实
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document proposes a new addressing and routing protocol named
+       Domain-Aware Routing Technology (DART).  Built upon the existing IP
+       network architecture, DART introduces a fully qualified domain name
+       (FQDN)-centric addressing model to address the global exhaustion of
+       IPv4 addresses and significantly enhance the scalability and
+       evolvability of the Internet.
+
+       DART supports a name-based communication model and can be
+       encapsulated over either IPv4 or IPv6 networks.  This enables high
+       compatibility with existing infrastructures and supports deployment
+       and interoperability across heterogeneous protocol environments.  Its
+       addressing logic and architectural design exhibit the following
+       characteristics:
+
+       *  In terms of scalability
+          DART localizes the IPv4 address space to individual Domain Names
+          (DNS) domains, granting each domain an independent full address
+          pool.  This enables unlimited address reuse, greatly reduces
+          global routing table growth, and promotes a more structured and
+          aggregatable forwarding hierarchy.
+
+       *  In terms of evolvability
+          DART shifts the addressing paradigm from "IP-based location" to
+          "name-based location", laying the foundation for a unified, name-
+          driven networking model.  It holds potential to redefine the
+          semantics of network addressing and routing architecture.
+
+       DART is designed for incremental deployment.  Network operators can
+       derive a subdomain within the DNS system to serve as a DART domain,
+       immediately gaining access to a dedicated 2^32-sized address space.
+       Each DART domain may further delegate subdomains, forming a
+       theoretically infinite, hierarchical, and scalable global addressing
+       system.
+
+       Deployment requires only the installation of DART-capable gateways at
+       the boundaries between DART domains and traditional networks, or
+       between different DART domains, to enable protocol interoperability
+       and cross-domain forwarding.  Internal network devices and endpoints
+       within DART domains may continue operating under the existing IP
+       stack without immediate modification.  In particular, legacy
+       IPv4-only devices located behind an edge DART gateway can seamlessly
+       connect to the DART network via the *NAT-DART-4* mechanism.  New
+       devices may progressively evolve toward native DART support, enabling
+       direct, end-to-end, name-based communication.
+
+       A working prototype of the DART protocol has been independently
+       developed and deployed by the author.  It is publicly accessible at
+       http://dart-proto.cn</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-li-dart-protocol-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-dart-protocol-01
+    docidentifier:
+    - content: draft-li-dart-protocol-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-dart-protocol-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

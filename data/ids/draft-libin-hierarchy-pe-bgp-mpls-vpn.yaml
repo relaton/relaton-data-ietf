@@ -1,0 +1,50 @@
+---
+id: draftlibinhierarchypebgpmplsvpn
+schema_version: v1.5.6
+formattedref:
+  content: draft-libin-hierarchy-pe-bgp-mpls-vpn
+title:
+- language: en
+  script: Latn
+  content: Hierarchy of Provider Edge Device in  BGP/MPLS VPN
+docidentifier:
+- content: draft-libin-hierarchy-pe-bgp-mpls-vpn
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>In the deployment of BGP/MPLS VPN,the PE(Provider Edge)Device should\nmaintain
+    all the VPN routes of the VPNs which it belong to.When there \nare many VPNs converged
+    by a PE,and the capacity of PE is relevant\nlimited,then the bottleneck will be
+    encountered.Another problem is \nthat the current BGP/MPLS VPN model is something
+    of a 'Plane Modle'\nwhere the demand of the performance of the PE device are all
+    the \nsame no matter which layer the PE device is belongs to.However,the \ntypical
+    network is 'Core-Convergence-Access(Edge)' model,and the \nperformance of the
+    device is superior in Core Layer and inferior in \nAccess Layer,and the scale
+    of network is large in Access Layer and \nsmall in Core Layer,the routes are converged
+    in every layer,so in \ncurrent 'Plane Modle',when PE device push to the edge layer,it
+    has \nto maintain more VPN routes,this makes it difficult to extend the PE\ndevice
+    to edge layer.This document defines an model of Hierarchy of \nProvider Edge Device
+    in BGP/MPLS VPN,where Hierarchy of Provider \nEdge Device can be composed of several
+    device and every device take \non the different part,partake the function of the
+    former \nconcentrative PE,we call this model 'Hierarchy Model',In this model\nthe
+    demand of performance in Routing and Switching is strict to the \nPE device in
+    High layer,loose to the PE device in edge layer.\n \n   One HoPE can be composed
+    of a SPE and UPES connected to the SPE, \n   or be composed of a high-level SPE
+    and HoPEs connected the high \n   level SPE and and build up a new HoPE.This build
+    is called nesting \n   of HoPE,and this kind of nesting can be done for many times.Thus
+    the \n   former HoPE connect to the high-level SPE as a role of UPE,and the \n
+    \  new HoPE can connect a single UPE too.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-libin-hierarchy-pe-bgp-mpls-vpn-02
+    docidentifier:
+    - content: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,115 @@
+---
+id: draftsinghmacneilgenevefirewallmetadata00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Geneve-based Firewall Metadata for Overlay Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-singh-macneil-geneve-firewall-metadata-00
+docidentifier:
+- content: draft-singh-macneil-geneve-firewall-metadata
+  type: Internet-Draft
+- content: draft-singh-macneil-geneve-firewall-metadata-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.singh-macneil-geneve-firewall-metadata
+date:
+- type: published
+  at: '2026-07-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: PRASHANT
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Prashant
+      completename:
+        language: en
+        content: PRASHANT SINGH
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hewlett Packard Enterprise
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Erin
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: MacNeil
+      completename:
+        language: en
+        content: Erin MacNeil
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hewlett Packard Enterprise
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a mechanism for embedding security-related
+       metadata within the Geneve header (RFC 8926).  It allows a security
+       Enforcement Point to attach a cryptographically signed, verifiable
+       attestation of how it handled a packet, so that downstream
+       Enforcement Points and tunnel endpoints can confirm that security
+       policy was actually executed on the data path -- detecting policy
+       bypasses and divergence between Enforcement Points that should agree
+       -- while each Enforcement Point continues to enforce its own policy
+       independently.  This validation of execution complements the
+       management plane's validation of intent.  The document presents two
+       operational models.  The primary model is the "End-to-End Attestation
+       Model", fully compliant with RFC 8926, where an ingress tunnel
+       endpoint adds and cryptographically signs metadata, and an egress
+       endpoint verifies it.  This enables downstream nodes to verify and
+       audit that policy was executed consistently, while still applying
+       their own policy independently.  The second part of this document
+       presents a proposal for a future extension to the Geneve standard.
+       This proposed extension would allow trusted transit devices to
+       participate in the metadata chain, enabling a hop-by-hop "chain of
+       custody" for enhanced, real-time security responsiveness within the
+       data center fabric.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-singh-macneil-geneve-firewall-metadata-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

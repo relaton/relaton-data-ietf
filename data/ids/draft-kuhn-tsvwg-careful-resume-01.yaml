@@ -1,0 +1,173 @@
+---
+id: draftkuhntsvwgcarefulresume01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Careful convergence of congestion control from retained state
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kuhn-tsvwg-careful-resume-01
+docidentifier:
+- content: draft-kuhn-tsvwg-careful-resume
+  type: Internet-Draft
+- content: draft-kuhn-tsvwg-careful-resume-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kuhn-tsvwg-careful-resume
+date:
+- type: published
+  at: '2023-05-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nicolas
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Kuhn
+      completename:
+        language: en
+        content: Nicolas Kuhn
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Thales Alenia Space
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stephan
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Emile
+      completename:
+        language: en
+        content: Stephan Emile
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Orange
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gorry
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Fairhurst
+      completename:
+        language: en
+        content: Gorry Fairhurst
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: University of Aberdeen
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christian
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Huitema
+      completename:
+        language: en
+        content: Christian Huitema
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Private Octopus Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies careful convergence of Congestion Control
+       (CC), providing a cautious method that enables fast startup for a
+       wide range of connections or reconnections.
+
+       The method reuses a set of computed CC parameters that are based on
+       the previously observed path characteristics between the same pair of
+       transport endpoints, such as the bottleneck bandwidth, available
+       capacity, or the RTT.  These parameters are stored, allowing them to
+       be later used to modify the CC behavior of a subsequent connection.
+       The document also discusses assumptions and defines requirements
+       around how a sender utilizes these parameters to provide
+       opportunities for a connection to more quickly get up to speed (i.e.
+       utilize the available capacity).  It discusses how these changes
+       impact the capacity at a shared network bottleneck and the safe
+       response that is needed after any indication that the new rate is
+       inappropriate.  The method is expected to be appropriate to IETF
+       transports.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-kuhn-tsvwg-careful-resume-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kuhn-tsvwg-careful-resume-00
+    docidentifier:
+    - content: draft-kuhn-tsvwg-careful-resume-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kuhn-tsvwg-careful-resume-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

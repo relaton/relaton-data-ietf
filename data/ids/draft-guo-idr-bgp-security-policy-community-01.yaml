@@ -1,0 +1,160 @@
+---
+id: draftguoidrbgpsecuritypolicycommunity01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Communities for Security Policy Intent
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-guo-idr-bgp-security-policy-community-01
+docidentifier:
+- content: draft-guo-idr-bgp-security-policy-community
+  type: Internet-Draft
+- content: draft-guo-idr-bgp-security-policy-community-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.guo-idr-bgp-security-policy-community
+date:
+- type: published
+  at: '2026-02-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yangfei
+      - language: en
+        script: Latn
+        initial: "Y"
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: Y. B.
+      surname:
+        language: en
+        content: Guo
+      completename:
+        language: en
+        content: Yangfei (Basil) Guo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhongguancun Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Xu
+      completename:
+        language: en
+        content: Ke Xu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xiaoliang
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Xiaoliang Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Capital Normal University
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a set of standardized BGP community to signal
+       inter-AS routing security policy intent.  The initial focus is on
+       RPKI-based Route Origin Validation (ROV) using ROAs [RFC6482]
+       [RFC6811] [RFC9582].  ROV produces validation outcomes such as
+       "Valid", "Invalid", and "NotFound", but the operational treatment of
+       "NotFound" and similar ambiguous cases is entirely a matter of local
+       policy and often differs across networks.
+
+       This document defines transitive community that allows an Origin AS
+       to explicitly express its security policy expectations regarding how
+       its own originated routes SHOULD be treated when downstream
+       Autonomous Systems (ASes) perform ROA-based origin validation.  A
+       typical example is an Origin AS indicating a preference for strict
+       handling of ambiguous validation outcomes (e.g., NotFound) for its
+       prefixes.
+
+       Unlike validation states, these community does not assert
+       correctness, authorization, or RPKI deployment status, which is
+       confront to [AVOID-RPKI-STATE-IN-BGP].  Instead, they communicate
+       origin-declared policy intent to all downstream ASes, enabling them
+       to correlate this intent with locally derived validation results.  By
+       enabling explicit signaling of security expectations without
+       exporting validation state, this mechanism allows downstream ASes to
+       make more informed policy decisions while reducing the risk of
+       accidental outages caused by misalignment between origin expectations
+       and downstream local policies.
+
+       The mechanism is orthogonal to existing routing security validation
+       technologies and does not alter their semantics or deployment models.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-guo-idr-bgp-security-policy-community-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-guo-idr-bgp-security-policy-community-00
+    docidentifier:
+    - content: draft-guo-idr-bgp-security-policy-community-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-guo-idr-bgp-security-policy-community-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,47 @@
+---
+id: draftmetzspasv
+schema_version: v1.5.6
+formattedref:
+  content: draft-metz-spasv
+title:
+- language: en
+  script: Latn
+  content: Short Passive (SPASV) Command for FTP
+docidentifier:
+- content: draft-metz-spasv
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>RFC 1639[Pis94] documents experimental long port  (LPRT)  and  long\n
+    \  passive  (LPSV)  commands  that many IP Version 6 implementations are\n   using
+    as the replacement for  the  PORT  and  PASV  commands  in  FTP\n   [PR85].  The
+    \ author believes that this is the incorrect direction to\n   be heading and that
+    the replacement for PORT and  PASV  should  carry\n   less information instead
+    of more.\n \n     The  passive command (SPASV) is a replacement for the PASV command.\n
+    \  It only carries port numbers and does not carry addresses. This makes\n   it
+    \ usable with IPv4 and IPv6. A benefit of not carrying addresses is\n   that pure
+    network address translators (NAT)  do  not  have  to  do  a\n   search-and-replace
+    \  on   the  TCP  stream,  which  is  an  expensive\n   operation.  This also
+    eliminates three-way FTP,  which  is  a  rarely\n   used  mode  of  operation
+    \ that leaves most existing FTP servers wide\n   open to the FTP Bounce Attack
+    [Hob95]. Because the FTP  PORT  command\n   is  unfriendly  to  some kinds of
+    firewall configurations [Bel94] and\n   that unfriendliness is there to support
+    three-way FTP,  there  is  no\n   replacement  for the PORT command -- all transfers
+    should use passive\n   mode instead.\n \n     The author's inet6-apps kit (available
+    \ on  ftp.ipv6.inner.net  and\n   ftp.inner.net) includes a client and server
+    that supports the current\n   version of these commands. Those FTP servers implement
+    this  command.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-metz-spasv-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-metz-spasv-00
+    docidentifier:
+    - content: draft-metz-spasv-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,186 @@
+---
+id: draftliaocosec509revocation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: CBOR Encoded Certificate Revocation Management
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-liao-cose-c509-revocation-00
+docidentifier:
+- content: draft-liao-cose-c509-revocation
+  type: Internet-Draft
+- content: draft-liao-cose-c509-revocation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.liao-cose-c509-revocation
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lijun
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Liao
+      completename:
+        language: en
+        content: Lijun Liao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NIO
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Marco
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Tiloca
+      completename:
+        language: en
+        content: Marco Tiloca
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RISE AB
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Joel
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Höglund
+      completename:
+        language: en
+        content: Joel Höglund
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RISE AB
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rikard
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Höglund
+      completename:
+        language: en
+        content: Rikard Höglund
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RISE AB
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shahid
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Raza
+      completename:
+        language: en
+        content: Shahid Raza
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: University of Glasgow
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies CBOR-encoded PKI structures for use with C509
+       certificates (draft-ietf-cose-cbor-encoded-cert), X.509 certificates
+       (RFC 5280), and future certificate types.  It defines C509 CRL and
+       C509 OCSP, compact CBOR encodings of X.509 Certificate Revocation
+       Lists (RFC 5280) and OCSP messages (RFC 6960), respectively.  The
+       structures defined in this document are certificate-type agnostic and
+       can be used with C509 certificates, X.509 certificates, or future
+       certificate types without modification.  C509 OCSP improves on RFC
+       6960 by signing a wider set of fields to prevent algorithm-
+       substitution and certificate-chain substitution attacks, replacing
+       plaintext serial numbers with hashes to preserve requestor privacy,
+       replacing the two-hash issuer identity with a single certificate
+       hash, and identifying all participants (requestor, responder, issuer)
+       by a uniform certificate hash rather than type-specific fields.  C509
+       CRL and C509 OCSP are not wire-format-compatible with their DER-
+       encoded X.509 counterparts and cannot be converted to or from them
+       without semantic interpretation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-liao-cose-c509-revocation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

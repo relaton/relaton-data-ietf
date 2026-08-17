@@ -1,0 +1,127 @@
+---
+id: draftlisidropsdrrarchitecture00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Decentralized RPKI Repository Architecture
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-sidrops-drr-architecture-00
+docidentifier:
+- content: draft-li-sidrops-drr-architecture
+  type: Internet-Draft
+- content: draft-li-sidrops-drr-architecture-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-sidrops-drr-architecture
+date:
+- type: published
+  at: '2025-07-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dan
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Dan Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yingying
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Su
+      completename:
+        language: en
+        content: Yingying Su
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhongguancun Laboratory
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Resource Public Key Infrastructure (RPKI) plays a crucial role in
+       securing inter-domain routing.  However, the current RPKI Repository
+       system suffers from fundamental limitations in reliability,
+       scalability, and security.  In particular, single-point failures at
+       repository publication points (PPs), the growing number of
+       bidirectional connections with relying parties (RPs), and the lack of
+       mechanisms to mitigate misbehavior by certification authorities (CAs)
+       pose significant risks to the integrity, authority, and resilience of
+       the global RPKI ecosystem.
+
+       This document proposes the Decentralized RPKI Repository (dRR), a
+       novel repository architecture that decouples RPKI object signing from
+       data distribution. dRR introduces a distributed federation of
+       certificate servers (CSs) and a layer of Monitors to achieve robust,
+       scalable, and auditable RPKI data management.  The architecture
+       maintains full compatibility with the existing RPKI trust model
+       rooted in the five RIR trust anchors, enabling incremental deployment
+       without disrupting current relying parties (RPs) validation
+       semantics.  By doing so, dRR addresses longstanding repository
+       challenges and enhances the overall trustworthiness and efficiency of
+       RPKI-based routing security.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-li-sidrops-drr-architecture-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-sidrops-drr-architecture-01
+    docidentifier:
+    - content: draft-li-sidrops-drr-architecture-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-sidrops-drr-architecture-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

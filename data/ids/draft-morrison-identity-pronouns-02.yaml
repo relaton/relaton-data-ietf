@@ -1,0 +1,97 @@
+---
+id: draftmorrisonidentitypronouns02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Identity Pronouns: A Reference-Axis Extension to ~handle Identity Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-pronouns-02
+docidentifier:
+- content: draft-morrison-identity-pronouns
+  type: Internet-Draft
+- content: draft-morrison-identity-pronouns-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-identity-pronouns
+date:
+- type: published
+  at: '2026-08-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an identity pronoun grammar as a reference axis
+       orthogonal to the ~handle identity tier taxonomy defined in [MCPDNS]
+       and [IDCOMMITS].  A pronoun is a session-scoped reference that
+       resolves client-side to a concrete handle using local session state
+       before any cryptographic, DNS, or federation operation.  The entity-
+       class taxonomy (Sovereign, Bot, Instrument) is unchanged; this
+       specification introduces Absolute vs Pronoun as an orthogonal axis.
+       A pronoun MUST NOT appear in a capability token, in a DNS record, in
+       an Accord signature, or in any inter-organisational protocol payload.
+       The reference implementation defines a single Wave-1 pronoun, ~org,
+       that resolves to the concrete handle of the organisation bound to the
+       caller's current session.  An appendix defines a relative-path
+       pronoun grammar (e.g. ~./architect, ~../weaver) as a non-normative
+       design surface for future work.  The mechanism is provider-neutral,
+       introduces no new cryptographic primitive, and imposes zero new load
+       on DNS, capability-token issuers, or federated resolvers.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-identity-pronouns-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-pronouns-01
+    docidentifier:
+    - content: draft-morrison-identity-pronouns-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-identity-pronouns-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

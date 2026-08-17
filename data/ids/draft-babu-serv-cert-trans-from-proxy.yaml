@@ -1,0 +1,40 @@
+---
+id: draftbabuservcerttransfromproxy
+schema_version: v1.5.6
+formattedref:
+  content: draft-babu-serv-cert-trans-from-proxy
+title:
+- language: en
+  script: Latn
+  content: TLS extension for Proxies to transfer Server certificate
+docidentifier:
+- content: draft-babu-serv-cert-trans-from-proxy
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Intercepting transparent proxies splice the client-Server connection\n
+    \  into two connections: Client-Proxy connection, Proxy-server \n   connection.
+    On Client-Proxy connection, proxy sends it's certificate\n   to the client. As
+    client is generally (in such a scenario) \n   pre-configured to accept proxy's
+    certificate, client accepts and \n   proceeds further with the connection. On
+    Proxy-Server connection, \n   server sends its certificate to the proxy. Proxy
+    typically doesn't \n   possess the information (like MX domain name in case of
+    SMTP)    \n   required to validate the certificate. The certificate validation
+    is\n   at times very complex &amp; hence it is better to offload this \n   reponsibility
+    to the original client itself.\n\n   This document addresses this issue by extending
+    TLS to let proxy \n   send server's certificate to the client for validation and
+    suggests\n   how client can indicate certificate validation result to the proxy.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-babu-serv-cert-trans-from-proxy-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-babu-serv-cert-trans-from-proxy-00
+    docidentifier:
+    - content: draft-babu-serv-cert-trans-from-proxy-00
+      type: Internet-Draft
+      primary: true

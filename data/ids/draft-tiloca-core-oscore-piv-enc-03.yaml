@@ -1,0 +1,172 @@
+---
+id: drafttilocacoreoscorepivenc03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Stand-in Key Identifier and Encrypted Partial IV in the Constrained Application
+    Protocol (CoAP) OSCORE Option
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tiloca-core-oscore-piv-enc-03
+docidentifier:
+- content: draft-tiloca-core-oscore-piv-enc
+  type: Internet-Draft
+- content: draft-tiloca-core-oscore-piv-enc-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.tiloca-core-oscore-piv-enc
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Marco
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Tiloca
+      completename:
+        language: en
+        content: Marco Tiloca
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RISE AB
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: J. P.
+      surname:
+        language: en
+        content: Mattsson
+      completename:
+        language: en
+        content: John Preuß Mattsson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson AB
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rikard
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Höglund
+      completename:
+        language: en
+        content: Rikard Höglund
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RISE AB
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Selander
+      completename:
+        language: en
+        content: Göran Selander
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson AB
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The security protocol Object Security for Constrained RESTful
+       Environments (OSCORE) provides end-to-end protection of messages
+       exchanged with the Constrained Application Protocol (CoAP).  Messages
+       protected with OSCORE include a CoAP OSCORE Option, where the
+       "Partial IV" field specifies the sequence number value used by the
+       message sender and the "kid" field specifies the identifier of the
+       message sender.  In order to reduce the information exposed on the
+       wire that can be used for fingerprinting traffic and for tracking
+       endpoints, this document defines a lightweight add-on method that
+       obfuscates certain fields of the OSCORE Option, by encrypting the
+       "Partial IV" field and overwriting the "kid" field with a stand-in
+       identifier.  Therefore, it updates RFC 8613.  With minor adaptations,
+       the defined method is applicable also to the security protocol Group
+       Object Security for Constrained RESTful Environments (Group OSCORE)
+       that protects group communication for CoAP.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-tiloca-core-oscore-piv-enc-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tiloca-core-oscore-piv-enc-02
+    docidentifier:
+    - content: draft-tiloca-core-oscore-piv-enc-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-tiloca-core-oscore-piv-enc-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

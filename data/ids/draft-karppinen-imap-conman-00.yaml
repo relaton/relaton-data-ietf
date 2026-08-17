@@ -1,0 +1,112 @@
+---
+id: draftkarppinenimapconman00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'IMAP4 Connection Management
+
+    '
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-karppinen-imap-conman-00
+docidentifier:
+- content: draft-karppinen-imap-conman
+  type: Internet-Draft
+- content: draft-karppinen-imap-conman-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.karppinen-imap-conman
+date:
+- type: published
+  at: '1999-10-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Marko
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Karppinen
+      completename:
+        language: en
+        content: Marko Karppinen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Icon Medialab
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrew
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Skalski
+      completename:
+        language: en
+        content: Andrew Skalski
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Chek
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The IMAP4 [RFC-2060] protocol is based on the client-server paradigm
+    where a single client is concerned only with the mail of a single
+    user.  However, due to advent of several scenarios where n-tier
+    interaction is desired, the need has arisen to work with several
+    users' mail during a single IMAP4 connection.
+    In such scenario, a component of a n-tier system may act as an IMAP4
+    client on behalf of multiple end-users.  Present examples of this
+    include many WWW-based email services.  Initial profiling suggests
+    that persistent IMAP4 connections can lead to a performance increase
+    of an order of magnitude when compared to separate IMAP4 connections
+    per mailbox action.
+    This document defines an extension to the IMAP4 protocol that allows
+    a persistent connection to be established for accessing the mail of
+    multiple users. The extension includes a new USERLOGOUT command, and
+    a requirement for a CAPABILITIES response from servers implementing
+    the extension.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-karppinen-imap-conman-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

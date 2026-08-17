@@ -1,0 +1,98 @@
+---
+id: draftmurchisonjmapsieve01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: JMAP for Sieve Scripts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-murchison-jmap-sieve-01
+docidentifier:
+- content: draft-murchison-jmap-sieve
+  type: Internet-Draft
+- content: draft-murchison-jmap-sieve-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.murchison-jmap-sieve
+date:
+- type: published
+  at: '2020-03-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kenneth
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Murchison
+      completename:
+        language: en
+        content: Kenneth Murchison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fastmail US LLC
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a data model for managing Sieve scripts on a
+       server using JMAP.
+
+    Open Issues
+
+       o  How should doing /set{create} with an existing script name be
+          handled?  Should it fail or overwrite the existing script?  Should
+          the /set request include an 'overwrite' boolean argument?
+
+       o  Should setting isActive==true on a script automatically deactivate
+          any other existing active script, or should the client have to do
+          so itself (as is currently documented)?
+
+       o  Do we want/need a SieveScript/copy method?
+
+       o  Do we want to leverage draft-ietf-jmap-quotas to query Sieve
+          script storage quotas?</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-murchison-jmap-sieve-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-murchison-jmap-sieve-00
+    docidentifier:
+    - content: draft-murchison-jmap-sieve-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-murchison-jmap-sieve-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

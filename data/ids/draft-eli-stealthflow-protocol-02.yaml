@@ -1,0 +1,85 @@
+---
+id: draftelistealthflowprotocol02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: StealthFlow Protocol (SFP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-eli-stealthflow-protocol-02
+docidentifier:
+- content: draft-eli-stealthflow-protocol
+  type: Internet-Draft
+- content: draft-eli-stealthflow-protocol-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.eli-stealthflow-protocol
+date:
+- type: published
+  at: '2026-03-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: pootBnel
+      completename:
+        language: en
+        content: pootBnel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Researcher
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The StealthFlow Protocol (SFP) is a lightweight, hardware-aware proof-
+    of-work (PoW) based admission control mechanism designed to mitigate
+    DDoS attacks at the network edge.  This document specifies version 1.5
+    of SFP, which introduces de-IP PoW design, 8-bit physical fingerprinting
+    embedded in random padding, XDP-level three-lane (Green/Yellow/Black)
+    traffic steering, and a closed-loop multi-layer firewall integration
+    (Edge → XDP → SSL/L7 → reverse XDP).  These enhancements eliminate IP-
+    based reuse attacks, provide coarse-grained real-device verification,
+    achieve &lt;10% false-positive rate, and enable precise per-client
+    isolation even under NAT environments.  SFP operates entirely at the
+    XDP/eBPF layer with Fail-Silent behavior and requires no changes to
+    existing TLS/QUIC stacks.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-eli-stealthflow-protocol-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-eli-stealthflow-protocol-01
+    docidentifier:
+    - content: draft-eli-stealthflow-protocol-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-eli-stealthflow-protocol-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

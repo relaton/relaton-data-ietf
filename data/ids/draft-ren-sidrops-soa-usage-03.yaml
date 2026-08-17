@@ -1,0 +1,177 @@
+---
+id: draftrensidropssoausage03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Source Address Validation Using Source Origin Authorizations (SOAs)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ren-sidrops-soa-usage-03
+docidentifier:
+- content: draft-ren-sidrops-soa-usage
+  type: Internet-Draft
+- content: draft-ren-sidrops-soa-usage-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ren-sidrops-soa-usage
+date:
+- type: published
+  at: '2026-06-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ren
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Gang
+      completename:
+        language: en
+        content: Ren Gang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Minglin
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Jia
+      completename:
+        language: en
+        content: Minglin Jia
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xia
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Yin
+      completename:
+        language: en
+        content: Xia Yin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shuqi
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Liu
+      completename:
+        language: en
+        content: Shuqi Liu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Given that an AS collaboration scheme for inter-domain source address
+       validation requires an information-sharing platform, this document
+       proposes a two-tier approach.  In the first tier, Resource Public Key
+       Infrastructure (RPKI) is used for service discovery, identity
+       authentication, and transmission of the minimum bootstrap information
+       needed to establish a private channel.  Source Origin Authorization
+       (SOA) is a newly defined cryptographically signed AS-level service-
+       profile object for that purpose.  Subscribers and providers each
+       publish their own SOA profiles; a concrete service relation exists
+       only after discovery, bilateral request validation, and provider
+       acceptance.  In the second tier, the legitimate predecessor AS
+       information and its subsequent updates are exchanged over the
+       authenticated private channel, by default using TLS[RFC8446] carrying
+       CBOR[RFC8949]-encoded logical messages, enabling other ASes to
+       collaboratively filter spoofed traffic while avoiding frequent
+       routing-driven updates to RPKI and reducing exposure of subscriber-
+       specific routing data.  This revision also describes a logical
+       synchronization state model, evidence-tagged authorization state, and
+       fail-open handling for unavailable synchronized state, while leaving
+       private-channel wire encoding to future specifications or bilateral
+       deployment profiles.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ren-sidrops-soa-usage-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ren-sidrops-soa-usage-02
+    docidentifier:
+    - content: draft-ren-sidrops-soa-usage-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ren-sidrops-soa-usage-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

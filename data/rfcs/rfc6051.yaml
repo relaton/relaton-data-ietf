@@ -1,0 +1,149 @@
+---
+id: RFC6051
+schema_version: v1.5.6
+type: standard
+title:
+- content: Rapid Synchronisation of RTP Flows
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc6051
+docidentifier:
+- content: RFC 6051
+  type: IETF
+  primary: true
+- content: 10.17487/RFC6051
+  type: DOI
+docnumber: RFC6051
+date:
+- type: published
+  at: 2010-11
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        script: Latn
+        content: C.
+      surname:
+        language: en
+        script: Latn
+        content: Perkins
+      completename:
+        language: en
+        script: Latn
+        content: C. Perkins
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        script: Latn
+        content: T.
+      surname:
+        language: en
+        script: Latn
+        content: Schierl
+      completename:
+        language: en
+        script: Latn
+        content: T. Schierl
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Audio/Video Transport
+      identifier:
+      - content: avt
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This memo outlines how RTP sessions are synchronised, and discusses
+    how rapidly such synchronisation can occur. We show that most RTP sessions can
+    be synchronised immediately, but that the use of video switching multipoint conference
+    units (MCUs) or large source-specific multicast (SSM) groups can greatly increase
+    the synchronisation delay. This increase in delay can be unacceptable to some
+    applications that use layered and/or multi-description codecs.</p><p>This memo
+    introduces three mechanisms to reduce the synchronisation delay for such sessions.
+    First, it updates the RTP Control Protocol (RTCP) timing rules to reduce the initial
+    synchronisation delay for SSM sessions. Second, a new feedback packet is defined
+    for use with the extended RTP profile for RTCP-based feedback (RTP/AVPF), allowing
+    video switching MCUs to rapidly request resynchronisation. Finally, new RTP header
+    extensions are defined to allow rapid synchronisation of late joiners, and guarantee
+    correct timestamp-based decoding order recovery for layered codecs in the presence
+    of clock skew. [STANDARDS-TRACK]</p>"
+status:
+  stage:
+    content: PROPOSED STANDARD
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: RFC3550
+    docidentifier:
+    - content: RFC3550
+      type: IETF
+      primary: true
+series:
+- title:
+  - content: RFC
+  number: '6051'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: rtcp
+- vocab:
+    content: rtp control protocol
+- vocab:
+    content: mcu
+- vocab:
+    content: multipoint conference units
+- vocab:
+    content: ssm
+- vocab:
+    content: source-specific multicast
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

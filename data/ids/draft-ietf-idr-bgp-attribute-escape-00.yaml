@@ -1,0 +1,89 @@
+---
+id: draftietfidrbgpattributeescape00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Attribute Escape
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-attribute-escape-00
+docidentifier:
+- content: draft-ietf-idr-bgp-attribute-escape
+  type: Internet-Draft
+- content: draft-ietf-idr-bgp-attribute-escape-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-bgp-attribute-escape
+date:
+- type: published
+  at: '2026-06-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeff
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Haas
+      completename:
+        language: en
+        content: Jeff Haas
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>BGP-4 [RFC 4271] has been very successful in being extended over the
+       years it has been deployed.  A significant part of that success is
+       due to its ability to incrementally add new features to its Path
+       Attributes when they are marked "optional transitive".
+       Implementations that are ignorant of a feature for an unknown Path
+       Attribute that are so marked will propagate BGP routes with such
+       attributes.
+
+       Unfortunately, this blind propagation of unknown Path Attributes may
+       happen for features that are intended to be used in a limited scope.
+       When such Path Attributes inadvertently are carried beyond that
+       scope, it can lead to things such as unintended disclosure of
+       sensitive information, or cause improper routing.  In their worst
+       cases, such propagation may be for malformed Path Attributes and lead
+       to BGP session resets or crashes.
+
+       This document calls such inadvertent propagation of BGP Path
+       Attributes, "attribute escape".  This document further describes some
+       of the scenarios that leads to this behavior and makes
+       recommendations on practices that may limit its impact.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-bgp-attribute-escape-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

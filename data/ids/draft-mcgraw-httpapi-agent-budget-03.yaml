@@ -1,0 +1,123 @@
+---
+id: draftmcgrawhttpapiagentbudget03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Delegation HTTP Authentication Scheme for Request-Bound Authority
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mcgraw-httpapi-agent-budget-03
+docidentifier:
+- content: draft-mcgraw-httpapi-agent-budget
+  type: Internet-Draft
+- content: draft-mcgraw-httpapi-agent-budget-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mcgraw-httpapi-agent-budget
+date:
+- type: published
+  at: '2026-07-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: J. P.
+      surname:
+        language: en
+        content: McGraw,
+      completename:
+        language: en
+        content: John Paul McGraw, Jr.
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: TaskHawk Systems LLC
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Delegated software requesters increasingly make HTTP requests that
+       spend, consume, disclose, mutate, invoke, or actuate on behalf of
+       human or organizational principals.  Existing HTTP authentication
+       mechanisms indicate whether a requester holds a credential.
+       RateLimit fields communicate server-advertised quota and current
+       service-limit information.  HTTP Message Signatures can protect
+       selected components of an HTTP message.  None of these mechanisms
+       directly defines a common origin-server challenge for a requester to
+       present verifiable, bounded authority from its principal before the
+       server performs protected processing.
+
+       This document defines the "Delegation" HTTP authentication scheme,
+       response semantics for delegated-authority challenges using existing
+       HTTP status codes and Problem Details, the Delegation-Proof HTTP
+       field, and a COSE/CBOR proof carriage model for request-bound
+       delegated authority.  The initial authority profile is the Budget
+       profile, which uses a CBOR/COSE Budget-Attestation envelope to prove
+       bounded authority to spend, consume metered service units, or commit
+       bounded resources.  The mechanism is algorithm-agile; the initial
+       cose-ml-dsa proof profile uses existing JOSE and COSE serializations
+       for ML-DSA, with ML-DSA-65 as the baseline algorithm and ML-DSA-87
+       available as a high-assurance deployment policy option.  A dedicated
+       4NN Delegated Authority Required status code remains an open design
+       question for HTTP Working Group review; this revision does not depend
+       on that status code and does not define payment semantics.  This
+       revision also defines a mandatory-to-implement preflight flow for
+       large proof profiles so that GET and HEAD requests do not depend on
+       request content, and so that requests with application
+       representations do not need to multiplex the application body and the
+       proof body in a single content stream.
+
+       For implementation experience, this individual draft also includes
+       the initial Budget authority profile.  The HTTP authentication
+       scheme, status-code semantics, Problem Details members, and field-
+       carriage rules are intentionally separable from the COSE/CBOR Budget
+       profile.  If a Working Group chooses to progress the HTTP mechanism
+       independently, the Budget authority profile can be moved to a
+       companion profile document without changing the Delegation challenge
+       semantics defined here.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mcgraw-httpapi-agent-budget-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcgraw-httpapi-agent-budget-02
+    docidentifier:
+    - content: draft-mcgraw-httpapi-agent-budget-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mcgraw-httpapi-agent-budget-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,98 @@
+---
+id: draftnoascittaiagentreceipt00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A SCITT Profile for AI-Agent Action Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-noa-scitt-ai-agent-receipt-00
+docidentifier:
+- content: draft-noa-scitt-ai-agent-receipt
+  type: Internet-Draft
+- content: draft-noa-scitt-ai-agent-receipt-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.noa-scitt-ai-agent-receipt
+date:
+- type: published
+  at: '2026-06-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tora
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Toraman
+      completename:
+        language: en
+        content: Tora Toraman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NordenSoft
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document profiles the IETF SCITT (Supply Chain Integrity,
+       Transparency, and Trust) architecture for *AI-agent action receipts*:
+       tamper-evident, signed, offline-verifiable records of what an
+       autonomous agent did, for which principal, under which policy, with
+       what verdict.  Each receipt is a COSE_Sign1 Signed Statement (RFC
+       9052) over a canonical (RFC 8785 / JCS) payload, hash-chained for
+       ordering, and registrable in any SCITT Transparency Service to obtain
+       non-equivocation and tail-truncation properties a self-signed chain
+       cannot provide alone.  The profile makes a deliberately NARROW,
+       checkable claim — "this is a tamper-evident, signature-verifiable
+       record of the action, principal, policy identity, and recorded
+       verdict" — and explicitly does NOT claim that the agent was correct,
+       safe, or wise, that the recorded inputs were true or complete, or
+       that any real-world outcome followed.  A deterministic offline
+       policy-REPLAY capability (re-deriving the verdict from the recorded
+       inputs) is named here as a non-goal of this revision and is left to a
+       separate companion profile.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-noa-scitt-ai-agent-receipt-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-noa-scitt-ai-agent-receipt-01
+    docidentifier:
+    - content: draft-noa-scitt-ai-agent-receipt-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-noa-scitt-ai-agent-receipt-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

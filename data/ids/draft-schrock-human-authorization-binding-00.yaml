@@ -1,0 +1,90 @@
+---
+id: draftschrockhumanauthorizationbinding00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Binding Named-Human Authorization Evidence into Agent-Action Records
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-human-authorization-binding-00
+docidentifier:
+- content: draft-schrock-human-authorization-binding
+  type: Internet-Draft
+- content: draft-schrock-human-authorization-binding-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.schrock-human-authorization-binding
+date:
+- type: published
+  at: '2026-07-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Iman
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Schrock
+      completename:
+        language: en
+        content: Iman Schrock
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EMILIA Protocol, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A recurring pattern spans the agent-action record formats now in
+       development: a record about an agent's action reserves a place for
+       "the human authorization" — an approver disposition, an authority
+       context, a human-override field, an actor slot, a signed grant, an
+       approval reference — and leaves its semantics undefined.  Each
+       format, reasonably, does not want to specify human-authorization
+       evidence itself; none, so far, says what filling the slot means.
+       This document defines that one thing, host-agnostically: how any
+       record binds named-human authorization evidence, either BY REFERENCE
+       (a content digest of the authorization artifact's canonical bytes) or
+       EMBEDDED (a compact, self-describing claim carrying named approvals
+       and optional distinct-human quorum semantics), with five requirements
+       that make the binding mean the same thing in every host: digest
+       grounding, action agreement, verified-versus-accepted discipline,
+       fail-closed absence, and embedded/referenced consistency.  The SCITT
+       signed-statement host family is expressed concretely (digest
+       selection, and the observed-absence statement that is the only way
+       absence of authorization becomes evidence); an informative appendix
+       maps the binding onto the reserved slots of eleven current documents.
+       This document defines no new authorization format: the referenced
+       evidence verifies under its own specification.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-schrock-human-authorization-binding-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

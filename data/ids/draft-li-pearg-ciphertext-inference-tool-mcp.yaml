@@ -1,0 +1,49 @@
+---
+id: draftlipeargciphertextinferencetoolmcp
+schema_version: v1.5.6
+formattedref:
+  content: draft-li-pearg-ciphertext-inference-tool-mcp
+title:
+- language: en
+  script: Latn
+  content: Ciphertext-Based AI Inference Tool Design for the Model Context Protocol
+    (MCP)
+docidentifier:
+- content: draft-li-pearg-ciphertext-inference-tool-mcp
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Model Context Protocol (MCP) enables AI-powered tools to interact
+       with autonomous agents and Large Language Models (LLMs), but
+       currently processes user inputs and inference results in plaintext.
+       This could introduce some privacy risks and violates the principle of
+       least privilege when processing user data.  This contribution
+       specifies a ciphertext-based AI inference extension for MCP.  The
+       design leverages Homomorphic Encryption (HE) to allow an MCP server
+       or remote tool to perform inference directly on encrypted data
+       without accessing the plaintext.  The server receives encrypted
+       payloads, computes over ciphertexts using an evaluation key, and
+       returns an encrypted result that only the MCP client can decrypt.  To
+       ensure interoperability across various network environments, this
+       document defines a JSON-RPC message format independent of the
+       underlying transport layer (supporting both local stdio and remote
+       Server-Sent Events).  The format extends the existing MCP 'tools/
+       call' method with fields for encrypted payloads, algorithm
+       identifiers, and key references.  Additionally, this document
+       discusses security considerations, key management, and implementation
+       trade-offs.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-li-pearg-ciphertext-inference-tool-mcp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-pearg-ciphertext-inference-tool-mcp-00
+    docidentifier:
+    - content: draft-li-pearg-ciphertext-inference-tool-mcp-00
+      type: Internet-Draft
+      primary: true

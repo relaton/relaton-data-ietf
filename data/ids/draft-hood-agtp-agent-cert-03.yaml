@@ -1,0 +1,100 @@
+---
+id: drafthoodagtpagentcert03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AGTP Agent Certificate Extension
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-agent-cert-03
+docidentifier:
+- content: draft-hood-agtp-agent-cert
+  type: Internet-Draft
+- content: draft-hood-agtp-agent-cert-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hood-agtp-agent-cert
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hood
+      completename:
+        language: en
+        content: Chris Hood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nomotic, Inc.
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Agent Transfer Protocol (AGTP) base specification defines agent
+       identity headers (Agent-ID, Owner-ID, Authority-Scope) that are self-
+       asserted: present on every request and mandatory for logging, but not
+       cryptographically verified at the transport layer.  This document
+       specifies the AGTP Agent Certificate Extension: an optional mechanism
+       that binds Agent-ID, Owner-ID, and Authority-Scope to an X.509 v3
+       certificate presented during TLS mutual authentication.  The
+       extension enables infrastructure components including Scope-
+       Enforcement Points (SEPs), load balancers, and governance gateways to
+       verify agent identity and enforce authority scope without
+       application-layer access, at O(1) cost per request header check.  The
+       extension also defines session-level revocation propagation via AGTP
+       NOTIFY broadcast and a Certificate Transparency Log for tamper-
+       evident governance metadata.
+
+       Note: Certain mechanisms described in this document may be subject to
+       pending patent applications by the author.  The licensor is prepared
+       to grant a royalty-free license to implementers consistent with the
+       IETF's IPR framework.  See the IPR Notice and Section 7.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hood-agtp-agent-cert-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-agent-cert-02
+    docidentifier:
+    - content: draft-hood-agtp-agent-cert-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hood-agtp-agent-cert-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

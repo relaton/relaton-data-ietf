@@ -1,0 +1,42 @@
+---
+id: draftlibfdrcp
+schema_version: v1.5.6
+formattedref:
+  content: draft-li-bfd-rcp
+title:
+- language: en
+  script: Latn
+  content: BFD Considerations for Redundant Control Planes
+docidentifier:
+- content: draft-li-bfd-rcp
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In systems with redundant control plane processors, Bidirectional
+       Forwarding Detection (BFD) sessions are typically managed by a single
+       active processor.  When that processor fails and a standby takes
+       over, BFD sessions may be interrupted long enough for remote peers to
+       declare failure, even though the forwarding plane remains
+       operational.
+
+       This document describes requirements and operational considerations
+       for preserving BFD sessions across control plane switchover events.
+       It discusses how BFD session state can be maintained on a standby
+       processor and how BFD processing can be resumed by the standby within
+       the BFD Detection Time, without requiring cooperation from or
+       signaling to remote BFD peers.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-li-bfd-rcp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-bfd-rcp-00
+    docidentifier:
+    - content: draft-li-bfd-rcp-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,207 @@
+---
+id: draftietfrtgwgorderedfib06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Loop-free convergence using oFIB
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-ordered-fib-06
+docidentifier:
+- content: draft-ietf-rtgwg-ordered-fib
+  type: Internet-Draft
+- content: draft-ietf-rtgwg-ordered-fib-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-rtgwg-ordered-fib
+date:
+- type: published
+  at: '2012-06-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mike
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Shand
+      completename:
+        language: en
+        content: Mike Shand
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stewart
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bryant
+      completename:
+        language: en
+        content: Stewart Bryant
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stefano
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Previdi
+      completename:
+        language: en
+        content: Stefano Previdi
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Clarence
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Filsfils
+      completename:
+        language: en
+        content: Clarence Filsfils
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pierre
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Francois
+      completename:
+        language: en
+        content: Pierre Francois
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Olivier
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Bonaventure
+      completename:
+        language: en
+        content: Olivier Bonaventure
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a mechanism for use in conjunction with link
+       state routing protocols which prevents the transient loops which
+       would otherwise occur during topology changes.  It does this by
+       correctly sequencing the FIB updates on the routers.
+
+       This mechanism can be used in the case of non-urgent link or node
+       shutdowns and restarts or link metric changes.  It can also be used
+       in conjunction with a fast re-route mechanism which converts a sudden
+       link or node failure into a non-urgent topology change.  This is
+       possible where a complete repair path is provided for all affected
+       destinations.
+
+       After a non-urgent topology change, each router computes a rank that
+       defines the time at which it can safely update its FIB.  A method for
+       accelerating this loop-free convergence process by the use of
+       completion messages is also described.
+
+       The technology described in this document has been subject to
+       extensive simulation using real network topologies and costs, and
+       pathological convergence behaviour.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-rtgwg-ordered-fib-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-ordered-fib-05
+    docidentifier:
+    - content: draft-ietf-rtgwg-ordered-fib-05
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-rtgwg-ordered-fib-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rtgwg-ordered-fib-07
+    docidentifier:
+    - content: draft-ietf-rtgwg-ordered-fib-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-rtgwg-ordered-fib-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

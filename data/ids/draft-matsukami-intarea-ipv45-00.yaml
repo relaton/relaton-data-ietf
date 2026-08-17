@@ -1,0 +1,92 @@
+---
+id: draftmatsukamiintareaipv4500
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'IPv4.5: A Locator/Identifier-Separated Extension to IPv4 with Post-Quantum
+    Session Security'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-matsukami-intarea-ipv45-00
+docidentifier:
+- content: draft-matsukami-intarea-ipv45
+  type: Internet-Draft
+- content: draft-matsukami-intarea-ipv45-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.matsukami-intarea-ipv45
+date:
+- type: published
+  at: '2026-04-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nao
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Matsukami
+      completename:
+        language: en
+        content: Nao Matsukami
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Researcher
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The global IPv4 address space was exhausted at the IANA level in
+       2011, and Carrier-Grade NAT (CGN) has since served as the primary
+       operational workaround.  CGN preserves connectivity but violates the
+       end-to-end principle, complicates application development, and
+       introduces substantial operational overhead.
+
+       This document specifies IPv4.5, a pragmatic extension of IPv4 that
+       introduces a 96-bit address space organized as a Locator/Identifier
+       separation: a 32-bit IPv4 Locator, a 16-bit Site Identifier, and a
+       48-bit Endpoint Identifier.  IPv4.5 packets are encapsulated in UDP
+       (port 4242) for transparent transit through existing IPv4 routers,
+       NAT devices, and firewalls without requiring infrastructure changes.
+
+       Session security is established through a hybrid post-quantum key
+       exchange combining ML-KEM-768 [FIPS203] and X25519 [RFC7748],
+       performed once per session.  Subsequent data protection uses
+       symmetric AEAD ciphers (AES-256-GCM or ChaCha20-Poly1305).
+
+       The design enforces strict separation of concerns across four
+       independent planes: data, control, identity, and cryptographic.
+       Higher-level functions such as semantic routing and self-sovereign
+       identity are explicitly out of scope for this specification.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-matsukami-intarea-ipv45-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

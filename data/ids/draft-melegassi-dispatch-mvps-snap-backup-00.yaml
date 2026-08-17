@@ -1,0 +1,192 @@
+---
+id: draftmelegassidispatchmvpssnapbackup00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'SNAP: Simple Native Archive Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-melegassi-dispatch-mvps-snap-backup-00
+docidentifier:
+- content: draft-melegassi-dispatch-mvps-snap-backup
+  type: Internet-Draft
+- content: draft-melegassi-dispatch-mvps-snap-backup-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.melegassi-dispatch-mvps-snap-backup
+date:
+- type: published
+  at: '2026-05-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rodrigo
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Yoshioka
+      completename:
+        language: en
+        content: Rodrigo Yoshioka
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: e.Mix
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guilherme
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Labadessa
+      completename:
+        language: en
+        content: Guilherme Labadessa
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: OrcaTI
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pedro
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Scalon
+      completename:
+        language: en
+        content: Pedro Scalon
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sysbrasil Tecnologia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: D. C.
+      surname:
+        language: en
+        content: de Brito
+      completename:
+        language: en
+        content: Diego Canton de Brito
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vero Internet
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Eduardo
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Belotto
+      completename:
+        language: en
+        content: Eduardo Belotto
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zadara
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>SNAP (Simple Native Archive Protocol) defines a minimal, self-
+       describing backup object encoded as a single JSON document, modeled
+       in YANG [RFC7950] and encoded per [RFC7951].  A SNAP object contains
+       a manifest of files with per-file cryptographic hashes, integrity-
+       verified metadata, and a compressed binary payload -- all within one
+       atomic, transport-agnostic JSON document.  Any agent capable of
+       parsing JSON and applying standard decompression can produce or
+       restore a SNAP backup without proprietary tooling, side-channel
+       metadata, or multi-phase handshakes.
+
+       This document defines the YANG module "snap", its JSON encoding,
+       integrity verification procedure, bindings to common transports, and
+       its role as the atomic transport substrate for the Multi-Vantage Path
+       State (MVPS) family of Internet-Drafts.  When a SNAP Object carries
+       an MVPS Bundle [I-D.melegassi-ippm-mvps-bundle], the canonical-form
+       determinism of SNAP (Theorem 1 of this document) composes with the
+       MVPS Architecture axioms A1..A5 [I-D.melegassi-iab-mvps-architecture]
+       to inherit the full coherence algebra of [MVPS-v4] (Theorems 1, 2, 3,
+       3', 4, 5, 9 and Stein's Lemma [Stein52] [CoverThomas2006]) without
+       alteration.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-melegassi-dispatch-mvps-snap-backup-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

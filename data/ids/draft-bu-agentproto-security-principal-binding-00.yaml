@@ -1,0 +1,94 @@
+---
+id: draftbuagentprotosecurityprincipalbinding00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Security Principal and Verifier Binding for Agent Communication Protocols
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-00
+docidentifier:
+- content: draft-bu-agentproto-security-principal-binding
+  type: Internet-Draft
+- content: draft-bu-agentproto-security-principal-binding-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.bu-agentproto-security-principal-binding
+date:
+- type: published
+  at: '2026-07-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Songbo
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bu
+      completename:
+        language: en
+        content: Songbo Bu
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Agent communication protocols often carry claims about user
+       authority, agent instance identity, tool or external-resource
+       identity, delegation state, session continuity, and action evidence.
+       These claims have different verifiers, freshness requirements,
+       failure modes, and security consequences.  If they are collapsed into
+       a single token, identity label, session identifier, or audit record,
+       protocol text can accidentally imply more authority or accountability
+       than the receiver can actually verify.
+
+       This document defines a verifier-facing model for separating those
+       claims.  It provides a reusable matrix format that protocol authors
+       can use to state, for each security-relevant claim, which field
+       carries it, which party verifies it, what binding or freshness rule
+       applies, and what failure behavior is required when the claim is
+       absent, stale, inconsistent, or not verifiable.  The document is
+       protocol-neutral.  It is intended to help compare candidate agent
+       communication drafts and to provide security-considerations and
+       requirements text for agent session and delegation binding.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-bu-agentproto-security-principal-binding-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bu-agentproto-security-principal-binding-01
+    docidentifier:
+    - content: draft-bu-agentproto-security-principal-binding-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-bu-agentproto-security-principal-binding-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

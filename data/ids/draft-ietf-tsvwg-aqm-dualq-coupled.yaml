@@ -1,0 +1,308 @@
+---
+id: draftietftsvwgaqmdualqcoupled
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-tsvwg-aqm-dualq-coupled
+title:
+- language: en
+  script: Latn
+  content: Dual-Queue Coupled Active Queue Management (AQM) for Low Latency, Low Loss,
+    and Scalable Throughput (L4S)
+docidentifier:
+- content: draft-ietf-tsvwg-aqm-dualq-coupled
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification defines a framework for coupling the Active Queue Management (AQM) algorithms in two queues intended for flows with different responses to congestion. This provides a way for the Internet to transition from the scaling problems of standard TCP-Reno-friendly ('Classic') congestion controls to the family of 'Scalable' congestion controls. These are designed for consistently very low queuing latency, very low congestion loss, and scaling of per-flow throughput by using Explicit Congestion Notification (ECN) in a modified way. Until the Coupled Dual Queue (DualQ), these Scalable L4S congestion controls could only be deployed where a clean-slate environment could be arranged, such as in private data centres.
+
+     This specification first explains how a Coupled DualQ works. It then gives the normative requirements that are necessary for it to work well. All this is independent of which two AQMs are used, but pseudocode examples of specific AQMs are given in appendices.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-00
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-01
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-02
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-03
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-04
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-05
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-06
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-07
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-08
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-09
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-10
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-11
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-12
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-13
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-13
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-14
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-14
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-15
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-15
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-16
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-16
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-16
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-17
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-17
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-17
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-18
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-18
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-18
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-19
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-19
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-20
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-20
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-21
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-21
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-21
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-22
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-22
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-22
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-23
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-23
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-23
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-24
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-24
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-24
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-25
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-25
+      type: Internet-Draft
+      primary: true

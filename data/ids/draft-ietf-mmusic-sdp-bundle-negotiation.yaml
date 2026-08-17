@@ -1,0 +1,628 @@
+---
+id: draftietfmmusicsdpbundlenegotiation
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-mmusic-sdp-bundle-negotiation
+title:
+- language: en
+  script: Latn
+  content: Negotiating Media Multiplexing Using the Session Description Protocol (SDP)
+docidentifier:
+- content: draft-ietf-mmusic-sdp-bundle-negotiation
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification defines a new Session Description Protocol (SDP) Grouping Framework extension called 'BUNDLE'. The extension can be used with the SDP offer/answer mechanism to negotiate the usage of a single transport (5-tuple) for sending and receiving media described by multiple SDP media descriptions ("m=" sections). Such transport is referred to as a BUNDLE transport, and the media is referred to as bundled media. The "m=" sections that use the BUNDLE transport form a BUNDLE group.
+
+     This specification defines a new RTP Control Protocol (RTCP) Source Description (SDES) item and a new RTP header extension.
+
+     This specification updates RFCs 3264, 5888, and 7941.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-00
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-01
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-02
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-03
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-04
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-05
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-06
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-07
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-08
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-09
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-10
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-11
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-12
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-13
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-13
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-14
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-14
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-15
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-15
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-16
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-16
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-16
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-17
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-17
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-17
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-18
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-18
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-18
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-19
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-19
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-20
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-20
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-21
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-21
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-21
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-22
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-22
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-22
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-23
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-23
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-23
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-24
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-24
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-24
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-25
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-25
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-26
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-26
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-26
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-27
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-27
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-27
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-28
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-28
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-28
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-29
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-29
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-29
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-30
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-30
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-30
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-31
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-31
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-31
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-32
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-32
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-32
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-33
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-33
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-33
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-34
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-34
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-34
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-35
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-35
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-35
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-36
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-36
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-36
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-37
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-37
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-37
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-38
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-38
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-38
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-39
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-39
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-39
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-40
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-40
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-40
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-41
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-41
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-41
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-42
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-42
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-42
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-43
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-43
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-43
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-44
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-44
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-44
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-45
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-45
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-45
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-46
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-46
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-46
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-47
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-47
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-47
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-48
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-48
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-48
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-49
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-49
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-49
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-50
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-50
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-50
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-51
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-51
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-51
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-52
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-52
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-52
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-53
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-53
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-53
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-54
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-54
+    docidentifier:
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-54
+      type: Internet-Draft
+      primary: true

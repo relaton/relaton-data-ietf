@@ -1,0 +1,46 @@
+---
+id: draftwolfefafagent
+schema_version: v1.5.6
+formattedref:
+  content: draft-wolfe-faf-agent
+title:
+- language: en
+  script: Latn
+  content: 'FAFA: A Declarative Agent Capability Format'
+docidentifier:
+- content: draft-wolfe-faf-agent
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the FAF Agent Format (.fafa): a declarative,
+       YAML-based format for an agent's description, the capabilities it
+       exposes, and the endpoints through which it is reached.  A .fafa
+       document describes an agent; it never instructs one.
+
+       .fafa (application/vnd.fafa+yaml, IANA-registered June 2026 in the
+       vendor tree) is the agent member of the FAF family, alongside .faf
+       (project context) and .fafm (agent memory) [FAF-FORMAT].  It extends
+       .faf additively: a .faf-only consumer reads a .fafa document without
+       breaking.
+
+       .fafa is a format, not a protocol.  It composes with agent-
+       interaction protocols at the document layer — a protocol carries,
+       references, or resolves a .fafa document; the document declares the
+       agent the protocol acts upon.  This document documents the existing
+       IANA vendor-tree registration (application/vnd.fafa+yaml).  No
+       standards-tree registration is requested.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wolfe-faf-agent-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wolfe-faf-agent-00
+    docidentifier:
+    - content: draft-wolfe-faf-agent-00
+      type: Internet-Draft
+      primary: true

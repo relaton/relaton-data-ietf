@@ -1,0 +1,230 @@
+---
+id: draftietfidrsrp2mppolicy01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Advertising p2mp policies in BGP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-p2mp-policy-01
+docidentifier:
+- content: draft-ietf-idr-sr-p2mp-policy
+  type: Internet-Draft
+- content: draft-ietf-idr-sr-p2mp-policy-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-sr-p2mp-policy
+date:
+- type: published
+  at: '2026-04-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hooman
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Bidgoli
+      completename:
+        language: en
+        content: Hooman Bidgoli
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Daniel
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Voyer
+      completename:
+        language: en
+        content: Daniel Voyer
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco System, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrew
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Stone
+      completename:
+        language: en
+        content: Andrew Stone
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rishabh
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Parekh
+      completename:
+        language: en
+        content: Rishabh Parekh (editor)
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arrcus
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Serge
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Krier
+      completename:
+        language: en
+        content: Serge Krier
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco System, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Swadesh
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Agrawal
+      completename:
+        language: en
+        content: Swadesh Agrawal
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco System, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>SR P2MP policies are set of policies that enable architecture for
+       P2MP service delivery.
+
+       A P2MP policy consists of candidate paths (CPs) that connects the
+       Root of the Tree to a set of Leaves.  The P2MP policy is composed of
+       replication segments [RFC9524].  A replication segment is a
+       forwarding instruction for a candidate path which is downloaded to
+       the Root, transit nodes and the leaves.
+
+       This document specifies a new BGP SAFI with a new NLRI in order to
+       advertise P2MP policy from a controller to a set of nodes.
+
+       This document introduces three new route types within this NLRI, one
+       for P2MP policy and its candidate paths that need to be programmed on
+       the Root node, one for the replication segment incoming SID which
+       uniquely will identify the replication state and another for each
+       outgoing interface that the packets get replicated to.  The last two
+       route types are forwarding instructions that needs to be programmed
+       on the Root, and optionally on Transit and Leaf nodes.
+
+       It should be noted that this document does not specify how the Root
+       and the Leaves are discovered on the controller, it only describes
+       how the P2MP Policy and Replication Segments are programmed from the
+       controller to the nodes.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-sr-p2mp-policy-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-p2mp-policy-00
+    docidentifier:
+    - content: draft-ietf-idr-sr-p2mp-policy-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-sr-p2mp-policy-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

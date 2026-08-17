@@ -1,0 +1,98 @@
+---
+id: drafthoodagtpidentifiers02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AGTP Identifier Chain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-identifiers-02
+docidentifier:
+- content: draft-hood-agtp-identifiers
+  type: Internet-Draft
+- content: draft-hood-agtp-identifiers-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hood-agtp-identifiers
+date:
+- type: published
+  at: '2026-06-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hood
+      completename:
+        language: en
+        content: Chris Hood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nomotic, Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the AGTP identifier chain: a layered model of
+       identifiers that together produce a tamper-evident chain of custody
+       across every action an AGTP agent takes.  The chain is composed of
+       identifiers already established in the AGTP draft family (Agent-ID,
+       Owner-ID, Session-ID, Task-ID, and the Attribution-Record envelope of
+       base AGTP) together with a small set of additional identifiers
+       introduced by this document (Request-ID, Response-ID, Action-ID,
+       Evaluation-ID, Decision-ID, Audit-ID).  The Audit-ID is the
+       cryptographic hash of an extended Attribution-Record and provides the
+       per-agent hash chain that links every action an agent takes back to
+       its Agent Genesis.  This document defines the identifiers, how they
+       extend the existing Attribution-Record envelope, the construction of
+       the hash chain, and the verification procedure by which a regulator,
+       auditor, or counterparty reconstructs the chain end to end.  The
+       identifier chain is the regulatory backbone of AGTP.  Without it, the
+       protocol can record that something happened but cannot prove who
+       caused it, what authorized it, or what was decided.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hood-agtp-identifiers-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-identifiers-01
+    docidentifier:
+    - content: draft-hood-agtp-identifiers-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hood-agtp-identifiers-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,100 @@
+---
+id: draftietfradextdeprecatingradius10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Deprecating Insecure Practices in RADIUS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-radext-deprecating-radius-10
+docidentifier:
+- content: draft-ietf-radext-deprecating-radius
+  type: Internet-Draft
+- content: draft-ietf-radext-deprecating-radius-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-radext-deprecating-radius
+date:
+- type: published
+  at: '2026-07-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alan
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: DeKok
+      completename:
+        language: en
+        content: Alan DeKok
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: InkBridge Networks
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RADIUS crypto-agility was first mandated as future work by RFC 6421.
+       The outcome of that work was the publication of RADIUS over TLS (RFC
+       6614) and RADIUS over DTLS (RFC 7360) as experimental documents.
+       Those transport protocols have been in wide-spread use for many years
+       in a wide range of networks, and have recently been standardized in
+       [I-D.ietf-radext-radiusdtls-bis].  TLS has proven to be a useful
+       replacment for UDP (RFC 2865) and TCP (RFC 6613) transports.  With
+       that knowledge, the continued use of insecure transports for RADIUS
+       has serious and negative implications for privacy and security.
+
+       The publication of the "BlastRADIUS" exploit has also shown that
+       RADIUS security needs to be updated.  It is no longer acceptable for
+       RADIUS to rely on MD5 for security.  It is no longer acceptable to
+       send device or location information in clear text across the wider
+       Internet.  This document therefore deprecates many insecure practices
+       in RADIUS, and mandates support for secure TLS-based transport
+       layers.  Related security issues with RADIUS are discussed, and
+       recommendations are made for practices which increase both security
+       and privacy.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-radext-deprecating-radius-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-radext-deprecating-radius-09
+    docidentifier:
+    - content: draft-ietf-radext-deprecating-radius-09
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-radext-deprecating-radius-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,41 @@
+---
+id: draftwanggrowbmppolicypreview
+schema_version: v1.5.6
+formattedref:
+  content: draft-wang-grow-bmp-policy-preview
+title:
+- language: en
+  script: Latn
+  content: BGP Route Policy Pre-view and Intent Verification Using BGP Monitoring
+    Protocol
+docidentifier:
+- content: draft-wang-grow-bmp-policy-preview
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Deploying BGP route policies in live production networks carries
+       significant operational risks, often resulting in unintended route
+       leaks, suboptimal routing paths, or blackholes.  This document
+       proposes an extension to the BGP Monitoring Protocol (BMP) that
+       enables a BGP speaker to pre-view and dry-run a candidate route
+       policy within a localized control-plane sandbox.  The resulting post-
+       policy route changes (deltas) are streamed asynchronously to a
+       centralized controller via a new BMP message type.  This architecture
+       allows the controller to verify policy alignment with network
+       intents, subsequently triggering either an explicit commit or a
+       rollback before any forwarding plane changes take effect.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wang-grow-bmp-policy-preview-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-grow-bmp-policy-preview-00
+    docidentifier:
+    - content: draft-wang-grow-bmp-policy-preview-00
+      type: Internet-Draft
+      primary: true

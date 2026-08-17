@@ -1,0 +1,42 @@
+---
+id: draftwicinskilampscaa
+schema_version: v1.5.6
+formattedref:
+  content: draft-wicinski-lamps-caa
+title:
+- language: en
+  script: Latn
+  content: Alternative DNS Certification Authority Authorization (CAA) Resource Record
+docidentifier:
+- content: draft-wicinski-lamps-caa
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>[RFC6844] defines the Certification Authority Authorization (CAA) DNS
+       Resource Record type to specify one or more Certification Authorities
+       (CAs) authorized to issue certificates for that domain name.  With
+       large domains covering multiple web properties, defining all possible
+       certificate authorities for the domain has security implications.  It
+       would be beneficial to define a CAA for individual host names.  This
+       will allow CAA records that can be managed with fine grain control.
+
+       This document provides an alternative CAA record using a _caa prefix
+       label that will take precedent on a per Fully Qualified Domain Name
+       (FQDN), if it exists.  It will override any CAA record at the zone
+       apex.  This will not change current CAA record behavior, but will be
+       an additional option.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wicinski-lamps-caa-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wicinski-lamps-caa-00
+    docidentifier:
+    - content: draft-wicinski-lamps-caa-00
+      type: Internet-Draft
+      primary: true

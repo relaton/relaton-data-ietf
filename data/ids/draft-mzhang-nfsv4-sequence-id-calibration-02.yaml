@@ -1,0 +1,180 @@
+---
+id: draftmzhangnfsv4sequenceidcalibration02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Sequence ID calibration for mis-ordered requests
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-02
+docidentifier:
+- content: draft-mzhang-nfsv4-sequence-id-calibration
+  type: Internet-Draft
+- content: draft-mzhang-nfsv4-sequence-id-calibration-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mzhang-nfsv4-sequence-id-calibration
+date:
+- type: published
+  at: '2023-04-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Mingqian
+      completename:
+        language: en
+        content: Zhang Mingqian
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co.
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: JingYang
+      completename:
+        language: en
+        content: JingYang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sai
+      - language: en
+        script: Latn
+        initial: S
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: S. C.
+      surname:
+        language: en
+        content: Tangudu
+      completename:
+        language: en
+        content: Sai Chakravarthy Tangudu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rijesh
+      - language: en
+        script: Latn
+        initial: R
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: R. K.
+      surname:
+        language: en
+        content: Parambattu
+      completename:
+        language: en
+        content: Rijesh Kunhi Parambattu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document updates RFC8881, Network File System (NFS) version 4
+       minor version 1, by adding two operations to prevent the client from
+       destroying session when getting the reply of a mis-ordered request
+       with NFS4ERR_SEQ_MISORDERED.
+
+       In NFSv4 minor version 1, sequence ID is used to ensure that the size
+       of the needed reply cache is tightly bounded.  If the server gets a
+       mis-ordered request, the client will often break the session and
+       establish a new session with the server.  This approach results in a
+       significant burden on the client and the server.  During the process
+       of session rebuilding, IO performance will be affected.  This is
+       especially troublesome when network latency is substantial, as, for
+       example when client and server are in different locations.  This
+       document will propose extensions to NFSv4 that would allow client
+       reconnection to be dispensed with.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mzhang-nfsv4-sequence-id-calibration-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-01
+    docidentifier:
+    - content: draft-mzhang-nfsv4-sequence-id-calibration-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-mzhang-nfsv4-sequence-id-calibration-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-03
+    docidentifier:
+    - content: draft-mzhang-nfsv4-sequence-id-calibration-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mzhang-nfsv4-sequence-id-calibration-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

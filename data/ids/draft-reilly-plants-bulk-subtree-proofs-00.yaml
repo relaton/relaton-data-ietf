@@ -1,0 +1,107 @@
+---
+id: draftreillyplantsbulksubtreeproofs00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Bulk Subtree Consistency Proofs for Merkle Tree Certificates
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-reilly-plants-bulk-subtree-proofs-00
+docidentifier:
+- content: draft-reilly-plants-bulk-subtree-proofs
+  type: Internet-Draft
+- content: draft-reilly-plants-bulk-subtree-proofs-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.reilly-plants-bulk-subtree-proofs
+date:
+- type: published
+  at: '2026-07-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lawrence
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: L. J. R.
+      surname:
+        language: en
+        content: Reilly
+      completename:
+        language: en
+        content: Lawrence John Reilly Jr
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Merkle Tree Certificates require relying parties to periodically
+       obtain a set of active landmark subtrees and verify each is
+       consistent with a reference checkpoint of the issuance log.  As
+       specified, this requires one subtree consistency proof per landmark
+       subtree.  Because the active landmark subtrees form a contiguous
+       range of the log, their individual consistency proofs share the great
+       majority of their interior nodes, and verifying them independently
+       carries substantial redundancy.
+
+       This document defines a bulk subtree consistency proof, which
+       verifies an entire set of landmark subtrees against a single
+       reference checkpoint using proof material logarithmic in the size of
+       the log, rather than logarithmic per subtree.  It is a size
+       optimization for the relying party update channel and introduces no
+       change to certificate verification or to the security properties of
+       Merkle Tree Certificates.
+
+       The construction in this document has not yet been validated against
+       a reference implementation.  It is published to solicit review of the
+       approach.  Open items are recorded in an appendix.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-reilly-plants-bulk-subtree-proofs-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reilly-plants-bulk-subtree-proofs-01
+    docidentifier:
+    - content: draft-reilly-plants-bulk-subtree-proofs-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-reilly-plants-bulk-subtree-proofs-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

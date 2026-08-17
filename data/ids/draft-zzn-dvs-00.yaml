@@ -1,0 +1,99 @@
+---
+id: draftzzndvs00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Domain-Verified Skills (DVS) Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zzn-dvs-00
+docidentifier:
+- content: draft-zzn-dvs
+  type: Internet-Draft
+- content: draft-zzn-dvs-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zzn-dvs
+date:
+- type: published
+  at: '2026-03-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zainan
+      - language: en
+        script: Latn
+        initial: Z
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: Z. V.
+      surname:
+        language: en
+        content: Zhou
+      completename:
+        language: en
+        content: Zainan Victor Zhou
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Namefi
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Domain-Verified Skills (DVS) protocol, a
+       lightweight mechanism for AI Agents to discover, verify, and execute
+       skill definitions served over HTTPS.  A skill is a directory
+       containing a SKILL.md entry point and optional bundled resources that
+       instructs an AI Agent to perform a specific task or adopt a specific
+       behavior.
+
+       The central design principle of DVS is that a skill's identity and
+       trustworthiness are derived entirely from the HTTPS URL at which it
+       is served -- no centralized registry or third-party certification is
+       required.  The operator of the URL's origin is the authoritative
+       endorser of the skill.
+
+       This trust is formalized through the concept of a Trust Root: an
+       HTTPS URL prefix declared by the skill publisher that scopes the
+       trust boundary for their skills.  A skill is considered verified if
+       and only if its URL begins with the declared Trust Root.  For brands
+       with first-party domains, the Trust Root is the domain origin.  For
+       brands publishing on user-generated content platforms where the
+       platform operator does not vouch for individual publishers, the Trust
+       Root MUST be path-scoped to content the brand controls, ensuring that
+       trust does not extend to the entire platform.
+
+       The protocol leverages the existing trust infrastructure of the
+       Domain Name System (DNS) and Transport Layer Security (TLS) and is
+       backward compatible with skills already served over HTTPS, including
+       those hosted on GitHub or other platforms.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zzn-dvs-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

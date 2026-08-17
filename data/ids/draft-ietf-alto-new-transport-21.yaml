@@ -1,0 +1,211 @@
+---
+id: draftietfaltonewtransport21
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The ALTO Transport Information Publication Service
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-21
+docidentifier:
+- content: draft-ietf-alto-new-transport
+  type: Internet-Draft
+- content: draft-ietf-alto-new-transport-21
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-alto-new-transport
+date:
+- type: published
+  at: '2023-12-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kai
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Gao
+      completename:
+        language: en
+        content: Kai Gao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sichuan University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Roland
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Schott
+      completename:
+        language: en
+        content: Roland Schott
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Deutsche Telekom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "Y"
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: Y. R.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Y. Richard Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Yale University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lauren
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Delwiche
+      completename:
+        language: en
+        content: Lauren Delwiche
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Yale University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lachlan
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Keller
+      completename:
+        language: en
+        content: Lachlan Keller
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Yale University
+version:
+- content: '21'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The ALTO Protocol (RFC 7285) leverages HTTP/1.1 and is designed for
+       the simple, sequential request-reply use case, in which an ALTO
+       client requests a sequence of information resources and the server
+       responds with the complete content of each resource one at a time.
+
+       ALTO incremental updates using Server-Sent Events (SSE) (RFC 8895)
+       defines a multiplexing protocol on top of HTTP/1.x, so that an ALTO
+       server can incrementally push resource updates to clients whenever
+       monitored network information resources change, allowing the clients
+       to monitor multiple resources at the same time.  However, HTTP/2 and
+       later versions already support concurrent, non-blocking transport of
+       multiple streams in the same HTTP connection.
+
+       To take advantage of newer HTTP features, this document introduces
+       the ALTO Transport Information Publication Service (TIPS).  TIPS uses
+       an incremental RESTful design to give an ALTO client the new
+       capability to explicitly, concurrently (non-blocking) request (pull)
+       specific incremental updates using native HTTP/2 or HTTP/3, while
+       still functioning for HTTP/1.1.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-alto-new-transport-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-20
+    docidentifier:
+    - content: draft-ietf-alto-new-transport-20
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-alto-new-transport-22
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-22
+    docidentifier:
+    - content: draft-ietf-alto-new-transport-22
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-alto-new-transport-21
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

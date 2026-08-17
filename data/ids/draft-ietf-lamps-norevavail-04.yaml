@@ -1,0 +1,144 @@
+---
+id: draftietflampsnorevavail04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: No Revocation Available for X.509 Public Key Certificates
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-norevavail-04
+docidentifier:
+- content: draft-ietf-lamps-norevavail
+  type: Internet-Draft
+- content: draft-ietf-lamps-norevavail-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-lamps-norevavail
+date:
+- type: published
+  at: '2024-04-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Russ
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Housley
+      completename:
+        language: en
+        content: Russ Housley
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vigil Security, LLC
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tomofumi
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Okubo
+      completename:
+        language: en
+        content: Tomofumi Okubo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: DigiCert, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Joseph
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Mandel
+      completename:
+        language: en
+        content: Joseph Mandel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SecureG Inc.
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>X.509v3 public key certificates are profiled in RFC 5280.  Short-
+       lived certificates are seeing greater use in the Internet.  The
+       Certification Authority (CA) that issues these short-lived
+       certificates do not publish revocation information because the
+       certificate lifespan that is shorter than the time needed to detect,
+       report, and distribute revocation information.  Some long-lived
+       X.509v3 public key certificates never expire, and they are never
+       revoked.  This specification defines the noRevAvail certificate
+       extension so that a relying party can readily determine that the CA
+       does not publish revocation information for the certificate, and it
+       updates the certification path validation algorithm in RFC 5280 to
+       skip revocation checking when the noRevAvail certificate extension is
+       present.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-lamps-norevavail-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-norevavail-03
+    docidentifier:
+    - content: draft-ietf-lamps-norevavail-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-lamps-norevavail-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

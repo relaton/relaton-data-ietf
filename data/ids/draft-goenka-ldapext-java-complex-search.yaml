@@ -1,0 +1,43 @@
+---
+id: draftgoenkaldapextjavacomplexsearch
+schema_version: v1.5.6
+formattedref:
+  content: draft-goenka-ldapext-java-complex-search
+title:
+- language: en
+  script: Latn
+  content: Complex Directory Lookup using Java Based LDAP Query Extension
+docidentifier:
+- content: draft-goenka-ldapext-java-complex-search
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>LDAP provides some simple primitives to construct search\nfilters.
+    Complex LDAP search queries such as those involving\njoins or functional evaluation
+    of simple query results require\nclient side processing of the intermediate search
+    results. The\nnetwork overhead of retrieving intermediate results can be\nsubstantial
+    for large databases. This document defines an LDAP\nextension for supporting server
+    side evaluation of complex\nsearch queries.\n \n     Custom search logic can be
+    sent across to the server,\n     encapsulated as a Java Object. The LDAP server
+    supporting this\n     extension would instantiate the java object and invoke its
+    well\n     known interfaces in a JVM. The java object running at the server\n
+    \    end acts as the client-proxy, and makes a local search query to\n     the
+    LDAP server. The directory entries are evaluated using the\n     custom logic
+    embedded in the client-proxy, and those that\n     satisfy the evaluation function
+    are returned as the search\n     result to the LDAP server, which passes it back
+    to the\n     originating client. Even non-Java LDAP clients can use this\n     method,
+    provided the search query is written as a java object.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-goenka-ldapext-java-complex-search-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-goenka-ldapext-java-complex-search-01
+    docidentifier:
+    - content: draft-goenka-ldapext-java-complex-search-01
+      type: Internet-Draft
+      primary: true

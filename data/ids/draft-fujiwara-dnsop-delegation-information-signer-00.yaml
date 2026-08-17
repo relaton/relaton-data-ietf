@@ -1,0 +1,79 @@
+---
+id: draftfujiwaradnsopdelegationinformationsigner00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Delegation Information (Referrals) Signer for DNSSEC
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-fujiwara-dnsop-delegation-information-signer-00
+docidentifier:
+- content: draft-fujiwara-dnsop-delegation-information-signer
+  type: Internet-Draft
+- content: draft-fujiwara-dnsop-delegation-information-signer-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.fujiwara-dnsop-delegation-information-signer
+date:
+- type: published
+  at: '2020-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kazunori
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Fujiwara
+      completename:
+        language: en
+        content: Kazunori Fujiwara
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: JPRS
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DNSSEC does not protect delegation information, it contains NS RRSet
+       on the parent side and glue records.  This document defines
+       delegation information signer (DiS) resource record for protecting
+       the delegation information, by inserting on the parent side of zone
+       cut to hold a hash of delegation information.  The DiS resource
+       record reuses the type code and wire format of DS resource record,
+       and distinguishes it from existing DS RRSet by using a new digest
+       type.  This document also describes the usage of DiS resource record
+       and shows the implications on security-aware resolvers.  The
+       definition and usage are compatible with current DNSSEC.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-fujiwara-dnsop-delegation-information-signer-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

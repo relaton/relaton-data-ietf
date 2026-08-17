@@ -1,0 +1,154 @@
+---
+id: draftounsworthpqcompositeencryption01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Composite Encryption For Use In Internet PKI
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-encryption-01
+docidentifier:
+- content: draft-ounsworth-pq-composite-encryption
+  type: Internet-Draft
+- content: draft-ounsworth-pq-composite-encryption-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ounsworth-pq-composite-encryption
+date:
+- type: published
+  at: '2022-02-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mike
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Ounsworth
+      completename:
+        language: en
+        content: Mike Ounsworth
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Entrust Limited
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Gray
+      completename:
+        language: en
+        content: John Gray
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Entrust Limited
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Serge
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Mister
+      completename:
+        language: en
+        content: Serge Mister
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Entrust Limited
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>With the widespread adoption of post-quantum cryptography will come
+       the need for an entity to possess multiple public keys on different
+       cryptographic algorithms.  Since the trustworthiness of individual
+       post-quantum algorithms is at question, a multi-key cryptographic
+       operation will need to be performed in such a way that breaking it
+       requires breaking each of the component algorithms individually.
+       This requires defining new structures for holding composite
+       encryption data.
+
+       This document defines a content encryption process following the
+       hybrid model as described in the NIST Post-Quantum Crypto FAQ.  This
+       draft defines three composite encryption modes.  First, Composite Key
+       Transport using Encryption primitives which encrypts a message
+       (typically a content encryption key) for a recipient with a composite
+       public key composed entirely of encryption keys by encrypting it with
+       multiple one-time-pad keys, each encrypted under a different
+       recipient public key.  Second, Composite Key Transport using
+       Encryption and KEM primitives is the generalization of the previous
+       mode to support a mixture of encryption and KEM algorithms.  Third,
+       Composite Key Exchange is the most general and supports establishing
+       a shared secret using any combination of encryption, KEM, and key
+       exchange primitives where a master shared secret is generated using
+       NIST SP 800-56Cr2.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ounsworth-pq-composite-encryption-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-encryption-00
+    docidentifier:
+    - content: draft-ounsworth-pq-composite-encryption-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ounsworth-pq-composite-encryption-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

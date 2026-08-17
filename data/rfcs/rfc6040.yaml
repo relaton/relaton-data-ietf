@@ -1,0 +1,152 @@
+---
+id: RFC6040
+schema_version: v1.5.6
+type: standard
+title:
+- content: Tunnelling of Explicit Congestion Notification
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc6040
+docidentifier:
+- content: RFC 6040
+  type: IETF
+  primary: true
+- content: 10.17487/RFC6040
+  type: DOI
+docnumber: RFC6040
+date:
+- type: published
+  at: 2010-11
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        script: Latn
+        content: B.
+      surname:
+        language: en
+        script: Latn
+        content: Briscoe
+      completename:
+        language: en
+        script: Latn
+        content: B. Briscoe
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Transport and Services Working Group
+      identifier:
+      - content: tsvwg
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document redefines how the explicit congestion notification (ECN)
+    field of the IP header should be constructed on entry to and exit from any IP-in-IP
+    tunnel.  On encapsulation, it updates RFC 3168 to bring all IP-in-IP tunnels (v4
+    or v6) into line with RFC 4301 IPsec ECN processing.  On decapsulation, it updates
+    both RFC 3168 and RFC 4301 to add new behaviours for previously unused combinations
+    of inner and outer headers.  The new rules ensure the ECN field is correctly propagated
+    across a tunnel whether it is used to signal one or two severity levels of congestion;
+    whereas before, only one severity level was supported.  Tunnel endpoints can be
+    updated in any order without affecting pre-existing uses of the ECN field, thus
+    ensuring backward compatibility.  Nonetheless, operators wanting to support two
+    severity levels (e.g., for pre-congestion notification -- PCN) can require compliance
+    with this new specification.  A thorough analysis of the reasoning for these changes
+    and the implications is included.  In the unlikely event that the new rules do
+    not meet a specific need, RFC 4774 gives guidance on designing alternate ECN semantics,
+    and this document extends that to include tunnelling issues. [STANDARDS-TRACK]</p>"
+status:
+  stage:
+    content: PROPOSED STANDARD
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: RFC3168
+    docidentifier:
+    - content: RFC3168
+      type: IETF
+      primary: true
+- type: updates
+  bibitem:
+    formattedref:
+      content: RFC4301
+    docidentifier:
+    - content: RFC4301
+      type: IETF
+      primary: true
+- type: updates
+  bibitem:
+    formattedref:
+      content: RFC4774
+    docidentifier:
+    - content: RFC4774
+      type: IETF
+      primary: true
+series:
+- title:
+  - content: RFC
+  number: '6040'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: Congestion Control and Management
+- vocab:
+    content: Congestion Notification
+- vocab:
+    content: Information Security
+- vocab:
+    content: Tunnelling
+- vocab:
+    content: Encapsulation
+- vocab:
+    content: Decapsulation
+- vocab:
+    content: Protocol
+- vocab:
+    content: ECN
+- vocab:
+    content: IPsec
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

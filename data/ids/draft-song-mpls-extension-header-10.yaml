@@ -1,0 +1,284 @@
+---
+id: draftsongmplsextensionheader10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Support MPLS Network Actions using Post-Stack Extension Headers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-song-mpls-extension-header-10
+docidentifier:
+- content: draft-song-mpls-extension-header
+  type: Internet-Draft
+- content: draft-song-mpls-extension-header-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.song-mpls-extension-header
+date:
+- type: published
+  at: '2022-09-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Haoyu
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Song
+      completename:
+        language: en
+        content: Haoyu Song
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Futurewei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhenbin
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhenbin Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tianran
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Zhou
+      completename:
+        language: en
+        content: Tianran Zhou
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Loa
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Andersson
+      completename:
+        language: en
+        content: Loa Andersson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Bronze Dragon Consulting
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhaohui
+      - language: en
+        script: Latn
+        initial: Z
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: Z. J.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Zhaohui (Jeffrey) Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rakesh
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Gandhi
+      completename:
+        language: en
+        content: Rakesh Gandhi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jaganbabu
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Rajamanickam
+      completename:
+        language: en
+        content: Jaganbabu Rajamanickam
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jisu
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Bhattacharya
+      completename:
+        language: en
+        content: Jisu Bhattacharya
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Motivated by the need to support multiple in-network services and
+       functions in an MPLS network (a.k.a.  MPLS Network Actions (MNA)),
+       this document describes a generic and extensible method to
+       encapsulate MNA instructions as well as possible ancillary data in an
+       MPLS packet.  All the post-stack MNAs are encapsulated in a structure
+       called Post-stack MNA Header (PAH).  A PAH is composed of a common
+       header plus a chain of extension headers; each extension header is a
+       container for an MNA.  The encapsulation method allows chaining
+       multiple post-stack extension headers and provides the means to
+       enable fast access to them as well as the original upper layer
+       headers.  This document confines to the solution of PAH encoding and
+       leaves the specification of PAH indicator to the overall MNA
+       solution.  We show how PAH can be used to support several new MNAs as
+       a generic post-stack mechanism.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-song-mpls-extension-header-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-song-mpls-extension-header-09
+    docidentifier:
+    - content: draft-song-mpls-extension-header-09
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-song-mpls-extension-header-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-song-mpls-extension-header-11
+    docidentifier:
+    - content: draft-song-mpls-extension-header-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-song-mpls-extension-header-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,93 @@
+---
+id: draftmorrisonmcpdnsdiscovery00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Discovery of Model Context Protocol Servers via DNS TXT Records
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-00
+docidentifier:
+- content: draft-morrison-mcp-dns-discovery
+  type: Internet-Draft
+- content: draft-morrison-mcp-dns-discovery-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-mcp-dns-discovery
+date:
+- type: published
+  at: '2026-04-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a DNS-based mechanism for the discovery of
+       Model Context Protocol (MCP) servers.  A TXT resource record
+       published at the underscore-prefixed label _mcp.&lt;domain&gt; advertises
+       the presence, endpoint URL, transport protocol, cryptographic
+       identity, and capability profile of an MCP server associated with a
+       domain name.  The mechanism complements existing HTTPS-based
+       discovery (.well-known/mcp/server-card.json) by providing a
+       lightweight, resolver-cached bootstrap that requires no HTTPS round-
+       trip.  The design follows the precedent established by DKIM
+       [RFC6376], SPF [RFC7208], DMARC [RFC7489], and MTA-STS [RFC8461], all
+       of which use DNS TXT records at underscore-prefixed labels to
+       advertise domain-scoped policy and service metadata.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-morrison-mcp-dns-discovery-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-01
+    docidentifier:
+    - content: draft-morrison-mcp-dns-discovery-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-mcp-dns-discovery-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

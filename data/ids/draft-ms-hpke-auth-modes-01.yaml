@@ -1,0 +1,155 @@
+---
+id: draftmshpkeauthmodes01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Authenticated Modes for HPKE
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ms-hpke-auth-modes-01
+docidentifier:
+- content: draft-ms-hpke-auth-modes
+  type: Internet-Draft
+- content: draft-ms-hpke-auth-modes-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ms-hpke-auth-modes
+date:
+- type: published
+  at: '2026-05-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Giulio
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Berra
+      completename:
+        language: en
+        content: Giulio Berra
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Freedom of the Press Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Cory
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Myers
+      completename:
+        language: en
+        content: Cory Myers
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Freedom of the Press Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rowen
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: S.
+      completename:
+        language: en
+        content: Rowen S.
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Freedom of the Press Foundation
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The standards-track [I-D.ietf-hpke-hpke] supersedes the informational
+       [RFC9180], omitting its authenticated modes mode_auth and
+       mode_auth_psk.  This document restores mode_auth_psk mode as a strict
+       extension and illustrates how the restored mode can be used with a
+       post-quantum "shared secret" as the PSK in order to achieve hybrid
+       PQ/T confidentiality while transitioning to quantum-resistant
+       encryption, without deprecating the classical implicit authentication
+       on which many applications still rely.
+
+       This extension requires only the addition of AuthEncap()/AuthDecap()
+       to the DHKEM, the definition of four setup functions, and a change in
+       VerifyPSKInputs().  The extension does not alter the externally
+       observable behavior of the existing HPKE modes standardized in
+       [I-D.ietf-hpke-hpke].  Although AuthEncap()/AuthDecap() reintroduce
+       the functionality of mode_auth, the mode itself is not restored,
+       since it cannot provide quantum resistance.
+
+       This document discusses the transitional nature of the AuthPSK
+       construction and its security properties as a transitional step
+       towards quantum resistance.  In particular, this document illustrates
+       how the restored mode_auth_psk can be used to provide ready-made KEM
+       combiner-like functionality ([I-D.ounsworth-cfrg-kem-combiners])
+       without requiring downstream API users to manage their own encryption
+       context.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ms-hpke-auth-modes-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ms-hpke-auth-modes-00
+    docidentifier:
+    - content: draft-ms-hpke-auth-modes-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ms-hpke-auth-modes-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

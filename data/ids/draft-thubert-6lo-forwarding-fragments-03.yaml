@@ -1,0 +1,118 @@
+---
+id: draftthubert6loforwardingfragments03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: LLN Fragment Forwarding and Recovery
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-thubert-6lo-forwarding-fragments-03
+docidentifier:
+- content: draft-thubert-6lo-forwarding-fragments
+  type: Internet-Draft
+- content: draft-thubert-6lo-forwarding-fragments-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.thubert-6lo-forwarding-fragments
+date:
+- type: published
+  at: '2016-10-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pascal
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Thubert
+      completename:
+        language: en
+        content: Pascal Thubert
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jonathan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Hui
+      completename:
+        language: en
+        content: Jonathan Hui
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In order to be routed, a fragmented 6LoWPAN packet must be
+       reassembled at every hop of a multihop link where lower layer
+       fragmentation occurs.  Considering that the IPv6 minimum MTU is 1280
+       bytes and that an an 802.15.4 frame can have a payload limited to 74
+       bytes in the worst case, a packet might end up fragmented into as
+       many as 18 fragments at the 6LoWPAN shim layer.  If a single one of
+       those fragments is lost in transmission, all fragments must be
+       resent, further contributing to the congestion that might have caused
+       the initial packet loss.  This draft introduces a simple protocol to
+       forward and recover individual fragments that might be lost over
+       multiple hops between 6LoWPAN endpoints.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-thubert-6lo-forwarding-fragments-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thubert-6lo-forwarding-fragments-02
+    docidentifier:
+    - content: draft-thubert-6lo-forwarding-fragments-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-thubert-6lo-forwarding-fragments-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thubert-6lo-forwarding-fragments-04
+    docidentifier:
+    - content: draft-thubert-6lo-forwarding-fragments-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-thubert-6lo-forwarding-fragments-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

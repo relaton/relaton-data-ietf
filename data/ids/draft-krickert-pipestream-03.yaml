@@ -1,0 +1,105 @@
+---
+id: draftkrickertpipestream03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'PipeStream: A Recursive Entity Streaming Protocol for Distributed Processing
+    over QUIC'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-krickert-pipestream-03
+docidentifier:
+- content: draft-krickert-pipestream
+  type: Internet-Draft
+- content: draft-krickert-pipestream-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.krickert-pipestream
+date:
+- type: published
+  at: '2026-07-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kristian
+      - language: en
+        script: Latn
+        initial: K
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: K. E.
+      surname:
+        language: en
+        content: Rickert
+      completename:
+        language: en
+        content: Kristian E Rickert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: PipeStream AI
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies PipeStream, a recursive scatter-gather
+       streaming protocol for hierarchical task decomposition and
+       distributed processing over QUIC transport.  PipeStream enables the
+       decomposition (scattering) of complex, arbitrary workloads into
+       constituent sub-tasks, their transmission across distributed
+       processing nodes, and subsequent rehydration (gathering) at
+       destination endpoints.
+
+       While application-layer protocols like gRPC provide stream
+       multiplexing, PipeStream embeds a hierarchical state machine directly
+       into the protocol.  It employs a dual-stream architecture consisting
+       of a data stream for payload transmission and a control stream for
+       tracking completion status and maintaining distributed consistency.
+
+       PipeStream defines a generic 2-bit Data Layer field for entity
+       representation, leaving the concrete payload semantics to application
+       profiles.  To ensure consistency across parallel processing
+       pipelines, the protocol implements checkpoint blocking, guaranteeing
+       that all constituent parts of a decomposed workload are successfully
+       processed before rehydration operations commence.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-krickert-pipestream-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-krickert-pipestream-02
+    docidentifier:
+    - content: draft-krickert-pipestream-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-krickert-pipestream-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

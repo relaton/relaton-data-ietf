@@ -1,0 +1,100 @@
+---
+id: draftguptaemueapwsim01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'EAP-WSIM: SIM-Based EAP Authentication for Enterprise Wi-Fi Using the
+    MILENAGE-ML-KEM-FWD Construction'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gupta-emu-eap-wsim-01
+docidentifier:
+- content: draft-gupta-emu-eap-wsim
+  type: Internet-Draft
+- content: draft-gupta-emu-eap-wsim-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gupta-emu-eap-wsim
+date:
+- type: published
+  at: '2026-07-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Praveen
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Gupta
+      completename:
+        language: en
+        content: Praveen Gupta
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: MobileStack, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Enterprise Wi-Fi networks authenticate devices using enterprise
+       credentials and provisioning policies that are entirely independent
+       of MNO subscriber identity.  As a result, MNO application traffic on
+       enterprise Wi-Fi is completely anonymous at the Wi-Fi layer: the
+       enterprise cannot identify MNO subscribers, apply per-subscriber QoS,
+       or support fast BSS transitions for VoWiFi continuity.
+
+       This document specifies EAP-WSIM, an evolutionary enhancement of EAP-
+       AKA' (RFC 9048) that enables MNO devices to authenticate to
+       enterprise Wi-Fi using their existing SIM credential (WSIM-Card)
+       without contacting the MNO backend during authentication.  A WSIM-
+       Authentication Server (WSIM-AS) within the enterprise Wi-Fi
+       infrastructure holds MNO-provisioned MASTER KEY material in tamper-
+       resistant security hardware.  Per-subscriber MILENAGE key material is
+       derived on-demand from the MASTER KEY using the device's IMSI --
+       identical in principle to MNO SIM personalization -- entirely within
+       the security hardware boundary.  No per-subscriber key provisioning
+       at the WSIM-AS is required.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gupta-emu-eap-wsim-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gupta-emu-eap-wsim-00
+    docidentifier:
+    - content: draft-gupta-emu-eap-wsim-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gupta-emu-eap-wsim-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

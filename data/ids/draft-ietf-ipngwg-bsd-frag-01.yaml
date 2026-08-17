@@ -1,0 +1,84 @@
+---
+id: draftietfipngwgbsdfrag01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Forcing Fragmentation to Network MTU
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-ipngwg-bsd-frag-01
+docidentifier:
+- content: draft-ietf-ipngwg-bsd-frag
+  type: Internet-Draft
+- content: draft-ietf-ipngwg-bsd-frag-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-ipngwg-bsd-frag
+date:
+- type: published
+  at: '1998-01-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mark
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: M. P.
+      surname:
+        language: en
+        content: Andrews
+      completename:
+        language: en
+        content: Mark P. Andrews
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CSIRO
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>There exists a class of applications which cannot accept Path\n           MTU
+    discovery [RFC-1981].  This is recommended to be turned on\n           by default
+    for IPv6 [IPV6-SPEC-V2, 4.5, 5].  This document\n           describes an extension
+    to the BSD API [RFC-2133] to inform the\n           kernel when it should be fragmenting
+    at the network MTU rather\n           than trying to discover the path MTU.\n
+    \n           Path MTU discovery works well when there is a stream of data.\n           However
+    for distributed servers sending small answers larger\n           than the network
+    MTU to many clients the lack of fragmentation\n           in intermediate nodes
+    is anathema.\n \n           RFC-1981 Section 5.6 recommends that a system utility
+    be\n           provided to:\n \n           - Specify that Path MTU Discovery not
+    be done on a given path.\n\n \n           - Change the PMTU value associated with
+    a given path.\n \n           This documents specifies how to do the same at the
+    application\n           level to a individual socket.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-ipngwg-bsd-frag-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

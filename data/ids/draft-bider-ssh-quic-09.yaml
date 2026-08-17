@@ -1,0 +1,92 @@
+---
+id: draftbidersshquic09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: QUIC-based UDP Transport for Secure Shell (SSH)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bider-ssh-quic-09
+docidentifier:
+- content: draft-bider-ssh-quic
+  type: Internet-Draft
+- content: draft-bider-ssh-quic-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.bider-ssh-quic
+date:
+- type: published
+  at: '2020-12-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: denis
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: bider
+      completename:
+        language: en
+        content: denis bider
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Bitvise Limited
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Secure Shell protocol (SSH) [RFC4251] is widely used for purposes
+       including secure remote administration, file transfer using SFTP and
+       SCP, and encrypted tunneling of TCP connections.  Because it is based
+       on TCP, SSH suffers similar problems as motivate the HTTP protocol to
+       transition to UDP-based QUIC [QUIC].  These include: unauthenticated
+       network intermediaries can trivially disconnect SSH sessions; SSH
+       connections are lost when mobile clients change IP addresses;
+       performance limitations in OS-based TCP stacks; many round-trips to
+       establish a connection; duplicate flow control on the level of the
+       connection as well as channels.  This memo specifies SSH key exchange
+       over UDP and leverages QUIC to provide a UDP-based transport.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-bider-ssh-quic-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bider-ssh-quic-08
+    docidentifier:
+    - content: draft-bider-ssh-quic-08
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-bider-ssh-quic-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

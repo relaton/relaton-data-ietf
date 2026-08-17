@@ -1,0 +1,88 @@
+---
+id: drafthuitemaquicmpathexplicit00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Explicit QUIC Path-ID extension
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-huitema-quic-mpath-explicit-00
+docidentifier:
+- content: draft-huitema-quic-mpath-explicit
+  type: Internet-Draft
+- content: draft-huitema-quic-mpath-explicit-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.huitema-quic-mpath-explicit
+date:
+- type: published
+  at: '2023-11-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christian
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Huitema
+      completename:
+        language: en
+        content: Christian Huitema
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Private Octopus Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The work on QUIC multipath has almost converged, but we are still
+       debating how to identify paths.  The draft multipath version 06
+       identifies paths explicitly using the sequence number of the
+       Connection Identifier used for sending packets on the path.  The WG
+       is considering an alternate proposal in which the path ID is
+       explicit.  In order to compare the two solutions, we propose here an
+       extension to the multipath draft allowing endpoints to negotiate the
+       use of explicit sequence numbers.  When the extension is negotiated,
+       endpoints announce new connection identifiers using a new
+       MP_CONNECTION_ID frame, which carries the parameters of the
+       NEW_CONNECTION_ID plus a path ID.  This path ID is used instead of
+       the CID sequence number to identify packet number spaces, to create
+       encryption nonces, to identify paths in MP_ACK, MP_ABANDON,
+       MP_AVAILABLE and MP_STANBY frames, and to perform the logic
+       associated with path creation, path CID rotation, and NAT rebinding.
+       The draft analyzes the pros and cons of using this extension.  After
+       experimentation and analysis, we expect that this extension will be
+       either absorbed into a new version of the QUIc multipath draft, or
+       abandoned.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-huitema-quic-mpath-explicit-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

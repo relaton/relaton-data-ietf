@@ -1,0 +1,53 @@
+---
+id: draftpanipsecmeantireplaynotification
+schema_version: v1.5.6
+formattedref:
+  content: draft-pan-ipsecme-anti-replay-notification
+title:
+- language: en
+  script: Latn
+  content: IKEv2 Support for Anti-Replay Status Notification
+docidentifier:
+- content: draft-pan-ipsecme-anti-replay-notification
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Although RFC 4302 and RFC 4303 don't prohibit using Extended Sequence
+       Number (ESN) when the anti-replay function is not enabled, many IPsec
+       implementations require ESN to be used only with anti-replay.
+       Therefore, failing to negotiate the use of ESN when the anti-replay
+       is disabled will cause the sequence numbers to exhaust rapidly in
+       high-traffic-volume scenarios, leading to the frequent rekey of Child
+       SAs.
+
+       This document defines the REPLAY_PROT_AND_ESN_STATUS Notify Message
+       Status Type Payload in the Internet Key Exchange Protocol Version 2
+       (IKEv2) to inform the peer of its replay protection status and
+       capability of using ESN without anti-replay when creating the Child
+       SAs, to address the above problem.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-pan-ipsecme-anti-replay-notification-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pan-ipsecme-anti-replay-notification-00
+    docidentifier:
+    - content: draft-pan-ipsecme-anti-replay-notification-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-pan-ipsecme-anti-replay-notification-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pan-ipsecme-anti-replay-notification-01
+    docidentifier:
+    - content: draft-pan-ipsecme-anti-replay-notification-01
+      type: Internet-Draft
+      primary: true

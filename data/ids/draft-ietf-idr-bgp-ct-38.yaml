@@ -1,0 +1,139 @@
+---
+id: draftietfidrbgpct38
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Classful Transport Planes
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-38
+docidentifier:
+- content: draft-ietf-idr-bgp-ct
+  type: Internet-Draft
+- content: draft-ietf-idr-bgp-ct-38
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-bgp-ct
+date:
+- type: published
+  at: '2025-02-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kaliraj
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Vairavakkalai
+      completename:
+        language: en
+        content: Kaliraj Vairavakkalai
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Natrajan
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Venkataraman
+      completename:
+        language: en
+        content: Natrajan Venkataraman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks, Inc.
+version:
+- content: '38'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a mechanism referred to as "Intent Driven
+       Service Mapping".  The mechanism uses BGP to express intent based
+       association of overlay routes with underlay routes having specific
+       Traffic Engineering (TE) characteristics satisfying a certain Service
+       Level Agreement (SLA).  This is achieved by defining new constructs
+       to group underlay routes with sufficiently similar TE characteristics
+       into identifiable classes (called "Transport Classes"), that overlay
+       routes use as an ordered set to resolve reachability (Resolution
+       Schemes) towards service endpoints.  These constructs can be used,
+       for example, to realize the "IETF Network Slice" defined in TEAS
+       Network Slices framework.
+
+       Additionally, this document specifies protocol procedures for BGP
+       that enable dissemination of service mapping information in a network
+       that may span multiple cooperating administrative domains.  These
+       domains may be administered either by the same provider or by closely
+       coordinating providers.  A new BGP address family that leverages RFC
+       4364 ("BGP/MPLS IP Virtual Private Networks (VPNs)") procedures and
+       follows RFC 8277 ("Using BGP to Bind MPLS Labels to Address
+       Prefixes") NLRI encoding is defined to enable each advertised
+       underlay route to be identified by its class.  This new address
+       family is called "BGP Classful Transport", a.k.a., BGP CT.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-bgp-ct-37
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-37
+    docidentifier:
+    - content: draft-ietf-idr-bgp-ct-37
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-bgp-ct-39
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-39
+    docidentifier:
+    - content: draft-ietf-idr-bgp-ct-39
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-bgp-ct-38
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

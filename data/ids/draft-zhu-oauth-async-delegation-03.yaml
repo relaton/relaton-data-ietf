@@ -1,0 +1,143 @@
+---
+id: draftzhuoauthasyncdelegation03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Delegated Refresh Tokens for OAuth 2.0 Token Exchange
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-03
+docidentifier:
+- content: draft-zhu-oauth-async-delegation
+  type: Internet-Draft
+- content: draft-zhu-oauth-async-delegation-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhu-oauth-async-delegation
+date:
+- type: published
+  at: '2026-07-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Larry
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Zhu
+      completename:
+        language: en
+        content: Larry Zhu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Atlassian
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zate
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Berg
+      completename:
+        language: en
+        content: Zate Berg
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Atlassian
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>OAuth 2.0 Token Exchange permits an authorization server to issue a
+       refresh token when a client needs continued access after the original
+       credential is no longer valid.  However, RFC 8693 does not define how
+       a refresh token issued by a delegated Token Exchange preserves the
+       subject, actor chain, resource restrictions, or other delegated
+       authorization state.
+
+       This specification profiles refresh tokens issued by delegated OAuth
+       2.0 Token Exchange for asynchronous and long-running workflows.  It
+       defines a Token Exchange request signal by which a client requests
+       delegated continuation, together with preservation of subject and
+       actor relationships, client and actor binding, resource confinement,
+       scope monotonicity, authorization re-evaluation, rotation, task-
+       scoped revocation, and a bounded delegation lifetime.  The common
+       signal and semantics enable autonomous agents and other product
+       components to interoperate with independently implemented
+       authorization servers across trust domains.
+
+       Because a client generally cannot determine the effective lifetime of
+       an opaque refresh token, this profile requires the client to request
+       continuation only for an identified asynchronous task and to promptly
+       revoke the refresh-token family when that task reaches a terminal
+       state.  These requirements reduce unnecessary issuance and limit the
+       period in which residual delegated authority can be abused.  The
+       profile uses the existing OAuth refresh token response and grant and
+       introduces no new token type or grant type.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-02
+    docidentifier:
+    - content: draft-zhu-oauth-async-delegation-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-04
+    docidentifier:
+    - content: draft-zhu-oauth-async-delegation-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhu-oauth-async-delegation-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,116 @@
+---
+id: draftgravitgevp02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Gravit Epistemic Verification Protocol (GEVP) v0.1
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gravit-gevp-02
+docidentifier:
+- content: draft-gravit-gevp
+  type: Internet-Draft
+- content: draft-gravit-gevp-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gravit-gevp
+date:
+- type: published
+  at: '2026-07-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Konviser
+      completename:
+        language: en
+        content: Dr. Alex Konviser
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Gravit Open Network Foundation
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Gravit Epistemic Verification Protocol (GEVP) defines minimal data
+       types and APIs for autonomous agents and human-machine systems to
+       achieve epistemic convergence without centralized truth arbiters.
+       GEVP is transport-agnostic, blockchain-agnostic, and model-agnostic.
+       This document defines a parameterized cost model where C_validation
+       is the cost to verify a Claim's provenance and signatures, and
+       C_manipulation is the estimated cost to forge a quorum of
+       attestations under GQRVP.  The protocol enforces the engineering
+       invariant C_manipulation &gt; C_validation for all accepted Claims.
+
+       This document was previously published as draft-gravit-vcp-00 and -01
+       under the acronym VCP (Verifiable Convergence Protocol).  To avoid
+       collision with VeritasChain Protocol (VCP) defined in draft-kamimura-
+       scitt-vcp [KAMIMURA-VCP], which is a SCITT profile for financial
+       trading audit trails first published December 2025, the acronym is
+       changed to GEVP from -02 onward.  The two protocols are unrelated and
+       address different domains.  The former VCP acronym is deprecated and
+       MUST NOT be used for this protocol.
+
+       This revision (-02) addresses feedback on -01: pins reproducible
+       trace commits, provides full confusion matrix with false positive
+       rate, clarifies that cost model and resilience bound are heuristic
+       parameterized estimates (not formal derivations from MWU regret
+       bounds), defines exact SCITT Signed Statement, Receipt, and
+       Transparency Service mappings, separates SCITT authenticity
+       guarantees from epistemic truth, and adds Appendix B on Godel
+       completeness boundary.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gravit-gevp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gravit-gevp-01
+    docidentifier:
+    - content: draft-gravit-gevp-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-gravit-gevp-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gravit-gevp-03
+    docidentifier:
+    - content: draft-gravit-gevp-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gravit-gevp-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

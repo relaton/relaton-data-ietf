@@ -1,0 +1,107 @@
+---
+id: draftdicksondpriveadotauth02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Authenticated DNS over TLS to Authoritative Servers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dickson-dprive-adot-auth-02
+docidentifier:
+- content: draft-dickson-dprive-adot-auth
+  type: Internet-Draft
+- content: draft-dickson-dprive-adot-auth-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dickson-dprive-adot-auth
+date:
+- type: published
+  at: '2021-09-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Brian
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Dickson
+      completename:
+        language: en
+        content: Brian Dickson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: GoDaddy
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This Internet Draft proposes a mechanism for DNS resolvers to
+       discover support for TLS transport to authoritative DNS servers, to
+       validate this indication of support, and to authenticate the TLS
+       certificates involved.
+
+       This requires that the name server _names_ are in a DNSSEC signed
+       zone.
+
+       This also requires that the delegation of the zone served is
+       protected by [I-D.dickson-dnsop-ds-hack], since the NS names are the
+       keys used for discovery of TLS transport support.
+
+       Additional recommendations relate to use of wildcard records for
+       efficiency and scalability, and new EDNS options to improve round
+       trips and signaling between clients and resolvers.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dickson-dprive-adot-auth-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dickson-dprive-adot-auth-01
+    docidentifier:
+    - content: draft-dickson-dprive-adot-auth-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-dickson-dprive-adot-auth-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dickson-dprive-adot-auth-03
+    docidentifier:
+    - content: draft-dickson-dprive-adot-auth-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dickson-dprive-adot-auth-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

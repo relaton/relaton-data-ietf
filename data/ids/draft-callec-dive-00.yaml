@@ -1,0 +1,102 @@
+---
+id: draftcallecdive00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Domain-based Integrity Verification Enforcement (DIVE) Version 0.1
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-callec-dive-00
+docidentifier:
+- content: draft-callec-dive
+  type: Internet-Draft
+- content: draft-callec-dive-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.callec-dive
+date:
+- type: published
+  at: '2026-04-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mateo
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: M. F.
+      surname:
+        language: en
+        content: Callec
+      completename:
+        language: en
+        content: Mateo Florian Callec
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Domain-based Integrity Verification Enforcement (DIVE) version 0.1 is
+       an application-layer protocol that provides cryptographic integrity
+       and authenticity verification of web resources by leveraging the
+       Domain Name System Security Extensions (DNSSEC) as an independent
+       verification channel.
+
+       DIVE operates as an additional security layer above HTTP and HTTPS.
+       Public keys and policy configuration are published as DNS TXT records
+       protected by DNSSEC, while HTTP response headers carry per-resource
+       cryptographic signatures.  A client implementing DIVE verifies each
+       covered resource against the corresponding DNS-published public key
+       before accepting it.  An attacker must therefore compromise both the
+       DNS infrastructure and the origin server simultaneously in order to
+       deliver a tampered resource to a DIVE-compliant client.
+
+       This document defines the DNS record format, the HTTP header format,
+       the client verification algorithm, the reporting mechanism, and the
+       operational recommendations for the DIVE 0.1 protocol.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-callec-dive-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-callec-dive-01
+    docidentifier:
+    - content: draft-callec-dive-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-callec-dive-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,92 @@
+---
+id: draftvicenteoauthapm02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Authorization Posture Mechanism (APM): Per-Transaction Consistency for
+    OAuth 2.0'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vicente-oauth-apm-02
+docidentifier:
+- content: draft-vicente-oauth-apm
+  type: Internet-Draft
+- content: draft-vicente-oauth-apm-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vicente-oauth-apm
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Brian
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Vicente
+      completename:
+        language: en
+        content: Brian Vicente
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sanctum SecOps LLC
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes the Authorization Posture Mechanism (APM), a
+       method by which an OAuth 2.0 [RFC6749] authorization server, or a
+       resource server acting on its behalf, re-evaluates the mutual
+       consistency of three bound factors -- the client certificate, the
+       access token, and the device posture -- on a per-request basis for
+       privileged operations, rather than only at session establishment.
+       When re-evaluated posture degrades relative to the posture under
+       which the token was issued, APM defines deterministic, least-
+       privilege Graduated Outcomes including scope reduction and method
+       restriction, rather than a binary allow or deny.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-vicente-oauth-apm-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vicente-oauth-apm-01
+    docidentifier:
+    - content: draft-vicente-oauth-apm-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vicente-oauth-apm-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

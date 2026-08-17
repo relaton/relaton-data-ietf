@@ -1,0 +1,484 @@
+---
+id: draftietfrolldaoprojection
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-roll-dao-projection
+title:
+- language: en
+  script: Latn
+  content: Root-initiated Routing State in RPL
+docidentifier:
+- content: draft-ietf-roll-dao-projection
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Routing Protocol for Low-Power and Lossy Networks (RPL, RFC 6550)
+       enables data packet routing along a Destination-Oriented Directed
+       Acyclic Graph . However, the default route establishment mechanism
+       relies on hop-by-hop forwarding along the DODAG, which may not always
+       provide optimal routing efficiency.  This document introduces the
+       concept of DAO Projection, a mechanism that allows a RPL root or an
+       external controller to install optimized routes within the RPL
+       domain.  DAO Projections enable the creation of optimized unicast or
+       multicast routes that do not strictly follow the DODAG structure,
+       thereby improving routing efficiency, reliability, availability, and
+       resource utilization in the RPL domain.  The document specifies two
+       types of projected routes—storing mode and non-storing mode
+       projections—and outlines the signaling procedures necessary to
+       establish, maintain, and remove these routes.  This document extends
+       RFC 6550, RFC 6553, and RFC 8138.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-00
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-01
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-02
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-03
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-04
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-05
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-06
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-07
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-08
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-09
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-10
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-11
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-12
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-13
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-13
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-14
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-14
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-15
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-15
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-16
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-16
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-16
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-17
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-17
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-17
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-18
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-18
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-18
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-19
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-19
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-20
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-20
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-21
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-21
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-21
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-22
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-22
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-22
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-23
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-23
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-23
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-24
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-24
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-24
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-25
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-25
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-26
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-26
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-26
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-27
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-27
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-27
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-28
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-28
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-28
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-29
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-29
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-29
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-30
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-30
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-30
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-31
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-31
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-31
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-32
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-32
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-32
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-33
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-33
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-33
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-34
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-34
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-34
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-35
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-35
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-35
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-36
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-36
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-36
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-37
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-37
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-37
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-38
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-38
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-38
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-39
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-39
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-39
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-roll-dao-projection-40
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-roll-dao-projection-40
+    docidentifier:
+    - content: draft-ietf-roll-dao-projection-40
+      type: Internet-Draft
+      primary: true

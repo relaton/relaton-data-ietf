@@ -1,0 +1,198 @@
+---
+id: draftwangtlsserviceaffinity05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Service Affinity Solution based on Transport Layer Security (TLS)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-05
+docidentifier:
+- content: draft-wang-tls-service-affinity
+  type: Internet-Draft
+- content: draft-wang-tls-service-affinity-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wang-tls-service-affinity
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Wei Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Aijun
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Aijun Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: 汪宗斌
+      completename:
+        language: en
+        content: 汪宗斌
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Beijing Infosec Technologies Co., LTD.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mohit
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Sahni
+      completename:
+        language: en
+        content: Mohit Sahni
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Palo Alto Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ketul
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Sheth
+      completename:
+        language: en
+        content: Ketul Sheth
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Palo Alto Networks
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This draft proposes a service affinity solution between client and
+       server based on Transport Layer Security (TLS).  It defines a minimal
+       extension to TLS 1.3 by which a server instance can authorize a
+       client to resume an established session on a different instance of
+       the same service (for example, another node of a load-balanced
+       cluster) and request, in band, that the client do so.  The relocation
+       authorization is carried inside the server's own session ticket, so
+       it inherits the security properties of TLS 1.3 ticket-based
+       resumption.  The relocation target is an opaque value that either
+       directly carries the switchover address (for example, an IP address
+       and port) or is an identifier resolved by the application or control
+       plane.
+
+       This document also introduces a Reliable Framing Layer that operates
+       above the TLS record layer to provide message framing, sequence
+       numbering, acknowledgment tracking, and automatic retransmission.
+       The Framing Layer ensures zero application data loss during TLS
+       session migration by buffering unacknowledged data frames and
+       retransmitting them to the new server endpoint after migration
+       completes.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-wang-tls-service-affinity-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-04
+    docidentifier:
+    - content: draft-wang-tls-service-affinity-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wang-tls-service-affinity-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

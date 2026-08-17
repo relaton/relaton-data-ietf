@@ -1,0 +1,101 @@
+---
+id: draftmartinretryoveripv604
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: HTTP Signaling of Planned IPv4 Unavailability
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-martin-retry-over-ipv6-04
+docidentifier:
+- content: draft-martin-retry-over-ipv6
+  type: Internet-Draft
+- content: draft-martin-retry-over-ipv6-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.martin-retry-over-ipv6
+date:
+- type: published
+  at: '2026-07-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Franck
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Martin
+      completename:
+        language: en
+        content: Franck Martin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Peachymango.org
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>As operators transition services to IPv6-only, planned IPv4 outages
+       help identify remaining dependencies before permanent decommission.
+       Such outages must be measurable, reversible, and understandable to
+       end users.  This document defines HTTP signaling for an intentional,
+       often time-bounded IPv4 outage: the existing 503 Service Unavailable
+       status code together with the mandatory Retry-Over-IPv6 response
+       header field (and optional related fields) that instruct aware
+       clients to retry over IPv6 after closing the IPv4 connection, and
+       allow clients to confirm successful IPv6 recovery via an optional
+       correlation token so operators can distinguish soft failures from
+       hard failures in centralized logs.  Machine-readable response bodies
+       MAY use Problem Details (RFC 9457) with a registered problem type
+       URI.  The mechanism supports staged enterprise rollouts, internal
+       HTTP services, and permanent IPv6-only migration; coordinated public
+       events (for example, 6/6 drills) remain possible with advance notice.
+       The primary intended deployment is operator-controlled environments
+       where provider and users share operational responsibility.  Legacy
+       clients that do not implement this specification treat the response
+       as ordinary service unavailability and MAY use the response body for
+       human-readable guidance.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-martin-retry-over-ipv6-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-martin-retry-over-ipv6-03
+    docidentifier:
+    - content: draft-martin-retry-over-ipv6-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-martin-retry-over-ipv6-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

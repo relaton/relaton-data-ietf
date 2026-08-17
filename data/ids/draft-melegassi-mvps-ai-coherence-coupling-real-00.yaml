@@ -1,0 +1,102 @@
+---
+id: draftmelegassimvpsaicoherencecouplingreal00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Real-World Measurement of the Infrastructure-Cognitive Coupling Matrix
+    R_cross: Closing the MVPS AI-Coherence Production Conjecture (IC9.1)'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-melegassi-mvps-ai-coherence-coupling-real-00
+docidentifier:
+- content: draft-melegassi-mvps-ai-coherence-coupling-real
+  type: Internet-Draft
+- content: draft-melegassi-mvps-ai-coherence-coupling-real-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.melegassi-mvps-ai-coherence-coupling-real
+date:
+- type: published
+  at: '2026-06-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leonardo
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: L. M.
+      surname:
+        language: en
+        content: Costa
+      completename:
+        language: en
+        content: Leonardo Melegassi Costa
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Catellix
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The MVPS AI-Coherence framework [I-D.melegassi-mvps-ai-coherence]
+       defines an infrastructure-cognitive coupling matrix R_cross =
+       Sigma_net^{-1/2} Sigma_cross Sigma_AI^{-1/2} and proves, in
+       simulation, that a non-zero R_cross is the necessary and sufficient
+       condition for the joint network-AI anomaly space to carry detection
+       information that neither standalone monitor can recover.  That
+       document leaves two items open: (a) work item IC9.1, a statistical
+       hypothesis test on R_cross over an empirical joint covariance, and
+       (b) the CONJECTURE that E[R_cross] != 0 in production AI-on-network
+       deployments.
+
+       This companion document closes both.  It specifies a permutation-
+       based hypothesis test for the normalized cross-block correlation
+       estimator, reports the FIRST real-wire measurement of R_cross on a
+       production large-language-model serving path (n = 100 ticks,
+       DeepInfra), and documents a pure-arithmetic reference implementation
+       embedded in an operational system that reproduces the measurement
+       number-for-number.  The strongest coupling, latency_ms &lt;-&gt; output
+       tokens, is r = +0.446 (permutation p = 0.0005) on the full series
+       and survives the same-model confound control at r = +0.343
+       (p = 0.0135) within a single serving regime.  The Frobenius norm
+       ||R_cross||_F = 0.469 (full) / 0.443 (intra-regime) exceeds the
+       non-triviality floor of 0.05, confirming the production conjecture
+       for this deployment.
+
+       The document also specifies how the measured coupling and the
+       per-engine Mahalanobis distance D^2 are consumed by an operational
+       Wald Sequential Probability Ratio Test (SPRT) as an additive
+       evidence channel for surgical sub-environment bifurcation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-melegassi-mvps-ai-coherence-coupling-real-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

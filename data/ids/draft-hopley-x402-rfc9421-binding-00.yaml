@@ -1,0 +1,109 @@
+---
+id: drafthopleyx402rfc9421binding00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RFC 9421 HTTP Message Signatures Binding for x402 Payment Flows
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-rfc9421-binding-00
+docidentifier:
+- content: draft-hopley-x402-rfc9421-binding
+  type: Internet-Draft
+- content: draft-hopley-x402-rfc9421-binding-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hopley-x402-rfc9421-binding
+date:
+- type: published
+  at: '2026-06-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: H. C.
+      surname:
+        language: en
+        content: Mr
+      completename:
+        language: en
+        content: MR CHRISTOPHER HOPLEY
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AlgoVoi
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the normative binding of RFC 9421 (HTTP
+       Message Signatures) and RFC 9530 (Digest Fields for HTTP) to the
+       x402-foundation/x402 challenge/response payment flow.  It defines the
+       minimum covered-components set for an x402 challenge response and a
+       payment proof submission, the RFC 9530 Content-Digest discipline,
+       keyid resolution patterns, and the multi-hop proxy-chain survival
+       property that the x402 transport requires.
+
+       This binding is complementary to the existing http-message-signatures
+       extension in the x402 specification, which specifies agent identity
+       and registration (registrationUrl, signatureSchemes, tags).  This
+       document specifies the normative binding: which components MUST be
+       covered, how Content-Digest is handled, and how signatures survive
+       multi-hop proxy chains.  The two compose cleanly in a deployment that
+       uses both.
+
+       A reference implementation is provided as algovoi-rfc9421-verifier on
+       PyPI and npm (Apache 2.0), with Python and TypeScript byte-for-byte
+       parity, cross-validated against external fixture sets.
+
+       This document is an Independent Submission filed per RFC 4846 and is
+       intended for publication as Informational.  It is not an IETF
+       Standards Track document, does not represent IETF community
+       consensus, and has not been subject to review by an IETF Working
+       Group.  Change control resides with the document author.  The binding
+       specified is one approach among possible alternatives; implementers
+       may choose this approach, alternative approaches, or hybrid
+       approaches as appropriate to their requirements.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-hopley-x402-rfc9421-binding-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-rfc9421-binding-01
+    docidentifier:
+    - content: draft-hopley-x402-rfc9421-binding-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hopley-x402-rfc9421-binding-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

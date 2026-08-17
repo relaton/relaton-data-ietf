@@ -1,0 +1,90 @@
+---
+id: draftferrohttpbisapertoidsig02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'ApertoID-Signature: HTTP Request Signing for AI Agent Identity'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ferro-httpbis-apertoid-sig-02
+docidentifier:
+- content: draft-ferro-httpbis-apertoid-sig
+  type: Internet-Draft
+- content: draft-ferro-httpbis-apertoid-sig-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ferro-httpbis-apertoid-sig
+date:
+- type: published
+  at: '2026-08-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrea
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ferro
+      completename:
+        language: en
+        content: Andrea Ferro
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ApertoID
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the ApertoID-Signature HTTP header field, which
+       enables AI agents to cryptographically prove their identity on each
+       HTTP request.  The agent signs the request method, target URL, body
+       hash, and identity metadata using an Ed25519 private key whose
+       corresponding public key is published in DNS via the ApertoID
+       protocol [APERTOID-DNS].  The mechanism provides request-level
+       identity verification, action binding (the signature is tied to the
+       specific method and URL), and replay protection via timestamps and
+       nonces.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ferro-httpbis-apertoid-sig-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-httpbis-apertoid-sig-01
+    docidentifier:
+    - content: draft-ferro-httpbis-apertoid-sig-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ferro-httpbis-apertoid-sig-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

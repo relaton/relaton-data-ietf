@@ -1,0 +1,93 @@
+---
+id: drafthopleyx402retentionchain00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Self-Verifiable Retention Chain for Payment Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-00
+docidentifier:
+- content: draft-hopley-x402-retention-chain
+  type: Internet-Draft
+- content: draft-hopley-x402-retention-chain-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hopley-x402-retention-chain
+date:
+- type: published
+  at: '2026-06-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: H. C.
+      surname:
+        language: en
+        content: Mr
+      completename:
+        language: en
+        content: MR CHRISTOPHER HOPLEY
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AlgoVoi
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a cryptographic construction, the Retention
+       Chain Reference (retention_chain_ref), that enables self-verifiable
+       audit chains linking payment receipts without requiring external
+       infrastructure.  Each receipt in a sequence carries a chain reference
+       computed as the SHA-256 digest of the JSON Canonicalization Scheme
+       (JCS, RFC 8785) canonical form of a fixed four-field preimage.  Any
+       party holding any contiguous or non-contiguous subset of receipts can
+       independently verify chain integrity by recomputing the reference
+       from locally held data.  No AlgoVoi infrastructure, no registry
+       lookup, and no network access are required.  The construction
+       satisfies the transaction recording and audit trail obligations of
+       MiCA Article 80, DORA Article 14, and AMLR Article 56.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-hopley-x402-retention-chain-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-01
+    docidentifier:
+    - content: draft-hopley-x402-retention-chain-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hopley-x402-retention-chain-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

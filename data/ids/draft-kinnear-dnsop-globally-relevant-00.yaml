@@ -1,0 +1,129 @@
+---
+id: draftkinneardnsopgloballyrelevant00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Globally Relevant HTTPS RRs
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kinnear-dnsop-globally-relevant-00
+docidentifier:
+- content: draft-kinnear-dnsop-globally-relevant
+  type: Internet-Draft
+- content: draft-kinnear-dnsop-globally-relevant-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kinnear-dnsop-globally-relevant
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Eric
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Kinnear
+      completename:
+        language: en
+        content: Eric Kinnear
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Apple Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nidhi
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Jaju
+      completename:
+        language: en
+        content: Nidhi Jaju
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ian
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Swett
+      completename:
+        language: en
+        content: Ian Swett
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DNS answers for SVCB and HTTPS resource records are typically treated
+       as scoped to the network on which they were obtained.  This requires
+       clients to re-resolve DNS when changing network attachments, adding
+       latency to connection establishment.  This document defines a new
+       SvcParamKey, "globally-relevant", for use in SVCB and HTTPS DNS
+       resource records as defined in [RFC9460].  When present, this boolean
+       flag indicates that the service binding parameters in the record are
+       valid regardless of the client's network attachment point.  Clients
+       that observe this flag can reuse cached SVCB and HTTPS records across
+       network changes, subject to normal TTL expiry.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kinnear-dnsop-globally-relevant-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

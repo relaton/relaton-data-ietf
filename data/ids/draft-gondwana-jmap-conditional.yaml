@@ -1,0 +1,42 @@
+---
+id: draftgondwanajmapconditional
+schema_version: v1.5.6
+formattedref:
+  content: draft-gondwana-jmap-conditional
+title:
+- language: en
+  script: Latn
+  content: JMAP Conditional Set
+docidentifier:
+- content: draft-gondwana-jmap-conditional
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The JMAP base protocol ([JMAP-CORE]) provides the Foo/set method for
+       creating, updating, and destroying objects.  It offers a single
+       concurrency control, the "ifInState" argument, which guards an entire
+       object type: if any object of that type has changed, the whole method
+       is rejected.
+
+       This extension adds a finer, per-object conditional mechanism.  A
+       client may require that an individual update or destroy proceed only
+       if the target object still matches a set of expected property values,
+       expressed using the JMAP PatchObject already defined for updates.
+       This provides optimistic concurrency control scoped to a single
+       object — the equivalent of an HTTP "If-Match" precondition — for any
+       JMAP data type.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gondwana-jmap-conditional-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gondwana-jmap-conditional-00
+    docidentifier:
+    - content: draft-gondwana-jmap-conditional-00
+      type: Internet-Draft
+      primary: true

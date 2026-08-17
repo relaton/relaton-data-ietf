@@ -1,0 +1,106 @@
+---
+id: draftchuangmailinglistmodifications02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Tolerating Mailing-List Modifications
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chuang-mailing-list-modifications-02
+docidentifier:
+- content: draft-chuang-mailing-list-modifications
+  type: Internet-Draft
+- content: draft-chuang-mailing-list-modifications-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chuang-mailing-list-modifications
+date:
+- type: published
+  at: '2023-08-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Chuang
+      completename:
+        language: en
+        content: Wei Chuang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google, Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Mailing-lists distribute email to multiple recipients by forwarding
+       and potentially modifying messages to document the distribution to
+       the recipients.  Unfortunately forwarding breaks SPF (RFC7208)
+       authentication and message modification breaks DKIM (RFC6376)
+       authentication.  This document is based on ARC (RFC8617) to provide a
+       framework to describe forwarding with extensions to tolerate common
+       mailing-list message modifications.  This specification characterizes
+       the mailing-list transforms such that a receiver can reverse them to
+       enable digital signatures verification and attribution of the message
+       content.  These message modifications are: 1) adding a description
+       string to the Subject header, 2) rewriting the From header, 3)
+       removing the original DKIM-Signature and 4) appending a footer to the
+       message body.  This also specifies those modifications for the
+       purpose of making them reversible.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-chuang-mailing-list-modifications-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-mailing-list-modifications-01
+    docidentifier:
+    - content: draft-chuang-mailing-list-modifications-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-chuang-mailing-list-modifications-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-mailing-list-modifications-03
+    docidentifier:
+    - content: draft-chuang-mailing-list-modifications-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chuang-mailing-list-modifications-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

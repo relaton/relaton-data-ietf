@@ -1,0 +1,51 @@
+---
+id: draftdellaertoauthapprovalbaseddcr
+schema_version: v1.5.6
+formattedref:
+  content: draft-dellaert-oauth-approval-based-dcr
+title:
+- language: en
+  script: Latn
+  content: OAuth 2.0 Approval-Based Dynamic Client Registration
+docidentifier:
+- content: draft-dellaert-oauth-approval-based-dcr
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies an extension to the OAuth 2.0 Dynamic Client
+       Registration Protocol ([RFC7591]) that enables registration of a
+       client with an authorization server through an explicit approval step
+       performed by an approving party, typically the user running the
+       client, without requiring the client to possess an Initial Access
+       Token (IAT) beforehand.  The client submits its desired metadata to
+       the existing client registration endpoint and signals that it can
+       accept a deferred, approval-based registration.  When the
+       authorization server requires approval, it defers completion of the
+       registration and returns a 202 (Accepted) response carrying a
+       registration code and a verification challenge.  The client polls the
+       same registration endpoint, presenting the registration code.  The
+       approving party, authenticated to the authorization server through a
+       mechanism of the authorization server's choosing, responds to the
+       verification challenge and approves or denies the registration.  On
+       approval, a subsequent poll returns a registered client identifier
+       and, where applicable, a client secret.
+
+       This extension preserves the authorization server operator's ability
+       to require an authenticated, policy-controlled approval for every new
+       client record, while removing the operational burden of issuing an
+       Initial Access Token out of band.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dellaert-oauth-approval-based-dcr-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dellaert-oauth-approval-based-dcr-00
+    docidentifier:
+    - content: draft-dellaert-oauth-approval-based-dcr-00
+      type: Internet-Draft
+      primary: true

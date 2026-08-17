@@ -1,0 +1,91 @@
+---
+id: draftmcguinnessoauthdomainauthorizedissuer00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: OAuth Domain-Authorized Issuer Trust Method
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-domain-authorized-issuer-00
+docidentifier:
+- content: draft-mcguinness-oauth-domain-authorized-issuer
+  type: Internet-Draft
+- content: draft-mcguinness-oauth-domain-authorized-issuer-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mcguinness-oauth-domain-authorized-issuer
+date:
+- type: published
+  at: '2026-07-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Karl
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: McGuinness
+      completename:
+        language: en
+        content: Karl McGuinness
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Domain-Authorized Issuer (DAI) Trust
+       Method: a subject_namespace_authorization Trust Method for the OAuth
+       Identity Assertion Trust Framework in which the owner of a subject
+       namespace (typically a DNS domain) publishes a policy listing the
+       OAuth authorization servers it authorizes to assert identities in
+       that namespace.  The mechanism uses the DNS-based authority-
+       publication pattern operators already deploy for CAA, MTA-STS, SPF,
+       and DKIM.  A Resource Authorization Server uses the published policy
+       to verify that an identity assertion's issuer is authorized for the
+       asserted subject namespace.
+
+       The lookup defined by this document is verifier-side: given an
+       identity assertion in hand, the Resource Authorization Server locates
+       the Subject Authority's issuer authorization policy.  Client-side
+       discovery of which Assertion Issuer to use before an assertion exists
+       is a separate use case and is deferred to future work.
+
+       This document also defines the Issuer Authorization Policy wire
+       format that the Trust Method consumes.  The parent trust framework
+       specification owns the generic Trust Policy document, Trust Method
+       category structure, cross-category combination rule, and Subject
+       Authority Determination concept.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mcguinness-oauth-domain-authorized-issuer-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,186 @@
+---
+id: draftietfdnsopnsrevalidation
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-dnsop-ns-revalidation
+title:
+- language: en
+  script: Latn
+  content: Delegation Revalidation by DNS Resolvers
+docidentifier:
+- content: draft-ietf-dnsop-ns-revalidation
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes an optional algorithm for the processing of
+       Name Server (NS) resource record (RR) sets (RRsets) during iterative
+       resolution, and describes the benefits and considerations of using
+       this approach.  When following a referral response from an
+       authoritative server to a child zone, DNS resolvers should explicitly
+       query the authoritative NS RRset at the apex of the child zone and
+       cache this in preference to the NS RRset on the parent side of the
+       zone cut.  The (A and AAAA) address RRsets in the additional section
+       from referral responses and authoritative NS answers for the names of
+       the NS RRset, should similarly be re-queried and used to replace the
+       entries with the lower trustworthiness ranking in cache.  Resolvers
+       should also periodically revalidate the delegation by re-querying the
+       parent zone at the expiration of the shortest TTL among the parent NS
+       RRset, the DS RRset (if present), and the child NS RRset.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-00
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-01
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-02
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-03
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-04
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-05
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-06
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-07
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-08
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-09
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-10
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-11
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-12
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-ns-revalidation-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-13
+    docidentifier:
+    - content: draft-ietf-dnsop-ns-revalidation-13
+      type: Internet-Draft
+      primary: true

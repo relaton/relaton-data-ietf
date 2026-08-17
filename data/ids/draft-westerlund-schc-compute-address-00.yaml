@@ -1,0 +1,109 @@
+---
+id: draftwesterlundschccomputeaddress00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SCHC Compute-Address Compression/Decompression Actions for Dynamically
+    Assigned IP Addresses
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-westerlund-schc-compute-address-00
+docidentifier:
+- content: draft-westerlund-schc-compute-address
+  type: Internet-Draft
+- content: draft-westerlund-schc-compute-address-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.westerlund-schc-compute-address
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Magnus
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Westerlund
+      completename:
+        language: en
+        content: Magnus Westerlund
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lorenzo
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Corneo
+      completename:
+        language: en
+        content: Lorenzo Corneo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines new Matching Operators (MOs) and Compression/
+       Decompression Actions (CDAs) for the Static Context Header
+       Compression and fragmentation (SCHC) framework defined in RFC 8724.
+       These extensions enable efficient compression of dynamically assigned
+       IP addresses, including IPv4 addresses assigned via DHCP, IPv6
+       prefixes learned through SLAAC or DHCPv6, IPv6 Interface Identifiers
+       (IIDs), and IPv6 temporary privacy addresses generated per RFC 8981.
+
+       The mechanism relies on both the compressor and decompressor sharing
+       knowledge of the set of addresses assigned to the device.  Addresses
+       are organized into deterministically sorted tables, allowing
+       compression to a small index value.  For temporary IPv6 addresses, a
+       synchronized generation algorithm enables compression to an epoch and
+       counter value.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-westerlund-schc-compute-address-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

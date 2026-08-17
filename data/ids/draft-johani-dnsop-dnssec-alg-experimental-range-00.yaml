@@ -1,0 +1,86 @@
+---
+id: draftjohanidnsopdnssecalgexperimentalrange00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Experimental and Private-Use Ranges in the DNSSEC Algorithm Numbers Registry
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-johani-dnsop-dnssec-alg-experimental-range-00
+docidentifier:
+- content: draft-johani-dnsop-dnssec-alg-experimental-range
+  type: Internet-Draft
+- content: draft-johani-dnsop-dnssec-alg-experimental-range-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.johani-dnsop-dnssec-alg-experimental-range
+date:
+- type: published
+  at: '2026-06-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Johan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Stenstam
+      completename:
+        language: en
+        content: Johan Stenstam
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The DNSSEC Algorithm Numbers registry contains two code points, 253
+       (PRIVATEDNS) and 254 (PRIVATEOID), intended for private and
+       experimental algorithms.  These code points identify the algorithm by
+       prepending a domain name or an object identifier to the "Public Key"
+       field of the DNSKEY RDATA, overloading the semantics of that field
+       and forcing every implementation to special-case algorithm dispatch.
+       Because all such algorithms share a single code point, they cannot be
+       distinguished on the wire by the algorithm number alone.
+
+       This document reserves two small ranges of DNSSEC algorithm numbers:
+       one for Private Use, requiring no IANA registration, and one for
+       experimental algorithms, registered on a First Come First Served
+       basis.  Code points drawn from these ranges behave identically to
+       ordinary algorithm numbers and require no overloading of the DNSKEY
+       RDATA.  This enables clean experimentation with the growing set of
+       post-quantum and other candidate signature algorithms.  This document
+       updates RFC 6014 and RFC 9157.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-johani-dnsop-dnssec-alg-experimental-range-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

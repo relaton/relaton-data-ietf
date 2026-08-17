@@ -1,0 +1,150 @@
+---
+id: draftietfsidropsmanifestnumbers04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RPKI Manifest Number Handling
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-manifest-numbers-04
+docidentifier:
+- content: draft-ietf-sidrops-manifest-numbers
+  type: Internet-Draft
+- content: draft-ietf-sidrops-manifest-numbers-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-sidrops-manifest-numbers
+date:
+- type: published
+  at: '2025-05-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tom
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Harrison
+      completename:
+        language: en
+        content: Tom Harrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Asia Pacific Network Information Centre
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: George
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Michaelson
+      completename:
+        language: en
+        content: George Michaelson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Asia-Pacific Network Information Centre
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Job
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Snijders
+      completename:
+        language: en
+        content: Job Snijders
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Resource Public Key Infrastructure (RPKI) makes use of signed
+       objects called manifests.  A manifest lists each file that a
+       publisher intends to include within an RPKI repository, and can be
+       used to detect certain forms of attack against a repository.
+       Manifests include a "manifest number" (manifestNumber), which the
+       publisher must increment whenever it issues a new manifest, and
+       Relying Parties (RPs) are required to verify that a newly-retrieved
+       manifest for a given Certification Authority (CA) has a higher
+       manifestNumber than the previously-validated manifest.  However, the
+       manifestNumber field is 20 octets in length (i.e. not unbounded), and
+       no behaviour is specified for when a manifestNumber reaches the
+       largest possible value.  This document specifies publisher and RP
+       behaviour for this scenario.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-sidrops-manifest-numbers-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-manifest-numbers-03
+    docidentifier:
+    - content: draft-ietf-sidrops-manifest-numbers-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-sidrops-manifest-numbers-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-manifest-numbers-05
+    docidentifier:
+    - content: draft-ietf-sidrops-manifest-numbers-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-sidrops-manifest-numbers-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,86 @@
+---
+id: draftlirecursivepeermodel00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A Recursive Peer Model for Network Protocols
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-recursive-peer-model-00
+docidentifier:
+- content: draft-li-recursive-peer-model
+  type: Internet-Draft
+- content: draft-li-recursive-peer-model-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-recursive-peer-model
+date:
+- type: published
+  at: '2026-08-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: 李实
+      completename:
+        language: en
+        content: 李实
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The seven-layer OSI model has served as a foundational framework for
+       network protocol design and education for four decades.  However,
+       modern networking practices—including VPNs, NAT, tunneling protocols,
+       and overlay networks—have revealed structural flaws in the OSI model
+       that require ad hoc exceptions to explain.
+
+       This document presents a Recursive Peer Model (RPM) as an alternative
+       architectural framework.  The model is based on a single observation:
+       every intermediate protocol layer contains its own four-layer
+       structure—Bearer Layer, Data Link Layer, Network Layer, and Transport
+       Layer—and this structure recurs at every layer of the protocol stack.
+       The Data Layer and Medium Layer serve as the two recursive
+       boundaries, terminating at "pure data" and "physical medium"
+       respectively.
+
+       The Recursive Peer Model eliminates the need for "exception" clauses
+       (such as the "tunnel exception" for VPNs), provides coherent
+       explanations for protocols that OSI cannot categorize cleanly (such
+       as ARP and ICMP), and offers a unified framework for describing both
+       existing and future protocols.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-recursive-peer-model-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

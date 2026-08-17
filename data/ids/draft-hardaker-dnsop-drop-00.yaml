@@ -1,0 +1,80 @@
+---
+id: drafthardakerdnsopdrop00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Dropped Remaining Other Propaganda in DNS Responses
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hardaker-dnsop-drop-00
+docidentifier:
+- content: draft-hardaker-dnsop-drop
+  type: Internet-Draft
+- content: draft-hardaker-dnsop-drop-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hardaker-dnsop-drop
+date:
+- type: published
+  at: '2019-11-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wes
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Hardaker
+      completename:
+        language: en
+        content: Wes Hardaker
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: USC/ISI
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When DNS replies to be sent over UDP exceed the requestor's UDP
+       payload size, servers are expected to set the Truncated bit (TC) and
+       remove remove additional information from the response.  Clients
+       receiving the TC bit might choose to retry the request over TCP to
+       fetch the removed information.  Sometimes this extra information is
+       not important to the DNS resolution process and retrying over TCP may
+       not be needed.  This document defines the DP bit to indicate that the
+       dropped information that caused the TC bit was supplemental
+       information.  This is useful, for example, in the case of Extended
+       DNS Error information which may be mostly debugging related
+       information.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hardaker-dnsop-drop-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

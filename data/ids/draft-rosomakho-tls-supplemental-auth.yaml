@@ -1,0 +1,45 @@
+---
+id: draftrosomakhotlssupplementalauth
+schema_version: v1.5.6
+formattedref:
+  content: draft-rosomakho-tls-supplemental-auth
+title:
+- language: en
+  script: Latn
+  content: Supplemental Authentication in TLS 1.3
+docidentifier:
+- content: draft-rosomakho-tls-supplemental-auth
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>TLS 1.3 allows endpoints to authenticate using certificates during
+       the handshake and supports optional post-handshake client
+       authentication.  However, some deployments require presenting
+       additional certificate-based authentication statements bound to the
+       same TLS connection, such as separate device and user identities,
+       attestation evidence, or multiple certificate chains during
+       cryptographic transitions.
+
+       This document defines Supplemental Authentication for TLS 1.3, a
+       mechanism that allows endpoints to present additional certificate
+       authentication messages after the handshake while preserving the
+       authentication semantics of TLS 1.3.  Supplemental authentication
+       reuses the existing Certificate, CertificateVerify, and Finished
+       message structure and allows endpoints to exchange one or more
+       additional certificate-based authentication statements before sending
+       application data or other post-handshake TLS messages.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rosomakho-tls-supplemental-auth-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosomakho-tls-supplemental-auth-00
+    docidentifier:
+    - content: draft-rosomakho-tls-supplemental-auth-00
+      type: Internet-Draft
+      primary: true

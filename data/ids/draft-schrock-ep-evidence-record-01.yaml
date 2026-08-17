@@ -1,0 +1,105 @@
+---
+id: draftschrockepevidencerecord01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Long-Term, Crypto-Agile Preservation of Authorization Evidence (EP-EVIDENCE-RECORD)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-evidence-record-01
+docidentifier:
+- content: draft-schrock-ep-evidence-record
+  type: Internet-Draft
+- content: draft-schrock-ep-evidence-record-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.schrock-ep-evidence-record
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Iman
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Schrock
+      completename:
+        language: en
+        content: Iman Schrock
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EMILIA Protocol, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Regulations increasingly require that records of who authorized a
+       high-risk action be retained for years (e.g. five years under DORA,
+       six under HIPAA and SEC 17a-4).  Any fixed signature or hash
+       algorithm used to protect such a record weakens over time; a receipt
+       signed today with Ed25519 over SHA-256 may be cryptographically
+       attackable before its retention period ends.  This document defines
+       EP-EVIDENCE-RECORD, an OPTIONAL profile that preserves the
+       verifiability of EMILIA Protocol authorization receipts (and other
+       artifacts) across algorithm aging, using a renewal chain in the style
+       of the Evidence Record Syntax [RFC4998].  Each renewal time-attests
+       the entire prior renewal under a fresh, stronger algorithm before the
+       older one is broken, so an unbroken chain links the original artifact
+       to the most recent renewal.  The record is offline- verifiable, fail-
+       closed, and maintained as cross-language conformance vectors that
+       three reference verifiers (JavaScript, Python, Go) are required to
+       agree on.  Those verifiers live in one repository, a cross-language
+       consistency check, not clean-room independent implementations;
+       independent implementations remain future interoperability evidence.
+       This revision additionally defines two OPTIONAL companion profiles,
+       EP-WITNESS-v1 witness cosignatures over a transparency log's
+       committed checkpoint head and an independent RFC 3161 time
+       attestation verified offline against a relying-party-pinned time-
+       stamping authority key; both are implemented today in the JavaScript
+       reference verifier only.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-schrock-ep-evidence-record-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-evidence-record-00
+    docidentifier:
+    - content: draft-schrock-ep-evidence-record-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-schrock-ep-evidence-record-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

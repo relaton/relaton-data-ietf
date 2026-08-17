@@ -1,0 +1,86 @@
+---
+id: draftgenggrowbmpsyncoptionsandstate
+schema_version: v1.5.6
+formattedref:
+  content: draft-geng-grow-bmp-sync-options-and-state
+title:
+- language: en
+  script: Latn
+  content: BGP Monitoring Protocol (BMP) Enhancements for RIB View Synchronization
+    and Monitoring Options Notification
+docidentifier:
+- content: draft-geng-grow-bmp-sync-options-and-state
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The BGP Monitoring Protocol (BMP) is a widely deployed operational
+       tool that allows BMP collectors to obtain per-address-family BGP
+       Routing Information Base (RIB) entries, runtime statistics, events,
+       and other critical BGP state data from BMP sender routers, enabling
+       full visibility into BGP routing status and supporting core network
+       operations such as troubleshooting, security monitoring, and traffic
+       auditing.  However, two key limitations exist in the current BMP
+       specification during practical deployment.  First, transient faults,
+       message loss, or session interruptions may cause inconsistencies
+       between the RIB views of the BMP sender and collector, and the
+       existing protocol lacks a non-disruptive mechanism to resolve such
+       mismatches.  Second, there is no standardized notification mechanism
+       for senders to inform collectors of modified or updated monitoring
+       reporting options, leading collectors to store stale or invalid BGP
+       information as reporting configurations change.
+
+       This document defines two new backward-compatible BMP message types
+       to address these issues: a Route-Refresh message for non-disruptive
+       RIB view synchronization between senders and collectors, and a
+       Monitoring Options (MO) message to notify collectors of active and
+       disabled reporting parameters.  These extensions enhance the
+       reliability and accuracy of BMP-based BGP monitoring without
+       disrupting existing deployment workflows.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-geng-grow-bmp-sync-options-and-state-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-sync-options-and-state-00
+    docidentifier:
+    - content: draft-geng-grow-bmp-sync-options-and-state-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-geng-grow-bmp-sync-options-and-state-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-sync-options-and-state-01
+    docidentifier:
+    - content: draft-geng-grow-bmp-sync-options-and-state-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-geng-grow-bmp-sync-options-and-state-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-sync-options-and-state-02
+    docidentifier:
+    - content: draft-geng-grow-bmp-sync-options-and-state-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-geng-grow-bmp-sync-options-and-state-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-sync-options-and-state-03
+    docidentifier:
+    - content: draft-geng-grow-bmp-sync-options-and-state-03
+      type: Internet-Draft
+      primary: true

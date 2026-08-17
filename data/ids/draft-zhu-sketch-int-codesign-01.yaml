@@ -1,0 +1,155 @@
+---
+id: draftzhusketchintcodesign01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Sketch-INT Co-Design for Accurate Network Measurement: Applicability to
+    Time-Variant Non-Terrestrial Networks'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhu-sketch-int-codesign-01
+docidentifier:
+- content: draft-zhu-sketch-int-codesign
+  type: Internet-Draft
+- content: draft-zhu-sketch-int-codesign-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhu-sketch-int-codesign
+date:
+- type: published
+  at: '2026-07-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Longlong
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Zhu
+      completename:
+        language: en
+        content: Longlong Zhu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhejiang University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xiang
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Xiang Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhejiang University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Qiang
+      - language: en
+        script: Latn
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: Wu
+      completename:
+        language: en
+        content: Qiang Wu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhejiang University
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Network measurement supports management applications that need
+       statistics about both large and small flows.  Sketch-based techniques
+       use compact data structures and are effective for large flows, but
+       hash collisions can produce substantial relative errors for small
+       flows.  In-band Network Telemetry (INT) can provide detailed
+       observations for individual packets, but applying it to every packet
+       can consume significant packet, bandwidth, and collector resources.
+
+       This document describes a framework that uses sketches for large
+       flows and INT for small flows.  It also describes measurement-point
+       selection when exact routing information is unavailable and
+       congestion-aware collection of sketch and INT reports.  The document
+       identifies the information needed to describe and compare
+       implementations.  It does not define a new packet format, INT
+       instruction, sketch algorithm, or routing protocol.
+
+       As a concrete applicability direction, the document considers time-
+       variant non-terrestrial networks (NTNs), in which paths and available
+       forwarding resources can change over time.  It maps the existing
+       Sketch-INT framework to this scenario and identifies the assumptions
+       that require validation.  It does not claim that the existing
+       terrestrial implementation has been deployed or evaluated on
+       satellite hardware.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-zhu-sketch-int-codesign-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-sketch-int-codesign-00
+    docidentifier:
+    - content: draft-zhu-sketch-int-codesign-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhu-sketch-int-codesign-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

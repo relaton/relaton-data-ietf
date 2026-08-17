@@ -1,0 +1,95 @@
+---
+id: draftthomassendnsopcdsconsistency03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Consistency for CDS/CDNSKEY and CSYNC is Mandatory
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-cds-consistency-03
+docidentifier:
+- content: draft-thomassen-dnsop-cds-consistency
+  type: Internet-Draft
+- content: draft-thomassen-dnsop-cds-consistency-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.thomassen-dnsop-cds-consistency
+date:
+- type: published
+  at: '2023-03-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Thomassen
+      completename:
+        language: en
+        content: Peter Thomassen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Secure Systems Engineering, deSEC
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Maintenance of DNS delegations requires occasional changes of the DS
+       and NS record sets on the parent side of the delegation.  [RFC7344]
+       automates this for DS records by having the child publish CDS and/or
+       CDNSKEY records which hold the prospective DS parameters.  Similarly,
+       CSYNC records indicate a desired update of the delegation's NS
+       records [RFC7477].  Parent-side entities (e.g.  Registries,
+       Registrars) typically discover these records by periodically querying
+       them from the child ("polling"), before using them to update the
+       delegation's parameters.
+
+       This document specifies that if polling is used, parent-side entities
+       MUST ensure that updates triggered via CDS/CDNSKEY and CSYNC records
+       are consistent across the child's authoritative nameservers, before
+       taking any action based on these records.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-thomassen-dnsop-cds-consistency-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-cds-consistency-02
+    docidentifier:
+    - content: draft-thomassen-dnsop-cds-consistency-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-thomassen-dnsop-cds-consistency-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

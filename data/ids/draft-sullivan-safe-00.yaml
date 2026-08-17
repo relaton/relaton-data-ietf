@@ -1,0 +1,92 @@
+---
+id: draftsullivansafe00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'SAFE: Sealed, Algorithm-Flexible Envelope'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sullivan-safe-00
+docidentifier:
+- content: draft-sullivan-safe
+  type: Internet-Draft
+- content: draft-sullivan-safe-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sullivan-safe
+date:
+- type: published
+  at: '2026-03-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nick
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Sullivan
+      completename:
+        language: en
+        content: Nick Sullivan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cryptography Consulting LLC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>SAFE defines an encryption envelope that encrypts a payload once for
+       multiple recipients.  Decryption can require multiple credentials in
+       sequence (public keys, passphrases, or other registered methods), so
+       no single factor suffices.  The format is designed for large,
+       writable files: it supports streaming decryption, random-access reads
+       at block granularity, and selective re-encryption of modified blocks
+       without re-keying.  Recipient privacy modes allow locks to omit
+       identifying metadata.  SAFE accommodates post-quantum key
+       encapsulation without format changes, provides algorithm agility
+       through IANA registries, and defines a mandatory-to-implement profile
+       for interoperability.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-sullivan-safe-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-safe-01
+    docidentifier:
+    - content: draft-sullivan-safe-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sullivan-safe-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

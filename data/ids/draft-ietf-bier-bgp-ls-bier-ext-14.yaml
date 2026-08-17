@@ -1,0 +1,195 @@
+---
+id: draftietfbierbgplsbierext14
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Link-State extensions for BIER
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-bgp-ls-bier-ext-14
+docidentifier:
+- content: draft-ietf-bier-bgp-ls-bier-ext
+  type: Internet-Draft
+- content: draft-ietf-bier-bgp-ls-bier-ext-14
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-bier-bgp-ls-bier-ext
+date:
+- type: published
+  at: '2023-03-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ran
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Ran Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhaohui
+      - language: en
+        script: Latn
+        initial: Z
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: Z. J.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Zhaohui (Jeffrey) Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Vengada
+      - language: en
+        script: Latn
+        initial: V
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: V. P.
+      surname:
+        language: en
+        content: Govindan
+      completename:
+        language: en
+        content: Vengada Prasad Govindan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: IJsbrand
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Wijnands
+      completename:
+        language: en
+        content: IJsbrand Wijnands
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Individual
+version:
+- content: '14'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Bit Index Explicit Replication (BIER) is an architecture that
+       provides optimal multicast forwarding through a "BIER domain" without
+       requiring intermediate routers to maintain any multicast related per-
+       flow state.  BIER also does not require any explicit tree-building
+       protocol for its operation.  A multicast data packet enters a BIER
+       domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves the
+       BIER domain at one or more "Bit-Forwarding Egress Routers" (BFERs).
+       The BFIR router adds a BIER header to the packet.  The BIER header
+       contains a bitstring in which each bit represents exactly one BFER to
+       forward the packet to.  The set of BFERs to which the multicast
+       packet needs to be forwarded is expressed by setting the bits that
+       correspond to those routers in the BIER header.
+
+       BGP Link-State (BGP-LS) enables the collection of various topology
+       informations from the network, and the topology informations are used
+       by the controller to calculate the fowarding tables and then
+       propagate them onto the BFRs(instead of having each node to calculate
+       on its own) and that can be for both inter-as and intra-as
+       situations.
+
+       This document specifies extensions to the BGP Link-state address-
+       family in order to advertise the BIER informations.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-bier-bgp-ls-bier-ext-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-bgp-ls-bier-ext-13
+    docidentifier:
+    - content: draft-ietf-bier-bgp-ls-bier-ext-13
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-bier-bgp-ls-bier-ext-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-bgp-ls-bier-ext-15
+    docidentifier:
+    - content: draft-ietf-bier-bgp-ls-bier-ext-15
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-bier-bgp-ls-bier-ext-14
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
