@@ -2,7 +2,7 @@
 
 require 'net/http'
 require 'nokogiri'
-require 'relaton_bib'
+require 'relaton'
 
 def fetch_document(uri, attempts)
   begin
@@ -30,7 +30,7 @@ rescue => e # rubocop:disable Style/RescueStandardError
   warn e.backtrace
 end
 
-workers = RelatonBib::WorkersPool.new 10
+workers = Relaton::Core::WorkersPool.new 10
 
 workers.worker { |ref| get_document(ref) }
 t1 = Time.now
