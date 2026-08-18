@@ -1,0 +1,92 @@
+---
+id: draftwolfefafformat02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'FAF: YAML Media Types for AI Project Context and Persistent Memory'
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wolfe-faf-format-02
+docidentifier:
+- content: draft-wolfe-faf-format-02
+  type: Internet-Draft
+  primary: true
+- content: I-D.wolfe-faf-format
+  type: IETF
+  scope: anchor
+docnumber: I-D.wolfe-faf-format
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: James
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wolfe
+      completename:
+        language: en
+        content: James Wolfe
+    affiliation:
+    - organization:
+        name:
+        - content: FAF Foundation
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document specifies two YAML-based media types that together form
+    a foundational AI-context layer (FAF):.faf for static project context (what an
+    AI agent KNOWS about a project) and.fafm for persistent agent memory (what it
+    REMEMBERS across sessions)..faf (application/vnd.faf+yaml, registered in the IANA
+    vendor tree 2025-10-30) carries static project context — architecture, conventions,
+    dependencies, goals — read once and treated as canonical..fafm (application/vnd.fafm+yaml,
+    registered 2026-05-13) carries persistent agent memory — facts, preferences, accumulated
+    knowledge — which mutates across sessions and supports multiple profiles (voice
+    and knowledge). The two formats share YAML 1.2 as base syntax and MIT-licensed
+    distribution, but differ in lifecycle:.faf is static-read-once and.fafm is mutating-persisted.
+    This document documents the existing vendor-tree registrations and defines the
+    "faf" well-known URI, a discovery anchor that returns a.faf context document and
+    may reference associated memory and agent resources.</p>
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-wolfe-faf-format-01
+      format: text/plain
+    docidentifier:
+    - content: draft-wolfe-faf-format-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-wolfe-faf-format-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

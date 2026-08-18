@@ -1,0 +1,37 @@
+---
+id: draftietfsipnat
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: An Extension to the Session Initiation Protocol (SIP) for Symmetric Response
+    Routing
+  format: text/plain
+docidentifier:
+- content: draft-ietf-sip-nat
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The Session Initiation Protocol (SIP) operates over UDP and TCP. When
+    used with UDP, responses to requests are returned to the source address the request
+    came from, but from the port written into the topmost Via header of the request.
+    This behavior is not desirable in many cases, most notably, when the client is
+    behind a NAT. This extension defines a new parameter for the Via header, called
+    rport, that allows a client to request that the server send the response back
+    to the source IP address and port where the request came from.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-sip-nat-02
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-sip-nat-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

@@ -1,0 +1,123 @@
+---
+id: draftmacfrglooma00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Looma: Low-Latency Post-Quantum Authentication for TLS 1.3 in Datacenters'
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ma-cfrg-looma-00
+docidentifier:
+- content: draft-ma-cfrg-looma-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.ma-cfrg-looma
+  type: IETF
+  scope: anchor
+docnumber: I-D.ma-cfrg-looma
+date:
+- type: published
+  at: '2026-03-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Xinshu
+      - language: en
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Ma
+      completename:
+        language: en
+        content: Xinshu Ma
+    affiliation:
+    - organization:
+        name:
+        - content: University of Edinburgh
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Michio
+      - language: en
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Honda
+      completename:
+        language: en
+        content: Michio Honda
+    affiliation:
+    - organization:
+        name:
+        - content: University of Edinburgh
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Colin
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Perkins
+      completename:
+        language: en
+        content: Colin Perkins
+    affiliation:
+    - organization:
+        name:
+        - content: University of Glasgow
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Post-quantum (PQ) authentication in TLS 1.3 can add tens to hundreds
+    of microseconds of handshake processing time. In datacenters, where mutual authentication
+    is mandatory, this authentication cost becomes a dominant contributor to end-to-end
+    request latency, particularly when connections are short-lived and handshake rates
+    are high. This document specifies Looma, an online/offline authentication architecture
+    integrated into the TLS 1.3 handshake. Looma replaces the on-path, per-handshake
+    PQ signature with a fast, one-time signature over the TLS transcript and moves
+    expensive work (including the multi-use PQ signature) to an asynchronous background
+    plane. Looma includes a fallback strategy to preserve correct authentication when
+    the verifier does not have the peer's one-time verification key cached.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ma-cfrg-looma-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

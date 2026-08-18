@@ -1,0 +1,36 @@
+---
+id: draftwelzltcpcorruption
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: TCP Corruption Notification Options
+  format: text/plain
+docidentifier:
+- content: draft-welzl-tcp-corruption
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This memo specifies options that enable TCP to detect corruption in
+    the presence of link layers which hand over known-corrupt data to upper layers.
+    The receiver notifies the sender of an erroneous segment that would otherwise
+    be lost and assumed to be a sign of congestion. The sender uses this ACK to drive
+    its RTO calculation, retransmit the segment and react to congestion earlier if
+    ECE=1. In addition, this feedback could be used to realize a more appropriate
+    rate change in response to such lost segments.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-welzl-tcp-corruption-00
+      format: text/plain
+    docidentifier:
+    - content: draft-welzl-tcp-corruption-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

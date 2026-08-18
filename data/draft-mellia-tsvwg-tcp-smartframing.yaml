@@ -1,0 +1,39 @@
+---
+id: draftmelliatsvwgtcpsmartframing
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: TCP Smart-Framing
+  format: text/plain
+docidentifier:
+- content: draft-mellia-tsvwg-tcp-smartframing
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>In this document we present an enhancement to the TCP protocol, called
+    TCP Smart Framing, or TCP-SF for short, that enables the Fast Retransmit/Recovery
+    algorithm even when the congestion window is small, i.e., for short-lived flows,
+    as most of the current Internet traffic is. Without modifying the TCP congestion
+    control based on the additive-increase/multiplicative-decrease paradigm, TCP-SF
+    adopts a novel segmentation algorithm: while Classic TCP starts sending IW segments,
+    a TCP-SF source is allowed to always send an initial window of 4 smaller segments,
+    whose aggregate payload is equal to the connection's SMSS. This key idea can be
+    implemented on top of any TCP flavor, from Tahoe to SACK, and requires modifications
+    to the server behavior only.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mellia-tsvwg-tcp-smartframing-00
+      format: text/plain
+    docidentifier:
+    - content: draft-mellia-tsvwg-tcp-smartframing-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

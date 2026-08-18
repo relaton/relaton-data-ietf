@@ -1,0 +1,163 @@
+---
+id: draftietftcpmrack11
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The RACK-TLP loss detection algorithm for TCP
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-rack-11
+docidentifier:
+- content: draft-ietf-tcpm-rack-11
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-tcpm-rack
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-tcpm-rack
+date:
+- type: published
+  at: '2020-09-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Yuchung
+      - language: en
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Yuchung Cheng
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Neal
+      - language: en
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Cardwell
+      completename:
+        language: en
+        content: Neal Cardwell
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Nandita
+      - language: en
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Dukkipati
+      completename:
+        language: en
+        content: Nandita Dukkipati
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Priyaranjan
+      - language: en
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Jha
+      completename:
+        language: en
+        content: Priyaranjan Jha
+    affiliation:
+    - organization:
+        name:
+        - content: Google, Inc
+version:
+- content: '11'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: '<p>This document presents the RACK-TLP loss detection algorithm for TCP.
+    RACK-TLP uses per-segment transmit timestamps and selective acknowledgements (SACK)
+    [RFC2018] and has two parts: RACK ("Recent ACKnowledgment") starts fast recovery
+    quickly using time-based inferences derived from ACK feedback. TLP ("Tail Loss
+    Probe") leverages RACK and sends a probe packet to trigger ACK feedback to avoid
+    retransmission timeout (RTO) events. Compared to the widely used DUPACK threshold
+    approach, RACK-TLP detects losses more efficiently when there are application-limited
+    flights of data, lost retransmissions, or data packet reordering events. It is
+    intended to be an alternative to the DUPACK threshold approach in [RFC5681][RFC6675].</p>'
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-tcpm-rack-10
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-tcpm-rack-10
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-tcpm-rack-13
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-tcpm-rack-13
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-tcpm-rack-11
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

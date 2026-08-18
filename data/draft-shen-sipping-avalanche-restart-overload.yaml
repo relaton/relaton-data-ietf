@@ -1,0 +1,41 @@
+---
+id: draftshensippingavalancherestartoverload
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: A Mechanism for Session Initiation Protocol (SIP) Avalanche Restart Overload
+    Control
+  format: text/plain
+docidentifier:
+- content: draft-shen-sipping-avalanche-restart-overload
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>When a large number of clients register with a SIP registrar server
+    at approximately the same time, the server may become overloaded. Near-simultaneous
+    floods of SIP SUBSCRIBE and PUBLISH requests may have similar effects. Such request
+    avalanches can occur, for example, after a power failure and recovery in a metropolitan
+    area. This document describes how to avoid such overload situations. Under this
+    mechanism, a server estimates an avalanche restart backoff interval during its
+    normal operation and conveys this interval to its clients through a new Restart-Timer
+    header in normal response messages. Once an avalanche restart actually occurs,
+    the clients perform backoff based on the previously received Restart-Timer header
+    value before sending out the first request attempt. Thus, the mechanism spreads
+    all the initial client requests and prevents them from overloading the server.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-shen-sipping-avalanche-restart-overload-01
+      format: text/plain
+    docidentifier:
+    - content: draft-shen-sipping-avalanche-restart-overload-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

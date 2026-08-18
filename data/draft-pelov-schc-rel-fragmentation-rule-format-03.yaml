@@ -1,0 +1,114 @@
+---
+id: draftpelovschcrelfragmentationruleformat03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SCHC Reliability Fragmentation
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pelov-schc-rel-fragmentation-rule-format-03
+docidentifier:
+- content: draft-pelov-schc-rel-fragmentation-rule-format-03
+  type: Internet-Draft
+  primary: true
+- content: I-D.pelov-schc-rel-fragmentation-rule-format
+  type: IETF
+  scope: anchor
+docnumber: I-D.pelov-schc-rel-fragmentation-rule-format
+date:
+- type: published
+  at: '2025-03-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Alexander
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Pelov
+      completename:
+        language: en
+        content: Alexander Pelov
+    affiliation:
+    - organization:
+        name:
+        - content: IMT Atlantique
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Carles
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Gomez
+      completename:
+        language: en
+        content: Carles Gomez
+    affiliation:
+    - organization:
+        name:
+        - content: Universitat Politecnica de Catalunya/Fundacio i2CAT
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies a fragmentation mode used for reliability within
+    the SCHC framework. Building on the fragmentation mechanisms defined in RFC8724,
+    this rule format is tailored to ensure the reliable delivery of small messages
+    that do not trigger conventional fragmentation. A key enhancement is the inclusion
+    of a size field, indicating the total byte-length of the message, and modifications
+    to the state machine to support a persistent session with wrap-around windows.
+    Two operational modes are defined: * RelNoAck: A mode derived from SCHC No-Ack
+    fragmentation, where fragments are transmitted without expecting per-fragment
+    acknowledgments. Losses are tolerated within a configured threshold. * RelAckOnErr:
+    A mode derived from SCHC Ack-On-Error fragmentation, where the receiver actively
+    monitors for missing fragments and initiates recovery through explicit negative
+    acknowledgments. These modes offer operators the flexibility to balance recovery
+    overhead against latency and reliability requirements in constrained network environments.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-pelov-schc-rel-fragmentation-rule-format-02
+      format: text/plain
+    docidentifier:
+    - content: draft-pelov-schc-rel-fragmentation-rule-format-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-pelov-schc-rel-fragmentation-rule-format-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

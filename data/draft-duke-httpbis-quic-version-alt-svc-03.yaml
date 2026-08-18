@@ -1,0 +1,115 @@
+---
+id: draftdukehttpbisquicversionaltsvc03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An Alt-Svc Parameter and SvcParamKey for QUIC Versions
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-03
+docidentifier:
+- content: draft-duke-httpbis-quic-version-alt-svc-03
+  type: Internet-Draft
+  primary: true
+- content: I-D.duke-httpbis-quic-version-alt-svc
+  type: IETF
+  scope: anchor
+docnumber: I-D.duke-httpbis-quic-version-alt-svc
+date:
+- type: published
+  at: '2023-04-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Martin
+      - language: en
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Duke
+      completename:
+        language: en
+        content: Martin Duke
+    affiliation:
+    - organization:
+        name:
+        - content: Google
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Lucas
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Pardue
+      completename:
+        language: en
+        content: Lucas Pardue
+    affiliation:
+    - organization:
+        name:
+        - content: Cloudflare
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>HTTP Alternative Services (Alt-Svc) describes how one origin's resource
+    can be accessed via a different protocol/host/port combination. Alternatives are
+    advertised by servers using the Alt- Svc header field or the ALTSVC frame. This
+    includes a protocol name, which reuses Application Layer Protocol Negotiation
+    (ALPN) codepoints. The "h3" codepoint indicates the availability of HTTP/3. A
+    client that uses such an alternative first makes a QUIC connection. However, without
+    a priori knowledge of which QUIC version to use, clients might incur a round-trip
+    latency penalty to complete QUIC version negotiation, or forfeit desirable properties
+    of a QUIC version. This document specifies a new Alt-Svc parameter that specifies
+    alternative supported QUIC versions, which substantially reduces the chance of
+    this penalty. Similarly, clients can retrieve additional instructions about access
+    to services or resources via DNS SVCB and HTTP Resource Records. This document
+    also defines a new SvcParamKey for these Resource Records, which specifies the
+    specific QUIC versions in use.</p>
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-duke-httpbis-quic-version-alt-svc-01
+      format: text/plain
+    docidentifier:
+    - content: draft-duke-httpbis-quic-version-alt-svc-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-duke-httpbis-quic-version-alt-svc-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

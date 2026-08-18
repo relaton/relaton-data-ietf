@@ -1,0 +1,47 @@
+---
+id: draftietfavttelephonetones
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: RTP Payloads for Telephone Signal Events
+  format: text/plain
+docidentifier:
+- content: draft-ietf-avt-telephone-tones
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This note describes two RTP payload formats for in-band telephony signal
+    events (TSE) such as DTMF, dial-tone, ring-tone, off-hook, SIT, etc. One payload
+    is designed to carry a named signal, and the other is designed carry a compact
+    representation of actual audio waveform cadence to be played. The two formats
+    are independent, but they can be used together very usefully within redundant
+    audio payloads; this enables highly efficient and robust transport of telephony
+    network signal events along with a representation of the actual audio media associated
+    to the signal events. Acknowledgements: This internet draft is an extension of
+    H. Schulzrinne's draft ietf-avt-dtmf-00.txt and borrows heavily from it (including
+    copying actual text). The main extensions appearing in this draft are as follows:
+    a) many other telephony call progress tones and signal events have been added
+    to the original DTMF and flash-hook of ietf-avt-dtmf-00.txt (an attempt has been
+    made to align this with [MGCP] and [E.180 supp2] b) a second payload is defined
+    which carries a highly compact frequency representation of the audio waveform
+    of the signal; c) a few clarifications about reliability and redundancy, including
+    how the two payloads will work together. Acknowledgement is also due to [MGCP];
+    part of this draft is an attempt to use RTP to provide the signal transport required
+    by MGCP, in a way which can be reused by a large class of applications.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-avt-telephone-tones-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-avt-telephone-tones-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

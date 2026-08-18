@@ -1,0 +1,146 @@
+---
+id: draftsongspringsiam05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SRv6 In-situ Active Measurement
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-song-spring-siam-05
+docidentifier:
+- content: draft-song-spring-siam-05
+  type: Internet-Draft
+  primary: true
+- content: I-D.song-spring-siam
+  type: IETF
+  scope: anchor
+docnumber: I-D.song-spring-siam
+date:
+- type: published
+  at: '2023-03-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Haoyu
+      - language: en
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Song
+      completename:
+        language: en
+        content: Haoyu Song
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Gyan
+      - language: en
+        initial: G
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: G. S.
+      surname:
+        language: en
+        content: Mishra
+      completename:
+        language: en
+        content: Gyan Mishra
+    affiliation:
+    - organization:
+        name:
+        - content: Verizon Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Tian
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Pan
+      completename:
+        language: en
+        content: Tian Pan
+    affiliation:
+    - organization:
+        name:
+        - content: BUPT
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This draft describes an active measurement method for SRv6 which can
+    support segment-by-segment and end-to-end measurement on any SRv6 path using existing
+    protocols such as IOAM. A packet containing an SRH uses a flag bit to indicate
+    the packet is an active probing packet and requires segment-by-segment processing.
+    The measurement information, such as the IOAM header and data, is encapsulated
+    in UDP payload, indicated by a dedicated port number. The probing packet originates
+    from a segment source node, traverses an arbitrary segment path, and terminates
+    at a segment endpoint node, as configured by the segment list in SRH. Each segment
+    node on the path, when detecting the flag, shall parse the UDP header and the
+    payload. In the case of IOAM, the node shall process the IOAM option conforming
+    to the standard procedures defined in the IOAM documents. The method is compatible
+    with some other SRv6 active measurement proposals and support multiple applications.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-song-spring-siam-01
+      format: text/plain
+    docidentifier:
+    - content: draft-song-spring-siam-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-song-spring-siam-07
+      format: text/plain
+    docidentifier:
+    - content: draft-song-spring-siam-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-song-spring-siam-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

@@ -1,0 +1,127 @@
+---
+id: draftietfsidropscmssigningtime06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: On the use of the CMS signing-time attribute in RPKI Signed Objects
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-cms-signing-time-06
+docidentifier:
+- content: draft-ietf-sidrops-cms-signing-time-06
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-sidrops-cms-signing-time
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-sidrops-cms-signing-time
+date:
+- type: published
+  at: '2024-02-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Job
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Snijders
+      completename:
+        language: en
+        content: Job Snijders
+    affiliation:
+    - organization:
+        name:
+        - content: Fastly
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Tom
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Harrison
+      completename:
+        language: en
+        content: Tom Harrison
+    affiliation:
+    - organization:
+        name:
+        - content: Asia Pacific Network Information Centre
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>In the Resource Public Key Infrastructure (RPKI), Signed Objects are
+    defined as Cryptographic Message Syntax (CMS) protected content types by way of
+    a standard template (RFC 6488). That template includes an optional CMS signing-time
+    attribute, representing the purported time at which the object was signed by its
+    issuer. At the time when the standard template was defined, rsync was the only
+    distribution mechanism for RPKI repositories. Since the publication of the standard
+    template, a new, additional protocol for distribution of RPKI repositories has
+    been developed: the RPKI Repository Delta Protocol (RRDP). While RPKI repository
+    operators must provide rsync service, RRDP is typically deployed alongside it
+    as well, and preferred by default by most Relying Party (RP) implementations.
+    However, RP implementations also support fallback to rsync in the event of problems
+    with the RRDP service. As deployment experience with RRDP has increased, the usefulness
+    of optimizing switchovers by RPs from one mechanism to the other has become apparent.
+    This document describes how Publishers and RPs can use the CMS signing-time attribute
+    to minimize the burden of switching over from RRDP to rsync. Additionally, this
+    document updates RFC 6488 by mandating the presence of the CMS signing-time attribute
+    and disallowing the use of the binary-signing-time attribute.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-sidrops-cms-signing-time-03
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-sidrops-cms-signing-time-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-sidrops-cms-signing-time-07
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-sidrops-cms-signing-time-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-sidrops-cms-signing-time-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

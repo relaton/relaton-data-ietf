@@ -1,0 +1,127 @@
+---
+id: draftveridomomp01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Operating Model Protocol (OMP) Core -- Version 01: Invariant 3 -- Verifiable
+    Delegation Binding'
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-veridom-omp-01
+docidentifier:
+- content: draft-veridom-omp-01
+  type: Internet-Draft
+  primary: true
+- content: I-D.veridom-omp
+  type: IETF
+  scope: anchor
+docnumber: I-D.veridom-omp
+date:
+- type: published
+  at: '2026-05-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Tolulope
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Adebayo
+      completename:
+        language: en
+        content: Tolulope Adebayo
+    affiliation:
+    - organization:
+        name:
+        - content: Veridom Ltd
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Oluropo
+      - language: en
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Apalowo
+      completename:
+        language: en
+        content: Oluropo Apalowo
+    affiliation:
+    - organization:
+        name:
+        - content: Veridom Ltd
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This -01 version of the Operating Model Protocol (OMP) Core specification
+    introduces Invariant 3: Verifiable Delegation Binding. OMP version -00 establishes
+    two invariants: (1) deterministic routing and (2) immutable trail. These invariants
+    are necessary but not sufficient for adversarial evidentiary defensibility. A
+    tamper- evident record of an unauthorised decision is still an unauthorised decision.
+    This amendment adds Invariant 3, which closes the gap between record existence
+    and authority validity by requiring that every ASSISTED or ESCALATED routing state
+    bind the Named Accountable Officer field to a verifiable DelegationInstrument
+    object at the moment of decision. When no valid binding can be established, the
+    system sets authority_binding_result to AUTHORITY_UNBOUND -- a sealed, positive
+    evidentiary declaration of the absence, not a silent failure. The routing_state
+    is preserved; execution_permission is set to BLOCKED. Three axes are orthogonal:
+    routing_state, authority_binding_result, and execution_permission. This amendment
+    is additive and non-breaking. All twelve existing OMP profile drafts inherit Invariant
+    3 from the core specification. AUTONOMOUS routing states are exempt unless a profile-specific
+    Watchtower gate requires binding.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-veridom-omp-00
+      format: text/plain
+    docidentifier:
+    - content: draft-veridom-omp-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-veridom-omp-02
+      format: text/plain
+    docidentifier:
+    - content: draft-veridom-omp-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-veridom-omp-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

@@ -1,0 +1,150 @@
+---
+id: draftietfmplsrirsvpfrr00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Refresh Interval Independent FRR Facility Protection
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-ri-rsvp-frr-00
+docidentifier:
+- content: draft-ietf-mpls-ri-rsvp-frr-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-mpls-ri-rsvp-frr
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-mpls-ri-rsvp-frr
+date:
+- type: published
+  at: '2016-08-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Chandrasekar
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: R
+      completename:
+        language: en
+        content: Chandrasekar R
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Ina
+      - language: en
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Minei
+      completename:
+        language: en
+        content: Ina Minei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Dante
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Pacella
+      completename:
+        language: en
+        content: Dante Pacella
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Tarek
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Saad
+      completename:
+        language: en
+        content: Tarek Saad
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>RSVP-TE relies on periodic refresh of RSVP messages to synchronize
+    and maintain the LSP related states along the reserved path. In the absence of
+    refresh messages, the LSP related states are automatically deleted. Reliance on
+    periodic refreshes and refresh timeouts are problematic from the scalability point
+    of view. The number of RSVP-TE LSPs that a router needs to maintain has been growing
+    in service provider networks and the implementations should be capable of handling
+    increase in LSP scale. RFC 2961 specifies mechanisms to eliminate the reliance
+    on periodic refresh and refresh timeout of RSVP messages, and enables a router
+    to increase the message refresh interval to values much larger than the default
+    30 seconds defined in RFC 2205. However, the protocol extensions defined in RFC
+    4090 for supporting fast reroute (FRR) using bypass tunnels implicitly rely on
+    short refresh timeouts to cleanup stale states. In order to eliminate the reliance
+    on refresh timeouts, the routers should unambiguously determine when a particular
+    LSP state should be deleted. Coupling LSP state with the corresponding RSVP-TE
+    signaling adjacencies as recommended in RSVP-TE Scaling Recommendations (draft-ietf-teas-rsvp-te-scaling-rec)
+    will apply in scenarios other than RFC 4090 FRR using bypass tunnels. In scenarios
+    involving RFC 4090 FRR using bypass tunnels, additional explicit tear down messages
+    are necessary. Refresh-interval Independent RSVP FRR (RI- RSVP-FRR) extensions
+    specified in this document consists of procedures to enable LSP state cleanup
+    that are essential in scenarios not covered by procedures defined in RSVP-TE Scaling
+    Recommendations.</p>"
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-ri-rsvp-frr-20
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-mpls-ri-rsvp-frr-20
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-mpls-ri-rsvp-frr-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

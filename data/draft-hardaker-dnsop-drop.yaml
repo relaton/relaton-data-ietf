@@ -1,0 +1,38 @@
+---
+id: drafthardakerdnsopdrop
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Dropped Remaining Other Propaganda in DNS Responses
+  format: text/plain
+docidentifier:
+- content: draft-hardaker-dnsop-drop
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>When DNS replies to be sent over UDP exceed the requestor's UDP payload
+    size, servers are expected to set the Truncated bit (TC) and remove remove additional
+    information from the response. Clients receiving the TC bit might choose to retry
+    the request over TCP to fetch the removed information. Sometimes this extra information
+    is not important to the DNS resolution process and retrying over TCP may not be
+    needed. This document defines the DP bit to indicate that the dropped information
+    that caused the TC bit was supplemental information. This is useful, for example,
+    in the case of Extended DNS Error information which may be mostly debugging related
+    information.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hardaker-dnsop-drop-00
+      format: text/plain
+    docidentifier:
+    - content: draft-hardaker-dnsop-drop-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

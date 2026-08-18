@@ -1,0 +1,143 @@
+---
+id: draftietfipsecmeimplicitiv09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Implicit IV for Counter-based Ciphers in Encapsulating Security Payload
+    (ESP)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-implicit-iv-09
+docidentifier:
+- content: draft-ietf-ipsecme-implicit-iv-09
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-ipsecme-implicit-iv
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-ipsecme-implicit-iv
+date:
+- type: published
+  at: '2019-10-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Daniel
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Migault
+      completename:
+        language: en
+        content: Daniel Migault
+    affiliation:
+    - organization:
+        name:
+        - content: Ericsson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Tobias
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Guggemos
+      completename:
+        language: en
+        content: Tobias Guggemos
+    affiliation:
+    - organization:
+        name:
+        - content: LMU Munich
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Yoav
+      - language: en
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Nir
+      completename:
+        language: en
+        content: Yoav Nir
+    affiliation:
+    - organization:
+        name:
+        - content: Dell EMC
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Encapsulating Security Payload (ESP) sends an initialization vector
+    (IV) in each packet. The size of IV depends on the applied transform, being usually
+    8 or 16 octets for the transforms defined by the time this document is written.
+    Some algorithms such as AES-GCM, AES-CCM and ChaCha20-Poly1305 when used with
+    IPsec, take the IV to generate a nonce that is used as an input parameter for
+    encrypting and decrypting. This IV must be unique but can be predictable. As a
+    result, the value provided in the ESP Sequence Number (SN) can be used instead
+    to generate the nonce. This avoids sending the IV itself, and saves in the case
+    of AES-GCM, AES-CCM and ChaCha20-Poly1305 8 octets per packet. This document describes
+    how to do this.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-implicit-iv-07
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-implicit-iv-07
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-implicit-iv-11
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-implicit-iv-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-ipsecme-implicit-iv-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

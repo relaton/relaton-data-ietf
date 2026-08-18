@@ -1,0 +1,99 @@
+---
+id: drafthaynesnfsv4flexfilesv2proxyserver02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Proxy-Driven Server for Flexible Files Version 2
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-flexfiles-v2-proxy-server-02
+docidentifier:
+- content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-02
+  type: Internet-Draft
+  primary: true
+- content: I-D.haynes-nfsv4-flexfiles-v2-proxy-server
+  type: IETF
+  scope: anchor
+docnumber: I-D.haynes-nfsv4-flexfiles-v2-proxy-server
+date:
+- type: published
+  at: '2026-05-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Thomas
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Haynes
+      completename:
+        language: en
+        content: Thomas Haynes
+    affiliation:
+    - organization:
+        name:
+        - content: Hammerspace
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type supports
+    client-side erasure coding and per-chunk repair between clients and data servers.
+    This document extends that architecture with a proxy server (proxy server) role:
+    a registered peer of the metadata server that polls the metadata server for work
+    assignments and carries them out -- moving a file from one layout to another,
+    reconstructing a whole file from surviving shards, or translating between codecs
+    for clients that cannot participate in the file's native encoding (including NFSv3
+    clients). All proxy-server-to- metadata-server coordination is fore-channel: the
+    metadata server returns work assignments inline in the response to a proxy-server-
+    initiated PROXY_PROGRESS poll, and the proxy server reports completion via a fore-channel
+    PROXY_DONE. No callback operations are required for the proxy server protocol.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-01
+      format: text/plain
+    docidentifier:
+    - content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-04
+      format: text/plain
+    docidentifier:
+    - content: draft-haynes-nfsv4-flexfiles-v2-proxy-server-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-haynes-nfsv4-flexfiles-v2-proxy-server-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

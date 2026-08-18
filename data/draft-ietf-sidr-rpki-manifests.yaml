@@ -1,0 +1,41 @@
+---
+id: draftietfsidrrpkimanifests
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Manifests for the Resource Public Key Infrastructure (RPKI)
+  format: text/plain
+docidentifier:
+- content: draft-ietf-sidr-rpki-manifests
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document defines a "manifest" for use in the Resource Public Key
+    Infrastructure (RPKI). A manifest is a signed object (file) that contains a listing
+    of all the signed objects (files) in the repository publication point (directory)
+    associated with an authority responsible for publishing in the repository. For
+    each certificate, Certificate Revocation List (CRL), or other type of signed objects
+    issued by the authority that are published at this repository publication point,
+    the manifest contains both the name of the file containing the object and a hash
+    of the file content. Manifests are intended to enable a relying party (RP) to
+    detect certain forms of attacks against a repository. Specifically, if an RP checks
+    a manifest's contents against the signed objects retrieved from a repository publication
+    point, then the RP can detect "stale" (valid) data and deletion of signed objects.
+    [STANDARDS-TRACK]</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-sidr-rpki-manifests-16
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-sidr-rpki-manifests-16
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

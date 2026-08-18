@@ -1,0 +1,54 @@
+---
+id: draftkazuhoccwgrapidstart
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Rapid Startup of Congestion Control
+  format: text/plain
+docidentifier:
+- content: draft-kazuho-ccwg-rapid-start
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines Rapid Start, a congestion-control startup algorithm.
+    It starts by pacing first full flight over a full RTT, allowing an initial window
+    up to 2× that of classic paced slow start at a comparable sending rate. It then
+    grows the window by 3× per RTT until queue buildup is observed, after which it
+    reverts to classic 2× slow start growth. When congestion is signaled, Rapid Start
+    smoothly converges the window based on delivered data, avoiding bursts and underutilization,
+    before handing over to ordinary congestion avoidance.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-00
+      format: text/plain
+    docidentifier:
+    - content: draft-kazuho-ccwg-rapid-start-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-01
+      format: text/plain
+    docidentifier:
+    - content: draft-kazuho-ccwg-rapid-start-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-02
+      format: text/plain
+    docidentifier:
+    - content: draft-kazuho-ccwg-rapid-start-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

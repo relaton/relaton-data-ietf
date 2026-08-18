@@ -1,0 +1,45 @@
+---
+id: drafttschofenighiprghipnatfwtraversal
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: 'Traversing HIP-aware NATs and Firewalls: Problem Statement and Requirements'
+  format: text/plain
+docidentifier:
+- content: draft-tschofenig-hiprg-hip-natfw-traversal
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>The Host Identity Protocol (HIP) is a signaling protocol, which supports
+    mobility and multihoming by adding a new layer in the TCP/IP stack. By carring
+    relevant parameters in the signaling messages, HIP can be used to establish IPsec
+    encapsulating security payload (ESP) security associations between two hosts.
+    Middleboxes (e.g. firewalls and network address translators) cannot inspect transport
+    layer headers of data traffic if that traffic is sent over an IPsec ESP tunnel.
+    However, HIP is designed to be middlebox friendly; it enables the middleboxes
+    to inspect the signaling messages. The information that they can derive from that
+    messages enables the middleboxes to uniquely identify the subsequent data flows,
+    e.g. for the purposes of multiplexing and demultiplexing. A middlebox that implements
+    the relevant mechanisms is called "HIP-aware". This document presents a problem
+    statement and lists some requirements that are necessary for a HIP-aware middlebox
+    traversal technique. These include authentication and authorization of signaling
+    end-hosts by the middleboxes. Such authorization will help the middleboxes to
+    decide whether or not an end host is allowed to traverse, and can potentially
+    limit unwanted traffic.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-tschofenig-hiprg-hip-natfw-traversal-06
+      format: text/plain
+    docidentifier:
+    - content: draft-tschofenig-hiprg-hip-natfw-traversal-06
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

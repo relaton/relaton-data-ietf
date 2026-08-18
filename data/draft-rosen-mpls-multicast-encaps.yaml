@@ -1,0 +1,41 @@
+---
+id: draftrosenmplsmulticastencaps
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: MPLS Multicast Encapsulations
+  format: text/plain
+docidentifier:
+- content: draft-rosen-mpls-multicast-encaps
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: '<p>RFC 3032 established two data link layer codepoints for MPLS: one to
+    indicate that the data link layer frame is carrying an MPLS unicast packet, and
+    the other to indicate that the data link layer frame is carrying an MPLS multicast
+    packet. This specification updates RFC3032 by redefining the meaning of these
+    two codepoints. The former "multicast codepoint" is now to be used only on multiaccess
+    media, and it is to mean "the top label of the following label stack is an upstream-assigned
+    label". The former "unicast codepoint" is to be used in all other cases. Whether
+    the data link layer payload is a unicast MPLS packet or a multicast MPLS packet
+    is now to be determined by looking up the top label, rather than by the codepoint.
+    RFC3032 does not specify the destination address to be placed in the "MAC DA"
+    field of an ethernet frame which carries an MPLS multicast packet. This document
+    provides that specification. This document updates RFC 3032 and RFC 4023.</p>'
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rosen-mpls-multicast-encaps-01
+      format: text/plain
+    docidentifier:
+    - content: draft-rosen-mpls-multicast-encaps-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

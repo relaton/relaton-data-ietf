@@ -1,0 +1,95 @@
+---
+id: drafttulshibagwalewimsecrest00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Contextualized REST Architecture
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tulshibagwale-wimse-crest-00
+docidentifier:
+- content: draft-tulshibagwale-wimse-crest-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.tulshibagwale-wimse-crest
+  type: IETF
+  scope: anchor
+docnumber: I-D.tulshibagwale-wimse-crest
+date:
+- type: published
+  at: '2024-11-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Atul
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Tulshibagwale
+      completename:
+        language: en
+        content: Atul Tulshibagwale
+    affiliation:
+    - organization:
+        name:
+        - content: SGNL
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>The REST architecture is extremely popular in modern computing environments.
+    A benefit it provides is that each request can be serviced by independent server
+    side components such as different instances of web servers or different instances
+    of serverless request handlers. The lack of any context associated with a request
+    means that the client has to provide the entire context with every request. In
+    monolithic server-side architectures the client typically only provides an identifier
+    to a previously established "session" on the server side, which is retrieved from
+    a persistent storage such as a database. However, this strategy often does not
+    work in microservices architectures, where the persistent storage may be many
+    hops away from the server-side components that handle the incoming REST API requests.
+    As a result, REST APIs are used between services and each request is required
+    to carry large context including tokens such as Transaction Tokens [TRATS] (which
+    assure the identity and context of each request), SPIFFE [SPIFFE] tokens (which
+    assures the service identity) and possibly other context. The Contextualized REST
+    (CREST) architecture adds a cached context to REST, with mechanisms to negotiate
+    the establishment of the context when it is not found. Each request can refer
+    to the context items it depends upon instead of carrying the entire context with
+    the request. The server can accept the reference to the context item or respond
+    with a specific error to prompt the client to reestablish the context. Clients
+    can create new or delete existing context items in separate requests or as a part
+    of other requests. The CREST architecture assumes the server holds the context
+    across different requests in a server-side cache. Such a cache may be typically
+    shared across various applications and services within a VPC or a data center.
+    The possibility that subsequent requests from the same client will reach different
+    VPCs or data centers is low, thus providing an efficiency optimization for the
+    vast majority of requests.</p>
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-tulshibagwale-wimse-crest-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

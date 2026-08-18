@@ -1,0 +1,172 @@
+---
+id: RFC3449
+schema_version: v1.5.6
+type: standard
+title:
+- content: TCP Performance Implications of Network Path Asymmetry
+  type: main
+  format: text/plain
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc3449
+docidentifier:
+- content: RFC 3449
+  type: IETF
+  primary: true
+- content: 10.17487/RFC3449
+  type: DOI
+docnumber: RFC3449
+date:
+- type: published
+  at: 2002-12
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        script: Latn
+        content: H.
+      surname:
+        language: en
+        script: Latn
+        content: Balakrishnan
+      completename:
+        language: en
+        script: Latn
+        content: H. Balakrishnan
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        script: Latn
+        content: V.
+      surname:
+        language: en
+        script: Latn
+        content: Padmanabhan
+      completename:
+        language: en
+        script: Latn
+        content: V. Padmanabhan
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        script: Latn
+        content: G.
+      surname:
+        language: en
+        script: Latn
+        content: Fairhurst
+      completename:
+        language: en
+        script: Latn
+        content: G. Fairhurst
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        script: Latn
+        content: M.
+      surname:
+        language: en
+        script: Latn
+        content: Sooriyabandara
+      completename:
+        language: en
+        script: Latn
+        content: M. Sooriyabandara
+- role:
+  - type: publisher
+  organization:
+    name:
+    - content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    subdivision:
+    - name:
+      - content: pilc
+      type: technical-committee
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes TCP performance problems that arise because
+    of asymmetric effects. These problems arise in several access networks, including
+    bandwidth-asymmetric networks and packet radio subnetworks, for different underlying
+    reasons. However, the end result on TCP performance is the same in both cases:
+    performance often degrades significantly because of imperfection and variability
+    in the ACK feedback from the receiver to the sender. The document details several
+    mitigations to these effects, which have either been proposed or evaluated in
+    the literature, or are currently deployed in networks. These solutions use a combination
+    of local link- layer techniques, subnetwork, and end-to-end mechanisms, consisting
+    of: (i) techniques to manage the channel used for the upstream bottleneck link
+    carrying the ACKs, typically using header compression or reducing the frequency
+    of TCP ACKs, (ii) techniques to handle this reduced ACK frequency to retain the
+    TCP sender's acknowledgment-triggered self- clocking and (iii) techniques to schedule
+    the data and ACK packets in the reverse direction to improve performance in the
+    presence of two-way traffic. Each technique is described, together with known
+    issues, and recommendations for use. A summary of the recommendations is provided
+    at the end of the document. This document specifies an Internet Best Current Practices
+    for the Internet Community, and requests discussion and suggestions for improvements.</p>"
+  format: text/html
+series:
+- title:
+  - content: BCP
+    format: text/plain
+  number: '69'
+- title:
+  - content: RFC
+    format: text/plain
+  number: '3449'
+- type: stream
+  title:
+  - content: IETF
+    format: text/plain
+keyword:
+- vocab:
+    content: links
+- vocab:
+    content: sender
+- vocab:
+    content: receiver
+- vocab:
+    content: ack
+ext:
+  schema_version: v1.1.2
+  flavor: ietf

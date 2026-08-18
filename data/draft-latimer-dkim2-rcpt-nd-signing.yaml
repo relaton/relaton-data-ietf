@@ -1,0 +1,40 @@
+---
+id: draftlatimerdkim2rcptndsigning
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: DKIM2 Recipient and Next Domain Signing
+  format: text/plain
+docidentifier:
+- content: draft-latimer-dkim2-rcpt-nd-signing
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document proposes using the DKIM2 ESMTP extension to pass a signature
+    for each intended recipient through the SMTP session rather than splitting email
+    at the time of signing. This approach meets the DKIM2 objective of preventing
+    email replay, while also preserving existing SMTP delivery logic, maintaining
+    compatibility with DKIM and avoiding multiple calls to the DKIM2 filter. Also
+    proposed is a method of signing the next domain in the DKIM2 chain of custody
+    independently from the DKIM2-Signature. As per RFC5321, "... each and every extension,
+    regardless of its benefits, must be carefully scrutinized with respect to its
+    implementation, deployment, and interoperability costs". The requirements outlined
+    herein ensure the majority of DKIM2 logic can be implemented within filters or
+    supporting code, with only minimal and isolated changes in SMTP code.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-latimer-dkim2-rcpt-nd-signing-00
+      format: text/plain
+    docidentifier:
+    - content: draft-latimer-dkim2-rcpt-nd-signing-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

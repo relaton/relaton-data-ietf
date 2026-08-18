@@ -1,0 +1,115 @@
+---
+id: draftzhuoauthasyncdelegation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Sender-Constrained Delegation Handle for Asynchronous OAuth 2.0 Identity
+    Chaining
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-00
+docidentifier:
+- content: draft-zhu-oauth-async-delegation-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.zhu-oauth-async-delegation
+  type: IETF
+  scope: anchor
+docnumber: I-D.zhu-oauth-async-delegation
+date:
+- type: published
+  at: '2026-05-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Larry
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Zhu
+      completename:
+        language: en
+        content: Larry Zhu
+    affiliation:
+    - organization:
+        name:
+        - content: Atlassian
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sam
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Currie
+      completename:
+        language: en
+        content: Sam Currie
+    affiliation:
+    - organization:
+        name:
+        - content: Atlassian
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: '<p>This document defines an extension to OAuth 2.0 Token Exchange [RFC8693]
+    and the OAuth Identity Chaining draft [I-D.ietf-oauth-identity-chaining] for delegated
+    workflows that must continue after the end user has gone offline. When a chained
+    access token expires while the end user is unavailable to re-authenticate (for
+    example, to satisfy a multi-factor authentication or a touch-to-engage gesture),
+    the acting client today has no standards- defined way to obtain a refreshed chained
+    token without either widening privileges, breaking the identity chain, or impersonating
+    the user as a service. This specification introduces the "Delegation Handle":
+    a sender-constrained, audience-locked, scope- frozen JSON Web Token issued by
+    the authorization server alongside a chained access token, that the original acting
+    client MAY present back to the authorization server to refresh the chained access
+    token within strict, server-side policy bounds and without re-prompting the end
+    user.</p>'
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-zhu-oauth-async-delegation-03
+      format: text/plain
+    docidentifier:
+    - content: draft-zhu-oauth-async-delegation-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-zhu-oauth-async-delegation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

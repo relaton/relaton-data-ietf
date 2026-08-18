@@ -1,0 +1,46 @@
+---
+id: drafthuquednsopnsrevalidation
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Delegation Revalidation by DNS Resolvers
+  format: text/plain
+docidentifier:
+- content: draft-huque-dnsop-ns-revalidation
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document recommends improved DNS [RFC1034] [RFC1035] resolver
+    behavior with respect to the processing of Name Server (NS) resource record sets
+    (RRset) during iterative resolution. When following a referral response from an
+    authoritative server to a child zone, DNS resolvers should explicitly query the
+    authoritative NS RRset at the apex of the child zone and cache this in preference
+    to the NS RRset on the parent side of the zone cut. Resolvers should also periodically
+    revalidate the child delegation by re-quering the parent zone at the expiration
+    of the TTL of the parent side NS RRset.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-huque-dnsop-ns-revalidation-00
+      format: text/plain
+    docidentifier:
+    - content: draft-huque-dnsop-ns-revalidation-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-huque-dnsop-ns-revalidation-01
+      format: text/plain
+    docidentifier:
+    - content: draft-huque-dnsop-ns-revalidation-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

@@ -1,0 +1,37 @@
+---
+id: draftboschiipfixreducingredundancy
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Reducing redundancy in IPFIX and PSAMP reports
+  format: text/plain
+docidentifier:
+- content: draft-boschi-ipfix-reducing-redundancy
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes a bandwidth saving method for exporting flow
+    or packet information using the IP Flow Information Export (IPFIX) protocol. As
+    the PSAMP protocol is based on IPFIX, these considerations are valid for PSAMP
+    exports as well. This method works by separating information common to several
+    flow records from information specific to an individual flow record. Common flow
+    information is exported only once in a data record defined by an option template,
+    while the rest of the specific flow information is associated with the common
+    information via a unique identifier.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-boschi-ipfix-reducing-redundancy-02
+      format: text/plain
+    docidentifier:
+    - content: draft-boschi-ipfix-reducing-redundancy-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

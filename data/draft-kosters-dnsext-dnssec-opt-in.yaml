@@ -1,0 +1,37 @@
+---
+id: draftkostersdnsextdnssecoptin
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: DNSSEC Opt-in for Large Zones
+  format: text/plain
+docidentifier:
+- content: draft-kosters-dnsext-dnssec-opt-in
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>In order for DNSSEC to be deployed operationally with large zones and
+    little operational impact, there needs to be included a mechanism that allows
+    for the separation of secure versus unsecure views of zones. This needs to be
+    done in a transparent fashion that allows DNSSEC to be deployed in an incremental
+    manner. This document proposes the use of an extended RCODE to signify that a
+    DNSSEC-aware requestor may have to re-query for the information, if and only if,
+    the delegation is not yet secure. Thus, one can maintain two views of the zone
+    and expand the DNSSEC zone as demand warrants.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kosters-dnsext-dnssec-opt-in-01
+      format: text/plain
+    docidentifier:
+    - content: draft-kosters-dnsext-dnssec-opt-in-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

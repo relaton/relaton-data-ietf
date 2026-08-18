@@ -1,0 +1,41 @@
+---
+id: drafthokelekrlfap
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Loop-Free IP Fast Reroute Using Local and Remote LFAPs
+  format: text/plain
+docidentifier:
+- content: draft-hokelek-rlfap
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This draft describes a new loop-free IP fast reroute mechanism which
+    enhances the IP Fast-ReRoute (IPFRR) [1,15] by introducing the concept of pre-computed
+    remote Loop-Free Alternate Paths (rLFAPs) on top of the IPFRR local LFAP. In rLFAP,
+    a router which is adjacent to the failed resource switches over to pre-computed
+    LFAPs, if they exist, immediately after failure detection. Multi-hop neighbors
+    (MNBs) are notified about this remote failure as quickly as possible using fast
+    failure notification mechanism. Upon receipt of failure information, MNBs activate
+    their pre-computed remote LFAPs that they maintain for protecting against remote
+    failures within their multi-hop neighborhoods. In the worst case, where IPFRR
+    results in forming micro-loops, rLFAP completely prevents micro-loops for single
+    link failures and quickly converges to a loop-free path in case of multiple link
+    failures.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hokelek-rlfap-01
+      format: text/plain
+    docidentifier:
+    - content: draft-hokelek-rlfap-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

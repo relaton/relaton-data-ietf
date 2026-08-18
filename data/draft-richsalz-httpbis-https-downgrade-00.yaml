@@ -1,0 +1,161 @@
+---
+id: draftrichsalzhttpbishttpsdowngrade00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Best practices for TLS Downgrade
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-richsalz-httpbis-https-downgrade-00
+docidentifier:
+- content: draft-richsalz-httpbis-https-downgrade-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.richsalz-httpbis-https-downgrade
+  type: IETF
+  scope: anchor
+docnumber: I-D.richsalz-httpbis-https-downgrade
+date:
+- type: published
+  at: '2019-03-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Brian
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Sniffen
+      completename:
+        language: en
+        content: Brian Sniffen
+    affiliation:
+    - organization:
+        name:
+        - content: Akamai Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Mike
+      - language: en
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Bishop
+      completename:
+        language: en
+        content: Mike Bishop
+    affiliation:
+    - organization:
+        name:
+        - content: Akamai Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Erik
+      - language: en
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Nygren
+      completename:
+        language: en
+        content: Erik Nygren
+    affiliation:
+    - organization:
+        name:
+        - content: Akamai Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Rich
+      - language: en
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Salz
+      completename:
+        language: en
+        content: Rich Salz
+    affiliation:
+    - organization:
+        name:
+        - content: Akamai Technologies
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>Content providers delivering content via CDNs will sometimes deliver
+    content over HTTPS (or both HTTPS and HTTP) but configure the CDN to pull from
+    the origin over cleartext and unauthenticated HTTP. From the perspective of a
+    client, it appears that their requests and associated responses are delivered
+    over HTTPS, while in reality their requests are being sent across the network
+    in-the-clear and responses are delivered unauthenticated. This exposes user request
+    data to pervasive monitoring [RFC7258]; it also means response data may be tampered
+    with by active adversaries. Terminating TLS connections on a load balancer and
+    contacting a backend over cleartext has long been common within data centers,
+    but doing this TLS termination and downgrade to HTTP at a CDN introduces additional
+    risk when the unprotected traffic is sent over the general Internet, sometimes
+    across national boundaries. While it would be nice to say "never do this," customer
+    demand, content provider use-cases, and market forces today make it impossible
+    for CDNs to not support downgrade. However, following a set of best practices
+    can provide visibility into when this is happening and can reduce some of the
+    risks.</p>
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-richsalz-httpbis-https-downgrade-01
+      format: text/plain
+    docidentifier:
+    - content: draft-richsalz-httpbis-https-downgrade-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-richsalz-httpbis-https-downgrade-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

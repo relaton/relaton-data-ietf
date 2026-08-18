@@ -1,0 +1,192 @@
+---
+id: draftbarthelschcoamschc00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: OAM for LPWAN using Static Context Header Compression (SCHC)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-barthel-schc-oam-schc-00
+docidentifier:
+- content: draft-barthel-schc-oam-schc-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.barthel-schc-oam-schc
+  type: IETF
+  scope: anchor
+docnumber: I-D.barthel-schc-oam-schc
+date:
+- type: published
+  at: '2023-06-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Dominique
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Barthel
+      completename:
+        language: en
+        content: Dominique Barthel
+    affiliation:
+    - organization:
+        name:
+        - content: Orange SA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Laurent
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Toutain
+      completename:
+        language: en
+        content: Laurent Toutain
+    affiliation:
+    - organization:
+        name:
+        - content: IMT Atlantique
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Arunprabhu
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Kandasamy
+      completename:
+        language: en
+        content: Arunprabhu Kandasamy
+    affiliation:
+    - organization:
+        name:
+        - content: Acklio
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Diego
+      - language: en
+        initial: D
+      - language: en
+        initial: R
+      formatted_initials:
+        language: en
+        content: D. R.
+      surname:
+        language: en
+        content: Dujovne
+      completename:
+        language: en
+        content: Diego Roberto Dujovne
+    affiliation:
+    - organization:
+        name:
+        - content: Universidad Diego Portales
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        initial: J
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: J. C.
+      surname:
+        language: en
+        content: Zúñiga
+      completename:
+        language: en
+        content: Juan-Carlos Zúñiga
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes ICMPv6 compression with SCHC and how basic
+    OAM is performed on Low Power Wide Area Networks (LPWANs) by compressing ICMPv6/IPv6
+    headers and by protecting the LPWAN network and the Device from undesirable ICMPv6
+    traffic. With IP protocols now generalizing to constrained networks, users expect
+    to be able to Operate, Administer and Maintain them with the familiar tools and
+    protocols they already use on less constrained networks. OAM uses specific messages
+    sent into the data plane to measure some parameters of a network. Most of the
+    time, no explicit values are sent is these messages. Network parameters are obtained
+    from the analysis of these specific messages. This can be used: * To detect if
+    a host is up or down. * To measure the RTT and its variation over time. * To learn
+    the path used by packets to reach a destination. OAM in LPWAN is a little bit
+    trickier since the bandwidth is limited and extra traffic added by OAM can introduce
+    perturbation on regular transmission. Three main scenarios are investigated: *
+    OAM reachability messages coming from internet. In that case, the SCHC core should
+    act as a proxy and handle specifically the OAM traffic. * OAM messages initiated
+    by LPWAN devices: They can be anticipated by the core SCHC. * OAM error messages
+    coming from internet. In that case, the SCHC core may forward a compressed version
+    to the device. The primitive functionalities of OAM are achieved with the ICMPv6
+    protocol. ICMPv6 defines messages that inform the source of IPv6 packets of errors
+    during packet delivery. It also defines the Echo Request/ Reply messages that
+    are used for basic network troubleshooting (ping command). ICMPv6 messages are
+    transported on IPv6. This document also introduces the notion of actions in a
+    SCHC rule, to perform locally some operations.</p>"
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-barthel-schc-oam-schc-01
+      format: text/plain
+    docidentifier:
+    - content: draft-barthel-schc-oam-schc-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-barthel-schc-oam-schc-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

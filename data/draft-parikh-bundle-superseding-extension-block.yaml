@@ -1,0 +1,42 @@
+---
+id: draftparikhbundlesupersedingextensionblock
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Delay-Tolerant Networking Superseding Bundle Extension Block
+  format: text/plain
+docidentifier:
+- content: draft-parikh-bundle-superseding-extension-block
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines an optional Bundle Protocol block called the
+    Superseding Bundle Extension Block (SBEB) for use with the Bundle Protocol in
+    the context of the Delay-Tolerant Networking Architecture. Applications use this
+    block to call for the removal of previously sent bundles that are rendered obsolete
+    by more recent bundles. Upon receiving a bundle with an SBEB, a node will search
+    its bundle store (and outbound queues) for bundles that are obsoleted by other
+    related bundles according to their source and destination EID, and the SBEB cookie
+    (if present), and may delete some or all of them. Discarding obsolete bundles
+    helps conserve storage space and prevents expending resources in further forwarding
+    bundles that are no longer relevant. The bundle protocol already uses expiration
+    times to remove bundles that are no longer useful to applications. The SBEB is
+    a way for applications to mark bundles that a node may delete prior to their expiration
+    times.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-parikh-bundle-superseding-extension-block-01
+      format: text/plain
+    docidentifier:
+    - content: draft-parikh-bundle-superseding-extension-block-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

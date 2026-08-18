@@ -1,0 +1,301 @@
+---
+id: draftietfteaspceccusecases02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Use Cases for Path Computation Element (PCE) as a Central Controller
+    (PCECC).
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-pcecc-use-cases-02
+docidentifier:
+- content: draft-ietf-teas-pcecc-use-cases-02
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-teas-pcecc-use-cases
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-teas-pcecc-use-cases
+date:
+- type: published
+  at: '2018-10-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Quintin
+      - language: en
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Quintin Zhao
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Zhenbin
+      - language: en
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhenbin Li
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Boris
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Khasanov
+      completename:
+        language: en
+        content: Boris Khasanov
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Dhruv
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dhody
+      completename:
+        language: en
+        content: Dhruv Dhody
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Zekung
+      - language: en
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Ke
+      completename:
+        language: en
+        content: Zekung Ke
+    affiliation:
+    - organization:
+        name:
+        - content: Tencent Holdings Ltd.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Luyuan
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Fang
+      completename:
+        language: en
+        content: Luyuan Fang
+    affiliation:
+    - organization:
+        name:
+        - content: Expedia, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Chao
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhou
+      completename:
+        language: en
+        content: Chao Zhou
+    affiliation:
+    - organization:
+        name:
+        - content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Telus
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Communications
+      completename:
+        language: en
+        content: Telus Communications
+    affiliation:
+    - organization:
+        name:
+        - content: Telus Communications
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Artem
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Rachitskiy
+      completename:
+        language: en
+        content: Artem Rachitskiy
+    affiliation:
+    - organization:
+        name:
+        - content: Mobile TeleSystems JLLC
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Anton
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Gulida
+      completename:
+        language: en
+        content: Anton Gulida
+    affiliation:
+    - organization:
+        name:
+        - content: LLC "Lifetech"
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The Path Computation Element (PCE) is a core component of Software-
+    Defined Networking (SDN) systems. It can compute optimal paths for traffic across
+    a network and can also update the paths to reflect changes in the network or traffic
+    demands. PCE was developed to derive paths for MPLS Label Switched Paths (LSPs),
+    which are supplied to the head end of the LSP using the Path Computation Element
+    Communication Protocol (PCEP). SDN has a broader applicability than signaled MPLS
+    traffic-engineered (TE) networks, and the PCE may be used to determine paths in
+    a range of use cases including static LSPs, segment routing, Service Function
+    Chaining (SFC), and most forms of a routed or switched network. It is, therefore,
+    reasonable to consider PCEP as a control protocol for use in these environments
+    to allow the PCE to be fully enabled as a central controller. This document describes
+    general considerations for PCECC deployment and examines its applicability and
+    benefits, as well as its challenges and limitations, through a number of use cases.
+    PCEP extensions required for stateful PCE usage are covered in separate documents.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-teas-pcecc-use-cases-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-teas-pcecc-use-cases-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-teas-pcecc-use-cases-13
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-teas-pcecc-use-cases-13
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-teas-pcecc-use-cases-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

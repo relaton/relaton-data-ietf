@@ -1,0 +1,37 @@
+---
+id: draftklockaribgposcillation
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Oscillation Prevention in I-BGP
+  format: text/plain
+docidentifier:
+- content: draft-klockar-ibgp-oscillation
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This memo presents a technique for preventing oscillations in I-BGP.
+    The idea is to utilize already known data in routers to stop oscillation. This
+    builds on the fact that routers can send implicit and explicit withdrawals. Implicit
+    withdrawals are redefined to mean that the route still exist and explicit withdrawal
+    to mean that the route has disappeared. The router can detect and avoid oscillation
+    by storing the implicit withdrawn routes and using them to rule out other routes.
+    The cost is more cheap memory for the RIB-In but no extra expensive memory is
+    needed in the forwarding table.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-klockar-ibgp-oscillation-00
+      format: text/plain
+    docidentifier:
+    - content: draft-klockar-ibgp-oscillation-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

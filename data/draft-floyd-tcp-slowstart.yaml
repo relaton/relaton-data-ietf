@@ -1,0 +1,41 @@
+---
+id: draftfloydtcpslowstart
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Limited Slow-Start for TCP with Large Congestion Windows
+  format: text/plain
+docidentifier:
+- content: draft-floyd-tcp-slowstart
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This note describes an optional modification for TCP's slow-start for
+    use with TCP connections with large congestion windows. For TCP connections that
+    are able to use congestion windows of thousands (or tens of thousands) of MSS-sized
+    segments (for MSS the sender's MAXIMUM SEGMENT SIZE), the current slow-start procedure
+    can result in increasing the congestion window by thousands of segments in a single
+    round-trip time. Such an increase can easily result in thousands of packets being
+    dropped in one round-trip time. This is often counter- productive for the TCP
+    flow itself, and is also hard on the rest of the traffic sharing the congested
+    link. This note describes Limited Slow-Start as an optional mechanism for limiting
+    the number of segments by which the congestion window is increased for one window
+    of data during slow-start, in order to improve performance for TCP connections
+    with large congestion windows.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-floyd-tcp-slowstart-02
+      format: text/plain
+    docidentifier:
+    - content: draft-floyd-tcp-slowstart-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

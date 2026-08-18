@@ -1,0 +1,46 @@
+---
+id: draftmptcpcongestion
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Coupled Multipath-Aware Congestion Control
+  format: text/plain
+docidentifier:
+- content: draft-mptcp-congestion
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Often endpoints are connected by multiple paths, but communications
+    are usually restricted to a single path per connection. Resource usage within
+    the network would be more efficient were it possible for these multiple paths
+    to be used concurrently. Multipath TCP is a proposal to achieve multipath transport
+    in TCP. New congestion control algorithms are needed for multipath transport protocols
+    such as Multipath TCP, as single path algorithms have a series of issues in the
+    multipath context. One of the prominent problems is that running existing algorithms
+    such as TCP New Reno independently on each path would give the multipath flow
+    more than its fair share at a bottleneck link traversed by more than one of its
+    subflows. Further, it is desirable that a source with multiple paths available
+    will transfer more traffic using the least congested of the paths, hence achieving
+    resource pooling. This would increase the overall utilization of the network and
+    also its robustness to failure. This document presents a congestion control algorithm
+    which couples the congestion control algorithms running on different subflows
+    by linking their increase functions, and dynamically controls the overall aggresiveness
+    of the multipath flow. The result is a practical algorithm that is fair to TCP
+    at bottlenecks while moving traffic away from congested links.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mptcp-congestion-00
+      format: text/plain
+    docidentifier:
+    - content: draft-mptcp-congestion-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

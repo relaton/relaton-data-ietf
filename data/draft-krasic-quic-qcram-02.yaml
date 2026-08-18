@@ -1,0 +1,100 @@
+---
+id: draftkrasicquicqcram02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Header Compression for HTTP over QUIC
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-krasic-quic-qcram-02
+docidentifier:
+- content: draft-krasic-quic-qcram-02
+  type: Internet-Draft
+  primary: true
+- content: I-D.krasic-quic-qcram
+  type: IETF
+  scope: anchor
+docnumber: I-D.krasic-quic-qcram
+date:
+- type: published
+  at: '2017-08-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Charles
+      - language: en
+        initial: C
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: C. B.
+      surname:
+        language: en
+        content: Krasic
+      completename:
+        language: en
+        content: Charles 'Buck' Krasic
+    affiliation:
+    - organization:
+        name:
+        - content: Google
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The design of the core QUIC transport and the mapping of HTTP semantics
+    over it subsume many HTTP/2 features, prominent among them stream multiplexing
+    and HTTP header compression. A key advantage of the QUIC transport is it provides
+    stream multiplexing free of HoL blocking between streams, while in HTTP/2 multiplexed
+    streams can suffer HoL blocking primarily due to HTTP/2's layering above TCP.
+    However if HPACK is used for header compression, HTTP over QUIC is still vulnerable
+    to HoL blocking, because of how HPACK exploits header redundancies between multiplexed
+    HTTP transactions. This draft defines QCRAM, a variation of HPACK and mechanisms
+    in the QUIC HTTP mapping that allow QUIC implementations the flexibility to avoid
+    header-compression induced HoL blocking.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-krasic-quic-qcram-01
+      format: text/plain
+    docidentifier:
+    - content: draft-krasic-quic-qcram-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-krasic-quic-qcram-04
+      format: text/plain
+    docidentifier:
+    - content: draft-krasic-quic-qcram-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-krasic-quic-qcram-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

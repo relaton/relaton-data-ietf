@@ -1,0 +1,73 @@
+---
+id: draftandrewstcpandipv6useminmtu
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: TCP Fails To Respect IPV6_USE_MIN_MTU
+  format: text/plain
+docidentifier:
+- content: draft-andrews-tcp-and-ipv6-use-minmtu
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The IPV6_USE_MIN_MTU socket option directs the IP layer to limit the
+    IPv6 packet size to the minimum required supported MTU from the base IPv6 specification,
+    i.e. 1280 bytes. Many implementations of TCP running over IPv6 neglect to check
+    the IPV6_USE_MIN_MTU value when performing MSS negotiation and when constructing
+    a TCP segment despite MSS being defined to be the MTU less the IP and TCP header
+    sizes (60 bytes for IPv6). This leads to oversized IPv6 packets being sent resulting
+    in unintended Path Maximum Transport Unit Discovery (PMTUD) being performed and
+    to fragmented IPv6 packets being sent.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-00
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-01
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-02
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-03
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-04
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-04
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

@@ -1,0 +1,187 @@
+---
+id: draftietfbessmvpnevpnaggregationlabel14
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: MVPN/EVPN Tunnel Aggregation with Common Labels
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-mvpn-evpn-aggregation-label-14
+docidentifier:
+- content: draft-ietf-bess-mvpn-evpn-aggregation-label-14
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-bess-mvpn-evpn-aggregation-label
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-bess-mvpn-evpn-aggregation-label
+date:
+- type: published
+  at: '2023-10-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Zhaohui
+      - language: en
+        initial: Z
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: Z. J.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Zhaohui (Jeffrey) Zhang
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Eric
+      - language: en
+        initial: E
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: E. C.
+      surname:
+        language: en
+        content: Rosen
+      completename:
+        language: en
+        content: Eric C. Rosen
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Wen
+      - language: en
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Lin
+      completename:
+        language: en
+        content: Wen Lin
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Zhenbin
+      - language: en
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhenbin Li
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: IJsbrand
+      - language: en
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Wijnands
+      completename:
+        language: en
+        content: IJsbrand Wijnands
+    affiliation:
+    - organization:
+        name:
+        - content: Individual
+version:
+- content: '14'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The MVPN specifications allow a single Point-to-Multipoint (P2MP) tunnel
+    to carry traffic of multiple IP VPNs (abbreviated as VPNs). The EVPN specifications
+    allow a single P2MP tunnel to carry traffic of multiple Broadcast Domains (BDs).
+    These features require the ingress router of the P2MP tunnel to allocate an upstream-assigned
+    MPLS label for each VPN or for each BD. A packet sent on a P2MP tunnel then carries
+    the label that is mapped to its VPN or BD (in some cases, a distinct upstream-assigned
+    label is needed for each flow.) Since each ingress router allocates labels independently,
+    with no coordination among the ingress routers, the egress routers may need to
+    keep track of a large number of labels. The number of labels may need to be as
+    large (or larger) than the product of the number of ingress routers times the
+    number of VPNs or BDs. However, the number of labels can be greatly reduced if
+    the association between a label and a VPN or BD is made by provisioning, so that
+    all ingress routers assign the same label to a particular VPN or BD. New procedures
+    are needed in order to take advantage of such provisioned labels. These new procedures
+    also apply to Multipoint-to-Multipoint (MP2MP) tunnels. This document updates
+    RFCs 6514, 7432 and 7582 by specifying the necessary procedures.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-bess-mvpn-evpn-aggregation-label-08
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-bess-mvpn-evpn-aggregation-label-08
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-bess-mvpn-evpn-aggregation-label-14
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

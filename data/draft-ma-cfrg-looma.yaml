@@ -1,0 +1,39 @@
+---
+id: draftmacfrglooma
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: 'Looma: Low-Latency Post-Quantum Authentication for TLS 1.3 in Datacenters'
+  format: text/plain
+docidentifier:
+- content: draft-ma-cfrg-looma
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Post-quantum (PQ) authentication in TLS 1.3 can add tens to hundreds
+    of microseconds of handshake processing time. In datacenters, where mutual authentication
+    is mandatory, this authentication cost becomes a dominant contributor to end-to-end
+    request latency, particularly when connections are short-lived and handshake rates
+    are high. This document specifies Looma, an online/offline authentication architecture
+    integrated into the TLS 1.3 handshake. Looma replaces the on-path, per-handshake
+    PQ signature with a fast, one-time signature over the TLS transcript and moves
+    expensive work (including the multi-use PQ signature) to an asynchronous background
+    plane. Looma includes a fallback strategy to preserve correct authentication when
+    the verifier does not have the peer's one-time verification key cached.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ma-cfrg-looma-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ma-cfrg-looma-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

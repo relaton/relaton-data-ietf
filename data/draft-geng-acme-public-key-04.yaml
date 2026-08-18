@@ -1,0 +1,155 @@
+---
+id: draftgengacmepublickey04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Automated Certificate Management Environment (ACME) Extension for Public
+    Key Challenges
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-04
+docidentifier:
+- content: draft-geng-acme-public-key-04
+  type: Internet-Draft
+  primary: true
+- content: I-D.geng-acme-public-key
+  type: IETF
+  scope: anchor
+docnumber: I-D.geng-acme-public-key
+date:
+- type: published
+  at: '2026-03-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Feng
+      - language: en
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Geng
+      completename:
+        language: en
+        content: Feng Geng
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Panyu
+      - language: en
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Wu
+      completename:
+        language: en
+        content: Panyu Wu
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Liang
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Xia
+      completename:
+        language: en
+        content: Liang Xia
+    affiliation:
+    - organization:
+        name:
+        - content: Huawei Technologies
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document implements automated certificate provisioning through
+    "public key identity challenge + private key ownership verification" by introducing
+    the pk-01 challenge to the ACME protocol [RFC8555]. It serves as a valuable complement
+    to existing external resource verification challenge types such as DNS/HTTP, extending
+    the ACME protocol's applicability beyond Web-PKI to other scenarios. This enables
+    automated certificate issuance for devices and accounts. The core design objective
+    of this document's extension to ACME's pk-01 challenge is to introduce a trusted
+    identity provider (IdP) during the digital certificate application process. This
+    provider verifies the certificate applicant's identity and obtains the corresponding
+    identity public key. It enables the ACME server to use public key identity authentication
+    protocols (e.g., WebAuthn and Opaque [RFC9807]) to verify whether the genuine
+    application behind the ACME client controls the public key. It ensures strong
+    consistency between the public key used during the challenge phase and the public
+    key ultimately used to sign the certificate, preventing tampering with the public
+    key during the CSR submission phase. This enhances the security of the digital
+    certificate issuance process. Similar related work can be found in [RFC9883].
+    This document also defines an optional process extension that allows removal of
+    the CSR under the pk-01 challenge, enabling the ACME server to issue a certificate
+    directly after successful public key verification. This document provides an example
+    of practical application at the end, illustrating the integration of the OPAQUE
+    [RFC9807], strong asymmetric password authenticated key exchange (saPAKE) protocol
+    with the pk-01 challenge.</p>
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-geng-acme-public-key-03
+      format: text/plain
+    docidentifier:
+    - content: draft-geng-acme-public-key-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-geng-acme-public-key-06
+      format: text/plain
+    docidentifier:
+    - content: draft-geng-acme-public-key-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-geng-acme-public-key-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

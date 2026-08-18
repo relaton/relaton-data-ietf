@@ -1,0 +1,186 @@
+---
+id: draftietftrillcentralizedreplication04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Centralized Replication for BUM traffic in active-active edge connection
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-trill-centralized-replication-04
+docidentifier:
+- content: draft-ietf-trill-centralized-replication-04
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-trill-centralized-replication
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-trill-centralized-replication
+date:
+- type: published
+  at: '2016-03-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Hao
+      - language: en
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Weiguo
+      completename:
+        language: en
+        content: Hao Weiguo
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Yizhou
+      - language: en
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yizhou Li
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Muhammad
+      - language: en
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Durrani
+      completename:
+        language: en
+        content: Muhammad Durrani
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sujay
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Gupta
+      completename:
+        language: en
+        content: Sujay Gupta
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Andrew
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Qu
+      completename:
+        language: en
+        content: Andrew Qu
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Tao
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Han
+      completename:
+        language: en
+        content: Tao Han
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>In TRILL active-active access scenario, RPF check failure issue may
+    occur when pseudo-nickname mechanism in [RFC7781] is used. This draft describes
+    a solution to resolve the RPF check failure issue through centralized replication.
+    All ingress RBridges send BUM (Broadcast, Unknown unicast and Mutlicast) traffic
+    to a centralized node with unicast TRILL encapsulation. When the centralized node
+    receives the BUM traffic, it decapsulates the packets and forwards them to all
+    destination RBridges using a distribution tree established as per TRILL base protocol[RFC6325].
+    To avoid RPF check failure on a RBridge sitting between the ingress RBridge and
+    the centralized replication node, some change of RPF calculation algorithm is
+    required. RPF calculation on each RBridge should use the centralized node as ingress
+    RB instead of the real ingress RBridge which is denoted as RBv in [RFC7781] to
+    perform the calculation.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-trill-centralized-replication-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-trill-centralized-replication-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-trill-centralized-replication-11
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-trill-centralized-replication-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-trill-centralized-replication-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

@@ -1,0 +1,92 @@
+---
+id: draftpskimpassiveprobingpmtud00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Passive Probing for Path MTU Discovery with QUIC
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pskim-passive-probing-pmtud-00
+docidentifier:
+- content: draft-pskim-passive-probing-pmtud-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.pskim-passive-probing-pmtud
+  type: IETF
+  scope: anchor
+docnumber: I-D.pskim-passive-probing-pmtud
+date:
+- type: published
+  at: '2022-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Pyung
+      - language: en
+        initial: P
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: P. S.
+      surname:
+        language: en
+        content: Kim
+      completename:
+        language: en
+        content: Pyung Soo Kim
+    affiliation:
+    - organization:
+        name:
+        - content: TU Korea
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This draft consider an alternative PMTUD for QUIC. To discover the
+    best PMTU, the passive probing approach is adopted. The process of discovering
+    the best PMTU is not carried out separately, but is carried out simultaneously
+    in the actual application data communication. A probe packet is defined newly
+    using 1-RTT packet which includes actual application data as well as a short packet
+    header and a PING_EXT frame. The PING_EXT frame is also defined newly. Until the
+    best PMTU is discovered, the size of the probe packet is changed according to
+    the size of the PMTU candidate. A simple discovery algorithm using only the PMTU
+    candidate sequence with linear upward is described in this draft. Other rather
+    complex discovery algorithms that consider various PMTU candidate sequences will
+    be dealt with in the future.</p>"
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-pskim-passive-probing-pmtud-01
+      format: text/plain
+    docidentifier:
+    - content: draft-pskim-passive-probing-pmtud-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-pskim-passive-probing-pmtud-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

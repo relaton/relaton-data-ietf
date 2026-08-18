@@ -1,0 +1,175 @@
+---
+id: draftietftsvwgl4sarch16
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Low Latency, Low Loss, Scalable Throughput (L4S) Internet Service: Architecture'
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-l4s-arch-16
+docidentifier:
+- content: draft-ietf-tsvwg-l4s-arch-16
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-tsvwg-l4s-arch
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-tsvwg-l4s-arch
+date:
+- type: published
+  at: '2022-02-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Bob
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Koen
+      - language: en
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: De Schepper
+      completename:
+        language: en
+        content: Koen De Schepper
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia Bell Labs
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Marcelo
+      - language: en
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Bagnulo
+      completename:
+        language: en
+        content: Marcelo Bagnulo
+    affiliation:
+    - organization:
+        name:
+        - content: Universidad Carlos III de Madrid
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Greg
+      - language: en
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: White
+      completename:
+        language: en
+        content: Greg White
+    affiliation:
+    - organization:
+        name:
+        - content: CableLabs
+version:
+- content: '16'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes the L4S architecture, which enables Internet
+    applications to achieve Low queuing Latency, Low Loss, and Scalable throughput
+    (L4S). The insight on which L4S is based is that the root cause of queuing delay
+    is in the congestion controllers of senders, not in the queue itself. With the
+    L4S architecture all Internet applications could (but do not have to) transition
+    away from congestion control algorithms that cause substantial queuing delay,
+    to a new class of congestion controls that induce very little queuing, aided by
+    explicit congestion signalling from the network. This new class of congestion
+    controls can provide low latency for capacity-seeking flows, so applications can
+    achieve both high bandwidth and low latency. The architecture primarily concerns
+    incremental deployment. It defines mechanisms that allow the new class of L4S
+    congestion controls to coexist with 'Classic' congestion controls in a shared
+    network. These mechanisms aim to ensure that the latency and throughput performance
+    using an L4S-compliant congestion controller is usually much better (and rarely
+    worse) than performance would have been using a 'Classic' congestion controller,
+    and that competing flows continuing to use 'Classic' controllers are typically
+    not impacted by the presence of L4S. These characteristics are important to encourage
+    adoption of L4S congestion control algorithms and L4S compliant network elements.
+    The L4S architecture consists of three components: network support to isolate
+    L4S traffic from classic traffic; protocol features that allow network elements
+    to identify L4S traffic; and host support for L4S congestion controls.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-l4s-arch-01
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-tsvwg-l4s-arch-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-l4s-arch-19
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-tsvwg-l4s-arch-19
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-tsvwg-l4s-arch-16
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

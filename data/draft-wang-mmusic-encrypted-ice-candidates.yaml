@@ -1,0 +1,38 @@
+---
+id: draftwangmmusicencryptedicecandidates
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Encrypting ICE candidates to improve privacy and connectivity
+  format: text/plain
+docidentifier:
+- content: draft-wang-mmusic-encrypted-ice-candidates
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>WebRTC applications collect ICE candidates as part of the process of
+    creating peer-to-peer connections. To maximize the probability of a direct peer-to-peer
+    connection, client private IP addresses can be included in this candidate collection,
+    but this has privacy implications. This document describes a way to share local
+    IP addresses with local peers without compromising client privacy. During the
+    ICE process, local IP addresses are encrypted and authenticated using a pre-shared
+    key and cipher suite before being put into ICE candidates as hostnames with an
+    ".encrypted" pseudo-top- level domain. Other peers who also have the PSK are able
+    to decrypt these addresses and use them normally in ICE processing.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wang-mmusic-encrypted-ice-candidates-00
+      format: text/plain
+    docidentifier:
+    - content: draft-wang-mmusic-encrypted-ice-candidates-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

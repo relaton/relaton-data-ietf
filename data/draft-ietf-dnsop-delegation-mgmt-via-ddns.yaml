@@ -1,0 +1,63 @@
+---
+id: draftietfdnsopdelegationmgmtviaddns
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Automating DNS Delegation Management via DDNS
+  format: text/plain
+docidentifier:
+- content: draft-ietf-dnsop-delegation-mgmt-via-ddns
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Delegation information (i.e. the NS RRset, possible glue, possible
+    DS records) should always be kept in sync between child zone and parent zone.
+    However, in practice that is not always the case. When the delegation information
+    is not in sync the child zone is usually working fine, but without the amount
+    of redundancy that the zone owner likely expects to have. Hence, should any further
+    problems ensue it could have catastrophic consequences. The DNS name space has
+    lived with this problem for decades and it never goes away. Or, rather, it will
+    never go away until a fully automated mechanism for how to keep the information
+    in sync automatically is deployed. This document proposes such a mechanism based
+    on DNS Dynamic Updates (DDNS) secured with SIG(0) signatures, sent from the child
+    to the parent across the zone cut. The target of the update is discovered via
+    the DSYNC record defined in [RFC9859]. TO BE REMOVED: This document is being collaborated
+    on in Github at: https://github.com/johanix/draft-ietf-dnsop-delegation-mgmt-via-ddns
+    (https://github.com/johanix/draft-ietf-dnsop-delegation-mgmt-via- ddns). The most
+    recent working version of the document, open issues, etc, should all be available
+    there. The authors (gratefully) accept pull requests.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-delegation-mgmt-via-ddns-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-dnsop-delegation-mgmt-via-ddns-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-delegation-mgmt-via-ddns-01
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-dnsop-delegation-mgmt-via-ddns-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-delegation-mgmt-via-ddns-02
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-dnsop-delegation-mgmt-via-ddns-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

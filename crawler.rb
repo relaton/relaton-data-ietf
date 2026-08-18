@@ -1,59 +1,98 @@
 # frozen_string_literal: true
 
-require 'net/http'
-require 'nokogiri'
-require 'rbconfig'
+# Parses and combines the authoritative IETF bibliographic corpora
+# published by IETF Tools (in their older Relaton v1 format) into this
+# repo's data/, converted to the current v3 model shape:
+#
+#   ietf-tools/relaton-data-rfcs          data/RFC*.yaml
+#   ietf-tools/relaton-data-ids           data/draft-*.yaml
+#   ietf-tools/relaton-data-rfcsubseries  data/BCP*|STD*|FYI*.yaml
+#
+# Conversion: legacy hash -> Relaton::Bib::HashParserV1 (the upstream
+# v1 adapter) -> Relaton::Ietf::ItemData -> v3 YAML. Writes only on
+# content change, so an unchanged corpus produces no git churn.
+#
+# The legacy bibxml XML mirror also under data/ is frozen (the classic
+# host retired 2024) and is not indexed: the Pages build reads YAML
+# only.
+
+require 'fileutils'
+require 'tmpdir'
 require 'relaton'
+require 'relaton/bib/hash_parser_v1'
+require 'yaml'
 
-def fetch_document(uri, attempts)
-  begin
-    resp = Net::HTTP.get uri
-  rescue Net::OpenTimeout => e
-    raise e if attempts <= 1
+SOURCES = {
+  'relaton-data-rfcs' => 'https://github.com/ietf-tools/relaton-data-rfcs',
+  'relaton-data-ids' => 'https://github.com/ietf-tools/relaton-data-ids',
+  'relaton-data-rfcsubseries' => 'https://github.com/ietf-tools/relaton-data-rfcsubseries',
+}.freeze
 
-    resp = fetch_document uri, attempts - 1
+def refresh_clone(repo, url)
+  dir = File.join(Dir.tmpdir, "ietf-combine-#{repo}")
+  if Dir.exist?(File.join(dir, '.git'))
+    ok = system('git', '-C', dir, 'fetch', '--depth', '1', 'origin', 'main',
+                out: File::NULL) &&
+         system('git', '-C', dir, 'reset', '--hard', 'FETCH_HEAD',
+                out: File::NULL)
+  else
+    FileUtils.rm_rf(dir)
+    ok = system('git', 'clone', '--depth', '1', '--branch', 'main', url, dir,
+                out: File::NULL)
   end
-  resp
+  ok ? dir : nil
 end
 
-def get_document(ref)
-  file = 'data/' + ref.split('/').last
-  # if File.exist? file
-  #   warn "File #{file} exist"
-  #   return
-  # end
-
-  resp = fetch_document URI(ref), 3
-  # Skip the write when the bytes are unchanged, so a corpus that is
-  # re-downloaded daily produces no git churn.
-  File.write file, resp if !File.exist?(file) || File.binread(file) != resp
-rescue => e # rubocop:disable Style/RescueStandardError
-  warn "Fetching document error #{ref}"
-  warn e.message
-  warn e.backtrace
+def to_v3_yaml(path)
+  hash = YAML.safe_load_file(path, permitted_classes: [Date, Time], aliases: true)
+  norm = Relaton::Bib::HashParserV1.hash_to_bib(hash)
+  recast_flavor(norm)
+  Relaton::Ietf::ItemData.new(**norm).to_yaml
 end
 
-workers = Relaton::Core::WorkersPool.new 10
+# HashParserV1 materializes sub-objects as the base Bib classes; the
+# Ietf models demand their own subclasses. A to_hash/from_hash round
+# trip re-casts the whole subtree (relations are recursive — their
+# embedded bibitems carry relations too).
+def recast_flavor(norm)
+  norm[:ext] = Relaton::Ietf::Ext.from_hash(norm[:ext].to_hash) if norm[:ext]
+  return unless norm[:relation]
 
-workers.worker { |ref| get_document(ref) }
+  norm[:relation] = norm[:relation].map do |rel|
+    Relaton::Ietf::Relation.from_hash(rel.to_hash)
+  end
+end
+
+def combine(repo, url)
+  dir = refresh_clone(repo, url) or raise "clone failed: #{repo}"
+
+  converted = unchanged = failed = 0
+  Dir[File.join(dir, 'data', '*.yaml')].sort.each do |src|
+    dest = File.join(__dir__, 'data', File.basename(src))
+    fresh = begin
+      to_v3_yaml(src)
+    rescue StandardError => e
+      warn "Conversion failed for #{src}: #{e.message}"
+      failed += 1
+      next
+    end
+
+    if File.exist?(dest) && File.read(dest) == fresh
+      unchanged += 1
+    else
+      File.write(dest, fresh)
+      converted += 1
+    end
+  end
+  puts "#{repo}: wrote #{converted}, unchanged #{unchanged}, failed #{failed}"
+rescue StandardError => e
+  warn "#{repo}: #{e.message}"
+end
+
 t1 = Time.now
 puts "Started at: #{t1}"
 
-%w[bibxml bibxml2 bibxml3 bibxml4 bibxml5 bibxml6 bibxml-rfcsubseries].each do |dir|
-  url = "https://xml2rfc.tools.ietf.org/public/rfc/#{dir}/"
-  resp = Net::HTTP.get URI(url)
-  index = Nokogiri::HTML resp
-  index.xpath('//a[starts-with(@href, "reference")]').each do |ref|
-    workers << url + ref[:href]
-  end
-end
-
-workers.end
-workers.result
-
-# Keep the YAML siblings in step with the (possibly updated) corpus so
-# the Pages index build has relaton YAML to read.
-system(RbConfig.ruby, File.expand_path('bibxml_to_yaml.rb', __dir__))
+SOURCES.each { |repo, url| combine(repo, url) }
 
 t2 = Time.now
 puts "Stopped at: #{t2}"

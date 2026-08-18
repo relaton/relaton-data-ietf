@@ -1,0 +1,156 @@
+---
+id: draftgouaillardavtcorecodecagnrtppayload01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Codec agnostic RTP payload format for video
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gouaillard-avtcore-codec-agn-rtp-payload-01
+docidentifier:
+- content: draft-gouaillard-avtcore-codec-agn-rtp-payload-01
+  type: Internet-Draft
+  primary: true
+- content: I-D.gouaillard-avtcore-codec-agn-rtp-payload
+  type: IETF
+  scope: anchor
+docnumber: I-D.gouaillard-avtcore-codec-agn-rtp-payload
+date:
+- type: published
+  at: '2021-03-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sergio
+      - language: en
+        initial: S
+      - language: en
+        initial: G
+      formatted_initials:
+        language: en
+        content: S. G.
+      surname:
+        language: en
+        content: Murillo
+      completename:
+        language: en
+        content: Sergio Garcia Murillo
+    affiliation:
+    - organization:
+        name:
+        - content: CoSMo Software
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Youenn
+      - language: en
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Fablet
+      completename:
+        language: en
+        content: Youenn Fablet
+    affiliation:
+    - organization:
+        name:
+        - content: Apple Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Gouaillard
+      completename:
+        language: en
+        content: Dr. Alex Gouaillard
+    affiliation:
+    - organization:
+        name:
+        - content: CoSMo Software
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>RTP Media Chains usually rely on piping encoder output directly to
+    packetizers. Media packetization formats often support a specific codec format
+    and optimize RTP packets generation accordingly. With the development of Selective
+    Forward Unit (SFU) solutions, that do not process media content server side, the
+    need for media content processing at the origin and at the destination has arised.
+    RTP Media Chains used e.g. in WebRTC solutions are increasingly relying on application-specific
+    transforms that sit in-between encoder and packetizer on one end and in-between
+    depacketizer and decoder on the other end. This use case has become so important,
+    that the W3C is standardizing the capacity to access encoded content with the
+    [WebRTCInsertableStreams] API proposal. An extremely popular use case is application
+    level end-to-end encryption of media content, using for instance [SFrame]. Whatever
+    the modification applied to the media content, RTP packetizers can no longer expect
+    to use packetization formats that mandate media content to be in a specific codec
+    format. In the extreme cases like encryption, where the RTP Payload is made completely
+    opaque to the SFUs, some extra mechanism must also be added for them to be able
+    to route the packets without depending on RTP payload or payload headers. The
+    traditionnal process of creating a new RTP Payload specification per content would
+    not be practical as we would need to make a new one for each codec-transform pair.
+    This document describes a solution, which provides the following features in the
+    case the encoded content has been modified before reaching the packetizer: - a
+    paylaod agnostic RTP packetization format that can be used on any media content,
+    - a negotiation mechanism for the above format and the inner payload, Both of
+    the above mechanism are backward compatible with most of (S)RTP/RTCP mechanisms
+    used for bandwidth estimation and congestion control in RTP/SRTP/webrtc, including
+    but not limited to SSRC, RED, FEC, RTX, NACK, SR/RR, REMB, transport-wide-CC,
+    TMBR,.... It as illustrated by existing implementations in chrome, safari, and
+    Medooze. This document also describes a solution to allow SFUs to continue performing
+    packet routing on top of this generic RTP packetization format. This document
+    complements the SFrame (media encryption), and Dependency Descriptor (AV1 payload
+    annex) documents to provide an End-to-End-Encryption solution that would sit on
+    top of SRTP/Webrtc, use SFUs on the media back-end, and leverage W3C APIs in the
+    browser. A high level description of such system will be provided as an informational
+    I-D in the SFrame WG and then cited here.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gouaillard-avtcore-codec-agn-rtp-payload-00
+      format: text/plain
+    docidentifier:
+    - content: draft-gouaillard-avtcore-codec-agn-rtp-payload-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-gouaillard-avtcore-codec-agn-rtp-payload-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

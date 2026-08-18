@@ -1,0 +1,167 @@
+---
+id: drafteapsha256srp6a00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: EAP SHA256-SRP6a Authentication Protocol
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-eap-sha256-srp6a-00
+docidentifier:
+- content: draft-eap-sha256-srp6a-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.eap-sha256-srp6a
+  type: IETF
+  scope: anchor
+docnumber: I-D.eap-sha256-srp6a
+date:
+- type: published
+  at: '2022-11-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sergio
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Ammirata
+      completename:
+        language: en
+        content: Sergio Ammirata
+    affiliation:
+    - organization:
+        name:
+        - content: SipRadius LLC.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Gijs
+      - language: en
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Peskens
+      completename:
+        language: en
+        content: Gijs Peskens
+    affiliation:
+    - organization:
+        name:
+        - content: SipRadius LLC.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Brad
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Gilmer
+      completename:
+        language: en
+        content: Brad Gilmer
+    affiliation:
+    - organization:
+        name:
+        - content: Video Services Forum
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: John
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Iacovelli
+      completename:
+        language: en
+        content: John Iacovelli
+    affiliation:
+    - organization:
+        name:
+        - content: Video Services Forum
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes an authentication protocol intended for Internet
+    applications which may require a robust and non-leaky exchange of credentials
+    even under adverse network conditions. The protocol has the ability to recover
+    from packet loss during the authentication process, as for example, should the
+    Internet application use the UDP transport protocol under lossy network conditions.
+    It does so by allowing the retransmission of lost packets during authentication.
+    The protocol follows the Extensible Authentication Protocol (RFC 3748 and RFC
+    5247) framework, which allows for the use of multiple authentication mechanisms.
+    It utilizes Secure Remote Password protocol (RFC 2945), with strong, password-based
+    cryptographic hashing. It utilizes the Secure Hashing Algorithm message digest
+    algorithm as the hashing mechanism. The authentication protocol allows for one
+    Server and one or more Clients. Where multiple Clients exist, each may communicate
+    only with the Server. Clients initiate the authentication exchange process. Until
+    the authentication completes successfully, the Server and Client ignore/discard
+    any packets except those supporting the authentication process. The authentication
+    algorithm is based on a username/password or passphrase pair. These are used to
+    generate secure ephemeral keys. The Server has a store of all valid usernames
+    and password hashes. Each Client stores its own username and password. The authentication
+    algorithm provides for each side to prove to the other that it has a valid username/password
+    or passphrase pair, in a way that a third-party monitoring the transactions could
+    not use intercepted information to later successfully authenticate. This mutual
+    authentication exchange consists of several pairs of interactions. The first is
+    a request for authentication by the Client, containing the Client name, to which
+    the Server responds with a challenge for its identity. The Client responds with
+    the Server name for verification purposes. Thereafter, Client and Server each
+    exchange three values consisting of password salts, ephemeral public keys, and
+    hash values. These are generated and verified by Client and Server in accordance
+    with SRP against the stored password/passphrase hashes. While any step in the
+    process may be repeated to provide for dropped packets should a response not be
+    received, the authentication process is terminated by any incorrect value received
+    in any response. Multicast UDP authentication is also supported, with certain
+    limitations.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-eap-sha256-srp6a-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

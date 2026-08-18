@@ -1,0 +1,100 @@
+---
+id: draftcondreycfrgposme00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Proof of Sequential Memory Execution (PoSME)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-condrey-cfrg-posme-00
+docidentifier:
+- content: draft-condrey-cfrg-posme-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.condrey-cfrg-posme
+  type: IETF
+  scope: anchor
+docnumber: I-D.condrey-cfrg-posme
+date:
+- type: published
+  at: '2026-04-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: David
+      - language: en
+        initial: D
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: D. L.
+      surname:
+        language: en
+        content: Condrey
+      completename:
+        language: en
+        content: David Lee Condrey
+    affiliation:
+    - organization:
+        name:
+        - content: WritersLogic Inc
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines Proof of Sequential Memory Execution (PoSME),
+    a cryptographic primitive combining mutable arena state, data- dependent pointer-chase
+    addressing, per-block causal hash binding, and execution entropy entanglement
+    in a single step function. A Prover executes K sequential steps over a mutable
+    N-block arena. Each step reads d blocks at addresses determined by the previous
+    read's result (pointer chasing), writes one block with symbiotic binding (new
+    data depends on old causal hash; new causal hash depends on cursor), and advances
+    a transcript chain. At regular intervals, CPU jitter entropy is folded into the
+    transcript, binding the proof to physical execution on a general-purpose system.
+    The construction provides four properties: (1) unconditional sequential time enforcement
+    (Omega(K) computation regardless of storage), (2) forgery prevention via causal
+    hashes (reduces to collision resistance of H), (3) TMTO resistance scaling linearly
+    with write density rho = K/N (34x penalty at rho=16 for a zero-storage adversary),
+    and (4) execution- environment ASIC resistance (the adversary must execute on
+    a general-purpose CPU with an operating system to produce valid entropy, limiting
+    the advantage to commodity hardware variation). A compact parameter profile achieves
+    these properties with approximately 32 MiB peak RAM. Verification requires O(Q
+    * d^R * log N) hash evaluations with no arena allocation. No trusted setup is
+    required.</p>"
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-condrey-cfrg-posme-01
+      format: text/plain
+    docidentifier:
+    - content: draft-condrey-cfrg-posme-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-condrey-cfrg-posme-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

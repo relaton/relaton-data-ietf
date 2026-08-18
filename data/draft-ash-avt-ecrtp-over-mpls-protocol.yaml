@@ -1,0 +1,41 @@
+---
+id: draftashavtecrtpovermplsprotocol
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Protocol Extensions for ECRTP over MPLS
+  format: text/plain
+docidentifier:
+- content: draft-ash-avt-ecrtp-over-mpls-protocol
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>VoIP typically uses the encapsulation voice/RTP/UDP/IP. When MPLS labels
+    are added, this becomes voice/RTP/UDP/IP/MPLS-labels. For an MPLS VPN, the packet
+    header is at least 48 bytes, while the voice payload is often no more than 30
+    bytes, for example. Header compression can significantly reduce the overhead through
+    various compression mechanisms, such as enhanced compressed RTP (ECRTP). We consider
+    using MPLS to route ECRTP compressed packets over an MPLS LSP without compression/decompression
+    cycles at each router. Such an ECRTP over MPLS capability can increase the bandwidth
+    efficiency as well as processing scalability of the maximum number of simultaneous
+    compressed flows that use header compression at each router. In this draft we
+    propose to use RSVP-TE extensions to signal the header compression context and
+    other control messages between the ingress and egress LSR. We re-use the methods
+    in ECRTP to determine the context.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ash-avt-ecrtp-over-mpls-protocol-02
+      format: text/plain
+    docidentifier:
+    - content: draft-ash-avt-ecrtp-over-mpls-protocol-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

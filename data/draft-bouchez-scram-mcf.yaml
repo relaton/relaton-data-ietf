@@ -1,0 +1,58 @@
+---
+id: draftbouchezscrammcf
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: SCRAM with Modular Crypt Format (SCRAM-MCF)
+  format: text/plain
+docidentifier:
+- content: draft-bouchez-scram-mcf
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies SCRAM-MCF, an extension to the Salted Challenge
+    Response Authentication Mechanism (SCRAM) family of SASL mechanisms ([RFC5802])
+    and HTTP Digest extensions ([RFC7616], [RFC7677]). The extension replaces the
+    PBKDF2-specific iteration count attributes i= and s= in the server-first-message
+    with a generic Modular Crypt Format (MCF) descriptor f=. This allows servers to
+    use modern memory- hard key derivation functions such as Argon2, SCrypt, or bcrypt
+    while preserving the full security properties and message flow of SCRAM. The change
+    is fully backward compatible: servers can continue sending i= and s= for legacy
+    clients and only send f= (or both) when the client advertises support. This document
+    is intended to be discussed and potentially adopted by the KITTEN working group.
+    Feedback from the KITTEN WG is welcome on the kitten@ietf.org mailing list.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bouchez-scram-mcf-00
+      format: text/plain
+    docidentifier:
+    - content: draft-bouchez-scram-mcf-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bouchez-scram-mcf-01
+      format: text/plain
+    docidentifier:
+    - content: draft-bouchez-scram-mcf-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bouchez-scram-mcf-02
+      format: text/plain
+    docidentifier:
+    - content: draft-bouchez-scram-mcf-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

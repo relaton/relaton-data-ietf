@@ -1,0 +1,171 @@
+---
+id: draftlucentegrowbmpoffline01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BMP State Summaries
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lucente-grow-bmp-offline-01
+docidentifier:
+- content: draft-lucente-grow-bmp-offline-01
+  type: Internet-Draft
+  primary: true
+- content: I-D.lucente-grow-bmp-offline
+  type: IETF
+  scope: anchor
+docnumber: I-D.lucente-grow-bmp-offline
+date:
+- type: published
+  at: '2025-03-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Paolo
+      - language: en
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Lucente
+      completename:
+        language: en
+        content: Paolo Lucente
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Camilo
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Cardona
+      completename:
+        language: en
+        content: Camilo Cardona
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Colin
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Petrie
+      completename:
+        language: en
+        content: Colin Petrie
+    affiliation:
+    - organization:
+        name:
+        - content: NTT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Luuk
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Hendriks
+      completename:
+        language: en
+        content: Luuk Hendriks
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>BMP (BGP Monitoring Protocol) is perfectly suited for real-time consumption
+    but less ideal in stream processing and off-wire historical scenarios. The main
+    issue is that the ability to correctly parse BGP Update PDUs, carried in BMP Route
+    Monitoring messages, depends on the BGP Capabilities exchanged during the establishment
+    of the BGP session between the peers via BGP Open PDUs. The BGP Open PDUs, carried
+    in BMP Peer Up Notification messages, are exported at the establishment of the
+    BMP session. Similar to BGP, BMP sessions are typically long-lived, so the crucial
+    information to correctly parse subsequent messages of such sessions was possibly
+    sent a relatively long time ago (days, weeks, months). This document introduces
+    the concept of Summaries. It defines a new optional BMP message type, called State
+    Summary, and a new TLV, called Summary Id. A Summary is similar to the initial
+    synchronisation performed upon establishment of the BMP session: all BGP session
+    information is exported in Peer Up Notification messages, and all RIB contents
+    are exported in Route Monitoring messages. All the messages carry the new Summary
+    Id TLV, containing an ID uniquely identifying the summary these messages belong
+    to. The messages are preceded by a State Summary message carrying the same Summary
+    Id TLV, as well as meta-data describing the Summary.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-lucente-grow-bmp-offline-00
+      format: text/plain
+    docidentifier:
+    - content: draft-lucente-grow-bmp-offline-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-lucente-grow-bmp-offline-02
+      format: text/plain
+    docidentifier:
+    - content: draft-lucente-grow-bmp-offline-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-lucente-grow-bmp-offline-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

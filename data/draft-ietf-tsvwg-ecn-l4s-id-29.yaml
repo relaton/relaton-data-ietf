@@ -1,0 +1,121 @@
+---
+id: draftietftsvwgecnl4sid29
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Explicit Congestion Notification (ECN) Protocol for Low Latency, Low
+    Loss, and Scalable Throughput (L4S)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-ecn-l4s-id-29
+docidentifier:
+- content: draft-ietf-tsvwg-ecn-l4s-id-29
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-tsvwg-ecn-l4s-id
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-tsvwg-ecn-l4s-id
+date:
+- type: published
+  at: '2022-08-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Koen
+      - language: en
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: De Schepper
+      completename:
+        language: en
+        content: Koen De Schepper
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia Bell Labs
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Bob
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - content: Independent
+version:
+- content: '29'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This specification defines the protocol to be used for a new network
+    service called Low Latency, Low Loss, and Scalable throughput (L4S). L4S uses
+    an Explicit Congestion Notification (ECN) scheme at the IP layer that is similar
+    to the original (or 'Classic') ECN approach, except as specified within. L4S uses
+    'Scalable' congestion control, which induces much more frequent control signals
+    from the network, and it responds to them with much more fine-grained adjustments
+    so that very low (typically sub-millisecond on average) and consistently low queuing
+    delay becomes possible for L4S traffic without compromising link utilization.
+    Thus, even capacity-seeking (TCP-like) traffic can have high bandwidth and very
+    low delay at the same time, even during periods of high traffic load. The L4S
+    identifier defined in this document distinguishes L4S from 'Classic' (e.g., TCP-Reno-friendly)
+    traffic. Then, network bottlenecks can be incrementally modified to distinguish
+    and isolate existing traffic that still follows the Classic behaviour, to prevent
+    it from degrading the low queuing delay and low loss of L4S traffic. This Experimental
+    specification defines the rules that L4S transports and network elements need
+    to follow, with the intention that L4S flows neither harm each other's performance
+    nor that of Classic traffic. It also suggests open questions to be investigated
+    during experimentation. Examples of new Active Queue Management (AQM) marking
+    algorithms and new transports (whether TCP-like or real time) are specified separately.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-ecn-l4s-id-07
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-tsvwg-ecn-l4s-id-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-tsvwg-ecn-l4s-id-29
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft
