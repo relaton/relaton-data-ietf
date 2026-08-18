@@ -1,0 +1,145 @@
+---
+id: draftietfbiertearch09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Tree Engineering for Bit Index Explicit Replication (BIER-TE)
+source:
+- type: TXT
+  content: https://www.ietf.org/internet-drafts/draft-ietf-bier-te-arch-09.txt
+docidentifier:
+- content: draft-ietf-bier-te-arch
+  type: Internet-Draft
+- content: draft-ietf-bier-te-arch-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-bier-te-arch
+date:
+- type: published
+  at: '2020-10-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Toerless
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T
+      surname:
+        language: en
+        content: Eckert
+      completename:
+        language: en
+        content: Toerless Eckert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gregory
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G
+      surname:
+        language: en
+        content: Cauchie
+      completename:
+        language: en
+        content: Gregory Cauchie
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Michael
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M
+      surname:
+        language: en
+        content: Menth
+      completename:
+        language: en
+        content: Michael Menth
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This memo introduces per-packet stateless strict and loose path steered
+    replication and forwarding for Bit Index Explicit Replication packets (RFC8279).
+    \ This is called BIER Tree Engineering (BIER-TE). BIER-TE can be used as a path
+    steering mechanism in future Traffic Engineering solutions for BIER (BIER-TE).</p>"
+- language: en
+  script: Latn
+  content: "<p>BIER-TE leverages RFC8279 and extends it with a new semantic for bits
+    in the bitstring.  BIER-TE can leverage BIER forwarding engines with little or
+    no changes.</p>"
+- language: en
+  script: Latn
+  content: "<p>In BIER, the BitPositions (BP) of the packets bitstring indicate BIER
+    Forwarding Egress Routers (BFER), and hop-by-hop forwarding uses a Routing Underlay
+    such as an IGP.</p>"
+- language: en
+  script: Latn
+  content: "<p>In BIER-TE, BitPositions indicate adjacencies.  The BIFT of each BFR
+    are only populated with BPs that are adjacent to the BFR in the BIER- TE topology.
+    \ The BIER-TE topology can consist of layer 2 or remote (routed) adjacencies.
+    \ The BFR then replicates and forwards BIER packets to those adjacencies.  This
+    results in the aforementioned strict and loose path steering and replications.</p>"
+- language: en
+  script: Latn
+  content: "<p>BIER-TE can co-exist with BIER forwarding in the same domain, for example
+    by using separate BIER sub-domains.  In the absence of routed adjacencies, BIER-TE
+    does not require a BIER routing underlay, and can then be operated without requiring
+    an Interior Gateway Routing protocol (IGP).</p>"
+- language: en
+  script: Latn
+  content: "<p>BIER-TE operates without explicit in-network tree-state and carries
+    the multicast distribution tree in the packet header.  It can therefore be a good
+    fit to support multicast path steering in Segment Routing (SR) networks.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-bier-te-arch-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

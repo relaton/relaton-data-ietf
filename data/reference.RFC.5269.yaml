@@ -1,0 +1,111 @@
+---
+id: RFC5269
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Distributing a Symmetric Fast Mobile IPv6 (FMIPv6) Handover Key Using SEcure
+    Neighbor Discovery (SEND)
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc5269
+docidentifier:
+- content: RFC 5269
+  type: IETF
+  primary: true
+- content: 10.17487/RFC5269
+  type: DOI
+docnumber: RFC5269
+date:
+- type: published
+  at: 2008-06
+contributor:
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    abbreviation:
+      language: en
+      content: IETF
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Kempf
+      completename:
+        language: en
+        content: J. Kempf
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Koodli
+      completename:
+        language: en
+        content: R. Koodli
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Fast Mobile IPv6 requires that a Fast Binding Update is secured using
+    a security association shared between an Access Router and a Mobile Node in order
+    to avoid certain attacks.  In this document, a method for provisioning a shared
+    key from the Access Router to the Mobile Node is defined to protect this signaling.
+    \ The Mobile Node generates a public/private key pair using the same public key
+    algorithm as for SEND (RFC 3971).  The Mobile Node sends the public key to the
+    Access Router.  The Access Router encrypts a shared handover key using the public
+    key and sends it back to the Mobile Node.  The Mobile Node decrypts the shared
+    handover key using the matching private key, and the handover key is then available
+    for generating an authenticator on a Fast Binding Update.  The Mobile Node and
+    Access Router use the Router Solicitation for Proxy Advertisement and Proxy Router
+    Advertisement from Fast Mobile IPv6 for the key exchange.  The key exchange messages
+    are required to have SEND security; that is, the source address is a Cryptographically
+    Generated Address (CGA) and the messages are signed using the CGA private key
+    of the sending node.  This allows the Access Router, prior to providing the shared
+    handover key, to verify the authorization of the Mobile Node to claim the address
+    so that the previous care-of CGA in the Fast Binding Update can act as the name
+    of the key.  [STANDARDS-TRACK]</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: RFC
+  number: '5269'
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf

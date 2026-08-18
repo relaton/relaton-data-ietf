@@ -1,0 +1,105 @@
+---
+id: draftzhangipsecmeantireplay00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: IPsec anti-replay algorithm without bit-shifting
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-zhang-ipsecme-anti-replay-00.txt
+- type: PDF
+  content: http://www.ietf.org/internet-drafts/draft-zhang-ipsecme-anti-replay-00.pdf
+docidentifier:
+- content: draft-zhang-ipsecme-anti-replay
+  type: Internet-Draft
+- content: draft-zhang-ipsecme-anti-replay-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhang-ipsecme-anti-replay
+date:
+- type: published
+  at: '2011-05-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xiangyang
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Xiangyang Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tina
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T
+      surname:
+        language: en
+        content: ZOU)
+      completename:
+        language: en
+        content: Tina Tsou (Ting ZOU)
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document presents a new method to do anti-replay check and update,
+    which becomes one alternative to the anti-replay algorithm in RFC 4302 and RFC4303.
+    \ The new method will deem the bit-shifting unnecessary.  It will reduce the number
+    of times to slide the window.  In addition, it makes bit-check and bit-update
+    easier as it does not depend on the low index of the sliding window.  It is especially
+    beneficial when the window size is much bigger than 64 bits, for example, 1024
+    bits.  IPsec employs one anti-replay sliding window protocol to secure against
+    an adversary that can insert the messages inside the network tunnel.  This method
+    still inherits the sliding window protocol, but use one or more redundant bytes
+    to ease the update of sliding window.  The bit-shifting is deemed unnecessary
+    with updating the high and low index of the window, which is especially efficient
+    in case of the big window size.  Thus the method reduces the number of times to
+    update the window.  In addition, the bit location is fixed for one sequence number,
+    thus makes the bit check easier and faster.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhang-ipsecme-anti-replay-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

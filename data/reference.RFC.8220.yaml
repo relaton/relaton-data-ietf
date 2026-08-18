@@ -1,0 +1,175 @@
+---
+id: RFC8220
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Protocol Independent Multicast (PIM) over Virtual Private LAN Service (VPLS)
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc8220
+docidentifier:
+- content: RFC 8220
+  type: IETF
+  primary: true
+- content: 10.17487/RFC8220
+  type: DOI
+docnumber: RFC8220
+date:
+- type: published
+  at: 2017-09
+contributor:
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    abbreviation:
+      language: en
+      content: IETF
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Dornon
+      completename:
+        language: en
+        content: O. Dornon
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Kotalwar
+      completename:
+        language: en
+        content: J. Kotalwar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Hemige
+      completename:
+        language: en
+        content: V. Hemige
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Qiu
+      completename:
+        language: en
+        content: R. Qiu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Z. Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes the procedures and recommendations for Virtual
+    Private LAN Service (VPLS) Provider Edges (PEs) to facilitate replication of multicast
+    traffic to only certain ports (behind which there are interested Protocol Independent
+    Multicast (PIM) routers and/or Internet Group Management Protocol (IGMP) hosts)
+    via PIM snooping and proxying.</p>"
+- language: en
+  script: Latn
+  content: "<p>With PIM snooping, PEs passively listen to certain PIM control messages
+    to build control and forwarding states while transparently flooding those messages.
+    \ With PIM proxying, PEs do not flood PIM Join/Prune messages but only generate
+    their own and send them out of certain ports, based on the control states built
+    from downstream Join/Prune messages.  PIM proxying is required when PIM Join suppression
+    is enabled on the Customer Edge (CE) devices and is useful for reducing PIM control
+    traffic in a VPLS domain.</p>"
+- language: en
+  script: Latn
+  content: "<p>This document also describes PIM relay, which can be viewed as lightweight
+    proxying, where all downstream Join/Prune messages are simply forwarded out of
+    certain ports and are not flooded, thereby avoiding the triggering of PIM Join
+    suppression on CE devices.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: RFC
+  number: '8220'
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf

@@ -1,0 +1,77 @@
+---
+id: draftbabuservcerttransfromproxy00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: TLS extension for Proxies to transfer Server certificate
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-babu-serv-cert-trans-from-proxy-00.txt
+docidentifier:
+- content: draft-babu-serv-cert-trans-from-proxy
+  type: Internet-Draft
+- content: draft-babu-serv-cert-trans-from-proxy-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.babu-serv-cert-trans-from-proxy
+date:
+- type: published
+  at: '2007-08-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Babu
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Neelam
+      completename:
+        language: en
+        content: Babu Neelam
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Intercepting transparent proxies splice the client-Server connection
+    into two connections: Client-Proxy connection, Proxy-server connection. On Client-Proxy
+    connection, proxy sends it's certificate to the client. As client is generally
+    (in such a scenario) pre-configured to accept proxy's certificate, client accepts
+    and proceeds further with the connection. On Proxy-Server connection, server sends
+    its certificate to the proxy. Proxy typically doesn't possess the information
+    (like MX domain name in case of SMTP) required to validate the certificate. The
+    certificate validation is at times very complex &amp; hence it is better to offload
+    this reponsibility to the original client itself.  This document addresses this
+    issue by extending TLS to let proxy send server's certificate to the client for
+    validation and suggests how client can indicate certificate validation result
+    to the proxy.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-babu-serv-cert-trans-from-proxy-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

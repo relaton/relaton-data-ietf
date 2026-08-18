@@ -2,6 +2,7 @@
 
 require 'net/http'
 require 'nokogiri'
+require 'rbconfig'
 require 'relaton'
 
 def fetch_document(uri, attempts)
@@ -23,7 +24,9 @@ def get_document(ref)
   # end
 
   resp = fetch_document URI(ref), 3
-  File.write file, resp # , encoding: 'UTF-8'
+  # Skip the write when the bytes are unchanged, so a corpus that is
+  # re-downloaded daily produces no git churn.
+  File.write file, resp if !File.exist?(file) || File.binread(file) != resp
 rescue => e # rubocop:disable Style/RescueStandardError
   warn "Fetching document error #{ref}"
   warn e.message
@@ -47,6 +50,10 @@ end
 
 workers.end
 workers.result
+
+# Keep the YAML siblings in step with the (possibly updated) corpus so
+# the Pages index build has relaton YAML to read.
+system(RbConfig.ruby, File.expand_path('bibxml_to_yaml.rb', __dir__))
 
 t2 = Time.now
 puts "Stopped at: #{t2}"

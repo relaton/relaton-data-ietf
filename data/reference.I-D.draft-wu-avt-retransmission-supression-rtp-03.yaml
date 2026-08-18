@@ -1,0 +1,129 @@
+---
+id: draftwuavtretransmissionsupressionrtp03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RTCP Report Extension for Feedback Suppression
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-wu-avt-retransmission-supression-rtp-03.txt
+docidentifier:
+- content: draft-wu-avt-retransmission-supression-rtp
+  type: Internet-Draft
+- content: draft-wu-avt-retransmission-supression-rtp-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wu-avt-retransmission-supression-rtp
+date:
+- type: published
+  at: '2010-10-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wenson
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W
+      surname:
+        language: en
+        content: Wu
+      completename:
+        language: en
+        content: Wenson Wu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Frank
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F
+      surname:
+        language: en
+        content: Xia
+      completename:
+        language: en
+        content: Frank Xia
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Roni
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R
+      surname:
+        language: en
+        content: Even
+      completename:
+        language: en
+        content: Roni Even
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document specifies an extension to the RTCP feedback messages defined
+    in the Audio-Visual Profile with Feedback (AVPF).  This extension allows an intermediate
+    node in the network (such as an RTP translator) inform downstream receivers that
+    sending a feedback message concerning a specified set of RTP messages may be unnecessary,
+    or even harmful.  For example, in a source-specific multicast session with large
+    fan-out, packet loss close to the media or distribution source of the session
+    is detected as a loss by a large number of receivers.  The RTCP NACK messages
+    used to request retransmission of the missing packets are all addressed to the
+    media sender, or a designated feedback target.  This may result in a phenomenon
+    known variously as a "NACK implosion" or "feedback storm". The Feedback Suppression
+    message defined herein is used to notify receivers that packet loss was detected
+    and that the sender of the report will either proactively recover, or no recovery
+    is possible. Receivers respond to receipt of a feedback suppression message by
+    not sending a feedback message (e.g. a NACK) that they otherwise would, This in
+    turn reduces load on both the feedback target and on the network.  This document
+    registers two new RTCP messages for Feedback Suppression.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wu-avt-retransmission-supression-rtp-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

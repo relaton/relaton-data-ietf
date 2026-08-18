@@ -1,0 +1,75 @@
+---
+id: draftirtfcfrgxchacha03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'XChaCha: eXtended-nonce ChaCha and AEAD_XChaCha20_Poly1305'
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-irtf-cfrg-xchacha-03.txt
+docidentifier:
+- content: draft-irtf-cfrg-xchacha
+  type: Internet-Draft
+- content: draft-irtf-cfrg-xchacha-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.irtf-cfrg-xchacha
+date:
+- type: published
+  at: '2020-01-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Scott
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S
+      surname:
+        language: en
+        content: Arciszewski
+      completename:
+        language: en
+        content: Scott Arciszewski
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The eXtended-nonce ChaCha cipher construction (XChaCha) allows for
+    ChaCha-based ciphersuites to accept a 192-bit nonce with similar guarantees to
+    the original construction, except with a much lower probability of nonce misuse
+    occurring.  This helps for long running TLS connections.  This also enables XChaCha
+    constructions to be stateless, while retaining the same security assumptions as
+    ChaCha.  This document defines XChaCha20, which uses HChaCha20 to convert the
+    key and part of the nonce into a subkey, which is in turn used with the remainder
+    of the nonce with ChaCha20 to generate a pseudorandom keystream (e.g. for message
+    encryption).  This document also defines AEAD_XChaCha20_Poly1305, a variant of
+    [RFC8439] that utilizes the XChaCha20 construction in place of ChaCha20.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-irtf-cfrg-xchacha-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

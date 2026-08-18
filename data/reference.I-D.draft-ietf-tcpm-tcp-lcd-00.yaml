@@ -1,0 +1,106 @@
+---
+id: draftietftcpmtcplcd00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Making TCP more Robust to Long Connectivity Disruptions (TCP-LCD)
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-tcpm-tcp-lcd-00.txt
+- type: PDF
+  content: http://www.ietf.org/internet-drafts/draft-ietf-tcpm-tcp-lcd-00.pdf
+docidentifier:
+- content: draft-ietf-tcpm-tcp-lcd
+  type: Internet-Draft
+- content: draft-ietf-tcpm-tcp-lcd-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tcpm-tcp-lcd
+date:
+- type: published
+  at: '2009-11-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexander
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A
+      surname:
+        language: en
+        content: Zimmermann
+      completename:
+        language: en
+        content: Alexander Zimmermann
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Arnd
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A
+      surname:
+        language: en
+        content: Hannemann
+      completename:
+        language: en
+        content: Arnd Hannemann
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Disruptions in end-to-end path connectivity, which last longer than
+    one retransmission timeout cause suboptimal TCP performance.  The reason for the
+    performance degradation is that TCP interprets segment loss induced by long connectivity
+    disruptions as a sign of congestion, resulting in repeated retransmission timer
+    backoffs. This leads in turn to a deferred detection of the re-establishment of
+    the connection since TCP waits until the next retransmission timeout occurs before
+    attempting the retransmission.  This document proposes a algorithm for making
+    TCP more robust to long connectivity disruptions (TCP-LCD).  The memo describes
+    how standard ICMP messages can be exploited during timeout-based loss recovery
+    to disambiguate true congestion loss from non-congestion loss caused by connectivity
+    disruptions.  Moreover, a revert strategy of the retransmission timer is specified
+    that enables a more prompt detection of whether the connectivity to a previously
+    disconnected peer node has been restored or not.  TCP-LCD is a TCP sender-only
+    modification that effectively improves TCP performance in presence of connectivity
+    disruptions.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tcpm-tcp-lcd-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

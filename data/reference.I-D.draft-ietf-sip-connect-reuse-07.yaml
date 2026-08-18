@@ -1,0 +1,76 @@
+---
+id: draftietfsipconnectreuse07
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Connection Reuse in the Session Initiation Protocol (SIP)
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-sip-connect-reuse-07.txt
+docidentifier:
+- content: draft-ietf-sip-connect-reuse
+  type: Internet-Draft
+- content: draft-ietf-sip-connect-reuse-07
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-sip-connect-reuse
+date:
+- type: published
+  at: '2006-10-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rohan
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R
+      surname:
+        language: en
+        content: Mahy
+      completename:
+        language: en
+        content: Rohan Mahy
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>When SIP entities use a connection oriented protocol to send a request,
+    they typically originate their connections from an ephemeral port. The SIP protocol
+    includes mechanisms which ensure that responses to a request, and new requests
+    sent in the original direction reuse an existing connection. However, new requests
+    sent in the opposite direction are unlikely to reuse the existing connection.
+    For TLS transports, this will frequently cause a pair of SIP entities to use one
+    connection for requests sent in each direction, resulting in potential scaling
+    and performance problems. This document proposes that a TLS connection, once opened,
+    can be used to send requests in either direction. Unfortunately, TCP connections
+    cannot be shared in the same manner due to the risk of service hijacking. This
+    document proposes an alternate way to perform TCP connection reuse.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-sip-connect-reuse-07
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

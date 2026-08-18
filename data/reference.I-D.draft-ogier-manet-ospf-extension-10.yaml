@@ -1,0 +1,105 @@
+---
+id: draftogiermanetospfextension10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: MANET Extension of OSPF using CDS Flooding
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ogier-manet-ospf-extension-10.txt
+docidentifier:
+- content: draft-ogier-manet-ospf-extension
+  type: Internet-Draft
+- content: draft-ogier-manet-ospf-extension-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ogier-manet-ospf-extension
+date:
+- type: published
+  at: '2007-11-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Richard
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R
+      surname:
+        language: en
+        content: Ogier
+      completename:
+        language: en
+        content: Richard Ogier
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Phil
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P
+      surname:
+        language: en
+        content: Spagnolo
+      completename:
+        language: en
+        content: Phil Spagnolo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies an extension of OSPF for IPv6 to support mobile
+    ad hoc networks (MANETs).  The extension, called OSPF-MDR, is designed as a new
+    OSPF interface type for MANETs.  OSPF-MDR is based on the selection of a subset
+    of MANET routers, consisting of MANET Designated Routers (MDRs) and Backup MDRs.
+    The MDRs form a connected dominating set (CDS), and the MDRs and Backup MDRs together
+    form a biconnected CDS for robustness.  This CDS is exploited in two ways. First,
+    to reduce flooding overhead, an optimized flooding procedure is used in which
+    only (Backup) MDRs flood new LSAs back out the receiving interface; reliable flooding
+    is ensured by retransmitting LSAs along adjacencies.  Second, adjacencies are
+    formed only between (Backup) MDRs and a subset of their neighbors, allowing for
+    much better scaling in dense networks.  The CDS is constructed using 2-hop neighbor
+    information provided in a Hello protocol extension.  The Hello protocol is further
+    optimized by allowing differential Hellos that report only changes in neighbor
+    states.  Options are specified for originating router-LSAs that provide full or
+    partial topology information, allowing overhead to be reduced by advertising less
+    topology information.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ogier-manet-ospf-extension-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,161 @@
+---
+id: draftbalajimplscsctelspsplice01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An Architecture for splicing TE-LSPs in Hierarchical CsC scenarios
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-balaji-mpls-csc-te-lsp-splice-01.txt
+docidentifier:
+- content: draft-balaji-mpls-csc-te-lsp-splice
+  type: Internet-Draft
+- content: draft-balaji-mpls-csc-te-lsp-splice-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.balaji-mpls-csc-te-lsp-splice
+date:
+- type: published
+  at: '2012-08-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bhargav
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Bhikkaji
+      completename:
+        language: en
+        content: Bhargav Bhikkaji
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Balaji
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Venkataswami
+      completename:
+        language: en
+        content: Balaji Venkataswami
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shankar
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S
+      surname:
+        language: en
+        content: Raman
+      completename:
+        language: en
+        content: Shankar Raman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gaurav
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G
+      surname:
+        language: en
+        content: Raina
+      completename:
+        language: en
+        content: Gaurav Raina
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>Hierarchical Carrier Supporting Carrier deployments involve a Carrier
+    Core which hereinafter is called the Tier-1 provider and two or more VPN sites
+    that are carriers themselves hereinafter called Tier-2 providers that offer MPLS
+    VPN services to their own customers. In such cases normally LDP is used to distribute
+    labels amongst the routers (P and PE devices) in the Tier-2 provider's sites.
+    When RSVP based TE-LSPs are constructed to explicitly route traffic for Tier-2
+    ISP's customers from the Tier-2 PEs to the CE of the Tier-1 provider and such
+    TE-LSPs exist on multiple sites of the Tier-2 provider, the Tier-2 ISP may require
+    splicing together through an "auto-match-and- splice-together" facility such that
+    traffic flows from the PE of the Tier-2 ISP through the TE-LSP onto the CE of
+    the Tier-1 ISP and then onto the other site and takes a path through a specific
+    TE-LSP from the CE of the other site to the destination Tier-2 PE and then onto
+    the final customer.  This solution offers a lot of advantages such as providing
+    adequate assurance that the bandwidth for the traffic flowing through these spliced
+    TE-LSPs is met. It also provides a explicit routing of the traffic rather than
+    through the regular LDP (which follows IGP) scenarios. Such explicitly routed
+    TE-LSPs would have been constructed taking into account factors such as using
+    under-utilized links for example. Splicing together these TE-LSPs in various sites
+    and doing the splicing on an auto-match based on bandwidth or delay metrics would
+    be a good service to offer to the Tier-2 ISPs customers.  This draft outlines
+    a scheme that offers such a feature and service to the Tier-2 ISPs through the
+    addition of certain additional label exchanges and some additional labels such
+    as the RSVP-stitch label and the RSVP-splicing-LDP label in the label stack which
+    can be used to splice together these tunnels.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-balaji-mpls-csc-te-lsp-splice-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

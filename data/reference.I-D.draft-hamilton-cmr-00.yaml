@@ -1,0 +1,85 @@
+---
+id: drafthamiltoncmr00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Certificate Manifest Register (Certificate Revocation List v4)
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-hamilton-cmr-00.txt
+docidentifier:
+- content: draft-hamilton-cmr
+  type: Internet-Draft
+- content: draft-hamilton-cmr-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hamilton-cmr
+date:
+- type: published
+  at: '2011-10-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kyle
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K
+      surname:
+        language: en
+        content: Hamilton
+      completename:
+        language: en
+        content: Kyle Hamilton
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>In the spirit of simple, incremental improvement, we describe a whitelist-based
+    revocation mechanism called the "Certificate Manifest Register".  This is a list
+    of all potentially-valid certificates which are (as of the date of production)
+    known to have been legitimately issued by the CA and how they are to be treated
+    by the client.  This permits certificates which are checked against it to be presumed
+    invalid unless listed.  Several recent events have cast doubt on the sufficiency
+    of blacklist-based PKIX certificate revocation mechanisms.  At least one publicly-trusted
+    Certification Authority was recently found to have been penetrated by a state-backed
+    attacker, which issued itself several certificates valid for a particular global
+    web search and email provider and then removed the records that it had done so.  In
+    effect, the attacker was able to cause the CA to sleepwalk.  There was nothing
+    that the client software developers could do to protect their users and themselves
+    except remove the trust in that CA's root.  This event directly caused that particular
+    CA's insolvency.  The Certificate Revocation List format and definitions (X.509v2
+    as described in RFC 5280, its predecessors, and possibly its successors) are used
+    and adapted whole-hog, with no data format changes and the alteration of one rule
+    and one semantic to support whitelist-based processing.  CMR is defined to use
+    version integer 3 (v4) to differentiate its processing path from v2 CRL.  The
+    changes from the CRL Profile are so minor, though, that they potentially might
+    be implemented without a version bump, without disruption to current v2 CRL consumers.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hamilton-cmr-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

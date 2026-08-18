@@ -1,0 +1,75 @@
+---
+id: draftietf6manipv6atomicfragments01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Processing of IPv6 "atomic" fragments
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-6man-ipv6-atomic-fragments-01.txt
+docidentifier:
+- content: draft-ietf-6man-ipv6-atomic-fragments
+  type: Internet-Draft
+- content: draft-ietf-6man-ipv6-atomic-fragments-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-6man-ipv6-atomic-fragments
+date:
+- type: published
+  at: '2012-08-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Fernando
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F
+      surname:
+        language: en
+        content: Gont
+      completename:
+        language: en
+        content: Fernando Gont
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>The IPv6 specification allows packets to contain a Fragment Header without
+    the packet being actually fragmented into multiple pieces. Such packets typically
+    result from hosts that have received an ICMPv6 "Packet Too Big" error message
+    that advertises a "Next-Hop MTU" smaller than 1280 bytes, and are currently processed
+    by some implementations as "fragmented traffic".  Thus, by forging ICMPv6 "Packet
+    Too Big" error messages an attacker can cause hosts to employ "atomic fragments",
+    and then launch any fragmentation-based attacks against such traffic.  This document
+    discusses the generation of the aforementioned "atomic fragments", the corresponding
+    security implications, and formally updates RFC 2460 and RFC 5722 such that fragmentation-based
+    attack vectors against traffic employing "atomic fragments" are completely eliminated.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-6man-ipv6-atomic-fragments-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

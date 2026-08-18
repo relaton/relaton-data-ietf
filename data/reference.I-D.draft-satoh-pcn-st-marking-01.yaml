@@ -1,0 +1,165 @@
+---
+id: draftsatohpcnstmarking01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Single PCN Threshold Marking by using PCN baseline encoding for both  admission
+    and termination controls
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-satoh-pcn-st-marking-01.txt
+docidentifier:
+- content: draft-satoh-pcn-st-marking
+  type: Internet-Draft
+- content: draft-satoh-pcn-st-marking-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.satoh-pcn-st-marking
+date:
+- type: published
+  at: '2009-03-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Daisuke
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D
+      surname:
+        language: en
+        content: Satoh
+      completename:
+        language: en
+        content: Daisuke Satoh
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yukari
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: "Y"
+      surname:
+        language: en
+        content: Maeda
+      completename:
+        language: en
+        content: Yukari Maeda
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Oratai
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O
+      surname:
+        language: en
+        content: Phanachet
+      completename:
+        language: en
+        content: Oratai Phanachet
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Harutaka
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H
+      surname:
+        language: en
+        content: Ueno
+      completename:
+        language: en
+        content: Harutaka Ueno
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>[I-D.ietf.pcn.architecture] defines two rates, admissible and supportable,
+    per link that divide PCN traffic load into three states. PCN admission control
+    and flow termination mechanisms operate in accordance with these three states.
+    \ [I-D.ietf.pcn.baseline.encoding] defines one bit for packet marking.  This document
+    proposes an algorithm for marking and metering by using pre-congestion notification
+    (PCN) baseline encoding for both flow admission and flow termination.  The ratio
+    of marked packets determines the three link states: no packets marked, some packets
+    marked, and all packets marked.  To achieve this marking behaviour, we use two
+    token buckets. One is not used for marking but for a marking switch; the other
+    is used for marking.  The token bucket for marking has two thresholds. One is
+    TBthreshold.threshold, already defined in [I-D.ietf-pcn- marking-behaviour], and
+    the other is a new threshold, which is set to be the number of bits of a metered-packet
+    smaller than the token bucket size.  Therefore, the new threshold is larger than
+    TBthreshold.threshold.  If the amount of tokens is less than TBthreshold.threshold,
+    all the packets are marked as defined in [I-D.ietf-pcn-marking-behaviour].  If
+    the amount of tokens is less than the new threshold and greater than TBthreshold.threshold,
+    one- Nth packets are marked.  We evaluated the performance of admission control
+    and flow termination using a simulation.  For admission control, the results show
+    that the performance of the algorithm was almost the same as, but slightly inferior
+    to, that of CL [draft-briscoe-tsvwg-cl-phb-03].  For flow termination, the performance
+    of the algorithm was almost the same as CL when the load was 1.2 times the supportable
+    rate, but it was superior to CL when the load was high (two times the supportable
+    rate).  Furthermore, in the algorithm, over termination percentages of all the
+    bottleneck links are almost the same in the case of multi-bottleneck.  In CL,
+    the over termination percentages of all the bottleneck links are different and
+    those at upstream bottleneck links are higher than those at downstream bottleneck
+    links because of accumulation of marked packets.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-satoh-pcn-st-marking-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

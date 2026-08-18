@@ -1,0 +1,138 @@
+---
+id: draftiannonelispmappingversioning01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: LISP Mapping Versioning
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-iannone-lisp-mapping-versioning-01.txt
+docidentifier:
+- content: draft-iannone-lisp-mapping-versioning
+  type: Internet-Draft
+- content: draft-iannone-lisp-mapping-versioning-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.iannone-lisp-mapping-versioning
+date:
+- type: published
+  at: '2010-03-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Luigi
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L
+      surname:
+        language: en
+        content: Iannone
+      completename:
+        language: en
+        content: Luigi Iannone
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Damien
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D
+      surname:
+        language: en
+        content: Saucez
+      completename:
+        language: en
+        content: Damien Saucez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Olivier
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O
+      surname:
+        language: en
+        content: Bonaventure
+      completename:
+        language: en
+        content: Olivier Bonaventure
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The present document sketches an optional approach to provide in- packet
+    information about EID-to-RLOC mappings used to encapsulate LISP data packets.
+    \ The proposed approach is based on associating a version number to EID-to-RLOC
+    mappings and transport such a version number in the LISP specific header of LISP-encapsulated
+    packets. This versioning approach is particularly useful to inform communicating
+    xTRs about modification of the mappings used to encapsulate packets.  Modification
+    of mappings could mean adding/ removing an RLOC, or just a modification in the
+    reachability, priority, or weight of one or more RLOCs.  Each time a mapping is
+    modified, a new version number is generated and propagated in the LISP data packet.
+    \ The use of version numbers allows to avoid repeated Map-Request upon mappings
+    change, limits the interaction between Control and Data planes, improves security,
+    offer support for caching on Map-Servers, and could be used also in mobile scenarios.
+    \ The proposed mechanism is optional and does not need any modification on the
+    base LISP encapsulation.  Rather, it uses one of the reserved bits of the LISP
+    specific header and overloads the Locator Status Bits.  Similarly, no modification
+    are necessary in the base LISP Map- Reply records.  LISP versioning uses part
+    of the reserved bits.  In both cases, LISP encapsulation and Map-Reply records,
+    bits used for LISP versioning can be safely ignored by xTRs that do not support
+    the mechanism.  Further, mappings can be distributed as usual through both existing
+    and future mapping distribution system (e.g., ALT). The infrastructure build by
+    each specific mapping distribution system does not change anyhow.  Even more,
+    existing mapping distribution protocol are able to rely LISP control plane packets
+    containing version numbers and do not need modifications.  All of these features
+    make LISP versioning a completely transparent optional mechanism with respect
+    to the LISP base specification.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-iannone-lisp-mapping-versioning-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

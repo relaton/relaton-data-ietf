@@ -1,0 +1,130 @@
+---
+id: draftkistalto3pdisc02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Third-Party ALTO Server Discovery (3pdisc)
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-kist-alto-3pdisc-02.txt
+docidentifier:
+- content: draft-kist-alto-3pdisc
+  type: Internet-Draft
+- content: draft-kist-alto-3pdisc-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kist-alto-3pdisc
+date:
+- type: published
+  at: '2013-02-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sebastian
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S
+      surname:
+        language: en
+        content: Kiesel
+      completename:
+        language: en
+        content: Sebastian Kiesel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kilian
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K
+      surname:
+        language: en
+        content: Krause
+      completename:
+        language: en
+        content: Kilian Krause
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Martin
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M
+      surname:
+        language: en
+        content: Stiemerling
+      completename:
+        language: en
+        content: Martin Stiemerling
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>The goal of Application-Layer Traffic Optimization (ALTO) is to provide
+    guidance to applications that have to select one or several hosts from a set of
+    candidates capable of providing a desired resource.  ALTO is realized by a client-server
+    protocol.  Before an ALTO client can ask for guidance it needs to discover one
+    or more ALTO servers that can provide suitable guidance.  This document specifies
+    a procedure for third-party ALTO server discovery, which can be used if the ALTO
+    client is not co-located with the actual resource consumer, but instead embedded
+    in a third party such as a peer-to-peer tracker.  This algorithm takes a resource
+    consumer's IP address as argument, performs several DNS lookups (for PTR, SOA,
+    and U-NAPTR resource records), and produces URIs of ALTO servers that are able
+    to give reasonable ALTO guidance to a resource consumer willing to communicate
+    using this IP address.  Starting with draft-kist-alto-3pdisc-02 the algorithm
+    has significantly changed compared to previous versions of this document, including
+    draft-kiesel-alto-3pdisc-* and draft-ietf-alto-server-discovery-*.  The new algorithm
+    does not try "DNS tree climbing" and it does not neccessarily rely on PTR records,
+    i.e., it can also produce results if no PTR records are populated in the DNS,
+    for example when IPv6 privacy exensions are in use.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kist-alto-3pdisc-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
