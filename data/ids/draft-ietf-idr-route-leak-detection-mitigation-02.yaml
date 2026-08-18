@@ -1,0 +1,189 @@
+---
+id: draftietfidrrouteleakdetectionmitigation02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Methods for Detection and Mitigation of BGP Route Leaks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-route-leak-detection-mitigation-02
+docidentifier:
+- content: draft-ietf-idr-route-leak-detection-mitigation
+  type: Internet-Draft
+- content: draft-ietf-idr-route-leak-detection-mitigation-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-route-leak-detection-mitigation
+date:
+- type: published
+  at: '2016-03-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kotikalapudi
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Sriram
+      completename:
+        language: en
+        content: Kotikalapudi Sriram
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Doug
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Montgomery
+      completename:
+        language: en
+        content: Doug Montgomery
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Brian
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Dickson
+      completename:
+        language: en
+        content: Brian Dickson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Keyur
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Patel
+      completename:
+        language: en
+        content: Keyur Patel
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrei
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Robachevsky
+      completename:
+        language: en
+        content: Andrei Robachevsky
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In [I-D.ietf-grow-route-leak-problem-definition], the authors have
+       provided a definition of the route leak problem, and also enumerated
+       several types of route leaks.  In this document, we first examine
+       which of those route-leak types are detected and mitigated by the
+       existing origin validation (OV) [RFC 6811].  It is recognized that OV
+       offers a limited detection and mitigation capability against route
+       leaks.  This document proposes an enhancement that significantly
+       extends the route-leak detection and mitigation capabilities of BGP.
+       The solution involves carrying a per-hop route-leak protection (RLP)
+       field in BGP updates.  The RLP field is proposed be carried in an
+       optional transitive path attribute.  The solution is meant to be
+       initially implemented as an enhancement of BGP without requiring
+       BGPsec [I-D.ietf-sidr-bgpsec-protocol].  However, when BGPsec is
+       deployed in the future, the solution can be incorporated in BGPsec,
+       enabling cryptographic protection for the RLP field.  That would be
+       one way of implementing the proposed solution in a secure way.  It is
+       not claimed that the solution detects all possible types of route
+       leaks but it detects several types, especially considering some
+       significant route-leak occurrences that have been observed in recent
+       years.  The document also includes a stopgap method for detection and
+       mitigation of route leaks for an intermediate phase when OV is
+       deployed but BGP protocol on the wire is unchanged.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-route-leak-detection-mitigation-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-route-leak-detection-mitigation-01
+    docidentifier:
+    - content: draft-ietf-idr-route-leak-detection-mitigation-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-route-leak-detection-mitigation-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-route-leak-detection-mitigation-03
+    docidentifier:
+    - content: draft-ietf-idr-route-leak-detection-mitigation-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-route-leak-detection-mitigation-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,132 @@
+---
+id: draftgakiwatednsopoptimisticdns00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Optimistic DNS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gakiwate-dnsop-optimistic-dns-00
+docidentifier:
+- content: draft-gakiwate-dnsop-optimistic-dns
+  type: Internet-Draft
+- content: draft-gakiwate-dnsop-optimistic-dns-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gakiwate-dnsop-optimistic-dns
+date:
+- type: published
+  at: '2026-06-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gautam
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Akiwate
+      completename:
+        language: en
+        content: Gautam Akiwate
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Apple Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Phil
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Flack
+      completename:
+        language: en
+        content: Phil Flack
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Apple Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stuart
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Cheshire
+      completename:
+        language: en
+        content: Stuart Cheshire
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Apple Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DNS lookups introduce user-visible delay, particularly when cached
+       records have expired and must be refreshed from the network.  This
+       document describes Optimistic DNS, a client-side stub resolver
+       mechanism that immediately returns expired cached DNS records to
+       applications while simultaneously refreshing them with a network
+       query.  The application receives an answer in microseconds rather
+       than milliseconds, and if the data has changed receives an updated
+       answer shortly thereafter.  Optimistic DNS is complementary to RFC
+       8767, which addresses serving stale data at recursive resolvers.
+       This document focuses exclusively on client-side stub resolver
+       behavior, including explicit signaling from the application to inform
+       the stub resolver that the application is able to handle old and
+       possibly incorrect information.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gakiwate-dnsop-optimistic-dns-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

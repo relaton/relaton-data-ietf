@@ -1,0 +1,116 @@
+---
+id: drafttojensdhcpoptionconcatconsiderations01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DHCP Option Concatenation Considerations
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tojens-dhcp-option-concat-considerations-01
+docidentifier:
+- content: draft-tojens-dhcp-option-concat-considerations
+  type: Internet-Draft
+- content: draft-tojens-dhcp-option-concat-considerations-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.tojens-dhcp-option-concat-considerations
+date:
+- type: published
+  at: '2025-03-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tommy
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Jensen
+      completename:
+        language: en
+        content: Tommy Jensen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Milan
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Justel
+      completename:
+        language: en
+        content: Milan Justel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DHCP has a length limit of 255 on individual options because of its
+       one-byte length field for options.  To accommodate longer options,
+       splitting option data across multiple instances of the same Option
+       Type is defined by RFC 3396.  However, this mechanism was defined to
+       require support for all option types.  This has led to real-world
+       implementations in the years since the RFC was published to deviate
+       from these requirements to avoid breaking basic functionality.  This
+       document updates RFC 3396 to be more flexible regarding when DHCP
+       agents are required to concatenate options to reflect deployement
+       experiences.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-tojens-dhcp-option-concat-considerations-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tojens-dhcp-option-concat-considerations-00
+    docidentifier:
+    - content: draft-tojens-dhcp-option-concat-considerations-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-tojens-dhcp-option-concat-considerations-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

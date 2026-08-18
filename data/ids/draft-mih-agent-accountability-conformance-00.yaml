@@ -1,0 +1,99 @@
+---
+id: draftmihagentaccountabilityconformance00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Agent Accountability: A Conformance and Verification Method'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mih-agent-accountability-conformance-00
+docidentifier:
+- content: draft-mih-agent-accountability-conformance
+  type: Internet-Draft
+- content: draft-mih-agent-accountability-conformance-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mih-agent-accountability-conformance
+date:
+- type: published
+  at: '2026-07-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Steven
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Mih
+      completename:
+        language: en
+        content: Steven Mih
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Action State Group, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An architecture for auditing agent-driven interactions (draft-
+       kuehlewind-audit-architecture) identifies the record types an
+       auditable agent system produces — interaction, action, delegation,
+       and authorization-transition — and the role of an Auditor that
+       determines whether recorded behaviour matched intent and the
+       authorization in force.  That architecture does not specify how an
+       Auditor, or any independent party, deterministically verifies that a
+       set of such records — produced by different parties, in different
+       profiles, and composed into one case — is internally consistent and
+       correctly derives an audit conclusion.
+
+       This document specifies a horizontal conformance and verification
+       methodology for composed agent-accountability records.  It organizes
+       conformance into three tiers: the payload-binding layer, per-record-
+       type (per-slot) conformance, and composition (combination)
+       conformance.  It defines the determinism boundary between what is
+       mechanically derivable from the binding rules and the individual
+       records, and what is irreducibly semantic; a conformance-vector
+       discipline (positive, negative, and must-fail cases, checked in both
+       directions) that any record profile reuses rather than reinvents; and
+       a deterministic method for deriving composition-conformance vectors
+       from binding rules, individual-record vectors, a composition
+       manifest, and a set of cross-record predicates.  The methodology is
+       profile-agnostic: it applies uniformly to any accountability record
+       type and to any declared composition of them, whether those records
+       are joined across parties or across attestation layers.  Its lower
+       two tiers verify a single record, so the method applies where no
+       composition is present and strengthens as records are composed.  It
+       is intended as the composition-verification work item of the auditing
+       architecture — the one its enumerated work items do not yet cover.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mih-agent-accountability-conformance-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

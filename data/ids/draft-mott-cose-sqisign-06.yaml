@@ -1,0 +1,126 @@
+---
+id: draftmottcosesqisign06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: CBOR Object Signing and Encryption (COSE) and JSON Object Signing and Encryption
+    (JOSE) Registrations for SQIsign
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mott-cose-sqisign-06
+docidentifier:
+- content: draft-mott-cose-sqisign
+  type: Internet-Draft
+- content: draft-mott-cose-sqisign-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mott-cose-sqisign
+date:
+- type: published
+  at: '2026-06-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Antony
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: A. R.
+      surname:
+        language: en
+        content: Mott
+      completename:
+        language: en
+        content: Antony R. Mott
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RustyKey®
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>*NOTE: This document describes a signature scheme based on an
+       algorithm currently under evaluation in the 3rd round
+       [NIST-3rd-round-candidates] NIST Post-Quantum Cryptography
+       standardization process.  Be aware that the underlying primitive may
+       change as a result of that process.*
+
+       This document specifies the algorithm encodings and representations
+       for the SQIsign digital signature scheme within the CBOR Object
+       Signing and Encryption (COSE) and JSON Object Signing and Encryption
+       (JOSE) frameworks.
+
+       SQIsign is an isogeny-based post-quantum signature scheme that
+       provides the most compact signature and public key sizes of any
+       candidate in the NIST Post-Quantum Cryptography (PQC) standardization
+       and on-ramp-to-standardization processes.
+
+       The standardization of SQIsign will be helpful to address current
+       infrastructure bottlenecks, specifically the FIDO2 CTAP2
+       specification used by billions of in-service devices and browser
+       installations.
+
+       Depending on authenticator implementation, transport (USB/NFC/BLE)
+       and message fragmentation support, some deployments of CTAP2-based
+       authenticators enforce limits near 1024 bytes for external key
+       communication, and some standardized post-quantum signature schemes
+       increase message sizes and may stress constrained authenticators or
+       transports.  As a result CBOR-encoded messages may hit 7609-byte
+       limit in some authenticators.  SQIsign-L1, L3 and L5 signatures are
+       small enough to enable delivery over constrained networks like
+       802.15.4 and may be more suitable for constrained networks due to
+       smaller signature sizes.
+
+       This document clarifies that SQIsign does not expose the auxiliary
+       torsion-point information exploited in the SIDH/SIKE attacks.
+       Consequently, the specific attack techniques of Castryck–Decru do not
+       directly apply.  However, the scheme remains subject to ongoing
+       cryptanalysis of isogeny-based constructions.  By establishing stable
+       COSE and JOSE identifiers, this document ensures the interoperability
+       required for the seamless integration of post-quantum security into
+       high-density, bandwidth-constrained, and legacy-compatible hardware
+       environments.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mott-cose-sqisign-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mott-cose-sqisign-05
+    docidentifier:
+    - content: draft-mott-cose-sqisign-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mott-cose-sqisign-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

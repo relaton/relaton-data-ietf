@@ -1,0 +1,55 @@
+---
+id: draftfengnmopnaimmcp
+schema_version: v1.5.6
+formattedref:
+  content: draft-feng-nmop-naim-mcp
+title:
+- language: en
+  script: Latn
+  content: Implementing the NAIM Framework over the Model Context Protocol
+docidentifier:
+- content: draft-feng-nmop-naim-mcp
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>NAIM (Natural AI Interface Modeling) is a semantic intermediate
+       representation framework for AI-assisted network management.  It
+       consists of two specifications: a core specification [NAIM-CORE] that
+       defines the NAIM Document format, YANG-aware node templates, type
+       representation, and design-time Skills A-D; and an operations
+       specification [NAIM-OP] that defines the Operation IR, runtime
+       execution semantics, transaction and compensation model, and runtime
+       Skills E-F.
+
+       The Model Context Protocol (MCP) has emerged as the dominant standard
+       for AI hosts to discover and invoke external capabilities.  However,
+       MCP delegates semantic understanding entirely to the AI model through
+       natural language Tool descriptions, which is insufficient for the
+       structured precondition checking, constraint validation, and
+       compensation logic that reliable network management requires.
+
+       This document specifies how the NAIM framework is implemented over
+       MCP.  It defines the Originator/Handler architectural split, the MCP
+       Resources through which NAIM LLM Context Views are distributed, the
+       minimal MCP Tool surface through which Operation IRs are submitted,
+       and the complete interaction flow from natural language intent to
+       validated network execution.  This document is self-contained with
+       respect to the MCP integration architecture; it references
+       [NAIM-CORE] and [NAIM-OP] for the NAIM Document format, Operation IR
+       structure, and execution engine semantics, which are not redefined
+       here.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-feng-nmop-naim-mcp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-feng-nmop-naim-mcp-00
+    docidentifier:
+    - content: draft-feng-nmop-naim-mcp-00
+      type: Internet-Draft
+      primary: true

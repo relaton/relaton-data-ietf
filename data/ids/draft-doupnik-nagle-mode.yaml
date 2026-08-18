@@ -1,0 +1,37 @@
+---
+id: draftdoupniknaglemode
+schema_version: v1.5.6
+formattedref:
+  content: draft-doupnik-nagle-mode
+title:
+- language: en
+  script: Latn
+  content: A new TCP transmission policy replacing Nagle mode
+docidentifier:
+- content: draft-doupnik-nagle-mode
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Both Nagle mode and delayed ACKs attempt to conserve network and host
+    machine resources by delaying transmissions in the expectation that
+    the current material can be piggybacked onto a future transmission.
+    Unfortunately when both mechanisms are active at the same time on
+    either end of a connection a deadlock can exist, which is broken by
+    arrival of new data for transmission or firing of the delayed ACK
+    timer. This produces classical timer based ACKing, which for the
+    common 200ms ACK delay yields five exchanges per second.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-doupnik-nagle-mode-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-doupnik-nagle-mode-00
+    docidentifier:
+    - content: draft-doupnik-nagle-mode-00
+      type: Internet-Draft
+      primary: true

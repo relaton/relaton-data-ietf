@@ -1,0 +1,51 @@
+---
+id: draftsanderopentabspasskey
+schema_version: v1.5.6
+formattedref:
+  content: draft-sander-open-tabs-passkey
+title:
+- language: en
+  script: Latn
+  content: 'The Open Tabs Standard: Passkey-Rooted Delegated Signers for Non-Custodial
+    Payment Channels on Solana'
+docidentifier:
+- content: draft-sander-open-tabs-passkey
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the passkey-rooted delegated-signer
+       authorization model of the Open Tabs Standard (OTS), a non-custodial
+       payment-channel scheme on Solana.  It uses Solana's native secp256r1
+       signature verification precompile ([SIMD-0075]) to authorize voucher
+       signers via WebAuthn passkeys ([WEBAUTHN]).
+
+       The model is interoperable with the Solana Session Intent
+       ([draft-solana-session-00]), with which it shares the channel and
+       voucher primitives.  For a passkey-authorized signer it defines a
+       distinct signatureType value, an exact signed message format, an
+       exact Solana verification program, and a binding between the
+       delegated signer and the channel's PDA derivation.
+
+       A reference implementation is live on Solana mainnet.  The dexter-
+       vault program (account Hg3wRaydFtJhYrdvYrKECacpJYDsC9Px7yKmpncj2fhc)
+       verifies secp256r1 signatures over a fixed canonical message via the
+       SIMD-0075 precompile, records the active session key on the vault
+       account, and exposes a read-only prove_passkey instruction for off-
+       chain liveness attestation.  A live reference vault (account
+       7FE9VUeabi3sF8wUABV7F3eyvEi1ekDbER9k5JBYrWAi) demonstrates the full
+       lifecycle on Solana mainnet.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sander-open-tabs-passkey-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sander-open-tabs-passkey-00
+    docidentifier:
+    - content: draft-sander-open-tabs-passkey-00
+      type: Internet-Draft
+      primary: true

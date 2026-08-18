@@ -1,0 +1,136 @@
+---
+id: draftietflsrisisrfc5306bis06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Restart Signaling for IS-IS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-isis-rfc5306bis-06
+docidentifier:
+- content: draft-ietf-lsr-isis-rfc5306bis
+  type: Internet-Draft
+- content: draft-ietf-lsr-isis-rfc5306bis-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-lsr-isis-rfc5306bis
+date:
+- type: published
+  at: '2019-09-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Les
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Ginsberg
+      completename:
+        language: en
+        content: Les Ginsberg
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Paul
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Wells
+      completename:
+        language: en
+        content: Paul Wells
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems, Inc.
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a mechanism for a restarting router to signal
+       to its neighbors that it is restarting, allowing them to reestablish
+       their adjacencies without cycling through the down state, while still
+       correctly initiating database synchronization.
+
+       This document additionally describes a mechanism for a router to
+       signal its neighbors that it is preparing to initiate a restart while
+       maintaining forwarding plane state.  This allows the neighbors to
+       maintain their adjacencies until the router has restarted, but also
+       allows the neighbors to bring the adjacencies down in the event of
+       other topology changes.
+
+       This document additionally describes a mechanism for a restarting
+       router to determine when it has achieved Link State Protocol Data
+       Unit (LSP) database synchronization with its neighbors and a
+       mechanism to optimize LSP database synchronization, while minimizing
+       transient routing disruption when a router starts.
+
+       This document obsoletes RFC 5306.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-lsr-isis-rfc5306bis-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-isis-rfc5306bis-05
+    docidentifier:
+    - content: draft-ietf-lsr-isis-rfc5306bis-05
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-lsr-isis-rfc5306bis-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-isis-rfc5306bis-07
+    docidentifier:
+    - content: draft-ietf-lsr-isis-rfc5306bis-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-lsr-isis-rfc5306bis-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

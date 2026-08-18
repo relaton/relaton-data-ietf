@@ -1,0 +1,103 @@
+---
+id: draftgoswamiagenticjwt01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Secure Intent Protocol: JWT Compatible Agentic Identity and Workflow Management'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-goswami-agentic-jwt-01
+docidentifier:
+- content: draft-goswami-agentic-jwt
+  type: Internet-Draft
+- content: draft-goswami-agentic-jwt-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.goswami-agentic-jwt
+date:
+- type: published
+  at: '2026-06-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Abhishek
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Goswami
+      completename:
+        language: en
+        content: Abhishek Goswami
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Agentic JSON Web Token (Agentic JWT), as an
+       extension to OAuth 2.0 that addresses authorization challenges unique
+       to autonomous agentic AI systems.  This protocol solves the problem
+       of Zero-Trust drift due to non-deterministic Agentic AI clients
+       causing separation between user's (resource owner's) intent and
+       client application's actions.
+
+       Traditional OAuth 2.0 assumes that client applications faithfully
+       represent user intent when requesting authorization.  This assumption
+       breaks down when autonomous AI agents dynamically generate workflows,
+       create sub-agents, and make authorization decisions without
+       continuous human oversight.  We term this the "intent-execution
+       separation problem."
+
+       Agentic JWT introduces three mechanisms to address this problem: (1)
+       cryptographic agent identity through agent checksums (based on
+       agent's system prompts, tools and configurations), (2) workflow-aware
+       token binding that links user intent to agent execution, and (3) a
+       new OAuth 2.0 grant type (agent_checksum) for secure token issuance,
+       (4) a flavor of PoP (Proof-of-Possession) at the level of an agentic
+       identity to prevent token replays by other agents in the same multi-
+       agent process.
+
+       This specification enables Zero-Trust security principles in multi-
+       agent systems while maintaining backward compatibility with existing
+       OAuth 2.0 infrastructure.  The security analysis and experimental
+       validation are described in the companion research paper.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-goswami-agentic-jwt-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-goswami-agentic-jwt-00
+    docidentifier:
+    - content: draft-goswami-agentic-jwt-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-goswami-agentic-jwt-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

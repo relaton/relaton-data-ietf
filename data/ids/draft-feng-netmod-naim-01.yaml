@@ -1,0 +1,103 @@
+---
+id: draftfengnetmodnaim01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'NAIM: A Canonical Semantic Representation for AI-Assisted YANG Modeling
+    and Validation'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-feng-netmod-naim-01
+docidentifier:
+- content: draft-feng-netmod-naim
+  type: Internet-Draft
+- content: draft-feng-netmod-naim-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.feng-netmod-naim
+date:
+- type: published
+  at: '2026-07-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chong
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Feng
+      completename:
+        language: en
+        content: Chong Feng
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the NAIM (Natural AI Interface Modeling)
+       framework, a canonical semantic intermediate representation between
+       natural language descriptions and YANG data models (RFC 7950).
+
+       NAIM addresses a recognized gap in the YANG authoring and network
+       management workflow: direct conversion from natural language to YANG
+       is error-prone because essential modeling semantics -- including
+       configuration versus state distinction, list key identification,
+       constraint expressions, operational preconditions, and cross-module
+       relationships -- are routinely absent or ambiguous in natural
+       language input.  NAIM makes these semantics explicit, structurally
+       consistent, and machine-verifiable.
+
+       This document defines: the NAIM Document format (Canonical JSON and
+       derived Markdown View); the LLM Context View for AI prompt context
+       distribution; the three-layer architecture (Specification, Skill,
+       Tool); Skills A-D for conversational modeling, summarization, YANG
+       generation, and reverse engineering; and the Validation-Reflection-
+       Retry mechanism for AI output quality control.
+
+       The NAIM Document format is designed to serve two roles: as the
+       intermediate representation for design-time YANG authoring, and as
+       the runtime semantic authority against which AI-generated operation
+       intents are validated.  The runtime validation usage is specified in
+       [NAIM-OP]; this document defines the format, derived views, and
+       design-time workflows.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-feng-netmod-naim-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-feng-netmod-naim-00
+    docidentifier:
+    - content: draft-feng-netmod-naim-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-feng-netmod-naim-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

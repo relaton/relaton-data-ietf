@@ -1,0 +1,203 @@
+---
+id: draftietflsrospflslinkinfinity04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Advertising Unreachable Links in OSPF
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-04
+docidentifier:
+- content: draft-ietf-lsr-ospf-ls-link-infinity
+  type: Internet-Draft
+- content: draft-ietf-lsr-ospf-ls-link-infinity-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-lsr-ospf-ls-link-infinity
+date:
+- type: published
+  at: '2025-08-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Liyan
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Gong
+      completename:
+        language: en
+        content: Liyan Gong
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Weiqiang
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Weiqiang Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Changwang
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Lin
+      completename:
+        language: en
+        content: Changwang Lin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: New H3C Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Acee
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Lindem
+      completename:
+        language: en
+        content: Acee Lindem
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arrcus, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ran
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Ran Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In certain scenarios, it is necessary to advertise unreachable links
+       in OSPF, which should be explicitly excluded from the related SPF
+       calculation.  This document specifies using LSLinkInfinity(0xffff) to
+       advertise an OSPF link as unreachable.
+
+       Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff)
+       to indicate a router-LSA link should not be used for transit traffic.
+       This document updates RFC 6987 and RFC 8770.  When an OSPFv2 router
+       supports the Unreachable Link support capability defined in this
+       document, the OSPFv2 stub router MaxLinkMetric(0xffff) MUST be
+       updated to MaxReachableLinkMetric(0xfffe).</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-lsr-ospf-ls-link-infinity-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-03
+    docidentifier:
+    - content: draft-ietf-lsr-ospf-ls-link-infinity-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-lsr-ospf-ls-link-infinity-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-ospf-ls-link-infinity-05
+    docidentifier:
+    - content: draft-ietf-lsr-ospf-ls-link-infinity-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-lsr-ospf-ls-link-infinity-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

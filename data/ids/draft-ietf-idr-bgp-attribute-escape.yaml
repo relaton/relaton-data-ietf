@@ -1,0 +1,49 @@
+---
+id: draftietfidrbgpattributeescape
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-idr-bgp-attribute-escape
+title:
+- language: en
+  script: Latn
+  content: BGP Attribute Escape
+docidentifier:
+- content: draft-ietf-idr-bgp-attribute-escape
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>BGP-4 [RFC 4271] has been very successful in being extended over the
+       years it has been deployed.  A significant part of that success is
+       due to its ability to incrementally add new features to its Path
+       Attributes when they are marked "optional transitive".
+       Implementations that are ignorant of a feature for an unknown Path
+       Attribute that are so marked will propagate BGP routes with such
+       attributes.
+
+       Unfortunately, this blind propagation of unknown Path Attributes may
+       happen for features that are intended to be used in a limited scope.
+       When such Path Attributes inadvertently are carried beyond that
+       scope, it can lead to things such as unintended disclosure of
+       sensitive information, or cause improper routing.  In their worst
+       cases, such propagation may be for malformed Path Attributes and lead
+       to BGP session resets or crashes.
+
+       This document calls such inadvertent propagation of BGP Path
+       Attributes, "attribute escape".  This document further describes some
+       of the scenarios that leads to this behavior and makes
+       recommendations on practices that may limit its impact.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-bgp-attribute-escape-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-attribute-escape-00
+    docidentifier:
+    - content: draft-ietf-idr-bgp-attribute-escape-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,83 @@
+---
+id: draftchursinratsenergyattestation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Hardware-Rooted Attestation Tokens for Electricity Generation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chursin-rats-energy-attestation-00
+docidentifier:
+- content: draft-chursin-rats-energy-attestation
+  type: Internet-Draft
+- content: draft-chursin-rats-energy-attestation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chursin-rats-energy-attestation
+date:
+- type: published
+  at: '2026-07-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Aleksey
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Chursin
+      completename:
+        language: en
+        content: Aleksey Chursin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Noethrion Foundation
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies an attestation token format and verification
+       protocol for hardware-rooted measurements of electricity generation.
+       The protocol enables a tamper-evident chain of custody from the
+       secure element at a metering device to a publicly verifiable
+       settlement layer, using ECDSA P-256 signatures generated inside a
+       certified secure element and carried in a COSE_Sign1 structure.  It
+       defines: (a) the CBOR-encoded attestation token, aligned with the
+       Entity Attestation Token format of RFC 9711 and the Remote
+       ATtestation procedureS (RATS) architecture of RFC 9334; (b) a Merkle-
+       aggregation and on-chain commitment scheme for scalable verification;
+       and (c) a registry mechanism for endorsing device public keys.  The
+       token is intended for use by relying parties, such as energy
+       producers, consumers, regulators, and standards bodies, that require
+       cryptographic provenance for clean-energy claims.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chursin-rats-energy-attestation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

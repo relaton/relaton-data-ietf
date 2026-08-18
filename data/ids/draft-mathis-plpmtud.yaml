@@ -1,0 +1,37 @@
+---
+id: draftmathisplpmtud
+schema_version: v1.5.6
+formattedref:
+  content: draft-mathis-plpmtud
+title:
+- language: en
+  script: Latn
+  content: Packetization Layer Path MTU Discovery
+docidentifier:
+- content: draft-mathis-plpmtud
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a new Packetization Layer MTU probing
+    algorithm which is not subject to the problems associated with the
+    current path MTU discovery algorithms [RFC1191, RFC1981, RFC2923].
+    The general strategy of the new algorithm is to start with a small
+    MTU and probe upward, testing successively larger MTUs by probing
+    with single packets.  If the probe is successfully delivered, then
+    the MTU is raised.  If the probe is lost, it is treated as an MTU
+    limitation and not as a congestion signal.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mathis-plpmtud-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mathis-plpmtud-00
+    docidentifier:
+    - content: draft-mathis-plpmtud-00
+      type: Internet-Draft
+      primary: true

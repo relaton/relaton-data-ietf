@@ -1,0 +1,95 @@
+---
+id: drafthoffmandnsinexistinghttp200
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Running DNS in Existing HTTP/2 Connections
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hoffman-dns-in-existing-http2-00
+docidentifier:
+- content: draft-hoffman-dns-in-existing-http2
+  type: Internet-Draft
+- content: draft-hoffman-dns-in-existing-http2-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hoffman-dns-in-existing-http2
+date:
+- type: published
+  at: '2017-04-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Paul
+      - language: en
+        script: Latn
+        initial: P
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: P. E.
+      surname:
+        language: en
+        content: Hoffman
+      completename:
+        language: en
+        content: Paul E. Hoffman
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Intermediaries such as governments and ISPs spoof DNS responses, and
+       block DNS requests to particular recursive resolvers, for a variety
+       of reasons.  They spoof by capturing traffic on port 53, or by
+       redirecting port 853 traffic in the hopes that the client is using
+       opportunistic encryption.  They block if they know the address of a
+       resolver that they don't like, such as public resolvers that give
+       honest answers.
+
+       This document describes how to run DNS service over existing HTTP/2
+       connections over TLS, such as those being used for HTTP for basic web
+       service.  This design prevents intermediaries from spoofing DNS
+       responses, and makes it impossible for intermediaries to block the
+       use of those recursive resolvers without blocking the desired HTTP
+       connections.  It also prevents intermediaries or passive observers
+       from seeing the DNS traffic.  This design is meant for communication
+       between a DNS stub resolver and a DNS recursive resolver.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-hoffman-dns-in-existing-http2-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hoffman-dns-in-existing-http2-01
+    docidentifier:
+    - content: draft-hoffman-dns-in-existing-http2-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hoffman-dns-in-existing-http2-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

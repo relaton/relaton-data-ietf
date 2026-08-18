@@ -1,0 +1,117 @@
+---
+id: draftaipagentidentityprotocol00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Agent Identity Protocol: Agentic Authentication and Authorized Policy
+    Enforcement'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-aip-agent-identity-protocol-00
+docidentifier:
+- content: draft-aip-agent-identity-protocol
+  type: Internet-Draft
+- content: draft-aip-agent-identity-protocol-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.aip-agent-identity-protocol
+date:
+- type: published
+  at: '2026-03-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: James
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Cao
+      completename:
+        language: en
+        content: James Cao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Montcao
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Carlos
+      - language: en
+        script: Latn
+        initial: C
+      - language: en
+        script: Latn
+        initial: E
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: C. E. A.
+      surname:
+        language: en
+        content: Gutierrez
+      completename:
+        language: en
+        content: Carlos Eduardo Arango Gutierrez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NVIDIA
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Agent Identity Protocol (AIP), an open
+       standard for verifiable identity and policy enforcement for
+       artificial intelligence (AI) agents.
+
+       Agent Identity Protocol (AIP) addresses the problem of AI agents
+       operating with unbounded permissions -- running as users, inheriting
+       full API key access, and executing tool calls with no verifiable
+       identity boundary between human and non-human actors.
+
+       The protocol is structured as two cooperating layers.  Layer 1
+       (Identity) gives every agent a unique identifier and a key pair
+       registered with an AIP Registry; the agent signs every outbound
+       action with that key.  Layer 2 (Enforcement) interposes a proxy
+       between the AI client and every tool server that verifies the
+       signature, evaluates a declarative policy, and produces an allow,
+       deny, or hold decision before any tool is reached.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-aip-agent-identity-protocol-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

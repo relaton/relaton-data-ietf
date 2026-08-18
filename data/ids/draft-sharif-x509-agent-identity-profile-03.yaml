@@ -1,0 +1,99 @@
+---
+id: draftsharifx509agentidentityprofile03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: X.509 Certificate Profile for Autonomous AI Agent Identity
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sharif-x509-agent-identity-profile-03
+docidentifier:
+- content: draft-sharif-x509-agent-identity-profile
+  type: Internet-Draft
+- content: draft-sharif-x509-agent-identity-profile-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sharif-x509-agent-identity-profile
+date:
+- type: published
+  at: '2026-07-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raza
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Sharif
+      completename:
+        language: en
+        content: Raza Sharif
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CyberSecAI Ltd
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an X.509 certificate profile for identifying
+       autonomous AI agents.  It specifies a new X.509v3 extension,
+       AgentIdentity, that encodes agent-specific metadata within a
+       standard X.509 certificate, including agent trust level,
+       operational capabilities, delegation constraints, owner attribution,
+       and revocation control endpoints.
+
+       The profile enables certificate authorities (CAs) to issue
+       interoperable agent identity certificates that any relying party
+       can parse, validate, and enforce, regardless of the issuing CA or
+       the platform that provisioned the agent.
+
+       The design builds on existing PKI infrastructure (RFC 5280), SPIFFE
+       Verifiable Identity Documents (SPIFFE SVIDs), and the MCPS
+       cryptographic signing layer (draft-sharif-mcps-secure-mcp).  It
+       does not require changes to X.509v3 certificate parsing or to
+       existing CA issuance pipelines beyond supporting a new non-critical
+       extension.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sharif-x509-agent-identity-profile-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sharif-x509-agent-identity-profile-02
+    docidentifier:
+    - content: draft-sharif-x509-agent-identity-profile-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sharif-x509-agent-identity-profile-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

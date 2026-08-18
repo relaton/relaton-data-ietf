@@ -1,0 +1,105 @@
+---
+id: draftelkhatabiverifiabletelemetryledgers09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Verifiable Telemetry Ledgers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-09
+docidentifier:
+- content: draft-elkhatabi-verifiable-telemetry-ledgers
+  type: Internet-Draft
+- content: draft-elkhatabi-verifiable-telemetry-ledgers-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.elkhatabi-verifiable-telemetry-ledgers
+date:
+- type: published
+  at: '2026-08-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bilal
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: El Khatabi
+      completename:
+        language: en
+        content: Bilal El Khatabi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document profiles a verifiable-telemetry ledger.  Its
+       interoperability boundary begins with exact canonical-record byte
+       strings that an upstream system has already produced.  The profile
+       fixes admission and assignment of those byte strings to serial-
+       numbered segments, deterministic commitment-tree calculation, an
+       authoritative segment artifact encoded in Concise Binary Object
+       Representation (CBOR), a producer manifest, three disclosure classes,
+       and binding of the authoritative segment artifact digest to external
+       timestamp channels.  Transport framing, decryption, anti-replay
+       processing, payload interpretation, and source-telemetry-to-record
+       mapping are outside this profile.  Segment closure uses a deployment-
+       configured elapsed-time interval and does not depend on calendar
+       dates from either the source or the ledger producer.  Every baseline
+       producer selects the RFC 3161 timestamp channel, as updated by RFC
+       5816 and profiled by this document, for every emitted segment.
+       OpenTimestamps (OTS) can be selected only as an additive, deployment-
+       specific timestamp profile; peer signatures are optional
+       attestations.
+
+       The profile enables independent recomputation and audit of disclosed
+       evidence from the admitted canonical-record bytes onward.  It does
+       not verify how source telemetry was authenticated, interpreted, or
+       mapped to those bytes, and it does not cover device onboarding, end-
+       to-end security of sensor values, or safety decisions.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-elkhatabi-verifiable-telemetry-ledgers-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-08
+    docidentifier:
+    - content: draft-elkhatabi-verifiable-telemetry-ledgers-08
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-elkhatabi-verifiable-telemetry-ledgers-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,53 @@
+---
+id: drafthowevconagentsession
+schema_version: v1.5.6
+formattedref:
+  content: draft-howe-vcon-agent-session
+title:
+- language: en
+  script: Latn
+  content: vCon Agent Session
+docidentifier:
+- content: draft-howe-vcon-agent-session
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an "agent_session" extension for Virtualized
+       Conversations (vCon) that profiles the use of vCon parties, dialog,
+       analysis, and attachments to carry the record of an autonomous AI
+       agent's internal session - its prompts, tool invocations, tool
+       results, reasoning, and file or artifact provenance - alongside the
+       human-facing conversation that the agent participated in or acted
+       upon.
+
+       The extension is a Compatible vCon extension.  It introduces no new
+       top-level fields and does not alter the semantics of existing ones.
+       Instead, it specifies (a) how an autonomous agent is represented as a
+       vCon party, (b) how agent message turns are placed in the dialog
+       array, (c) how the internal agent trace (tool calls, results,
+       reasoning, system events) is carried as a structured analysis entry
+       whose body conforms to the Verifiable Agent Conversations (VAC) CDDL
+       schema [I-D.draft-birkholz-verifiable-agent-conversations], and (d)
+       how files and artifacts modified by the agent are carried as
+       attachments.
+
+       By projecting agent-session data into the vCon model, implementations
+       inherit vCon's party/identity model, the lawful basis framework
+       [I-D.draft-howe-vcon-lawful-basis], the lifecycle and redaction
+       machinery [I-D.draft-howe-vcon-lifecycle], and JWS-based signing,
+       without re-specifying any of those concerns.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-howe-vcon-agent-session-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howe-vcon-agent-session-00
+    docidentifier:
+    - content: draft-howe-vcon-agent-session-00
+      type: Internet-Draft
+      primary: true

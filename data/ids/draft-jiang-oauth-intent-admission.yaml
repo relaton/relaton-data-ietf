@@ -1,0 +1,44 @@
+---
+id: draftjiangoauthintentadmission
+schema_version: v1.5.6
+formattedref:
+  content: draft-jiang-oauth-intent-admission
+title:
+- language: en
+  script: Latn
+  content: Intent Admission Assertions for Agentic Systems
+docidentifier:
+- content: draft-jiang-oauth-intent-admission
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In agentic systems, an intent expressed by a user, application, or
+       agent may be forwarded to a remote system that triggers high-impact
+       actions.  If the originator of an intent is not authenticated, is not
+       authorized to request the targeted action, or has not obtained the
+       required consent, the receiving system may act on a forged or
+       unauthorized intent.
+
+       This document defines the Intent Admission Assertion (IAA): a signed,
+       verifiable artifact by which an admission point authenticates an
+       intent originator, authorizes the request against a permission
+       policy, gates consent-required actions on explicit consent from the
+       user or resource owner, and conveys the result to a downstream
+       execution endpoint that re-verifies it before acting.  The IAA is a
+       JSON Web Token whose admission decision is expressed using Rich
+       Authorization Requests (RFC 9396).</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-jiang-oauth-intent-admission-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-jiang-oauth-intent-admission-00
+    docidentifier:
+    - content: draft-jiang-oauth-intent-admission-00
+      type: Internet-Draft
+      primary: true

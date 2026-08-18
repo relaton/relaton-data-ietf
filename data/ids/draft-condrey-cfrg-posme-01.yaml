@@ -1,0 +1,109 @@
+---
+id: draftcondreycfrgposme01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Proof of Sequential Memory Execution (PoSME)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-condrey-cfrg-posme-01
+docidentifier:
+- content: draft-condrey-cfrg-posme
+  type: Internet-Draft
+- content: draft-condrey-cfrg-posme-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.condrey-cfrg-posme
+date:
+- type: published
+  at: '2026-05-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: David
+      - language: en
+        script: Latn
+        initial: D
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: D. L.
+      surname:
+        language: en
+        content: Condrey
+      completename:
+        language: en
+        content: David Lee Condrey
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: WritersLogic Inc
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Proof of Sequential Memory Execution (PoSME), a
+       cryptographic primitive combining mutable arena state, data-
+       dependent pointer-chase addressing, and per-block causal hash binding
+       in a single step function.  A Prover executes K sequential steps over
+       a mutable N-block arena.  Each step reads d blocks at addresses
+       determined by the previous read's result (pointer chasing), writes
+       one block with spatial neighborhood entanglement (incorporating
+       A\[w-1\] and A\[w+1\]), and advances a transcript chain.  The
+       construction provides three properties: (1) unconditional sequential
+       time enforcement anchored in physics-bounded latency floors, (2)
+       forgery prevention via causal hashes (reduces to collision resistance
+       of H), and (3) TMTO resistance scaling geometrically with write
+       density rho.  Verification requires O(Q * d^R * log N) hash
+       evaluations with no arena allocation.  No trusted setup is required.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-condrey-cfrg-posme-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-condrey-cfrg-posme-00
+    docidentifier:
+    - content: draft-condrey-cfrg-posme-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-condrey-cfrg-posme-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-condrey-cfrg-posme-02
+    docidentifier:
+    - content: draft-condrey-cfrg-posme-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-condrey-cfrg-posme-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

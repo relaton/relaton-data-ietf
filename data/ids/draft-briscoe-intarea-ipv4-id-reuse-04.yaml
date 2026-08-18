@@ -1,0 +1,95 @@
+---
+id: draftbriscoeintareaipv4idreuse04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Reusing the IPv4 Identification Field in Atomic Packets
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-briscoe-intarea-ipv4-id-reuse-04
+docidentifier:
+- content: draft-briscoe-intarea-ipv4-id-reuse
+  type: Internet-Draft
+- content: draft-briscoe-intarea-ipv4-id-reuse-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.briscoe-intarea-ipv4-id-reuse
+date:
+- type: published
+  at: '2014-02-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bob
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: BT
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification takes a new approach to extensibility that is both
+       principled and a hack.  It builds on recent moves to formalise the
+       increasingly common practice where fragmentation in IPv4 more closely
+       matches that of IPv6.  The large majority of IPv4 packets are now
+       'atomic', meaning indivisible.  In such packets, the 16 bits of the
+       IPv4 Identification (IPv4 ID) field are redundant and could be freed
+       up for the Internet community to put to other uses, at least within
+       the constraints imposed by their original use for reassembly.  This
+       specification defines the process for redefining the semantics of
+       these bits.  It uses the previously reserved control flag in the IPv4
+       header to indicate that these 16 bits have new semantics.  Great care
+       is taken throughout to ease incremental deployment, even in the
+       presence of middleboxes that incorrectly discard or normalise packets
+       that have the reserved control flag set.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-briscoe-intarea-ipv4-id-reuse-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-intarea-ipv4-id-reuse-03
+    docidentifier:
+    - content: draft-briscoe-intarea-ipv4-id-reuse-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-briscoe-intarea-ipv4-id-reuse-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

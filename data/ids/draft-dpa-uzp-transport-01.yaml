@@ -1,0 +1,103 @@
+---
+id: draftdpauzptransport01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'UZP: Universal Zero-Port Transport Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dpa-uzp-transport-01
+docidentifier:
+- content: draft-dpa-uzp-transport
+  type: Internet-Draft
+- content: draft-dpa-uzp-transport-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dpa-uzp-transport
+date:
+- type: published
+  at: '2026-03-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Benjamin
+      - language: en
+        script: Latn
+        initial: B
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: B. A.
+      surname:
+        language: en
+        content: Fisher
+      completename:
+        language: en
+        content: Benjamin Anthony Fisher
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: DPA R&D Ltd (https://www.dpa-cloud.co.uk)
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Universal Zero-Port Transport Protocol (UZP) defines an identity-
+       addressed, encrypted-by-default transport for the Universal Zero-Port
+       Interconnect Framework (UZPIF; [UZPIF]).  Instead of exposing IP:port
+       listeners, both endpoints establish outbound, identity-bound sessions
+       to one or more Rendezvous Nodes (RNs).  The RN performs flow
+       stitching but never terminates end-to-end cryptography or holds long-
+       term secrets.  Application data is carried over an authenticated
+       encryption (AEAD) channel keyed by a handshake based on modern and
+       post-quantum-capable primitives, and reliability is expressed at the
+       block level rather than at the TCP segment or stream level.
+
+       This document is part of an experimental, research-oriented
+       Independent Stream suite.  It defines the current normative baseline
+       for trust objects, validation rules, and security semantics within
+       its scope.  Hard interoperability is expected for shared object
+       semantics and validation rules.  Full wire-level, clustering, and
+       proof-family interoperability is not claimed everywhere yet; the
+       remaining details are intentionally profile-defined or deferred where
+       noted.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dpa-uzp-transport-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dpa-uzp-transport-00
+    docidentifier:
+    - content: draft-dpa-uzp-transport-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dpa-uzp-transport-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

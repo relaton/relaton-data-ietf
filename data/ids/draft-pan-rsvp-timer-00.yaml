@@ -1,0 +1,114 @@
+---
+id: draftpanrsvptimer00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Staged Refresh Timers for RSVP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pan-rsvp-timer-00
+docidentifier:
+- content: draft-pan-rsvp-timer
+  type: Internet-Draft
+- content: draft-pan-rsvp-timer-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.pan-rsvp-timer
+date:
+- type: published
+  at: '1997-12-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Guerin
+      completename:
+        language: en
+        content: Dr. Roch Guerin
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Henning
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Schulzrinne
+      completename:
+        language: en
+        content: Henning Schulzrinne
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ping
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Pan
+      completename:
+        language: en
+        content: Ping Pan
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The current resource Reservation Protocol (RSVP) design has
+       no reliability mechanism for the delivery of control messages.
+       Instead, RSVP relies on periodic refresh between routers to
+       maintain reservation states.  This approach has several problems
+       in a congested network.  End systems send Path and Resv messages
+       to set up RSVP connections.  If the first Path or Resv message
+       from an end system is accidentally lost in the network, a copy of
+       the message will not be retransmitted until the end of a refresh
+       interval, causing a delay of 30 seconds or more until a reservation
+       is established.  If a congested link causes a tear-down message
+       (PathTear or ResvTear) to be dropped, the corresponding reservation
+       will not be removed from the routers until the RSVP cleanup timer
+       expires.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-pan-rsvp-timer-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

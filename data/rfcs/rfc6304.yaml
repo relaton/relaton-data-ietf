@@ -1,0 +1,144 @@
+---
+id: RFC6304
+schema_version: v1.5.6
+type: standard
+title:
+- content: AS112 Nameserver Operations
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc6304
+docidentifier:
+- content: RFC 6304
+  type: IETF
+  primary: true
+- content: 10.17487/RFC6304
+  type: DOI
+docnumber: RFC6304
+date:
+- type: published
+  at: 2011-07
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        script: Latn
+        content: J.
+      surname:
+        language: en
+        script: Latn
+        content: Abley
+      completename:
+        language: en
+        script: Latn
+        content: J. Abley
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        script: Latn
+        content: W.
+      surname:
+        language: en
+        script: Latn
+        content: Maton
+      completename:
+        language: en
+        script: Latn
+        content: W. Maton
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Domain Name System Operations
+      identifier:
+      - content: dnsop
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>Many sites connected to the Internet make use of IPv4 addresses that
+    are not globally unique. Examples are the addresses designated in RFC 1918 for
+    private use within individual sites.</p><p>Devices in such environments may occasionally
+    originate Domain Name System (DNS) queries (so-called "reverse lookups") corresponding
+    to those private-use addresses. Since the addresses concerned have only local
+    significance, it is good practice for site administrators to ensure that such
+    queries are answered locally. However, it is not uncommon for such queries to
+    follow the normal delegation path in the public DNS instead of being answered
+    within the site.</p><p>It is not possible for public DNS servers to give useful
+    answers to such queries. In addition, due to the wide deployment of private-use
+    addresses and the continuing growth of the Internet, the volume of such queries
+    is large and growing. The AS112 project aims to provide a distributed sink for
+    such queries in order to reduce the load on the IN-ADDR.ARPA authoritative servers.
+    The AS112 project is named after the Autonomous System Number (ASN) that was assigned
+    to it.</p><p>This document describes the steps required to install a new AS112
+    node and offers advice relating to such a node's operation. This document is not
+    an Internet Standards Track specification; it is published for informational purposes.</p>
+status:
+  stage:
+    content: INFORMATIONAL
+relation:
+- type: obsoletedBy
+  bibitem:
+    formattedref:
+      content: RFC7534
+    docidentifier:
+    - content: RFC7534
+      type: IETF
+      primary: true
+series:
+- title:
+  - content: RFC
+  number: '6304'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: DNS
+- vocab:
+    content: RFC1918
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

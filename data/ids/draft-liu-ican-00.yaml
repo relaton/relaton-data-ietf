@@ -1,0 +1,102 @@
+---
+id: draftliuican00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Instant Congestion Assessment Network (iCAN) for Data Plane Traffic Engineering
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-liu-ican-00
+docidentifier:
+- content: draft-liu-ican
+  type: Internet-Draft
+- content: draft-liu-ican-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.liu-ican
+date:
+- type: published
+  at: '2019-07-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bing
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Liu
+      completename:
+        language: en
+        content: Bing Liu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>iCAN (instant Congestion Assessment Network) is a set of mechanisms
+       running directly on network nodes:
+
+       o  To adjust the flows paths based on real-time measurement of the
+          candidate paths.
+
+       o  The measurement is to reflect the congestion situation of each
+          path, so that the ingress nodes could decide which flows need to
+          be switched from a path to another.
+
+       This is something that current SDN and TE technologies can hardly
+       achieve:
+
+       o  SDN Controller is slow and far from the data plane, it is neither
+          able to assess the real-time congestion situation of each path,
+          nor able to assure the data plane always go as expected
+          (especially in SRv6 scenarios).  However, iCAN can work with SDN
+          perfectly: controller planning multi-path transmission, and iCAN
+          does the flow optimization automatically.
+
+       o  Traditional TE is not able to adjust the flow paths in real-time.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-liu-ican-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-ican-01
+    docidentifier:
+    - content: draft-liu-ican-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-liu-ican-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

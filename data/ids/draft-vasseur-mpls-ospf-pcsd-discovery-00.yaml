@@ -1,0 +1,101 @@
+---
+id: draftvasseurmplsospfpcsddiscovery00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RSVP Path computation request and reply messages
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vasseur-mpls-ospf-pcsd-discovery-00
+docidentifier:
+- content: draft-vasseur-mpls-ospf-pcsd-discovery
+  type: Internet-Draft
+- content: draft-vasseur-mpls-ospf-pcsd-discovery-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vasseur-mpls-ospf-pcsd-discovery
+date:
+- type: published
+  at: '2002-06-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Jp
+      completename:
+        language: en
+        content: JP Vasseur
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Psenak
+      completename:
+        language: en
+        content: Peter Psenak
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes extensions to RSVP-TE to support a new \nmessage
+    type called a 'Path computation' message.  This message is to \nbe used between
+    an LSR and a Path Computation Server, which may be an \nLSR or a centralized path
+    computation tool. An RSVP Path Computation \nRequest message is used by the head-end
+    LSR to send its request to \nthe Path Computation Server. The Path Computation
+    Server in turn \nsends an RSVP Path Computation Reply message containing either:
+    \n- a positive reply, containing one or more paths, if the request \ncan be satisfied.
+    \n- a negative reply if no path obeying the requested constraints \ncan be found.
+    The Path Computation Server may also optionally \nsuggest new constraint values
+    for which one or several paths \ncould be found. \nThere are many situations where
+    a Path Computation Server may be \nused. A typical example is in the context of
+    Inter-area MPLS TE. A \nhead-end LSR could request that a Path Computation Server
+    compute one \nor more paths obeying a specified set of constraints for a TE LSP
+    \nspanning multiple areas. The path computation server could be a \ncentralized
+    path computation server or an ABR. Another example is the \nuse of a Path Computation
+    Server to compute diversely routed paths \nbetween two end points.  This may be
+    useful in the context of MPLS TE \nLSP Path protection or GMPLS LSP Path protection.
+    The computation of \nMulti-constraints paths requires intensive CPU resources,
+    and may be \nyet another usage example. Lastly, those protocol extensions could
+    be \nused as a 'UNI' like protocol between a CE (Customer Edge equipment) \nand
+    a PE (Provider Edge equipment) where the CE is not part of the \nPE's IGP domain.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vasseur-mpls-ospf-pcsd-discovery-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

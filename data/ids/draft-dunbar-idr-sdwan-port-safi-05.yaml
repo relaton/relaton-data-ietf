@@ -1,0 +1,134 @@
+---
+id: draftdunbaridrsdwanportsafi05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SDWAN WAN Ports Property Advertisement in BGP UPDATE
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dunbar-idr-sdwan-port-safi-05
+docidentifier:
+- content: draft-dunbar-idr-sdwan-port-safi
+  type: Internet-Draft
+- content: draft-dunbar-idr-sdwan-port-safi-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dunbar-idr-sdwan-port-safi
+date:
+- type: published
+  at: '2019-11-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Linda
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Dunbar
+      completename:
+        language: en
+        content: Linda Dunbar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Futurewei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Susan
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Hares
+      completename:
+        language: en
+        content: Susan Hares
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hickory Hill Consulting
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The document specifies information encoded in BGP UPDATE for
+       advertising WAN ports properties of a SDWAN edge node to its
+       controller. SDWAN edge node's WAN ports may face untrusted networks,
+       such as the public internet, may get assigned IP addresses from the
+       Internet Service Providers (ISPs), may get assigned dynamic IP
+       addresses via DHCP, or may have private addresses (e.g. inside third
+       party Cloud DCs). Packets forwarded through those SDWAN WAN ports
+       might need to be encrypted (depending on the user policies) or need
+       to go through NAT. SDWAN edge nodes need to propagate those WAN
+       ports properties to its controller which in turn distribute to the
+       peers who are authorized to communicate across different types of
+       underlay networks including the untrusted networks.
+
+       This document assumes the BGP Route Reflectors (RR) as the
+       controller, i.e. SDWAN edges send the WAN ports properties encoded
+       in BGP UPDATE to the RR which in turns propagate the information to
+       a group of authorized SDWAN edges reachable via overlay networks.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dunbar-idr-sdwan-port-safi-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dunbar-idr-sdwan-port-safi-04
+    docidentifier:
+    - content: draft-dunbar-idr-sdwan-port-safi-04
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-dunbar-idr-sdwan-port-safi-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dunbar-idr-sdwan-port-safi-06
+    docidentifier:
+    - content: draft-dunbar-idr-sdwan-port-safi-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dunbar-idr-sdwan-port-safi-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

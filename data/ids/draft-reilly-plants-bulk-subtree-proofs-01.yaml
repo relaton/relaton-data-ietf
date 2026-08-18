@@ -1,0 +1,103 @@
+---
+id: draftreillyplantsbulksubtreeproofs01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Bulk Subtree Consistency Proofs for Merkle Tree Certificates
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-reilly-plants-bulk-subtree-proofs-01
+docidentifier:
+- content: draft-reilly-plants-bulk-subtree-proofs
+  type: Internet-Draft
+- content: draft-reilly-plants-bulk-subtree-proofs-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.reilly-plants-bulk-subtree-proofs
+date:
+- type: published
+  at: '2026-07-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lawrence
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: L. J. R.
+      surname:
+        language: en
+        content: Reilly
+      completename:
+        language: en
+        content: Lawrence John Reilly Jr
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Merkle Tree Certificates require relying parties to periodically
+       obtain a set of active landmark subtrees and verify each is
+       consistent with a reference checkpoint of the issuance log.  As
+       specified, this requires one subtree consistency proof per landmark
+       subtree, and those proofs share a large fraction of their interior
+       nodes.
+
+       This document defines a bulk subtree consistency proof, which
+       verifies an entire set of landmark subtrees against a single
+       reference checkpoint from one shared set of hashes.  It is a size
+       optimization for the relying party update channel and introduces no
+       change to certificate verification or to the security properties of
+       Merkle Tree Certificates.
+
+       This revision replaces the construction published in -00, which was
+       incorrect.  See Appendix "Changes from -00".</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-reilly-plants-bulk-subtree-proofs-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reilly-plants-bulk-subtree-proofs-00
+    docidentifier:
+    - content: draft-reilly-plants-bulk-subtree-proofs-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-reilly-plants-bulk-subtree-proofs-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

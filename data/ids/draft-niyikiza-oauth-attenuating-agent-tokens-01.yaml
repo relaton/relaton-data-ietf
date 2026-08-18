@@ -1,0 +1,96 @@
+---
+id: draftniyikizaoauthattenuatingagenttokens01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Attenuating Authorization Tokens for Agentic Delegation Chains
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-niyikiza-oauth-attenuating-agent-tokens-01
+docidentifier:
+- content: draft-niyikiza-oauth-attenuating-agent-tokens
+  type: Internet-Draft
+- content: draft-niyikiza-oauth-attenuating-agent-tokens-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.niyikiza-oauth-attenuating-agent-tokens
+date:
+- type: published
+  at: '2026-06-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Niki
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Aimable
+      completename:
+        language: en
+        content: Niki Aimable
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tenuo
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Attenuating Authorization Tokens (AATs), a
+       signed credential format for task-scoped delegation in AI agent
+       systems.  An AAT encodes the tools an agent may invoke and the
+       argument constraints that apply to those invocations.  A token holder
+       authorized to delegate can derive a token offline with equal or
+       narrower authority, subject to the parent token's depth and lifetime
+       limits.  The resulting delegation chain is verifiable offline by any
+       enforcement point that has the root issuer's trust anchor key.
+
+       This specification profiles the OAuth Rich Authorization Requests
+       format (RFC 9396) for tool-level capability claims, adds delegation-
+       chain claims, and defines a core constraint vocabulary for argument
+       restrictions.  The chain verification algorithm authenticates each
+       delegation step and enforces monotonic attenuation without network
+       contact with the root issuer.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-niyikiza-oauth-attenuating-agent-tokens-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-niyikiza-oauth-attenuating-agent-tokens-00
+    docidentifier:
+    - content: draft-niyikiza-oauth-attenuating-agent-tokens-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-niyikiza-oauth-attenuating-agent-tokens-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

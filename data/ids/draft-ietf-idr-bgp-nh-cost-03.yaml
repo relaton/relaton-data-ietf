@@ -1,0 +1,197 @@
+---
+id: draftietfidrbgpnhcost03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Carrying next-hop cost information in BGP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-nh-cost-03
+docidentifier:
+- content: draft-ietf-idr-bgp-nh-cost
+  type: Internet-Draft
+- content: draft-ietf-idr-bgp-nh-cost-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-bgp-nh-cost
+date:
+- type: published
+  at: '2021-11-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ilya
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Varlashkin
+      completename:
+        language: en
+        content: Ilya Varlashkin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Robert
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Raszuk
+      completename:
+        language: en
+        content: Robert Raszuk
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NTT Network Innovations
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Keyur
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Patel
+      completename:
+        language: en
+        content: Keyur Patel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arrcus, Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Manish
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Bhardwaj
+      completename:
+        language: en
+        content: Manish Bhardwaj
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Serpil
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bayraktar
+      completename:
+        language: en
+        content: Serpil Bayraktar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>BGPLS provides a mechanism by which Link state and traffic
+       engineering information can be collected from internal networks and
+       shared with external network routers using BGP.  BGPLS defines a new
+       Address Family to exchange this information using BGP.
+
+       BGP Optimal Route Reflection [BGP-ORR] [RFC9107] provides a mechanism
+       for a centralized BGP Route Reflector to acheive requirements of a
+       Hot Potato Routing as described in Section 11 of [RFC4456].  Optimal
+       Route Reflection requires BGP ORR to overwrite the default IGP
+       location placement of the route reflector; which is used for
+       determining cost to the nexthop contained in the path.
+
+       This draft augments BGPLS and defines a new extensions to exchange
+       cost information to next-hops for the purpose of calculating best
+       path from a peer perspective rather than local BGP speaker own
+       perspective.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-bgp-nh-cost-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-nh-cost-02
+    docidentifier:
+    - content: draft-ietf-idr-bgp-nh-cost-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-bgp-nh-cost-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

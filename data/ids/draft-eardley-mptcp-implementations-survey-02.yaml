@@ -1,0 +1,116 @@
+---
+id: drafteardleymptcpimplementationssurvey02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Survey of MPTCP Implementations
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-eardley-mptcp-implementations-survey-02
+docidentifier:
+- content: draft-eardley-mptcp-implementations-survey
+  type: Internet-Draft
+- content: draft-eardley-mptcp-implementations-survey-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.eardley-mptcp-implementations-survey
+date:
+- type: published
+  at: '2013-07-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Philip
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Eardley
+      completename:
+        language: en
+        content: Philip Eardley
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: BT
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document presents results from the survey to gather information
+       from people who have implemented MPTCP, in particular to help
+       progress the protocol from Experimental to Standards track.
+
+       The document currently includes answers from four teams: a Linux
+       implementation from UCLouvain, a FreeBSD implementation from
+       Swinburne, an anonymous implementation in a commercial OS, and a
+       NetScalar Firmware implementation from Citrix Systems, Inc. Thank-
+       you!
+
+       In summary, we have four independent implementations of all the MPTCP
+       signalling messages, with the exception of address management, and
+       some interoperabiity testing has been done by the other three
+       implementations with the 'reference' Linux implementation.  So it
+       appears that the RFC is (at least largely) clear and correct.  On
+       address management, we have only one implementation of ADD_ADDR with
+       two teams choosing not to implement it.  We have one implementation
+       of the working group's coupled congestion control (RFC6356) and none
+       of the MPTCP-aware API (RFC6897).
+
+       The main suggested improvements are around
+
+       o  how MPTCP falls back (if the signalling is interrupted by a
+          middlebox): (1) corner cases that are not handled properly, (2) at
+          the IETF, the MPTCP community should work with middlebox vendors,
+          either to reduce or eliminate the need for fallback or to
+          understand the middlebox interactions better.
+
+       o  security: both better MPTCP security (perhaps building on SSL) and
+          a lighter weight mechanism, preferably both in one mechanism.
+
+       It is hoped that the next version can include information from any
+       other implementations.  If you are an implementer and want to
+       contribute your answers, please see the -01 version of this document
+       for a blank survey ready to be filled in.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-eardley-mptcp-implementations-survey-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-eardley-mptcp-implementations-survey-01
+    docidentifier:
+    - content: draft-eardley-mptcp-implementations-survey-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-eardley-mptcp-implementations-survey-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

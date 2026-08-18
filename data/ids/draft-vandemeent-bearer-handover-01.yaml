@@ -1,0 +1,124 @@
+---
+id: draftvandemeentbearerhandover01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Identity-Anchored Bearer Handover for Real-Time Media Sessions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vandemeent-bearer-handover-01
+docidentifier:
+- content: draft-vandemeent-bearer-handover
+  type: Internet-Draft
+- content: draft-vandemeent-bearer-handover-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vandemeent-bearer-handover
+date:
+- type: published
+  at: '2026-06-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jasper
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: van de Meent
+      completename:
+        language: en
+        content: Jasper van de Meent
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Humotica
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Root
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: AI
+      completename:
+        language: en
+        content: Root AI
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Humotica
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes identity-anchored bearer handover: a method
+       for keeping a live, authenticated real-time media session (such as a
+       voice call) running uninterrupted while the underlying network bearer
+       changes - for example a device moving from Wi-Fi to cellular.  The
+       session is bound to a cryptographic identity and a media-encryption
+       key, never to an IP address.  When the bearer changes, the endpoint
+       detects the new local address and emits an authenticated re-anchor
+       over a stable control channel; the media path is re-established to
+       the same cryptographic context, so the far end can relearn the new
+       transport source without exposing the session to source-substitution
+       (latching) attacks.  No central media relay is required: a default-
+       routed media anchor plus an authenticated re-anchor is sufficient.
+       Each handover MAY emit a signed transport-rebind event for an
+       auditable trail.  Human-facing names, dial strings, or aliases may
+       select a policy surface, but they are not the cryptographic anchor
+       and not the transport binding.  This protocol is transport-agnostic
+       and complements JIS [JIS], the MUX Status Frame [MUX], the Semantic
+       Surface Manifest [SSM], and TIBET provenance [TIBET].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-vandemeent-bearer-handover-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vandemeent-bearer-handover-00
+    docidentifier:
+    - content: draft-vandemeent-bearer-handover-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vandemeent-bearer-handover-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

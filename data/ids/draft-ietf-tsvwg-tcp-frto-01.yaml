@@ -1,0 +1,83 @@
+---
+id: draftietftsvwgtcpfrto01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'F-RTO: An Algorithm for Detecting Spurious Retransmission Timeouts with
+    TCP and SCTP'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-tcp-frto-01
+docidentifier:
+- content: draft-ietf-tsvwg-tcp-frto
+  type: Internet-Draft
+- content: draft-ietf-tsvwg-tcp-frto-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tsvwg-tcp-frto
+date:
+- type: published
+  at: '2004-02-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pasi
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Sarolahti
+      completename:
+        language: en
+        content: Pasi Sarolahti
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia Research Center
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Spurious retransmission timeouts (RTOs) cause suboptimal TCP
+       performance, because they often result in unnecessary retransmission
+       of the last window of data. This document describes the 'Forward RTO
+       Recovery' (F-RTO) algorithm for detecting spurious TCP RTOs. F-RTO is
+       a TCP sender only algorithm that does not require any TCP options to
+       operate. After retransmitting the first unacknowledged segment
+       triggered by an RTO, the F-RTO algorithm at a TCP sender monitors the
+       incoming acknowledgements to determine whether the timeout was
+       spurious and to decide whether to send new segments or retransmit
+       unacknowledged segments. The algorithm effectively helps to avoid
+       additional unnecessary retransmissions and thereby improves TCP
+       performance in case of a spurious timeout. The F-RTO algorithm can
+    also be applied with the SCTP protocol.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tsvwg-tcp-frto-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

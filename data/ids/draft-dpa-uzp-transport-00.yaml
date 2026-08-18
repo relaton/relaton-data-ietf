@@ -1,0 +1,99 @@
+---
+id: draftdpauzptransport00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'UZP: Universal Zero-Port Transport Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dpa-uzp-transport-00
+docidentifier:
+- content: draft-dpa-uzp-transport
+  type: Internet-Draft
+- content: draft-dpa-uzp-transport-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dpa-uzp-transport
+date:
+- type: published
+  at: '2026-01-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Benjamin
+      - language: en
+        script: Latn
+        initial: B
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: B. A.
+      surname:
+        language: en
+        content: Fisher
+      completename:
+        language: en
+        content: Benjamin Anthony Fisher
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: DPA R&D Ltd (https://www.dpa-cloud.co.uk)
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Universal Zero-Port Transport Protocol (UZP) defines an identity-
+       addressed, encrypted-by-default transport for the Universal Zero-Port
+       Interconnect Framework (UZPIF; [UZPIF]).  Instead of exposing IP:port
+       listeners, both endpoints establish outbound, identity-bound sessions
+       to one or more Rendezvous Nodes (RNs).  The RN performs flow
+       stitching but never terminates end-to-end cryptography or holds long-
+       term secrets.  All application data is carried over an authenticated
+       encryption (AEAD) channel keyed by a handshake based on modern and
+       post-quantum-capable primitives.  Reliability is expressed at the
+       block level, rather than at the TCP segment or stream level, enabling
+       selective retransmission and deterministic pacing.  This document
+       specifies the UZP wire format, handshake, cryptographic negotiation,
+       exporter interface, 0-RTT rules, replay model, and RN behaviour, and
+       its relationship to UZPIF ([UZPIF]), QUIC ([RFC9000]), HIP
+       ([RFC7401]), and TLS 1.3 ([RFC8446]).</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-dpa-uzp-transport-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dpa-uzp-transport-01
+    docidentifier:
+    - content: draft-dpa-uzp-transport-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dpa-uzp-transport-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

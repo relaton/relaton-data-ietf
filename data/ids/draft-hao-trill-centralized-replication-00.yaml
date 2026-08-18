@@ -1,0 +1,129 @@
+---
+id: drafthaotrillcentralizedreplication00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Centralized Replication for BUM traffic in active-active edge connection
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hao-trill-centralized-replication-00
+docidentifier:
+- content: draft-hao-trill-centralized-replication
+  type: Internet-Draft
+- content: draft-hao-trill-centralized-replication-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hao-trill-centralized-replication
+date:
+- type: published
+  at: '2013-12-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hao
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Weiguo
+      completename:
+        language: en
+        content: Hao Weiguo
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yizhou
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yizhou Li
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tao
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Han
+      completename:
+        language: en
+        content: Tao Han
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In TRILL active-active access scenario, RPF check failure issue may
+       occur when pseduonode nickname mechanism in [TRILLPN] is used. This
+       draft is to solve RPF check failure issue through centralized
+       replication for BUM traffic solution. The basic idea is that all
+       ingress RBs send BUM traffic to a centralized node through unicast
+       TRILL encapsulation, the centralized node decapsulates the unicast
+       TRILL packet. Then the centralized node searches its multicast
+       forwarding table to replicates a copy of the BUM traffic to
+       destination RBs through TRILL unicast encapsulation. Through
+       centralized replication solution, only unicast forwarding behavior is
+       required between edge RB and centralized RB, so no RPF check function
+       is required on any device in TRILL campus through centralized
+       replication solution and no RPF check failure issue occurs.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-hao-trill-centralized-replication-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hao-trill-centralized-replication-01
+    docidentifier:
+    - content: draft-hao-trill-centralized-replication-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hao-trill-centralized-replication-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

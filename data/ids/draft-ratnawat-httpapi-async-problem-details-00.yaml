@@ -1,0 +1,94 @@
+---
+id: draftratnawathttpapiasyncproblemdetails00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Problem Details for Asynchronous Job Failures
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ratnawat-httpapi-async-problem-details-00
+docidentifier:
+- content: draft-ratnawat-httpapi-async-problem-details
+  type: Internet-Draft
+- content: draft-ratnawat-httpapi-async-problem-details-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ratnawat-httpapi-async-problem-details
+date:
+- type: published
+  at: '2026-03-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gaurav
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Ratnawat
+      completename:
+        language: en
+        content: Gaurav Ratnawat
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: IMTF
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>HTTP APIs that process work asynchronously need a standard way to
+       report job failures.  "Problem Details for HTTP APIs" (RFC 9457)
+       provides the envelope; this document defines extension members that
+       fill it with asynchronous-job-specific context.
+
+       Eight extension members are specified: "jobId", "jobStatus",
+       "submittedAt", "completedAt", "retryable", "retryAfter",
+       "processingStage", and "correlationId".  A ninth member, "results",
+       supports batch operations.  Together they let a server describe which
+       job failed, when, at what pipeline stage, and whether a retry is
+       advisable -- in a single, machine-readable JSON (RFC 8259) object
+       that works equally well in an HTTP response body, a message-broker
+       payload, or a webhook callback.
+
+       Although the primary motivation is structured error reporting for
+       failed jobs, the extension members are equally useful for
+       communicating successful job outcomes (e.g., a COMPLETED status with
+       timing information).
+
+       This document does NOT redefine how to submit, poll, or cancel
+       asynchronous jobs; those mechanics are already covered by "HTTP
+       Semantics" (RFC 9110) (202 Accepted), "Prefer Header for HTTP" (RFC
+       7240) (respond-async), and emerging IETF work on long-running
+       operations.  Instead, it focuses exclusively on the structured
+       reporting gap that remains after a job reaches a terminal state.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ratnawat-httpapi-async-problem-details-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

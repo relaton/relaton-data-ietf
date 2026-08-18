@@ -1,0 +1,47 @@
+---
+id: draftchenhttpbisserverdeliveryoriginboundary
+schema_version: v1.5.6
+formattedref:
+  content: draft-chen-httpbis-server-delivery-origin-boundary
+title:
+- language: en
+  script: Latn
+  content: Origin-Bound Validation for HTTP Server-Initiated Delivery
+docidentifier:
+- content: draft-chen-httpbis-server-delivery-origin-boundary
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes origin-binding considerations for HTTP
+       server-initiated delivery mechanisms that can cause a user agent to
+       associate a delivered representation with an origin other than the
+       origin that established the underlying transport connection.  The
+       motivation is a class of cross-origin attacks demonstrated against
+       HTTP/2 server push and Signed HTTP Exchange (SXG), in which a server
+       that is authorized by a shared TLS certificate for multiple Subject
+       Alternative Name (SAN) entries can cause content to be accepted under
+       the authority of a different origin.
+
+       This document provides security guidance for user agents, origin
+       servers, intermediaries, and deployment operators.  In particular, it
+       recommends that user agents reject server-initiated deliveries whose
+       asserted authority is not origin-consistent with the active request
+       context, and that implementations avoid using multi-domain shared
+       certificates as a basis for SXG attribution across unrelated origins.
+       It also outlines operational considerations for certificate lifecycle
+       management where shared certificates are unavoidable.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-chen-httpbis-server-delivery-origin-boundary-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-httpbis-server-delivery-origin-boundary-00
+    docidentifier:
+    - content: draft-chen-httpbis-server-delivery-origin-boundary-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,182 @@
+---
+id: RFC9999
+schema_version: v1.5.6
+type: standard
+title:
+- content: Remote ATtestation procedureS (RATS) Conceptual Message Wrapper (CMW)
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc9999
+docidentifier:
+- content: RFC 9999
+  type: IETF
+  primary: true
+- content: 10.17487/RFC9999
+  type: DOI
+docnumber: RFC9999
+date:
+- type: published
+  at: 2026-07
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        script: Latn
+        content: H.
+      surname:
+        language: en
+        script: Latn
+        content: Birkholz
+      completename:
+        language: en
+        script: Latn
+        content: H. Birkholz
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        script: Latn
+        content: N.
+      surname:
+        language: en
+        script: Latn
+        content: Smith
+      completename:
+        language: en
+        script: Latn
+        content: N. Smith
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        script: Latn
+        content: T.
+      surname:
+        language: en
+        script: Latn
+        content: Fossati
+      completename:
+        language: en
+        script: Latn
+        content: T. Fossati
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        script: Latn
+        content: H.
+      surname:
+        language: en
+        script: Latn
+        content: Tschofenig
+      completename:
+        language: en
+        script: Latn
+        content: H. Tschofenig
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Remote ATtestation ProcedureS
+      identifier:
+      - content: rats
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The conceptual messages introduced by the Remote ATtestation procedureS
+    (RATS) architecture (RFC 9334) are protocol-agnostic data units that are conveyed
+    between RATS roles during RATS interactions. Conceptual messages describe the
+    meaning and function of such data units within RATS data flows without specifying
+    a wire format, encoding, transport mechanism, or processing details. The initial
+    set of conceptual messages is defined in Section 8 of RFC 9334 and includes Evidence,
+    Attestation Results, Endorsements, Reference Values, and Appraisal Policies.</p><p>This
+    document introduces the Conceptual Message Wrapper (CMW) that provides a common
+    structure to encapsulate these messages. It defines a dedicated Concise Binary
+    Object Representation (CBOR) tag, corresponding JSON Web Token (JWT) and CBOR
+    Web Token (CWT) claims, and an X.509 extension.</p><p>Together, these mechanisms
+    allow CMWs to be used in CBOR-based protocols, web APIs using JWTs and CWTs, and
+    PKIX artifacts such as X.509 certificates. Additionally, this document defines
+    media types and CoAP Content-Formats that may be used to identify CMWs when transported
+    over protocols such as HTTP, MIME, and CoAP.</p><p>The goal is to improve the
+    interoperability and flexibility of remote attestation protocols. Introducing
+    a shared message format such as CMW enables consistent support for different attestation
+    message types, enables the evolution of message serialization formats without
+    breaking compatibility, and avoids the need to redefine how messages are handled
+    within each protocol.</p>"
+status:
+  stage:
+    content: PROPOSED STANDARD
+series:
+- title:
+  - content: RFC
+  number: '9999'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: evidence
+- vocab:
+    content: attestation results
+- vocab:
+    content: endorsments
+- vocab:
+    content: reference values
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

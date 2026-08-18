@@ -1,0 +1,86 @@
+---
+id: draftgazittoauthauthzenclaims00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AuthZEN Profile for Authorization Claims in JWT Access Tokens
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gazitt-oauth-authzen-claims-00
+docidentifier:
+- content: draft-gazitt-oauth-authzen-claims
+  type: Internet-Draft
+- content: draft-gazitt-oauth-authzen-claims-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gazitt-oauth-authzen-claims
+date:
+- type: published
+  at: '2026-08-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Omri
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Gazitt
+      completename:
+        language: en
+        content: Omri Gazitt
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RFC 9068 recommends that an authorization server placing group
+       memberships, roles, or entitlements in a JWT access token draw those
+       claims from the SCIM user schema.  It says what the claims are named
+       and how their values are encoded, and it does not say where an
+       authorization server obtains them.  In deployments today they come
+       from a directory, a database, or a vendor-specific hook, and the
+       question they answer is an authorization question asked of something
+       that is not the authorization system.
+
+       This document profiles the Resource Search API of the OpenID AuthZEN
+       Authorization API for that purpose.  It binds each authorization
+       claim to a search, defines how a search result set becomes a claim
+       value, and requires that a search result never influence whether a
+       token is issued or what authority it conveys.  It may be applied on
+       its own, by an authorization server that externalizes claim
+       enrichment but not its issuance decision, or alongside the companion
+       framework document that externalizes the decision.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gazitt-oauth-authzen-claims-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

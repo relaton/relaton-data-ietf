@@ -1,0 +1,81 @@
+---
+id: drafthaynesnfsv4flexfilesv2deltawrites00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Delta-Write Extension for the Flexible File Version 2 Layout Type
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-haynes-nfsv4-flexfiles-v2-delta-writes-00
+docidentifier:
+- content: draft-haynes-nfsv4-flexfiles-v2-delta-writes
+  type: Internet-Draft
+- content: draft-haynes-nfsv4-flexfiles-v2-delta-writes-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.haynes-nfsv4-flexfiles-v2-delta-writes
+date:
+- type: published
+  at: '2026-08-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Thomas
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Haynes
+      completename:
+        language: en
+        content: Thomas Haynes
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hammerspace
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Flexible File Version 2 pNFS layout type defines a chunk-oriented
+       data-server protocol in which every write is a full-chunk payload.
+       For workloads that make small edits to files protected by an XOR-
+       based erasure encoding, this forces client-side stripe fetch, re-
+       encode, and transmit on every edit, with wire amplification of three
+       to four orders of magnitude per byte edited.  This document defines
+       an optional extension, CHUNK_XOR_DELTA, that lets a client transmit a
+       per-projection XOR delta directly to each data server holding a
+       projection of the affected stripe; the data server applies the delta
+       locally.  The extension is restricted to XOR-linear systematic
+       encodings and XOR-affine checksums, using the existing chunk state
+       machine with no new commit protocol.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-haynes-nfsv4-flexfiles-v2-delta-writes-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,82 @@
+---
+id: draftnareadomainauth00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DomainAuth Version 1
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-narea-domainauth-00
+docidentifier:
+- content: draft-narea-domainauth
+  type: Internet-Draft
+- content: draft-narea-domainauth-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.narea-domainauth
+date:
+- type: published
+  at: '2025-04-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gus
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Narea
+      completename:
+        language: en
+        content: Gus Narea
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Relaycorp
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines DomainAuth, a protocol to attribute digital
+       signatures to domain names in such a way that verification can occur
+       entirely offline without a prior distribution of public keys.
+
+       Each signature is distributed as part of a self-contained "signature
+       bundle" that encapsulates a complete chain of trust comprising: (1) a
+       DNSSEC chain from the root zone to a TXT record containing a public
+       key or its digest, (2) an X.509 certificate chain from the key
+       specified in the TXT record to the final signing key, and (3) the
+       digital signature in the form of a CMS SignedData structure.
+
+       Finally, signatures can be attributed to the domain name itself (e.g.
+       "example.com") or specific users (e.g. "alice" of "example.com").</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-narea-domainauth-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,155 @@
+---
+id: draftjohanidnsoptransportsignaling00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Authoritative DNS Transport Signaling
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-johani-dnsop-transport-signaling-00
+docidentifier:
+- content: draft-johani-dnsop-transport-signaling
+  type: Internet-Draft
+- content: draft-johani-dnsop-transport-signaling-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.johani-dnsop-transport-signaling
+date:
+- type: published
+  at: '2025-06-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Johan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Stenstam
+      completename:
+        language: en
+        content: Johan Stenstam
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leon
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Fernandez
+      completename:
+        language: en
+        content: Leon Fernandez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Erik
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Bergström
+      completename:
+        language: en
+        content: Erik Bergström
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document proposes a mechanism for authoritative DNS servers to
+       opportunistically signal their support for alternative transport
+       protocols (e.g., DNS over TLS (DoT), DNS over HTTPS (DoH) and DNS
+       over QUIC (DoQ)) directly within the Additional section of
+       authoritative DNS responses.  This "hint-based" approach aims to
+       enable resolvers to discover and upgrade transport connections more
+       efficiently, thereby improving privacy, security, and performance for
+       subsequent interactions.
+
+       The mechanism is designed to not require any protocol change.  It is
+       safe, backward-compatible, and effective even when DNSSEC validation
+       of the hint is not possible or desired.
+
+       This document proposes an improvement on the opportunistic (but
+       blind) testing of alternative transports suggested in RFC9539 by
+       providing a mechanism by which a responding authoritative server may
+       signal what alternative transports it supports.
+
+       TO BE REMOVED: This document is being collaborated on in Github at:
+       https://github.com/johanix/draft-johani-dnsop-transport-signaling
+       (https://github.com/johanix/draft-johani-dnsop-transport-signaling).
+       The most recent working version of the document, open issues, etc,
+       should all be available there.  The authors (gratefully) accept pull
+       requests.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-johani-dnsop-transport-signaling-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-johani-dnsop-transport-signaling-01
+    docidentifier:
+    - content: draft-johani-dnsop-transport-signaling-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-johani-dnsop-transport-signaling-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

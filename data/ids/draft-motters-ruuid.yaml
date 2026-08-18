@@ -1,0 +1,45 @@
+---
+id: draftmottersruuid
+schema_version: v1.5.6
+formattedref:
+  content: draft-motters-ruuid
+title:
+- language: en
+  script: Latn
+  content: Resolvable Universally Unique Identifiers (RUUID)
+docidentifier:
+- content: draft-motters-ruuid
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Resolvable Universally Unique Identifiers
+       (RUUIDs): a UUID format encoding a 64-bit IPv6 network prefix, a
+       48-bit identifier, and a 10-bit type.  A resolver uses reverse DNS on
+       the network prefix to discover the associated domain and, via that
+       domain's "UUID document", constructs a URI of the referent.  Defaults
+       for both the document location and the referent URI template mean
+       that when URLs follow the canonical convention, nothing beyond a
+       reverse-DNS PTR record needs to be published; resolution degrades
+       gracefully when configuration is missing.
+
+       The 64-bit network field carries an IPv6 /64 prefix directly.  An
+       IPv4 /32 is encoded as the corresponding 6to4 prefix (RFC 3056).
+       RUUIDs are 128 bits in the standard UUID textual form.  Pending a
+       dedicated UUID version, they use the RFC 9562 experimental version 8
+       with variant 10, so existing UUID parsers recognise them as well-
+       formed UUIDs.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-motters-ruuid-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-motters-ruuid-00
+    docidentifier:
+    - content: draft-motters-ruuid-00
+      type: Internet-Draft
+      primary: true

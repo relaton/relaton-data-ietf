@@ -1,0 +1,95 @@
+---
+id: draftwilliamshttprestauth00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RESTful Authentication Pattern for the HyperText Transport Protocol (HTTP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-williams-http-rest-auth-00
+docidentifier:
+- content: draft-williams-http-rest-auth
+  type: Internet-Draft
+- content: draft-williams-http-rest-auth-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.williams-http-rest-auth
+date:
+- type: published
+  at: '2012-08-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Williams
+      completename:
+        language: en
+        content: Nicolás Williams
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document proposes a "RESTful" pattern of authentication for
+       HTTP/1.0, 1.1, and 2.0.  The existing 401 status code and WWW-
+       Authenticate header are used to indicate that authentication is
+       required and for negotiation purposes.  The client POSTs an initial
+       authentication message to an indicated login URI, and reply messages
+       are returned as new representations of a session resource named by a
+       session URI.
+
+       This approach has a number of benefits: it can be implemented with or
+       without help from the HTTP stack, it can be universally implemented
+       on the server side using the Common Information Gateway (CGI) and
+       FastCGI, it results in a session Uniform Resource Identifier (URI)
+       that can be DELETEd to logout, it is completely orthogonal to any
+       HTTP "routers" and proxies, and it naturally (i.e., without changing
+       HTTP) handles multi-legged authentication mechanisms.
+
+       Among other features supported are: channel binding, an optional
+       round trip optimization for challenge/response mechanisms,
+       somecryptographic protection options for clients that don't use
+       Transport Layer Security (TLS), stronger authentication of servers/
+       services to users (where authentication mechanisms provide that) and
+       more.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-williams-http-rest-auth-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-williams-http-rest-auth-01
+    docidentifier:
+    - content: draft-williams-http-rest-auth-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-williams-http-rest-auth-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

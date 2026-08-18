@@ -1,0 +1,159 @@
+---
+id: draftietfmplslsppingnorao05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Deprecating the Use of Router Alert in LSP Ping
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-lspping-norao-05
+docidentifier:
+- content: draft-ietf-mpls-lspping-norao
+  type: Internet-Draft
+- content: draft-ietf-mpls-lspping-norao-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-mpls-lspping-norao
+date:
+- type: published
+  at: '2023-10-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kireeti
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Kompella
+      completename:
+        language: en
+        content: Kireeti Kompella
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ron
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Bonica
+      completename:
+        language: en
+        content: Ron Bonica
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Greg
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Mirsky
+      completename:
+        language: en
+        content: Greg Mirsky
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The MPLS echo request and MPLS echo response messages, defined in RFC
+       8029 "Detecting Multiprotocol Label Switched (MPLS) Data-Plane
+       Failures" (usually referred to as LSP ping messages), are
+       encapsulated in IP headers that include a Router Alert Option (RAO).
+       The rationale for using an RAO as the exception mechanism is
+       questionable.  Furthermore, RFC 6398 identifies security
+       vulnerabilities associated with the RAO in non-controlled
+       environments, e.g., the case of using the MPLS echo request/reply as
+       inter-area OAM, and recommends against its use outside of controlled
+       environments.
+
+       Therefore, this document removes the RAO from LSP ping message
+       encapsulations.  It updates RFCs 7506 and 8029.
+
+       This document also recommends the use of an IPv6 loopback address
+       (::1/128) and discourages the use of an IPv4 loopback address mapped
+       to IPv6.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-lspping-norao-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-lspping-norao-04
+    docidentifier:
+    - content: draft-ietf-mpls-lspping-norao-04
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-lspping-norao-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-lspping-norao-06
+    docidentifier:
+    - content: draft-ietf-mpls-lspping-norao-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-mpls-lspping-norao-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

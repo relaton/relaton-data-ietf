@@ -1,0 +1,121 @@
+---
+id: draftsullivanmlsattachments01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Encrypted Attachments for MLS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sullivan-mls-attachments-01
+docidentifier:
+- content: draft-sullivan-mls-attachments
+  type: Internet-Draft
+- content: draft-sullivan-mls-attachments-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sullivan-mls-attachments
+date:
+- type: published
+  at: '2026-07-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nick
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Sullivan
+      completename:
+        language: en
+        content: Nick Sullivan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cryptography Consulting LLC
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raphael
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Robert
+      completename:
+        language: en
+        content: Raphael Robert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Phoenix R&D GmbH
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines random-access authenticated encryption of large
+       write-once files for Messaging Layer Security (MLS) groups.  A file
+       is encrypted so that a receiver can decrypt and authenticate any byte
+       range without processing the whole file.  The encryption is SEAL-
+       attachment, SEAL's named write-once attachment scheme (raAE),
+       parameterized by the AEAD and key derivation function of the group's
+       MLS cipher suite and keyed from the MLS exporter.  The encrypted
+       bytes are carried by any means, and a recipient needs only a small
+       reference (the object's identifier, length, and snapshot value, and
+       an optional locator) to fetch, key, and verify the object.  Carrying
+       that reference in an MLS message attributes the object to the member
+       that sent the message.  MLS application messages cannot carry large
+       files, and existing attachment encryption produces an opaque,
+       immutable blob with no partial access.  This extension supplies the
+       random-access layer those uses need.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sullivan-mls-attachments-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-mls-attachments-00
+    docidentifier:
+    - content: draft-sullivan-mls-attachments-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sullivan-mls-attachments-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

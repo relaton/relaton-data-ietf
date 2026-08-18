@@ -1,0 +1,109 @@
+---
+id: draftrichradextwlansecurityprofile00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: RADIUS Attribute for IEEE 802.11 WLAN Security Profiles
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-rich-radext-wlan-security-profile-00
+docidentifier:
+- content: draft-rich-radext-wlan-security-profile
+  type: Internet-Draft
+- content: draft-rich-radext-wlan-security-profile-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.rich-radext-wlan-security-profile
+date:
+- type: published
+  at: '2026-08-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ken
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Rich
+      completename:
+        language: en
+        content: Ken Rich
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dan
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Harkins
+      completename:
+        language: en
+        content: Dan Harkins
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RADIUS has attributes that let an IEEE 802.11 authenticator report
+       the AKM suite and pairwise cipher selected for an association.  That
+       is useful, but it is not enough anymore.  IEEE 802.11, as amended,
+       also defines security profiles.  A security profile is the complete
+       set of AKM, pairwise cipher, and related security capabilities
+       accepted for an association.
+
+       The problem is that the AKM and the pairwise cipher no longer maps to
+       a single security profile.  Using these two values, the RADIUS server
+       cannot tell which of the security profiles was accepted.
+
+       This document defines the WLAN-Security-Profile RADIUS attribute.
+       The attribute reports the IEEE 802.11 security profile accepted by
+       the responder for the association.  It complements the existing IEEE
+       802 network attributes.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-rich-radext-wlan-security-profile-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

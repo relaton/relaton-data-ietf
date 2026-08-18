@@ -1,0 +1,146 @@
+---
+id: drafttcscoapnoresponseoption10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: CoAP option for no server-response
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tcs-coap-no-response-option-10
+docidentifier:
+- content: draft-tcs-coap-no-response-option
+  type: Internet-Draft
+- content: draft-tcs-coap-no-response-option-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.tcs-coap-no-response-option
+date:
+- type: published
+  at: '2015-04-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Abhijan
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Bhattacharyya
+      completename:
+        language: en
+        content: Abhijan Bhattacharyya
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Soma
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bandyopadhyay
+      completename:
+        language: en
+        content: Soma Bandyopadhyay
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Arpan
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Pal
+      completename:
+        language: en
+        content: Arpan Pal
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>There can be M2M scenarios where responses from server against
+       requests from client might be considered redundant. This kind of
+       open-loop exchange (with no response path from the server to the
+       client) may be desired to minimize resource consumption in
+       constrained systems while simultaneously updating a bulk of
+       resources or updating a resource with a very high frequency. CoAP
+       already provides a non-confirmable (NON) mode of message exchange
+       where the server end-point does not respond with ACK. However,
+       obeying the request/response semantics, the server end-point
+       responds back with a status code indicating "the result of the
+       attempt to understand and satisfy the request".
+
+       This draft introduces a header option for CoAP called 'No-Response'.
+       Using this option the client explicitly tells the server to suppress
+       responses against the particular request. This option also provides
+       granular control to enable suppression of a particular class or a
+       combination of response-classes. This option may be effective for
+       both unicast and multicast requests. Present draft also discusses
+       few exemplary applications which benefit from this option.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-tcs-coap-no-response-option-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tcs-coap-no-response-option-09
+    docidentifier:
+    - content: draft-tcs-coap-no-response-option-09
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-tcs-coap-no-response-option-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tcs-coap-no-response-option-11
+    docidentifier:
+    - content: draft-tcs-coap-no-response-option-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-tcs-coap-no-response-option-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,69 @@
+---
+id: draftcarrerartifact
+schema_version: v1.5.6
+formattedref:
+  content: draft-car-rer-artifact
+title:
+- language: en
+  script: Latn
+  content: 'RER Run Artifact Format: Hash-Chained, Signed Records of AI Inference
+    Execution'
+docidentifier:
+- content: draft-car-rer-artifact
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Run Envelope Runtime (RER) artifact
+       format: a hash-chained, Ed25519-signed JSON record of a single AI
+       inference run.  An RER artifact carries (1) a signed envelope
+       declaring the permissions and limits under which the run was
+       authorized, (2) a hash-chained event log covering every model call,
+       tool call, and policy decision made during execution, and (3) a
+       runtime signature binding the envelope hash and event log head to the
+       runtime implementation that produced the record.
+
+       The artifact is designed for offline verification by parties who did
+       not participate in the run.  A separate verifier package, with a
+       minimal dependency surface (canonicalization, SHA-256, Ed25519, JSON
+       schema validation), can establish the artifact's structural and
+       cryptographic integrity without any of the code that produced it.
+       After sealing, the integrity of the record does not depend on trust
+       in the operator.
+
+       This document complements the declaration-side agents.txt and ai.txt
+       well-known URI proposals (both filed, under review at the IANA Well-
+       Known URIs registry).  Declaration says what an agent was permitted
+       to do.  An RER artifact records what the runtime attested actually
+       happened.  The two surfaces together cover the before-and-after of an
+       agent interaction.
+
+       Two on-the-wire schema versions are defined here: rer-artifact/0.1
+       and rer-artifact/0.2.  Version 0.2 adds a bundle format, manifest
+       binding, and approval-protocol metadata while preserving the
+       verification semantics of 0.1.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-car-rer-artifact-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-car-rer-artifact-00
+    docidentifier:
+    - content: draft-car-rer-artifact-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-car-rer-artifact-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-car-rer-artifact-01
+    docidentifier:
+    - content: draft-car-rer-artifact-01
+      type: Internet-Draft
+      primary: true

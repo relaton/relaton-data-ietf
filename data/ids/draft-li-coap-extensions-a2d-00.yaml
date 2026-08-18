@@ -1,0 +1,123 @@
+---
+id: draftlicoapextensionsa2d00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: CoAP Extensions for Asynchronous Task Resources
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-coap-extensions-a2d-00
+docidentifier:
+- content: draft-li-coap-extensions-a2d
+  type: Internet-Draft
+- content: draft-li-coap-extensions-a2d-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-coap-extensions-a2d
+date:
+- type: published
+  at: '2026-06-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Linzhe
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Linzhe Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhongguancun Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yong
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Cui
+      completename:
+        language: en
+        content: Yong Cui
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Many CoAP deployments need to start operations that cannot be
+       completed within one request/response exchange.  Existing deployments
+       commonly model these operations with application-specific resources,
+       payload formats, and polling or notification conventions.  This makes
+       clients, gateways, and proxies unable to interoperate across
+       implementations that expose otherwise similar long-running
+       operations.
+
+       This document defines a CoAP task-resource pattern for asynchronous
+       operations.  It specifies a small set of CoAP Options and a CBOR
+       status representation that allow a server to create a temporary task
+       resource, allow a client to monitor, update, or cancel that task
+       using existing CoAP methods, and allow an Observe relationship to be
+       filtered in a predictable way.  Autonomous control agents are one
+       motivating use case, but the mechanisms are intended to be generally
+       usable for constrained applications that need interoperable task
+       orchestration.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-li-coap-extensions-a2d-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-coap-extensions-a2d-01
+    docidentifier:
+    - content: draft-li-coap-extensions-a2d-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-coap-extensions-a2d-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

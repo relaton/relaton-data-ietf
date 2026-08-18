@@ -1,0 +1,208 @@
+---
+id: draftietfnetconfconfigurationtracing01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: External Trace ID for Configuration Tracing
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-configuration-tracing-01
+docidentifier:
+- content: draft-ietf-netconf-configuration-tracing
+  type: Internet-Draft
+- content: draft-ietf-netconf-configuration-tracing-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-netconf-configuration-tracing
+date:
+- type: published
+  at: '2024-07-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jean
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Quilbeuf
+      completename:
+        language: en
+        content: Jean Quilbeuf
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Claise
+      completename:
+        language: en
+        content: Benoît Claise
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Thomas
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Graf
+      completename:
+        language: en
+        content: Thomas Graf
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Swisscom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Lopez
+      completename:
+        language: en
+        content: Diego Lopez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telefonica I+D
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sun
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Qiong
+      completename:
+        language: en
+        content: Sun Qiong
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Network equipment are often configured by a variety of network
+       management systems (NMS), protocols, and teams.  If a network issue
+       arises (e.g., because of a wrong configuration change), it is
+       important to quickly identify the root cause and obtain the reason
+       for pushing that modification.  Another potential network issue can
+       stem from concurrent NMSes with overlapping intents, each having
+       their own tasks to perform.  In such a case, it is important to map
+       the respective modifications to its originating NMS.
+
+       This document specifies a NETCONF mechanism to automatically map the
+       configuration modifications to their source, up to a specific NMS
+       change request.  Such a mechanism is required, in particular, for
+       autonomous networks to trace the source of a particular configuration
+       change that led to an anomaly detection.  This mechanism facilitates
+       the troubleshooting, the post mortem analysis, and in the end the
+       closed loop automation required for self-healing networks.  The
+       specification also includes a YANG module that is meant to map a
+       local configuration change to the corresponding trace id, up to the
+       controller or even the orchestrator.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-netconf-configuration-tracing-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-configuration-tracing-00
+    docidentifier:
+    - content: draft-ietf-netconf-configuration-tracing-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-netconf-configuration-tracing-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-configuration-tracing-02
+    docidentifier:
+    - content: draft-ietf-netconf-configuration-tracing-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-netconf-configuration-tracing-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

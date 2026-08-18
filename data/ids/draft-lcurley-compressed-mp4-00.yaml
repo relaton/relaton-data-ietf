@@ -1,0 +1,76 @@
+---
+id: draftlcurleycompressedmp400
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Compressed MP4
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lcurley-compressed-mp4-00
+docidentifier:
+- content: draft-lcurley-compressed-mp4
+  type: Internet-Draft
+- content: draft-lcurley-compressed-mp4-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.lcurley-compressed-mp4
+date:
+- type: published
+  at: '2026-03-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Luke
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Curley
+      completename:
+        language: en
+        content: Luke Curley
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Fragmented MP4 (fMP4) is widely used for live streaming, but the ISO
+       Base Media File Format (ISOBMFF) box structure imposes significant
+       per-fragment overhead.  Each box header requires 8 bytes (4-byte size
+       + 4-byte type), and payload fields use fixed-width integers (u32/
+       u64).  For low-latency streaming with single-frame fragments, this
+       overhead can exceed the media payload itself.
+
+       This document defines a compression scheme for ISO BMFF that replaces
+       box headers with compact varint-encoded identifiers and sizes, and
+       defines compressed variants of commonly used boxes with varint
+       payload fields.  The scheme reduces per-fragment overhead from ~100
+       bytes to ~20 bytes while preserving the full box hierarchy.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-lcurley-compressed-mp4-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

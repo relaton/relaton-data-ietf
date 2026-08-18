@@ -1,0 +1,130 @@
+---
+id: draftstennntpmaclastef03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Network Time Protocol MAC/Last Extension Fields
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-mac-last-ef-03
+docidentifier:
+- content: draft-stenn-ntp-mac-last-ef
+  type: Internet-Draft
+- content: draft-stenn-ntp-mac-last-ef-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.stenn-ntp-mac-last-ef
+date:
+- type: published
+  at: '2018-10-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Harlan
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Stenn
+      completename:
+        language: en
+        content: Harlan Stenn
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Network Time Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Danny
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Mayer
+      completename:
+        language: en
+        content: Danny Mayer
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Network Time Foundation
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>NTPv4 is defined by RFC 5905 [RFC5905], and it and earlier versions
+       of the NTP Protocol have supported symmetric private key Message
+       Authentication Code (MAC) authentication.  MACs were first described
+       in Appendix C of RFC 1305 [RFC1305] and are further described in RFC
+       5905 [RFC5905].  As the number of Extension Fields grows there is an
+       increasing chance of a parsing ambiguity when deciding if the "next"
+       set of data is an Extension Field or a legacy MAC.  This proposal
+       defines two new Extension Fields to avoid this ambiguity.  One, LAST-
+       EF, is used to signify that it is the last Extension Field in the
+       packet.  If the LAST-EF is present, any subsequent data MUST be
+       considered to be a legacy MAC.  The other, MAC-EF, allows one or more
+       MACs to be encapsulated in an Extension Field.  If all parties in an
+       association support MAC-EF, the use of a legacy MAC may be avoided.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-stenn-ntp-mac-last-ef-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-mac-last-ef-02
+    docidentifier:
+    - content: draft-stenn-ntp-mac-last-ef-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-stenn-ntp-mac-last-ef-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-mac-last-ef-04
+    docidentifier:
+    - content: draft-stenn-ntp-mac-last-ef-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-stenn-ntp-mac-last-ef-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

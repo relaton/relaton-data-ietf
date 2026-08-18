@@ -1,0 +1,79 @@
+---
+id: draftrampallisuradar00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'SURADAR: Context-Bound Per-Request Authentication for Machine-to-Machine
+    APIs'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-rampalli-suradar-00
+docidentifier:
+- content: draft-rampalli-suradar
+  type: Internet-Draft
+- content: draft-rampalli-suradar-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.rampalli-suradar
+date:
+- type: published
+  at: '2026-04-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: KARTHIK
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Karthik
+      completename:
+        language: en
+        content: KARTHIK RAMPALLI
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Glyphzero Labs Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines SURADAR (Subsurface Undertow RADAR), an HTTP
+       authentication scheme in which each request is authenticated by a
+       one-time HMAC tag derived from a shared seed, the current time band,
+       and the full request context (method, path, organisation, scope, and
+       body).  Unlike bearer-token schemes, a captured SURADAR token is
+       cryptographically bound to exactly one request and cannot be reused,
+       replayed, or re-scoped.  The protocol requires zero per-request
+       handshakes, produces 48-byte tokens, and relies solely on HMAC-
+       SHA-256 and SHA-256 -- no asymmetric cryptography.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-rampalli-suradar-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

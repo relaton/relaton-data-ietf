@@ -1,0 +1,112 @@
+---
+id: drafthopleyx402settlementattestation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Categorical Settlement Attestation Format for Agentic-Payment Flows
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-settlement-attestation-00
+docidentifier:
+- content: draft-hopley-x402-settlement-attestation
+  type: Internet-Draft
+- content: draft-hopley-x402-settlement-attestation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hopley-x402-settlement-attestation
+date:
+- type: published
+  at: '2026-05-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: H. C.
+      surname:
+        language: en
+        content: Mr
+      completename:
+        language: en
+        content: MR CHRISTOPHER HOPLEY
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AlgoVoi
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a categorical settlement attestation format
+       for agentic-payment flows.  The format records that a payment has
+       reached a particular settlement state on a particular chain, at a
+       particular instant, under the attesting party's risk model.
+
+       The receipt format uses a closed enumeration of categorical outcomes
+       (SETTLED, PENDING_FINALITY, REVERSED).  The categorical outcome is
+       load-bearing for downstream regulatory obligations: SETTLED triggers
+       settlement-finality record-keeping obligations under EU Markets in
+       Crypto-Assets Regulation Article 80 and Anti-Money Laundering
+       Regulation Article 56; the PSD2 (Directive 2015/2366) Article 89
+       unauthorised-payment refund-window clock begins at SETTLED.
+       PENDING_FINALITY records an inclusion-without-finality state where
+       the refund-window has not yet started.  REVERSED records chain-
+       reorganisation, fraud-reversal, or operator-initiated reversal events
+       for chain-of-custody audit.
+
+       The format is multi-chain: a single settlement_chain string field
+       identifies the chain on which settlement occurred, using a flat
+       identifier convention (&lt;chain_family&gt; for default mainnets,
+       &lt;chain_family&gt;:&lt;network&gt; for non-default networks).  The receipt does
+       not encode chain-specific finality semantics; those are applied at
+       verification time by a verifier that knows the chain.
+
+       The format composes with the AlgoVoi-authored compliance receipt
+       format ([I-D.hopley-x402-compliance-receipt]) and refund receipt
+       format ([I-D.hopley-x402-refund-receipt]) under the same
+       canonicalisation discipline ([I-D.hopley-x402-canonicalisation-jcs]).
+       A verifier walking the audit chain confirms the full payment
+       lifecycle from admission through settlement to refund (or non-refund)
+       under one byte-deterministic canonicalisation pin.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-hopley-x402-settlement-attestation-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-settlement-attestation-01
+    docidentifier:
+    - content: draft-hopley-x402-settlement-attestation-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hopley-x402-settlement-attestation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,100 @@
+---
+id: draftmyclerkprotocol03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The MyClerk Protocol: Tiered Security Communication for Distributed Family
+    Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-myclerk-protocol-03
+docidentifier:
+- content: draft-myclerk-protocol
+  type: Internet-Draft
+- content: draft-myclerk-protocol-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.myclerk-protocol
+date:
+- type: published
+  at: '2026-04-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Michael
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: M. J.
+      surname:
+        language: en
+        content: Arcan
+      completename:
+        language: en
+        content: Michael J. Arcan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arcan Consulting
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the MyClerk Protocol, a tiered-security
+       communication protocol designed for distributed family orchestration
+       systems.  The protocol provides six security tiers ranging from
+       1-byte minimal overhead for tunneled messages to 144-byte full
+       security for critical operations.  It supports multiple transport
+       mechanisms including NATS, Matrix, WebSocket, and direct TCP, while
+       maintaining end-to-end encryption using ChaCha20-Poly1305 AEAD with
+       hybrid post-quantum key establishment combining ML-KEM-768 and
+       X25519.  A classical-only mode (X25519 without ML-KEM) remains
+       available for resource-constrained devices and legacy
+       interoperability.
+
+       The protocol is transport-agnostic, federation-capable, and optimized
+       for environments ranging from resource-constrained IoT devices to
+       full-featured desktop clients.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-myclerk-protocol-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-myclerk-protocol-02
+    docidentifier:
+    - content: draft-myclerk-protocol-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-myclerk-protocol-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

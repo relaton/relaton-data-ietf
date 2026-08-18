@@ -1,0 +1,97 @@
+---
+id: draftsfccontainerformat00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'SFC: Self-Describing Resilient Container File Format'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sfc-container-format-00
+docidentifier:
+- content: draft-sfc-container-format
+  type: Internet-Draft
+- content: draft-sfc-container-format-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sfc-container-format
+date:
+- type: published
+  at: '2026-05-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Valerii
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Krivchikov
+      completename:
+        language: en
+        content: Valerii Krivchikov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Self-Describing Resilient Container
+       (SFC) file format, a general-purpose binary container format
+       designed for reliable transmission of arbitrary file data over
+       unreliable, bandwidth-constrained, or asynchronous channels
+       including physical media hand-carry, multi-session transfers,
+       and heterogeneous delivery paths.
+
+       SFC encapsulates any file or directory tree into independently
+       addressable, self-identifying chunks.  Each chunk carries
+       sufficient metadata to identify itself and verify its own
+       integrity in isolation.  Full reconstruction additionally requires
+       a Global Header; this distinction is made explicit throughout.
+
+       This document defines a Core specification and five optional
+       Profiles: Image (SFC/P1), Split Transport (SFC/P2), HTTP Hints
+       (SFC/P3), Preprocessing (SFC/P4), and Directory (SFC/P5).</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-sfc-container-format-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sfc-container-format-01
+    docidentifier:
+    - content: draft-sfc-container-format-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sfc-container-format-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

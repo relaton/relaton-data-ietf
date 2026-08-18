@@ -1,0 +1,234 @@
+---
+id: draftlitsvwginferencetransport00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Transport Considerations for Large-Scale Distributed Inference Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-tsvwg-inference-transport-00
+docidentifier:
+- content: draft-li-tsvwg-inference-transport
+  type: Internet-Draft
+- content: draft-li-tsvwg-inference-transport-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-tsvwg-inference-transport
+date:
+- type: published
+  at: '2026-07-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiqiang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhiqiang Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Wei Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guoying
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Guoying Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xun
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Sun
+      completename:
+        language: en
+        content: Xun Sun
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Inesa
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chunhao
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Chunhao Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SAIA
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Large-scale distributed inference systems generate traffic patterns
+       that differ from both traditional data center workloads and
+       distributed training workloads.  Disaggregated prefill/decode serving
+       transfers key-value cache state between server pools, and expert-
+       parallel architectures generate all-to-all traffic among expert
+       groups.  These flows are typically carried over a small number of
+       RDMA connections, producing low-entropy traffic that is prone to
+       uneven link utilization under Equal-Cost Multipath (ECMP) forwarding.
+
+       This document specifies transport considerations for such networks,
+       covering path load awareness, path steering through ECMP entropy
+       variation, ordering tolerance at the receiver, and differentiated
+       reliability for data with different loss sensitivity.  The discussion
+       builds on existing IETF building blocks; this document does not
+       define new protocol elements.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-tsvwg-inference-transport-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

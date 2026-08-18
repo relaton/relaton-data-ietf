@@ -1,0 +1,62 @@
+---
+id: draftvaubanx402vpsfalgebra
+schema_version: v1.5.6
+formattedref:
+  content: draft-vauban-x402-vpsf-algebra
+title:
+- language: en
+  script: Latn
+  content: VPSF Claim Algebra for x402 Payment Receipts
+docidentifier:
+- content: draft-vauban-x402-vpsf-algebra
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The x402 protocol ([X402-V2]) defines three wire messages for HTTP-
+       native payment flows but provides no composability model for payment
+       receipts.  A recipient holding a SettlementReceipt and a
+       DelegationGrant cannot natively express that the settlement satisfies
+       a delegated spending condition, or that a RefundClaim negates an
+       earlier SettlementReceipt, without bespoke facilitator-side logic.
+       As automated payment pipelines grow, the absence of a normative
+       composability layer leads to fragmented, non-interoperable
+       verification surfaces.
+
+       This document specifies the Vauban Proof Stack Framework (VPSF) Claim
+       Algebra for x402 payment receipts: a grammar of five composition
+       operators (Conjunction, Implication, Aggregation, Selective
+       Disclosure, Revocation; abbreviated ∧, →, ⊕, ▷, ¬) applied over the
+       four canonical Payment Claim types (PaymentIntent, SettlementReceipt,
+       RefundClaim, DelegationGrant) defined in [LIFECYCLE-FSM].  The
+       algebra is chain-agnostic by invariant; the Starknet-based proof
+       system described in [STARK-RECEIPTS] is the first reference
+       implementation.  Composability is grounded in the JCS canonical
+       preimage discipline ([RFC8785]), ensuring operator results are
+       deterministic and cross-implementation consistent.  An open-source
+       Rust implementation is provided in [VAUBAN-CRATE].</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-vauban-x402-vpsf-algebra-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-vpsf-algebra-00
+    docidentifier:
+    - content: draft-vauban-x402-vpsf-algebra-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-vauban-x402-vpsf-algebra-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-vpsf-algebra-01
+    docidentifier:
+    - content: draft-vauban-x402-vpsf-algebra-01
+      type: Internet-Draft
+      primary: true

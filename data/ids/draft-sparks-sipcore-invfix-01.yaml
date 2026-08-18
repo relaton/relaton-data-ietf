@@ -1,0 +1,103 @@
+---
+id: draftsparkssipcoreinvfix01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Correct transaction handling for 200 responses to Session Initiation Protocol
+    INVITE requests
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sparks-sipcore-invfix-01
+docidentifier:
+- content: draft-sparks-sipcore-invfix
+  type: Internet-Draft
+- content: draft-sparks-sipcore-invfix-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sparks-sipcore-invfix
+date:
+- type: published
+  at: '2009-09-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Robert
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Sparks
+      completename:
+        language: en
+        content: Robert Sparks
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tekelec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Theo
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Zourzouvillys
+      completename:
+        language: en
+        content: Theo Zourzouvillys
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: VoIP.co.uk
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document normatively updates RFC 3261, the Session Initiation
+    Protocol (SIP), to address an error in the specified handling of
+    success (200 class) responses to INVITE requests.  Elements following
+    RFC 3261 exactly will misidentify retransmissions of the request as a
+    new, unassociated, request.  The correction involves modifying the
+    INVITE transaction state machines.  The correction also changes the
+    way responses that cannot be matched to an existing transaction are
+    handled to address a security risk.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sparks-sipcore-invfix-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

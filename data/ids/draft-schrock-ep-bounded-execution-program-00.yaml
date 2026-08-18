@@ -1,0 +1,88 @@
+---
+id: draftschrockepboundedexecutionprogram00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Bounded Execution Programs for Consequential Agent Actions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-bounded-execution-program-00
+docidentifier:
+- content: draft-schrock-ep-bounded-execution-program
+  type: Internet-Draft
+- content: draft-schrock-ep-bounded-execution-program-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.schrock-ep-bounded-execution-program
+date:
+- type: published
+  at: '2026-08-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Iman
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Schrock
+      completename:
+        language: en
+        content: Iman Schrock
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EMILIA Protocol, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An authorization for one action does not by itself authorize an open-
+       ended agent plan.  This document defines an Experimental profile for
+       a signed, finite, versioned directed acyclic graph of consequential
+       action occurrences.  The program binds a total retained-history
+       ceiling.  Each node binds an exact action or a pinned action-matching
+       profile, an action- specific Trust Program, outcome-specific
+       dependencies, an occurrence ceiling, and fixed charges against
+       aggregate attempt budgets.
+
+       A conforming program-aware admission store evaluates reachability and
+       budgets in the same linearizable transaction domain as the ordinary
+       one-time execution right.  It uses store-owned authorizer trust
+       roots, clock, authenticated profile-match verification, and current
+       program status; seals a deterministic execution-program resource into
+       the AdmissionSnapshot; and fences the program's independent
+       authorization digest against ordinary-path admission.  The profile
+       does not establish that natural-language intent was understood, that
+       a plan is safe or lawful, that provider or effect evidence is true,
+       or that every mutation path was mediated.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-schrock-ep-bounded-execution-program-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

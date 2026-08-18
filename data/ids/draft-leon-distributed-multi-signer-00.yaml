@@ -1,0 +1,175 @@
+---
+id: draftleondistributedmultisigner00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Distributed DNSSEC Multi-Signer Bootstrap
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-leon-distributed-multi-signer-00
+docidentifier:
+- content: draft-leon-distributed-multi-signer
+  type: Internet-Draft
+- content: draft-leon-distributed-multi-signer-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.leon-distributed-multi-signer
+date:
+- type: published
+  at: '2025-02-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leon
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Fernandez
+      completename:
+        language: en
+        content: Leon Fernandez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Erik
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Bergström
+      completename:
+        language: en
+        content: Erik Bergström
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Johan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Stenstam
+      completename:
+        language: en
+        content: Johan Stenstam
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Steve
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Crocker
+      completename:
+        language: en
+        content: Steve Crocker
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Edgemoor Research Institute
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document presents an architecture for a distributed DNSSEC
+       multi-signer model that most closely resembles "model 2" in
+       [RFC8901].
+
+       It defines two multi-signer specific entities: the "multi-signer
+       agent" (MSA) that is responsible for the multi-signer process and the
+       "combiner", which is responsible for "combining" unsigned zone data
+       from the zone owner with zone data under control of the MSA.  It
+       introduces a new DNS RRtype, HSYNC, that is used by the zone owner to
+       designate the chosen DNS Providers (signing and/or serving the zone).
+       Furthermore it describes a mechanism for the MSAs to establish secure
+       communication with each other, either via “pure DNS” communication
+       secured by DNS SIG(0) signatures on each message or via a RESTful API
+       secured by TLS.  Finally, the document describes two models for
+       multi-signer process synchronization: “leader/follower mode” and
+       “peer mode” and the mechanism by which a set of MSAs decide which
+       model to use for a given zone.
+
+       The scope of the document is only the distributed aspect of DNSSEC
+       multi-signer up to the point where secure communication and
+       synchronization method between MSAs has been established.  The
+       “multi-signer algorithms” that deal with the actual synchronization
+       required for multi-signer operation are described in
+       [I-D.draft-ietf-dnsop-dnssec-automation].
+
+       TO BE REMOVED: This document is being collaborated on in Github at:
+       https://github.com/johanix/draft-leon-dnsop-distributed-multi-signer
+       (https://github.com/johanix/draft-leon-dnsop-distributed-multi-
+       signer).  The most recent working version of the document, open
+       issues, etc, should all be available there.  The authors (gratefully)
+       accept pull requests.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-leon-distributed-multi-signer-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

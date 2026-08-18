@@ -1,0 +1,167 @@
+---
+id: draftkuehlewindmasqueconnectip00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The CONNECT-IP method for proxying IP traffic
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kuehlewind-masque-connect-ip-00
+docidentifier:
+- content: draft-kuehlewind-masque-connect-ip
+  type: Internet-Draft
+- content: draft-kuehlewind-masque-connect-ip-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kuehlewind-masque-connect-ip
+date:
+- type: published
+  at: '2020-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mirja
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Kühlewind
+      completename:
+        language: en
+        content: Mirja Kühlewind
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Magnus
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Westerlund
+      completename:
+        language: en
+        content: Magnus Westerlund
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Marcus
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Ihlar
+      completename:
+        language: en
+        content: Marcus Ihlar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zaheduzzaman
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Sarker
+      completename:
+        language: en
+        content: Zaheduzzaman Sarker
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This draft specifies a new HTTP/3 method CONNECT-IP to proxy IP
+       traffic.  CONNECT-IP can be used to convert a QUIC stream into a
+       tunnel or initialise an HTTP datagram flow to a forwarding proxy.
+       Each stream or HTTP datagram flow can be used separately to establish
+       forwarding of an IP flow to potentially different remote hosts.  To
+       request forwarding, a client connects to a proxy server by initiating
+       a HTTP/3 connection and sends a CONNECT-IP indicating the address of
+       the target server.  The proxy server then forwards payload received
+       on that stream or in an HTTP datagram with a certain flow ID to the
+       target server after adding an IP header to each of the frames
+       received.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-kuehlewind-masque-connect-ip-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kuehlewind-masque-connect-ip-01
+    docidentifier:
+    - content: draft-kuehlewind-masque-connect-ip-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kuehlewind-masque-connect-ip-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,67 @@
+---
+id: draftsheffertlspqccontinuity
+schema_version: v1.5.6
+formattedref:
+  content: draft-sheffer-tls-pqc-continuity
+title:
+- language: en
+  script: Latn
+  content: 'PQC Continuity: Downgrade Protection for TLS Servers Migrating to PQC'
+docidentifier:
+- content: draft-sheffer-tls-pqc-continuity
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>As the Internet transitions toward post-quantum cryptography (PQC),
+       many TLS servers will continue supporting traditional certificates to
+       maintain compatibility with legacy clients.  However, this
+       coexistence introduces a significant vulnerability: an undetected
+       rollback attack, where a malicious actor strips the PQC or composite
+       certificate and forces the use of a classical certificate once
+       quantum-capable adversaries exist.
+
+       To defend against this, this document defines a TLS extension that
+       allows a TLS client to cache a server's declared commitment to
+       present PQC or composite certificates for a specified duration.  On
+       subsequent connections, the client enforces that cached commitment
+       and rejects traditional-only certificates that conflict with it.
+       This mechanism, inspired by HTTP Strict Transport Security (HSTS) but
+       operating at the TLS layer, provides PQC downgrade protection without
+       requiring changes to certificate authority (CA) infrastructure.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sheffer-tls-pqc-continuity-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pqc-continuity-00
+    docidentifier:
+    - content: draft-sheffer-tls-pqc-continuity-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sheffer-tls-pqc-continuity-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pqc-continuity-01
+    docidentifier:
+    - content: draft-sheffer-tls-pqc-continuity-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sheffer-tls-pqc-continuity-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pqc-continuity-02
+    docidentifier:
+    - content: draft-sheffer-tls-pqc-continuity-02
+      type: Internet-Draft
+      primary: true

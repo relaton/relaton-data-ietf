@@ -1,0 +1,183 @@
+---
+id: draftietfidrlonglivedgr04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Support for Long-lived BGP Graceful Restart
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-long-lived-gr-04
+docidentifier:
+- content: draft-ietf-idr-long-lived-gr
+  type: Internet-Draft
+- content: draft-ietf-idr-long-lived-gr-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-long-lived-gr
+date:
+- type: published
+  at: '2023-03-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jim
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Uttaro
+      completename:
+        language: en
+        content: Jim Uttaro
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AT&T
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Enke
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Enke Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Palo Alto Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bruno
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Decraene
+      completename:
+        language: en
+        content: Bruno Decraene
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Orange
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Scudder
+      completename:
+        language: en
+        content: John Scudder
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In this document, we introduce a new BGP capability termed "Long-
+       lived Graceful Restart Capability" so that stale routes can be
+       retained for a longer time upon session failure than is provided for
+       by BGP Graceful Restart (RFC 4724).  A well-known BGP community
+       "LLGR_STALE" is introduced for marking stale routes retained for a
+       longer time.  A second well-known BGP community, "NO_LLGR", is
+       introduced to mark routes for which these procedures should not be
+       applied.  We also specify that such long-lived stale routes be
+       treated as the least-preferred, and their advertisements be limited
+       to BGP speakers that have advertised the new capability.  Use of this
+       extension is not advisable in all cases, and we provide guidelines to
+       help determine if it is.
+
+       We update RFC 6368 by specifying that the LLGR_STALE community must
+       be propagated into, or out of, the path attributes exchanged between
+       PE and CE.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-long-lived-gr-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-long-lived-gr-03
+    docidentifier:
+    - content: draft-ietf-idr-long-lived-gr-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-long-lived-gr-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-long-lived-gr-05
+    docidentifier:
+    - content: draft-ietf-idr-long-lived-gr-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-long-lived-gr-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

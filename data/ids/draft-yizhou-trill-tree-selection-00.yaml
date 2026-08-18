@@ -1,0 +1,133 @@
+---
+id: draftyizhoutrilltreeselection00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: VLAN based Tree Selection for Multi-destination Frames
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yizhou-trill-tree-selection-00
+docidentifier:
+- content: draft-yizhou-trill-tree-selection
+  type: Internet-Draft
+- content: draft-yizhou-trill-tree-selection-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.yizhou-trill-tree-selection
+date:
+- type: published
+  at: '2012-03-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yizhou
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yizhou Li
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hao
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Weiguo
+      completename:
+        language: en
+        content: Hao Weiguo
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Somnath
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Chatterjee
+      completename:
+        language: en
+        content: Somnath Chatterjee
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>TRILL uses distribution trees for multi-destination traffic. In fat
+       tree structure, it is very possible that the distance from an ingress
+       RBridge to multiple tree roots are the same. Therefore the minimum
+       distance comparison may not help much in the tree selection decision.
+       Multiple trees can be used by an ingress RBridge. For any RBridge RBn,
+       if RBn has downstream receivers of VLAN x in a distribution tree t,
+       there will be an entry of (t, x, port list) in the multicast
+       forwarding table on RBn. If there are n trees and m VLANs, the
+       multicast forwarding table size on RBn is typically n*m entries. The
+       value of m is up to 4096 and n is up to the total number of
+       distribution trees in the campus. If finer granularity filtering such
+       as L2/L3 multicast address is used, then the multicast forwarding
+       table size further increases dramatically. TRILL multicast forwarding
+       table size is limited in hardware/silicon implements and sometimes L3
+       multicasting shares the same table with it. This document specifies a
+       VLAN based tree selection mechanism to reduce the multicast
+       forwarding table size. No data plane change is required.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-yizhou-trill-tree-selection-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yizhou-trill-tree-selection-01
+    docidentifier:
+    - content: draft-yizhou-trill-tree-selection-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-yizhou-trill-tree-selection-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,171 @@
+---
+id: draftietftsvwgaqmdualqcoupled14
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DualQ Coupled AQMs for Low Latency, Low Loss and Scalable Throughput (L4S)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-14
+docidentifier:
+- content: draft-ietf-tsvwg-aqm-dualq-coupled
+  type: Internet-Draft
+- content: draft-ietf-tsvwg-aqm-dualq-coupled-14
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tsvwg-aqm-dualq-coupled
+date:
+- type: published
+  at: '2021-03-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Koen
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: De Schepper
+      completename:
+        language: en
+        content: Koen De Schepper
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia Bell Labs
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bob
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Greg
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: White
+      completename:
+        language: en
+        content: Greg White
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CableLabs
+version:
+- content: '14'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Low Latency Low Loss Scalable Throughput (L4S) architecture
+       allows data flows over the public Internet to achieve consistent low
+       queuing latency, generally zero congestion loss and scaling of per-
+       flow throughput without the scaling problems of standard TCP Reno-
+       friendly congestion controls.  To achieve this, L4S data flows have
+       to use one of the family of 'Scalable' congestion controls (TCP
+       Prague and Data Center TCP are examples) and a form of Explicit
+       Congestion Notification (ECN) with modified behaviour.  However,
+       until now, Scalable congestion controls did not co-exist with
+       existing Reno/Cubic traffic --- Scalable controls are so aggressive
+       that 'Classic' (e.g. Reno-friendly) algorithms sharing an ECN-capable
+       queue would drive themselves to a small capacity share.  Therefore,
+       until now, L4S controls could only be deployed where a clean-slate
+       environment could be arranged, such as in private data centres (hence
+       the name DCTCP).  This specification defines `DualQ Coupled Active
+       Queue Management (AQM)', which enables Scalable congestion controls
+       that comply with the Prague L4S requirements to co-exist safely with
+       Classic Internet traffic.
+
+       Analytical study and implementation testing of the Coupled AQM have
+       shown that Scalable and Classic flows competing under similar
+       conditions run at roughly the same rate.  It achieves this
+       indirectly, without having to inspect transport layer flow
+       identifiers.  When tested in a residential broadband setting, DCTCP
+       also achieves sub-millisecond average queuing delay and zero
+       congestion loss under a wide range of mixes of DCTCP and `Classic'
+       broadband Internet traffic, without compromising the performance of
+       the Classic traffic.  The solution has low complexity and requires no
+       configuration for the public Internet.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-13
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-13
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-15
+    docidentifier:
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-15
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tsvwg-aqm-dualq-coupled-14
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

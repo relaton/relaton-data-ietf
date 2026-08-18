@@ -1,0 +1,98 @@
+---
+id: draftseemannquicppdplpmtud00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Parallel Probing DPLPMTUD for QUIC
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-ppdplpmtud-00
+docidentifier:
+- content: draft-seemann-quic-ppdplpmtud
+  type: Internet-Draft
+- content: draft-seemann-quic-ppdplpmtud-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.seemann-quic-ppdplpmtud
+date:
+- type: published
+  at: '2026-08-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Marten
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Seemann
+      completename:
+        language: en
+        content: Marten Seemann
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lars
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Eggert
+      completename:
+        language: en
+        content: Lars Eggert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Mozilla
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>QUIC endpoints commonly use 1200-byte datagrams during the handshake
+       and only start Path MTU Discovery afterward.  This means that just-
+       established QUIC connections cannot immediately use larger datagrams,
+       which is especially limiting for MASQUE protocols and for
+       WebTransport.  This document defines Parallel Probing DPLPMTUD
+       (PPDPLPMTUD), which probes several packet sizes early during the QUIC
+       handshake, so a larger discovered size is usable during later
+       handshake phases and especially after handshake completion.  The same
+       discovery process is also used for path migration.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-seemann-quic-ppdplpmtud-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,121 @@
+---
+id: draftietfv6ops464xlatoptimization06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 464XLAT/MAT-T Optimization
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-464xlat-optimization-06
+docidentifier:
+- content: draft-ietf-v6ops-464xlat-optimization
+  type: Internet-Draft
+- content: draft-ietf-v6ops-464xlat-optimization-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-v6ops-464xlat-optimization
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jordi
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: J. P.
+      surname:
+        language: en
+        content: Martinez
+      completename:
+        language: en
+        content: Jordi Palet Martinez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: The IPv6 Company
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alejandro
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: D'Egidio
+      completename:
+        language: en
+        content: Alejandro D'Egidio
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cabase - Cámara Argentina de Internet
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>IP/ICMP Translation Algorithm (SIIT) can be used to provide access
+       for IPv4-only hosts or applications to IPv4-only or dual-stack
+       destinations over IPv6-only infrastructure.  In that case, the
+       traffic flows are translated twice: first from IPv4 to IPv6
+       (stateless NAT46 at the ingress point to the IPv6-only
+       infrastructure) and then from IPv6 back to IPv4 (stateful NAT64, at
+       the egress point).  When the destination is IPv6-enabled, the second
+       translation might be avoided.  This document describes a possible
+       optimization to 464XLAT and MAP-T to avoid translating IPv6 flows
+       back to IPv4 if the destination is reachable over IPv6.  The proposed
+       solution would significantly reduce the NAT64 utilization in the
+       operator's network, increasing the performance.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-v6ops-464xlat-optimization-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-464xlat-optimization-05
+    docidentifier:
+    - content: draft-ietf-v6ops-464xlat-optimization-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-v6ops-464xlat-optimization-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,111 @@
+---
+id: draftwangipsecmekemauthikev201
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: KEM based Authentication for the IKEv2 with Post-quantum Security
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wang-ipsecme-kem-auth-ikev2-01
+docidentifier:
+- content: draft-wang-ipsecme-kem-auth-ikev2
+  type: Internet-Draft
+- content: draft-wang-ipsecme-kem-auth-ikev2-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wang-ipsecme-kem-auth-ikev2
+date:
+- type: published
+  at: '2025-07-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guilin
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: WANG
+      completename:
+        language: en
+        content: Guilin WANG
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Int. Pte Ltd
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This draft specifies a new authentication mechanism, called KEM based
+       authentication, for the Internet Key Exchange Protocol Version 2
+       (IKEv2) [RFC7296].  This is motivated by the fact that ML-KEM is much
+       more efficient that ML-DSA, which are the post-quantum algoirhtms for
+       mitigating the pontential security threats again quantum computers.
+       The KEM based authenticationth for the IKV2 is achieved via
+       introduing a new value of the IKEv2 Authentication Method registry
+       mantained by IANA.  For using the new authentication method, two
+       peers MUST send the SUPPORTED_AUTH_METHODS Notify, defined by
+       [RFC9593]，to negotiate the supported KEM algorithms.  After that, the
+       correponding KEM certificates and cipthertext are exchanged via the
+       INTERMEDIATE Exchange.  Finally，the IKE messages are authenticated
+       via the shared secret encapsulated between the two peers.  This
+       documents also specifies the instantiation with ML-KEM for this new
+       general authenticaiton method for the IKEv2.
+
+       [EDNOTE: Code points for KEM-based authentication may need to be
+       assigned in the IKEv2 Authenticaion Method registry, maintained by
+       IANA]</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-wang-ipsecme-kem-auth-ikev2-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-ipsecme-kem-auth-ikev2-00
+    docidentifier:
+    - content: draft-wang-ipsecme-kem-auth-ikev2-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-wang-ipsecme-kem-auth-ikev2-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-ipsecme-kem-auth-ikev2-02
+    docidentifier:
+    - content: draft-wang-ipsecme-kem-auth-ikev2-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wang-ipsecme-kem-auth-ikev2-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,167 @@
+---
+id: draftietfidrlinklocalcapability01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Link-Local Next Hop Capability for BGP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability-01
+docidentifier:
+- content: draft-ietf-idr-linklocal-capability
+  type: Internet-Draft
+- content: draft-ietf-idr-linklocal-capability-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-linklocal-capability
+date:
+- type: published
+  at: '2025-05-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Russ
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: White
+      completename:
+        language: en
+        content: Russ White
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Akamai Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeff
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Tantsura
+      completename:
+        language: en
+        content: Jeff Tantsura
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nvidia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Donatas
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Abraitis
+      completename:
+        language: en
+        content: Donatas Abraitis
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hostinger
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>BGP [RFC4271], was originally designed to provide reachability
+       between domains and between the edges of a domain.
+
+       To support IPv6 reachability, BGP relies heavily on its Multiprotocol
+       Extensions as defined in [RFC2545], which is crucial for enabling
+       BGP-4 to advertise IPv6 routes alongside IPv4.  This extension not
+       only permits the exchange of IPv6 routing information but also
+       establishes the structure for IPv6 next hop handling within BGP
+       updates.  As such, BGP assumes the next hop towards any reachable
+       destination may not reside on the advertising speaker, but rather may
+       either be through a router connected to the same subnet as the
+       speaker, or through a router only reachable by traversing multiple
+       hops through the network.  [RFC2545] introduced the ability to
+       advertise a global IPv6 address as the BGP next hop.  When the
+       advertising system is directly attached, it may include both a global
+       and an IPv6 link-local address or only a global address, when next
+       hop length is set to 16 bytes.
+
+       This document updates the specification to clarify the encoding of
+       the BGP next hop when the advertising system is directly attached and
+       only an IPv6 link-local address is available.
+
+       This clarification applies specifically to IPv6 link-local addresses
+       and does not pertain to IPv4 link-local addresses as defined in
+       [RFC3927].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-linklocal-capability-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability-00
+    docidentifier:
+    - content: draft-ietf-idr-linklocal-capability-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-linklocal-capability-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-linklocal-capability-02
+    docidentifier:
+    - content: draft-ietf-idr-linklocal-capability-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-linklocal-capability-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

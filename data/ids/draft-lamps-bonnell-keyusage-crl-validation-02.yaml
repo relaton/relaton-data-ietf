@@ -1,0 +1,159 @@
+---
+id: draftlampsbonnellkeyusagecrlvalidation02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Clarification to processing Key Usage values during CRL validation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lamps-bonnell-keyusage-crl-validation-02
+docidentifier:
+- content: draft-lamps-bonnell-keyusage-crl-validation
+  type: Internet-Draft
+- content: draft-lamps-bonnell-keyusage-crl-validation-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.lamps-bonnell-keyusage-crl-validation
+date:
+- type: published
+  at: '2024-10-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Corey
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Bonnell
+      completename:
+        language: en
+        content: Corey Bonnell
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: DigiCert, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tadahiko
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Ito
+      completename:
+        language: en
+        content: Tadahiko Ito
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SECOM CO., LTD.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tomofumi
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Okubo
+      completename:
+        language: en
+        content: Tomofumi Okubo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: DigiCert, Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RFC 5280 defines the profile of X.509 certificates and certificate
+       revocation lists (CRLs) for use in the Internet.  This profile
+       requires that certificates which certify keys for signing CRLs
+       contain the key usage extension with the cRLSign bit asserted.
+       Additionally, RFC 5280 defines steps for the validation of CRLs.
+       While there is a requirement for CRL validators to verify that the
+       cRLSign bit is asserted in the keyUsage extension of the CRL issuer's
+       certificate, there is no requirement for validators to verify the
+       presence of the keyUsage extension itself.  The lack of this
+       requirement will cause verifiers that implement the RFC 5280 CRL
+       validation algorithm to accept a CRL which is signed by a certificate
+       with no keyUsage extension, and therefore does not explicitly have
+       the cRLSign bit asserted.
+
+       This document specifies an enhancement to the CRL validation process
+       to explicitly require the presence of the keyUsage extension in CRL
+       issuer certificates to resolve this issue.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-lamps-bonnell-keyusage-crl-validation-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lamps-bonnell-keyusage-crl-validation-01
+    docidentifier:
+    - content: draft-lamps-bonnell-keyusage-crl-validation-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-lamps-bonnell-keyusage-crl-validation-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lamps-bonnell-keyusage-crl-validation-03
+    docidentifier:
+    - content: draft-lamps-bonnell-keyusage-crl-validation-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-lamps-bonnell-keyusage-crl-validation-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,105 @@
+---
+id: draftietftcpmtcpghostacks05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Improve TCP Handling of Out-of-Window Packets to Mitigate Ghost ACKs
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-tcp-ghost-acks-05
+docidentifier:
+- content: draft-ietf-tcpm-tcp-ghost-acks
+  type: Internet-Draft
+- content: draft-ietf-tcpm-tcp-ghost-acks-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tcpm-tcp-ghost-acks
+date:
+- type: published
+  at: '2026-06-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yepeng
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Pan
+      completename:
+        language: en
+        content: Yepeng Pan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CISPA Helmholtz Center for Information Security
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Historically, TCP as specified in RFC 793 was threatened by the blind
+       data injection attack because of the loose SEG.ACK value validation,
+       where the SEG.ACK value of a TCP segment is considered valid as long
+       as it does not acknowledge data ahead of what has been sent.  RFC
+       5961 improved the input validation by shrinking the range of
+       acceptable SEG.ACK values in a TCP segment.  Later, RFC 9293
+       incorporated the updates proposed by RFC 5961 as a TCP stack
+       implementation option.
+       However, an endpoint that follows the RFC 9293 specifications can
+       still accept a TCP segment containing an SEG.ACK value acknowledging
+       data that the endpoint has never sent.  This document specifies small
+       modifications to the way TCP verifies incoming TCP segments' SEG.ACK
+       value to prevent TCP from accepting such invalid SEG.ACK values.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-tcpm-tcp-ghost-acks-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-tcp-ghost-acks-04
+    docidentifier:
+    - content: draft-ietf-tcpm-tcp-ghost-acks-04
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-tcpm-tcp-ghost-acks-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-tcp-ghost-acks-06
+    docidentifier:
+    - content: draft-ietf-tcpm-tcp-ghost-acks-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tcpm-tcp-ghost-acks-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

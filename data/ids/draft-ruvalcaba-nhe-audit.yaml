@@ -1,0 +1,46 @@
+---
+id: draftruvalcabanheaudit
+schema_version: v1.5.6
+formattedref:
+  content: draft-ruvalcaba-nhe-audit
+title:
+- language: en
+  script: Latn
+  content: 'NHE Reasoning-Audit Log: A Tamper-Evident, Content-Optional Audit Chain
+    for Autonomous Agents'
+docidentifier:
+- content: draft-ruvalcaba-nhe-audit
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a tamper-evident audit chain for the
+       reasoning and actions of a Non-Human Entity (NHE).  Each audited
+       event --- a reasoning step obtained at the boundary to a model
+       provider, or a tool invocation obtained at the execution boundary ---
+       is recorded as an entry whose bound fields are hash-linked to its
+       predecessor, so that any alteration, omission, or reordering is
+       detectable by an independent verifier.  The chain binds metadata
+       (model, provider, subject identity, and reasoning scale) into the
+       entry hash, and supports a prove-without-exposing mode in which a
+       verifier confirms that an event occurred, with the attested metadata,
+       without the event's content being disclosed.  Content storage is
+       optional and its retention is configurable independently of the
+       chain, so content may be redacted without destroying the chain's
+       integrity.  The entry data model and canonical serialization are
+       specified here; the wire and proof-export encodings are deferred to
+       the next revision.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ruvalcaba-nhe-audit-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ruvalcaba-nhe-audit-00
+    docidentifier:
+    - content: draft-ruvalcaba-nhe-audit-00
+      type: Internet-Draft
+      primary: true

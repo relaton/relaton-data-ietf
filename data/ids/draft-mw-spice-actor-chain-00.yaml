@@ -1,0 +1,166 @@
+---
+id: draftmwspiceactorchain00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Cryptographically Verifiable Actor Chain for OAuth 2.0 Token Exchange
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mw-spice-actor-chain-00
+docidentifier:
+- content: draft-mw-spice-actor-chain
+  type: Internet-Draft
+- content: draft-mw-spice-actor-chain-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mw-spice-actor-chain
+date:
+- type: published
+  at: '2026-02-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Prasad
+      completename:
+        language: en
+        content: A Prasad
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Oracle
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ramki
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Krishnan
+      completename:
+        language: en
+        content: Ramki Krishnan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: JPMorgan Chase & Co
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Lopez
+      completename:
+        language: en
+        content: Diego Lopez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telefonica
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Srinivasa
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Addepalli
+      completename:
+        language: en
+        content: Srinivasa Addepalli
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aryaka
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an extension to OAuth 2.0 Token Exchange
+       [[RFC8693]] that addresses the problem of *Delegation Auditability
+       Gaps* in multi-hop service environments.  Current standards treat
+       prior actors in a delegation chain as "informational only," providing
+       no cryptographic proof of the actual delegation path.  This document
+       proposes a new actor_chain claim — a *Cryptographically Verifiable
+       Actor Chain* — that replaces the informational-only nested act claim
+       with a tamper-evident, ordered record of all actors.  This solution
+       enables high-assurance data-plane policy enforcement and forensic
+       auditability, particularly for dynamic AI agent-to-agent
+       workloads—where susceptibility to *prompt injection attacks* can lead
+       to unauthorized delegation paths — the security posture of the entire
+       delegation chain is critical for authorization decisions.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-mw-spice-actor-chain-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mw-spice-actor-chain-01
+    docidentifier:
+    - content: draft-mw-spice-actor-chain-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mw-spice-actor-chain-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

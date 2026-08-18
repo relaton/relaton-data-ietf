@@ -1,0 +1,130 @@
+---
+id: draftgenggrowbmpsyncoptionsandstate03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Monitoring Protocol (BMP) Enhancements for RIB View Synchronization
+    and Monitoring Options Notification
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-sync-options-and-state-03
+docidentifier:
+- content: draft-geng-grow-bmp-sync-options-and-state
+  type: Internet-Draft
+- content: draft-geng-grow-bmp-sync-options-and-state-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.geng-grow-bmp-sync-options-and-state
+date:
+- type: published
+  at: '2026-03-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nan
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Geng
+      completename:
+        language: en
+        content: Nan Geng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shunwan
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Zhuang
+      completename:
+        language: en
+        content: Shunwan Zhuang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The BGP Monitoring Protocol (BMP) is a widely deployed operational
+       tool that allows BMP collectors to obtain per-address-family BGP
+       Routing Information Base (RIB) entries, runtime statistics, events,
+       and other critical BGP state data from BMP sender routers, enabling
+       full visibility into BGP routing status and supporting core network
+       operations such as troubleshooting, security monitoring, and traffic
+       auditing.  However, two key limitations exist in the current BMP
+       specification during practical deployment.  First, transient faults,
+       message loss, or session interruptions may cause inconsistencies
+       between the RIB views of the BMP sender and collector, and the
+       existing protocol lacks a non-disruptive mechanism to resolve such
+       mismatches.  Second, there is no standardized notification mechanism
+       for senders to inform collectors of modified or updated monitoring
+       reporting options, leading collectors to store stale or invalid BGP
+       information as reporting configurations change.
+
+       This document defines two new backward-compatible BMP message types
+       to address these issues: a Route-Refresh message for non-disruptive
+       RIB view synchronization between senders and collectors, and a
+       Monitoring Options (MO) message to notify collectors of active and
+       disabled reporting parameters.  These extensions enhance the
+       reliability and accuracy of BMP-based BGP monitoring without
+       disrupting existing deployment workflows.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-geng-grow-bmp-sync-options-and-state-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-sync-options-and-state-02
+    docidentifier:
+    - content: draft-geng-grow-bmp-sync-options-and-state-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-geng-grow-bmp-sync-options-and-state-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

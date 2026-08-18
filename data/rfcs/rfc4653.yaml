@@ -1,0 +1,177 @@
+---
+id: RFC4653
+schema_version: v1.5.6
+type: standard
+title:
+- content: Improving the Robustness of TCP to Non-Congestion Events
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc4653
+docidentifier:
+- content: RFC 4653
+  type: IETF
+  primary: true
+- content: 10.17487/RFC4653
+  type: DOI
+docnumber: RFC4653
+date:
+- type: published
+  at: 2006-08
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        script: Latn
+        content: S.
+      surname:
+        language: en
+        script: Latn
+        content: Bhandarkar
+      completename:
+        language: en
+        script: Latn
+        content: S. Bhandarkar
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        script: Latn
+        content: A. L. N.
+      surname:
+        language: en
+        script: Latn
+        content: Reddy
+      completename:
+        language: en
+        script: Latn
+        content: A. L. N. Reddy
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        script: Latn
+        content: M.
+      surname:
+        language: en
+        script: Latn
+        content: Allman
+      completename:
+        language: en
+        script: Latn
+        content: M. Allman
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        script: Latn
+        content: E.
+      surname:
+        language: en
+        script: Latn
+        content: Blanton
+      completename:
+        language: en
+        script: Latn
+        content: E. Blanton
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: TCP Maintenance and Minor Extensions
+      identifier:
+      - content: tcpm
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies Non-Congestion Robustness (NCR) for TCP.  In
+    the absence of explicit congestion notification from the network, TCP uses loss
+    as an indication of congestion.  One of the ways TCP detects loss is using the
+    arrival of three duplicate acknowledgments.  However, this heuristic is not always
+    correct, notably in the case when network paths reorder segments (for whatever
+    reason), resulting in degraded performance.  TCP-NCR is designed to mitigate this
+    degraded performance by increasing the number of duplicate acknowledgments required
+    to trigger loss recovery, based on the current state of the connection, in an
+    effort to better disambiguate true segment loss from segment reordering.  This
+    document specifies the changes to TCP, as well as the costs and benefits of these
+    modifications.  This memo defines an Experimental Protocol for the Internet community.</p>"
+status:
+  stage:
+    content: EXPERIMENTAL
+series:
+- title:
+  - content: RFC
+  number: '4653'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: ncr
+- vocab:
+    content: non-congestion robustness
+- vocab:
+    content: transmission control protocol
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

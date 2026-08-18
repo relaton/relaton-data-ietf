@@ -1,0 +1,105 @@
+---
+id: draftxkumakichixaipreceipts01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Signed Execution Receipts for AI Agent Tool Calls (XAIP Receipts)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-xkumakichi-xaip-receipts-01
+docidentifier:
+- content: draft-xkumakichi-xaip-receipts
+  type: Internet-Draft
+- content: draft-xkumakichi-xaip-receipts-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.xkumakichi-xaip-receipts
+date:
+- type: published
+  at: '2026-06-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: XAIP
+      completename:
+        language: en
+        content: XAIP
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a wire format for signed execution receipts
+       produced by AI agents when they invoke tools, services, or other
+       agents.  A receipt records the minimum facts needed to make a trust
+       decision about a future call: who acted, who delegated, what tool was
+       used, whether the call succeeded, how long it took, and how the
+       call's inputs and outputs are identified (without disclosing their
+       contents).
+
+       A distinguishing property of the format is mutual attestation: the
+       Caller that delegated a tool call can co-sign the same canonical
+       record as the Agent that executed it, so neither party can
+       unilaterally fabricate a receipt about a delegated call.  Co-
+       signature is recommended rather than required; a receipt may carry
+       the executor signature alone, and consumers may weight the two cases
+       differently.
+
+       The format is intentionally tool-system-agnostic.  The same receipt
+       structure can be emitted by MCP (Model Context Protocol) servers,
+       LangChain.js callback handlers, OpenAI tool-calling loops, HTTP
+       clients, or proprietary agent runtimes.  Receipts use Ed25519
+       signatures over a JSON-canonicalized payload, and identities are W3C
+       Decentralized Identifiers (DIDs).
+
+       Scoring policy, aggregation architecture, and reactive behavior in
+       response to receipts are explicitly out of scope and left to
+       deployments.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-xkumakichi-xaip-receipts-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xkumakichi-xaip-receipts-00
+    docidentifier:
+    - content: draft-xkumakichi-xaip-receipts-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-xkumakichi-xaip-receipts-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xkumakichi-xaip-receipts-02
+    docidentifier:
+    - content: draft-xkumakichi-xaip-receipts-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-xkumakichi-xaip-receipts-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

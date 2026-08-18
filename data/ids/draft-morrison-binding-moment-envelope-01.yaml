@@ -1,0 +1,104 @@
+---
+id: draftmorrisonbindingmomentenvelope01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The Briefing-and-Binding Envelope: A Delivery Contract for Agent-to-Principal
+    Decision Moments with Dual-Veto Reconciliation'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-binding-moment-envelope-01
+docidentifier:
+- content: draft-morrison-binding-moment-envelope
+  type: Internet-Draft
+- content: draft-morrison-binding-moment-envelope-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-binding-moment-envelope
+date:
+- type: published
+  at: '2026-07-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd (~truealter)
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo specifies the briefing-and-binding envelope: a delivery
+       contract for the wire-level structure by which an artificial-
+       intelligence agent surfaces a consequential decision to the human
+       principal it acts for, and by which the principal commits, declines,
+       amends, or rejects that decision.  The envelope carries eight named
+       slots (a synopsis, findings, recommendations, an offer of detail, a
+       question stem, a set of options each marked with its own reasoning, a
+       single recommended option, and a pair of escape hatches) and is
+       emitted as a structured field of a Model Context Protocol [MCP] tool
+       result.  The contribution is the delivery contract itself: a single
+       renderer-agnostic envelope so that the briefing an agent delivers and
+       the binding a principal commits back have one machine-checkable shape
+       across every consuming surface.  The central element is the dual-veto
+       handshake: one escape hatch lets the principal revise the answer
+       space while accepting the question; the other lets the principal
+       reject the question itself and reopen deliberation.  Either party may
+       veto.  The memo defines a content digest over the envelope,
+       canonicalized under JCS and hashed with SHA-256, so that a resolution
+       names the exact envelope it resolves and an external receipt can
+       reference that envelope by digest.  The memo is Informational.  No
+       new transport is introduced; the envelope composes with the handle
+       namespace of [IDPRONOUNS] and the MCP tool surface of [POLICYPROV].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-binding-moment-envelope-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-binding-moment-envelope-00
+    docidentifier:
+    - content: draft-morrison-binding-moment-envelope-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-binding-moment-envelope-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

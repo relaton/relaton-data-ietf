@@ -1,0 +1,55 @@
+---
+id: draftniyikizaoauthattenuatingagenttokens
+schema_version: v1.5.6
+formattedref:
+  content: draft-niyikiza-oauth-attenuating-agent-tokens
+title:
+- language: en
+  script: Latn
+  content: Attenuating Authorization Tokens for Agentic Delegation Chains
+docidentifier:
+- content: draft-niyikiza-oauth-attenuating-agent-tokens
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Attenuating Authorization Tokens (AATs), a
+       signed credential format for task-scoped delegation in AI agent
+       systems.  An AAT encodes the tools an agent may invoke and the
+       argument constraints that apply to those invocations.  A token holder
+       authorized to delegate can derive a token offline with equal or
+       narrower authority, subject to the parent token's depth and lifetime
+       limits.  The resulting delegation chain is verifiable offline by any
+       enforcement point that has the root issuer's trust anchor key.
+
+       This specification profiles the OAuth Rich Authorization Requests
+       format (RFC 9396) for tool-level capability claims, adds delegation-
+       chain claims, and defines a core constraint vocabulary for argument
+       restrictions.  The chain verification algorithm authenticates each
+       delegation step and enforces monotonic attenuation without network
+       contact with the root issuer.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-niyikiza-oauth-attenuating-agent-tokens-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-niyikiza-oauth-attenuating-agent-tokens-00
+    docidentifier:
+    - content: draft-niyikiza-oauth-attenuating-agent-tokens-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-niyikiza-oauth-attenuating-agent-tokens-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-niyikiza-oauth-attenuating-agent-tokens-01
+    docidentifier:
+    - content: draft-niyikiza-oauth-attenuating-agent-tokens-01
+      type: Internet-Draft
+      primary: true

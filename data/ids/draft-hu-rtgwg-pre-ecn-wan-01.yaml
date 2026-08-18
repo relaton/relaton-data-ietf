@@ -1,0 +1,100 @@
+---
+id: drafthurtgwgpreecnwan01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Precise ECN in WAN
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hu-rtgwg-pre-ecn-wan-01
+docidentifier:
+- content: draft-hu-rtgwg-pre-ecn-wan
+  type: Internet-Draft
+- content: draft-hu-rtgwg-pre-ecn-wan-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hu-rtgwg-pre-ecn-wan
+date:
+- type: published
+  at: '2026-03-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jiayuan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Hu
+      completename:
+        language: en
+        content: Jiayuan Hu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This draft defines the precise ECN during used in WAN.  With the
+       growing demand for AI computing power, the computational capacity of
+       a single Artificial Intelligence Data Center (AIDC) can no longer
+       meet the requirements of large-scale model training.  This has led to
+       the emergence of cross-AIDC distributed model training, driving the
+       need for transmitting RoCEv2 packets over WAN networks.  AI training
+       is highly sensitive to network packet loss, where even minimal packet
+       loss can significantly degrade training efficiency.  Additionally,
+       elephant flows and extreme concurrent traffic impose higher demands
+       on network performance.
+
+       ECN achieves active feedback of network congestion by setting ECN
+       flag bits in the header of IP packets, which is an effective traffic
+       control method.  RFC6040 introduces the application of ECN in WAN.
+       However, due to the much higher end-to-end delay in WAN than in DC,
+       and the frequent occurrence of instantaneous traffic bursts in WAN,
+       it is easy to trigger ECN at the wrong time.  This draft focuses on
+       the precise use of ECN in WAN, by introducing different reactions of
+       ECN in different WAN transmission scenarios</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hu-rtgwg-pre-ecn-wan-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hu-rtgwg-pre-ecn-wan-00
+    docidentifier:
+    - content: draft-hu-rtgwg-pre-ecn-wan-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hu-rtgwg-pre-ecn-wan-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

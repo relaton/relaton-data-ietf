@@ -1,0 +1,121 @@
+---
+id: drafthowardvirp03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'VIRP: Verified Infrastructure Response Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-howard-virp-03
+docidentifier:
+- content: draft-howard-virp
+  type: Internet-Draft
+- content: draft-howard-virp-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.howard-virp
+date:
+- type: published
+  at: '2026-03-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nathan
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Howard
+      completename:
+        language: en
+        content: Nathan Howard
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Third Level IT LLC
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Verified Infrastructure Response Protocol (VIRP) defines a
+       cryptographic trust framework for agentic AI systems operating on
+       live network infrastructure.  As AI agents gain the capability to
+       autonomously configure, audit, and remediate production systems, the
+       absence of a verifiable chain of custody for observations and actions
+       introduces fundamental risks: fabricated telemetry, unauthorized
+       state changes, and the inability to distinguish legitimate AI-
+       initiated operations from compromise.
+
+       VIRP addresses this through seven trust primitives that collectively
+       enforce observation integrity, intent separation, action
+       authorization, outcome verification, baseline memory, multi-vendor
+       normalization, and agent process containment.  Observations are
+       cryptographically signed at collection time using Ed25519 asymmetric
+       signatures.  A two-channel architecture separates read-only
+       Observation from write-intent Intent, with intent gating enforced at
+       the protocol layer.  Trust tiers (GREEN/YELLOW/RED/BLACK) govern
+       action authorization with human-in-the-loop controls for elevated
+       operations.
+
+       This paper presents the protocol specification, a live multi-vendor
+       implementation (IronClaw) tested against 35 Cisco IOS routers, a
+       FortiGate 200G firewall, and Cisco 3850 switching infrastructure,
+       adversarial red team findings produced by the AI agent itself, and a
+       two-VM containment architecture derived from agent-identified
+       security gaps.  Results demonstrate that VIRP enables mathematically
+       verifiable infrastructure audit trails and that properly contained AI
+       agents exhibit self-reinforcing safety behavior when operating within
+       the protocol boundaries.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-howard-virp-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-02
+    docidentifier:
+    - content: draft-howard-virp-02
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-howard-virp-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-04
+    docidentifier:
+    - content: draft-howard-virp-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-howard-virp-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,124 @@
+---
+id: draftwangcfrgkeycombiners01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: HMAC Based Hybrid Key Combiners for Multiple Keys
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wang-cfrg-key-combiners-01
+docidentifier:
+- content: draft-wang-cfrg-key-combiners
+  type: Internet-Draft
+- content: draft-wang-cfrg-key-combiners-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wang-cfrg-key-combiners
+date:
+- type: published
+  at: '2026-04-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guilin
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: WANG
+      completename:
+        language: en
+        content: Guilin WANG
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Int. Pte Ltd
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Haoyang
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Haoyang Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Shanghai Jiaotong University
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>As a fundamental building block in security protocols, a key combiner
+       is used to combine two or more input cryptographic keys, some
+       potentially compromised, into a single pseudorandom output key.  Most
+       of the existing key combiners are for two input keys.  This draft
+       specifies two provably secure constructions of key combiners for
+       multiple keys [WWW25], which is particularly useful in post-quantum
+       migration where multiple input keys may be produced by different
+       algorithms or even different approaches [RFC9370], [ETSI25].  Namely,
+       here the input keys can be two or more, and the combined output key
+       remains pseudorandom if at least one of the input keys is secure,
+       i.e., uniformly random and unknown to an attacker.  The two
+       constructions, called HKCv1 and HKCv2, are based on the extract-then-
+       expand paradigm of HMAC (Keyed-Hashing for Message Authentication)
+       [RFC2104].  HKCv1 is designed for simultaneously available input keys
+       using concatenation, while HKCv2 is tailored for scenarios where
+       input keys arrive incrementally, using an iterative HMAC structure.
+
+       [EDNOTE: .... ]</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-wang-cfrg-key-combiners-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-cfrg-key-combiners-00
+    docidentifier:
+    - content: draft-wang-cfrg-key-combiners-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wang-cfrg-key-combiners-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

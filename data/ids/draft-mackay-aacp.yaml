@@ -1,0 +1,102 @@
+---
+id: draftmackayaacp
+schema_version: v1.5.6
+formattedref:
+  content: draft-mackay-aacp
+title:
+- language: en
+  script: Latn
+  content: Agent Action Compression Protocol (AACP) Version 1.4
+docidentifier:
+- content: draft-mackay-aacp
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Agent Action Compression Protocol (AACP), a
+       typed coordination format for agent-to-agent communication in multi-
+       agent large language model (LLM) systems.  AACP transforms natural
+       language coordination instructions into deterministic, machine-
+       parseable packets that can be validated before transmission, logged
+       as structured audit records, and replayed consistently across
+       workflow runs.
+
+       AACP addresses a coordination content layer that existing agent
+       protocols do not cover.  The Model Context Protocol (MCP) and Agent-
+       to-Agent Protocol (A2A) operate at the tool access and routing layers
+       respectively.  Neither specifies what agents say to each other inside
+       coordination messages.  AACP fills this gap with a shared, typed
+       vocabulary for agent coordination intent.
+
+       For known workflow types, a rule-based encoder produces AACP packets
+       deterministically at zero LLM cost.  A four-tier fallback extends
+       this to novel instructions: community registry lookup at zero cost;
+       local cache lookup at zero cost; pattern matching at zero cost; LLM
+       encoding for genuinely novel instructions, logged to registry for
+       permanent reuse.  An amortisation benchmark across 240 encoding
+       operations demonstrated 91.6 percent cost saving versus per-call LLM
+       encoding, with 6 LLM calls required across the full run.
+
+       As a secondary benefit, AACP reduces coordination token usage by
+       approximately 23 percent versus equivalent natural language
+       instructions.  Framework integration benchmarks demonstrate 18
+       percent total workflow cost reduction in LangChain (59 coordination
+       hops) and 30 percent in CrewAI (59 coordination hops), with all
+       coordination LLM calls eliminated in both cases.
+
+       This document updates draft-mackay-aacp-02 with: framework
+       integration results for AutoGen (55 percent total cost reduction, 59
+       coordination hops) and Pydantic AI (85 percent total cost reduction,
+       59 coordination hops); a four-framework comparison demonstrating that
+       AACP saving scales with framework coordination verbosity; a new
+       framing for typed-result frameworks showing that AACP completes the
+       determinism picture by adding typed instructions to complement
+       existing typed results; and publication of five packages on PyPI and
+       npm covering all four frameworks.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mackay-aacp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mackay-aacp-00
+    docidentifier:
+    - content: draft-mackay-aacp-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mackay-aacp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mackay-aacp-01
+    docidentifier:
+    - content: draft-mackay-aacp-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mackay-aacp-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mackay-aacp-02
+    docidentifier:
+    - content: draft-mackay-aacp-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mackay-aacp-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mackay-aacp-03
+    docidentifier:
+    - content: draft-mackay-aacp-03
+      type: Internet-Draft
+      primary: true

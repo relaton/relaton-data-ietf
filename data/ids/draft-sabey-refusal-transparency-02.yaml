@@ -1,0 +1,104 @@
+---
+id: draftsabeyrefusaltransparency02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Refusal Transparency: Signed, Replay-Resistant Evidence of Refused Agent-System
+    Transitions'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sabey-refusal-transparency-02
+docidentifier:
+- content: draft-sabey-refusal-transparency
+  type: Internet-Draft
+- content: draft-sabey-refusal-transparency-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sabey-refusal-transparency
+date:
+- type: published
+  at: '2026-07-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jaryn
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: J. M.
+      surname:
+        language: en
+        content: Sabey
+      completename:
+        language: en
+        content: Jaryn Mervin Sabey
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Continuity Laboratories
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A governance system for autonomous agents is defined as much by what
+       it refuses as by what it permits, yet refusals are the one behavior
+       vendors only ever assert.  A Refusal Digest is a portable, signed
+       JSON document recording one adversarial probe run against a live
+       agent-governance system: for every attack attempted, the system's
+       verbatim refusal ground, the event types the attack would have
+       recorded had it succeeded, and the complete signed event ledger of
+       the attempt — in which the refused transition is provably absent.
+       Digests verify offline, by parties who do not operate the probed
+       system, using only the issuer's public key.  From version 0.2, every
+       quantity that varies between runs derives deterministically from a
+       per-run seed carried in the digest, so a relying party can recompute
+       the derivations and a replayed or pre-recorded ledger cannot match a
+       fresh digest.  This document specifies the digest wire format, its
+       canonicalization and signature scheme, the seeded-variation
+       derivations, and the verification algorithm.  Where succession
+       receipts prove that an agent legitimately became the holder of an
+       authority, refusal digests prove what the governing system declined
+       to let happen.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sabey-refusal-transparency-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sabey-refusal-transparency-01
+    docidentifier:
+    - content: draft-sabey-refusal-transparency-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sabey-refusal-transparency-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

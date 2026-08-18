@@ -1,0 +1,119 @@
+---
+id: draftgllsrmetricnormalize01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Metric Normalize for IGP Flex-algo
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gl-lsr-metric-normalize-01
+docidentifier:
+- content: draft-gl-lsr-metric-normalize
+  type: Internet-Draft
+- content: draft-gl-lsr-metric-normalize-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gl-lsr-metric-normalize
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Liyan
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Gong
+      completename:
+        language: en
+        content: Liyan Gong
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Changwang
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Lin
+      completename:
+        language: en
+        content: Changwang Lin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: New H3C Technologies
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When multiple links in a network have the same metric, they can
+       serve as ECMP equivalent links for load balancing during forwarding.
+       However, slight fluctuations in metric values can prevent the
+       formation of ECMP equivalent links, leading to the idle state of
+       suboptimal links and thus wasting bandwidth resources.
+
+       This document proposes a metric normalization method by advertising
+       metric normalization parameters corresponding to a specific Metric-
+       Type for Flexible Algorithm. During route calculation, slight
+       fluctuations across multiple links are adjusted according to these
+       normalization parameters, making the computed metric values more
+       consistent. This approach enables the formation of ECMP equivalent
+       links and promotes load sharing in the forwarding process.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gl-lsr-metric-normalize-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gl-lsr-metric-normalize-00
+    docidentifier:
+    - content: draft-gl-lsr-metric-normalize-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gl-lsr-metric-normalize-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

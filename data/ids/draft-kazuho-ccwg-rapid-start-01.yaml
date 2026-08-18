@@ -1,0 +1,101 @@
+---
+id: draftkazuhoccwgrapidstart01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Rapid Startup of Congestion Control
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-rapid-start-01
+docidentifier:
+- content: draft-kazuho-ccwg-rapid-start
+  type: Internet-Draft
+- content: draft-kazuho-ccwg-rapid-start-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kazuho-ccwg-rapid-start
+date:
+- type: published
+  at: '2026-02-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kazuho
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Oku
+      completename:
+        language: en
+        content: Kazuho Oku
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fastly
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines Rapid Start, a congestion-control startup
+       algorithm.  It starts by pacing the transmission of the initial
+       congestion window over a full RTT, allowing an initial window up to
+       2× that of classic paced slow start at a comparable sending rate.  It
+       then grows the window by 3× per RTT until queue buildup is observed,
+       after which it reverts to classic 2× slow start growth.  When
+       congestion is signaled, Rapid Start smoothly converges the window
+       based on delivered data, avoiding bursts and underutilization, before
+       handing over to ordinary congestion avoidance.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-rapid-start-00
+    docidentifier:
+    - content: draft-kazuho-ccwg-rapid-start-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-kazuho-ccwg-rapid-start-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-rapid-start-02
+    docidentifier:
+    - content: draft-kazuho-ccwg-rapid-start-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kazuho-ccwg-rapid-start-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

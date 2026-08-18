@@ -1,7 +1,17 @@
-= IETF publications bibliographic data for Relaton-IETF
+= relaton-data-ietf
 
-This repository is used by Relaton-IETF to represent known IETF RFC publications.
+Single repository for ALL IETF document streams in Relaton YAML:
+rfcs, rfcsubseries (STD/BCP/FYI), ids (Internet-Drafts), and misc.
 
-Data is stored in Relaton XML format.
+* `data/{stream}/*.yaml` — documents per stream
+* `index.yaml` / `index.zip` — unified index: canonical id, docid
+  variants (including STD/BCP/FYI cross-references), title, year,
+  doctype, status, lookup keys
+* `tools/build_index.rb` — index generator (stdlib only)
+* `.github/workflows/aggregate.yml` — daily aggregation from the type
+  repositories
 
-This repository contains a crawler script which runs daily. The script copies the RFC documents from https://xml2rfc.tools.ietf.org/public/rfc/ and store them into the data directory.
+The legacy bibxml mirror remains on the `bibxml-final` tag. Sources:
+relaton/relaton-data-{rfcs,rfcsubseries,ids} (crawler-generated),
+ietf-tools/relaton-data-misc (schema-upgraded at aggregation).
+Implements https://github.com/relaton/relaton/issues/109[relaton#109].

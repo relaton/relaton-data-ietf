@@ -1,0 +1,119 @@
+---
+id: draftwangringloadaware00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Load-Adaptive Priority Migration Mechanism for Deterministic Switched Ethernet
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wang-ring-load-aware-00
+docidentifier:
+- content: draft-wang-ring-load-aware
+  type: Internet-Draft
+- content: draft-wang-ring-load-aware-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wang-ring-load-aware
+date:
+- type: published
+  at: '2026-08-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: WangXingyuan
+      completename:
+        language: en
+        content: WangXingyuan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Porsche Engineering and North China Electric Power University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tiefeng
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Tiefeng Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: North China Electric Power University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document proposes a Load-Adaptive Priority Migration (LAPM)
+       mechanism for deterministic switched Ethernet.  The mechanism
+       classifies traffic into three criticality levels (TC0/TC1/TC2), which
+       are logically equivalent to the foundational classification of
+       network slicing.  An inverse M/D/1 queuing model is introduced to
+       derive per-hop network utilization from measured forwarding delay,
+       requiring no additional probe traffic.  A four-level load
+       classification scheme with hysteresis logic drives dynamic remapping
+       of the IEEE 802.1Q Priority Code Point (PCP), enabling traffic
+       priority to adapt as network load changes.
+
+       LAPM serves as a runtime complement to the scheduling framework
+       defined by RFC 9320.  Existing DetNet queuing mechanisms (TAS, CBS,
+       CQF, Guaranteed Service) rely on statically pre-configured offline
+       parameters, whereas LAPM monitors utilization in real time and
+       adaptively adjusts PCP when load levels cross pre-defined thresholds.
+       This capability is particularly critical for deployment scenarios
+       with time-varying traffic patterns, including automotive backbone
+       networks, industrial automation, and professional audio/video
+       systems.
+
+       Experimental validation on a 5-node ring topology (1000BASE-T) across
+       three traffic classes reveals the existence of three operationally
+       distinct regions — normal, transitional, and saturated — where load
+       bursts in the transitional region cannot be captured by the EWMA-
+       smoothed utilization metric alone.  A cross-domain maximum
+       aggregation mechanism coordinates load-level decisions across
+       multiple VLANs via a shared global variable, ensuring consistent
+       priority migration policy enforcement.
+
+       In summary, the LAPM mechanism provides a means to guarantee low-
+       latency transmission for critical flows through dynamic load-based
+       priority control.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wang-ring-load-aware-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

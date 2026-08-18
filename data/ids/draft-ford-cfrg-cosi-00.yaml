@@ -1,0 +1,160 @@
+---
+id: draftfordcfrgcosi00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Collective Edwards-Curve Digital Signature Algorithm
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ford-cfrg-cosi-00
+docidentifier:
+- content: draft-ford-cfrg-cosi
+  type: Internet-Draft
+- content: draft-ford-cfrg-cosi-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ford-cfrg-cosi
+date:
+- type: published
+  at: '2017-06-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bryan
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Ford
+      completename:
+        language: en
+        content: Bryan Ford
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EPFL
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nicolas
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Gailly
+      completename:
+        language: en
+        content: Nicolas Gailly
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EPFL
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Linus
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Gasser
+      completename:
+        language: en
+        content: Linus Gasser
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EPFL
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Philipp
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Jovanovic
+      completename:
+        language: en
+        content: Philipp Jovanovic
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EPFL
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Collective signatures are compact cryptographic proofs showing that
+       several distinct secret key holders, called cosigners, have
+       cooperated to sign a given message.  This document describes a
+       collective signature extension to the EdDSA signing schemes for the
+       Ed25519 and Ed448 elliptic curves.  A collective EdDSA signature
+       consists of a point R, a scalar s, and a bitmask Z indicating the
+       specific subset of a known group of cosigners that produced this
+       signature.  A collective signature produced by n cosigners is of size
+       64+ceil(n/8) bytes for Ed25519 and 114+ceil(n/8) bytes for Ed448,
+       respectively, instead of 64n and 114n bytes for n individual
+       signatures.  Further, collective signature verification requires only
+       one double scalar multiplication rather than n.  The verifier learns
+       exactly which subset of the cosigners participated, enabling the
+       verifier to implement flexible acceptance-threshold policies, and
+       preserving transparency and accountability in the event a bad message
+       is collectively signed.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ford-cfrg-cosi-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

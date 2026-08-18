@@ -1,0 +1,53 @@
+---
+id: draftpengfcn
+schema_version: v1.5.6
+formattedref:
+  content: draft-peng-fcn
+title:
+- language: en
+  script: Latn
+  content: A proposal to add Fast Congestion Notification to IP and Improve TCP Performance
+    in Wireless and Mobile networks
+docidentifier:
+- content: draft-peng-fcn
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This paper create a method using a simple implementation to inform
+    \nthe traffic source at a very early stage that the network is becoming \noverload
+    or congested and to ask the source to slow down its \ntransmission rate. For simplicity,
+    the network only indicates \ncongesition to the node where data transmission rate
+    will be reduced \nor increased adaptively. For the consideration of asymmetric
+    routing \nand to shorten long control delay time, the congestion notification
+    \nmessage generated for the incipient congestion in the network should \nimmediately
+    routed back according to its source address. Upon \nreceiving this message, the
+    source terminal discards this message and \nimmediately initiates its congestion
+    control, then it sends message \nto tell the network node to stop adding it. To
+    improve TCP  \nperformance in wireles and mobile networks, we assume only this
+    \nmessage created in the network can initiate congestion window \nreduction to
+    achieve separation of congestion control and loss \nrecovery mechanism. Then,
+    I mention that this Fast Congestion \nNotification should be created once the
+    buffer size exceeds the \nprefixed threshold and still generated though upon packet
+    losses due \nto congestion until the messages inform the source redution of \ncongestion
+    window reache it. However, in traditional fix networks, it \nis no need of the
+    ability of packet losses to initiate congestion \ncontrol and the FCN will not
+    required to be generated after packet \nlosses due to buffer overflow occurs for
+    the packet losses are mainly \ndue to congestion in such environment. It is most
+    noted that the \nsource address of following Fast Congestion Notification messages
+    \nwill remain the same as the first one in a window to avoid reducing \nthe transmission
+    rate of multiple  TCP connections simultaneously and \nimprove the fairness and
+    performance either in wire or in wireless   \nenvironent.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-peng-fcn-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-peng-fcn-00
+    docidentifier:
+    - content: draft-peng-fcn-00
+      type: Internet-Draft
+      primary: true

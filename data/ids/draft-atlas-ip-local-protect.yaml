@@ -1,0 +1,40 @@
+---
+id: draftatlasiplocalprotect
+schema_version: v1.5.6
+formattedref:
+  content: draft-atlas-ip-local-protect
+title:
+- language: en
+  script: Latn
+  content: IP/LDP Local Protection
+docidentifier:
+- content: draft-atlas-ip-local-protect
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an architecture and selection process for
+    providing local protection for IP unicast and/or LDP traffic in the
+    event of a single link or node failure until the router has
+    converged.  When computing the primary next-hop for a prefix, a
+    router S also determines an alternate next-hop which can be used if
+    the primary next-hop fails.  The alternate can be either a loop-free
+    alternate, which goes to a neighbor whose shortest path to the prefix
+    does not go back through the router S, or a U-turn alternate, which
+    goes to a neighbor whose primary next-hop to the prefix is the router
+    S, and which has itself a loop-free node-protecting alternate, which
+    thus does not go through router S to reach the destination prefix.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-atlas-ip-local-protect-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-atlas-ip-local-protect-00
+    docidentifier:
+    - content: draft-atlas-ip-local-protect-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,108 @@
+---
+id: draftsipidentityconfusionbcp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Mitigating SIP Identity Spoofing Caused by Semantic Ambiguities
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sip-identity-confusion-bcp-00
+docidentifier:
+- content: draft-sip-identity-confusion-bcp
+  type: Internet-Draft
+- content: draft-sip-identity-confusion-bcp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sip-identity-confusion-bcp
+date:
+- type: published
+  at: '2026-03-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Qi Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jianjun
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Jianjun Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Session Initiation Protocol (SIP) carries originator identity
+       through multiple header fields --- From, P-Asserted-Identity, P-
+       Preferred-Identity, Remote-Party-ID, Identity and so on --- whose
+       processing is spread across several specifications.  Because these
+       mechanisms leave significant room for implementation choice, SIP
+       servers and user agents frequently disagree on which identity signal
+       to trust and how to parse it.  Recent research has demonstrated that
+       these semantic ambiguities enable caller-ID and message-origin
+       spoofing in the majority of tested server-client combinations, even
+       when TLS and authentication are correctly deployed.
+
+       This document provides best current practices for mitigating identity
+       spoofing caused by such ambiguities.  It defines identity-validation
+       rules at each stage of the SIP signaling path, from the originating
+       server through trust boundaries and transit proxies to the receiving
+       user agent, and includes guidance on deployment, migration, and
+       interoperability with legacy systems.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sip-identity-confusion-bcp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

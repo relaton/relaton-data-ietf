@@ -1,0 +1,77 @@
+---
+id: draftihrendelegationttls00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Importance Of Parent-side TTLs For Referrals Several Layers Deep
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ihren-delegation-ttls-00
+docidentifier:
+- content: draft-ihren-delegation-ttls
+  type: Internet-Draft
+- content: draft-ihren-delegation-ttls-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ihren-delegation-ttls
+date:
+- type: published
+  at: '2003-10-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Johan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Stenstam
+      completename:
+        language: en
+        content: Johan Stenstam
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo documents a consequence of how the TTL re-writing
+    mechanism works (or rather does not work) for the case of a
+    resolver chasing a referral chain several layers deep.
+
+    The most common example of this is the case of a recursive resolver
+    trying to look up a third level domain name starting from the root.
+
+    A result of how this works is that it seems to be a good idea to
+    recommend an increase of the present standard TTL for delegations
+    from the root zone from the present 48 hours to something
+    significantly longer. But, more importantly, the choice of TTL for
+    the referral from the parent should be a decision made by the
+    child, not the parent.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ihren-delegation-ttls-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

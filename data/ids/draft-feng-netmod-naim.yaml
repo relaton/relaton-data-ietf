@@ -1,0 +1,67 @@
+---
+id: draftfengnetmodnaim
+schema_version: v1.5.6
+formattedref:
+  content: draft-feng-netmod-naim
+title:
+- language: en
+  script: Latn
+  content: 'NAIM: A Canonical Semantic Representation for AI-Assisted YANG Modeling
+    and Validation'
+docidentifier:
+- content: draft-feng-netmod-naim
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the NAIM (Natural AI Interface Modeling)
+       framework, a canonical semantic intermediate representation between
+       natural language descriptions and YANG data models (RFC 7950).
+
+       NAIM addresses a recognized gap in the YANG authoring and network
+       management workflow: direct conversion from natural language to YANG
+       is error-prone because essential modeling semantics -- including
+       configuration versus state distinction, list key identification,
+       constraint expressions, operational preconditions, and cross-module
+       relationships -- are routinely absent or ambiguous in natural
+       language input.  NAIM makes these semantics explicit, structurally
+       consistent, and machine-verifiable.
+
+       This document defines: the NAIM Document format (Canonical JSON and
+       derived Markdown View); the LLM Context View for AI prompt context
+       distribution; the three-layer architecture (Specification, Skill,
+       Tool); Skills A-D for conversational modeling, summarization, YANG
+       generation, and reverse engineering; and the Validation-Reflection-
+       Retry mechanism for AI output quality control.
+
+       The NAIM Document format is designed to serve two roles: as the
+       intermediate representation for design-time YANG authoring, and as
+       the runtime semantic authority against which AI-generated operation
+       intents are validated.  The runtime validation usage is specified in
+       [NAIM-OP]; this document defines the format, derived views, and
+       design-time workflows.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-feng-netmod-naim-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-feng-netmod-naim-00
+    docidentifier:
+    - content: draft-feng-netmod-naim-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-feng-netmod-naim-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-feng-netmod-naim-01
+    docidentifier:
+    - content: draft-feng-netmod-naim-01
+      type: Internet-Draft
+      primary: true

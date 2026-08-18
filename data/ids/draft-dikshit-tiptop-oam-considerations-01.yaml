@@ -1,0 +1,136 @@
+---
+id: draftdikshittiptopoamconsiderations01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Network Management and OAM Considerations for IP in Deep Space
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-tiptop-oam-considerations-01
+docidentifier:
+- content: draft-dikshit-tiptop-oam-considerations
+  type: Internet-Draft
+- content: draft-dikshit-tiptop-oam-considerations-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dikshit-tiptop-oam-considerations
+date:
+- type: published
+  at: '2026-07-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Saumya
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dikshit
+      completename:
+        language: en
+        content: Saumya Dikshit
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aruba Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mukul
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: M. K.
+      surname:
+        language: en
+        content: Srivastava
+      completename:
+        language: en
+        content: Mukul Kumar Srivastava
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hewlett Packard Enterprise
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>[I-D.ietf-tiptop-usecase] and [I-D.ietf-tiptop-ip-architecture]
+       describe key characteristics, use cases, requirements, and an IP
+       architecture for deep-space (lunar, Mars, and beyond) surface and
+       orbital-relay networking, characterized by long, variable,
+       asymmetric propagation delay (single-digit to tens of minutes
+       one-way), scheduled/intermittent connectivity windows, and severely
+       constrained link capacity.  Section 8.2 of
+       [I-D.ietf-tiptop-ip-architecture] addresses the configuration-
+       management plane for this environment (NETCONF, RESTCONF, and SNMP
+       transport selection and RTT-adjusted client timeouts), but neither
+       document addresses the fault and performance dimensions of
+       Operations, Administration, and Maintenance (OAM): fault detection,
+       performance measurement, and reachability verification.
+
+       This document identifies why conventional terrestrial OAM
+       techniques (active round-trip probing such as ICMP Echo, BFD, or
+       TWAMP; assumption of continuous connectivity) do not transfer
+       directly to this environment, and proposes candidate adapted
+       approaches -- passive, store-and-forward telemetry batched to
+       contact windows; on-board local health self-diagnosis with delayed
+       reporting; and confidence-interval-based reachability assessment in
+       place of binary up/down status -- as a starting point for OAM
+       discussion within the TIPTOP working group.  This document
+       explicitly does not propose use of the Bundle Protocol or DTN
+       architecture, both of which are out of scope for TIPTOP per its
+       charter; where CCSDS space-data-system telemetry conventions are
+       mentioned, it is as informative background only.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dikshit-tiptop-oam-considerations-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dikshit-tiptop-oam-considerations-00
+    docidentifier:
+    - content: draft-dikshit-tiptop-oam-considerations-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dikshit-tiptop-oam-considerations-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

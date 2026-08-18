@@ -1,0 +1,96 @@
+---
+id: draftvaubanx402lifecyclefsm00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: x402 V2 Payment Lifecycle Finite State Machine
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-lifecycle-fsm-00
+docidentifier:
+- content: draft-vauban-x402-lifecycle-fsm
+  type: Internet-Draft
+- content: draft-vauban-x402-lifecycle-fsm-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vauban-x402-lifecycle-fsm
+date:
+- type: published
+  at: '2026-05-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Vauban
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Research
+      completename:
+        language: en
+        content: Vauban Research
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vauban Research
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a normative finite state machine (FSM) for x402
+       V2 Payment lifecycle transitions, covering the four canonical Payment
+       Claim states: PaymentIntent (initialisation), SettlementReceipt
+       (completion), RefundClaim (reversal), and DelegationGrant (bounded
+       authority).  Each transition is bound to the prior state by
+       cryptographic linkage via the JCS canonical preimage discipline
+       ([RFC8785]), enabling supervisor reconstruction of full payment
+       histories from retained off-VM manifests.  The FSM is compatible with
+       the x402 STARK Receipt Format Extension [STARK-RECEIPTS] but
+       applicable to any x402 receipt format that implements the canonical
+       preimage discipline.  Implementation evidence: 18 DelegationGrant
+       vectors cross-validated byte-identical across five language runtimes
+       ([X402-2432]), live on-chain anchor on Starknet Sepolia
+       (PaymentDemoEmitter at
+       0x044dd87a94a801cf775d4c5e4b6703102d4e97e1cd1d0a8879341219ae4f19ff).</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-vauban-x402-lifecycle-fsm-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vauban-x402-lifecycle-fsm-01
+    docidentifier:
+    - content: draft-vauban-x402-lifecycle-fsm-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vauban-x402-lifecycle-fsm-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

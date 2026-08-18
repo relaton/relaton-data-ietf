@@ -1,0 +1,94 @@
+---
+id: draftthomassendnsopcdsconsistency00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Ensuring CDS/CDNSKEY Consistency is Mandatory
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-cds-consistency-00
+docidentifier:
+- content: draft-thomassen-dnsop-cds-consistency
+  type: Internet-Draft
+- content: draft-thomassen-dnsop-cds-consistency-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.thomassen-dnsop-cds-consistency
+date:
+- type: published
+  at: '2022-07-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Thomassen
+      completename:
+        language: en
+        content: Peter Thomassen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: deSEC, Secure Systems Engineering
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>For maintaining DNSSEC Delegation Trust, DS records have to be kept
+       up to date.  [RFC7344] automates this by having the child publish CDS
+       and/or CDNSKEY records which hold the prospective DS parameters.
+       Parent-side entities (e.g.  Registries, Registrars) can use these
+       records to update the delegation's DS records.  A common method for
+       detecting changes in CDS/CDNSKEY record sets is to query them
+       periodically from the child zone ("polling"), as described in
+       Section 6.1 of [RFC7344].
+
+       This document specifies that if polling is used, parent-side entities
+       MUST ensure that CDS/CDNSKEY record sets are equivalent across all of
+       the child's authoritative nameservers, before taking any action based
+       on these records.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-thomassen-dnsop-cds-consistency-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-cds-consistency-01
+    docidentifier:
+    - content: draft-thomassen-dnsop-cds-consistency-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-thomassen-dnsop-cds-consistency-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,43 @@
+---
+id: draftpashbyipv6detectingspoofing
+schema_version: v1.5.6
+formattedref:
+  content: draft-pashby-ipv6-detecting-spoofing
+title:
+- language: en
+  script: Latn
+  content: Detection of IPv6 Neighbor Discovery and Host Redirection Spoofing
+docidentifier:
+- content: draft-pashby-ipv6-detecting-spoofing
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The purpose of this draft is to provide a method to detect \nexploitation
+    of inherent vulnerabilities in the Neighbor Discovery \nprocesses.\n\nThere are
+    two well documented vulnerabilities in the basic IPv6 \narchitecture: Neighbor
+    Discover spoofing and Host Redirection.  \nThere already exists the SeND RFC [send]
+    that addresses \nauthenticating these interactions. Certain networks may choose
+    not \nto uses (or cannot use) SeND, for instance, networks that use DHCP \nor
+    statically assigned addresses.\n\nThere is an underlying security principle that
+    says, \"If you can \nblock a attack do it. If you cannot block it, detect it.
+    \ Even if \nyou can block it, detect it.\" This proposal outlines simple \nmodifications
+    to the basic protocols to allow for easily detecting \nthese attacks. Through
+    proactive systems, once an attack is \ndetected it could easily provide blocking
+    by isolating the \nattacking host via Access Control Lists (ACLs) or disabling
+    ports.\n\nThe basic method proposed is to force packets used in these attacks
+    \nto be multicast to the attacked nodes Solicited Node Multicast \ngroup, thus
+    allowing a security device to detect when it is \noccurring.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-pashby-ipv6-detecting-spoofing-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pashby-ipv6-detecting-spoofing-00
+    docidentifier:
+    - content: draft-pashby-ipv6-detecting-spoofing-00
+      type: Internet-Draft
+      primary: true

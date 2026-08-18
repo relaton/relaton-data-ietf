@@ -1,0 +1,109 @@
+---
+id: draftnoascittaiagentreceipt01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A SCITT Profile for AI-Agent Action Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-noa-scitt-ai-agent-receipt-01
+docidentifier:
+- content: draft-noa-scitt-ai-agent-receipt
+  type: Internet-Draft
+- content: draft-noa-scitt-ai-agent-receipt-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.noa-scitt-ai-agent-receipt
+date:
+- type: published
+  at: '2026-08-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tora
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Toraman
+      completename:
+        language: en
+        content: Tora Toraman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NordenSoft
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document profiles the IETF SCITT (Supply Chain Integrity,
+       Transparency, and Trust) architecture for AI-agent action receipts:
+       tamper-evident, signed, offline-verifiable records of what an
+       autonomous agent was recorded as doing at the governed boundary,
+       under which recorded principal class, with what recorded verdict, and
+       -- where the issuer records one -- under which policy identity.  Each
+       receipt is a signed record over a canonical JSON payload, hash-
+       chained so that each record commits to its predecessor, and presented
+       either bare -- the payload with its own native signature -- or
+       enveloped in a COSE_Sign1.  This revision specifies how such a
+       receipt is carried as a SCITT Signed Statement, with the protected
+       claims a Transparency Service requires, so that a receipt can be
+       registered.  Registration obtains a Transparency Service's signed
+       proof that the statement was registered in its log -- a property a
+       self-signed chain cannot provide alone.  It does not, by itself, give
+       an offline holder non-equivocation: that requires consistency proofs
+       and monitoring of the log, which this profile does not specify.  The
+       profile makes a deliberately narrow, checkable claim: this is an
+       issuer-authenticated, signature-verifiable, tamper-evident record of
+       the action, the recorded principal class, the recorded verdict, and
+       any policy identity the receipt carries.  It explicitly does not
+       claim that the agent was correct, safe, or wise, that the recorded
+       inputs were true or complete, that a named approver authorized this
+       exact action before it ran, that a downstream controller succeeded,
+       or that any physical effect occurred.  This revision separates those
+       last three as distinct claims with independent failure behaviour,
+       states the boundary of a shared action digest, and keeps a
+       deterministic offline policy-replay capability out of scope.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-noa-scitt-ai-agent-receipt-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-noa-scitt-ai-agent-receipt-00
+    docidentifier:
+    - content: draft-noa-scitt-ai-agent-receipt-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-noa-scitt-ai-agent-receipt-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

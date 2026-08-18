@@ -1,0 +1,210 @@
+---
+id: draftmozleywilliamsdnsopdnsaid02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DNS for AI Discovery
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dnsop-dnsaid-02
+docidentifier:
+- content: draft-mozleywilliams-dnsop-dnsaid
+  type: Internet-Draft
+- content: draft-mozleywilliams-dnsop-dnsaid-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mozleywilliams-dnsop-dnsaid
+date:
+- type: published
+  at: '2026-05-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jim
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Mozley
+      completename:
+        language: en
+        content: Jim Mozley
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Infoblox, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nic
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Williams
+      completename:
+        language: en
+        content: Nic Williams
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Infoblox, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Behcet
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Sarikaya
+      completename:
+        language: en
+        content: Behcet Sarikaya
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Unaffiliated
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Roland
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Schott
+      completename:
+        language: en
+        content: Roland Schott
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Deutsche Telekom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeffrey
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Damick
+      completename:
+        language: en
+        content: Jeffrey Damick
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Amazon
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The document standardizes an approach for publishing AI agents in the
+       Domain Name System (DNS) so that other agents can discover them.
+       Discovery is then initiated based on one of three generic use cases,
+       in increasing computational and latency cost: (1) the requestor knows
+       both the organization and agent (2) the requestor knows the
+       organization that provides a capability, but not the specific agent
+       (3) the requestor knows the required capability, but not the
+       organization or agent.  Of these use cases only (1) and (2) are in
+       scope for this document, although (3) can be derived from this
+       specification.
+
+       DNS for AI Discovery (DNS-AID) is designed so that, once a client has
+       learned an organization's agents, subsequent transactions can utilize
+       the first use case with the benefit of cacheable connectivity
+       information that is learnable as an agentic skill.  The mechanism
+       uses Service Binding (SVCB) records for connectivity information and
+       key meta data, a well known entry point using DNS-Based Service
+       Discovery (DNS-SD) labels into an organization's agent index, and
+       optionally DNS Security Extensions (DNSSEC) and DNS-Based
+       Authentication of Named Entities (DANE) TLSA records for trust and
+       security.  DNS-AID provides consumers of agent services with a direct
+       connection method for agentic workloads not mediated by a third
+       party.  Organizations can use the same approach across public and
+       private networks networks, providing consistency and common
+       operational models, including publishing agents that are hosted in
+       service provider domains.
+
+       This document introduces no new resource record types, opcodes, or
+       response codes.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mozleywilliams-dnsop-dnsaid-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dnsop-dnsaid-01
+    docidentifier:
+    - content: draft-mozleywilliams-dnsop-dnsaid-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mozleywilliams-dnsop-dnsaid-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,92 @@
+---
+id: draftvkrasnovh2compressiondictionaries00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Compression Dictionaries for HTTP/2
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vkrasnov-h2-compression-dictionaries-00
+docidentifier:
+- content: draft-vkrasnov-h2-compression-dictionaries
+  type: Internet-Draft
+- content: draft-vkrasnov-h2-compression-dictionaries-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vkrasnov-h2-compression-dictionaries
+date:
+- type: published
+  at: '2016-07-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Vlad
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Krasnov
+      completename:
+        language: en
+        content: Vlad Krasnov
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The HTTP/2 [RFC7540] protocol encourages the use of many small assets
+       for CSS/JS/HTML, due to its multiplexed nature.  Prior to HTTP/2,
+       asset inlining was encouraged, resulting in fewer, larger assets per
+       website.
+
+       The nature of the compression algorithms, such as DEFLATE [RFC1951]
+       and Brotli [BROTLI], used with HTTP in practice, require a certain
+       "window" of data to perform backward matching.  Therefore, larger
+       files have much better compression ratio.  These algorithms also
+       allow the use of custom compression dictionaries which can be used as
+       the initial window for backward matches.
+
+       This document specifies a new HTTP/2 frame type and a new HTTP/2
+       setting value that would allow a compression algorithm to use
+       previously sent data as a compression dictionary, resulting in an
+       improved compression ratio.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-vkrasnov-h2-compression-dictionaries-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vkrasnov-h2-compression-dictionaries-01
+    docidentifier:
+    - content: draft-vkrasnov-h2-compression-dictionaries-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vkrasnov-h2-compression-dictionaries-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,123 @@
+---
+id: draftbormannintareaalfi01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Adaptation Layer Fragmentation Indication
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bormann-intarea-alfi-01
+docidentifier:
+- content: draft-bormann-intarea-alfi
+  type: Internet-Draft
+- content: draft-bormann-intarea-alfi-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.bormann-intarea-alfi
+date:
+- type: published
+  at: '2012-07-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Carsten
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Bormann
+      completename:
+        language: en
+        content: Carsten Bormann
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>IPv6 defines a minimum MTU of 1280 bytes.  Many link layers are more
+       limited in the maximum size of packets they can communicate.  In
+       order to enable the transport of IP packets that are too large for
+       these link layers, typically their IP adaptation layers define a
+       segmentation or fragmentation scheme to transport an IP packet in a
+       sequence of multiple link layer packets.
+
+       Often, adaption layer fragmentation schemes reduce some performance
+       metric, such as the packet delivery probability.  Application or
+       transport protocols may be able to reduce the maximum size of packets
+       they send, e.g. by transport layer segmentation or choice of
+       application layer data object size, which may have less of a
+       performance impact.  It would therefore be desirable for them to know
+       about any adaptation layer fragmentation that is going on, so they
+       can choose packet sizes that minimize adaptation layer fragmentation.
+
+       At the IP layer, fragmentation can be detected using a number of
+       mechanisms used in Packetization Layer Path MTU Discovery [RFC4821].
+       However, adaptation layer fragmentation schemes are often designed to
+       be "transparent", i.e. there is no way at higher layers to find out
+       whether they had to be employed (except maybe by elaborate
+       measurement schemes targeting one of the impacted performance
+       metrics; this approach does not appear to be viable) [WEI].
+
+       The present specification defines a mechanism for IPv6 adaptation
+       layers to indicate the presence of adaptation layer fragmentation on
+       one or more hops on the path from an IP sender to an IP receiver, and
+       to provide an indication of preferred (smaller) packet sizes on these
+       hops.
+
+       The main objective of this version of the draft is to present a
+       complete design in order to be able to gauge the complexity of the
+       approach against the gains to be expected from implementing it.
+
+       Comments are appreciated and should go to the intarea@ietf.org
+       mailing list.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-bormann-intarea-alfi-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bormann-intarea-alfi-00
+    docidentifier:
+    - content: draft-bormann-intarea-alfi-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-bormann-intarea-alfi-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bormann-intarea-alfi-02
+    docidentifier:
+    - content: draft-bormann-intarea-alfi-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-bormann-intarea-alfi-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

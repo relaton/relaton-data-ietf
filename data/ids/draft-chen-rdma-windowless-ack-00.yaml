@@ -1,0 +1,110 @@
+---
+id: draftchenrdmawindowlessack00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Windowless Cumulative ACK Extension for RDMA Retransmission
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chen-rdma-windowless-ack-00
+docidentifier:
+- content: draft-chen-rdma-windowless-ack
+  type: Internet-Draft
+- content: draft-chen-rdma-windowless-ack-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chen-rdma-windowless-ack
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Danyang
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Danyang Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hongwei
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Hongwei Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Traditional RDMA Reliable Connection (RC) uses selective
+       retransmission, while TCP SACK depends on sliding window and RTO
+       timer tuning.  Both mechanisms waste network bandwidth when window or
+       RTO parameters mismatch real network conditions.  This document
+       defines a windowless cumulative selective acknowledgement extension
+       (T/C AETH) embedded within the RDMA ETH header, paired with dual-
+       trigger ACK reporting logic driven by cumulative receive time
+       threshold and cumulative received packet count threshold.
+
+       The receiver generates extended SACK reports without sliding window
+       constraints.  The sender accurately identifies lost PSN segments
+       through multi-segment confirmation fields carried in T/C AETH, then
+       only retransmits missing packets.  This design removes window
+       dependency, eliminates redundant retransmissions, and improves
+       bandwidth utilization and end-to-end throughput for high-speed RDMA
+       workloads in data centers and wide-area networks.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chen-rdma-windowless-ack-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

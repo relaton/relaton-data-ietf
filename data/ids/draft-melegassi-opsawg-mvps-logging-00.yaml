@@ -1,0 +1,92 @@
+---
+id: draftmelegassiopsawgmvpslogging00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The MVPS Operational Log Format: Append-Only, Hash-Chained, Externally-Anchored
+    Audit Logs'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-melegassi-opsawg-mvps-logging-00
+docidentifier:
+- content: draft-melegassi-opsawg-mvps-logging
+  type: Internet-Draft
+- content: draft-melegassi-opsawg-mvps-logging-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.melegassi-opsawg-mvps-logging
+date:
+- type: published
+  at: '2026-05-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leonardo
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: L. M.
+      surname:
+        language: en
+        content: Costa
+      completename:
+        language: en
+        content: Leonardo Melegassi Costa
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Catellix
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Multi-Vantage Path Snapshot (MVPS) deployments run in critical
+       environments where the operational record must be auditable: an
+       investigator, regulator, or independent witness must be able to
+       detect any after-the-fact alteration of what the system observed and
+       did.  This document specifies the MVPS operational log format: an
+       append-only stream of structured records, each cryptographically
+       chained to its predecessor, with completeness guaranteed by an
+       external anchor reusing the Coherent-Witness Trust (CWT) checkpoint
+       and the MVPS Proof Envelope.
+
+       The format guarantees that recorded events cannot be silently edited,
+       reordered, or interior-deleted, and -- once a head is anchored --
+       that the exact log prefix is pinned and tail truncation is exposed.
+       The document is explicit about the limits: a bare hash chain cannot
+       prove its own completeness (an anchor is REQUIRED); the chain is
+       binding,
+       not confidential.  Every property is validated by
+       scripts/validate_logging_format.py (8/8 PASS, exit 0) and recorded in
+       evidence/logging_format_receipt.json.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-melegassi-opsawg-mvps-logging-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

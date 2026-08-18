@@ -1,0 +1,155 @@
+---
+id: draftpqsectunnel00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: PQ-SecTunnel Protocol Specification
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pq-sectunnel-00
+docidentifier:
+- content: draft-pq-sectunnel
+  type: Internet-Draft
+- content: draft-pq-sectunnel-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.pq-sectunnel
+date:
+- type: published
+  at: '2026-08-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kai
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Fan
+      completename:
+        language: en
+        content: Kai Fan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Xidian University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ruidan
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Su
+      completename:
+        language: en
+        content: Ruidan Su
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Xidian University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Yi Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Xidian University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jiaqing
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Jiaqing Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Xidian University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the PQ-SecTunnel protocol, a UDP-based
+       quantum-resistant IP tunnel derived from the WireGuard architecture.
+       Session keys are established by a three-message Noise_IKpsk1kem
+       handshake that replaces Diffie-Hellman with dual Key Encapsulation
+       Mechanism (KEM) operations (static and ephemeral).  Authentication is
+       implicit: peers prove possession of long-term KEM private keys
+       through interlocking encapsulations rather than signing the
+       transcript.  The protocol is organized as a multi-suite framework.
+       Implementations MAY select ML-KEM-512 or ML-KEM-768 independently for
+       the static and ephemeral KEM roles.  This document RECOMMENDS the
+       profile static=ML-KEM-512, ephemeral=ML-KEM-768, AEAD=SM4-GCM,
+       Hash=SM3 (denoted mlkem512-mlkem768-sm4gcm-sm3).  Other ML-KEM
+       combinations with the same AEAD/Hash, and additional KEM families
+       such as Aigis-enc (integration ongoing), are optional profiles.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-pq-sectunnel-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

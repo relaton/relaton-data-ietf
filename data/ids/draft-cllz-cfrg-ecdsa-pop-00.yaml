@@ -1,0 +1,161 @@
+---
+id: draftcllzcfrgecdsapop00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Schnorr-Type Proofs of Possession for ECDSA Device Binding
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-cllz-cfrg-ecdsa-pop-00
+docidentifier:
+- content: draft-cllz-cfrg-ecdsa-pop
+  type: Internet-Draft
+- content: draft-cllz-cfrg-ecdsa-pop-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.cllz-cfrg-ecdsa-pop
+date:
+- type: published
+  at: '2026-07-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sofia
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Celi
+      completename:
+        language: en
+        content: Sofia Celi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Brave Software / University of Bristol
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Anja
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Lehmann
+      completename:
+        language: en
+        content: Anja Lehmann
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hasso Plattner Institute
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shai
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Levin
+      completename:
+        language: en
+        content: Shai Levin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Chalmers University of Technology / University of Gothenburg
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexandros
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Zacharakis
+      completename:
+        language: en
+        content: Alexandros Zacharakis
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hasso Plattner Institute
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a Schnorr-type, circuit-free zero-knowledge
+       proof of possession (PoP) of an ECDSA signature produced under a
+       committed public key over the NIST P-256 (secp256r1) curve.  The PoP
+       lets a credential holder prove, in zero knowledge, that it can
+       produce a fresh ECDSA signature under a device public key without
+       revealing that key, thereby providing device binding for privacy-
+       preserving credentials whose presentation must remain unlinkable.
+
+       The construction is built exclusively from Sigma protocols as it
+       decomposes the ECDSA verification equation into a scalar-
+       multiplication relation and a point-addition relation over P-256,
+       each proved with a dedicated Sigma protocol over a companion ("Tom")
+       curve whose scalar field equals the base field of P-256.  It is
+       designed to be expressed using the interfaces of the CFRG Sigma-
+       protocols specification and to serve as the device-binding sub-proof
+       of the modular BBS / JSON Web Proofs construction.  SNARK-based
+       realizations of the same relation are out of scope.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-cllz-cfrg-ecdsa-pop-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

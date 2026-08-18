@@ -1,0 +1,263 @@
+---
+id: draftietfmplsegressprotectionframework01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: MPLS Egress Protection Framework
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-egress-protection-framework-01
+docidentifier:
+- content: draft-ietf-mpls-egress-protection-framework
+  type: Internet-Draft
+- content: draft-ietf-mpls-egress-protection-framework-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-mpls-egress-protection-framework
+date:
+- type: published
+  at: '2018-06-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yimin
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Shen
+      completename:
+        language: en
+        content: Yimin Shen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeyananth
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: J. M.
+      surname:
+        language: en
+        content: Jeganathan
+      completename:
+        language: en
+        content: Jeyananth Minto Jeganathan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bruno
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Decraene
+      completename:
+        language: en
+        content: Bruno Decraene
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Orange
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hannes
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Gredler
+      completename:
+        language: en
+        content: Hannes Gredler
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: RtBrick Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Carsten
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Michel
+      completename:
+        language: en
+        content: Carsten Michel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Deutsche Telekom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Huaimo
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Huaimo Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co., Ltd.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yuanlong
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Jiang
+      completename:
+        language: en
+        content: Yuanlong Jiang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co., Ltd.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a fast reroute framework for protecting IP/
+       MPLS services and MPLS transport tunnels against egress node and
+       egress link failures.  In this framework, the penultimate-hop router
+       of an MPLS tunnel acts as the point of local repair (PLR) for egress
+       node failure, and the egress router of the MPLS tunnel acts as the
+       PLR for egress link failure.  Each of them pre-establishes a bypass
+       tunnel to a protector.  Upon an egress node or link failure, the
+       corresponding PLR performs local failure detection and local repair,
+       by rerouting packets over the corresponding bypass tunnel.  The
+       protector in turn performs context label switching or context IP
+       forwarding to send the packets to the ultimate service
+       destination(s).  This mechanism can be used to reduce traffic loss
+       before global repair reacts to the failure and control plane
+       protocols converge on the topology changes due to the failure.  The
+       framework is applicable to all types of IP/MPLS services and MPLS
+       tunnels.  Under the framework, service protocol extensions may be
+       further specified to support service label distribution to the
+       protector.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-egress-protection-framework-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-egress-protection-framework-00
+    docidentifier:
+    - content: draft-ietf-mpls-egress-protection-framework-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-egress-protection-framework-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-egress-protection-framework-02
+    docidentifier:
+    - content: draft-ietf-mpls-egress-protection-framework-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-mpls-egress-protection-framework-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,93 @@
+---
+id: draftlivingooddnsopdontswitchresolvers05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: In Case of DNSSEC Validation Failures, Do Not Change Resolvers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-livingood-dnsop-dont-switch-resolvers-05
+docidentifier:
+- content: draft-livingood-dnsop-dont-switch-resolvers
+  type: Internet-Draft
+- content: draft-livingood-dnsop-dont-switch-resolvers-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.livingood-dnsop-dont-switch-resolvers
+date:
+- type: published
+  at: '2019-08-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jason
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Livingood
+      completename:
+        language: en
+        content: Jason Livingood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Comcast
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DNS Security Extensions (DNSSEC) validation by recursive DNS
+       resolvers has been deployed at scale.  However, domain signing tools
+       and processes are not yet as mature and reliable as is the case for
+       non-DNSSEC-related domain administration tools and processes.  This
+       sometimes results in DNSSEC validation failures, for which operators
+       of validating resolvers are often blamed.  When these failures do
+       occur, end users should not change to a non-validating DNS resolver,
+       as that would downgrade their security.  They should instead wait
+       until the authoritative domain operator updates their DNS records to
+       resolve the error and that change propagates across the Internet's
+       DNS resolvers, the timing of which may be dependent upon the Time To
+       Live (TTL) settings in the old and/or erroneous DNS resource records.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-livingood-dnsop-dont-switch-resolvers-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-livingood-dnsop-dont-switch-resolvers-04
+    docidentifier:
+    - content: draft-livingood-dnsop-dont-switch-resolvers-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-livingood-dnsop-dont-switch-resolvers-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

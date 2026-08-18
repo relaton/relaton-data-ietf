@@ -1,0 +1,81 @@
+---
+id: draftcrockerdkimreplay00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'DKIM Replay: Problem Statement'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-crocker-dkim-replay-00
+docidentifier:
+- content: draft-crocker-dkim-replay
+  type: Internet-Draft
+- content: draft-crocker-dkim-replay-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.crocker-dkim-replay
+date:
+- type: published
+  at: '2023-03-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dave
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Crocker
+      completename:
+        language: en
+        content: Dave Crocker
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Brandenburg InternetWorking
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DomainKeys Identified Mail (DKIM, RFC6376) permits claiming some
+       responsibility for a message by cryptographically associating a
+       domain name with the message.  For data covered by the cryptographic
+       signature, this also enables detecting changes made during transit.
+       DKIM survives basic email relaying.  In a Replay Attack, a recipient
+       of a DKIM-signed message re-posts the message to other recipients,
+       while retaining the original, validating signature, and thereby
+       leveraging the reputation of the original signer.  This document
+       discusses the resulting damage to email delivery, interoperability,
+       and associated mail flows.  A significant challenge to mitigating
+       this problem is that it is difficult for receivers to differentiate
+       between legitimate forwarding flows and a DKIM Replay Attack.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-crocker-dkim-replay-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

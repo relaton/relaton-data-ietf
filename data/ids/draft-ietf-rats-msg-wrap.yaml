@@ -1,0 +1,308 @@
+---
+id: draftietfratsmsgwrap
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-rats-msg-wrap
+title:
+- language: en
+  script: Latn
+  content: RATS Conceptual Messages Wrapper (CMW)
+docidentifier:
+- content: draft-ietf-rats-msg-wrap
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Conceptual Messages introduced by the RATS architecture (RFC
+       9334) are protocol-agnostic data units that are conveyed between RATS
+       roles during remote attestation procedures.  Conceptual Messages
+       describe the meaning and function of such data units within RATS data
+       flows without specifying a wire format, encoding, transport
+       mechanism, or processing details.  The initial set of Conceptual
+       Messages is defined in Section 8 of RFC 9334 and includes Evidence,
+       Attestation Results, Endorsements, Reference Values, and Appraisal
+       Policies.
+
+       This document introduces the Conceptual Message Wrapper (CMW) that
+       provides a common structure to encapsulate these messages.  It
+       defines a dedicated CBOR tag, corresponding JSON Web Token (JWT) and
+       CBOR Web Token (CWT) claims, and an X.509 extension.
+
+       This allows CMWs to be used in CBOR-based protocols, web APIs using
+       JWTs and CWTs, and PKIX artifacts like X.509 certificates.
+       Additionally, the draft defines a media type and a CoAP content
+       format to transport CMWs over protocols like HTTP, MIME, and CoAP.
+
+       The goal is to improve the interoperability and flexibility of remote
+       attestation protocols.  Introducing a shared message format such as
+       CMW enables consistent support for different attestation message
+       types, evolving message serialization formats without breaking
+       compatibility, and avoiding the need to redefine how messages are
+       handled within each protocol.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-00
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-01
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-02
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-03
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-04
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-05
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-06
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-07
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-08
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-09
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-10
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-11
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-12
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-13
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-13
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-14
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-14
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-15
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-15
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-16
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-16
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-16
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-17
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-17
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-17
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-18
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-18
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-18
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-19
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-19
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-20
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-20
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-21
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-21
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-21
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-22
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-22
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-22
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-rats-msg-wrap-23
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-msg-wrap-23
+    docidentifier:
+    - content: draft-ietf-rats-msg-wrap-23
+      type: Internet-Draft
+      primary: true

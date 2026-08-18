@@ -1,0 +1,130 @@
+---
+id: draftmurillowhip02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: WebRTC-HTTP ingestion protocol (WHIP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-murillo-whip-02
+docidentifier:
+- content: draft-murillo-whip
+  type: Internet-Draft
+- content: draft-murillo-whip-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.murillo-whip
+date:
+- type: published
+  at: '2021-06-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sergio
+      - language: en
+        script: Latn
+        initial: S
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: S. G.
+      surname:
+        language: en
+        content: Murillo
+      completename:
+        language: en
+        content: Sergio Garcia Murillo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CoSMo Software
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Gouaillard
+      completename:
+        language: en
+        content: Dr. Alex Gouaillard
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CoSMo Software
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>While WebRTC has been very successful in a wide range of scenarios,
+       its adoption in the broadcasting/streaming industry is lagging
+       behind.  Currently there is no standard protocol (like SIP or RTSP)
+       designed for ingesting media in a streaming service, and content
+       providers still rely heavily on protocols like RTMP for it.
+
+       These protocols are much older than webrtc and lack by default some
+       important security and resilience features provided by webrtc with
+       minimal delay.
+
+       The media codecs used in older protocols do not always match those
+       being used in WebRTC, mandating transcoding on the ingest node,
+       introducing delay and degrading media quality.  This transcoding step
+       is always present in traditional streaming to support e.g.  ABR, and
+       comes at no cost.  However webrtc implements client-side ABR, also
+       called Network-Aware Encoding by e.g.  Huavision, by means of
+       simulcast and SVC codecs, which otherwise alleviate the need for
+       server-side transcoding.  Content protection and Privacy Enhancement
+       can be achieved with End-to-End Encryption, which preclude any
+       server-side media processing.
+
+       This document proposes a simple HTTP based protocol that will allow
+       WebRTC endpoints to ingest content into streaming services and/or
+       CDNs to fill this gap and facilitate deployment.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-murillo-whip-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-murillo-whip-01
+    docidentifier:
+    - content: draft-murillo-whip-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-murillo-whip-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

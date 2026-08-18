@@ -1,0 +1,40 @@
+---
+id: draftolafdnsextdnssecwildcardoptimization
+schema_version: v1.5.6
+formattedref:
+  content: draft-olaf-dnsext-dnssec-wildcard-optimization
+title:
+- language: en
+  script: Latn
+  content: DNSSEC Wildcard  Optimization
+docidentifier:
+- content: draft-olaf-dnsext-dnssec-wildcard-optimization
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Secure denial of the existence of wildcards may lead to a large
+    number of NXT Resource Records and associated SIG Resource Records in
+    DNS responses, even in the common case when wildcards are not present
+    in the zone.  This optimization uses one bit from the NXT type array
+    to signal that there is no closer wildcard in the zone for a given
+    query name.  This reduces the packet size and the need for executing
+    slow, and complicated, code paths in the case when queries are made
+    to zones which have the bit set at zone signing time.  In cases where
+    there are no wildcard RRs in the zone (e.g.  the root zone) only one
+    NXT RR and corresponding SIG is needed for denial of existence of
+    both a full match and any possible wildcard matches.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-olaf-dnsext-dnssec-wildcard-optimization-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-olaf-dnsext-dnssec-wildcard-optimization-02
+    docidentifier:
+    - content: draft-olaf-dnsext-dnssec-wildcard-optimization-02
+      type: Internet-Draft
+      primary: true

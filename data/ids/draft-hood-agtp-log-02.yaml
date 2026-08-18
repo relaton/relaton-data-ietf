@@ -1,0 +1,106 @@
+---
+id: drafthoodagtplog02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AGTP Transparency Log Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-log-02
+docidentifier:
+- content: draft-hood-agtp-log
+  type: Internet-Draft
+- content: draft-hood-agtp-log-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hood-agtp-log
+date:
+- type: published
+  at: '2026-05-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hood
+      completename:
+        language: en
+        content: Chris Hood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nomotic, Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the AGTP Transparency Log (AGTP-LOG): the
+       append-only audit log protocol that underpins the log-anchored Trust
+       Tier 1 verification path defined in [AGTP] and provides the post-hoc
+       audit infrastructure for AGTP-based agent operations.  AGTP-LOG
+       aligns with [RFC9162] (Certificate Transparency 2.0) as the
+       verifiable data structure and issues COSE_Sign1 receipts per
+       [RFC9943] (SCITT) for cross-ecosystem interoperability.  This
+       document also establishes the AGTP Agent Identity Taxonomy (Agent
+       Genesis, Canonical Agent-ID, Agent Certificate) that [AGTP] v07
+       normatively adopts.  The log protocol defined here covers entry
+       submission, receipt retrieval, inclusion-proof retrieval,
+       consistency-proof retrieval, and discovery via the log_uri field of
+       the Agent Genesis.  Per-platform logs are the default; the federation
+       model follows the SCITT cross-witnessing pattern.  Witness and
+       monitor role definitions, full federation procedures, and the formal
+       entry-acceptance threat model are deferred to a future revision.
+
+       The audit properties AGTP-LOG provides are structural rather than
+       retrofitted.  Statements are signed by the governance platform that
+       operates the log, not by the agent the statements concern; an agent
+       cannot forge its own audit trail because it does not control the log
+       operator's signing key.  This architectural separation distinguishes
+       AGTP-LOG audit infrastructure from approaches that layer audit data
+       models onto general-purpose substrates where the audited party
+       participates in writing the audit trail.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hood-agtp-log-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-log-01
+    docidentifier:
+    - content: draft-hood-agtp-log-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hood-agtp-log-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

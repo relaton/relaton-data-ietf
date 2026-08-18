@@ -1,0 +1,51 @@
+---
+id: draftmcguinnessoauthmission
+schema_version: v1.5.6
+formattedref:
+  content: draft-mcguinness-oauth-mission
+title:
+- language: en
+  script: Latn
+  content: Mission-Bound Authorization for OAuth 2.0
+docidentifier:
+- content: draft-mcguinness-oauth-mission
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An AI agent is typically given a mission: a task to pursue on a
+       user's behalf.  OAuth 2.0 issues access tokens for individual
+       resource requests, but it has no durable, approved artifact that ties
+       those tokens to the one task a user actually authorized.  As a
+       result, an agent's authority is a collection of independently
+       obtained tokens with no shared, auditable boundary, and a user's
+       approval is disconnected from what the agent later does.
+
+       This document defines a Mission: a structured, human-approved,
+       integrity-bound authorization artifact for OAuth 2.0.  A client
+       submits a Mission Intent through Pushed Authorization Requests; the
+       Authorization Server derives Rich Authorization Requests
+       authorization details from it, binds the approved task and its
+       derived authority to the Approver's consent through two integrity
+       anchors, and records a durable Mission.  Every access token derived
+       under the Mission carries that authority and a "mission" claim, and
+       issuance is gated on the Mission's lifecycle state.  Optional
+       capabilities represent delegation among agents with the OAuth Actor
+       Profile and, as specified by a companion, let a single Mission be
+       honored across trust domains.  This is the issuance and governance
+       "mission layer" left unspecified by agent-identity work for OAuth;
+       runtime enforcement of each action is a separate, optional layer.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-mission-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-mission-00
+    docidentifier:
+    - content: draft-mcguinness-oauth-mission-00
+      type: Internet-Draft
+      primary: true

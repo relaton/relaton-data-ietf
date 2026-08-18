@@ -1,0 +1,42 @@
+---
+id: draftwigetdynamicvpls
+schema_version: v1.5.6
+formattedref:
+  content: draft-wiget-dynamic-vpls
+title:
+- language: en
+  script: Latn
+  content: Dynamic VPLS solution over multicast enabled IP backbone
+docidentifier:
+- content: draft-wiget-dynamic-vpls
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes an experimental serverless solution to build
+    Virtual Private LAN Segments (VPLS) for TCP/IP over a multicast
+    enabled IP backbone.  IP traffic is encapsulated in IPsec [RFC2401]
+    tunnel mode. IP broadcast and multicast traffic is sent, after
+    encapsulation in IPSec tunnel mode, to the VPN assigned IP multicast
+    address. IP unicast traffic, after encapsulation,  is sent directly
+    to the dynamically learned IP tunnel endpoint address.  Multicast
+    Enabled ARP (ME-ARP) as defined in this document is used to
+    dynamically build the mapping between IP addresses and remote tunnel
+    endpoints. The tunnel endpoint information is hidden in the hardware
+    address given to IP devices in the ARP reply. Therefore IP devices
+    participating in a VPLS keep track of the remote locations of other
+    VPLS members through their own ARP table without 'knowledge'.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wiget-dynamic-vpls-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wiget-dynamic-vpls-00
+    docidentifier:
+    - content: draft-wiget-dynamic-vpls-00
+      type: Internet-Draft
+      primary: true

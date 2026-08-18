@@ -1,0 +1,114 @@
+---
+id: draftpeetterrdnsopparentsideauthtypes01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Parent-side authoritative DNS records for enhanced delegation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-peetterr-dnsop-parent-side-auth-types-01
+docidentifier:
+- content: draft-peetterr-dnsop-parent-side-auth-types
+  type: Internet-Draft
+- content: draft-peetterr-dnsop-parent-side-auth-types-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.peetterr-dnsop-parent-side-auth-types
+date:
+- type: published
+  at: '2024-12-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: van Dijk
+      completename:
+        language: en
+        content: Peter van Dijk
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: PowerDNS
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Petr
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Špaček
+      completename:
+        language: en
+        content: Petr Špaček
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ISC
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>DNS RR types with numbers in the range 0xFA00-0xFDFF are now included
+       in special treatment like DS RR type specified in [RFC4035].
+       Authoritative servers, DNSSEC signers, and recursive resolvers need
+       to extend the conditions for DS special handling to also include this
+       range.  This means: being authoritative on the parent side of a
+       delegation; being signed by the parent; being provided along with
+       delegations by the parent.  DNSSEC validators also need to implement
+       downgrade protection described in Section 5.3.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-peetterr-dnsop-parent-side-auth-types-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-peetterr-dnsop-parent-side-auth-types-00
+    docidentifier:
+    - content: draft-peetterr-dnsop-parent-side-auth-types-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-peetterr-dnsop-parent-side-auth-types-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

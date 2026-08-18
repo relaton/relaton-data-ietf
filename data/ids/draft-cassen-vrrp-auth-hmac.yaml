@@ -1,0 +1,54 @@
+---
+id: draftcassenvrrpauthhmac
+schema_version: v1.5.6
+formattedref:
+  content: draft-cassen-vrrp-auth-hmac
+title:
+- language: en
+  script: Latn
+  content: An HMAC Authentication Extension for the Virtual Router Redundancy Protocol
+    (VRRP)
+docidentifier:
+- content: draft-cassen-vrrp-auth-hmac
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>VRRP relies on a hop limit of 255 to prove that an advertisement came
+       from the local link.  That guard cannot apply when advertisements
+       travel as multi-hop unicast across a routed or overlay network, as is
+       common in cloud deployments, leaving the protocol open to off-segment
+       injection and replay.  The legacy VRRPv2 authentication types do not
+       close this gap and were removed from later VRRP specifications.  This
+       document defines an authentication extension that appends an HMAC-
+       SHA256 trailer and a time-based sequence number to VRRPv3
+       advertisements, authenticating the sender as a holder of the group
+       key, protecting message integrity and bounding replay, for both IP
+       address families.  The extension is the primary defense where the
+       hop-limit check cannot apply, and defense in depth for multicast and
+       single-hop unicast, where that check remains in force.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-cassen-vrrp-auth-hmac-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cassen-vrrp-auth-hmac-00
+    docidentifier:
+    - content: draft-cassen-vrrp-auth-hmac-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-cassen-vrrp-auth-hmac-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cassen-vrrp-auth-hmac-01
+    docidentifier:
+    - content: draft-cassen-vrrp-auth-hmac-01
+      type: Internet-Draft
+      primary: true

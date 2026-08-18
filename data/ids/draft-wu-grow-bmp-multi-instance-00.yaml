@@ -1,0 +1,137 @@
+---
+id: draftwugrowbmpmultiinstance00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BMP Extension for Monitoring Multiple BGP Instances
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wu-grow-bmp-multi-instance-00
+docidentifier:
+- content: draft-wu-grow-bmp-multi-instance
+  type: Internet-Draft
+- content: draft-wu-grow-bmp-multi-instance-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wu-grow-bmp-multi-instance
+date:
+- type: published
+  at: '2026-04-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tianhao
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Wu
+      completename:
+        language: en
+        content: Tianhao Wu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shunwan
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Zhuang
+      completename:
+        language: en
+        content: Shunwan Zhuang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nan
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Geng
+      completename:
+        language: en
+        content: Nan Geng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The BGP Monitoring Protocol (BMP), as defined in RFC 7854, provides a
+       means for monitoring BGP sessions.  In deployments where a single
+       device runs multiple BGP instances simultaneously - typically a base
+       instance together with one or more additional instances, each
+       identified by an Instance Name and potentially running in a separate
+       process with an independent Router-ID and Autonomous System (AS)
+       number - the existing BMP message format does not allow a Monitoring
+       Station to distinguish peers or routes belonging to different BGP
+       instances on the same monitored router.
+
+       This document defines a new BMP Type-Length-Value (TLV) element, the
+       BGP Instance Name TLV, that carries the Instance Name of the BGP
+       instance associated with a given peer or route.  Following the TLV
+       extension framework defined in [I-D.ietf-grow-bmp-tlv], the new TLV
+       MAY appear in Peer Up Notification, Peer Down Notification, Route
+       Monitoring, Statistics Report, and Route Mirroring messages.  The TLV
+       enables a Monitoring Station to unambiguously attribute monitored BGP
+       information to the correct BGP instance on the monitored router.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wu-grow-bmp-multi-instance-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

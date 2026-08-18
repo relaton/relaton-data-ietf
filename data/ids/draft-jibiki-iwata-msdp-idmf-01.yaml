@@ -1,0 +1,119 @@
+---
+id: draftjibikiiwatamsdpidmf01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: MSDP Specific Forwarding Extension for Inter-Domain Multicast Forwarding
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-jibiki-iwata-msdp-idmf-01
+docidentifier:
+- content: draft-jibiki-iwata-msdp-idmf
+  type: Internet-Draft
+- content: draft-jibiki-iwata-msdp-idmf-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.jibiki-iwata-msdp-idmf
+date:
+- type: published
+  at: '2000-11-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Masahiro
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Jibiki
+      completename:
+        language: en
+        content: Masahiro Jibiki
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NEC Corporation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Atsushi
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Iwata
+      completename:
+        language: en
+        content: Atsushi Iwata
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NEC Corporation
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This draft proposes a general inter-domain multicast forwarding
+    (IDMF) mechanism for the PIM-SM multicast routing protocol and its
+    application to the MSDP specific forwarding extension (MSDP-FE).
+    Although there have been various inter-domain multicast routing and
+    forwarding protocols, they are still limited in their capacity to
+    handle policy routing, QoS routing, accounting and security, which
+    network administrators are willing to use in their network. In order
+    to overcome this limitation, we propose a novel approach to create an
+    inter-domain multicast forwarding tree (or routing table) among
+    multiple PIM-SM domains with logical multicast paths over which
+    multicast packets are forwarded or flooded. The logical multicast
+    paths are created by either the IP-in-IP tunneling method, the IP
+    masquerade-like method, or the MPLS label switched path (LSP) method,
+    which can easily reuse policy routing and QoS routing for unicast
+    routing. These logical multicast paths are established among IDMF-
+    capable nodes, which are located within each PIM-SM domain, either
+    manually or by a dynamic IDMF tree construction protocol. This
+    general framework for IDMF can be used as an MSDP based forwarding
+    mechanism. Furthermore, the IDMF-capable nodes (i.e., MSDP-FE-capable
+    nodes) can also function as a proxy sender of multicast packets. This
+    can prevent a multicast receiver from changing an RP-tree into a
+    global SP-tree, and also can help to reduce, on the surface, the
+    number of multicast sources for a particular multicast group. This
+    property can be effectively used for accounting, security, and
+    scalability enhancement required for inter-domain communication.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-jibiki-iwata-msdp-idmf-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

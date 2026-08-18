@@ -1,0 +1,87 @@
+---
+id: draftsunnetcintcfformat00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The NTCF Network and Telemetry Compression Format
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sunnetci-ntcf-format-00
+docidentifier:
+- content: draft-sunnetci-ntcf-format
+  type: Internet-Draft
+- content: draft-sunnetci-ntcf-format-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sunnetci-ntcf-format
+date:
+- type: published
+  at: '2026-06-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alptekin
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Sünnetci
+      completename:
+        language: en
+        content: Alptekin Sünnetci
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: NTCF Project
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies NTCF (Network and Telemetry Compression
+       Format), a self-describing, columnar, append-friendly binary
+       container for cybersecurity and network telemetry such as flow
+       records, honeypot events, and web access logs.  Unlike general-
+       purpose byte compressors, NTCF models the semantics of telemetry --
+       IP addresses, autonomous system numbers, ports, country codes, event
+       types, and timestamps -- as typed columns and applies semantic
+       encodings (dictionary, delta, delta-of-delta, run-length, frame-of-
+       reference bit packing, and variable-length integers) before a
+       conventional entropy compression stage.
+
+       NTCF embeds per-column zone-map statistics and Bloom filters so that
+       point lookups and analytical predicates can be evaluated by reading
+       only the columns and segments that can possibly match, without
+       decompressing the entire file.  This document defines the on-disk
+       octet layout (format version 1), the encoding catalogue, the reading
+       and crash-recovery algorithms, a resource-limit model, security
+       considerations, and an IANA media-type registration.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sunnetci-ntcf-format-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

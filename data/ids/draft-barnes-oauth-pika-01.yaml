@@ -1,0 +1,117 @@
+---
+id: draftbarnesoauthpika01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Proof of Issuer Key Authority (PIKA)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-barnes-oauth-pika-01
+docidentifier:
+- content: draft-barnes-oauth-pika
+  type: Internet-Draft
+- content: draft-barnes-oauth-pika-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.barnes-oauth-pika
+date:
+- type: published
+  at: '2024-07-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Richard
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Barnes
+      completename:
+        language: en
+        content: Richard Barnes
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sharon
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Goldberg
+      completename:
+        language: en
+        content: Sharon Goldberg
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: BastionZero, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A relying party verifying a JSON Web Token (JWT) needs to verify that
+       the public key used to verify the signature legitimately represents
+       the issuer represented in the "iss" claim of the JWT.  Today, relying
+       parties commonly use the "iss" claim to fetch a set of authorized
+       signing keys over HTTPS, relying on the security of HTTPS to
+       establish the authority of the downloaded keys for that issuer.  The
+       ephemerality of this proof of authority makes it unsuitable for use
+       cases where a JWT might need to be verified for some time.  In this
+       document, we define a format for Proofs of Issuer Key Authority,
+       which establish the authority of a key using a signed object instead
+       of an HTTPS connection.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-barnes-oauth-pika-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-barnes-oauth-pika-00
+    docidentifier:
+    - content: draft-barnes-oauth-pika-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-barnes-oauth-pika-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

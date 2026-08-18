@@ -1,0 +1,84 @@
+---
+id: draftlhakrbwgticketextensions02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Kerberos ticket extensions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lha-krb-wg-ticket-extensions-02
+docidentifier:
+- content: draft-lha-krb-wg-ticket-extensions
+  type: Internet-Draft
+- content: draft-lha-krb-wg-ticket-extensions-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.lha-krb-wg-ticket-extensions
+date:
+- type: published
+  at: '2008-09-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Love
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Astrand
+      completename:
+        language: en
+        content: Love Astrand
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Apple, Inc
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Kerberos protocol does not allow ticket extensions.  This make it
+    harder to deploy features like referrals and PKCROSS.
+
+    Since the Kerberos protocol did not specified extensibility for the
+    Ticket structure and the current implementations are aware of the
+    contents of tickets, the extension protocol cannot simply extend the
+    Ticket ASN.1 structure.  Instead, the extension data needs to be
+    hidden inside the ticket.
+
+    This protocol defines two methods to add extend the tickets.  The
+    first method requires updated clients and is more in line with the
+    future development of Kerberos.  The second way does not require
+    update client.  To take advantage of this protocol the server (KDC or
+    application server) need to update a well.  The two methods are
+    equivalent and there is a 1-1 mapping between them.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-lha-krb-wg-ticket-extensions-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

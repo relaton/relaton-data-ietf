@@ -1,0 +1,151 @@
+---
+id: drafthuangsavnetpisavforcc02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Provider Interface SAV for Customer Cone Sources
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-huang-savnet-pi-sav-for-cc-02
+docidentifier:
+- content: draft-huang-savnet-pi-sav-for-cc
+  type: Internet-Draft
+- content: draft-huang-savnet-pi-sav-for-cc-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.huang-savnet-pi-sav-for-cc
+date:
+- type: published
+  at: '2026-06-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Huang
+      completename:
+        language: en
+        content: Mingqing(Michael) Huang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhongguancun Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nan
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Geng
+      completename:
+        language: en
+        content: Nan Geng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dan
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Dan Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Current source address validation (SAV) on an AS's provider
+       interfaces mainly relies on loose uRPF, which cannot defend against
+       IP spoofing using routable prefixes and is ineffective when a default
+       route is present.  This document describes a *framework* for provider
+       interface source address validation against spoofing of customer cone
+       source prefixes (PI-SAV for CC).  Two architectural approaches are
+       presented:
+
+       *  *PI-SAV for Standalone CC*: a static solution that builds a
+          blocklist based on topology information from BGP RIBs, RPKI ASPA,
+          and local configuration (SLURM) etc.  It requires no inter-AS
+          communication.
+
+       *  *PI-SAV for Standalone+ CC*: an enhanced solution that uses
+          lightweight query-response coordination between the top AS and
+          member ASes to identify sub-cones that do not actually cause
+          traffic detours, thereby enlarging the effective blocklist.
+
+       This document is *informational* and provides only the framework,
+       conceptual procedures, and requirements for future protocol
+       specifications.  Detailed wire protocols (e.g., for partial transit
+       information provisioning or for query-response messaging) are out of
+       scope and will be defined in separate documents.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-huang-savnet-pi-sav-for-cc-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-huang-savnet-pi-sav-for-cc-01
+    docidentifier:
+    - content: draft-huang-savnet-pi-sav-for-cc-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-huang-savnet-pi-sav-for-cc-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

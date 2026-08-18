@@ -1,0 +1,113 @@
+---
+id: draftihsanullahdnsid01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DNS-Anchored Durable Identity for AI Agents (DNSid)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ihsanullah-dnsid-01
+docidentifier:
+- content: draft-ihsanullah-dnsid
+  type: Internet-Draft
+- content: draft-ihsanullah-dnsid-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ihsanullah-dnsid
+date:
+- type: published
+  at: '2026-06-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Naveed
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Ihsanullah
+      completename:
+        language: en
+        content: Naveed Ihsanullah
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Identity Digital
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Autonomous software agents are being deployed across enterprise,
+       cloud, and cross-organizational boundaries.  These agents negotiate,
+       transact, delegate, and produce work products that persist beyond
+       their own ephemeral runtime.  Current standards and initiatives for
+       agent identity collectively address runtime authentication,
+       authorization, lifecycle management, and tool interaction, but a gap
+       remains: a durable, governance-backed identifier that lets a relying
+       party determine and verify the accountable entity behind an agent it
+       encounters, including agents that have since been retired or whose
+       keys have rotated, and attribute past and present work products to
+       that entity.  Lifecycle-history verification is governed by the
+       applicable log method and deployment scope.
+
+       DNSid addresses the accountable layer of identity: the durable
+       ownership anchor that existing agent identity standards do not
+       provide.  This document specifies DNSid, a minimal identity primitive
+       that assigns each agent a Fully Qualified Domain Name (FQDN), binds
+       it to an accountable entity identified by a DNS domain under that
+       entity's control, and publishes a structured set of pointers in DNS
+       TXT records to the agent's cryptographic keys, lifecycle log, and
+       operational status.  DNSid uses accountable-entity-controlled
+       signatures for record integrity and an abstract append-only lifecycle
+       log for history.  It is designed to sit beneath existing identity,
+       authentication, authorization, and agent interaction standards
+       without competing with them.
+
+       DNSid introduces no new DNS resource record types, opcodes, or
+       response codes, and requires no changes to DNS resolvers,
+       authoritative servers, or the DNS protocol.  It applies to any agent
+       that can be assigned an FQDN whose accountable entity can publish
+       verification material; public discoverability of the agent is not
+       required.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ihsanullah-dnsid-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ihsanullah-dnsid-00
+    docidentifier:
+    - content: draft-ihsanullah-dnsid-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ihsanullah-dnsid-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

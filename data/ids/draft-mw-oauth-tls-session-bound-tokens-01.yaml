@@ -1,0 +1,179 @@
+---
+id: draftmwoauthtlssessionboundtokens01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: TLS-Session-Bound Access Tokens for OAuth 2.0
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-tls-session-bound-tokens-01
+docidentifier:
+- content: draft-mw-oauth-tls-session-bound-tokens
+  type: Internet-Draft
+- content: draft-mw-oauth-tls-session-bound-tokens-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mw-oauth-tls-session-bound-tokens
+date:
+- type: published
+  at: '2026-03-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ramki
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Krishnan
+      completename:
+        language: en
+        content: Ramki Krishnan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: JPMorgan Chase & Co
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Prasad
+      completename:
+        language: en
+        content: A Prasad
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Oracle
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Lopez
+      completename:
+        language: en
+        content: Diego Lopez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telefonica
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Srinivasa
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Addepalli
+      completename:
+        language: en
+        content: Srinivasa Addepalli
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aryaka
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a mechanism for binding OAuth 2.0 access tokens
+       to a specific mutual TLS (mTLS) session.  The binding is achieved
+       through a proof token that incorporates the TLS Exporter value
+       [RFC5705] derived from the current connection and an access token
+       hash, signed by the client's private key corresponding to its mTLS
+       certificate.  This mechanism prevents stolen bearer tokens from being
+       replayed on a different TLS connection.  The proof is constructed
+       once per (token, connection) pair and reused across all requests on
+       that connection, delivering session binding with no per-request
+       signing overhead and no additional key management beyond what mTLS
+       already provides.  While applicable to any OAuth 2.0 access token
+       presented over mTLS, this specification is primarily motivated by the
+       Token Exchange protocol [RFC8693], where multi-hop delegation chains
+       in autonomous, agent-driven architectures create elevated replay
+       risk.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mw-oauth-tls-session-bound-tokens-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-tls-session-bound-tokens-00
+    docidentifier:
+    - content: draft-mw-oauth-tls-session-bound-tokens-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-mw-oauth-tls-session-bound-tokens-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-tls-session-bound-tokens-02
+    docidentifier:
+    - content: draft-mw-oauth-tls-session-bound-tokens-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mw-oauth-tls-session-bound-tokens-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

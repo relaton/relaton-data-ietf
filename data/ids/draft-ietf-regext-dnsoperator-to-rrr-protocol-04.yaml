@@ -1,0 +1,186 @@
+---
+id: draftietfregextdnsoperatortorrrprotocol04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Third Party DNS operator to Registrars/Registries Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-regext-dnsoperator-to-rrr-protocol-04
+docidentifier:
+- content: draft-ietf-regext-dnsoperator-to-rrr-protocol
+  type: Internet-Draft
+- content: draft-ietf-regext-dnsoperator-to-rrr-protocol-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-regext-dnsoperator-to-rrr-protocol
+date:
+- type: published
+  at: '2017-09-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jacques
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Latour
+      completename:
+        language: en
+        content: Jacques Latour
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CIRA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Guðmundsson
+      completename:
+        language: en
+        content: Ólafur Guðmundsson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cloudflare, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Paul
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Wouters
+      completename:
+        language: en
+        content: Paul Wouters
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Red Hat
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Matthew
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Pounsett
+      completename:
+        language: en
+        content: Matthew Pounsett
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Rightside Group, Ltd.
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>There are several problems that arise in the standard
+       Registrant/Registrar/Registry model when the operator of a zone is
+       neither the Registrant nor the Registrar for the delegation.
+       Historically the issues have been minor, and limited to difficulty
+       guiding the Registrant through the initial changes to the NS records
+       for the delegation.  As this is usually a one time activity when the
+       operator first takes charge of the zone it has not been treated as a
+       serious issue.
+
+       When the domain uses DNSSEC it necessary to make regular (sometimes
+       annual) changes to the delegation, updating DS record(s) in order to
+       track KSK rollover.  Under the current model this is prone to delays
+       and errors, as the Registrant must participate in updates to DS
+       records.
+
+       This document describes a simple protocol that allows a third party
+       DNS operator to: establish the initial chain of trust (bootstrap
+       DNSSEC) for a delegation; update DS records for a delegation; and,
+       remove DS records from a secure delegation.  The DNS operator may do
+       these things in a trusted manner, without involving the Registrant
+       for each operation.  This same protocol can be used by Registrants to
+       maintain their own domains if they wish.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-regext-dnsoperator-to-rrr-protocol-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-regext-dnsoperator-to-rrr-protocol-03
+    docidentifier:
+    - content: draft-ietf-regext-dnsoperator-to-rrr-protocol-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-regext-dnsoperator-to-rrr-protocol-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-regext-dnsoperator-to-rrr-protocol-05
+    docidentifier:
+    - content: draft-ietf-regext-dnsoperator-to-rrr-protocol-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-regext-dnsoperator-to-rrr-protocol-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

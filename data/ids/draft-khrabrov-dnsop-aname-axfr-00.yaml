@@ -1,0 +1,80 @@
+---
+id: draftkhrabrovdnsopanameaxfr00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Address-specific DNS Aliases (ANAME) and Zone Transfer
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-khrabrov-dnsop-aname-axfr-00
+docidentifier:
+- content: draft-khrabrov-dnsop-aname-axfr
+  type: Internet-Draft
+- content: draft-khrabrov-dnsop-aname-axfr-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.khrabrov-dnsop-aname-axfr
+date:
+- type: published
+  at: '2026-07-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexy
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Khrabrov
+      completename:
+        language: en
+        content: Alexy Khrabrov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: QueryGraph
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the ANAME DNS resource record.  ANAME provides
+       name-to-name indirection for address queries while allowing other
+       resource record types to exist at the same owner name.  It is
+       therefore usable at a zone apex.
+
+       This document also defines authoritative processing, TTL and failure
+       behavior, DNSSEC considerations, and interoperable transport of ANAME
+       records in full and incremental zone transfers.  In particular, each
+       ANAME-capable authoritative server resolves the transferred target
+       independently.  This avoids treating transient, synthesized address
+       records as the portable source of zone data.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-khrabrov-dnsop-aname-axfr-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

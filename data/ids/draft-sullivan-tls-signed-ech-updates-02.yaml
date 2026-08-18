@@ -1,0 +1,142 @@
+---
+id: draftsullivantlssignedechupdates02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Authenticated ECH Config Distribution and Rotation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sullivan-tls-signed-ech-updates-02
+docidentifier:
+- content: draft-sullivan-tls-signed-ech-updates
+  type: Internet-Draft
+- content: draft-sullivan-tls-signed-ech-updates-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sullivan-tls-signed-ech-updates
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nick
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Sullivan
+      completename:
+        language: en
+        content: Nick Sullivan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cryptography Consulting LLC
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dennis
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Jackson
+      completename:
+        language: en
+        content: Dennis Jackson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Mozilla
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alessandro
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ghedini
+      completename:
+        language: en
+        content: Alessandro Ghedini
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cloudflare
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Encrypted ClientHello (ECH) requires clients to have the server's ECH
+       configuration before connecting.  Currently, when ECH fails, servers
+       can send updated configurations but clients cannot authenticate them
+       unless the server has a valid certificate for the public name,
+       limiting deployment flexibility.
+
+       This document specifies a new mechanism for authenticating ECH
+       configurations.  Servers include additional information in their
+       initial ECH configurations, which enables clients to authenticate
+       updated configurations without relying on a valid certificate for the
+       public name.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sullivan-tls-signed-ech-updates-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-tls-signed-ech-updates-01
+    docidentifier:
+    - content: draft-sullivan-tls-signed-ech-updates-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sullivan-tls-signed-ech-updates-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,92 @@
+---
+id: draftcroviaseal01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The Crovia Seal: A Cryptographic Receipt Format for AI-Generated Output
+    Provenance'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-crovia-seal-01
+docidentifier:
+- content: draft-crovia-seal
+  type: Internet-Draft
+- content: draft-crovia-seal-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.crovia-seal
+date:
+- type: published
+  at: '2026-05-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Tarik
+      completename:
+        language: en
+        content: Tarik
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Crovia Trust
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Crovia Seal v1, a compact, tamper-evident
+       JSON receipt that may be attached to any output produced by an AI
+       generator (large language model, image model, audio model, or
+       composite system) to record its provenance in a cryptographically
+       verifiable form.  A Crovia Seal binds an issuer's identity to the
+       SHA-256 digests of an input/output pair, the identity and parameters
+       of the generator, an emission timestamp, and a per-issuer hash chain,
+       under an Ed25519 signature computed over a strict canonicalization
+       (CSC-1) of the receipt with explicit domain separation.  Optional
+       fields permit transparency-log inclusion proofs and witness co-
+       signatures.  The Seal is designed for offline verification and for
+       inclusion in third-party transparency logs and standards-based
+       revocation infrastructure.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-crovia-seal-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-crovia-seal-00
+    docidentifier:
+    - content: draft-crovia-seal-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-crovia-seal-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

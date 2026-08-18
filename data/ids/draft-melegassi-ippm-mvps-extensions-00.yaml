@@ -1,0 +1,87 @@
+---
+id: draftmelegassiippmmvpsextensions00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A Forward-Compatible Extension and Capability-Negotiation Mechanism for
+    the MVPS Bundle Format
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-melegassi-ippm-mvps-extensions-00
+docidentifier:
+- content: draft-melegassi-ippm-mvps-extensions
+  type: Internet-Draft
+- content: draft-melegassi-ippm-mvps-extensions-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.melegassi-ippm-mvps-extensions
+date:
+- type: published
+  at: '2026-05-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Leonardo
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: L. M.
+      surname:
+        language: en
+        content: Costa
+      completename:
+        language: en
+        content: Leonardo Melegassi Costa
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Catellix
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a forward-compatible extension point for the
+       Multi-Vantage Path Synchrony (MVPS) bundle format.  The base format
+       already provides a schema version, a path-fingerprint version
+       prefix, and an IANA "MVPS Bundle Capability Flags" registry, but its
+       serialization is closed to unknown fields.  This document adds a
+       single, typed, namespaced "extensions" object and a processing rule
+       (ignore-but-preserve), and specifies how extensions interact with
+       the canonical hash and the MVPS Proof Envelope.
+
+       The mechanism is designed so that an extension can never become a
+       tamper vector and can never alter the core coherence detector: the
+       detection statistic D^2 is, by construction, a function of the core
+       bundle only.  Every property in this document is backed by a
+       machine-checkable numerical receipt.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-melegassi-ippm-mvps-extensions-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,173 @@
+---
+id: draftmwspiceactorchain05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Cryptographically Verifiable Actor Chains for OAuth 2.0 Token Exchange
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mw-spice-actor-chain-05
+docidentifier:
+- content: draft-mw-spice-actor-chain
+  type: Internet-Draft
+- content: draft-mw-spice-actor-chain-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mw-spice-actor-chain
+date:
+- type: published
+  at: '2026-04-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Prasad
+      completename:
+        language: en
+        content: A Prasad
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Oracle
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ramki
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Krishnan
+      completename:
+        language: en
+        content: Ramki Krishnan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: JPMorgan Chase & Co
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Diego
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Lopez
+      completename:
+        language: en
+        content: Diego Lopez
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telefonica
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Srinivasa
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Addepalli
+      completename:
+        language: en
+        content: Srinivasa Addepalli
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aryaka
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Multi-hop service-to-service and agentic workflows need a
+       standardized way to preserve and validate delegation-path continuity
+       across successive token exchanges.  This document defines six actor-
+       chain profiles for OAuth 2.0 Token Exchange [RFC8693].  [RFC8693]
+       permits nested act claims, but prior actors remain informational only
+       and token exchange does not define how a delegation path is preserved
+       and validated across successive exchanges.
+
+       This document profiles delegation-chain tokens and defines profile-
+       specific processing for multi-hop workflows.  The six profiles are:
+       Declared Full Disclosure; Declared Subset Disclosure; Declared Actor-
+       Only Disclosure; Verified Full Disclosure; Verified Subset
+       Disclosure; and Verified Actor-Only Disclosure.
+
+       These profiles preserve the existing meanings of sub, act, and
+       may_act.  They support same-domain and cross-domain delegation and
+       provide different tradeoffs among visible chain-based authorization,
+       cryptographic accountability, auditability, privacy, and long-running
+       workflow support.  Plain RFC 8693 impersonation-shaped outputs remain
+       valid RFC 8693 behavior but are outside this profile family.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mw-spice-actor-chain-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mw-spice-actor-chain-04
+    docidentifier:
+    - content: draft-mw-spice-actor-chain-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mw-spice-actor-chain-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

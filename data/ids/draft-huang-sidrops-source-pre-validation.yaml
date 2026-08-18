@@ -1,0 +1,52 @@
+---
+id: drafthuangsidropssourceprevalidation
+schema_version: v1.5.6
+formattedref:
+  content: draft-huang-sidrops-source-pre-validation
+title:
+- language: en
+  script: Latn
+  content: Source Pre-validation in RPKI-based Route Origin Validation
+docidentifier:
+- content: draft-huang-sidrops-source-pre-validation
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Resource Public Key Infrastructure (RPKI) and Route Origin
+       Validation (ROV) have significantly improved inter-domain routing
+       security.  However, thousands of RPKI-invalid routes - the vast
+       majority caused by misconfiguration or synchronization delays -
+       persistently appear in the global routing table.  Many of these self-
+       inflicted invalid routes originate from autonomous systems (ASes)
+       that could have easily blocked them before advertisement.
+
+       This document defines a *Best Current Practice (BCP)* for *source
+       pre-validation*: the practice by which an originating AS checks its
+       intended BGP announcement against its local RPKI cache *before*
+       sending it to eBGP neighbors.  Routes that would be evaluated as
+       Invalid (or NotFound for strict mode) are blocked, logged, and *MUST
+       be cached* for later re-evaluation, enabling automatic recovery when
+       RPKI data changes.  Routes evaluated as Valid or NotFound(for default
+       mode) may be advertised normally.
+
+       This BCP complements existing standards RFC8893 &amp; RFC9324 by focusing
+       on *mandatory deployment at the origin* and on *outbound caching* of
+       suppressed routes.  It provides operational guidance for deployment,
+       cache management, and handling of RPKI data updates.  Implementation
+       of this BCP reduces self-inflicted invalid routes, improves global
+       routing stability, and encourages wider ROV adoption.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-huang-sidrops-source-pre-validation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-huang-sidrops-source-pre-validation-00
+    docidentifier:
+    - content: draft-huang-sidrops-source-pre-validation-00
+      type: Internet-Draft
+      primary: true

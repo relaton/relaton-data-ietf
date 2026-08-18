@@ -1,0 +1,234 @@
+---
+id: draftietfbessebgpdmz06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Cumulative DMZ Link Bandwidth and load-balancing
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-ebgp-dmz-06
+docidentifier:
+- content: draft-ietf-bess-ebgp-dmz
+  type: Internet-Draft
+- content: draft-ietf-bess-ebgp-dmz-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-bess-ebgp-dmz
+date:
+- type: published
+  at: '2025-01-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: SATYA
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: M. R.
+      surname:
+        language: en
+        content: Satya
+      completename:
+        language: en
+        content: SATYA R MOHANTY
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zscaler
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Arie
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Vayner
+      completename:
+        language: en
+        content: Arie Vayner
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Akshay
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Gattani
+      completename:
+        language: en
+        content: Akshay Gattani
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arista Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ajay
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Kini
+      completename:
+        language: en
+        content: Ajay Kini
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Arista Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeff
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Tantsura
+      completename:
+        language: en
+        content: Jeff Tantsura
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nvidia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Reshma
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Reshma Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks Inc.
+version:
+- content: '06'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The DMZ Link Bandwidth draft provides a way to load-balance traffic
+       to a destination which is reachable via more than one path according
+       to the weight attahced.  Typically, the link bandwidth (either
+       configured on the link of the EBGP egress interface or set via a
+       policy) is encoded in an extended community and then sent to the IBGP
+       peer that employs multi-path.  The link-bandwidth value is then
+       extracted from the extended community and is used as a weight in the
+       RIB/FIB, which does the load-balancing.  This draft extends the usage
+       of the DMZ link bandwidth to another setting where the ingress BGP
+       speaker requires knowledge of the cumulative bandwidth while doing
+       the load-balancing.  The draft also proposes neighbor-level knobs to
+       enable the link bandwidth extended community to be regenerated and
+       then advertised to EBGP peers to override the default behavior of not
+       advertising optional non-transitive attributes to EBGP peers.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-bess-ebgp-dmz-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-ebgp-dmz-05
+    docidentifier:
+    - content: draft-ietf-bess-ebgp-dmz-05
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-bess-ebgp-dmz-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-ebgp-dmz-07
+    docidentifier:
+    - content: draft-ietf-bess-ebgp-dmz-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-bess-ebgp-dmz-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,115 @@
+---
+id: draftgraylampscompositepkc01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Preventing Key Reuse and Cross-Key Forgeries in Composite ML-DSA
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gray-lamps-compositepkc-01
+docidentifier:
+- content: draft-gray-lamps-compositepkc
+  type: Internet-Draft
+- content: draft-gray-lamps-compositepkc-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gray-lamps-compositepkc
+date:
+- type: published
+  at: '2026-07-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Gray
+      completename:
+        language: en
+        content: John Gray
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Entrust Limited
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lucas
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Prabel
+      completename:
+        language: en
+        content: Lucas Prabel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a small, backwards-compatible change to
+       composite ML-DSA that cryptographically binds the signature to the
+       specific composite public key.  It does so by defining a Public-Key
+       Context value (pkc) equal to a hash of the serialized composite
+       public key, and by setting the composite context field to that value.
+       This prevents key reuse and cross-key forgeries across different
+       composite keys, while preserving the API of Composite ML-DSA.  The
+       construction introduces two helper procedures to compute pkc from
+       either the composite private key or the composite public key.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gray-lamps-compositepkc-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gray-lamps-compositepkc-00
+    docidentifier:
+    - content: draft-gray-lamps-compositepkc-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gray-lamps-compositepkc-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

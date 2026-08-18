@@ -1,0 +1,196 @@
+---
+id: draftietfdetnetstatelessfairqueuing01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Latency Guarantee with Stateless Fair Queuing
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-stateless-fair-queuing-01
+docidentifier:
+- content: draft-ietf-detnet-stateless-fair-queuing
+  type: Internet-Draft
+- content: draft-ietf-detnet-stateless-fair-queuing-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-detnet-stateless-fair-queuing
+date:
+- type: published
+  at: '2026-07-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jinoo
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Joung
+      completename:
+        language: en
+        content: Jinoo Joung
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sangmyung University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Ryoo
+      completename:
+        language: en
+        content: Jeong-dong Ryoo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ETRI
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Taesik
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Cheung
+      completename:
+        language: en
+        content: Taesik Cheung
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ETRI
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yizhou
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yizhou Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peng
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Liu
+      completename:
+        language: en
+        content: Peng Liu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the implementation details for the framework
+       specified in ITU-T Y.3129 [Y.3129] and ITU-T Y.3148 [Y.3148].  The
+       framework guarantees end-to-end (E2E) latency bounds to flows.  The
+       schedulers in core nodes do not need to maintain flow states.
+       Instead, the entrance node of a flow marks an ideal service
+       completion time according to a fluid model, called Finish Time (FT),
+       of a packet in the packet header.  The subsequent core nodes update
+       the FT by adding a delay factor, which is a function of the flow and
+       the nodes.  The packets in the queue of the scheduler are served in
+       the ascending order of FT.  This mechanism is called the stateless
+       fair queuing.  The result is that flows are isolated from each other
+       almost perfectly.  The latency bound of a flow depends only on the
+       flow's intrinsic parameters such as the maximum burst size and the
+       service rate, except the link capacities and the maximum packet
+       length among other flows sharing each output link with the flow.
+       This document specifies the metadata, formats of metadata, the
+       admission control procedure, and an approximation of stateless fair
+       queuing implemented via a strict priority (SP) scheduler.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-detnet-stateless-fair-queuing-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-stateless-fair-queuing-00
+    docidentifier:
+    - content: draft-ietf-detnet-stateless-fair-queuing-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-detnet-stateless-fair-queuing-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

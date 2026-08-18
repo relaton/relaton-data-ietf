@@ -1,0 +1,182 @@
+---
+id: draftchungccwgsearch09
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SEARCH -- a New Slow Start Algorithm for TCP and QUIC
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chung-ccwg-search-09
+docidentifier:
+- content: draft-chung-ccwg-search
+  type: Internet-Draft
+- content: draft-chung-ccwg-search-09
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chung-ccwg-search
+date:
+- type: published
+  at: '2026-03-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jae
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: J. W.
+      surname:
+        language: en
+        content: Chung
+      completename:
+        language: en
+        content: Jae Won Chung
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Viasat Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Maryam
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: M. A.
+      surname:
+        language: en
+        content: Kachooei
+      completename:
+        language: en
+        content: Maryam Ataei Kachooei
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Worcester Polytechnic Institute
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Feng
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Feng Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Viasat Inc
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mark
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Claypool
+      completename:
+        language: en
+        content: Mark Claypool
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Worcester Polytechnic Institute
+version:
+- content: '09'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>TCP slow start is designed to ramp up to the network congestion point
+       quickly, doubling the congestion window each round-trip time until
+       the congestion point is reached, whereupon TCP exits the slow start
+       phase.  Unfortunately, the default Linux TCP slow start
+       implementation -- TCP Cubic with HyStart [HYSTART] -- can cause
+       premature exit from slow start, especially over wireless links,
+       degrading link utilization.  However, without HyStart, TCP exits slow
+       start too late, causing unnecessary packet loss.  To improve TCP slow
+       start performance, this document proposes using the Slow start Exit
+       At Right CHokepoint (SEARCH) algorithm [KCL24] where the TCP sender
+       determines the congestion point based on acknowledged deliveries --
+       specifically, the sender computes the delivered bytes compared to the
+       sent bytes, smoothed to account for link latency variation and
+       normalized to accommodate link capacities, and initiates exits slow
+       start if the delivered bytes are lower than expected.  We implemented
+       SEARCH in Linux, FreeBSD, and QUIC and evaluated it over WiFi, 4G/
+       LTE, and low earth orbit (LEO) and geosynchronous (GEO) satellite
+       links.  Analysis of the results show that SEARCH reliably exits from
+       slow start after the congestion point is reached but before inducing
+       packet loss.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-chung-ccwg-search-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chung-ccwg-search-08
+    docidentifier:
+    - content: draft-chung-ccwg-search-08
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chung-ccwg-search-09
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

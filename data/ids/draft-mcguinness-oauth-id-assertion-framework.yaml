@@ -1,0 +1,52 @@
+---
+id: draftmcguinnessoauthidassertionframework
+schema_version: v1.5.6
+formattedref:
+  content: draft-mcguinness-oauth-id-assertion-framework
+title:
+- language: en
+  script: Latn
+  content: OAuth Identity Assertion Trust Framework
+docidentifier:
+- content: draft-mcguinness-oauth-id-assertion-framework
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Issuer authentication alone does not prove an OAuth authorization
+       server's authority over the subject namespace its identity assertions
+       claim.  A federated authorization server can mint an identity
+       assertion naming any email domain; federation membership establishes
+       that the server is a recognized member of an ecosystem, not that the
+       server is entitled to assert about subjects in any particular
+       namespace.  Nothing in OAuth today lets a namespace owner declare
+       which authorization servers are authorized to assert identities in
+       its namespace.
+
+       This document defines an Identity Assertion Trust Framework with two
+       parts.  First, an Authority Delegation Model: an abstract pattern
+       (Authority Holder, Delegate, Delegation Artifact, Validator) with
+       independent trust-evaluation categories, a cross-category combination
+       rule, and a lookup-state taxonomy that profiles instantiate.  Second,
+       the Identity Assertion Issuer Trust Policy: a JSON policy document
+       that a Resource Authorization Server publishes to declare which trust
+       methods it requires of an Assertion Issuer, including issuer-
+       authentication methods (such as OpenID Federation) and subject-
+       namespace authorization methods defined by separate profiles.
+
+       The Domain-Authorized Issuer Trust Method is defined separately as
+       one subject-namespace authorization profile usable by this framework.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-id-assertion-framework-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-id-assertion-framework-00
+    docidentifier:
+    - content: draft-mcguinness-oauth-id-assertion-framework-00
+      type: Internet-Draft
+      primary: true

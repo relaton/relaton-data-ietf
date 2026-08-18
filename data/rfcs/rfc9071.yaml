@@ -1,0 +1,128 @@
+---
+id: RFC9071
+schema_version: v1.5.6
+type: standard
+title:
+- content: RTP-Mixer Formatting of Multiparty Real-Time Text
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc9071
+docidentifier:
+- content: RFC 9071
+  type: IETF
+  primary: true
+- content: 10.17487/RFC9071
+  type: DOI
+docnumber: RFC9071
+date:
+- type: published
+  at: 2021-07
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        script: Latn
+        content: G.
+      surname:
+        language: en
+        script: Latn
+        content: Hellström
+      completename:
+        language: en
+        script: Latn
+        content: G. Hellström
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Audio/Video Transport Core Maintenance
+      identifier:
+      - content: avtcore
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document provides enhancements of real-time text (as specified
+    in RFC 4103) suitable for mixing in a centralized conference model, enabling source
+    identification and rapidly interleaved transmission of text from different sources.
+    The intended use is for real-time text mixers and participant endpoints capable
+    of providing an efficient presentation or other treatment of a multiparty real-time
+    text session. The specified mechanism builds on the standard use of the Contributing
+    Source (CSRC) list in the Real-time Transport Protocol (RTP) packet for source
+    identification. The method makes use of the same "text/t140" and "text/red" formats
+    as for two-party sessions.</p><p>Solutions using multiple RTP streams in the same
+    RTP session are briefly mentioned, as they could have some benefits over the RTP-mixer
+    model. The RTP-mixer model was selected to be used for the fully specified solution
+    in this document because it can be applied to a wide range of existing RTP implementations.</p><p>A
+    capability exchange is specified so that it can be verified that a mixer and a
+    participant can handle the multiparty-coded real-time text stream using the RTP-mixer
+    method. The capability is indicated by the use of a Session Description Protocol
+    (SDP) (RFC 8866) media attribute, "rtt-mixer".</p><p>This document updates RFC
+    4103 ("RTP Payload for Text Conversation").</p><p>A specification for how a mixer
+    can format text for the case when the endpoint is not multiparty aware is also
+    provided.</p>
+status:
+  stage:
+    content: PROPOSED STANDARD
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: RFC4103
+    docidentifier:
+    - content: RFC4103
+      type: IETF
+      primary: true
+series:
+- title:
+  - content: RFC
+  number: '9071'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: conference
+- vocab:
+    content: bridge
+- vocab:
+    content: SIP
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

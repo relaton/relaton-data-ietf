@@ -1,0 +1,54 @@
+---
+id: draftmcguinnessoauthrfc9728bis
+schema_version: v1.5.6
+formattedref:
+  content: draft-mcguinness-oauth-rfc9728bis
+title:
+- language: en
+  script: Latn
+  content: Update to OAuth 2.0 Protected Resource Metadata Resource Identifier Validation
+docidentifier:
+- content: draft-mcguinness-oauth-rfc9728bis
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RFC 9728 defines OAuth 2.0 Protected Resource Metadata, enabling
+       clients to dynamically discover the authorization requirements of
+       protected resources.  Section 3.3 of RFC 9728 requires that when
+       protected resource metadata is obtained via a WWW-Authenticate
+       challenge, the resource value in the metadata MUST exactly match the
+       URL the client used to access the protected resource, limiting the
+       applicability of the specification.
+
+       This document updates the resource validation rule in Section 3.3 of
+       RFC 9728 to permit the resource value to be any URI that shares the
+       same TLS origin (scheme, host, and port) as the requested URL and
+       whose path is a prefix of the request URL path.  This enables a wider
+       range of use cases for the WWW-Authenticate response.  All other
+       aspects of RFC 9728 remain unchanged.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-rfc9728bis-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-rfc9728bis-00
+    docidentifier:
+    - content: draft-mcguinness-oauth-rfc9728bis-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-rfc9728bis-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-rfc9728bis-01
+    docidentifier:
+    - content: draft-mcguinness-oauth-rfc9728bis-01
+      type: Internet-Draft
+      primary: true

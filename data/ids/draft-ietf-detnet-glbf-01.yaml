@@ -1,0 +1,194 @@
+---
+id: draftietfdetnetglbf01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Deterministic Networking (DetNet) Data Plane - guaranteed Latency Based
+    Forwarding (gLBF) for bounded latency with low jitter and asynchronous forwarding
+    in Deterministic Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-glbf-01
+docidentifier:
+- content: draft-ietf-detnet-glbf
+  type: Internet-Draft
+- content: draft-ietf-detnet-glbf-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-detnet-glbf
+date:
+- type: published
+  at: '2026-07-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Toerless
+      - language: en
+        script: Latn
+        initial: T
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T. T.
+      surname:
+        language: en
+        content: Eckert
+      completename:
+        language: en
+        content: Toerless Eckert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Futurewei Technologies USA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexander
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Clemm
+      completename:
+        language: en
+        content: Alexander Clemm
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sympotech
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stewart
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bryant
+      completename:
+        language: en
+        content: Stewart Bryant
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stefan
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Hommes
+      completename:
+        language: en
+        content: Stefan Hommes
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZF Friedrichshafen AG
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo proposes a mechanism called "guaranteed Latency Based
+       Forwarding" (gLBF) as part of DetNet for hop-by-hop packet forwarding
+       with per-hop deterministically bounded latency and minimal jitter.
+
+       gLBF is intended to be useful across a wide range of networks and
+       applications with need for high-precision deterministic networking
+       services, including in-car networks or networks used for industrial
+       automation across on factory floors, all the way to ++100Gbps
+       country-wide networks.
+
+       Contrary to other mechanisms, gLBF does not require network wide
+       clock synchronization, nor does it need to maintain per-flow state at
+       network nodes, avoiding drawbacks of other known methods while
+       leveraging their advantages.
+
+       Specifically, gLBF uses the queuing model and calculus of Urgency
+       Based Scheduling (UBS, [UBS]), which is used by TSN Asynchronous
+       Traffic Shaping [TSN-ATS]. gLBF is intended to be a plug-in
+       replacement for TSN-ATN or as a parallel mechanism beside TSN-ATS
+       because it allows to keeping the same controller-plane design which
+       is selecting paths for TSN-ATS, sizing TSN-ATS queues, calculating
+       latencies and admitting flows to calculated paths for calculated
+       latencies.
+
+       In addition to reducing the jitter compared to TSN-ATS by additional
+       buffering (dampening) in the network, gLBF also eliminates the need
+       for per-flow, per-hop state maintenance required by TSN-ATS.  This
+       avoids the need to signal per-flow state to every hop from the
+       controller-plane and associated scaling problems.  It also reduces
+       implementation cost for high-speed networking hardware due to the
+       avoidance of additional high-speed speed read/write memory access to
+       retrieve, process and update per-flow state variables for a large
+       number of flows.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-detnet-glbf-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-detnet-glbf-00
+    docidentifier:
+    - content: draft-ietf-detnet-glbf-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-detnet-glbf-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

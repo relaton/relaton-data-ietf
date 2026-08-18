@@ -1,0 +1,189 @@
+---
+id: drafthuangsidropssourceprevalidation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Source Pre-validation in RPKI-based Route Origin Validation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-huang-sidrops-source-pre-validation-00
+docidentifier:
+- content: draft-huang-sidrops-source-pre-validation
+  type: Internet-Draft
+- content: draft-huang-sidrops-source-pre-validation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.huang-sidrops-source-pre-validation
+date:
+- type: published
+  at: '2026-06-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Huang
+      completename:
+        language: en
+        content: Mingqing(Michael) Huang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zhongguancun Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dan
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Dan Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Weiqiang
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Weiqiang Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chongfeng
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Xie
+      completename:
+        language: en
+        content: Chongfeng Xie
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiyuan
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Zhiyuan Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Resource Public Key Infrastructure (RPKI) and Route Origin
+       Validation (ROV) have significantly improved inter-domain routing
+       security.  However, thousands of RPKI-invalid routes - the vast
+       majority caused by misconfiguration or synchronization delays -
+       persistently appear in the global routing table.  Many of these self-
+       inflicted invalid routes originate from autonomous systems (ASes)
+       that could have easily blocked them before advertisement.
+
+       This document defines a *Best Current Practice (BCP)* for *source
+       pre-validation*: the practice by which an originating AS checks its
+       intended BGP announcement against its local RPKI cache *before*
+       sending it to eBGP neighbors.  Routes that would be evaluated as
+       Invalid (or NotFound for strict mode) are blocked, logged, and *MUST
+       be cached* for later re-evaluation, enabling automatic recovery when
+       RPKI data changes.  Routes evaluated as Valid or NotFound(for default
+       mode) may be advertised normally.
+
+       This BCP complements existing standards RFC8893 &amp; RFC9324 by focusing
+       on *mandatory deployment at the origin* and on *outbound caching* of
+       suppressed routes.  It provides operational guidance for deployment,
+       cache management, and handling of RPKI data updates.  Implementation
+       of this BCP reduces self-inflicted invalid routes, improves global
+       routing stability, and encourages wider ROV adoption.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-huang-sidrops-source-pre-validation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

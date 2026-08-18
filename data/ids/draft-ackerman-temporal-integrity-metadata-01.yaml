@@ -1,0 +1,105 @@
+---
+id: draftackermantemporalintegritymetadata01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Temporal Integrity Metadata (TIM) for Infrastructure Telemetry
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ackerman-temporal-integrity-metadata-01
+docidentifier:
+- content: draft-ackerman-temporal-integrity-metadata
+  type: Internet-Draft
+- content: draft-ackerman-temporal-integrity-metadata-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ackerman-temporal-integrity-metadata
+date:
+- type: published
+  at: '2026-08-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: William
+      - language: en
+        script: Latn
+        initial: W
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: W. T.
+      surname:
+        language: en
+        content: Ackerman
+      completename:
+        language: en
+        content: William "Trey" Ackerman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vertiv Holdings Co.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Distributed computing systems generate timestamped events from
+       components whose clocks operate under fundamentally different
+       synchronization conditions.  Existing logging and observability
+       standards -- including legacy BSD syslog (RFC 3164), RFC 5424,
+       SNMP, NETCONF, and OpenTelemetry -- define message formats and
+       telemetry schemas but provide no standard mechanism for an event
+       source to declare the provenance, confidence, or synchronization
+       state of its timestamps.  Every platform that must correlate events
+       across components independently invents a proprietary temporal
+       reconciliation layer.  These systems fail silently, cannot be
+       validated against a published standard, and are not interoperable.
+
+       This document defines Temporal Integrity Metadata (TIM): a transport-
+       agnostic structure that any event-emitting system may attach to its
+       telemetry to declare how its timestamp was generated, the
+       synchronization state of its clock, a bounded uncertainty interval,
+       the temporal reference domain, and a monotonic sequence token for
+       ordering events when wall-clock time is unavailable.  TIM is
+       backward-compatible with existing protocols, implementable on
+       constrained embedded hardware, and applicable from internet-scale
+       distributed services to air-gapped and orbital deployments.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ackerman-temporal-integrity-metadata-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ackerman-temporal-integrity-metadata-00
+    docidentifier:
+    - content: draft-ackerman-temporal-integrity-metadata-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ackerman-temporal-integrity-metadata-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

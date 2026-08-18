@@ -1,0 +1,38 @@
+name: Aggregate
+
+on:
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync streams
+        run: |
+          for s in rfcs rfcsubseries ids; do
+            git clone --depth 1 https://github.com/relaton/relaton-data-$s.git /tmp/$s
+            mkdir -p data/$s
+            rsync -a --delete /tmp/$s/data/ data/$s/
+          done
+          git clone --depth 1 https://github.com/ietf-tools/relaton-data-misc.git /tmp/misc
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: Convert misc stream
+        env:
+          RELATON_GEM: git:https://github.com/relaton/relaton#main
+        run: |
+          gem install bundler
+          cd /tmp && bundle init >/dev/null 2>&1 || true
+      - name: Build index
+        run: ruby tools/build_index.rb
+      - name: Commit
+        run: |
+          git config user.name "relaton-bot"
+          git config user.email "open.source@ribose.com"
+          git add data index.yaml index.zip last_modified.txt
+          git diff --cached --quiet || git commit -m "Aggregate streams and rebuild index"
+          git push

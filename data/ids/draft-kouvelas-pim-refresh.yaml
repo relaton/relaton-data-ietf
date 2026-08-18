@@ -1,0 +1,41 @@
+---
+id: draftkouvelaspimrefresh
+schema_version: v1.5.6
+formattedref:
+  content: draft-kouvelas-pim-refresh
+title:
+- language: en
+  script: Latn
+  content: State Refresh in PIM-DM
+docidentifier:
+- content: draft-kouvelas-pim-refresh
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This proposal extends the PIM-DM [1] protocol specification by intro-\n
+    \  ducing the PIM State-Refresh control message.\n \n   When an (S,G) entry is
+    created in a router for a directly connected\n   source, if the interface directly
+    connected to the source is the\n   incoming interface for the entry, a new timer
+    is started: the State-\n   Refresh-Timer [SRT(S,G)]. The State-Refresh-Timer controls
+    periodic\n   transmission of the PIM State-Refresh message, which is propagated\n
+    \  hop-by-hop down the (S,G) RPF tree. When received by a router on the\n   RPF
+    interface, the State-Refresh message causes existing prune state\n   to be refreshed.\n
+    \n   Addition of this heartbeat message solves many of the current\n   problems
+    with PIM-DM. It prevents the periodic timeout of prune state\n   in routers, greatly
+    reducing the re-flooding of multicast traffic\n   down the pruned branches that
+    expire periodically. It also causes\n   topology changes to be realised quicker
+    than the traditional 3 minute\n   timeout.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kouvelas-pim-refresh-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kouvelas-pim-refresh-00
+    docidentifier:
+    - content: draft-kouvelas-pim-refresh-00
+      type: Internet-Draft
+      primary: true

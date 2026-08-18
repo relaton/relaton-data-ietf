@@ -1,0 +1,89 @@
+---
+id: draftburlsmtac00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Merkle Tree Agent Certificates (MTAC): Batch-Issued Post-Quantum Identity
+    Credentials for AI Agents'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-burls-mtac-00
+docidentifier:
+- content: draft-burls-mtac
+  type: Internet-Draft
+- content: draft-burls-mtac-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.burls-mtac
+date:
+- type: published
+  at: '2026-07-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Reuben
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Burls
+      completename:
+        language: en
+        content: Reuben Burls
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aelethion OU
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Merkle Tree Agent Certificates (MTAC), a
+       credential format and issuance profile in which a certificate
+       authority commits a batch of AI agent identity credentials to a
+       Merkle tree, signs only the tree head with the post-quantum signature
+       algorithm ML-DSA-65, and distributes a per-credential inclusion
+       proof.  A relying party verifies a credential offline against the
+       signed tree head without contacting the issuer.  Each batch root is
+       additionally co-signed by an independently keyed witness, providing
+       per-batch integrity and continuity attestation, and its root can be
+       corroborated against an independent public record.
+
+       MTAC defines the leaf structure, its deterministic encoding, the leaf
+       hash preimage, the signed tree head wire format, the witness co-
+       signature, and an optional challenge-response proof of possession
+       that binds a credential to a holder key.  Test vectors are provided.
+       This document specifies a credential issuance and verification
+       mechanism.  Declared scopes carried in a credential are self-reported
+       parameters recorded at issuance; this document does not specify a
+       runtime authorization mechanism.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-burls-mtac-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,45 @@
+---
+id: draftyangavtswitchmulticastshorttimeshift
+schema_version: v1.5.6
+formattedref:
+  content: draft-yang-avt-switch-multicast-short-timeshift
+title:
+- language: en
+  script: Latn
+  content: Switching from unicast to multicast for multicast short time-shift
+docidentifier:
+- content: draft-yang-avt-switch-multicast-short-timeshift
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When a client requests a time-shift service for a multicast session
+    using RTP for media transport, like pause, instant replay, slow-
+    motion video, frame-by-frame viewing, rewind, fast-forward, etc., it
+    needs to switch from multicast session to unicast session.  This
+    unicast session will always serve for the time-shift service unless
+    the client manually switches back to the multicast session.  Actually
+    a time- shift request may happens for all clients.  That is,
+    multicast session stream will be replaced by many unicast time-shift
+    streams having significant impact on network bandwidth usage.
+
+    In this document, we describe a method using existing RTP and RTCP
+    protocol infrastructure that switches back to multicast session from
+    unicast session of time-shift.  In this method, a burst RTP flow
+    which is a little faster than the primary multicast rate may be
+    transmitted so that unicast session may catch up and switch back to
+    multicast session.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-yang-avt-switch-multicast-short-timeshift-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yang-avt-switch-multicast-short-timeshift-00
+    docidentifier:
+    - content: draft-yang-avt-switch-multicast-short-timeshift-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,139 @@
+---
+id: RFC9871
+schema_version: v1.5.6
+type: standard
+title:
+- content: BGP Color-Aware Routing (CAR)
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc9871
+docidentifier:
+- content: RFC 9871
+  type: IETF
+  primary: true
+- content: 10.17487/RFC9871
+  type: DOI
+docnumber: RFC9871
+date:
+- type: published
+  at: 2025-11
+contributor:
+- role:
+  - type: editor
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        script: Latn
+        content: D.
+      surname:
+        language: en
+        script: Latn
+        content: Rao
+      completename:
+        language: en
+        script: Latn
+        content: D. Rao
+- role:
+  - type: editor
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        script: Latn
+        content: S.
+      surname:
+        language: en
+        script: Latn
+        content: Agrawal
+      completename:
+        language: en
+        script: Latn
+        content: S. Agrawal
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+- role:
+  - type: author
+    description:
+    - content: committee
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    subdivision:
+    - name:
+      - content: Inter-Domain Routing
+      identifier:
+      - content: idr
+      type: workgroup
+    abbreviation:
+      language: en
+      content: IETF
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes a BGP-based routing solution to establish end-to-end
+    intent-aware paths across a multi-domain transport network. The transport network
+    can span multiple service provider and customer network domains. The BGP intent-aware
+    paths can be used to steer traffic flows for service routes that need a specific
+    intent. This solution is called BGP Color-Aware Routing (BGP CAR).</p><p>This
+    document describes the routing framework and BGP extensions to enable intent-aware
+    routing using the BGP CAR solution. The solution defines two new BGP SAFIs (BGP
+    CAR SAFI and BGP VPN CAR SAFI) for IPv4 and IPv6. It also defines an extensible
+    Network Layer Reachability Information (NLRI) model for both SAFIs that allows
+    multiple NLRI types to be defined for different use cases. Each type of NLRI contains
+    key and TLV-based non-key fields for efficient encoding of different per-prefix
+    information. This specification defines two NLRI types: Color-Aware Route NLRI
+    and IP Prefix NLRI. It defines non-key TLV types for the MPLS label stack, SR-MPLS
+    label index, and Segment Routing over IPv6 (SRv6) Segment Identifiers (SIDs).
+    This solution also defines a new Local Color Mapping (LCM) Extended Community.</p>"
+status:
+  stage:
+    content: EXPERIMENTAL
+series:
+- title:
+  - content: RFC
+  number: '9871'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: intent-aware routing
+- vocab:
+    content: intent-based routing
+- vocab:
+    content: color-aware VPNs
+- vocab:
+    content: color-aware BGP transport
+- vocab:
+    content: BGP extensible NLRI
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

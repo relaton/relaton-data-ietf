@@ -1,0 +1,45 @@
+---
+id: draftoverellsrap
+schema_version: v1.5.6
+formattedref:
+  content: draft-overell-srap
+title:
+- language: en
+  script: Latn
+  content: 'Simple Roaming Authentication Protocol: SRAP'
+docidentifier:
+- content: draft-overell-srap
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The Simple Roaming Authentication Protocol is intended to provide an\n
+    \  authentication facility for other non-authenticated protocols.  It\n   utilises
+    registered SASL [SASL] mechanisms.\n \n   This protocol has been developed in
+    order that an ISP's roaming\n   customers can be authenticated when connecting
+    via other networks or\n   ISPs.  Rather than deploying new client software to
+    handle\n   authenticating versions of all protocols (SMTP, POP3, NNTP etc) a\n
+    \  single SRAP applet is deployed that handles the authentication for\n   all
+    other protocols.\n \n   When the server of a non-authenticated protocol wishes
+    to\n   authenticate a client the server starts another connection back to\n   the
+    client using SRAP.  The SRAP conversation authenticates the\n   client to the
+    server.  The original non-authenticated protocol can\n   now proceed.\n \n   For
+    example with SMTP consider two machines Alice's and Bob's.\n   Alice's runs an
+    SMTP client and a SRAP authenticatee; Bob's runs an\n   SMTP server and a SRAP
+    authenticator.  Alice's machine connects to\n   Bob's using SMTP.  SMTP does not
+    support authentication so another\n   connection is made back from Bob's machine
+    to Alice's, this time\n   using SRAP.  The SRAP conversation authenticates Alice
+    to Bob.  The\n   SMTP conversation can now proceed.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-overell-srap-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-overell-srap-00
+    docidentifier:
+    - content: draft-overell-srap-00
+      type: Internet-Draft
+      primary: true

@@ -1,0 +1,107 @@
+---
+id: drafthaasnetmodunknownbits01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Representing Unknown YANG bits in Operational State
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-haas-netmod-unknown-bits-01
+docidentifier:
+- content: draft-haas-netmod-unknown-bits
+  type: Internet-Draft
+- content: draft-haas-netmod-unknown-bits-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.haas-netmod-unknown-bits
+date:
+- type: published
+  at: '2023-01-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeffrey
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Haas
+      completename:
+        language: en
+        content: Jeffrey Haas
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Protocols frequently have fields where the contents are a series of
+       bits that have specific meaning.  When modeling operational state for
+       such protocols in YANG, the 'bits' YANG built-in type is a natural
+       method for modeling such fields.  The YANG 'bits' built-in type is
+       best suited when the meaning of a bit assignment is clear.
+
+       When bits that are currently RESERVED or otherwise unassigned by the
+       protocol are received, being able to model them is necessary in YANG
+       operational models.  This cannot be done using the YANG 'bits' built-
+       in type without assigning them a name.  However, YANG versioning
+       rules do not permit renaming of named bits.
+
+       This draft proposes a methodology to represent unknown bits in YANG
+       operational models and creates a YANG typedef to assist in uniformly
+       naming such unknown bits.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-haas-netmod-unknown-bits-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haas-netmod-unknown-bits-00
+    docidentifier:
+    - content: draft-haas-netmod-unknown-bits-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-haas-netmod-unknown-bits-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haas-netmod-unknown-bits-02
+    docidentifier:
+    - content: draft-haas-netmod-unknown-bits-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-haas-netmod-unknown-bits-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

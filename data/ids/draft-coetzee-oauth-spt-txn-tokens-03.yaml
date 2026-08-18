@@ -1,0 +1,107 @@
+---
+id: draftcoetzeeoauthspttxntokens03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Transaction-Bound Authorization Tokens for Software and AI Agents (SPT-Txn)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-coetzee-oauth-spt-txn-tokens-03
+docidentifier:
+- content: draft-coetzee-oauth-spt-txn-tokens
+  type: Internet-Draft
+- content: draft-coetzee-oauth-spt-txn-tokens-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.coetzee-oauth-spt-txn-tokens
+date:
+- type: published
+  at: '2026-07-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rudolf
+      - language: en
+        script: Latn
+        initial: R
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: R. J.
+      surname:
+        language: en
+        content: Coetzee
+      completename:
+        language: en
+        content: Rudolf Jacobus Coetzee
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Violet Sky Security SEZC
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Current authorization is role-scoped: an actor is granted a role
+       whose authority persists across every action it takes.  This fails
+       exactly when actors fail -- under compromise, prompt injection, or
+       goal hijacking -- because a compromised actor retains full role
+       authority.  This document specifies SPT-Txn, a family of transaction-
+       bound authorization tokens in which authority exists only inside a
+       short-lived token bound to one declared action, on one resource,
+       under one jurisdictional policy, verified against how the requesting
+       workload was attested.  Delegation across agents and tools is
+       expressed as a cryptographically sealed chain that can only narrow
+       authority and is verifiable offline.  Each authorization decision
+       emits a signed, tamper-evident receipt as a byproduct of enforcement.
+       This document specifies normative intent binding, transaction
+       receipts and their transparency log, attested issuance via OAuth 2.0
+       Token Exchange, per-token status-list revocation, and cryptographic
+       algorithm agility including hybrid post-quantum signing.  It also
+       hardens attested issuance in response to an adversarial security
+       review of the reference implementation: it makes an audience and a
+       verifiable expiry mandatory on the presented attestation, requires
+       the issuer to bound the delegated depth it grants, and clamps a
+       token's lifetime to the attestation it was minted on.  The issuer-
+       side requested-versus-permitted scope intersection is retained; the
+       enforcement point re-checks the chain independently.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-coetzee-oauth-spt-txn-tokens-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-coetzee-oauth-spt-txn-tokens-02
+    docidentifier:
+    - content: draft-coetzee-oauth-spt-txn-tokens-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-coetzee-oauth-spt-txn-tokens-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

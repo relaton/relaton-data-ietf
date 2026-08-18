@@ -1,0 +1,102 @@
+---
+id: draftambekaroauthepop03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: JSON Web Token (JWT) Profile for OAuth 2.0 Enveloped Proof of Possession
+    (EPOP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ambekar-oauth-epop-03
+docidentifier:
+- content: draft-ambekar-oauth-epop
+  type: Internet-Draft
+- content: draft-ambekar-oauth-epop-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ambekar-oauth-epop
+date:
+- type: published
+  at: '2026-07-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ashwin
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ambekar
+      completename:
+        language: en
+        content: Ashwin Ambekar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: eBay
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification defines a profile for OAuth 2.0 sender-constrained
+       credentials in which access tokens and refresh tokens are
+       cryptographically bound to the client's private key as a single
+       inseparable envelope.  Authorization code flows are also covered: the
+       client declares its public key binding via cnf.jkt in the EPOP token
+       presented at the token endpoint, ensuring the authorization code can
+       only be exchanged by the key-holding client; the code itself travels
+       as the standard code form parameter.  Unlike existing mechanisms,
+       EPOP provides proof-of-possession uniformly across both JWT and
+       opaque access tokens, and across HTTP and non-HTTP transports.  The
+       profile extends sender-constraining beyond HTTP to non-HTTP
+       transports including MQTT, Kafka, the Model Context Protocol (MCP),
+       gRPC, and SASL-based protocols such as those defined in [RFC7628].
+       It introduces atomic proof-of-possession key rotation, enabling
+       clients to rotate key pairs without disrupting active sessions, and
+       an offline-derived client nonce (cnonce) that eliminates the server-
+       issued nonce round-trip required by existing mechanisms — enabling
+       stateless proof validation critical for non-HTTP and high-throughput
+       deployments.  Authorization servers, resource servers, and clients
+       from different vendors can implement this profile interoperably.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ambekar-oauth-epop-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ambekar-oauth-epop-02
+    docidentifier:
+    - content: draft-ambekar-oauth-epop-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ambekar-oauth-epop-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,210 @@
+---
+id: drafthandetnettcdevhandling00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Handling of traffic characteristic deviation for DetNet
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-han-detnet-tc-dev-handling-00
+docidentifier:
+- content: draft-han-detnet-tc-dev-handling
+  type: Internet-Draft
+- content: draft-han-detnet-tc-dev-handling-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.han-detnet-tc-dev-handling
+date:
+- type: published
+  at: '2026-07-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Han
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Zhengxin
+      completename:
+        language: en
+        content: Han Zhengxin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chang
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Liu
+      completename:
+        language: en
+        content: Chang Liu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jinjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Yan
+      completename:
+        language: en
+        content: Jinjie Yan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jinoo
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Joung
+      completename:
+        language: en
+        content: Jinoo Joung
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sangmyung University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ran
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Pang
+      completename:
+        language: en
+        content: Ran Pang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Unicom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xiangyang
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Zhu
+      completename:
+        language: en
+        content: Xiangyang Zhu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Deterministic Networking (DetNet) relies on resource reservation to
+       guarantee bounded-latency forwarding, yet traffic characteristic
+       deviations from microbursts and flow aggregation frequently occur at
+       aggregation nodes.  Native handling approaches like direct packet
+       discard or best-effort forwarding lead to severe service degradation.
+
+       This document proposes an enhanced traffic characteristic deviation
+       solution for DetNet.  This solution specifies two complementary data-
+       plane policies: the squeezing policy defers deviated traffic to
+       subsequent timeslots within a configurable threshold while preserving
+       deterministic attributes to absorb transient bursts; the degrading
+       policy reclassifies over-threshold traffic to lower-priority queues
+       for graceful handling, avoiding unnecessary packet loss.  These
+       policies can be enabled independently or combined, ensuring the
+       preferential scheduling and preservation of deterministic service
+       traffic under deviation conditions.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-han-detnet-tc-dev-handling-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

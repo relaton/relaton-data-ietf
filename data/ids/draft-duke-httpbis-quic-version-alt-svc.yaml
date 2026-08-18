@@ -1,0 +1,80 @@
+---
+id: draftdukehttpbisquicversionaltsvc
+schema_version: v1.5.6
+formattedref:
+  content: draft-duke-httpbis-quic-version-alt-svc
+title:
+- language: en
+  script: Latn
+  content: An Alt-Svc Parameter and SvcParamKey for QUIC Versions
+docidentifier:
+- content: draft-duke-httpbis-quic-version-alt-svc
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>HTTP Alternative Services (Alt-Svc) describes how one origin's
+       resource can be accessed via a different protocol/host/port
+       combination.  Alternatives are advertised by servers using the Alt-
+       Svc header field or the ALTSVC frame.  This includes a protocol name,
+       which reuses Application Layer Protocol Negotiation (ALPN)
+       codepoints.  The "h3" codepoint indicates the availability of HTTP/3.
+       A client that uses such an alternative first makes a QUIC connection.
+       However, without a priori knowledge of which QUIC version to use,
+       clients might incur a round-trip latency penalty to complete QUIC
+       version negotiation, or forfeit desirable properties of a QUIC
+       version.  This document specifies a new Alt-Svc parameter that
+       specifies alternative supported QUIC versions, which substantially
+       reduces the chance of this penalty.
+
+       Similarly, clients can retrieve additional instructions about access
+       to services or resources via DNS SVCB and HTTP Resource Records.
+       This document also defines a new SvcParamKey for these Resource
+       Records, which specifies the specific QUIC versions in use.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-duke-httpbis-quic-version-alt-svc-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-00
+    docidentifier:
+    - content: draft-duke-httpbis-quic-version-alt-svc-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-duke-httpbis-quic-version-alt-svc-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-01
+    docidentifier:
+    - content: draft-duke-httpbis-quic-version-alt-svc-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-duke-httpbis-quic-version-alt-svc-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-02
+    docidentifier:
+    - content: draft-duke-httpbis-quic-version-alt-svc-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-duke-httpbis-quic-version-alt-svc-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-03
+    docidentifier:
+    - content: draft-duke-httpbis-quic-version-alt-svc-03
+      type: Internet-Draft
+      primary: true

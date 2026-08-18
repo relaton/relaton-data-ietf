@@ -1,0 +1,111 @@
+---
+id: draftboucadairdnsopprefix6401
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An EDNS0 Option for Sharing Pref64::/n
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-boucadair-dnsop-prefix64-01
+docidentifier:
+- content: draft-boucadair-dnsop-prefix64
+  type: Internet-Draft
+- content: draft-boucadair-dnsop-prefix64-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.boucadair-dnsop-prefix64
+date:
+- type: published
+  at: '2021-06-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mohamed
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Boucadair
+      completename:
+        language: en
+        content: Mohamed Boucadair
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Orange
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies an Extension Mechanisms for DNS (EDNS0)
+       option to convey the IPv6 prefix used to build IPv4-converted IPv6
+       addresses.  When conveyed in a DNS query, the option communicates the
+       IPv6 prefix used in the network from which the query was originated.
+       Such a network is assumed to enable a Network Address and Protocol
+       Translation from IPv6 clients to IPv4 servers (NAT64) function.
+       DNS64-capable servers will use that prefix to build synthesized AAAA
+       records, rather than relying on a preconfigured prefix.  When
+       conveyed in a DNS reply, the option conveys the IPv6 prefix that is
+       used by a DNS64-capable server to synthesized AAAA records.  Such
+       information helps to automatically detect mismatches between the
+       local NAT64 configuration and the one enforced at the DNS64 server.
+       Also, security-aware and validating hosts may use the new EDNS0
+       option to signal the presence of a NAT64 function.  That signal is
+       used by the DNS server to fill the additional section of the AAAA
+       reply in order to supply A RRs of the target.  Dual queries and
+       delays are thus avoided.
+
+       This document updates RFC 6147.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-boucadair-dnsop-prefix64-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-boucadair-dnsop-prefix64-00
+    docidentifier:
+    - content: draft-boucadair-dnsop-prefix64-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-boucadair-dnsop-prefix64-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-boucadair-dnsop-prefix64-02
+    docidentifier:
+    - content: draft-boucadair-dnsop-prefix64-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-boucadair-dnsop-prefix64-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,73 @@
+---
+id: draftlcurleymoqcluster00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: MoQ Cluster Extension
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lcurley-moq-cluster-00
+docidentifier:
+- content: draft-lcurley-moq-cluster
+  type: Internet-Draft
+- content: draft-lcurley-moq-cluster-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.lcurley-moq-cluster
+date:
+- type: published
+  at: '2026-08-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Luke
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Curley
+      completename:
+        language: en
+        content: Luke Curley
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a clustering extension for MoQ Transport
+       [moqt], used to build a mesh of relays.  Each namespace advertisement
+       carries the ordered list of Hop IDs it has traversed, starting with
+       the original publisher, plus the accumulated cost of that path.  A
+       receiver uses the list to detect routing loops and to identify which
+       advertisements come from the same publisher, and the cost to choose
+       between paths.  Each endpoint declares its own Hop ID during setup,
+       and the peer uses it to avoid advertising or serving a path that
+       already passed through that endpoint.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-lcurley-moq-cluster-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

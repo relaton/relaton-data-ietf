@@ -1,0 +1,50 @@
+---
+id: draftschrockhumanauthorizationbinding
+schema_version: v1.5.6
+formattedref:
+  content: draft-schrock-human-authorization-binding
+title:
+- language: en
+  script: Latn
+  content: Binding Named-Human Authorization Evidence into Agent-Action Records
+docidentifier:
+- content: draft-schrock-human-authorization-binding
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A recurring pattern spans the agent-action record formats now in
+       development: a record about an agent's action reserves a place for
+       "the human authorization" — an approver disposition, an authority
+       context, a human-override field, an actor slot, a signed grant, an
+       approval reference — and leaves its semantics undefined.  Each
+       format, reasonably, does not want to specify human-authorization
+       evidence itself; none, so far, says what filling the slot means.
+       This document defines that one thing, host-agnostically: how any
+       record binds named-human authorization evidence, either BY REFERENCE
+       (a content digest of the authorization artifact's canonical bytes) or
+       EMBEDDED (a compact, self-describing claim carrying named approvals
+       and optional distinct-human quorum semantics), with five requirements
+       that make the binding mean the same thing in every host: digest
+       grounding, action agreement, verified-versus-accepted discipline,
+       fail-closed absence, and embedded/referenced consistency.  The SCITT
+       signed-statement host family is expressed concretely (digest
+       selection, and the observed-absence statement that is the only way
+       absence of authorization becomes evidence); an informative appendix
+       maps the binding onto the reserved slots of eleven current documents.
+       This document defines no new authorization format: the referenced
+       evidence verifies under its own specification.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-schrock-human-authorization-binding-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schrock-human-authorization-binding-00
+    docidentifier:
+    - content: draft-schrock-human-authorization-binding-00
+      type: Internet-Draft
+      primary: true

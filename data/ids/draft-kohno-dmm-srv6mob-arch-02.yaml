@@ -1,0 +1,190 @@
+---
+id: draftkohnodmmsrv6mobarch02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Architecture Discussion on SRv6 Mobile User plane
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kohno-dmm-srv6mob-arch-02
+docidentifier:
+- content: draft-kohno-dmm-srv6mob-arch
+  type: Internet-Draft
+- content: draft-kohno-dmm-srv6mob-arch-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kohno-dmm-srv6mob-arch
+date:
+- type: published
+  at: '2020-09-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Miya
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Kohno
+      completename:
+        language: en
+        content: Miya Kohno
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Francois
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Clad
+      completename:
+        language: en
+        content: Francois Clad
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pablo
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Camarillo
+      completename:
+        language: en
+        content: Pablo Camarillo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zafar
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Ali
+      completename:
+        language: en
+        content: Zafar Ali
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Layer separation is a powerful concept in system architecture.  In
+       the area of mobility, by separating GTP-U that is the overlay tunnel,
+       and the IP transport network that is the underlay, the operation of
+       the mobile network and the transport network can be separated,
+       allowing them to evolve independently.
+
+       However, evolving individually at each layer promotes local
+       optimization and may result in non-optimal solutions overall in the
+       long run.
+
+       When a drastic architectural transition is required, for example, in
+       the 5G era where various SLAs and completely new data intensive
+       services are assumed, it is necessary to reconsider the architecture
+       holistically, not from the viewpoint of individual part.
+
+       One of important value propositions of SRv6 mobile user plane is to
+       create overlay with underlay optimization.
+
+       This document discusses the architecture implication of applying SRv6
+       mobile user plane.  Then it takes 5G use cases as an example, and
+       describes how these use cases are simply and effectively realized.
+       Thus it shows that SRv6 mobile use plane is a right architectural
+       choice for 5G era.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-kohno-dmm-srv6mob-arch-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kohno-dmm-srv6mob-arch-01
+    docidentifier:
+    - content: draft-kohno-dmm-srv6mob-arch-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-kohno-dmm-srv6mob-arch-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kohno-dmm-srv6mob-arch-03
+    docidentifier:
+    - content: draft-kohno-dmm-srv6mob-arch-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kohno-dmm-srv6mob-arch-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

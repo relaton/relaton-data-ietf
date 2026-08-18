@@ -1,0 +1,186 @@
+---
+id: draftietfaltopathvector10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'ALTO Extension: Path Vector'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-path-vector-10
+docidentifier:
+- content: draft-ietf-alto-path-vector
+  type: Internet-Draft
+- content: draft-ietf-alto-path-vector-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-alto-path-vector
+date:
+- type: published
+  at: '2020-03-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kai
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Gao
+      completename:
+        language: en
+        content: Kai Gao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sichuan University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sabine
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Randriamasy
+      completename:
+        language: en
+        content: Sabine Randriamasy
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "Y"
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: Y. R.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Y. Richard Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Yale University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jingxuan
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Jingxuan Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tongji University
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document is an extension to the base Application-Layer Traffic
+       Optimization protocol [RFC7285].  The current ALTO Cost Services
+       allow applications to obtain cost values on an end-to-end path
+       defined by its source and destination.  The present extension
+       provides abstracted information on particular network parts or
+       elements traversed by a path between its source and destination.
+       Examples of such abstracted parts are networks, data centers or
+       links.  This is useful for applications whose performance is impacted
+       by particular network parts they traverse or by their properties.
+       Applications having the choice among several connection paths may use
+       this information to select paths accordingly and improve their
+       performance.  In particular, they may infer that several paths share
+       common links and prevent traffic bottlenecks by avoiding such paths.
+       This document introduces a new cost type called Path Vector.  A Path
+       Vector is an array of entities that each identifies an abstracted
+       representation of a network part and that are called Abstract Network
+       Element (ANE).  Each ANE is defined by a set of properties.  ANE
+       properties are conveyed by an ALTO information resource called
+       "Property Map", that can be packed together with the Path Vectors in
+       a multipart response.  They can also be obtained via a separate ALTO
+       request to a Property Map. An ALTO Property Map is an extension to
+       the ALTO protocol, that is specified in another document entitled
+       "Unified Properties for the ALTO Protocol"
+       [I-D.ietf-alto-unified-props-new].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-alto-path-vector-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-path-vector-09
+    docidentifier:
+    - content: draft-ietf-alto-path-vector-09
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-alto-path-vector-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-path-vector-11
+    docidentifier:
+    - content: draft-ietf-alto-path-vector-11
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-alto-path-vector-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

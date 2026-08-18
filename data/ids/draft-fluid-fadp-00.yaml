@@ -1,0 +1,101 @@
+---
+id: draftfluidfadp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Fluid Agentic DeFi Protocol (FADP/1.0): HTTP-Native Micropayment Authentication
+    for Autonomous AI Agents'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-fluid-fadp-00
+docidentifier:
+- content: draft-fluid-fadp
+  type: Internet-Draft
+- content: draft-fluid-fadp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.fluid-fadp
+date:
+- type: published
+  at: '2026-04-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Abhijeeth
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ganji
+      completename:
+        language: en
+        content: Abhijeeth Ganji
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fluid Wallet
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Fluid Agentic DeFi Protocol (FADP), version
+       1.0.  FADP is an application-layer protocol layered atop HTTP that
+       enables autonomous AI agents to pay for access to web resources using
+       on-chain cryptocurrency transfers, with cryptographic proof of
+       payment embedded directly in HTTP headers.
+
+       FADP extends HTTP 402 (Payment Required) with two new header fields:
+       X-FADP-Required, which a server uses to communicate payment terms to
+       an agent, and X-FADP-Proof, which an agent uses to supply a
+       verifiable on-chain payment receipt.  A nonce-challenge mechanism
+       prevents proof replay.  An optional verification endpoint allows
+       third-party on-chain confirmation without requiring the verifying
+       party to run blockchain infrastructure.
+
+       FADP is designed for agent-to-server and agent-to-agent payment flows
+       operating at sub-dollar granularity (micropayments), where credit-
+       card or OAuth-based billing is impractical.  The reference
+       implementation targets USDC on Base (an Ethereum Layer 2), though the
+       protocol is token- and chain-agnostic.</p>
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-fluid-fadp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-fluid-fadp-01
+    docidentifier:
+    - content: draft-fluid-fadp-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-fluid-fadp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

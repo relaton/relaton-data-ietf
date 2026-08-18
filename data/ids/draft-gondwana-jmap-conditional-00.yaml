@@ -1,0 +1,82 @@
+---
+id: draftgondwanajmapconditional00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: JMAP Conditional Set
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gondwana-jmap-conditional-00
+docidentifier:
+- content: draft-gondwana-jmap-conditional
+  type: Internet-Draft
+- content: draft-gondwana-jmap-conditional-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gondwana-jmap-conditional
+date:
+- type: published
+  at: '2026-06-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bron
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Gondwana
+      completename:
+        language: en
+        content: Bron Gondwana
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fastmail
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The JMAP base protocol ([JMAP-CORE]) provides the Foo/set method for
+       creating, updating, and destroying objects.  It offers a single
+       concurrency control, the "ifInState" argument, which guards an entire
+       object type: if any object of that type has changed, the whole method
+       is rejected.
+
+       This extension adds a finer, per-object conditional mechanism.  A
+       client may require that an individual update or destroy proceed only
+       if the target object still matches a set of expected property values,
+       expressed using the JMAP PatchObject already defined for updates.
+       This provides optimistic concurrency control scoped to a single
+       object — the equivalent of an HTTP "If-Match" precondition — for any
+       JMAP data type.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gondwana-jmap-conditional-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

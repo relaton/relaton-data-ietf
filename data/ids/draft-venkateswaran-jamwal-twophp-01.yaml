@@ -1,0 +1,158 @@
+---
+id: draftvenkateswaranjamwaltwophp01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 2-Phase HTTP Protocol for Distributed Transaction Tracking (2PHP-DTT)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-venkateswaran-jamwal-twophp-01
+docidentifier:
+- content: draft-venkateswaran-jamwal-twophp
+  type: Internet-Draft
+- content: draft-venkateswaran-jamwal-twophp-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.venkateswaran-jamwal-twophp
+date:
+- type: published
+  at: '2026-07-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Barathan
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Venkateswaran
+      completename:
+        language: en
+        content: Barathan Venkateswaran
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Salesforce
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Aditya
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Jamwal
+      completename:
+        language: en
+        content: Aditya Jamwal
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Salesforce
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the 2-Phase HTTP Protocol for Distributed
+       Transaction Tracking (2PHP-DTT), a backward-compatible, opt-in
+       extension to HTTP mutation semantics that introduces a two-phase
+       handshake at service request boundaries. 2PHP ensures that a mutation
+       request is durably registered on both the client and the server
+       before any processing commences, addressing a structural gap in
+       existing HTTP REST semantics where no standard mechanism exists to
+       confirm bilateral intent registration prior to execution.
+
+       The acronym DTT expands to Distributed Transaction Tracking.  2PHP is
+       not Two-Phase Commit (2PC).  Microservices architectures deliberately
+       avoid the cross-service locking and blocking that 2PC requires. 2PHP
+       standardizes the intent-tracking pattern that implementations
+       currently build ad hoc, providing a common wire contract and a
+       queryable ledger of registered intent without introducing a
+       distributed transaction coordinator.
+
+       A primary motivator for this work is the growing use of agent-driven
+       HTTP invocations, including Model Context Protocol (MCP) tool calls
+       and agent-to-agent (A2A) integrations.  When an agent does not
+       receive a response, its default behavior is to retry.  Absent a
+       queryable record of prior intent, retries pile onto services that may
+       already be overwhelmed, causing deadlocks, resource exhaustion, and
+       full outages. 2PHP's Phase 1 ledger record enables the client to
+       inspect whether the prior intent was registered before issuing a
+       retry, breaking the retry-storm feedback loop at the protocol layer.
+
+       2PHP operates at the HTTP protocol layer, requires no new transport
+       mechanisms, and is composable across independently operating service
+       boundaries.  This document further defines a standardized Intent
+       Ledger model for durable, queryable, cross-service correlation of
+       request intent, distinct from execution telemetry provided by
+       distributed tracing systems.
+
+       This document does not claim novelty over existing intent-tracking,
+       idempotency, or distributed-tracing patterns.  Its goal is to define
+       a common HTTP-layer wire contract and a common ledger schema so that
+       a single reference implementation--packaged as a library or framework
+       module--can serve multiple deployments, replacing the per-team ad hoc
+       implementations that currently reinvent this pattern.
+
+       This document defines the protocol headers, phase state machine,
+       idempotency and replay behavior, the three-tier Intent Ledger
+       architecture, cross-service correlation model, and IANA registration
+       of the associated HTTP header fields. 2PHP-DTT targets the
+       synchronous request-response boundary, where no standard
+       acknowledgement primitive exists to confirm bilateral intent
+       registration before processing.  Asynchronous HTTP patterns -- 202
+       Accepted with Location-based polling in HTTP Semantics, Prefer:
+       respond-async negotiation, webhooks, and message-broker delivery --
+       already provide durable acknowledgement of intent by construction,
+       and are therefore out of scope for this specification.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-venkateswaran-jamwal-twophp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-venkateswaran-jamwal-twophp-00
+    docidentifier:
+    - content: draft-venkateswaran-jamwal-twophp-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-venkateswaran-jamwal-twophp-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,140 @@
+---
+id: draftietfdnsopdnssecbootstrapping08
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Automatic DNSSEC Bootstrapping using Authenticated Signals from the Zone's
+    Operator
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-dnssec-bootstrapping-08
+docidentifier:
+- content: draft-ietf-dnsop-dnssec-bootstrapping
+  type: Internet-Draft
+- content: draft-ietf-dnsop-dnssec-bootstrapping-08
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-dnsop-dnssec-bootstrapping
+date:
+- type: published
+  at: '2024-04-11'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Peter
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Thomassen
+      completename:
+        language: en
+        content: Peter Thomassen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: deSEC, Secure Systems Engineering
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nils
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Wisiol
+      completename:
+        language: en
+        content: Nils Wisiol
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: deSEC, Technische Universität Berlin
+version:
+- content: '08'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document introduces an in-band method for DNS operators to
+       publish arbitrary information about the zones they are authoritative
+       for, in an authenticated fashion and on a per-zone basis.  The
+       mechanism allows managed DNS operators to securely announce DNSSEC
+       key parameters for zones under their management, including for zones
+       that are not currently securely delegated.
+
+       Whenever DS records are absent for a zone's delegation, this signal
+       enables the parent's registry or registrar to cryptographically
+       validate the CDS/CDNSKEY records found at the child's apex.  The
+       parent can then provision DS records for the delegation without
+       resorting to out-of-band validation or weaker types of cross-checks
+       such as "Accept after Delay".
+
+       This document deprecates the DS enrollment methods described in
+       Section 3 of RFC 8078 in favor of Section 4 of this document, and
+       also updates RFC 7344.
+
+       [ Ed note: This document is being collaborated on at
+       https://github.com/desec-io/draft-ietf-dnsop-dnssec-bootstrapping/
+       (https://github.com/desec-io/draft-ietf-dnsop-dnssec-bootstrapping/).
+       The authors gratefully accept pull requests. ]</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-dnssec-bootstrapping-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-dnssec-bootstrapping-07
+    docidentifier:
+    - content: draft-ietf-dnsop-dnssec-bootstrapping-07
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-dnsop-dnssec-bootstrapping-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-dnssec-bootstrapping-09
+    docidentifier:
+    - content: draft-ietf-dnsop-dnssec-bootstrapping-09
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-dnsop-dnssec-bootstrapping-08
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

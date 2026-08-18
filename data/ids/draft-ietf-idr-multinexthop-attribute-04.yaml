@@ -1,0 +1,186 @@
+---
+id: draftietfidrmultinexthopattribute04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP MultiNexthop Attribute
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-multinexthop-attribute-04
+docidentifier:
+- content: draft-ietf-idr-multinexthop-attribute
+  type: Internet-Draft
+- content: draft-ietf-idr-multinexthop-attribute-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-idr-multinexthop-attribute
+date:
+- type: published
+  at: '2025-03-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kaliraj
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Vairavakkalai
+      completename:
+        language: en
+        content: Kaliraj Vairavakkalai
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeyananth
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: J. M.
+      surname:
+        language: en
+        content: Jeganathan
+      completename:
+        language: en
+        content: Jeyananth Minto Jeganathan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Juniper Networks, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mohan
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Nanduri
+      completename:
+        language: en
+        content: Mohan Nanduri
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Avinash
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: A. R.
+      surname:
+        language: en
+        content: Lingala
+      completename:
+        language: en
+        content: Avinash Reddy Lingala
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AT&T
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in
+       an Update message.  This nexthop can be encoded in either the top-
+       level BGP-Nexthop attribute (code 3), or inside the MP_REACH_NLRI
+       attribute (code 14).  Forwarding information related to the nexthop
+       is scattered across various attributes, extended communities or the
+       NLRI field.
+
+       This document defines a new optional non-transitive BGP attribute
+       called "MultiNexthop (MNH)" with IANA code TBD.  The MNH provides two
+       things: it allows carrying the Nexthop and related forwarding
+       information in one BGP attribute.  The MNH also enables carrying an
+       ordered set of multiple Nexthops in the same attribute, with
+       forwarding information scoped on a per Nexthop basis.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-multinexthop-attribute-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-multinexthop-attribute-03
+    docidentifier:
+    - content: draft-ietf-idr-multinexthop-attribute-03
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-multinexthop-attribute-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-multinexthop-attribute-05
+    docidentifier:
+    - content: draft-ietf-idr-multinexthop-attribute-05
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-idr-multinexthop-attribute-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

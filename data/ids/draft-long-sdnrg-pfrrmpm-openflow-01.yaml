@@ -1,0 +1,217 @@
+---
+id: draftlongsdnrgpfrrmpmopenflow01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Priority based Flow Rule Request Message Processing Mechanism in the OpenFlow
+    Switch
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-long-sdnrg-pfrrmpm-openflow-01
+docidentifier:
+- content: draft-long-sdnrg-pfrrmpm-openflow
+  type: Internet-Draft
+- content: draft-long-sdnrg-pfrrmpm-openflow-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.long-sdnrg-pfrrmpm-openflow
+date:
+- type: published
+  at: '2016-10-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xinjian
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Long
+      completename:
+        language: en
+        content: Xinjian Long
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Beijing University of Post and Telecommunication
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wendong
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Wendong Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Beijing University of Post and Telecommunication
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xiangyang
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Gong
+      completename:
+        language: en
+        content: Xiangyang Gong
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Beijing University of Post and Telecommunication
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xirong
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Que
+      completename:
+        language: en
+        content: Xirong Que
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Beijing University of Post and Telecommunication
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Qinglei
+      - language: en
+        script: Latn
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: Qi
+      completename:
+        language: en
+        content: Qinglei Qi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Beijing University of Post and Telecommunication
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>In the SDN, the controller is in charge of the maintenance and
+       administration of variable aspects like the network topology and the
+       network resources etc. of the whole network.  Administrative
+       strategies are made upon these work and sent to the switches from the
+       controller so as to instruct the network devices to apply appropriate
+       policies to the data flows.  As for the data packet which reaches the
+       ingress OpenFlow switch for the first time, the packet itself or a
+       fraction of the packet will be encapsulated into a packet-in message
+       and will be sent to the controller to request for a new flow rule.
+       After the flow-mod message and the packet-out message are sent back
+       to the switch from the controller, the determined forwarding action
+       will be applied to the certain data flow.
+
+       So far, the inbound latency caused by the creation of the packet-in
+       message and the outbound latency caused by the receive and the
+       execution of the flow-mod message are highlighted when it comes to
+       the concerns about the latency and the effectiveness of the data
+       transportation in the SDN[Mazu].  Attention to the studies on the
+       processing order of the flow rule request message like the packet-in
+       message and the packet-out message is comparatively low.  As the SDN
+       continually grows in scale and complexity and the packets' forwarding
+       policies become more recursive and dynamic, the number of the
+       switches under the administration of the same controller is elevated
+       and unavoidably causes the network congestion problem widespread.
+       The scale of modern networks and data-centers and the associated
+       operational expense deteriorates the delay problem in the network
+       with congestion.  The ability to help the services with high priority
+       be processed without delay becomes critical.
+
+       This document proposes the combination of appending a priority tag to
+       the packet-in message and the Priority based Flow Rule Request
+       Message Processing Mechanism(PFRRMPM) as a solution to help the data
+       flow with high priority or lantency-sensitive to acquire the
+       forwarding rule without or with shorter waiting latency when there
+       are excess flow rule request messages in the SDN.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-long-sdnrg-pfrrmpm-openflow-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-long-sdnrg-pfrrmpm-openflow-00
+    docidentifier:
+    - content: draft-long-sdnrg-pfrrmpm-openflow-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-long-sdnrg-pfrrmpm-openflow-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

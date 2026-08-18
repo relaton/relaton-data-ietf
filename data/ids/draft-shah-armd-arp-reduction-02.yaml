@@ -1,0 +1,144 @@
+---
+id: draftshaharmdarpreduction02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: ARP Broadcast Reduction for Large Data Centers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-shah-armd-arp-reduction-02
+docidentifier:
+- content: draft-shah-armd-arp-reduction
+  type: Internet-Draft
+- content: draft-shah-armd-arp-reduction-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.shah-armd-arp-reduction
+date:
+- type: published
+  at: '2011-10-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Anoop
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Ghanwani
+      completename:
+        language: en
+        content: Anoop Ghanwani
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Brocade
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Himanshu
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: H. C.
+      surname:
+        language: en
+        content: Shah
+      completename:
+        language: en
+        content: Himanshu C. Shah
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ciena Corp
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "N"
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N. N.
+      surname:
+        language: en
+        content: Bitar
+      completename:
+        language: en
+        content: Dr. Nabil N. Bitar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Verizon
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>With advent of server virtualization technologies, a host is able to
+    \n   support multiple Virtual Machines (VMs) in a single physical \n   machine.
+    Data Centers can leverage these capabilities to instantiate \n   on the order
+    of 10s to 100s of VMs in a single server with current \n   technology.  It is
+    conceivable that this number can be much higher \n   in the future. Each VM operates
+    as an independent IP host with a set \n   of Virtual Network Interface Cards (vNICs),
+    each having its own MAC \n   address and mapping to a physical Ethernet interface.
+    These physical \n   servers are typically installed in a rack with their Ethernet
+    \n   interfaces connected to a top-of-the-rack (ToR) switch. The ToR \n   switches
+    are interconnected through End-of-the-Row (EoR) or \n   aggregation switches which
+    are in turn connected to core switches.  \n    \n   As discussed in [ARP-Problem]
+    the host VMs use ARP broadcasts to \n   find other host VMs and use periodic (broadcast)
+    Gratuitous ARPs to \n   refresh their IP to MAC address binding in other VM hosts.
+    Such \n   broadcasts in a large data center with potentially thousands of VM \n
+    \  hosts in a Layer 2 based topology can overwhelm the network. \n    \n   This
+    memo proposes mechanisms to reduce the number of broadcasts \n   that are sent
+    throughout the network. This is done by having the \n   ToRs intelligently process
+    ARP and frames, rather than simply \n   broadcasting them throughout the broadcast
+    domain.  \n    \n   While this document addresses ARP, the Neighbor Discovery
+    mechanisms \n   used by the IPv6 hosts that make use of multicast rather than
+    \n   broadcast also pose similar issues in the Data Center. The solutions \n   defined
+    herein should be equally applicable to hosts running IPv6.  \n   The details will
+    be specified in a subsequent revision.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-shah-armd-arp-reduction-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

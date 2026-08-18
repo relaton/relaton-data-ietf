@@ -1,0 +1,237 @@
+---
+id: draftvroonenidrbgpbestpathnhselection03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP best path next-hop selection enhancements
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vroonen-idr-bgp-bestpath-nh-selection-03
+docidentifier:
+- content: draft-vroonen-idr-bgp-bestpath-nh-selection
+  type: Internet-Draft
+- content: draft-vroonen-idr-bgp-bestpath-nh-selection-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vroonen-idr-bgp-bestpath-nh-selection
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Olivier
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Vroonen
+      completename:
+        language: en
+        content: Olivier Vroonen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Stephane
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Litkowski
+      completename:
+        language: en
+        content: Stephane Litkowski
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: kandhla
+      - language: en
+        script: Latn
+        initial: '7'
+      - language: en
+        script: Latn
+        initial: '9'
+      - language: en
+        script: Latn
+        initial: '1'
+      - language: en
+        script: Latn
+        initial: '1'
+      - language: en
+        script: Latn
+        initial: '1'
+      - language: en
+        script: Latn
+        initial: '1'
+      - language: en
+        script: Latn
+        initial: '9'
+      - language: en
+        script: Latn
+        initial: '3'
+      - language: en
+        script: Latn
+        initial: '6'
+      - language: en
+        script: Latn
+        initial: '1'
+      - language: en
+        script: Latn
+        initial: '9'
+      - language: en
+        script: Latn
+        initial: '1'
+      - language: en
+        script: Latn
+        initial: '1'
+      formatted_initials:
+        language: en
+        content: 7. 9. 1. 1. 1. 1. 9. 3. 6. 1. 9. 1. 1.
+      surname:
+        language: en
+        content: Chandi
+      completename:
+        language: en
+        content: kandhla Chandi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Bell Canada
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Dong
+      completename:
+        language: en
+        content: Jie Dong
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Israel
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Means
+      completename:
+        language: en
+        content: Israel Means
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AT&T
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>BGP [RFC4271] has originally been designed to carry IPv4 routing
+       information over the Internet.  IP routing being "hop-by-hop" in
+       nature, NEXT_HOP which purpose is to carry the address of the next
+       router to send the IP packet to.  In BGP, the next-hop may not be a
+       directly connected router, hence, when evaluating paths, a BGP
+       speaker must determine if the next-hop is resolvable and, if so,
+       determine the internal cost to reach it.
+
+       The incremental use of tunneling technologies to carry traffic
+       between routers (e.g.: GRE, MPLS, SR-MPLS, SRv6...) may violate the
+       assumption that the address carried in the NEXT_HOP is representative
+       of the actual forwarding next-hop.  These technologies decouple the
+       BGP control-plane's view of the next-hop from the data-plane's actual
+       forwarding endpoint.  This document describes the problems that arise
+       from this decoupling.  These problems include sub-optimal path
+       selection, incorrect resolvability tracking of the forwarding path
+       leading to traffic drop or misrouting, and others.  This document
+       specifies how BGP obtains resolvability, preference, metric, and
+       tracking information from resolution of the forwarding path and uses
+       those values as inputs to BGP path selection.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-vroonen-idr-bgp-bestpath-nh-selection-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vroonen-idr-bgp-bestpath-nh-selection-02
+    docidentifier:
+    - content: draft-vroonen-idr-bgp-bestpath-nh-selection-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vroonen-idr-bgp-bestpath-nh-selection-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

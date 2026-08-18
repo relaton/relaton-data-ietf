@@ -1,0 +1,54 @@
+---
+id: draftratnawathttpapiasyncproblemdetails
+schema_version: v1.5.6
+formattedref:
+  content: draft-ratnawat-httpapi-async-problem-details
+title:
+- language: en
+  script: Latn
+  content: Problem Details for Asynchronous Job Failures
+docidentifier:
+- content: draft-ratnawat-httpapi-async-problem-details
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>HTTP APIs that process work asynchronously need a standard way to
+       report job failures.  "Problem Details for HTTP APIs" (RFC 9457)
+       provides the envelope; this document defines extension members that
+       fill it with asynchronous-job-specific context.
+
+       Eight extension members are specified: "jobId", "jobStatus",
+       "submittedAt", "completedAt", "retryable", "retryAfter",
+       "processingStage", and "correlationId".  A ninth member, "results",
+       supports batch operations.  Together they let a server describe which
+       job failed, when, at what pipeline stage, and whether a retry is
+       advisable -- in a single, machine-readable JSON (RFC 8259) object
+       that works equally well in an HTTP response body, a message-broker
+       payload, or a webhook callback.
+
+       Although the primary motivation is structured error reporting for
+       failed jobs, the extension members are equally useful for
+       communicating successful job outcomes (e.g., a COMPLETED status with
+       timing information).
+
+       This document does NOT redefine how to submit, poll, or cancel
+       asynchronous jobs; those mechanics are already covered by "HTTP
+       Semantics" (RFC 9110) (202 Accepted), "Prefer Header for HTTP" (RFC
+       7240) (respond-async), and emerging IETF work on long-running
+       operations.  Instead, it focuses exclusively on the structured
+       reporting gap that remains after a job reaches a terminal state.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ratnawat-httpapi-async-problem-details-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ratnawat-httpapi-async-problem-details-00
+    docidentifier:
+    - content: draft-ratnawat-httpapi-async-problem-details-00
+      type: Internet-Draft
+      primary: true

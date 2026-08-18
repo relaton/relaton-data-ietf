@@ -1,0 +1,112 @@
+---
+id: drafthopleyx402compositetrustquery01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Composite Trust Query Response Format for Agentic-Payment Audit Chains
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-composite-trust-query-01
+docidentifier:
+- content: draft-hopley-x402-composite-trust-query
+  type: Internet-Draft
+- content: draft-hopley-x402-composite-trust-query-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hopley-x402-composite-trust-query
+date:
+- type: published
+  at: '2026-05-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: H. C.
+      surname:
+        language: en
+        content: Mr
+      completename:
+        language: en
+        content: MR CHRISTOPHER HOPLEY
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: AlgoVoi
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a composite trust query response format for
+       agentic-payment audit chains.  The format records a verifier's
+       categorical conclusion over an audit chain composed of compliance,
+       settlement, cancellation, and refund receipts, in response to a
+       stated query.
+
+       The response format uses a closed four-element enumeration of
+       categorical outcomes (TRUSTED, PROVISIONAL, INSUFFICIENT_EVIDENCE,
+       UNTRUSTED).  The four-state enumeration captures the operationally-
+       distinct decision space: proceed, proceed-with-caution, hold-pending-
+       more-data, halt.  Collapsing to three values loses the distinction
+       between INSUFFICIENT_EVIDENCE ("we could not verify either way") and
+       UNTRUSTED ("we verified and the answer is no"), which matters for
+       operator dashboards, regulator reporting, and downstream automated
+       decision-making.
+
+       The format is verifier-emitted and audit-chain-anchored.  A verifier
+       walks an audit chain composed of compliance receipts (draft-hopley-
+       x402-compliance-receipt), settlement attestations (draft-hopley-x402-
+       settlement-attestation), cancellation receipts (draft-hopley-x402-
+       cancellation-receipt), and refund receipts (draft-hopley-x402-refund-
+       receipt), applies a structured query identified by content-addressed
+       reference, and emits a single composite-trust-claim response
+       anchoring the chain by its content-addressed root.
+
+       The format composes above the four receipt formats under the same
+       canonicalisation discipline (draft-hopley-x402-canonicalisation-jcs).
+       Regulators, dashboards, and downstream agents consuming the response
+       get a single byte-deterministic statement of the trust posture
+       without re-walking the underlying chain.  The chain remains
+       independently verifiable at the response's chain_ref content-address.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hopley-x402-composite-trust-query-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-composite-trust-query-00
+    docidentifier:
+    - content: draft-hopley-x402-composite-trust-query-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hopley-x402-composite-trust-query-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

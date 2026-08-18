@@ -1,0 +1,88 @@
+---
+id: draftzehavioauthauthzreqdelchain00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: OAuth Authorization Request Delegation Chain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-authz-req-del-chain-00
+docidentifier:
+- content: draft-zehavi-oauth-authz-req-del-chain
+  type: Internet-Draft
+- content: draft-zehavi-oauth-authz-req-del-chain-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zehavi-oauth-authz-req-del-chain
+date:
+- type: published
+  at: '2026-08-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yaron
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Zehavi
+      completename:
+        language: en
+        content: Yaron Zehavi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Raiffeisen Bank International
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Brokered OAuth redirect authorization requests involve intermediary
+       authorization servers between a downstream client and the upstream
+       authorization server that obtains user consent and issues tokens.
+       Such deployments have security risks because the upstream
+       authorization server sees only the immediate OAuth client and is
+       unaware of the downstream client or intermediary brokers obtaining
+       its response.
+
+       This document defines an informative OAuth 2.0 profile for carrying a
+       verifiable, signed authorization request delegation chain as a RAR
+       authorization_details object [RFC9396].  Each node in the chain is a
+       JSON object signed by the attesting authorization server or broker
+       using detached JWS [RFC7515], attesting its validated client, hash-
+       linked to the previous node, allowing the upstream authorization
+       server to validate the exact delegation path before issuing tokens.
+
+       This document does not define new OAuth endpoints, grant types, error
+       codes, token formats, token response parameters, or token request
+       parameters.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zehavi-oauth-authz-req-del-chain-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

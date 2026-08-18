@@ -1,0 +1,121 @@
+---
+id: draftrobertmlsslim01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SlimMLS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-robert-mls-slim-01
+docidentifier:
+- content: draft-robert-mls-slim
+  type: Internet-Draft
+- content: draft-robert-mls-slim-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.robert-mls-slim
+date:
+- type: published
+  at: '2026-07-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raphael
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Robert
+      completename:
+        language: en
+        content: Raphael Robert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Phoenix R&D
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Konrad
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Kohbrok
+      completename:
+        language: en
+        content: Konrad Kohbrok
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Phoenix R&D
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines SlimMLS, an extension to the Messaging Layer
+       Security (MLS) protocol for reducing wire and per-client storage
+       overhead in groups that use ciphersuites with large public keys,
+       ciphertexts, signatures, and credentials.  SlimMLS replaces many
+       large objects that appear in MLS authenticated or transcript-hashed
+       structures with typed hash references.  Clients resolve the
+       referenced objects only when needed, using a per-message carrier, a
+       local cache, or an application-specific retrieval channel.  The
+       extension is most useful when an independent Delivery Service can
+       assist with retrieval and per-recipient delivery, although local
+       caching and delayed fetching also help without such assistance.
+       SlimMLS defines slim variants of KeyPackage, Commit, Welcome,
+       GroupInfo, and message framing.  When placing a signature outside an
+       encrypted envelope would reveal the signer, SlimMLS keeps the
+       signature inside the ciphertext.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-robert-mls-slim-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-robert-mls-slim-00
+    docidentifier:
+    - content: draft-robert-mls-slim-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-robert-mls-slim-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
