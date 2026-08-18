@@ -1,0 +1,37 @@
+---
+id: draftseemannquicstreamgroups
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: QUIC Stream Groups
+  format: text/plain
+docidentifier:
+- content: draft-seemann-quic-stream-groups
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>QUIC ([RFC9000]) defines a few different mechanism flow control mechanisms:
+    Stream flow control, connection-level flow control and flow control for the number
+    of (unidirectional / bidirectional) streams This allows a single application running
+    on of a QUIC connection to apply backpressure. However, when multiple independent
+    applications share a single underlying QUIC connection, these mechanisms are not
+    sufficient to prevent one resource-hungry application from consuming all the resources
+    (streams and / or connection-level flow control credit) available on the connection,
+    effectively starving the other application.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-seemann-quic-stream-groups-00
+      format: text/plain
+    docidentifier:
+    - content: draft-seemann-quic-stream-groups-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

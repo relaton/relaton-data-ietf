@@ -1,0 +1,38 @@
+---
+id: draftbrigmdeterministicrp
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Deterministic RP (D-RP) Specification
+  format: text/plain
+docidentifier:
+- content: draft-brigm-deterministicrp
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies the Deterministic Rendezvous Point (D-RP) mechanism
+    for Protocol Independent Multicast (PIM) Sparse Mode (SM) networks. It intends
+    to provide a simple and robust RP service. The mechanism is deterministic since
+    it elects the highest priority candidate to be the D-RP from those available for
+    each IP address family. If a D-RP fails, the election process begins again using
+    the remaining C-RPs for the IP address family. If no candidates are availabe,
+    the network will transition to PIM Dense Mode (DM) routing for that IP address
+    family. In the future if C-RPs emerge for the address family, the network will
+    elect a new D-RP and return to operations with PIM SM routing.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-brigm-deterministicrp-00
+      format: text/plain
+    docidentifier:
+    - content: draft-brigm-deterministicrp-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

@@ -1,0 +1,39 @@
+---
+id: draftgont6manipv6atomicfragments
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Processing of IPv6 "atomic" fragments
+  format: text/plain
+docidentifier:
+- content: draft-gont-6man-ipv6-atomic-fragments
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>IPv6 allows packets to contain a Fragment Header, without the packet
+    being actually fragmented into multiple pieces. Such packets typically result
+    from hosts that have received an ICMPv6 "Packet Too Big" error message that advertises
+    a "Next-Hop MTU" smaller than 1280 bytes, and are currently processed by hosts
+    as "fragmented traffic". By forging ICMPv6 "Packet Too Big" error messages an
+    attacker can cause hosts to employ "atomic fragments", and the launch any fragmentation-based
+    attacks against such traffic. This document discusses the generation of the aforementioned
+    "atomic fragments", the corresponding security implications, and formally updates
+    RFC 2460 and RFC 5722 such that the attack vector based on "atomic fragments"
+    is completely eliminated.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gont-6man-ipv6-atomic-fragments-00
+      format: text/plain
+    docidentifier:
+    - content: draft-gont-6man-ipv6-atomic-fragments-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

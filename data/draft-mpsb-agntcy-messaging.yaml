@@ -1,0 +1,64 @@
+---
+id: draftmpsbagntcymessaging
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: An Overview of Messaging Systems and Their Applicability to Agentic AI
+  format: text/plain
+docidentifier:
+- content: draft-mpsb-agntcy-messaging
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Agentic AI systems require messaging infrastructure that supports real-time
+    collaboration, high-volume streaming, and dynamic group coordination across distributed
+    networks. Traditional protocols like AMQP [AMQP], MQTT [MQTT], and NATS [NATS]
+    address some requirements but fall short on security, particularly regarding post-compromise
+    protection and forward secrecy essential for autonomous agents handling sensitive
+    data. This document analyzes six messaging protocols—AMQP, MQTT, NATS, AMQP over
+    WebSockets, Kafka, and AGNTCY SLIM—across dimensions critical for GenAI agent
+    systems: streaming performance, delivery guarantees, security models, and operational
+    complexity. We examine how each protocol's design decisions impact agentic AI
+    deployments, from lightweight edge computing scenarios to large-scale multi- organizational
+    collaborations. AGNTCY SLIM emerges as a purpose-built solution, integrating Message
+    Layer Security (MLS) [RFC9420] with gRPC [gRPC] over HTTP/2 [RFC9113] to provide
+    end-to-end encryption with forward secrecy, efficient streaming, and OAuth-based
+    authentication [RFC6749]. Unlike transport-layer security approaches, SLIM's MLS
+    implementation ensures secure communication even through untrusted intermediaries
+    while supporting dynamic group membership changes essential for collaborative
+    AI agents.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mpsb-agntcy-messaging-00
+      format: text/plain
+    docidentifier:
+    - content: draft-mpsb-agntcy-messaging-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mpsb-agntcy-messaging-01
+      format: text/plain
+    docidentifier:
+    - content: draft-mpsb-agntcy-messaging-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mpsb-agntcy-messaging-02
+      format: text/plain
+    docidentifier:
+    - content: draft-mpsb-agntcy-messaging-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

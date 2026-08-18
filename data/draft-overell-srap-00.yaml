@@ -1,0 +1,85 @@
+---
+id: draftoverellsrap00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Simple Roaming Authentication Protocol: SRAP'
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-overell-srap-00
+docidentifier:
+- content: draft-overell-srap-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.overell-srap
+  type: IETF
+  scope: anchor
+docnumber: I-D.overell-srap
+date:
+- type: published
+  at: '1998-02-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Paul
+      - language: en
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Overell
+      completename:
+        language: en
+        content: Paul Overell
+    affiliation:
+    - organization:
+        name:
+        - content: Demon Internet Ltd
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The Simple Roaming Authentication Protocol is intended to provide an
+    authentication facility for other non-authenticated protocols. It utilises registered
+    SASL [SASL] mechanisms. This protocol has been developed in order that an ISP's
+    roaming customers can be authenticated when connecting via other networks or ISPs.
+    Rather than deploying new client software to handle authenticating versions of
+    all protocols (SMTP, POP3, NNTP etc) a single SRAP applet is deployed that handles
+    the authentication for all other protocols. When the server of a non-authenticated
+    protocol wishes to authenticate a client the server starts another connection
+    back to the client using SRAP. The SRAP conversation authenticates the client
+    to the server. The original non-authenticated protocol can now proceed. For example
+    with SMTP consider two machines Alice's and Bob's. Alice's runs an SMTP client
+    and a SRAP authenticatee; Bob's runs an SMTP server and a SRAP authenticator.
+    Alice's machine connects to Bob's using SMTP. SMTP does not support authentication
+    so another connection is made back from Bob's machine to Alice's, this time using
+    SRAP. The SRAP conversation authenticates Alice to Bob. The SMTP conversation
+    can now proceed.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-overell-srap-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

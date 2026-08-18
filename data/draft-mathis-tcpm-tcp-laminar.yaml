@@ -1,0 +1,53 @@
+---
+id: draftmathistcpmtcplaminar
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Laminar TCP and the case for refactoring TCP congestion control
+  format: text/plain
+docidentifier:
+- content: draft-mathis-tcpm-tcp-laminar
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The primary state variables used by all TCP congestion control algorithms,
+    cwnd and ssthresh, are heavily overloaded, carrying different semantics in different
+    states. This leads to excess implementation complexity and poorly defined behaviors
+    under some combinations of events, such as application stalls during loss recovery.
+    We propose a new framework for TCP congestion control, and to recast current standard
+    algorithms to use new state variables. This new framework will not generally change
+    the behavior of any of the primary congestion control algorithms when they are
+    invoked in isolation. It will permit new algorithms with better behaviors in many
+    corner cases, such as when two distinct primary algorithms are invoked concurrently.
+    It will also foster the creation of new algorithms to address some events that
+    are poorly treated by today's standards. For the vast majority of traditional
+    algorithms the transformation to the new state variables is completely straightforward.
+    However, the resulting implementation is likely to technically be in violation
+    of existing TCP standards, even if it is fully compliant with their principles
+    and intent.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mathis-tcpm-tcp-laminar-00
+      format: text/plain
+    docidentifier:
+    - content: draft-mathis-tcpm-tcp-laminar-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mathis-tcpm-tcp-laminar-01
+      format: text/plain
+    docidentifier:
+    - content: draft-mathis-tcpm-tcp-laminar-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

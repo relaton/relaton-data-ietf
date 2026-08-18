@@ -1,0 +1,82 @@
+---
+id: draftietfdnsinddefupd00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Deferred Dynamic Updates in the Domain Name System (DNS DEFUPD)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsind-defupd-00
+docidentifier:
+- content: draft-ietf-dnsind-defupd-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-dnsind-defupd
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-dnsind-defupd
+date:
+- type: published
+  at: '1996-05-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Paul
+      - language: en
+        initial: P
+      - language: en
+        initial: A
+      formatted_initials:
+        language: en
+        content: P. A.
+      surname:
+        language: en
+        content: Vixie
+      completename:
+        language: en
+        content: Paul A. Vixie
+    affiliation:
+    - organization:
+        name:
+        - content: ISC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Not all applications that perform dynamic updates using the protocol
+    specified in [UPDATE] want their updates applied immediately. A case in point
+    is [DHCP], wherein the DHCP lease time should control the lifetime of associated
+    DNS data even if the DHCP client or server is not available at the time the DHCP
+    lease expires. The essence of this proposal is that DNS Dynamic Updates should
+    be deferrable for some time delay period, after which they will be executed normally.
+    Furthermore, RRs added or updated by a deferred update can have expiration times
+    specified for them, as enforced by the automatic Dynamic Updates. Automatic serial
+    number changes (as in [UPDATE]), dynamic zone slave notification (see [NOTIFY])
+    and incremental zone transfer (see [IXFR]) will jointly see to it that the zone
+    changes are propagated with expedience.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-dnsind-defupd-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

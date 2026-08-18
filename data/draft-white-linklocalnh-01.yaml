@@ -1,0 +1,191 @@
+---
+id: draftwhitelinklocalnh01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Link Local Next Hop Handling for BGP
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-white-linklocalnh-01
+docidentifier:
+- content: draft-white-linklocalnh-01
+  type: Internet-Draft
+  primary: true
+- content: I-D.white-linklocalnh
+  type: IETF
+  scope: anchor
+docnumber: I-D.white-linklocalnh
+date:
+- type: published
+  at: '2020-06-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Russ
+      - language: en
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: White
+      completename:
+        language: en
+        content: Russ White
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Donald
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Sharp
+      completename:
+        language: en
+        content: Donald Sharp
+    affiliation:
+    - organization:
+        name:
+        - content: Cumulus Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Dinesh
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dutt
+      completename:
+        language: en
+        content: Dinesh Dutt
+    affiliation:
+    - organization:
+        name:
+        - content: Stardust Consulting
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Biswajit
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Sadhu
+      completename:
+        language: en
+        content: Biswajit Sadhu
+    affiliation:
+    - organization:
+        name:
+        - content: VMWare
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Jeff
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Tantsura
+      completename:
+        language: en
+        content: Jeff Tantsura
+    affiliation:
+    - organization:
+        name:
+        - content: Apstra, Inc.
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>BGP, described in [RFC4271], was originally designed to provide reachability
+    between domains and between the edges of a domain. As such, BGP assumes the next
+    hop towards any reachable destination may not reside on the advertising speaker,
+    but rather may either be through a router connected to the same subnet as the
+    speaker, or through a router only reachable by traversing multiple hops through
+    the network. Because of this, BGP does not recognize the use of IPv6 link local
+    addresses, as described in [RFC4291], as a valid next hop for forwarding purposes.
+    However, BGP speakers are now often deployed on point-to-point links in networks
+    where multihop reachability of any kind is not assumed or desired (all next hops
+    are assumed to be the speaker reachable through a directly connected point-to-point
+    link). This is common, for instance, in data center fabrics. In these situations,
+    a global IPv6 address is not required for the advertisement of reachability information;
+    in fact, providing global IPv6 addresses in these kinds of networks can be detrimental
+    to Zero Touch Provisioning (ZTP). This draft standardizes the operation of BGP
+    over a point-to-point link using link local IPv6 addressing only.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-white-linklocalnh-00
+      format: text/plain
+    docidentifier:
+    - content: draft-white-linklocalnh-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-white-linklocalnh-02
+      format: text/plain
+    docidentifier:
+    - content: draft-white-linklocalnh-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-white-linklocalnh-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

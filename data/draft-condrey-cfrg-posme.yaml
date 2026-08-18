@@ -1,0 +1,60 @@
+---
+id: draftcondreycfrgposme
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Proof of Sequential Memory Execution (PoSME)
+  format: text/plain
+docidentifier:
+- content: draft-condrey-cfrg-posme
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines Proof of Sequential Memory Execution (PoSME),
+    a cryptographic primitive combining mutable arena state, data- dependent pointer-chase
+    addressing, and per-block causal hash binding in a single step function. A Prover
+    executes K sequential steps over a mutable N-block arena. Each step reads d blocks
+    at addresses determined by the previous read's result (pointer chasing), writes
+    one block with spatial neighborhood entanglement (incorporating A\\[w-1\\] and
+    A\\[w+1\\]), and advances a transcript chain. The construction provides three
+    properties: (1) unconditional sequential time enforcement anchored in physics-bounded
+    latency floors, (2) forgery prevention via causal hashes (reduces to collision
+    resistance of H), and (3) TMTO resistance scaling as $1/\\alpha$ with spatial
+    entanglement, where $\\alpha$ is the adversary's storage fraction. Verification
+    requires O(Q * d^R * log N) hash evaluations with no arena allocation. No trusted
+    setup is required.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-condrey-cfrg-posme-00
+      format: text/plain
+    docidentifier:
+    - content: draft-condrey-cfrg-posme-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-condrey-cfrg-posme-01
+      format: text/plain
+    docidentifier:
+    - content: draft-condrey-cfrg-posme-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-condrey-cfrg-posme-02
+      format: text/plain
+    docidentifier:
+    - content: draft-condrey-cfrg-posme-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

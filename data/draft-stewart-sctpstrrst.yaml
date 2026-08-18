@@ -1,0 +1,39 @@
+---
+id: draftstewartsctpstrrst
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Stream Control Transmission Protocol (SCTP) Stream Reset
+  format: text/plain
+docidentifier:
+- content: draft-stewart-sctpstrrst
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>Many applications that desire to use SCTP have requested the ability
+    to "reset" a stream. The intention of resetting a stream is to start the numbering
+    sequence of the stream back at 'zero' with a corresponding notification to the
+    upper layer that this act as been performed. The applications that have requested
+    this feature normally desire it so that they can "re-use" streams for different
+    purposes but still utilize the stream sequence number for the application to track
+    the message flows. Thus, without this feature, a new use on an old stream would
+    result in message numbers larger than expected without a protocol mechanism to
+    "start the streams back at zero". This documents presents also a method for resetting
+    the transport sequence numbers and all stream sequence numbers.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-stewart-sctpstrrst-05
+      format: text/plain
+    docidentifier:
+    - content: draft-stewart-sctpstrrst-05
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

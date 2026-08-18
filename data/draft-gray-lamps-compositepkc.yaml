@@ -1,0 +1,46 @@
+---
+id: draftgraylampscompositepkc
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Preventing Key Reuse and Cross-Key Forgeries in Composite ML-DSA
+  format: text/plain
+docidentifier:
+- content: draft-gray-lamps-compositepkc
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines a small, backwards-compatible change to composite
+    ML-DSA that cryptographically binds the signature to the specific composite public
+    key. It does so by defining a Public-Key Context value (pkc) equal to a hash of
+    the serialized composite public key, and by setting the composite context field
+    to that value. This prevents key reuse and cross-key forgeries across different
+    composite keys, while preserving the API of Composite ML-DSA. The construction
+    introduces two helper procedures to compute pkc from either the composite private
+    key or the composite public key.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gray-lamps-compositepkc-00
+      format: text/plain
+    docidentifier:
+    - content: draft-gray-lamps-compositepkc-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gray-lamps-compositepkc-01
+      format: text/plain
+    docidentifier:
+    - content: draft-gray-lamps-compositepkc-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

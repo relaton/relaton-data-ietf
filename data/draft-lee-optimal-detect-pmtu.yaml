@@ -1,0 +1,37 @@
+---
+id: draftleeoptimaldetectpmtu
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Optimal Detecting Increases in PMTU
+  format: text/plain
+docidentifier:
+- content: draft-lee-optimal-detect-pmtu
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document presents a new method for the detection of increases
+    in PMTU using the newly defined Hop-by-Hop option header. To detect increases
+    in a path's PMTU, a node does not increase its assumed PMTU unconditionally without
+    considering network status, but measures its real PMTU, and then replaces the
+    previous PMTU with new one. To measure node's real PMTU, the node sends the IP
+    packet with the newly defined Hop-by-Hop option header to the destination node
+    right before a timer expires. This can eliminate the chance of occurrence of packets
+    being discarded and Packet Too Big messages being generated.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-lee-optimal-detect-pmtu-00
+      format: text/plain
+    docidentifier:
+    - content: draft-lee-optimal-detect-pmtu-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

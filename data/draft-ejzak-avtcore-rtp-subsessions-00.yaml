@@ -1,0 +1,89 @@
+---
+id: draftejzakavtcorertpsubsessions00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Media multiplexing with Real-time Transport Protocol (RTP) subsessions
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ejzak-avtcore-rtp-subsessions-00
+docidentifier:
+- content: draft-ejzak-avtcore-rtp-subsessions-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.ejzak-avtcore-rtp-subsessions
+  type: IETF
+  scope: anchor
+docnumber: I-D.ejzak-avtcore-rtp-subsessions
+date:
+- type: published
+  at: '2012-06-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Richard
+      - language: en
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Ejzak
+      completename:
+        language: en
+        content: Richard Ejzak
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes a means of multiplexing RTP streams having
+    different media types within a single transport connection and how to represent
+    this multiplexing option in SDP. This mechanism is an alternative to the BUNDLE
+    and SHIM proposals currently under active consideration in AVTCORE. Instead of
+    adding an extra multiplexing header as in SHIM to allow multiple RTP sessions
+    within a single transport connection, or using the payload type field to separate
+    different media streams within a single RTP session, this document describes how
+    to partition the existing SSRC space to create RTP subsessions from a single RTP
+    session. A filter can be used to identify each RTP subsession for different QoS
+    handling as necessary. RTP subsessions can be treated like RTP sessions with a
+    few restrictions. In particular, SSRC mapping may be needed when forwarding RTP
+    streams into an RTP subsession to avoid SSRC conflicts, but there are few use
+    cases in which this limitation is a concern and RTP subsessions can be disabled
+    if necessary.</p>"
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ejzak-avtcore-rtp-subsessions-02
+      format: text/plain
+    docidentifier:
+    - content: draft-ejzak-avtcore-rtp-subsessions-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ejzak-avtcore-rtp-subsessions-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

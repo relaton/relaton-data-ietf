@@ -1,0 +1,38 @@
+---
+id: draftsparkssipmultiproxyauth
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Providing for Multiple-Proxy Authentication of a SIP Request
+  format: text/plain
+docidentifier:
+- content: draft-sparks-sip-multiproxy-auth
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>SIP/2.0 as specified in RFC2543 provides a mechanism for a proxy involved
+    in a SIP transaction to authenticate the originator of the request. Unfortunately,
+    this mechanism is not well defined when more than one proxy in a request’s path
+    desires such authentication. This draft proposes a mechanism that would allow
+    authentication in that scenario to work as expected. Under this proposal, SIP
+    clients would issue requests with multiple Proxy-Authorization headers, one for
+    each challenge it has seen in the lifetime of a given call leg. Authenticating
+    SIP proxies would search each request for a Proxy- Authorization response to its
+    own challenge, passing any others downstream unaltered.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sparks-sip-multiproxy-auth-00
+      format: text/plain
+    docidentifier:
+    - content: draft-sparks-sip-multiproxy-auth-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

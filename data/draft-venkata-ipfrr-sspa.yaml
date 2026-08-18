@@ -1,0 +1,40 @@
+---
+id: draftvenkataipfrrsspa
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: IP Fast Reroute using Stitched Shortest Paths Algorithm (SSPA)
+  format: text/plain
+docidentifier:
+- content: draft-venkata-ipfrr-sspa
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes a practical mechanism to implement IP fast
+    reroute using dynamic SPF to compute local and remote loop free nexthops efficiently.
+    Upon link failure, all the destinations reachable via the primary nexthop will
+    be forwarded to alternative loop free nexthop, if any. If the alternative nexthop
+    is remote, packet will be forwarded using any connectionless (for example, IP-in-IP)
+    or connection-oriented (for example, MPLS) tunnels. This mechanism doesn't impose
+    any new protocol message/capability exchange. It is shown that simple changes
+    to existing IGP shortest path computation and routing table structures are sufficient
+    to achieve the desired functionality. More over, routers which implement the proposed
+    mechanism can co-exist and can be fully backward compatible with existing unmodified
+    routers.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-venkata-ipfrr-sspa-00
+      format: text/plain
+    docidentifier:
+    - content: draft-venkata-ipfrr-sspa-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

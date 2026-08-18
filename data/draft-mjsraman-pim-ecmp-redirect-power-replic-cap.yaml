@@ -1,0 +1,44 @@
+---
+id: draftmjsramanpimecmpredirectpowerrepliccap
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: PIM ECMP Redirect based on Linecard Replication Capacity and Power
+  format: text/plain
+docidentifier:
+- content: draft-mjsraman-pim-ecmp-redirect-power-replic-cap
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This work derives itself from [1] which proposes a ECMP redirect from
+    a PIM upstream neighbor that instructs or advices the PIM downstream neighbor
+    to choose another of its own ECMP links between the former and the latter. What
+    we propose in this document is a criterion based on power consumed in the linecards
+    that comprise the ECMP links between the former and the latter. Also the multicast
+    replication capacity available within the said linecards which form the ECMP links
+    between the two is taken into consideration while making a ECMP redirect. A PIM
+    router uses RPF procedure to select an upstream interface and router to build
+    forwarding state. When there are equal cost multiple paths (ECMP), existing implementations
+    often use hash algorithms to select a path. Such algorithms do not allow the spread
+    of traffic among the ECMPs according to administrative metrics. This usually leads
+    to inefficient or ineffective use of network resources. This document introduces
+    the ECMP Redirect, a mechanism to improve the RPF procedure over ECMPs. It allows
+    ECMP path selection to be based on administratively selected metrics, such as
+    data transmission delays, path preferences and routing metrics.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mjsraman-pim-ecmp-redirect-power-replic-cap-00
+      format: text/plain
+    docidentifier:
+    - content: draft-mjsraman-pim-ecmp-redirect-power-replic-cap-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

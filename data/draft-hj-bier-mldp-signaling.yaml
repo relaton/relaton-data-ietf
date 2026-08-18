@@ -1,0 +1,41 @@
+---
+id: drafthjbiermldpsignaling
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: M-LDP Signaling Through BIER Core
+  format: text/plain
+docidentifier:
+- content: draft-hj-bier-mldp-signaling
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
+    multicast forwarding through a "BIER domain" without requiring intermediate routers
+    to maintain multicast related per-flow state. Neither does BIER require an explicit
+    tree-building protocol for its operation. A multicast data packet enters a BIER
+    domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves the BIER domain
+    at one or more "Bit-Forwarding Egress Routers" (BFERs). The BFIR router adds a
+    BIER header to the packet. Such header contains a bit-string in which each bit
+    represents exactly one BFER to forward the packet to. The set of BFERs to which
+    the multicast packet needs to be forwarded is expressed by the according set of
+    bits switched on in BIER packet header. This document describes the procedure
+    needed for mLDP tunnels to be signaled and stitched through a BIER core. Allowing
+    LDP routers to run traditional Multipoint LDP services through a BIER core.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hj-bier-mldp-signaling-00
+      format: text/plain
+    docidentifier:
+    - content: draft-hj-bier-mldp-signaling-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

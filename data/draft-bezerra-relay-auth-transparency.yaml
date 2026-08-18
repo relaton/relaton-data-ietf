@@ -1,0 +1,52 @@
+---
+id: draftbezerrarelayauthtransparency
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Authentication-Transparent Protocol Extensions in Middleware-Relayed Systems
+  format: text/plain
+docidentifier:
+- content: draft-bezerra-relay-auth-transparency
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>Protocol-aware middleware (relays, bridges, gateways) re-serializes
+    messages at their protocol frame boundary, silently discarding any bytes appended
+    outside that boundary. Authentication material placed after the frame boundary
+    by a sender is therefore stripped at every relay hop before reaching the receiver,
+    with no error indication. This document identifies this behavior as a protocol
+    design vulnerability class -- "relay-transparent authentication stripping" --
+    demonstrates it with running code in three independent protocol stacks (MAVLink
+    v2, ROS2/DDS CDR, and CAN/ISO-TP with a SecOC-unaware gateway), and specifies
+    the architectural principle that authentication material must be carried as a
+    first-class, independently addressable protocol unit to survive relay transit.
+    Post-quantum signature sizes push authentication out of fixed fields and so create
+    the precondition systematically; this revision reports three measured cases where
+    they do not, because a transport that refuses to carry the oversized unit produces
+    a loss of availability instead of a silent authentication bypass.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bezerra-relay-auth-transparency-00
+      format: text/plain
+    docidentifier:
+    - content: draft-bezerra-relay-auth-transparency-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bezerra-relay-auth-transparency-01
+      format: text/plain
+    docidentifier:
+    - content: draft-bezerra-relay-auth-transparency-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

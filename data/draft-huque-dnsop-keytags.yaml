@@ -1,0 +1,49 @@
+---
+id: drafthuquednsopkeytags
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Collision Free Keytags for DNSSEC
+  format: text/plain
+docidentifier:
+- content: draft-huque-dnsop-keytags
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>DNSSEC employs a Key Tag field in the RRSIG and DS resource records
+    in order to efficiently identify the key that produced a DNSSEC signature and
+    the key that should be used as a secure entry point into a delegated zone. The
+    Key Tag was not intended to be a unique identifier. Key tag collisions can occur
+    in practice for keys in the same zone, though they are relatively rare in normal
+    operation. Colliding key tags impose additional work on a validating resolver
+    because it then has to check signatures for each of the candidate set of keys
+    identified by the Key Tag. Furthermore, they open up resolvers to computational
+    denial of service attacks by adversaries deploying specially crafted zones with
+    many intentionally colliding key tags. This document specifies updates to the
+    DNSSEC protocol and the process of key generation to avoid colliding key tags.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-huque-dnsop-keytags-00
+      format: text/plain
+    docidentifier:
+    - content: draft-huque-dnsop-keytags-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-huque-dnsop-keytags-01
+      format: text/plain
+    docidentifier:
+    - content: draft-huque-dnsop-keytags-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

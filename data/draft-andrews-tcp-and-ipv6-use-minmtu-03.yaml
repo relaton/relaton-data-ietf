@@ -1,0 +1,93 @@
+---
+id: draftandrewstcpandipv6useminmtu03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: TCP Fails To Respect IPV6_USE_MIN_MTU
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-andrews-tcp-and-ipv6-use-minmtu-03
+docidentifier:
+- content: draft-andrews-tcp-and-ipv6-use-minmtu-03
+  type: Internet-Draft
+  primary: true
+- content: I-D.andrews-tcp-and-ipv6-use-minmtu
+  type: IETF
+  scope: anchor
+docnumber: I-D.andrews-tcp-and-ipv6-use-minmtu
+date:
+- type: published
+  at: '2015-10-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Mark
+      - language: en
+        initial: M
+      - language: en
+        initial: P
+      formatted_initials:
+        language: en
+        content: M. P.
+      surname:
+        language: en
+        content: Andrews
+      completename:
+        language: en
+        content: Mark P. Andrews
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The IPV6_USE_MIN_MTU [RFC3542], Section 11.1, socket option directs
+    the IP layer to limit the IPv6 packet size to the minimum required supported MTU
+    from the base IPv6 specification [RFC2460], i.e. 1280 bytes. Many implementations
+    of TCP running over IPv6 neglect to check the IPV6_USE_MIN_MTU value when performing
+    MSS negotiation and when constructing a TCP segment. This leads to oversized IPv6
+    packets being sent resulting in unintended Path Maximum Transport Unit Discovery
+    (PMTUD) [RFC1191] being performed and to fragmented IPv6 packets being sent.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-01
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-andrews-tcp-and-ipv6-use-minmtu-04
+      format: text/plain
+    docidentifier:
+    - content: draft-andrews-tcp-and-ipv6-use-minmtu-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-andrews-tcp-and-ipv6-use-minmtu-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

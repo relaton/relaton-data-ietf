@@ -1,0 +1,43 @@
+---
+id: draftietfmanettbrpf
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Topology Dissemination Based on Reverse-Path Forwarding (TBRPF)
+  format: text/plain
+docidentifier:
+- content: draft-ietf-manet-tbrpf
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>Topology Dissemination Based on Reverse-Path Forwarding (TBRPF) is a
+    proactive, link-state routing protocol designed for mobile ad-hoc networks, which
+    provides hop-by-hop routing along shortest paths to each destination. Each node
+    running TBRPF computes a source tree (providing paths to all reachable nodes)
+    based on partial topology information stored in its topology table, using a modification
+    of Dijkstra's algorithm. To minimize overhead, each node reports only *part* of
+    its source tree to neighbors. TBRPF uses a combination of periodic and differential
+    updates to keep all neighbors informed of the reported part of its source tree.
+    Each node also has the option to report additional topology information (up to
+    the full topology), to provide improved robustness in highly mobile networks.
+    TBRPF performs neighbor discovery using "differential" HELLO messages which report
+    only *changes* in the status of neighbors. This results in HELLO messages that
+    are much smaller than those of other link-state routing protocols such as OSPF.
+    This memo defines an Experimental Protocol for the Internet community.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-manet-tbrpf-11
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-manet-tbrpf-11
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

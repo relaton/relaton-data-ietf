@@ -1,0 +1,155 @@
+---
+id: drafteckertpimrtsforwarding02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Stateless Multicast Replication with Segment Routed Recursive Tree Structures
+    (RTS)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-eckert-pim-rts-forwarding-02
+docidentifier:
+- content: draft-eckert-pim-rts-forwarding-02
+  type: Internet-Draft
+  primary: true
+- content: I-D.eckert-pim-rts-forwarding
+  type: IETF
+  scope: anchor
+docnumber: I-D.eckert-pim-rts-forwarding
+date:
+- type: published
+  at: '2024-11-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Toerless
+      - language: en
+        initial: T
+      - language: en
+        initial: T
+      formatted_initials:
+        language: en
+        content: T. T.
+      surname:
+        language: en
+        content: Eckert
+      completename:
+        language: en
+        content: Toerless Eckert
+    affiliation:
+    - organization:
+        name:
+        - content: Futurewei Technologies USA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Michael
+      - language: en
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Menth
+      completename:
+        language: en
+        content: Michael Menth
+    affiliation:
+    - organization:
+        name:
+        - content: University of Tuebingen
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Steffen
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Lindner
+      completename:
+        language: en
+        content: Steffen Lindner
+    affiliation:
+    - organization:
+        name:
+        - content: University of Tuebingen
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: '<p>BIER provides stateless multicast in BIER domains using bitstrings
+    to indicate receivers. BIER-TE extends BIER with tree engineering capabilities.
+    Both suffer from scalability problems in large networks as bitstrings are of limited
+    size so the BIER domains need to be subdivided using set identifiers so that possibly
+    many packets need to be sent to reach all receivers of a multicast group within
+    a subdomain. This problem can be mitigated by encoding explicit multicast trees
+    in packet headers with bitstrings that have only node-local significance. A drawback
+    of this method is that any hop on the path needs to be encoded so that long paths
+    consume lots of header space. This document presents the idea of Segment Routed
+    Recursive Tree Structures (RTS), a unifying approach in which a packet header
+    representing a multicast distribution tree is constructed from a tree structure
+    of vertices ("so called Recursive Units") that support replication to their next-hop
+    neighbors either via local bitstrings or via sequence of next-hop neighbor identifiers
+    called SIDs. RTS, like RBS is intended to expand the applicability of deployment
+    for stateless multicast replication beyond what BIER and BIER-TE support and expect:
+    larger networks, less operational complexity, and utilization of more modern forwarding
+    planes as those expected to be possible when BIER was designed (ca. 2010). This
+    document only specifies the forwarding plane but discusses possible architectural
+    options, which are primarily determined through the future definition/mapping
+    to encapsulation headers and controller-plane functions.</p>'
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-eckert-pim-rts-forwarding-00
+      format: text/plain
+    docidentifier:
+    - content: draft-eckert-pim-rts-forwarding-00
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-eckert-pim-rts-forwarding-03
+      format: text/plain
+    docidentifier:
+    - content: draft-eckert-pim-rts-forwarding-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-eckert-pim-rts-forwarding-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

@@ -1,0 +1,37 @@
+---
+id: draftarunipv6mld
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: MLDv1 and MVDv2 Optimization
+  format: text/plain
+docidentifier:
+- content: draft-arun-ipv6-mld
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document describes an optimization for MLDv1 (RFC 2710) and MLDv2
+    (RFC 3810). As per this optimization, a new router on coming up will not send
+    periodic "General Query" messages to get the list of multicast listeners. Instead,
+    it will try to get the same from the Querier on the link. Only if no Querier are
+    present on the link, will the new router move to Querier state and send "General
+    Query" messages. This approach provides an advantage in eliminating possibly large
+    number of "Multicast Listener Report" messages every time a new router comes up
+    on a link. More the number of listeners on a link, more the advantage.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-arun-ipv6-mld-00
+      format: text/plain
+    docidentifier:
+    - content: draft-arun-ipv6-mld-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

@@ -1,0 +1,125 @@
+---
+id: draftkouvelaspimrefresh00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: State Refresh in PIM-DM
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kouvelas-pim-refresh-00
+docidentifier:
+- content: draft-kouvelas-pim-refresh-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.kouvelas-pim-refresh
+  type: IETF
+  scope: anchor
+docnumber: I-D.kouvelas-pim-refresh
+date:
+- type: published
+  at: '1999-02-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Dino
+      - language: en
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Farinacci
+      completename:
+        language: en
+        content: Dino Farinacci
+    affiliation:
+    - organization:
+        name:
+        - content: cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Isidor
+      - language: en
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Kouvelas
+      completename:
+        language: en
+        content: Isidor Kouvelas
+    affiliation:
+    - organization:
+        name:
+        - content: cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Kurt
+      - language: en
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Windisch
+      completename:
+        language: en
+        content: Kurt Windisch
+    affiliation:
+    - organization:
+        name:
+        - content: University of Oregon
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This proposal extends the PIM-DM [1] protocol specification by intro-
+    ducing the PIM State-Refresh control message. When an (S,G) entry is created in
+    a router for a directly connected source, if the interface directly connected
+    to the source is the incoming interface for the entry, a new timer is started:
+    the State- Refresh-Timer [SRT(S,G)]. The State-Refresh-Timer controls periodic
+    transmission of the PIM State-Refresh message, which is propagated hop-by-hop
+    down the (S,G) RPF tree. When received by a router on the RPF interface, the State-Refresh
+    message causes existing prune state to be refreshed. Addition of this heartbeat
+    message solves many of the current problems with PIM-DM. It prevents the periodic
+    timeout of prune state in routers, greatly reducing the re-flooding of multicast
+    traffic down the pruned branches that expire periodically. It also causes topology
+    changes to be realised quicker than the traditional 3 minute timeout.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-kouvelas-pim-refresh-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

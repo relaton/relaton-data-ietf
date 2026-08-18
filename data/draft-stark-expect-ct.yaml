@@ -1,0 +1,48 @@
+---
+id: draftstarkexpectct
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Expect-CT Extension for HTTP
+  format: text/plain
+docidentifier:
+- content: draft-stark-expect-ct
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines a new HTTP header, named Expect-CT, that allows
+    web host operators to instruct user agents to expect valid Signed Certificate
+    Timestamps (SCTs) to be served on connections to these hosts. When configured
+    in enforcement mode, user agents (UAs) will remember that hosts expect SCTs and
+    will refuse connections that do not conform to the UA's Certificate Transparency
+    policy. When configured in report-only mode, UAs will report the lack of valid
+    SCTs to a URI configured by the host, but will allow the connection. By turning
+    on Expect-CT, web host operators can discover misconfigurations in their Certificate
+    Transparency deployments and ensure that misissued certificates accepted by UAs
+    are discoverable in Certificate Transparency logs.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-stark-expect-ct-00
+      format: text/plain
+    docidentifier:
+    - content: draft-stark-expect-ct-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-stark-expect-ct-01
+      format: text/plain
+    docidentifier:
+    - content: draft-stark-expect-ct-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

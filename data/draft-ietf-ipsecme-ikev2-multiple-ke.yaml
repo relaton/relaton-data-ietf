@@ -1,0 +1,160 @@
+---
+id: draftietfipsecmeikev2multipleke
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Multiple Key Exchanges in IKEv2
+  format: text/plain
+docidentifier:
+- content: draft-ietf-ipsecme-ikev2-multiple-ke
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document describes how to extend the Internet Key Exchange Protocol
+    Version 2 (IKEv2) to allow multiple key exchanges to take place while computing
+    a shared secret during a Security Association (SA) setup. The primary application
+    of this feature in IKEv2 is the ability to perform one or more post-quantum key
+    exchanges in conjunction with the classical (Elliptic Curve) Diffie-Hellman (EC)DH
+    key exchange, so that the resulting shared key is resistant against quantum computer
+    attacks. Since there is currently no post-quantum key exchange that is as well-studied
+    as (EC)DH, performing multiple key exchanges with different post-quantum algorithms
+    along with the well-established classical key exchange algorithms addresses this
+    concern, since the overall security is at least as strong as each individual primitive.
+    Another possible application for this extension is the ability to combine several
+    key exchanges in situations when no single key exchange algorithm is trusted by
+    both initiator and responder. This document utilizes the IKE_INTERMEDIATE exchange,
+    by means of which multiple key exchanges are performed when an IKE SA is being
+    established. It also introduces a new IKEv2 exchange IKE_FOLLOWUP_KE, which is
+    used for the same purpose when the IKE SA is up (during rekeys or creating additional
+    Child SAs). This document updates RFC7296 by renaming a transform type 4 from
+    "Diffie-Hellman Group (D-H)" to "Key Exchange Method (KE)" and renaming a field
+    in the Key Exchange Payload from "Diffie-Hellman Group Num" to "Key Exchange Method".
+    It also renames an IANA registry for this transform type from "Transform Type
+    4 - Diffie- Hellman Group Transform IDs" to "Transform Type 4 - Key Exchange Method
+    Transform IDs". These changes generalize key exchange algorithms that can be used
+    in IKEv2.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-01
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-02
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-03
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-04
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-05
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-06
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-07
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-08
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-09
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-10
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-11
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-ikev2-multiple-ke-12
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsecme-ikev2-multiple-ke-12
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

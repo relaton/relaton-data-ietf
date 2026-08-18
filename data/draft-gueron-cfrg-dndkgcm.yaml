@@ -1,0 +1,80 @@
+---
+id: draftgueroncfrgdndkgcm
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Double Nonce Derive Key AES-GCM (DNDK-GCM)
+  format: text/plain
+docidentifier:
+- content: draft-gueron-cfrg-dndkgcm
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document specifies an authenticated encryption algorithm called
+    Double Nonce Derive Key AES-GCM (DNDK-GCM). It operates with a 32- byte root key
+    and is designed to encrypt with a 24-byte random nonce and optionally to provide
+    for key commitment. Encryption takes the root key and a 15-byte portion of the
+    random nonce, and derives a fresh 32-byte encryption key and (optionally) a key
+    commitment value. Then, it invokes AES-GCM with the derived key and the remaining
+    bytes of the nonce, and outputs the ciphertext, authentication tag and the key
+    commitment value. Although this is not the primary use case, it is also possible
+    to use DNDK-GCM with a non-repeating but non-random nonce (i.e., a "counter- based
+    nonce"). The low collision probability in a collection of 24-byte random nonces
+    and the per-nonce derivation of an encryption key extend the lifetime of the root
+    key, and the scheme can support processing up to 2^64 bytes under a given root
+    key. DNDK-GCM introduces a relatively small overhead compared to using AES-GCM
+    directly, and its security relies only on the standard assumption that AES acts
+    as a pseudorandom permutation.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-00
+      format: text/plain
+    docidentifier:
+    - content: draft-gueron-cfrg-dndkgcm-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-01
+      format: text/plain
+    docidentifier:
+    - content: draft-gueron-cfrg-dndkgcm-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-02
+      format: text/plain
+    docidentifier:
+    - content: draft-gueron-cfrg-dndkgcm-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-03
+      format: text/plain
+    docidentifier:
+    - content: draft-gueron-cfrg-dndkgcm-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-gueron-cfrg-dndkgcm-04
+      format: text/plain
+    docidentifier:
+    - content: draft-gueron-cfrg-dndkgcm-04
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

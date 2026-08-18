@@ -1,0 +1,44 @@
+---
+id: draftdegermarkcrtpcellular
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: CRTP over cellular radio links
+  format: text/plain
+docidentifier:
+- content: draft-degermark-crtp-cellular
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document evaluates the performance of a header compression protocol
+    for RTP, CRTP [RFC-2509], over links built on cellular radio access technology.
+    The key characteristics affecting CRTP performance over such links are the high
+    error rates and the relatively long roundtrip time over the link. Bandwidth is
+    typically expensive in cellular radio access networks, saving a single octet per
+    voice packet can be equivalent to saving many billion dollars in deployment since
+    fewer base-stations are needed. This is beneficial for operators as well as end-users
+    who can get cheaper wireless IP telephony service. CRTP performance is evaluated
+    for two kinds of link layers operating over a realistic radio channel with high
+    bit-error rates. Two main conclusions are drawn. The first is that CRTP does not
+    perform well for this type of link. The second is that in high-error environments
+    it is very beneficial to have a checksum covering the compressed header only,
+    not the payload, so that the decompressor sees all non- damaged headers. When
+    a strong checksum covers the entire link layer frame, header compression performs
+    badly since too many headers are discarded due to damaged payloads.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-degermark-crtp-cellular-01
+      format: text/plain
+    docidentifier:
+    - content: draft-degermark-crtp-cellular-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

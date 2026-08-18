@@ -1,0 +1,170 @@
+---
+id: draftietfbessevpnnaflags05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Propagation of ARP/ND Flags in EVPN
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-na-flags-05
+docidentifier:
+- content: draft-ietf-bess-evpn-na-flags-05
+  type: Internet-Draft
+  primary: true
+- content: I-D.ietf-bess-evpn-na-flags
+  type: IETF
+  scope: anchor
+docnumber: I-D.ietf-bess-evpn-na-flags
+date:
+- type: published
+  at: '2020-07-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Jorge
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Rabadan
+      completename:
+        language: en
+        content: Jorge Rabadan
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Senthil
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Sathappan
+      completename:
+        language: en
+        content: Senthil Sathappan
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Kiran
+      - language: en
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Nagaraj
+      completename:
+        language: en
+        content: Kiran Nagaraj
+    affiliation:
+    - organization:
+        name:
+        - content: Nokia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Wen
+      - language: en
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Lin
+      completename:
+        language: en
+        content: Wen Lin
+    affiliation:
+    - organization:
+        name:
+        - content: Juniper
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>An EVPN MAC/IP Advertisement route can optionally carry an IPv4 or
+    IPv6 addresses associated with a MAC address. Remote PEs can use this information
+    to populate their ARP/ND tables on IRB interfaces or their proxy-ARP/ND tables
+    in Broadcast Domains (BD). PEs can then reply locally (act as an ARP/ND proxy)
+    to IPv4 ARP requests and IPv6 Neighbor Solicitation messages and reduce/suppress
+    the flooding produced by the Address Resolution procedure. However, the information
+    conveyed in the MAC/IP route may not be enough for the remote PE to reply to local
+    ARP or ND requests. For example, if a PE learns an IPv6-&gt;MAC ND entry via EVPN,
+    the PE would not know if that particular IPv6-&gt;MAC pair belongs to a host,
+    a router or a host with an anycast address, as this information is not carried
+    in the EVPN MAC/IP Advertisement routes. Similarly, other information relevant
+    to the IP-&gt;MAC ARP/ND entries may be needed. This document defines an Extended
+    Community that is advertised along with an EVPN MAC/IP Advertisement route and
+    carries information relevant to the ARP/ND resolution, so that an EVPN PE implementing
+    a proxy-ARP/ND function can reply to ARP Requests or Neighbor Solicitations with
+    the correct information.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-ietf-bess-evpn-na-flags-01
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-bess-evpn-na-flags-01
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-ietf-bess-evpn-na-flags-07
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-bess-evpn-na-flags-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-ietf-bess-evpn-na-flags-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

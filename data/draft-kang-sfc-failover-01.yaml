@@ -1,0 +1,130 @@
+---
+id: draftkangsfcfailover01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Failover for Service Function Chaining
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kang-sfc-failover-01
+docidentifier:
+- content: draft-kang-sfc-failover-01
+  type: Internet-Draft
+  primary: true
+- content: I-D.kang-sfc-failover
+  type: IETF
+  scope: anchor
+docnumber: I-D.kang-sfc-failover
+date:
+- type: published
+  at: '2014-10-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: th.kang@kt.com
+      completename:
+        language: en
+        content: th.kang@kt.com
+    affiliation:
+    - organization:
+        name:
+        - content: KT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sungsu
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Kim
+      completename:
+        language: en
+        content: Sungsu Kim
+    affiliation:
+    - organization:
+        name:
+        - content: KT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: EunKyoung
+      - language: en
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Paik
+      completename:
+        language: en
+        content: EunKyoung Paik
+    affiliation:
+    - organization:
+        name:
+        - content: KT
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>In SFC-enabled domain, failures can occur at Service Function(SF).
+    If the failed node is on the path where a packet is delivered, packet cannot be
+    sent to destination and such situation should be avoided. Currently, there are
+    many ways to provide redundancy of SFs, such as VRRP. However, legacy redundancy
+    method may not be used in SFC as Service Function Forwarders(SFFs) do not use
+    IP or MAC address in their FIBs. In SFC, traffic is steered based on Service Function
+    Path ID and Service Index. Therefore controller, which is responsible for a control
+    plane function in SFC, can manage path of SFC. In this document, we illustrate
+    failover method specifically for SFC which uses SFC encapsulation. We describe
+    bypass mechanism to avoid failures in SFs and redirect traffic to backup SFs.
+    For bypass mechanism, we propose SF classification of 1)mandatory SFs that function
+    indispensible for packet delivery, such as NAT and 2)optional SFs that a packet
+    can be delivered without them, such as Firewall and IDS.</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-kang-sfc-failover-00
+      format: text/plain
+    docidentifier:
+    - content: draft-kang-sfc-failover-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-kang-sfc-failover-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

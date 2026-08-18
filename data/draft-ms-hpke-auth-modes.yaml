@@ -1,0 +1,55 @@
+---
+id: draftmshpkeauthmodes
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Authenticated Modes for HPKE
+  format: text/plain
+docidentifier:
+- content: draft-ms-hpke-auth-modes
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>The standards-track [I-D.ietf-hpke-hpke] supersedes the informational
+    [RFC9180], omitting its authenticated modes mode_auth and mode_auth_psk. This
+    document restores mode_auth_psk mode as a strict extension and illustrates how
+    the restored mode can be used with a post-quantum "shared secret" as the PSK in
+    order to achieve hybrid PQ/T confidentiality while transitioning to quantum-resistant
+    encryption, without deprecating the classical implicit authentication on which
+    many applications still rely. This extension requires only the addition of AuthEncap()/AuthDecap()
+    to the DHKEM, the definition of four setup functions, and a change in VerifyPSKInputs().
+    The extension does not alter the externally observable behavior of the existing
+    HPKE modes standardized in [I-D.ietf-hpke-hpke]. Although AuthEncap()/AuthDecap()
+    reintroduce the functionality of mode_auth, the mode itself is not restored, since
+    it cannot provide quantum resistance. This document discusses the transitional
+    nature of the AuthPSK construction and its security properties as a transitional
+    step towards quantum resistance. In particular, this document illustrates how
+    the restored mode_auth_psk can be used to provide ready-made KEM combiner-like
+    functionality ([I-D.ounsworth-cfrg-kem-combiners]) without requiring downstream
+    API users to manage their own encryption context.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ms-hpke-auth-modes-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ms-hpke-auth-modes-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ms-hpke-auth-modes-01
+      format: text/plain
+    docidentifier:
+    - content: draft-ms-hpke-auth-modes-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

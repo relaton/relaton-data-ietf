@@ -1,0 +1,85 @@
+---
+id: draftmetzspasv00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Short Passive (SPASV) Command for FTP
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-metz-spasv-00
+docidentifier:
+- content: draft-metz-spasv-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.metz-spasv
+  type: IETF
+  scope: anchor
+docnumber: I-D.metz-spasv
+date:
+- type: published
+  at: '1998-01-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Craig
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Metz
+      completename:
+        language: en
+        content: Craig Metz
+    affiliation:
+    - organization:
+        name:
+        - content: The Inner Net
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>RFC 1639[Pis94] documents experimental long port (LPRT) and long passive
+    (LPSV) commands that many IP Version 6 implementations are using as the replacement
+    for the PORT and PASV commands in FTP [PR85]. The author believes that this is
+    the incorrect direction to be heading and that the replacement for PORT and PASV
+    should carry less information instead of more. The passive command (SPASV) is
+    a replacement for the PASV command. It only carries port numbers and does not
+    carry addresses. This makes it usable with IPv4 and IPv6. A benefit of not carrying
+    addresses is that pure network address translators (NAT) do not have to do a search-and-replace
+    on the TCP stream, which is an expensive operation. This also eliminates three-way
+    FTP, which is a rarely used mode of operation that leaves most existing FTP servers
+    wide open to the FTP Bounce Attack [Hob95]. Because the FTP PORT command is unfriendly
+    to some kinds of firewall configurations [Bel94] and that unfriendliness is there
+    to support three-way FTP, there is no replacement for the PORT command -- all
+    transfers should use passive mode instead. The author's inet6-apps kit (available
+    on ftp.ipv6.inner.net and ftp.inner.net) includes a client and server that supports
+    the current version of these commands. Those FTP servers implement this command.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-metz-spasv-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

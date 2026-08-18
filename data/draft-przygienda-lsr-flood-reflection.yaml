@@ -1,0 +1,49 @@
+---
+id: draftprzygiendalsrfloodreflection
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: IS-IS Flood Reflection
+  format: text/plain
+docidentifier:
+- content: draft-przygienda-lsr-flood-reflection
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes an optional ISIS extension that allows the
+    creation of IS-IS flood reflection topologies. Flood reflection allows the creation
+    of topologies where L1 areas provide transit forwarding for L2 destinations within
+    an L2 topology. It accomplishes this by creating L2 flood reflection adjacencies
+    within each L1 area. The L2 flood reflection adjacencies are used to flood L2
+    LSPDUs, and they are used in the L2 SPF computation. However, they are not used
+    for forwarding. This arrangement gives the L2 topology better scaling properties.
+    In addition, only those routers directly participating in flood reflection have
+    to support the feature. This allows for the incremental deployment of scalable
+    L1 transit areas in an existing network, without the necessity of upgrading other
+    routers in the network.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-przygienda-lsr-flood-reflection-00
+      format: text/plain
+    docidentifier:
+    - content: draft-przygienda-lsr-flood-reflection-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-przygienda-lsr-flood-reflection-01
+      format: text/plain
+    docidentifier:
+    - content: draft-przygienda-lsr-flood-reflection-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

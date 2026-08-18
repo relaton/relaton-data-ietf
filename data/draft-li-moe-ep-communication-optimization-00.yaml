@@ -1,0 +1,210 @@
+---
+id: draftlimoeepcommunicationoptimization00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Communication Optimization for MoE Expert Parallelism in Distributed Training
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-moe-ep-communication-optimization-00
+docidentifier:
+- content: draft-li-moe-ep-communication-optimization-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.li-moe-ep-communication-optimization
+  type: IETF
+  scope: anchor
+docnumber: I-D.li-moe-ep-communication-optimization
+date:
+- type: published
+  at: '2026-07-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Zhiqiang
+      - language: en
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhiqiang Li
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Zongpeng
+      - language: en
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Junjie
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Wei
+      - language: en
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Wei Cheng
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Guoying
+      - language: en
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Guoying Zhang
+    affiliation:
+    - organization:
+        name:
+        - content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Xun
+      - language: en
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Sun
+      completename:
+        language: en
+        content: Xun Sun
+    affiliation:
+    - organization:
+        name:
+        - content: Inesa
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Chunhao
+      - language: en
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Chunhao Zhao
+    affiliation:
+    - organization:
+        name:
+        - content: SAIA
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes a communication optimization mechanism for
+    Mixture of Experts (MoE) Expert Parallelism (EP) in distributed training environments.
+    It defines two core mechanisms: (1) an adaptive communication mode selection that
+    dynamically chooses between Data-Centric and Expert-Centric All-to-All communication
+    patterns based on a comparison of expert parameter size versus token data size,
+    minimizing cross-node communication volume; (2) a priority-based co-scheduling
+    strategy for All-to-All and AllReduce collective communications, combined with
+    chunked transmission and in- network aggregation acceleration, to eliminate bandwidth
+    contention and reduce overall training latency.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-li-moe-ep-communication-optimization-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

@@ -1,0 +1,83 @@
+---
+id: draftbhandarkartcpdcr00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Improving the robustness of TCP to Non-Congestion Events
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bhandarkar-tcp-dcr-00
+docidentifier:
+- content: draft-bhandarkar-tcp-dcr-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.bhandarkar-tcp-dcr
+  type: IETF
+  scope: anchor
+docnumber: I-D.bhandarkar-tcp-dcr
+date:
+- type: published
+  at: '2003-10-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sumitha
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Bhandarkar
+      completename:
+        language: en
+        content: Sumitha Bhandarkar
+    affiliation:
+    - organization:
+        name:
+        - content: Texas A&M University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document proposes TCP-DCR, a simple modification to the TCP congestion
+    control algorithm to make it more robust to non-congestion events. In the absence
+    of explicit notification from the network, the TCP congestion control algorithm
+    treats the receipt of three duplicate acknowledgements as an indication of congestion
+    in the network. This is not always correct, notably so in wireless networks with
+    channel errors or networks prone to excessive packet reordering, resulting in
+    degraded performance. TCP-DCR aims to remedy this by delaying the congestion response
+    of TCP for a short interval of time tau, thereby creating room to handle any non-congestion
+    events that may have occurred. If at the end of the delay tau, the event is not
+    handled, then it is treated as a congestion loss. The modifications themselves
+    do not handle the non-congestion event, but rather rely on some underlying mechanism
+    to do this. This document discusses the implications of delaying congestion response
+    on the fairness, TCP- compatibility and network dynamics, and the benefits to
+    be gained by applying the TCP-DCR modifications to TCP.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-bhandarkar-tcp-dcr-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

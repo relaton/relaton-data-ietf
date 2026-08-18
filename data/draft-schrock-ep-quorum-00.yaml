@@ -1,0 +1,96 @@
+---
+id: draftschrockepquorum00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Multi-Party Quorum Authorization for High-Risk Agent Actions (EP-QUORUM)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-quorum-00
+docidentifier:
+- content: draft-schrock-ep-quorum-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.schrock-ep-quorum
+  type: IETF
+  scope: anchor
+docnumber: I-D.schrock-ep-quorum
+date:
+- type: published
+  at: '2026-06-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Iman
+      - language: en
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Schrock
+      completename:
+        language: en
+        content: Iman Schrock
+    affiliation:
+    - organization:
+        name:
+        - content: EMILIA Protocol, Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: '<p>This document defines EP-QUORUM, a multi-party authorization profile
+    for the EMILIA Protocol (EP) authorization receipt (draft-schrock-ep- authorization-receipts).
+    Where the base receipt binds a single accountable human to one exact high-risk
+    action, EP-QUORUM binds a set of distinct accountable humans -- the "two-person
+    rule," generalized to M-of-N and to ordered approval trails -- to one exact action,
+    such that no action is authorized until the full quorum holds. The profile is
+    purely additive: each quorum member is an unmodified EP signoff over the same
+    action hash, and a single- approver policy is the degenerate one-member case.
+    EP-QUORUM specifies a fail-closed quorum predicate (all member signatures valid,
+    every member bound to the exact action, approvers pairwise distinct, every approver
+    admitted by role, the threshold met, the declared order respected, and all signatures
+    within a bounded time window), an incremental server-side admission rule that
+    rejects a non-conforming signer before it enters the trail, and a set of adversarial
+    conformance vectors. The predicate is offline-verifiable under the base draft''s
+    verification model and is maintained as cross- language conformance vectors that
+    three independent implementations (JavaScript, Python, Go) are required to agree
+    on.</p>'
+  format: text/html
+relation:
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-schrock-ep-quorum-02
+      format: text/plain
+    docidentifier:
+    - content: draft-schrock-ep-quorum-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-schrock-ep-quorum-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

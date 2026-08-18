@@ -1,0 +1,192 @@
+---
+id: draftjohanidnsoptransportsignaling02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Authoritative DNS Transport Signaling
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-johani-dnsop-transport-signaling-02
+docidentifier:
+- content: draft-johani-dnsop-transport-signaling-02
+  type: Internet-Draft
+  primary: true
+- content: I-D.johani-dnsop-transport-signaling
+  type: IETF
+  scope: anchor
+docnumber: I-D.johani-dnsop-transport-signaling
+date:
+- type: published
+  at: '2025-10-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Johan
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Stenstam
+      completename:
+        language: en
+        content: Johan Stenstam
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Leon
+      - language: en
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Fernandez
+      completename:
+        language: en
+        content: Leon Fernandez
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Erik
+      - language: en
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Bergström
+      completename:
+        language: en
+        content: Erik Bergström
+    affiliation:
+    - organization:
+        name:
+        - content: The Swedish Internet Foundation
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Philip
+      - language: en
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Homburg
+      completename:
+        language: en
+        content: Philip Homburg
+    affiliation:
+    - organization:
+        name:
+        - content: NLnet Labs
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Sara
+      - language: en
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Dickinson
+      completename:
+        language: en
+        content: Sara Dickinson
+    affiliation:
+    - organization:
+        name:
+        - content: Sinodun IT
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: '<p>This document proposes a mechanism for authoritative DNS servers to
+    signal their support for alternative transport protocols (e.g., DNS over TLS (DoT),
+    DNS over HTTPS (DoH) and DNS over QUIC (DoQ)). This signaling may either be provided
+    within the Additional section of authoritative DNS responses or be the result
+    of direct DNS queries. The former, "opportunistic mode" is hint-based and aims
+    to enable resolvers to discover alternative transports efficiently and then opportunistically
+    upgrade connections to the authoritative, thereby improving privacy, security,
+    and performance for subsequent interactions. The mechanism is designed to not
+    require any protocol change or additional queries. It is safe, backward-compatible,
+    and effective even when DNSSEC validation of the hint is not possible or desired.
+    In certain circumstances and with additional overhead it is also possible to use
+    direct queries to securely obtain authentication information for the authoritative
+    that can then be used to authenticate an encrypted connection. It is also possible
+    to establish a "validated mode" where the communication between the resolver and
+    the authoritative server is provably both secure and authentic. Validated mode
+    may not always be possible, depending on whether the resolver is able to DNSSEC
+    validate the signal or not. When Validated mode is possible it does provide a
+    stronger and more trustworthy connection. This document proposes an improvement
+    to the opportunistic (but blind) testing of alternative transports suggested in
+    RFC9539 by providing a mechanism by which a responding authoritative server may
+    signal what alternative transports it supports. TO BE REMOVED: This document is
+    being collaborated on in Github at: https://github.com/johanix/draft-johani-dnsop-transport-signaling
+    (https://github.com/johanix/draft-johani-dnsop-transport-signaling). The most
+    recent working version of the document, open issues, etc, should all be available
+    there. The authors (gratefully) accept pull requests.</p>'
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-johani-dnsop-transport-signaling-00
+      format: text/plain
+    docidentifier:
+    - content: draft-johani-dnsop-transport-signaling-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-johani-dnsop-transport-signaling-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

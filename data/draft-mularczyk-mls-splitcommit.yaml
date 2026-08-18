@@ -1,0 +1,39 @@
+---
+id: draftmularczykmlssplitcommit
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: MLS Split Commits
+  format: text/plain
+docidentifier:
+- content: draft-mularczyk-mls-splitcommit
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document describes an extension to the MLS protocol [RFC940] that
+    improves its efficiency in terms of per-member download size. This comes at essentially
+    no cost. In essence, this document defines a new message type called split commit
+    which replaces regular MLS commits. Unlike regular commits, a split commit can
+    be "split" by the Delivery Service (DS) into much smaller per-member commits,
+    one for each receiving member. The size of a per-member commit is always logarithmic
+    in the group size, while the size of a regular MLS commit can be linear. This
+    extension works in settings with a DS that can do the splitting which can be demanding
+    with encrypted MLS handshake messages. This is motivated by academic research
+    [KKP22], [HKPPW22], [AHKM22].</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mularczyk-mls-splitcommit-00
+      format: text/plain
+    docidentifier:
+    - content: draft-mularczyk-mls-splitcommit-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

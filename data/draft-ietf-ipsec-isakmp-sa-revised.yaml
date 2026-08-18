@@ -1,0 +1,46 @@
+---
+id: draftietfipsecisakmpsarevised
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Revised SA negotiation mode for ISAKMP/Oakley
+  format: text/plain
+docidentifier:
+- content: draft-ietf-ipsec-isakmp-sa-revised
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>ISAKMP/OAKLEY [2][3] is the key management protocol defined by IPSEC
+    working to be a framework for authentication, security association negotiation
+    and key management. The protocol defines two phases whereby, in the phase 1, the
+    peers are authenticates, the security association (SA) for ISAKMP/Oakley, and
+    keying material is agreed upon by the peers to secure ISAKMP messages. The phase
+    2 is used to negotiate security association for security applications (e.g., IPSEC
+    AH and ESP). When perfect forward secrecy is required, phase 2 is also used to
+    exchange keying material for the application. However, when perfect forward secrecy
+    is not a requirement, the keying material from the phase 1 is used to generate
+    session keys for the secure communication applications. The proposal in this document
+    is based on the observation that when perfect forward secrecy is not a requirement,
+    if application specific SA was negotiated during phase 1, the application can
+    start immediately after phase 1. The phase 2 can be used subsequently for key
+    refresh on per need bases in the future. Therefore, this proposal reduces startup
+    time for communication and improves the efficiency of the protocol. Remark: This
+    document is NOT self-contained, it is intended as an addendum to [2][3]. Thus,
+    it is best read in conjunction with [2][3].</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsec-isakmp-sa-revised-00
+      format: text/plain
+    docidentifier:
+    - content: draft-ietf-ipsec-isakmp-sa-revised-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

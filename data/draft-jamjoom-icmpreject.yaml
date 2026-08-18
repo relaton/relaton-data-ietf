@@ -1,0 +1,39 @@
+---
+id: draftjamjoomicmpreject
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Reject Message Extension for ICMP
+  format: text/plain
+docidentifier:
+- content: draft-jamjoom-icmpreject
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies the incorporation of a Reject message to ICMP
+    to improve a server’s ability for controlling TCP connection requests during periods
+    of overload beyond dropping them. The Reject message serves two purposes: (1)
+    it can inform a connecting host (the client) to completely abort the connection
+    attempt as if a connection timeout has expired, and (2) modify the retransmission
+    timeout interval to reduce the client’s wait times and also to break the re-synchronization
+    of connection requests when multiple SYN packets are dropped. Introducing an additional
+    ICMP message, as opposed to modifying the behavior of TCP, was motivated by the
+    need for backward compatibility (i.e., a host can ignore the ICMP Reject message
+    without affecting the behavior of TCP) and incremental deployment.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-jamjoom-icmpreject-00
+      format: text/plain
+    docidentifier:
+    - content: draft-jamjoom-icmpreject-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

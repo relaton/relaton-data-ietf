@@ -1,0 +1,41 @@
+---
+id: draftsnoerentcpmigrate
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: 'TCP Connection Migration
+
+    '
+  format: text/plain
+docidentifier:
+- content: draft-snoeren-tcp-migrate
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes a set of TCP options to support the migration
+    of an active TCP connection across IP addresses and TCP port numbers. Using this
+    option, a TCP peer can open a migrateable connection, transfer one or more bytes
+    on it, and continue the connection from another IP address/TCP port pair in an
+    application-transparent fashion. The set of addresses or ports from where a connection
+    might be continued need not be known in advance. Security against connection hijacking
+    is achieved using a secret cryptographic cookie negotiated through an Elliptic
+    Curve Diffie-Hellman [ANSI-X962] exchange during connection establishment. The
+    initiation of migration can be done either by one of the communicating peers,
+    or by a trusted third-party that presents the negotiated cryptographic cookie.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-snoeren-tcp-migrate-00
+      format: text/plain
+    docidentifier:
+    - content: draft-snoeren-tcp-migrate-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

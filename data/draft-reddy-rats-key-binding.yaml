@@ -1,0 +1,61 @@
+---
+id: draftreddyratskeybinding
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Key Attestation for Entity Attestation Tokens (EAT)
+  format: text/plain
+docidentifier:
+- content: draft-reddy-rats-key-binding
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document defines an Entity Attestation Token (EAT) profile and
+    a new EAT claim that convey the subject public key and its protection properties
+    within attestation evidence. Combined with protocol-level proof of possession
+    from the surrounding protocol, this establishes a cryptographic binding between
+    a private key and an attested execution environment. The subject public key is
+    conveyed using the EAT cnf claim defined in [RFC8747] and [RFC7800], and freshness
+    uses the EAT eat_nonce claim defined in [RFC9711]. The proof of possession of
+    the subject key is obtained from the surrounding protocol, such as TLS certificate-based
+    authentication or CSR signature verification. Because the EAT is signed by a hardware-backed
+    Attestation Key (AK), successful verification of the EAT signature together with
+    protocol-level proof of possession establishes a cryptographic binding between
+    the private key and the attested platform state. This mechanism addresses key
+    substitution attacks that arise when attestation evidence and the certificate
+    private keys are validated independently.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-reddy-rats-key-binding-00
+      format: text/plain
+    docidentifier:
+    - content: draft-reddy-rats-key-binding-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-reddy-rats-key-binding-01
+      format: text/plain
+    docidentifier:
+    - content: draft-reddy-rats-key-binding-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-reddy-rats-key-binding-02
+      format: text/plain
+    docidentifier:
+    - content: draft-reddy-rats-key-binding-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft

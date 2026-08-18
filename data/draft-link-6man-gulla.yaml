@@ -1,0 +1,50 @@
+---
+id: draftlink6mangulla
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Using Prefix-Specific Link-Local Addresses to Improve SLAAC Robustness
+  format: text/plain
+docidentifier:
+- content: draft-link-6man-gulla
+  type: Internet-Draft
+  primary: true
+abstract:
+- language: en
+  script: Latn
+  content: <p>When an IPv6 prefix assigned to a link changes, hosts may not be explicitly
+    notified about the change. Similarly, in some scenario a link attachement for
+    the host may change without the host detecting it. In both cases the host does
+    not receive any signals to trigger the network stack configuration refresh, so
+    it may continue to use "old" addresses which are not valid for the link. This
+    leads to packet loss and service disruption. This document proposes a mechanism
+    to mitigate this issue. Routers are advised to send Router Advertisements containing
+    distinct Prefix Information Options (PIOs) from different link-local addresses.
+    This, in conjunction with RFC6724 (Default Source Address Selection) Rule 5.5
+    and RFC8028 (first-hop selection requirements), enables hosts to detect prefix
+    changes more rapidly and select the correct source address, thereby improving
+    the robustness of SLAAC.</p>
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-link-6man-gulla-00
+      format: text/plain
+    docidentifier:
+    - content: draft-link-6man-gulla-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-link-6man-gulla-01
+      format: text/plain
+    docidentifier:
+    - content: draft-link-6man-gulla-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  flavor: internet-draft
