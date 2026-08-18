@@ -20,6 +20,12 @@ require "relaton"
 
 DATA_DIR = File.expand_path("data", __dir__)
 
+# IETF-native series only. The mirror also carries the legacy bibxml
+# mirrors of other SDOs' documents (W3C, 3GPP, IEEE, ISO, ITU, ...);
+# those SDOs' own relaton-data-* repos are canonical, so their XML
+# stays mirrored but gets no YAML sibling and no index entry.
+IETF_SERIES = /\Areference\.(RFC|I-D|BCP|STD|FYI)[.-]/.freeze
+
 GROUP_TITLES = {
   "BCP" => "Best Current Practice",
   "STD" => "Internet Standard technical specification",
@@ -74,10 +80,17 @@ def yaml_for(xml)
   item.to_yaml
 end
 
-converted = up_to_date = failed = 0
+converted = up_to_date = failed = non_ieee = 0
 
 Dir[File.join(DATA_DIR, "*.xml")].sort.each do |xml|
   yaml = xml.sub(/\.xml\z/, ".yaml")
+
+  unless File.basename(xml).match?(IETF_SERIES)
+    # A sibling from before the exclusion is stale derived output.
+    File.delete(yaml) if File.exist?(yaml)
+    non_ieee += 1
+    next
+  end
 
   fresh = begin
     yaml_for(xml)
@@ -101,4 +114,5 @@ Dir[File.join(DATA_DIR, "*.xml")].sort.each do |xml|
   end
 end
 
-puts "bibxml→yaml: wrote #{converted}, unchanged #{up_to_date}, failed #{failed}"
+puts "bibxml→yaml: wrote #{converted}, unchanged #{up_to_date}, " \
+     "failed #{failed}, non-IETF mirrors #{non_ieee}"
