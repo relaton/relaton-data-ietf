@@ -1,0 +1,90 @@
+---
+id: draftwhittleiviparch03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Ivip (Internet Vastly Improved Plumbing) Architecture
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-whittle-ivip-arch-03.txt
+docidentifier:
+- content: draft-whittle-ivip-arch
+  type: Internet-Draft
+- content: draft-whittle-ivip-arch-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.whittle-ivip-arch
+date:
+- type: published
+  at: '2010-01-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Robin
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R
+      surname:
+        language: en
+        content: Whittle
+      completename:
+        language: en
+        content: Robin Whittle
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>Ivip (Internet Vastly Improved Plumbing) is a core-edge separation solution
+    to the routing scaling problem, for both IPv4 and IPv6.  It provides portable
+    address space which is suitable for multihoming and inbound traffic engineering
+    (TE) to end-user networks of all types and sizes.  The subset of the global unicast
+    address space which is used in this fashion is called SPI (Scalable Provider Independent)
+    space.  End-user networks divide their SPI space into "micronets", each with a
+    common mapping to a particular ETR (Egress Tunnel Router) address.  ITRs (Ingress
+    Tunnel Routers) receive packets which are addressed to SPI addresses and, after
+    looking up the mapping at a local query server, tunnel traffic packets to the
+    ETR which delivers them to the end-user network.  Ivip pushes mapping changes
+    in real- time to local full-database query servers - such as in each ISP. These
+    answer ITRs' mapping queries and push subsequent changes to the mapping to any
+    ITRs which would still be caching the mapping of an earlier reply.  The mapping
+    for a micronet consists of a single ETR address.  ITRs make no decisions between
+    multiple ETR addresses. End-user networks would typically contract a separate
+    company to change the mapping of their micronet, in response to the reachability
+    of their ETRs and TE and portability between ISPs.  Ivip includes two extensions
+    for ITR-to-ETR tunneling without encapsulation and the resulting Path MTU Discovery
+    problems - one for IPv4 and the other for IPv6.  Both involve modifying the IP
+    header and require most DFZ routers to be upgraded.  Ivip is a good basis for
+    the TTR (Translating Tunnel Router) approach to mobility, in which mobile hosts
+    retain an SPI micronet of one IPv4 address (or IPv6 /64) no matter what physical
+    addresses they are using, including behind NAT. TTR mobility for both IPv4 and
+    IPv6 involves generally optimal paths and works with unmodified correspondent
+    hosts.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-whittle-ivip-arch-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

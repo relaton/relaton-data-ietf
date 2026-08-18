@@ -1,0 +1,106 @@
+---
+id: draftdugeonbrpcstateful00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A Backward Recursive PCE-initiated inter-domain LSP Setup
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-dugeon-brpc-stateful-00.txt
+docidentifier:
+- content: draft-dugeon-brpc-stateful
+  type: Internet-Draft
+- content: draft-dugeon-brpc-stateful-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dugeon-brpc-stateful
+date:
+- type: published
+  at: '2017-03-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Olivier
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O
+      surname:
+        language: en
+        content: Dugeon
+      completename:
+        language: en
+        content: Olivier Dugeon
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Julien
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J
+      surname:
+        language: en
+        content: Meuric
+      completename:
+        language: en
+        content: Julien Meuric
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The Path Computation Element (PCE) working group (WG) has produced
+    a set of RFCs to standardize the behavior of the Path Computation Element as a
+    tool to help MPLS-TE, GMPLS LSP tunnels and Segment Routing paths placement.  This
+    also include the ability to compute inter-domain LSPs or Segment Routing path
+    following a distributed or hierarchical approach.  In complement to the original
+    stateless mode, a stateful mode has been added.  In particular, the new PCInitiate
+    message allows a PCE to directly ask a PCC to setup an MPLS-TE, GMPLS LSP tunnels
+    or a Segment Routing path.  However, once computed, the inter-domain LSPs or Segment
+    Routing path are hard to setup in the underlying network.  Especially, in operational
+    network, RSVP-TE signaling is not enable between BGP border routers.  But, such
+    RSVP- TE signaling is mandatory to setup contiguous LSP tunnels or to stitch or
+    nest independent LSP tunnels to form the end-to-end inter- domain LSP tunnels.
+    \ This draft propose to combine a Backward Recursive method with PCInitiate message
+    to setup independent LSP tunnels per domain and stitch or nest the different LSP
+    tunnels to setup end-to-end inter-domain LSP tunnels without the need of inter-
+    domain signaling between BGP border routers.  A new Stitching Label definition
+    and new LSP-TYPE code points are proposed for that purpose.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dugeon-brpc-stateful-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

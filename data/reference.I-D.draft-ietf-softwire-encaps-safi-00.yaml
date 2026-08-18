@@ -1,0 +1,103 @@
+---
+id: draftietfsoftwireencapssafi00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Encapsulation SAFI and BGP Tunnel Encapsulation Attribute
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-softwire-encaps-safi-00.txt
+docidentifier:
+- content: draft-ietf-softwire-encaps-safi
+  type: Internet-Draft
+- content: draft-ietf-softwire-encaps-safi-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-softwire-encaps-safi
+date:
+- type: published
+  at: '2008-01-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pradosh
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P
+      surname:
+        language: en
+        content: Mohapatra
+      completename:
+        language: en
+        content: Pradosh  Mohapatra
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Eric
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E
+      surname:
+        language: en
+        content: Rosen
+      completename:
+        language: en
+        content: Eric Rosen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>In certain situations, transporting a packet from one BGP speaker to
+    another, the BGP next hop, requires that the packet be encapsulated by the first
+    BGP speaker and decapsulated by the second. To support these situations, there
+    needs to be some agreement  between the two BGP speakers with regard to the "encapsulation
+    information", i.e., the format of the encapsulation header as well as the contents
+    of various fields of the header.  The encapsulation information need not be signaled
+    for all encapsulation types. In the cases where the signaling is required (such
+    as L2TPv3, GRE with key), This draft specifies a method by which BGP speakers
+    can signal encapsulation information to each other. The signaling is done by sending
+    BGP updates using the "Encapsulation SAFI" and IPv4 or IPv6 AFI. In the cases
+    where no encapsulation information needs to be signaled (such as GRE without key),
+    this draft specifies a BGP extended community that can be attached to UPDATE messages
+    that carry payload prefixes to indicate the encapsulation protocol type to be
+    used.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-softwire-encaps-safi-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

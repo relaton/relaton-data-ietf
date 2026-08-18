@@ -1,0 +1,135 @@
+---
+id: draftietfdnsopsvcbhttps00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Service binding and parameter specification via the DNS (DNS SVCB and HTTPS
+    RRs)
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-dnsop-svcb-https-00.txt
+docidentifier:
+- content: draft-ietf-dnsop-svcb-https
+  type: Internet-Draft
+- content: draft-ietf-dnsop-svcb-https-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-dnsop-svcb-https
+date:
+- type: published
+  at: '2020-06-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Benjamin
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Schwartz
+      completename:
+        language: en
+        content: Benjamin Schwartz
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mike
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M
+      surname:
+        language: en
+        content: Bishop
+      completename:
+        language: en
+        content: Mike Bishop
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Erik
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E
+      surname:
+        language: en
+        content: Nygren
+      completename:
+        language: en
+        content: Erik Nygren
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: '<p>This document specifies the "SVCB" and "HTTPS" DNS resource record
+    (RR) types to facilitate the lookup of information needed to make connections
+    for origin resources, such as for HTTPS URLs.  SVCB records allow an origin to
+    be served from multiple network locations, each with associated parameters (such
+    as transport protocol configuration and keys for encrypting the TLS ClientHello).  They
+    also enable aliasing of apex domains, which is not possible with CNAME.  The HTTPS
+    RR is a variation of SVCB for HTTPS and HTTP origins.  By providing more information
+    to the client before it attempts to establish a connection, these records offer
+    potential benefits to both performance and privacy.  TO BE REMOVED: This proposal
+    is inspired by and based on recent DNS usage proposals such as ALTSVC, ANAME,
+    and ESNIKEYS (as well as long standing desires to have SRV or a functional equivalent
+    implemented for HTTP).  These proposals each provide an important function but
+    are potentially incompatible with each other, such as when an origin is load-balanced
+    across multiple hosting providers (multi-CDN). Furthermore, these each add potential
+    cases for adding additional record lookups in addition to AAAA/A lookups.  This
+    design attempts to provide a unified framework that encompasses the key functionality
+    of these proposals, as well as providing some extensibility for addressing similar
+    future challenges.  TO BE REMOVED: This document is being collaborated on in Github
+    at: https://github.com/MikeBishop/dns-alt-svc [1].  The most recent working version
+    of the document, open issues, etc. should all be available there.  The authors
+    (gratefully) accept pull requests.</p>'
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-dnsop-svcb-https-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

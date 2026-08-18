@@ -1,0 +1,75 @@
+---
+id: draftietfjmapsieve01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: JMAP for Sieve Scripts
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-jmap-sieve-01.txt
+docidentifier:
+- content: draft-ietf-jmap-sieve
+  type: Internet-Draft
+- content: draft-ietf-jmap-sieve-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-jmap-sieve
+date:
+- type: published
+  at: '2020-09-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kenneth
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K
+      surname:
+        language: en
+        content: Murchison
+      completename:
+        language: en
+        content: Kenneth Murchison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>This document specifies a data model for managing Sieve scripts on a
+    server using JMAP.  Open Issues  o  Do we need/want both "content" and "blobId"
+    in the SieveScript object?  It may be simpler to have just one way of specifying
+    content and "blobId" is more versatile and doesn't require JSON- encoding of the
+    content.  Furthermore, use of the forthcoming(?) Blob/set method would avoid the
+    extra roundtrip of having to upload the blob first.  o  The strawman for SieveScript/test
+    only uses blobIds.  Will this have to change once the issue regarding content/blobId
+    in SieveScript is resolved?  o  Should ":fcc" and associated arguments (e.g.,
+    ":flags", ":create":, etc) reported in the /test response be in their own "fcc"
+    sub-object rather than listed inline with the rest of the arguments for the action?</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-jmap-sieve-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

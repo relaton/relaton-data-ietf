@@ -1,0 +1,79 @@
+---
+id: draftbriscoetcpminnerspace01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Inner Space for TCP Options
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-briscoe-tcpm-inner-space-01.txt
+docidentifier:
+- content: draft-briscoe-tcpm-inner-space
+  type: Internet-Draft
+- content: draft-briscoe-tcpm-inner-space-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.briscoe-tcpm-inner-space
+date:
+- type: published
+  at: '2014-10-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bob
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document describes an experimental method to extend the limited
+    space for control options in every segment of a TCP connection.  It can use a
+    dual handshake so that, from the very first SYN segment, extra option space can
+    immediately start to be used optimistically. At the same time a dual handshake
+    prevents a legacy server from getting confused and sending the control options
+    to the application as user-data.  The dual handshake is only one strategy - a
+    single handshake will usually suffice once deployment has got started.  The protocol
+    is designed to traverse most known middleboxes including connection splitters,
+    because it sits wholly within the TCP Data.  It also provides reliable ordered
+    delivery for control options. Therefore, it should allow new TCP options to be
+    introduced i) with minimal middlebox traversal problems; ii) with incremental
+    deployment from legacy servers; iii) without an extra round of handshaking delay
+    iv) without having to provide its own loss recovery and ordering mechanism and
+    v) without arbitrary limits on available space.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-briscoe-tcpm-inner-space-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

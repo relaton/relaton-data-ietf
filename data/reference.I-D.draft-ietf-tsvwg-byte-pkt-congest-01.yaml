@@ -1,0 +1,77 @@
+---
+id: draftietftsvwgbytepktcongest01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Byte and Packet Congestion Notification
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-tsvwg-byte-pkt-congest-01.txt
+docidentifier:
+- content: draft-ietf-tsvwg-byte-pkt-congest
+  type: Internet-Draft
+- content: draft-ietf-tsvwg-byte-pkt-congest-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tsvwg-byte-pkt-congest
+date:
+- type: published
+  at: '2009-10-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bob
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This memo concerns dropping or marking packets using active queue management
+    (AQM) such as random early detection (RED) or pre- congestion notification (PCN).
+    \ The primary conclusion is that packet size should be taken into account when
+    transports read congestion indications, not when network equipment writes them.
+    \ Reducing drop of small packets has some tempting advantages: i) it drops less
+    control packets, which tend to be small and ii) it makes TCP's bit- rate less
+    dependent on packet size.  However, there are ways of addressing these issues
+    at the transport layer, rather than reverse engineering network forwarding to
+    fix specific transport problems. Network layer algorithms like the byte-mode packet
+    drop variant of RED should not be used to drop fewer small packets, because that
+    creates a perverse incentive for transports to use tiny segments, consequently
+    also opening up a DoS vulnerability.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tsvwg-byte-pkt-congest-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

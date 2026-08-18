@@ -1,0 +1,80 @@
+---
+id: draftietftsvwgecntunnel06
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Tunnelling of Explicit Congestion Notification
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-tsvwg-ecn-tunnel-06.txt
+docidentifier:
+- content: draft-ietf-tsvwg-ecn-tunnel
+  type: Internet-Draft
+- content: draft-ietf-tsvwg-ecn-tunnel-06
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tsvwg-ecn-tunnel
+date:
+- type: published
+  at: '2009-12-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bob
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document redefines how the explicit congestion notification (ECN)
+    field of the IP header should be constructed on entry to and exit from any IP
+    in IP tunnel.  On encapsulation it updates RFC3168 to bring all IP in IP tunnels
+    (v4 or v6) into line with RFC4301 IPsec ECN processing.  On decapsulation it updates
+    both RFC3168 and RFC4301 to add new behaviours for previously unused combinations
+    of inner and outer header.  The new rules ensure the ECN field is correctly propagated
+    across a tunnel whether it is used to signal one or two severity levels of congestion,
+    whereas before only one severity level was supported.  Tunnel endpoints can be
+    updated in any order without affecting pre-existing uses of the ECN field (backward
+    compatible). Nonetheless, operators wanting to support two severity levels (e.g.
+    for pre-congestion notification--PCN) can require compliance with this new specification.
+    \ A thorough analysis of the reasoning for these changes and the implications
+    is included.  In the unlikely event that the new rules do not meet a specific
+    need, RFC4774 gives guidance on designing alternate ECN semantics and this document
+    extends that to include tunnelling issues.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tsvwg-ecn-tunnel-06
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,119 @@
+---
+id: RFC5723
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Internet Key Exchange Protocol Version 2 (IKEv2) Session Resumption
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc5723
+docidentifier:
+- content: RFC 5723
+  type: IETF
+  primary: true
+- content: 10.17487/RFC5723
+  type: DOI
+docnumber: RFC5723
+date:
+- type: published
+  at: 2010-01
+contributor:
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: Internet Engineering Task Force
+    abbreviation:
+      language: en
+      content: IETF
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Sheffer
+      completename:
+        language: en
+        content: Y. Sheffer
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Tschofenig
+      completename:
+        language: en
+        content: H. Tschofenig
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The Internet Key Exchange version 2 (IKEv2) protocol has a certain
+    computational and communication overhead with respect to the number of round trips
+    required and the cryptographic operations involved. In remote access situations,
+    the Extensible Authentication Protocol (EAP) is used for authentication, which
+    adds several more round trips and consequently latency.</p>"
+- language: en
+  script: Latn
+  content: "<p>To re-establish security associations (SAs) upon a failure recovery
+    condition is time consuming especially when an IPsec peer (such as a VPN gateway)
+    needs to re-establish a large number of SAs with various endpoints.  A high number
+    of concurrent sessions might cause additional problems for an IPsec peer during
+    SA re-establishment.</p>"
+- language: en
+  script: Latn
+  content: "<p>In order to avoid the need to re-run the key exchange protocol from
+    scratch, it would be useful to provide an efficient way to resume an IKE/IPsec
+    session.  This document proposes an extension to IKEv2 that allows a client to
+    re-establish an IKE SA with a gateway in a highly efficient manner, utilizing
+    a previously established IKE SA.</p>"
+- language: en
+  script: Latn
+  content: "<p>A client can reconnect to a gateway from which it was disconnected.
+    The proposed approach encodes partial IKE state into an opaque ticket, which can
+    be stored on the client or in a centralized store, and is later made available
+    to the IKEv2 responder for re-authentication.  We use the term ticket to refer
+    to the opaque data that is created by the IKEv2 responder.  This document does
+    not specify the format of the ticket but examples are provided.  [STANDARDS-TRACK]</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: RFC
+  number: '5723'
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf

@@ -1,0 +1,173 @@
+---
+id: draftyizhoutrilltreeselection01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: VLAN based Tree Selection for Multi-destination Frames
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-yizhou-trill-tree-selection-01.txt
+docidentifier:
+- content: draft-yizhou-trill-tree-selection
+  type: Internet-Draft
+- content: draft-yizhou-trill-tree-selection-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.yizhou-trill-tree-selection
+date:
+- type: published
+  at: '2012-07-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L
+      surname:
+        language: en
+        content: Yizhou
+      completename:
+        language: en
+        content: Li Yizhou
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hao
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H
+      surname:
+        language: en
+        content: Weiguo
+      completename:
+        language: en
+        content: Hao Weiguo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Radia
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R
+      surname:
+        language: en
+        content: Perlman
+      completename:
+        language: en
+        content: Radia Perlman
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Naveen
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: "N"
+      surname:
+        language: en
+        content: Nimmu
+      completename:
+        language: en
+        content: Naveen Nimmu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Somnath
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S
+      surname:
+        language: en
+        content: Chatterjee
+      completename:
+        language: en
+        content: Somnath Chatterjee
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>TRILL uses distribution trees for multi-destination traffic. Multiple
+    trees can be used by an ingress RBridge. Different ingress RBridges may choose
+    different distribution trees for the same VLAN and/or multicast group traffic.
+    Distribution trees are normally pruned based on VLAN. For any RBridge RBn, if
+    RBn has downstream receivers of VLAN x in a distribution tree t, there will be
+    an entry of (t, x, port list) in the multicast forwarding table on RBn. If there
+    are n trees and m VLANs, the multicast forwarding table size on RBn is typically
+    n*m entries. The value of m is up to 4096 and n is the total number of distribution
+    trees in the campus. If finer granularity filtering such as L2/L3 multicast address
+    is used, then the multicast forwarding table size further increases dramatically.
+    TRILL multicast forwarding table size is limited by hardware and L3 multicasting
+    may share the same table with it in hardware implementations. Therefore multicast
+    table entry is a precious resource. This document specifies a VLAN based tree
+    selection mechanism to reduce the TRILL multicast forwarding table size. No data
+    plane change is required.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-yizhou-trill-tree-selection-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

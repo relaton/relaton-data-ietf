@@ -1,0 +1,130 @@
+---
+id: draftietfmptcpcongestion02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Coupled Congestion Control for Multipath Transport Protocols
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-mptcp-congestion-02.txt
+docidentifier:
+- content: draft-ietf-mptcp-congestion
+  type: Internet-Draft
+- content: draft-ietf-mptcp-congestion-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-mptcp-congestion
+date:
+- type: published
+  at: '2011-03-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Costin
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C
+      surname:
+        language: en
+        content: Raiciu
+      completename:
+        language: en
+        content: Costin Raiciu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mark
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M
+      surname:
+        language: en
+        content: Handley
+      completename:
+        language: en
+        content: Mark Handley
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Damon
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D
+      surname:
+        language: en
+        content: Wischik
+      completename:
+        language: en
+        content: Damon Wischik
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Often endpoints are connected by multiple paths, but communications
+    are usually restricted to a single path per connection.  Resource usage within
+    the network would be more efficient were it possible for these multiple paths
+    to be used concurrently.  Multipath TCP is a proposal to achieve multipath transport
+    in TCP.  New congestion control algorithms are needed for multipath transport
+    protocols such as Multipath TCP, as single path algorithms have a series of issues
+    in the multipath context.  One of the prominent problems is that running existing
+    algorithms such as TCP New Reno independently on each path would give the multipath
+    flow more than its fair share at a bottleneck link traversed by more than one
+    of its subflows.  Further, it is desirable that a source with multiple paths available
+    will transfer more traffic using the least congested of the paths, hence achieving
+    resource pooling.  This would increase the overall efficiency of the network and
+    also its robustness to failure.  This document presents a congestion control algorithm
+    which couples the congestion control algorithms running on different subflows
+    by linking their increase functions, and dynamically controls the overall aggresiveness
+    of the multipath flow.  The result is a practical algorithm that is fair to TCP
+    at bottlenecks while moving traffic away from congested links.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-mptcp-congestion-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

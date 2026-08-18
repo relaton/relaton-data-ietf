@@ -1,0 +1,114 @@
+---
+id: draftietftsvwgecnl4sid12
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Identifying Modified Explicit Congestion Notification (ECN) Semantics for
+    Ultra-Low Queuing Delay (L4S)
+source:
+- type: TXT
+  content: http://www.ietf.org/internet-drafts/draft-ietf-tsvwg-ecn-l4s-id-12.txt
+docidentifier:
+- content: draft-ietf-tsvwg-ecn-l4s-id
+  type: Internet-Draft
+- content: draft-ietf-tsvwg-ecn-l4s-id-12
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.ietf-tsvwg-ecn-l4s-id
+date:
+- type: published
+  at: '2020-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Koen
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K
+      surname:
+        language: en
+        content: Schepper
+      completename:
+        language: en
+        content: Koen De Schepper
+    affiliation:
+    - organization:
+        name:
+        - language: en
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bob
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B
+      surname:
+        language: en
+        content: Briscoe
+      completename:
+        language: en
+        content: Bob Briscoe
+    affiliation:
+    - organization:
+        name:
+        - language: en
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This specification defines the identifier to be used on IP packets
+    for a new network service called low latency, low loss and scalable throughput
+    (L4S).  L4S uses an Explicit Congestion Notification (ECN) scheme that is similar
+    to the original (or 'Classic') ECN approach. 'Classic' ECN marking was required
+    to be equivalent to a drop, both when applied in the network and when responded
+    to by a transport. Unlike 'Classic' ECN marking, for packets carrying the L4S
+    identifier, the network applies marking more immediately and more aggressively
+    than drop, and the transport response to each mark is reduced and smoothed relative
+    to that for drop.  The two changes counterbalance each other so that the throughput
+    of an L4S flow will be roughly the same as a non-L4S flow under the same conditions.
+    Nonetheless, the much more frequent control signals and the finer responses to
+    them result in much more fine-grained adjustments, so that ultra-low and consistently
+    low queuing delay (typically sub- millisecond on average) becomes possible for
+    L4S traffic without compromising link utilization.  Thus even capacity-seeking
+    (TCP-like) traffic can have high bandwidth and very low delay at the same time,
+    even during periods of high traffic load.  The L4S identifier defined in this
+    document distinguishes L4S from 'Classic' (e.g. TCP-Reno-friendly) traffic.  It
+    gives an incremental migration path so that suitably modified network bottlenecks
+    can distinguish and isolate existing traffic that still follows the Classic behaviour,
+    to prevent it degrading the low queuing delay and low loss of L4S traffic.  This
+    specification defines the rules that L4S transports and network elements need
+    to follow to ensure they neither harm each other's performance nor that of Classic
+    traffic. Examples of new active queue management (AQM) marking algorithms and
+    examples of new transports (whether TCP-like or real-time) are specified separately.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-ietf-tsvwg-ecn-l4s-id-12
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
