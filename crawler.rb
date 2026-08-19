@@ -89,10 +89,31 @@ rescue StandardError => e
   warn "#{repo}: #{e.message}"
 end
 
+
+# Flat docid -> file index, same shape the IETF sources publish
+# (index-v1.yaml; the shared crawler workflow zips and commits it).
+# Consumers fetch it from raw.githubusercontent over the fleet's
+# standard baseurl. Rebuilt whole on every run, so removed source
+# documents never linger as stale rows.
+def build_index
+  idx = Relaton::Index.find_or_create :IETF, file: "index-v1.yaml"
+  Dir[File.join(__dir__, 'data', '*.yaml')].sort.each do |f|
+    doc = YAML.safe_load_file(f, permitted_classes: [Date, Time], aliases: true)
+    ids = doc["docidentifier"] || []
+    docid = ids.find { |d| d.is_a?(Hash) && d["primary"] } || ids.first
+    next unless docid
+
+    idx.add_or_update docid["content"], "data/#{File.basename(f)}"
+  end
+  idx.save
+  puts "index-v1.yaml: #{idx.index.size} entries"
+end
+
 t1 = Time.now
 puts "Started at: #{t1}"
 
 SOURCES.each { |repo, url| combine(repo, url) }
+build_index
 
 t2 = Time.now
 puts "Stopped at: #{t2}"
