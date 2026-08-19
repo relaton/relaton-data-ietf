@@ -100,6 +100,14 @@ def doc_date(norm)
   dates.max
 end
 
+def doc_doctype(norm)
+  norm[:ext]&.doctype&.content
+end
+
+def doc_source(norm)
+  norm[:source] if norm[:source]&.any?
+end
+
 def constituent_ids(norm)
   (norm[:relation] || []).select { |r| r.type == 'includes' }.flat_map do |rel|
     next [] unless rel.bibitem
@@ -111,29 +119,41 @@ def constituent_ids(norm)
   end
 end
 
-# Unversioned draft aliases and BCP/STD/FYI groups carry no date of
-# their own: they inherit the newest date among their `includes`
-# constituents.
-def inherit_dates!(undated, docid_dates)
+# Unversioned draft aliases and BCP/STD/FYI groups are thin records:
+# the properties live in their underlying documents. They inherit the
+# date, doctype and source links of their NEWEST `includes` constituent.
+def inherit_metadata!(undated, meta)
   fixed = 0
   undated.each do |path, dest|
     norm = load_v1(path)
     recast_flavor(norm)
-    newest = constituent_ids(norm).filter_map { |id| docid_dates[squish(id)] }.max
-    next unless newest
+    newest_meta = constituent_ids(norm)
+                    .filter_map { |id| meta[squish(id)] }
+                    .max_by { |m| m[:date] }
+    next unless newest_meta && newest_meta[:date]
 
-    norm[:date] = [Relaton::Bib::Date.new(type: ['published'], at: newest)]
+    norm[:date] = [Relaton::Bib::Date.new(type: ['published'], at: newest_meta[:date])]
+    if doc_doctype(norm).nil? && newest_meta[:doctype]
+      ext_hash = norm[:ext] ? norm[:ext].to_hash : {}
+      ext_hash['doctype'] = { 'content' => newest_meta[:doctype] }
+      norm[:ext] = Relaton::Ietf::Ext.from_hash(ext_hash)
+    end
+    norm[:source] ||= Marshal.load(Marshal.dump(newest_meta[:source])) if newest_meta[:source]
+
     fresh = Relaton::Ietf::ItemData.new(**norm).to_yaml
     File.write(dest, fresh)
     if (id = primary_docid(norm))
       key = squish(id)
-      docid_dates[key] = [docid_dates[key], newest].compact.max
+      old = meta[key]
+      meta[key] = { date: [old&.dig(:date), newest_meta[:date]].compact.max,
+                    doctype: doc_doctype(norm) || old&.dig(:doctype),
+                    source: norm[:source] || old&.dig(:source) }
     end
     fixed += 1
   rescue StandardError => e
-    warn "Date inheritance failed for #{path}: #{e.message}"
+    warn "Metadata inheritance failed for #{path}: #{e.message}"
   end
-  puts "date inheritance: fixed #{fixed} of #{undated.size}"
+  puts "metadata inheritance: fixed #{fixed} of #{undated.size}"
 end
 
 def combine(repo, url, docid_dates)
@@ -163,7 +183,10 @@ def combine(repo, url, docid_dates)
 
     if (date = doc_date(norm)) && (id = primary_docid(norm))
       key = squish(id)
-      docid_dates[key] = [docid_dates[key], date].compact.max
+      prior = docid_dates[key]
+      docid_dates[key] = { date: [prior&.dig(:date), date].compact.max,
+                           doctype: doc_doctype(norm) || prior&.dig(:doctype),
+                           source: doc_source(norm) || prior&.dig(:source) }
     else
       undated << [src, dest]
     end
@@ -202,7 +225,7 @@ docid_dates = {}
 undated = SOURCES.flat_map { |repo, url| combine(repo, url, docid_dates) }
 # A second pass so groups can inherit from constituents converted in
 # any source (BCP/STD/FYI include RFCs from the rfcs repo).
-inherit_dates!(undated, docid_dates)
+inherit_metadata!(undated, docid_dates)
 build_index
 
 t2 = Time.now
