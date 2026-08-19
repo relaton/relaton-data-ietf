@@ -43,9 +43,30 @@ def refresh_clone(repo, url)
   ok ? dir : nil
 end
 
-def to_v3_yaml(path)
+# Full YAML timestamps parse into Date/Time objects while month-only
+# dates ("1969-07") stay Strings — the models cannot round-trip the mix.
+# Force every date to its String form before the parser sees it.
+def stringify_dates!(obj)
+  case obj
+  when Hash
+    obj.each { |k, v| obj[k] = stringify_dates!(v) }
+    obj
+  when Array
+    obj.map! { |v| stringify_dates!(v) }
+    obj
+  when Date, Time then obj.iso8601
+  else obj
+  end
+end
+
+def load_v1(path)
   hash = YAML.safe_load_file(path, permitted_classes: [Date, Time], aliases: true)
-  norm = Relaton::Bib::HashParserV1.hash_to_bib(hash)
+  stringify_dates!(hash)
+  Relaton::Bib::HashParserV1.hash_to_bib(hash)
+end
+
+def to_v3_yaml(path)
+  norm = load_v1(path)
   recast_flavor(norm)
   Relaton::Ietf::ItemData.new(**norm).to_yaml
 end
@@ -63,14 +84,70 @@ def recast_flavor(norm)
   end
 end
 
-def combine(repo, url)
+# Relation targets use inconsistent casing against the referenced
+# document's own docid (dyndNS vs dyndns), so keying is case-insensitive.
+def squish(id)
+  id.to_s.gsub(/[\s.]/, '').downcase
+end
+
+def primary_docid(norm)
+  ids = norm[:docidentifier]
+  (ids.find { |d| d.respond_to?(:primary) && d.primary } || ids.first)&.content
+end
+
+def doc_date(norm)
+  dates = (norm[:date] || []).filter_map { |d| d.at&.to_s }
+  dates.max
+end
+
+def constituent_ids(norm)
+  (norm[:relation] || []).select { |r| r.type == 'includes' }.flat_map do |rel|
+    next [] unless rel.bibitem
+
+    ids = rel.bibitem.docidentifier rescue []
+    id = (ids.find { |d| d.primary } || ids.first)&.content if ids&.any?
+    id ||= rel.bibitem.formattedref&.content if rel.bibitem.respond_to?(:formattedref)
+    id ? [id] : []
+  end
+end
+
+# Unversioned draft aliases and BCP/STD/FYI groups carry no date of
+# their own: they inherit the newest date among their `includes`
+# constituents.
+def inherit_dates!(undated, docid_dates)
+  fixed = 0
+  undated.each do |path, dest|
+    norm = load_v1(path)
+    recast_flavor(norm)
+    newest = constituent_ids(norm).filter_map { |id| docid_dates[squish(id)] }.max
+    next unless newest
+
+    norm[:date] = [Relaton::Bib::Date.new(type: ['published'], at: newest)]
+    fresh = Relaton::Ietf::ItemData.new(**norm).to_yaml
+    File.write(dest, fresh)
+    if (id = primary_docid(norm))
+      key = squish(id)
+      docid_dates[key] = [docid_dates[key], newest].compact.max
+    end
+    fixed += 1
+  rescue StandardError => e
+    warn "Date inheritance failed for #{path}: #{e.message}"
+  end
+  puts "date inheritance: fixed #{fixed} of #{undated.size}"
+end
+
+def combine(repo, url, docid_dates)
   dir = refresh_clone(repo, url) or raise "clone failed: #{repo}"
 
   converted = unchanged = failed = 0
+  undated = []
   Dir[File.join(dir, 'data', '*.yaml')].sort.each do |src|
     dest = File.join(__dir__, 'data', File.basename(src))
+    norm = nil
     fresh = begin
-      to_v3_yaml(src)
+      norm = load_v1(src)
+      recast_flavor(norm)
+      Relaton::Ietf::ItemData.new(**norm).to_yaml
     rescue StandardError => e
       warn "Conversion failed for #{src}: #{e.message}"
       failed += 1
@@ -83,10 +160,19 @@ def combine(repo, url)
       File.write(dest, fresh)
       converted += 1
     end
+
+    if (date = doc_date(norm)) && (id = primary_docid(norm))
+      key = squish(id)
+      docid_dates[key] = [docid_dates[key], date].compact.max
+    else
+      undated << [src, dest]
+    end
   end
   puts "#{repo}: wrote #{converted}, unchanged #{unchanged}, failed #{failed}"
+  undated
 rescue StandardError => e
   warn "#{repo}: #{e.message}"
+  []
 end
 
 
@@ -112,7 +198,11 @@ end
 t1 = Time.now
 puts "Started at: #{t1}"
 
-SOURCES.each { |repo, url| combine(repo, url) }
+docid_dates = {}
+undated = SOURCES.flat_map { |repo, url| combine(repo, url, docid_dates) }
+# A second pass so groups can inherit from constituents converted in
+# any source (BCP/STD/FYI include RFCs from the rfcs repo).
+inherit_dates!(undated, docid_dates)
 build_index
 
 t2 = Time.now
