@@ -9,27 +9,32 @@ title:
   format: text/plain
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-feng-agentproto-session-requirements-01
+  content: https://datatracker.ietf.org/doc/html/draft-feng-agentproto-session-requirements-02
 docidentifier:
 - content: draft-feng-agentproto-session-requirements
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-18'
+  at: '2026-08-20'
 abstract:
 - language: en
   script: Latn
   content: "<p>This document defines requirements for session-based and sessionless
-    interactions between entities. For session-based interactions, it covers endpoint
-    authentication, capability negotiation, session establishment, authorization,
-    and lifecycle management. It also defines security and state requirements for
-    interactions, such as notifications, probes, and atomic requests, that do not
-    establish a session. It is assumed that the entities involved already know of
-    each other; how they came to know each other is outside the scope of this document.
-    At least one party to an interaction is an agent as defined in Section 3. This
-    document is intended as a contribution to the agentproto working group's use cases,
-    gap analysis, and requirements deliverable.</p>"
+    interactions between entities. For session-based interactions, it covers transport-independent
+    interaction binding, endpoint authentication, capability negotiation, session
+    establishment, authorization, and lifecycle management. It also defines security
+    and state requirements for interactions, such as notifications, probes, and atomic
+    requests, that do not establish a session. It is assumed that the entities involved
+    already know of each other; how they came to know each other is outside the scope
+    of this document. At least one party to an interaction is an agent as defined
+    in Section 3. This document is intended as a contribution to the agentproto working
+    group's use cases, gap analysis, and requirements deliverable. A session is a
+    bilateral association. Protocols and application semantics for coordinating delegation
+    or handoff of work to an entity that is not a peer, and management functions such
+    as cross-entity accountability and audit, are outside the scope of these base
+    session requirements. This document specifies only that such coordination does
+    not, by itself, change the peers or state of an existing session.</p>"
   format: text/html
 relation:
 - type: includes
@@ -48,6 +53,15 @@ relation:
       format: text/plain
     docidentifier:
     - content: draft-feng-agentproto-session-requirements-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-feng-agentproto-session-requirements-02
+      format: text/plain
+    docidentifier:
+    - content: draft-feng-agentproto-session-requirements-02
       type: Internet-Draft
       primary: true
 ext:

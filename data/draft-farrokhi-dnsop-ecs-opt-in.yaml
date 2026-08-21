@@ -1,0 +1,49 @@
+---
+id: draftfarrokhidnsopecsoptin
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Client Opt-In Signaling for EDNS Client Subnet
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-farrokhi-dnsop-ecs-opt-in-00
+docidentifier:
+- content: draft-farrokhi-dnsop-ecs-opt-in
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-20'
+abstract:
+- language: en
+  script: Latn
+  content: "<p>EDNS Client Subnet (ECS) lets a recursive resolver send part of a client's
+    network address to authoritative servers, which tailor their answers to it. A
+    resolver's configuration decides whether it does so, for every client that sends
+    no ECS option of its own. RFC 7871 lets a client opt out. Asking instead for a
+    shorter prefix requires the client to supply the address those bits are taken
+    from, which a client behind a NAT or a VPN does not know. This document defines
+    an opt-in. A client includes an EDNS(0) option in a query to ask the resolver
+    to forward its address information, and can use that option to limit how many
+    address bits the resolver forwards. A resolver implementing this document forwards
+    nothing for a client that does not send the option, and one that does not implement
+    it ignores the option. One resolver address can then serve clients that want tailored
+    answers and those that want their addresses withheld.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-farrokhi-dnsop-ecs-opt-in-00
+      format: text/plain
+    docidentifier:
+    - content: draft-farrokhi-dnsop-ecs-opt-in-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

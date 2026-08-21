@@ -1,0 +1,103 @@
+---
+id: draftfarrokhidnsopecsoptin00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Client Opt-In Signaling for EDNS Client Subnet
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-farrokhi-dnsop-ecs-opt-in-00
+docidentifier:
+- content: draft-farrokhi-dnsop-ecs-opt-in-00
+  type: Internet-Draft
+  primary: true
+- content: I-D.farrokhi-dnsop-ecs-opt-in
+  type: IETF
+  scope: anchor
+docnumber: I-D.farrokhi-dnsop-ecs-opt-in
+date:
+- type: published
+  at: '2026-08-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Babak
+      - language: en
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Farrokhi
+      completename:
+        language: en
+        content: Babak Farrokhi
+    affiliation:
+    - organization:
+        name:
+        - content: Quad9
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: John
+      - language: en
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Todd
+      completename:
+        language: en
+        content: John Todd
+    affiliation:
+    - organization:
+        name:
+        - content: Quad9
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>EDNS Client Subnet (ECS) lets a recursive resolver send part of a client's
+    network address to authoritative servers, which tailor their answers to it. A
+    resolver's configuration decides whether it does so, for every client that sends
+    no ECS option of its own. RFC 7871 lets a client opt out. Asking instead for a
+    shorter prefix requires the client to supply the address those bits are taken
+    from, which a client behind a NAT or a VPN does not know. This document defines
+    an opt-in. A client includes an EDNS(0) option in a query to ask the resolver
+    to forward its address information, and can use that option to limit how many
+    address bits the resolver forwards. A resolver implementing this document forwards
+    nothing for a client that does not send the option, and one that does not implement
+    it ignores the option. One resolver address can then serve clients that want tailored
+    answers and those that want their addresses withheld.</p>"
+  format: text/html
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-farrokhi-dnsop-ecs-opt-in-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

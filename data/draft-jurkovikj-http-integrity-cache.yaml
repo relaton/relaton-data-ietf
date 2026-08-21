@@ -1,0 +1,48 @@
+---
+id: draftjurkovikjhttpintegritycache
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: Maintaining HTTP Integrity Fields in Cached and Cache-Generated Responses
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-jurkovikj-http-integrity-cache-00
+docidentifier:
+- content: draft-jurkovikj-http-integrity-cache
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-20'
+abstract:
+- language: en
+  script: Latn
+  content: "<p>HTTP caches update stored response fields, combine partial responses,
+    and construct responses from stored state. Those operations can move an Integrity
+    field value onto content or representation data different from the data to which
+    the value originally applied. This document updates RFC 9111 by defining field-specific
+    maintenance rules for Content-Digest, Repr-Digest, and Unencoded-Digest. A cache
+    either preserves the association between each retained or emitted dictionary member
+    and its defined input, recomputes the member over the resulting input, or removes
+    the member. The rules cover stored- field updates, 304 and HEAD freshening, partial-response
+    combination, cache-generated 304, HEAD, and 206 responses, and content-coding
+    transformations. No new HTTP field, status code, cache directive, validator, or
+    digest algorithm is defined.</p>"
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-jurkovikj-http-integrity-cache-00
+      format: text/plain
+    docidentifier:
+    - content: draft-jurkovikj-http-integrity-cache-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

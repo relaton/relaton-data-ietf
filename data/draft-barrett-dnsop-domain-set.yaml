@@ -1,0 +1,51 @@
+---
+id: draftbarrettdnsopdomainset
+schema_version: v1.5.6
+title:
+- language: en
+  script: Latn
+  content: The Domain Set Discovery Protocol (domain-set)
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-barrett-dnsop-domain-set-00
+docidentifier:
+- content: draft-barrett-dnsop-domain-set
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-20'
+abstract:
+- language: en
+  script: Latn
+  content: '<p>Organizations commonly operate under multiple domain names: a primary
+    website, legacy names, defensive registrations, divisional brands, and names in
+    restricted or verified top-level domains. No standard mechanism exists for a domain
+    owner to declare, in a machine-readable and verifiable way, which domains belong
+    to the same organization. This document defines "domain-set", a protocol by which
+    domain operators publish membership in a set of domains using a DNS TXT record
+    as the discovery mechanism. The record either lists the members directly or references
+    an extensible Domain Set Manifest retrieved over HTTPS. Mutual attestation is
+    the validation requirement: a link between two domains is valid only when both
+    domains independently publish records naming each other. Every direction of a
+    link MUST be retrieved over an authenticated channel, by DNSSEC or by the Web
+    PKI. The protocol enables browsers, security tooling, and AI systems to answer
+    the question "are these two domains operated by the same organization?" from first-party,
+    owner-published data rather than inference.</p>'
+  format: text/html
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-barrett-dnsop-domain-set-00
+      format: text/plain
+    docidentifier:
+    - content: draft-barrett-dnsop-domain-set-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft
