@@ -31,6 +31,18 @@ on:
 
 jobs:
   crawl:
+    # Required, not hardening. The shared crawler.yml's "Push data" step runs
+    # `git commit` + `git push` with the credentials actions/checkout persists,
+    # i.e. GITHUB_TOKEN — and a caller granting less caps what the called
+    # workflow gets. With only `contents: read` the crawl still runs to
+    # completion (166,658 documents on the largest flavor) and then fails on the
+    # push, having thrown the whole corpus away.
+    #
+    # The grant cannot live in crawler.yml itself: a called workflow's
+    # `permissions:` can only downgrade the caller's. Pinned by
+    # spec/data_deploy_caller_template_spec.rb.
+    permissions:
+      contents: write
     uses: relaton/support/.github/workflows/crawler.yml@main
     with:
       args: ${{ github.event.inputs.args }}
