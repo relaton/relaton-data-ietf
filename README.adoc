@@ -1,7 +1,87 @@
-= IETF publications bibliographic data for Relaton-IETF
+= IETF bibliographic data in Relaton format
 
-This repository is used by Relaton-IETF to represent known IETF RFC publications.
+This repository holds the combined IETF corpus — RFCs, Internet-Drafts and the
+RFC sub-series (BCP, STD, FYI) — as Relaton v3 YAML, together with the
+`Relaton::Index` manifest that resolves a reference to a file.
 
-Data is stored in Relaton XML format.
+== What is here
 
-This repository contains a crawler script which runs daily. The script copies the RFC documents from https://xml2rfc.tools.ietf.org/public/rfc/ and store them into the data directory.
+`data/`:: One record per document, flat: `data/RFC3986.yaml`,
+`data/STD0066.yaml`, `data/draft-ietf-quic-transport-34.yaml`. An
+Internet-Draft has a record per version plus an unversioned aggregator record.
++
+The directory also holds a frozen mirror of the legacy bibxml XML
+(`reference.*.xml`). The classic xml2rfc host retired in 2024; those files are
+kept for reference, are not refreshed, and are not indexed.
+
+`index-v2.yaml` / `index-v2.zip`:: The document index. One row per record, keyed
+by that record's primary docidentifier as a structured pubid hash:
++
+[source,yaml]
+----
+- :id:
+    _type: pubid:ietf:rfc
+    number: '3986'
+  :file: data/RFC3986.yaml
+- :id:
+    _type: pubid:ietf:std
+    number: '66'
+  :file: data/STD0066.yaml
+----
++
+Rows carry exactly `:id` and `:file` — `Relaton::Index` rejects an index with
+any third key. `_type` is one of `pubid:ietf:{rfc,bcp,std,fyi,internet-draft}`;
+a versioned draft also carries `version`. DOIs are not indexed: `10.17487/RFC3986`
+is not a `pubid:ietf` identifier, and a single unparseable row invalidates the
+whole file. DOI lookups are served by relaton's `doi` flavor.
++
+A sub-series id resolves to its **own container record**, not to a constituent
+RFC: 42 of the 365 sub-series include more than one RFC, so there is no single
+document to alias to. `STD 66` returns `data/STD0066.yaml`, whose
+`relation: includes` names the RFCs — one hop, and correct for all 365.
+
+== Where the data comes from
+
+`crawler.rb` combines three corpora published by IETF Tools, converting each
+record from the older Relaton v1 format to the current v3 model:
+
+[cols="2,1"]
+|===
+| `ietf-tools/relaton-data-rfcs` | `data/RFC*.yaml`
+| `ietf-tools/relaton-data-ids` | `data/draft-*.yaml`
+| `ietf-tools/relaton-data-rfcsubseries` | `data/BCP*`, `STD*`, `FYI*`
+|===
+
+Those in turn derive from `https://www.rfc-editor.org/rfc-index.xml` (RFCs and
+sub-series) and the IETF's `bibxml-ids` rsync mirror (drafts).
+
+The crawler writes a record only when the converted content differs, so an
+unchanged corpus produces no git churn. A second pass lets thin records —
+unversioned draft aliases and BCP/STD/FYI groups, which carry no date, doctype
+or source link of their own — inherit them from their newest `includes`
+constituent.
+
+== Running the crawler
+
+[source,sh]
+----
+bundle install
+bundle exec ruby crawler.rb
+----
+
+Run it from the repository root. To rebuild only the index, without re-cloning
+and re-converting the whole corpus:
+
+[source,sh]
+----
+bundle exec ruby -r./crawler -e build_index
+----
+
+`index-v2.zip` is not written by the crawler: relaton/support's shared
+`crawler.yml` zips any changed `index*.yaml` and commits both.
+
+== Dependencies
+
+`relaton` and `pubid` are both tracked from git `main`. `Pubid::Ietf` is in no
+released pubid — the flavor and the fixes the index depends on postdate
+`2.0.0.pre.alpha.9` — so the pin in `Gemfile` is required, not a convenience.

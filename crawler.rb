@@ -21,6 +21,11 @@ require 'tmpdir'
 require 'relaton'
 require 'relaton/bib/hash_parser_v1'
 require 'yaml'
+# Not loaded by `require "relaton"`.
+require 'pubid'
+require 'pubid/ietf'
+
+INDEX_FILE = 'index-v2.yaml'
 
 SOURCES = {
   'relaton-data-rfcs' => 'https://github.com/ietf-tools/relaton-data-rfcs',
@@ -199,35 +204,68 @@ rescue StandardError => e
 end
 
 
-# Flat docid -> file index, same shape the IETF sources publish
-# (index-v1.yaml; the shared crawler workflow zips and commits it).
-# Consumers fetch it from raw.githubusercontent over the fleet's
-# standard baseurl. Rebuilt whole on every run, so removed source
-# documents never linger as stale rows.
+# Structured pubid index (relaton#109), keyed by each record's primary
+# docidentifier. The shared crawler workflow zips and commits any changed
+# index*.yaml, so nothing here writes the .zip. Rebuilt whole on every run, so
+# removed source documents never linger as stale rows.
+#
+#   - :id:
+#       _type: pubid:ietf:rfc
+#       number: '3986'
+#     :file: data/RFC3986.yaml
+#
+# Both halves of the pubid contract are required and neither is decoration:
+# `FileIO#save` serialises an id to its `_type:` hash only when it is an
+# instance of the configured `pubid_class`, so passing a String here — or
+# omitting `pubid_class:` — would write a flat v1-shaped file under a v2 name.
 def build_index
-  idx = Relaton::Index.find_or_create :IETF, file: "index-v1.yaml"
+  idx = Relaton::Index.find_or_create :IETF, file: INDEX_FILE,
+                                      pubid_class: ::Pubid::Ietf::Identifier
+  skipped = []
   Dir[File.join(__dir__, 'data', '*.yaml')].sort.each do |f|
     doc = YAML.safe_load_file(f, permitted_classes: [Date, Time], aliases: true)
     ids = doc["docidentifier"] || []
     docid = ids.find { |d| d.is_a?(Hash) && d["primary"] } || ids.first
     next unless docid
 
-    idx.add_or_update docid["content"], "data/#{File.basename(f)}"
+    begin
+      pubid = ::Pubid::Ietf::Identifier.parse(docid["content"])
+    rescue StandardError => e
+      # Loading is all-or-nothing: FileIO rejects the WHOLE index on the first
+      # id it cannot parse, so one bad record must cost one document rather
+      # than every lookup for the flavor.
+      skipped << "#{File.basename(f)} (#{docid['content']}: #{e.message.to_s.split(':').first})"
+      next
+    end
+
+    idx.add_or_update pubid, "data/#{File.basename(f)}"
   end
   idx.save
-  puts "index-v1.yaml: #{idx.index.size} entries"
+  puts "#{INDEX_FILE}: #{idx.index.size} entries"
+  return if skipped.empty?
+
+  warn "#{skipped.size} record(s) not indexed:"
+  skipped.first(20).each { |s| warn "  #{s}" }
+  warn "  ..." if skipped.size > 20
 end
 
-t1 = Time.now
-puts "Started at: #{t1}"
+def crawl
+  t1 = Time.now
+  puts "Started at: #{t1}"
 
-docid_dates = {}
-undated = SOURCES.flat_map { |repo, url| combine(repo, url, docid_dates) }
-# A second pass so groups can inherit from constituents converted in
-# any source (BCP/STD/FYI include RFCs from the rfcs repo).
-inherit_metadata!(undated, docid_dates)
-build_index
+  docid_dates = {}
+  undated = SOURCES.flat_map { |repo, url| combine(repo, url, docid_dates) }
+  # A second pass so groups can inherit from constituents converted in
+  # any source (BCP/STD/FYI include RFCs from the rfcs repo).
+  inherit_metadata!(undated, docid_dates)
+  build_index
 
-t2 = Time.now
-puts "Stopped at: #{t2}"
-puts "Done in: #{(t2 - t1).round} sec."
+  t2 = Time.now
+  puts "Stopped at: #{t2}"
+  puts "Done in: #{(t2 - t1).round} sec."
+end
+
+# Guarded so the file can be loaded to rebuild the index alone —
+# `ruby -r./crawler -e build_index` — without re-cloning and re-converting the
+# whole corpus. `bundle exec ruby crawler.rb` is unchanged.
+crawl if $PROGRAM_NAME == __FILE__
