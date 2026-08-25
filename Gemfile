@@ -19,3 +19,8 @@ gem 'relaton', git: 'https://github.com/relaton/relaton.git', branch: 'main'
 #
 # TODO: drop once these ship in a pubid release.
 gem 'pubid', git: 'https://github.com/metanorma/pubid.git', branch: 'main'
+
+group :development, :test do
+  gem 'rake', '~> 13.0'
+  gem 'rspec', '~> 3.13'
+end

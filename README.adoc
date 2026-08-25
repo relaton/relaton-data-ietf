@@ -6,13 +6,14 @@ RFC sub-series (BCP, STD, FYI) — as Relaton v3 YAML, together with the
 
 == What is here
 
-`data/`:: One record per document, flat: `data/RFC3986.yaml`,
-`data/STD0066.yaml`, `data/draft-ietf-quic-transport-34.yaml`. An
+`data/`:: One record per document, flat and lower-cased:
+`data/rfc3986.yaml`, `data/std0066.yaml`,
+`data/draft-ietf-quic-transport-34.yaml`. An
 Internet-Draft has a record per version plus an unversioned aggregator record.
 +
-The directory also holds a frozen mirror of the legacy bibxml XML
-(`reference.*.xml`). The classic xml2rfc host retired in 2024; those files are
-kept for reference, are not refreshed, and are not indexed.
+The frozen mirror of legacy bibxml XML (`reference.*.xml`) that used to sit
+alongside is removed by the first crawl: the run clears `data/` wholesale, and
+the classic xml2rfc host it came from retired in 2024.
 
 `index-v2.yaml` / `index-v2.zip`:: The document index. One row per record, keyed
 by that record's primary docidentifier as a structured pubid hash:
@@ -22,11 +23,11 @@ by that record's primary docidentifier as a structured pubid hash:
 - :id:
     _type: pubid:ietf:rfc
     number: '3986'
-  :file: data/RFC3986.yaml
+  :file: data/rfc3986.yaml
 - :id:
     _type: pubid:ietf:std
     number: '66'
-  :file: data/STD0066.yaml
+  :file: data/std0066.yaml
 ----
 +
 Rows carry exactly `:id` and `:file` — `Relaton::Index` rejects an index with
@@ -37,29 +38,43 @@ whole file. DOI lookups are served by relaton's `doi` flavor.
 +
 A sub-series id resolves to its **own container record**, not to a constituent
 RFC: 42 of the 365 sub-series include more than one RFC, so there is no single
-document to alias to. `STD 66` returns `data/STD0066.yaml`, whose
+document to alias to. `STD 66` returns `data/std0066.yaml`, whose
 `relation: includes` names the RFCs — one hop, and correct for all 365.
 
 == Where the data comes from
 
-`crawler.rb` combines three corpora published by IETF Tools, converting each
-record from the older Relaton v1 format to the current v3 model:
+`crawler.rb` runs `Relaton::Ietf::DataFetcher` against the authoritative
+sources. The records are v3 natively and the index is written by the fetcher as
+the crawl runs, so there is no conversion step and nothing here builds the
+index.
 
-[cols="2,1"]
+[cols="1,2,1"]
 |===
-| `ietf-tools/relaton-data-rfcs` | `data/RFC*.yaml`
-| `ietf-tools/relaton-data-ids` | `data/draft-*.yaml`
-| `ietf-tools/relaton-data-rfcsubseries` | `data/BCP*`, `STD*`, `FYI*`
+| Source key | Origin | Produces
+
+| `ietf-rfc-entries`
+| `https://www.rfc-editor.org/rfc-index.xml` — `<rfc-entry>`
+| `data/rfc*.yaml`
+
+| `ietf-rfcsubseries`
+| the same index — `<bcp-entry>`, `<fyi-entry>`, `<std-entry>`
+| `data/bcp*`, `std*`, `fyi*`
+
+| `ietf-internet-drafts`
+| `rsync.ietf.org::bibxml-ids`, parsed from a local `bibxml-ids/`
+| `data/draft-*.yaml`
 |===
 
-Those in turn derive from `https://www.rfc-editor.org/rfc-index.xml` (RFCs and
-sub-series) and the IETF's `bibxml-ids` rsync mirror (drafts).
+The drafts fetch reads `bibxml-ids/` off disk and does no fetching of its own,
+so the crawler rsyncs the mirror first (anonymously; it is a public rsync
+daemon module on port 873) and aborts if that fails — otherwise the fetch would
+quietly produce no drafts at all.
 
-The crawler writes a record only when the converted content differs, so an
-unchanged corpus produces no git churn. A second pass lets thin records —
-unversioned draft aliases and BCP/STD/FYI groups, which carry no date, doctype
-or source link of their own — inherit them from their newest `includes`
-constituent.
+Thin records — unversioned draft aggregators and BCP/STD/FYI groups, which have
+no date, doctype or source of their own because the upstream sources publish
+none — inherit them from their newest constituent inside the gem. A
+`<bcp-entry>` in `rfc-index.xml` is a pointer and nothing more: a `<doc-id>` and
+an `<is-also>`.
 
 == Running the crawler
 
@@ -67,15 +82,20 @@ constituent.
 ----
 bundle install
 bundle exec ruby crawler.rb
+bundle exec ruby crawler.rb --skip-rsync      # reuse an already-synced bibxml-ids/
+bundle exec ruby crawler.rb --allow-shrink    # permit a smaller corpus than the committed one
 ----
 
-Run it from the repository root. To rebuild only the index, without re-cloning
-and re-converting the whole corpus:
+Run it from the repository root: both the `bibxml-ids/` glob and the index file
+are resolved relative to the working directory.
 
-[source,sh]
-----
-bundle exec ruby -r./crawler -e build_index
-----
+The crawl is **destructive by design**. `DataFetcher` only ever adds — it does
+not remove records for documents withdrawn upstream, and `Relaton::Index`
+accumulates on top of whatever index file it finds — so `data/` and any
+`index*` are cleared first, making each run a snapshot rather than a union of
+every run to date. A crawl yielding under 99% of the committed record count
+aborts instead of publishing; `--allow-shrink` overrides that when the loss is
+real.
 
 `index-v2.zip` is not written by the crawler: relaton/support's shared
 `crawler.yml` zips any changed `index*.yaml` and commits both.
