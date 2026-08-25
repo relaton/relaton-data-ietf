@@ -1,0 +1,105 @@
+---
+id: draftreillyremtriplefingerprint01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Triple-Fingerprint Permanence Chain and the First Attested Triple-Fingerprint
+    Record Under the Reilly EternaMark (REM) Protocol
+  format: text/plain
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-reilly-rem-triple-fingerprint-01
+docidentifier:
+- content: draft-reilly-rem-triple-fingerprint-01
+  type: Internet-Draft
+  primary: true
+- content: I-D.reilly-rem-triple-fingerprint
+  type: IETF
+  scope: anchor
+docnumber: I-D.reilly-rem-triple-fingerprint
+date:
+- type: published
+  at: '2026-08-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        content: Lawrence
+      - language: en
+        initial: L
+      - language: en
+        initial: J
+      - language: en
+        initial: R
+      formatted_initials:
+        language: en
+        content: L. J. R.
+      surname:
+        language: en
+        content: Reilly
+      completename:
+        language: en
+        content: Lawrence John Reilly Jr
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies the Triple-Fingerprint Permanence Chain, a
+    hash-linked record chain in which every link is computed independently under SHA-256
+    [RFC6234], SHA3-512 [FIPS202], and BLAKE3 [BLAKE3SPEC], and in which each link
+    commits to all three predecessor links so that the three chains are entangled
+    rather than parallel. A verifier that checks all three link algorithms must be
+    defeated by simultaneous collisions in three structurally distinct hash constructions
+    on the same input. This document also re-attests, with corrections, the genesis
+    record of that chain: the permanence record produced on 22 March 2026 by a live
+    implementation of the Reilly EternaMark (REM) Protocol [DRAFT-REM-02], carrying
+    simultaneous SHA-256, SHA3-512, and BLAKE3 fingerprints of a single artifact anchored
+    across Bitcoin timestamping via OpenTimestamps [OTS], IPFS [IPFS], Zenodo DOI
+    registration [ZENODO], the Internet Archive Wayback Machine [IA], a persistent
+    database layer, and a resolvable REMID identifier. This revision supersedes draft-reilly-rem-triple-fingerprint-00
+    and corrects three defects in it. First, -00 published the Bitcoin layer's OpenTimestamps
+    receipts as evidence of blockchain anchoring when those receipts were pending
+    calendar commitments carrying no Bitcoin attestation. Second, -00's post-quantum
+    analysis applied Grover's algorithm [GROVER] to preimage resistance while the
+    security property that actually binds a permanence record is collision resistance,
+    which Grover does not meaningfully reduce. Third, -00 asserted that combining
+    three hash algorithms multiplies security; by the multicollision result of [JOUX],
+    the collision resistance of such a combination is bounded near that of its strongest
+    member rather than the sum of its members. The value of the combination is algorithmic
+    hedging, which is a different and more defensible claim. Precedence claims made
+    in -00 are narrowed to scoped, falsifiable statements and are accompanied by an
+    expanded treatment of prior art, in particular the Evidence Record Syntax [RFC4998].</p>"
+  format: text/html
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-reilly-rem-triple-fingerprint-00
+      format: text/plain
+    docidentifier:
+    - content: draft-reilly-rem-triple-fingerprint-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+    format: text/plain
+  number: draft-reilly-rem-triple-fingerprint-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: internet-draft

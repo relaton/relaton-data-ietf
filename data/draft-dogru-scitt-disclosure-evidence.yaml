@@ -9,33 +9,26 @@ title:
   format: text/plain
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-dogru-scitt-disclosure-evidence-06
+  content: https://datatracker.ietf.org/doc/html/draft-dogru-scitt-disclosure-evidence-07
 docidentifier:
 - content: draft-dogru-scitt-disclosure-evidence
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-21'
+  at: '2026-08-23'
 abstract:
 - language: en
   script: Latn
-  content: "<p>Audit receipts for automated data access attest to what a gateway recorded.
-    Two questions remain outside their reach: what was changed in the data before
-    it was disclosed, and whether the set of receipts is complete with respect to
-    the data source's own accounting of activity. This document defines two evidence
-    structures that answer those questions: Transformation Evidence, a per-disclosure
-    statement of which classes of values were transformed and how, carrying counts
-    and class names but never values; and Coverage Reconciliation, a procedure and
-    result statement that compares a source's own activity counters against a receipt
-    set over a time window and classifies what the comparison establishes. The reconciliation
-    result distinguishes what was matched under a declared correspondence from what
-    was observed without a receipt, receipted without a corresponding observation,
-    excluded before comparison, or left indeterminate; it does not report a bare pass.
-    Both structures are designed to be registered as Signed Statements on a Transparency
-    Service as described in the SCITT architecture. This document defines evidence
-    payloads; it does not define a new receipt format, a new transparency mechanism,
-    or a new signature format.</p>"
+  content: "<p>Audit receipts record what a gateway wrote about an access. They omit
+    how data changed and whether every access left a receipt. This document defines
+    two evidence payloads for those gaps. Transformation Evidence states which value
+    classes were transformed, and how, without carrying values. Coverage Reconciliation
+    compares source activity counters with a receipt set over a window. Each item
+    is matched, observed without a receipt, receipted without an observation, excluded,
+    or indeterminate. The result is not a bare pass. Both payloads register as Signed
+    Statements on a SCITT Transparency Service. This document defines no new receipt
+    format, transparency mechanism, or signature format.</p>"
   format: text/html
 relation:
 - type: includes
@@ -99,6 +92,15 @@ relation:
       format: text/plain
     docidentifier:
     - content: draft-dogru-scitt-disclosure-evidence-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dogru-scitt-disclosure-evidence-07
+      format: text/plain
+    docidentifier:
+    - content: draft-dogru-scitt-disclosure-evidence-07
       type: Internet-Draft
       primary: true
 ext:
