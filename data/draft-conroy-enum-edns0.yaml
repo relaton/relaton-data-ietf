@@ -1,11 +1,12 @@
 ---
 id: draftconroyenumedns0
 schema_version: v1.5.6
+formattedref:
+  content: draft-conroy-enum-edns0
 title:
 - language: en
   script: Latn
   content: ENUM Requirement for EDNS0 Support
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-conroy-enum-edns0-02
@@ -19,20 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Support for EDNS0 (Extension Mechanisms for DNS) is mandated in this
-    document for DNS entities querying for or serving NAPTR records. In general those
-    entities will be supporting ENUM resolution. This requirement is needed because
-    DNS responses to ENUM-related queries generally return large RRSets. Without EDNS0
-    support these lookups would result in truncated responses and repeated queries
-    over TCP transport. That has a severe impact on DNS server load and on the latency
-    of those queries. This document updates RFC3761 only in adding this requirement.</p>"
-  format: text/html
+  content: |-
+    <p>Support for EDNS0 (Extension Mechanisms for DNS) is mandated in this
+       document for DNS entities querying for or serving NAPTR records.  In
+       general those entities will be supporting ENUM resolution.  This
+       requirement is needed because DNS responses to ENUM-related queries
+       generally return large RRSets.  Without EDNS0 support these lookups
+       would result in truncated responses and repeated queries over TCP
+       transport.  That has a severe impact on DNS server load and on the
+       latency of those queries.
+
+       This document updates RFC3761 only in adding this requirement.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-conroy-enum-edns0-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-conroy-enum-edns0-02
     docidentifier:
     - content: draft-conroy-enum-edns0-02
       type: Internet-Draft
@@ -41,4 +47,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

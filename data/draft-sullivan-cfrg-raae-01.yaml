@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Random-Access Authenticated Encryption
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sullivan-cfrg-raae-01
 docidentifier:
+- content: draft-sullivan-cfrg-raae
+  type: Internet-Draft
 - content: draft-sullivan-cfrg-raae-01
   type: Internet-Draft
   primary: true
-- content: I-D.sullivan-cfrg-raae
-  type: IETF
-  scope: anchor
 docnumber: I-D.sullivan-cfrg-raae
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nick
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cryptography Consulting LLC
+        - language: en
+          content: Cryptography Consulting LLC
 version:
 - content: '01'
 language:
@@ -53,26 +54,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines random-access authenticated encryption (raAE),
-    a primitive that partitions a message into an indexed sequence of segments that
-    can be encrypted and decrypted independently and in any order. It also specifies
-    SEAL (Segmented Encryption and Authentication Layer), a parameterized construction
-    that defines a family of concrete raAE instantiations, one for each valid choice
-    of an Authenticated Encryption with Associated Data (AEAD) algorithm, a key derivation
-    function (KDF), and associated parameters. SEAL provides two profiles, immutable
-    (write-once) and mutable (in- place ciphertext rewrite), each with per-segment
-    authentication. A separately configured snapshot authenticator can additionally
-    authenticate the complete, indexed segment set. The document also defines the
-    security notions of raAE, specifies the requirements for conforming constructions,
-    analyzes SEAL against those requirements, and provides example cipher suites and
-    test vectors.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines random-access authenticated encryption (raAE),
+       a primitive that partitions a message into an indexed sequence of
+       segments that can be encrypted and decrypted independently and in any
+       order.  It also specifies SEAL (Segmented Encryption and
+       Authentication Layer), a parameterized construction that defines a
+       family of concrete raAE instantiations, one for each valid choice of
+       an Authenticated Encryption with Associated Data (AEAD) algorithm, a
+       key derivation function (KDF), and associated parameters.
+
+       SEAL provides two profiles, immutable (write-once) and mutable (in-
+       place ciphertext rewrite), each with per-segment authentication.  A
+       separately configured snapshot authenticator can additionally
+       authenticate the complete, indexed segment set.
+
+       The document also defines the security notions of raAE, specifies the
+       requirements for conforming constructions, analyzes SEAL against
+       those requirements, and provides example cipher suites and test
+       vectors.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-sullivan-cfrg-raae-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-cfrg-raae-00
     docidentifier:
     - content: draft-sullivan-cfrg-raae-00
       type: Internet-Draft
@@ -81,7 +89,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sullivan-cfrg-raae-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-cfrg-raae-02
     docidentifier:
     - content: draft-sullivan-cfrg-raae-02
       type: Internet-Draft
@@ -92,10 +102,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-sullivan-cfrg-raae-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

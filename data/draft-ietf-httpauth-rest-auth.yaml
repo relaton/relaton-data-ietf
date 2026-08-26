@@ -1,14 +1,15 @@
 ---
 id: draftietfhttpauthrestauth
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-httpauth-rest-auth
 title:
 - language: en
   script: Latn
   content: RESTful Authentication Pattern for the Hypertext Transport Protocol (HTTP)
-  format: text/plain
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-rest-auth-00
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-rest-auth-01
 docidentifier:
 - content: draft-ietf-httpauth-rest-auth
   type: Internet-Draft
@@ -19,25 +20,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document proposes a "RESTful" pattern of authentication for HTTP/1.0,
-    1.1, and 2.0. The goal is to make it easy to add authentication mechanisms to
-    HTTP applications and to make it easy to implement them even without much help
-    from the HTTP stack (though it is best to integrate authentication into the stack,
-    of course). Another goal is to make it easy to reuse existing authentication mechanisms
-    by allowing the user (that is, the server''s operators) to choose what concrete
-    authentication mechanism(s) to use. Among other benefits of RESTauth: it is orthogonal
-    to "HTTP routers" and proxies, it results in session Uniform Resource Identifiers
-    (URIs) that can be DELETEd to logout, naturally supports multi-legged authentication
-    schemes, naturally supports clustering, and can be universally implemented on
-    the server side with such server&lt;-&gt;application interfaces as the Common
-    Gateway Interface (CGI) and FastCGI, among others.</p>'
-  format: text/html
+  content: |-
+    <p>This document proposes a "RESTful" pattern of authentication for
+       HTTP/1.0, 1.1, and 2.0.  The goal is to make it easy to add
+       authentication mechanisms to HTTP applications and to make it easy to
+       implement them even without much help from the HTTP stack (though it
+       is best to integrate authentication into the stack, of course).
+       Another goal is to make it easy to reuse existing authentication
+       mechanisms by allowing the user (that is, the server's operators) to
+       choose what concrete authentication mechanism(s) to use.
+
+       Among other benefits of RESTauth: it is orthogonal to "HTTP routers"
+       and proxies, it results in session Uniform Resource Identifiers
+       (URIs) that can be DELETEd to logout, naturally supports multi-legged
+       authentication schemes, naturally supports clustering, and can be
+       universally implemented on the server side with such
+       server&lt;-&gt;application interfaces as the Common Gateway Interface (CGI)
+       and FastCGI, among others.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-httpauth-rest-auth-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-rest-auth-00
     docidentifier:
     - content: draft-ietf-httpauth-rest-auth-00
       type: Internet-Draft
@@ -46,7 +53,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-httpauth-rest-auth-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-rest-auth-01
     docidentifier:
     - content: draft-ietf-httpauth-rest-auth-01
       type: Internet-Draft
@@ -55,4 +64,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

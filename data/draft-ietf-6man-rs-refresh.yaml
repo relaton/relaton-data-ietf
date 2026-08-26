@@ -1,11 +1,12 @@
 ---
 id: draftietf6manrsrefresh
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-6man-rs-refresh
 title:
 - language: en
   script: Latn
   content: IPv6 Neighbor Discovery Optional RS/RA Refresh
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-rs-refresh-02
@@ -19,26 +20,33 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IPv6 Neighbor Discovery relies on periodic multicast Router Advertisement
-    messages to update timer values and to distribute new information (such as new
-    prefixes) to hosts. On some links the use of periodic multicast messages to all
-    host becomes expensive, and in some cases it results in hosts waking up frequently.
-    Many implementations of RFC 4861 also use multicast for solicited Router Advertisement
-    messages, even though that behavior is optional. This specification provides an
-    optional mechanism for hosts and routers where instead of periodic multicast Router
-    Advertisements the hosts are instructed (by the routers) to use Router Solicitations
-    to request refreshed Router Advertisements. This mechanism is enabled by configuring
-    the router to include a new option in the Router Advertisement in order to allow
-    the network administrator to choose host behavior based on whether periodic multicast
-    are more efficient on their link or not. The routers can also tell whether the
-    hosts are capable of the new behavior through a new flag in the Router Solicitations.</p>"
-  format: text/html
+  content: |-
+    <p>IPv6 Neighbor Discovery relies on periodic multicast Router
+       Advertisement messages to update timer values and to distribute new
+       information (such as new prefixes) to hosts.  On some links the use
+       of periodic multicast messages to all host becomes expensive, and in
+       some cases it results in hosts waking up frequently.  Many
+       implementations of RFC 4861 also use multicast for solicited Router
+       Advertisement messages, even though that behavior is optional.
+
+       This specification provides an optional mechanism for hosts and
+       routers where instead of periodic multicast Router Advertisements the
+       hosts are instructed (by the routers) to use Router Solicitations to
+       request refreshed Router Advertisements.  This mechanism is enabled
+       by configuring the router to include a new option in the Router
+       Advertisement in order to allow the network administrator to choose
+       host behavior based on whether periodic multicast are more efficient
+       on their link or not.  The routers can also tell whether the hosts
+       are capable of the new behavior through a new flag in the Router
+       Solicitations.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-6man-rs-refresh-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-rs-refresh-00
     docidentifier:
     - content: draft-ietf-6man-rs-refresh-00
       type: Internet-Draft
@@ -47,7 +55,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-6man-rs-refresh-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-rs-refresh-01
     docidentifier:
     - content: draft-ietf-6man-rs-refresh-01
       type: Internet-Draft
@@ -56,7 +66,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-6man-rs-refresh-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-rs-refresh-02
     docidentifier:
     - content: draft-ietf-6man-rs-refresh-02
       type: Internet-Draft
@@ -65,4 +77,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BIER Fast ReRoute
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-bier-frr-05
 docidentifier:
+- content: draft-chen-bier-frr
+  type: Internet-Draft
 - content: draft-chen-bier-frr-05
   type: Internet-Draft
   primary: true
-- content: I-D.chen-bier-frr
-  type: IETF
-  scope: anchor
 docnumber: I-D.chen-bier-frr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Huaimo
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steffen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Aijun
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -131,17 +143,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - language: en
+          content: China Telecom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gyan
       - language: en
+        script: Latn
         initial: G
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -155,15 +171,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
+        - language: en
+          content: Verizon Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yisong
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -177,15 +196,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yanhe
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -199,15 +221,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Casa Systems
+        - language: en
+          content: Casa Systems
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lei
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -221,15 +246,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fujitsu
+        - language: en
+          content: Fujitsu
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xufeng
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -243,7 +271,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Volta Networks
+        - language: en
+          content: Volta Networks
 version:
 - content: '05'
 language:
@@ -253,26 +282,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>BIER is a scalable multicast overlay [RFC8279] that utilizes a routing
-    underlay, e.g., IP, to build up its Bit Index Forwarding Tables (BIFTs). This
-    document proposes Fast Reroute for BIER (BIER- FRR). It protects BIER traffic
-    after detecting the failure of a link or node in the core of a BIER domain until
-    affected BIFT entries are recomputed after reconvergence of the routing underlay.
-    BIER-FRR is applied locally at the point of local repair (PLR) and does not introduce
-    any per-flow state. The document specifies nomenclature for BIER-FRR and gives
-    examples for its integration in BIER forwarding. Furthermore, it presents operation
-    modes for BIER-FRR. Link and node protection may be chosen as protection level.
-    Moreover, the backup strategies tunnel-based BIER-FRR and LFA-based BIER-FRR are
-    defined and compared.</p>"
-  format: text/html
+  content: |-
+    <p>BIER is a scalable multicast overlay [RFC8279] that utilizes a
+       routing underlay, e.g., IP, to build up its Bit Index Forwarding
+       Tables (BIFTs).  This document proposes Fast Reroute for BIER (BIER-
+       FRR).  It protects BIER traffic after detecting the failure of a link
+       or node in the core of a BIER domain until affected BIFT entries are
+       recomputed after reconvergence of the routing underlay.  BIER-FRR is
+       applied locally at the point of local repair (PLR) and does not
+       introduce any per-flow state.  The document specifies nomenclature
+       for BIER-FRR and gives examples for its integration in BIER
+       forwarding.  Furthermore, it presents operation modes for BIER-FRR.
+       Link and node protection may be chosen as protection level.
+       Moreover, the backup strategies tunnel-based BIER-FRR and LFA-based
+       BIER-FRR are defined and compared.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-chen-bier-frr-02
-      format: text/plain
+      content: draft-chen-bier-frr-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-bier-frr-04
     docidentifier:
-    - content: draft-chen-bier-frr-02
+    - content: draft-chen-bier-frr-04
       type: Internet-Draft
       primary: true
 series:
@@ -281,10 +314,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chen-bier-frr-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

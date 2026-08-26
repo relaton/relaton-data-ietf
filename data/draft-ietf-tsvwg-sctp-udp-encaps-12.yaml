@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: UDP Encapsulation of SCTP Packets for End-Host to End-Host Communication
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-udp-encaps-12
 docidentifier:
+- content: draft-ietf-tsvwg-sctp-udp-encaps
+  type: Internet-Draft
 - content: draft-ietf-tsvwg-sctp-udp-encaps-12
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tsvwg-sctp-udp-encaps
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tsvwg-sctp-udp-encaps
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,10 +46,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randall
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -69,36 +72,45 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a simple method of encapsulating SCTP Packets
-    into UDP packets and its limitations. This allows the usage of SCTP in networks
-    with legacy NAT not supporting SCTP. It can also be used to implement SCTP on
-    hosts without directly accessing the IP-layer, for example implementing it as
-    part of the application without requiring special privileges. Please note that
-    this document only describes the functionality required within an SCTP stack to
-    add on UDP encapsulation, providing only those mechanisms for two end-hosts to
-    communicate with each other over UDP ports. In particular, it does not provide
-    mechanisms to determine whether UDP encapsulation is being used by the peer, nor
-    the mechanisms for determining which remote UDP port number can be used. These
-    functions are are out of scope for this document. This document covers only end-hosts
-    and not tunneling (egress or ingress) end-points.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a simple method of encapsulating SCTP Packets
+       into UDP packets and its limitations.  This allows the usage of SCTP
+       in networks with legacy NAT not supporting SCTP.  It can also be used
+       to implement SCTP on hosts without directly accessing the IP-layer,
+       for example implementing it as part of the application without
+       requiring special privileges.
+
+       Please note that this document only describes the functionality
+       required within an SCTP stack to add on UDP encapsulation, providing
+       only those mechanisms for two end-hosts to communicate with each
+       other over UDP ports.  In particular, it does not provide mechanisms
+       to determine whether UDP encapsulation is being used by the peer, nor
+       the mechanisms for determining which remote UDP port number can be
+       used.  These functions are are out of scope for this document.
+
+       This document covers only end-hosts and not tunneling (egress or
+       ingress) end-points.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-sctp-udp-encaps-09
-      format: text/plain
+      content: draft-ietf-tsvwg-sctp-udp-encaps-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-udp-encaps-11
     docidentifier:
-    - content: draft-ietf-tsvwg-sctp-udp-encaps-09
+    - content: draft-ietf-tsvwg-sctp-udp-encaps-11
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-sctp-udp-encaps-14
-      format: text/plain
+      content: draft-ietf-tsvwg-sctp-udp-encaps-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-udp-encaps-13
     docidentifier:
-    - content: draft-ietf-tsvwg-sctp-udp-encaps-14
+    - content: draft-ietf-tsvwg-sctp-udp-encaps-13
       type: Internet-Draft
       primary: true
 series:
@@ -107,10 +119,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tsvwg-sctp-udp-encaps-12
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

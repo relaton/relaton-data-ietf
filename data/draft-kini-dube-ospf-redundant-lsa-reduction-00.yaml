@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Redundant LSA reduction in OSPF
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kini-dube-ospf-redundant-lsa-reduction-00
 docidentifier:
+- content: draft-kini-dube-ospf-redundant-lsa-reduction
+  type: Internet-Draft
 - content: draft-kini-dube-ospf-redundant-lsa-reduction-00
   type: Internet-Draft
   primary: true
-- content: I-D.kini-dube-ospf-redundant-lsa-reduction
-  type: IETF
-  scope: anchor
 docnumber: I-D.kini-dube-ospf-redundant-lsa-reduction
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rohit
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bell Labs
+        - language: en
+          content: Bell Labs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sriganesh
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bell Labs
+        - language: en
+          content: Bell Labs
 version:
 - content: '00'
 language:
@@ -75,28 +79,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In a link state routing protocol like OSPF, the network and CPU bandwidth
-    consumed by the routing protocol is primarily to propagate and process information
-    about the network topology and changes in the topology. The 'flooding procedure'
-    of OSPF propagates the topology change information to all routers in the network.
-    This procedure delivers the information, multiple times to a router (depending
-    on the source of the information and its connectivity) even though it needs to
-    be delivered only once. The resultant wastage of network bandwidth and CPU processing
-    time reduces the scalability of OSPF. In some cases like a fully connected subgraph
-    this redundant information increases by an order of magnitude (from O(n) to O(n^2)).
-    This draft describes a technique to reduce this redundant information for a fully
-    connected subgraph of the network.</p>"
-  format: text/html
+  content: |-
+    <p>In a link state routing protocol like OSPF, the network and CPU
+    bandwidth consumed by the routing protocol is primarily to
+    propagate and process information about the network topology
+    and changes in the topology. The 'flooding procedure' of OSPF
+    propagates the topology change information to all routers in the
+    network. This procedure delivers the information, multiple times
+    to a router (depending on the source of the information and its
+    connectivity) even though it needs to be delivered only once.
+    The resultant wastage of network bandwidth and CPU processing
+    time reduces the scalability of OSPF. In some cases like a fully
+    connected subgraph this redundant information increases by an order
+    of magnitude (from O(n) to O(n^2)). This draft describes a
+    technique to reduce this redundant information for a fully
+    connected subgraph of the network.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kini-dube-ospf-redundant-lsa-reduction-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TCP Alternative Backoff with ECN (ABE)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-khademi-alternativebackoff-ecn-03
 docidentifier:
+- content: draft-khademi-alternativebackoff-ecn
+  type: Internet-Draft
 - content: draft-khademi-alternativebackoff-ecn-03
   type: Internet-Draft
   primary: true
-- content: I-D.khademi-alternativebackoff-ecn
-  type: IETF
-  scope: anchor
 docnumber: I-D.khademi-alternativebackoff-ecn
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Naeem
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - language: en
+          content: University of Oslo
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - language: en
+          content: University of Oslo
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Swinburne University of Technology
+        - language: en
+          content: Swinburne University of Technology
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gorry
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -107,7 +115,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Aberdeen
+        - language: en
+          content: University of Aberdeen
 version:
 - content: '03'
 language:
@@ -117,23 +126,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo provides an experimental update to RFC3168. It updates the
-    TCP sender-side reaction to a congestion notification received via Explicit Congestion
-    Notification (ECN). The updated method reduces cwnd by a smaller amount than TCP
-    does in reaction to loss. The intention is to achieve good throughput when the
-    queue at the bottleneck is smaller than the bandwidth-delay-product of the connection.
-    This is more likely when an Active Queue Management (AQM) mechanism has used ECN
-    to CE-mark a packet, than when a packet was lost. Future versions of this document
-    will discuss SCTP as well as other transports using ECN.</p>"
-  format: text/html
+  content: |-
+    <p>This memo provides an experimental update to RFC3168.  It updates the
+       TCP sender-side reaction to a congestion notification received via
+       Explicit Congestion Notification (ECN).  The updated method reduces
+       cwnd by a smaller amount than TCP does in reaction to loss.  The
+       intention is to achieve good throughput when the queue at the
+       bottleneck is smaller than the bandwidth-delay-product of the
+       connection.  This is more likely when an Active Queue Management
+       (AQM) mechanism has used ECN to CE-mark a packet, than when a packet
+       was lost.  Future versions of this document will discuss SCTP as well
+       as other transports using ECN.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-khademi-alternativebackoff-ecn-01
-      format: text/plain
+      content: draft-khademi-alternativebackoff-ecn-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-khademi-alternativebackoff-ecn-02
     docidentifier:
-    - content: draft-khademi-alternativebackoff-ecn-01
+    - content: draft-khademi-alternativebackoff-ecn-02
       type: Internet-Draft
       primary: true
 series:
@@ -142,10 +155,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-khademi-alternativebackoff-ecn-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

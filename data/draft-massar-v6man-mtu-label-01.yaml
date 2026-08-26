@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The IPv6 MTU Label
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-massar-v6man-mtu-label-01
 docidentifier:
+- content: draft-massar-v6man-mtu-label
+  type: Internet-Draft
 - content: draft-massar-v6man-mtu-label-01
   type: Internet-Draft
   primary: true
-- content: I-D.massar-v6man-mtu-label
-  type: IETF
-  scope: anchor
 docnumber: I-D.massar-v6man-mtu-label
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeroen
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -49,19 +49,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document redefines the use of the IPv6 Flow Label field to allow
-    specification of the lowest MTU on a path that the packet travels, thus in most
-    cases avoiding the need for performing Path MTU Discovery and the round-trip penalty
-    that that occurs for processing the ICMPv6 PTB and retransmitting the packets
-    involved. This specification allows graceful decrease of MTU so that large and
-    non-standard MTU sizes can safely be used on the Internet.</p>"
-  format: text/html
+  content: |-
+    <p>This document redefines the use of the IPv6 Flow Label field to allow
+       specification of the lowest MTU on a path that the packet travels,
+       thus in most cases avoiding the need for performing Path MTU
+       Discovery and the round-trip penalty that that occurs for processing
+       the ICMPv6 PTB and retransmitting the packets involved.
+
+       This specification allows graceful decrease of MTU so that large and
+       non-standard MTU sizes can safely be used on the Internet.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-massar-v6man-mtu-label-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-massar-v6man-mtu-label-00
     docidentifier:
     - content: draft-massar-v6man-mtu-label-00
       type: Internet-Draft
@@ -70,7 +74,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-massar-v6man-mtu-label-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-massar-v6man-mtu-label-02
     docidentifier:
     - content: draft-massar-v6man-mtu-label-02
       type: Internet-Draft
@@ -81,10 +87,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-massar-v6man-mtu-label-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

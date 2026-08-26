@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: FSM health status support in BFD
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bfd-fsm-health-status-00
 docidentifier:
+- content: draft-bfd-fsm-health-status
+  type: Internet-Draft
 - content: draft-bfd-fsm-health-status-00
   type: Internet-Draft
   primary: true
-- content: I-D.bfd-fsm-health-status
-  type: IETF
-  scope: anchor
 docnumber: I-D.bfd-fsm-health-status
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Palpandi
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Pluribus Networks
+        - language: en
+          content: Pluribus Networks
 version:
 - content: '00'
 language:
@@ -53,27 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Bidirectional Forwarding Detection operates in different modes. When
-    BFD runs in asynchronous mode requires hello packet needs to be transmitted and
-    received on regular intervals. In software based BFD application, hello packets
-    processing path may be heavy weight which may involve many processing levels to
-    reach BFD application. On a scaled system, processing delay may not be constant
-    at all the time and this processing delay does appear at any point between software
-    path entry point and BFD application. This delay needs to be identified and suppressed
-    otherwise system may end up on false link failure detection. This internet draft
-    deals on this particular case. Since introducing new Diagnostic bit, it requires
-    to update RFC5880.</p>"
-  format: text/html
+  content: |-
+    <p>Bidirectional Forwarding Detection operates in different modes.
+    When BFD runs in asynchronous mode requires hello packet needs
+    to be transmitted and received on regular intervals. In software
+    based BFD application, hello packets processing path may be
+    heavy weight which may involve many processing levels to reach
+    BFD application. On a scaled system, processing delay may not
+    be constant at all the time and this processing delay does appear
+    at any point between software path entry point and BFD application.
+    This delay needs to be identified and suppressed otherwise system
+    may end up on false link failure detection. This internet draft
+    deals on this particular case.
+
+    Since introducing new Diagnostic bit, it requires to update RFC5880.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bfd-fsm-health-status-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

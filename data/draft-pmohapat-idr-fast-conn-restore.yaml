@@ -1,11 +1,12 @@
 ---
 id: draftpmohapatidrfastconnrestore
 schema_version: v1.5.6
+formattedref:
+  content: draft-pmohapat-idr-fast-conn-restore
 title:
 - language: en
   script: Latn
   content: Fast Connectivity Restoration Using BGP Add-path
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pmohapat-idr-fast-conn-restore-03
@@ -19,24 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>A BGP route defines an association of an address prefix with an "exit
-    point" from the current Autonomous System (AS). If the exit point becomes unreachable
-    due to a failure, the route becomes invalid. This usually triggers an exchange
-    of BGP control messages after which a new BGP route for the given prefix is installed.
-    However, connectivity can be restored more quickly if the router maintains precomputed
-    BGP backup routes. It can then switch to a backup route immediately upon learning
-    that an exit point is unreachable, without needing to wait for the BGP control
-    messages exchange. This document specifies the procedures to be used by BGP to
-    maintain and distribute the precomputed backup routes. Maintaining these additional
-    routes is also useful in promoting load balancing, performing maintenance without
-    causing traffic loss, and in reducing churn in the BGP control plane.</p>
-  format: text/html
+  content: |-
+    <p>A BGP route defines an association of an address prefix with an "exit
+       point" from the current Autonomous System (AS).  If the exit point
+       becomes unreachable due to a failure, the route becomes invalid.
+       This usually triggers an exchange of BGP control messages after which
+       a new BGP route for the given prefix is installed.  However,
+       connectivity can be restored more quickly if the router maintains
+       precomputed BGP backup routes.  It can then switch to a backup route
+       immediately upon learning that an exit point is unreachable, without
+       needing to wait for the BGP control messages exchange.  This document
+       specifies the procedures to be used by BGP to maintain and distribute
+       the precomputed backup routes.  Maintaining these additional routes
+       is also useful in promoting load balancing, performing maintenance
+       without causing traffic loss, and in reducing churn in the BGP
+       control plane.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-pmohapat-idr-fast-conn-restore-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pmohapat-idr-fast-conn-restore-02
     docidentifier:
     - content: draft-pmohapat-idr-fast-conn-restore-02
       type: Internet-Draft
@@ -45,7 +51,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-pmohapat-idr-fast-conn-restore-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pmohapat-idr-fast-conn-restore-03
     docidentifier:
     - content: draft-pmohapat-idr-fast-conn-restore-03
       type: Internet-Draft
@@ -54,4 +62,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftli6manhbhfwdhdr
 schema_version: v1.5.6
+formattedref:
+  content: draft-li-6man-hbh-fwd-hdr
 title:
 - language: en
   script: Latn
   content: Hop-by-Hop Forwarding Options Header
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-6man-hbh-fwd-hdr-01
@@ -19,28 +20,36 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RFC8200 specifies the HBH header that is assumed to be processed by
-    each hop in the delivery path of the packet. However, RFC8200 also expects that
-    nodes processing the HBH header have been explicitly configured to do so. Therefore,
-    it cannot be assumed that a HBH header present in the packet is processed. It
-    all depends on the configuration of each node across the path. Moreover, in most
-    of networks today, the processing of the HBH header is done in the control plane
-    (slow processing path) which incurs several limitations among which resources
-    consumption and security risk. For these reasons, over time, the Hop-by-Hop Options
-    header has been sparsely used without any form of large scale deployment. Also,
-    most of already defined HBH options are forwarding options which contain forwarding
-    plane information that needs not to be sent to the control plane. This document
-    proposes a new Hop-by-Hop Forwarding Options Header in order to carry Hop-by-Hop
-    options that are solely intended to and processed by the forwarding plane. This
-    new HBH header is confined in and dedicated to the forwarding plane while the
-    current HBH header can still be used for control plane options.</p>"
-  format: text/html
+  content: |-
+    <p>RFC8200 specifies the HBH header that is assumed to be processed by
+       each hop in the delivery path of the packet.  However, RFC8200 also
+       expects that nodes processing the HBH header have been explicitly
+       configured to do so.  Therefore, it cannot be assumed that a HBH
+       header present in the packet is processed.  It all depends on the
+       configuration of each node across the path.  Moreover, in most of
+       networks today, the processing of the HBH header is done in the
+       control plane (slow processing path) which incurs several limitations
+       among which resources consumption and security risk.
+
+       For these reasons, over time, the Hop-by-Hop Options header has been
+       sparsely used without any form of large scale deployment.  Also, most
+       of already defined HBH options are forwarding options which contain
+       forwarding plane information that needs not to be sent to the control
+       plane.
+
+       This document proposes a new Hop-by-Hop Forwarding Options Header in
+       order to carry Hop-by-Hop options that are solely intended to and
+       processed by the forwarding plane.  This new HBH header is confined
+       in and dedicated to the forwarding plane while the current HBH header
+       can still be used for control plane options.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-li-6man-hbh-fwd-hdr-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-6man-hbh-fwd-hdr-00
     docidentifier:
     - content: draft-li-6man-hbh-fwd-hdr-00
       type: Internet-Draft
@@ -49,7 +58,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-6man-hbh-fwd-hdr-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-6man-hbh-fwd-hdr-01
     docidentifier:
     - content: draft-li-6man-hbh-fwd-hdr-01
       type: Internet-Draft
@@ -58,4 +69,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

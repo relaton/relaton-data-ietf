@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Review: Quick-Start for TCP and IP'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-briscoe-tsvwg-quickstart-rvw-00
 docidentifier:
+- content: draft-briscoe-tsvwg-quickstart-rvw
+  type: Internet-Draft
 - content: draft-briscoe-tsvwg-quickstart-rvw-00
   type: Internet-Draft
   primary: true
-- content: I-D.briscoe-tsvwg-quickstart-rvw
-  type: IETF
-  scope: anchor
 docnumber: I-D.briscoe-tsvwg-quickstart-rvw
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: BT & UCL
+        - language: en
+          content: BT & UCL
 version:
 - content: '00'
 language:
@@ -53,36 +54,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This review thoroughly analyses draft 01 of the Quick-Start proposal,
-    focusing mostly on security issues. It is argued that the recent new QS nonce
-    proposal gives insufficient protection against misbehaving receivers, and a new
-    approach is suggested. But it would be perverse to strengthen protection against
-    malicious receivers too much when the protocol only works if all senders can be
-    trusted to comply. The review argues this is an inevitable result of choosing
-    to have routers allocate rate to senders without keeping per-flow state. The paper
-    also questions whether Quick-Start's under-utilisation assumption defines a distinct
-    range of operation where fairness can be ignored. Because traffic variance will
-    always blur the boundary, we argue that under-utilisation should be treated as
-    the extreme of a spectrum where fairness is always an issue to some extent. If
-    we are to avoid per-flow state on routers, the review points to an alternative
-    direction where endpoints allocate rate to themselves. Counter-intuitively, this
-    allows scalable security and a spectrum of fairness to be built in from the start,
-    but rate allocation is less deterministic. Issues not related to security are
-    also raised, including the possibility of a catastrophic overload if path delays
-    are atypical. A solution to this is offered, as well as solutions to scalability
-    issues with the range and precision of the Rate Request field. Many other more
-    minor review comments are given.</p>"
-  format: text/html
+  content: |-
+    <p>This review thoroughly analyses draft 01 of the Quick-Start proposal,
+       focusing mostly on security issues.  It is argued that the recent new
+       QS nonce proposal gives insufficient protection against misbehaving
+       receivers, and a new approach is suggested.  But it would be perverse
+       to strengthen protection against malicious receivers too much when
+       the protocol only works if all senders can be trusted to comply.  The
+       review argues this is an inevitable result of choosing to have
+       routers allocate rate to senders without keeping per-flow state.  The
+       paper also questions whether Quick-Start's under-utilisation
+       assumption defines a distinct range of operation where fairness can
+       be ignored.  Because traffic variance will always blur the boundary,
+       we argue that under-utilisation should be treated as the extreme of a
+       spectrum where fairness is always an issue to some extent.
+
+       If we are to avoid per-flow state on routers, the review points to an
+       alternative direction where endpoints allocate rate to themselves.
+       Counter-intuitively, this allows scalable security and a spectrum of
+       fairness to be built in from the start, but rate allocation is less
+       deterministic.
+
+       Issues not related to security are also raised, including the
+       possibility of a catastrophic overload if path delays are atypical.
+       A solution to this is offered, as well as solutions to scalability
+       issues with the range and precision of the Rate Request field.  Many
+       other more minor review comments are given.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-briscoe-tsvwg-quickstart-rvw-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

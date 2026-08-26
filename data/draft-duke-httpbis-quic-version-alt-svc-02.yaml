@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: An Alt-Svc Parameter and SvcParamKey for QUIC Versions
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-02
 docidentifier:
+- content: draft-duke-httpbis-quic-version-alt-svc
+  type: Internet-Draft
 - content: draft-duke-httpbis-quic-version-alt-svc-02
   type: Internet-Draft
   primary: true
-- content: I-D.duke-httpbis-quic-version-alt-svc
-  type: IETF
-  scope: anchor
 docnumber: I-D.duke-httpbis-quic-version-alt-svc
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Martin
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lucas
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - language: en
+          content: Cloudflare
 version:
 - content: '02'
 language:
@@ -75,27 +79,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>HTTP Alternative Services (Alt-Svc) describes how one origin's resource
-    can be accessed via a different protocol/host/port combination. Alternatives are
-    advertised by servers using the Alt- Svc header field or the ALTSVC frame. This
-    includes a protocol name, which reuses Application Layer Protocol Negotiation
-    (ALPN) codepoints. The "h3" codepoint indicates the availability of HTTP/3. A
-    client that uses such an alternative first makes a QUIC connection. However, without
-    a priori knowledge of which QUIC version to use, clients might incur a round-trip
-    latency penalty to complete QUIC version negotiation, or forfeit desirable properties
-    of a QUIC version. This document specifies a new Alt-Svc parameter that specifies
-    alternative supported QUIC versions, which substantially reduces the chance of
-    this penalty. Similarly, clients can retrieve additional instructions about access
-    to services or resources via DNS SVCB and HTTP Resource Records. This document
-    also defines a new SvcParamKey for these Resource Records, which specifies the
-    specific QUIC versions in use.</p>
-  format: text/html
+  content: |-
+    <p>HTTP Alternative Services (Alt-Svc) describes how one origin's
+       resource can be accessed via a different protocol/host/port
+       combination.  Alternatives are advertised by servers using the Alt-
+       Svc header field or the ALTSVC frame.  This includes a protocol name,
+       which reuses Application Layer Protocol Negotiation (ALPN)
+       codepoints.  The "h3" codepoint indicates the availability of HTTP/3.
+       A client that uses such an alternative first makes a QUIC connection.
+       However, without a priori knowledge of which QUIC version to use,
+       clients might incur a round-trip latency penalty to complete QUIC
+       version negotiation, or forfeit desirable properties of a QUIC
+       version.  This document specifies a new Alt-Svc parameter that
+       specifies alternative supported QUIC versions, which substantially
+       reduces the chance of this penalty.
+
+       Similarly, clients can retrieve additional instructions about access
+       to services or resources via DNS SVCB and HTTP Resource Records.
+       This document also defines a new SvcParamKey for these Resource
+       Records, which specifies the specific QUIC versions in use.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-duke-httpbis-quic-version-alt-svc-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-01
     docidentifier:
     - content: draft-duke-httpbis-quic-version-alt-svc-01
       type: Internet-Draft
@@ -104,7 +114,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-duke-httpbis-quic-version-alt-svc-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-httpbis-quic-version-alt-svc-03
     docidentifier:
     - content: draft-duke-httpbis-quic-version-alt-svc-03
       type: Internet-Draft
@@ -115,10 +127,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-duke-httpbis-quic-version-alt-svc-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

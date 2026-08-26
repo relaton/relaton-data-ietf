@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Bits in XDR
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-royer-bits-in-xdr-00
 docidentifier:
+- content: draft-royer-bits-in-xdr
+  type: Internet-Draft
 - content: draft-royer-bits-in-xdr-00
   type: Internet-Draft
   primary: true
-- content: I-D.royer-bits-in-xdr
-  type: IETF
-  scope: anchor
 docnumber: I-D.royer-bits-in-xdr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Doug
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: RiverExplorer LLC
+        - language: en
+          content: RiverExplorer LLC
 version:
 - content: '00'
 language:
@@ -53,27 +54,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This is an extension to the XDR specification to allow for bits to be
-    described and sent. With protocols that have a large number of boolean values
-    the existing standard requires each to be individually packed into a 32-bit value.
-    This addition does not alter any existing XDR data streams or effect existing
-    implementations. * This specification describes how to pack a bit-boolean and
-    short bit-width data values into the 32-bit XDR block chunks. * And this specification
-    describes how to describe them by extending "The XDR Language Specification" to
-    include bits. * And a new namespace declaration type is specified to aid in the
-    reduction of name collisions in large projects. While in draft status, a new Open
-    Source XDR generation tool is being developed [xdrgen].</p>
-  format: text/html
+  content: |-
+    <p>This is an extension to the XDR specification to allow for bits to be
+       described and sent.
+
+       With protocols that have a large number of boolean values the
+       existing standard requires each to be individually packed into a
+       32-bit value.
+
+       This addition does not alter any existing XDR data streams or effect
+       existing implementations.
+
+       *  This specification describes how to pack a bit-boolean and short
+          bit-width data values into the 32-bit XDR block chunks.
+
+       *  And this specification describes how to describe them by extending
+          "The XDR Language Specification" to include bits.
+
+       *  And a new namespace declaration type is specified to aid in the
+          reduction of name collisions in large projects.
+
+       While in draft status, a new Open Source XDR generation tool is being
+       developed [xdrgen].</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-royer-bits-in-xdr-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

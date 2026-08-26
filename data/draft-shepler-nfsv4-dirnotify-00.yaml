@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: NFS version 4 Directory Notifications
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-shepler-nfsv4-dirnotify-00
 docidentifier:
+- content: draft-shepler-nfsv4-dirnotify
+  type: Internet-Draft
 - content: draft-shepler-nfsv4-dirnotify-00
   type: Internet-Draft
   primary: true
-- content: I-D.shepler-nfsv4-dirnotify
-  type: IETF
-  scope: anchor
 docnumber: I-D.shepler-nfsv4-dirnotify
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Spencer
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Sun Microsystems
+        - language: en
+          content: Sun Microsystems
 version:
 - content: '00'
 language:
@@ -53,28 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>NFSv4 [RFC3530] contains within it a mechanism for the delegation of
-    file data to a client. The intent of this feature is to reduce the necessary interaction
-    between a client and server such that overall performance is improved. The same
-    type of mechanism does not exist for directory contents and to determine validity
-    of cached directory contents an NFSv4 client is left with polling the server to
-    determine if updates have occurred. The proposal described here is for an NFSv4
-    minor version that would allow a client to register interest in a directory and
-    to receive a callback RPC upon update of that directory. This type of interaction
-    would reduce or eliminate the polling that occurs between client and server and
-    improve scalability of the server's resources along with improved performance
-    for the client's directory content caching.</p>"
-  format: text/html
+  content: |-
+    <p>NFSv4 [RFC3530] contains within it a mechanism for the delegation of
+    file data to a client.  The intent of this feature is to reduce the
+    necessary interaction between a client and server such that overall
+    performance is improved.  The same type of mechanism does not exist
+    for directory contents and to determine validity of cached directory
+    contents an NFSv4 client is left with polling the server to determine
+    if updates have occurred.
+    The proposal described here is for an NFSv4 minor version that would
+    allow a client to register interest in a directory and to receive a
+    callback RPC upon update of that directory.  This type of interaction
+    would reduce or eliminate the polling that occurs between client and
+    server and improve scalability of the server's resources along with
+    improved performance for the client's directory content caching.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-shepler-nfsv4-dirnotify-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

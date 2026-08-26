@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Replay-Resistant DomainKeys Identified Mail (DKIM) Signatures
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kucherawy-dkim-anti-replay-03
 docidentifier:
+- content: draft-kucherawy-dkim-anti-replay
+  type: Internet-Draft
 - content: draft-kucherawy-dkim-anti-replay-03
   type: Internet-Draft
   primary: true
-- content: I-D.kucherawy-dkim-anti-replay
-  type: IETF
-  scope: anchor
 docnumber: I-D.kucherawy-dkim-anti-replay
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Murray
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -49,22 +49,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DomainKeys Identified Mail (DKIM) provides a digital signature mechanism
-    for Internet messages, allowing a domain name owner to affix its domain name in
-    a way that can be cryptographically validated. DKIM signatures protect the integrity
-    of the message header and body only. By design, it decoupled itself from the transport
-    and storage mechanisms used to handle messages. This gives rise to a possible
-    replay attack, which the original DKIM specification acknowledged but did not
-    provide a mitigation strategy. This document presents an optional method for binding
-    a signature to a specific recipient or set of recipients so that broader replay
-    attacks can be mitigated.</p>"
-  format: text/html
+  content: |-
+    <p>DomainKeys Identified Mail (DKIM) provides a digital signature
+       mechanism for Internet messages, allowing a domain name owner to
+       affix its domain name in a way that can be cryptographically
+       validated.
+
+       DKIM signatures protect the integrity of the message header and body
+       only.  By design, it decoupled itself from the transport and storage
+       mechanisms used to handle messages.  This gives rise to a possible
+       replay attack, which the original DKIM specification acknowledged but
+       did not provide a mitigation strategy.  This document presents an
+       optional method for binding a signature to a specific recipient or
+       set of recipients so that broader replay attacks can be mitigated.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-kucherawy-dkim-anti-replay-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kucherawy-dkim-anti-replay-02
     docidentifier:
     - content: draft-kucherawy-dkim-anti-replay-02
       type: Internet-Draft
@@ -75,10 +80,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kucherawy-dkim-anti-replay-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

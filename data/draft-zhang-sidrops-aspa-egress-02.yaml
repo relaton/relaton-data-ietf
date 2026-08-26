@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ASPA-based AS_PATH Verification for BGP Export
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-aspa-egress-02
 docidentifier:
+- content: draft-zhang-sidrops-aspa-egress
+  type: Internet-Draft
 - content: draft-zhang-sidrops-aspa-egress-02
   type: Internet-Draft
   primary: true
-- content: I-D.zhang-sidrops-aspa-egress
-  type: IETF
-  scope: anchor
 docnumber: I-D.zhang-sidrops-aspa-egress
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jia
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 version:
 - content: '02'
 language:
@@ -53,20 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes that a BGP speaker may perform AS_PATH verification
-    on the routes it sends to BGP neighbors at external BGP (eBGP) egress based on
-    Autonomous System Provider Authorization (ASPA) objects in the Resource Public
-    Key Infrastructure (RPKI). Before BGP speakers advertise routes to external peers
-    at eBGP egress, performing ASPA-based AS_PATH verification can prevent route leaks
-    to external peers, check for local misconfigurations and detect ASPA registration
-    errors, thus avoiding the advertisement of invalid routes.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes that a BGP speaker may perform AS_PATH
+       verification on the routes it sends to BGP neighbors at external BGP
+       (eBGP) egress based on Autonomous System Provider Authorization
+       (ASPA) objects in the Resource Public Key Infrastructure (RPKI).
+       Before BGP speakers advertise routes to external peers at eBGP
+       egress, performing ASPA-based AS_PATH verification can prevent route
+       leaks to external peers, check for local misconfigurations and detect
+       ASPA registration errors, thus avoiding the advertisement of invalid
+       routes.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-zhang-sidrops-aspa-egress-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-aspa-egress-01
     docidentifier:
     - content: draft-zhang-sidrops-aspa-egress-01
       type: Internet-Draft
@@ -74,10 +79,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-zhang-sidrops-aspa-egress-04
-      format: text/plain
+      content: draft-zhang-sidrops-aspa-egress-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-sidrops-aspa-egress-03
     docidentifier:
-    - content: draft-zhang-sidrops-aspa-egress-04
+    - content: draft-zhang-sidrops-aspa-egress-03
       type: Internet-Draft
       primary: true
 series:
@@ -86,10 +93,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-zhang-sidrops-aspa-egress-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

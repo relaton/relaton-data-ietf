@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Proposal for Updates to Guidance on Packet Reordering
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-white-intarea-reordering-01
 docidentifier:
+- content: draft-white-intarea-reordering
+  type: Internet-Draft
 - content: draft-white-intarea-reordering-01
   type: Internet-Draft
   primary: true
-- content: I-D.white-intarea-reordering
-  type: IETF
-  scope: anchor
 docnumber: I-D.white-intarea-reordering
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ingemar
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dibakar
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Intel
+        - language: en
+          content: Intel
 version:
 - content: '01'
 language:
@@ -97,32 +104,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Several link technology standards mandate that equipment guarantee in-order
-    delivery of layer 2 frames, apparently due to a belief that this is required by
-    higher layer protocols. In addition, certain link types can introduce out-of-order
-    arrivals at the end of the layer 2 link, which the receiving equipment is required
-    to rectify by delaying higher sequenced frames until all lower sequenced frames
-    can be delivered or are deemed lost. The delaying of higher sequenced frames is
-    generally done without any knowledge of the higher layer protocols in use, let
-    alone any knowledge of higher layer protocol contexts (e.g. TCP connections) in
-    the case that the layer 2 link is carrying a multiplex of such contexts. It could,
-    for example, be the case that all of the higher sequenced frames being delayed
-    are carrying packets for different layer 4 contexts than a single lower- sequenced
-    frame that triggered the delay. The result is that this "re-sequencing" operation
-    can introduce delays that result in degradation of performance rather than improving
-    it. Moreover, modern, performant TCP and QUIC implementations support features
-    that significantly improve their tolerance to out-of-order delivery. This draft
-    is intended to promote an analysis and discussion of the sensitivity of modern
-    IETF protocols to out-of-order delivery, and to potentially develop new information
-    for layer 2 technology standards regarding the need to assure in-order delivery
-    to support IETF protocols.</p>
-  format: text/html
+  content: |-
+    <p>Several link technology standards mandate that equipment guarantee
+       in-order delivery of layer 2 frames, apparently due to a belief that
+       this is required by higher layer protocols.  In addition, certain
+       link types can introduce out-of-order arrivals at the end of the
+       layer 2 link, which the receiving equipment is required to rectify by
+       delaying higher sequenced frames until all lower sequenced frames can
+       be delivered or are deemed lost.  The delaying of higher sequenced
+       frames is generally done without any knowledge of the higher layer
+       protocols in use, let alone any knowledge of higher layer protocol
+       contexts (e.g. TCP connections) in the case that the layer 2 link is
+       carrying a multiplex of such contexts.  It could, for example, be the
+       case that all of the higher sequenced frames being delayed are
+       carrying packets for different layer 4 contexts than a single lower-
+       sequenced frame that triggered the delay.  The result is that this
+       "re-sequencing" operation can introduce delays that result in
+       degradation of performance rather than improving it.  Moreover,
+       modern, performant TCP and QUIC implementations support features that
+       significantly improve their tolerance to out-of-order delivery.
+
+       This draft is intended to promote an analysis and discussion of the
+       sensitivity of modern IETF protocols to out-of-order delivery, and to
+       potentially develop new information for layer 2 technology standards
+       regarding the need to assure in-order delivery to support IETF
+       protocols.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-white-intarea-reordering-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-white-intarea-reordering-00
     docidentifier:
     - content: draft-white-intarea-reordering-00
       type: Internet-Draft
@@ -130,10 +144,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-white-intarea-reordering-04
-      format: text/plain
+      content: draft-white-intarea-reordering-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-white-intarea-reordering-02
     docidentifier:
-    - content: draft-white-intarea-reordering-04
+    - content: draft-white-intarea-reordering-02
       type: Internet-Draft
       primary: true
 series:
@@ -142,10 +158,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-white-intarea-reordering-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

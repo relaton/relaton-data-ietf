@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Route Leak Detection and Filtering using Roles in Update and Open messages '
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ymbk-idr-bgp-open-policy-01
 docidentifier:
+- content: draft-ymbk-idr-bgp-open-policy
+  type: Internet-Draft
 - content: draft-ymbk-idr-bgp-open-policy-01
   type: Internet-Draft
   primary: true
-- content: I-D.ymbk-idr-bgp-open-policy
-  type: IETF
-  scope: anchor
 docnumber: I-D.ymbk-idr-bgp-open-policy
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Eugene
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randy
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -85,24 +89,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Route Leaks are propagation of BGP prefixes which violate assumptions
-    of BGP topology relationships; e.g. passing a route learned from one peer to another
-    peer or to a transit provider, passing a route learned from one transit provider
-    to another transit provider or to a peer. Today, approaches to leak prevention
-    rely on marking routes according to some configuration options without any check
-    of the configuration corresponds to that of the BGP neighbor, or enforcement that
-    the two BGP speakers agree on the relationship. This document enhances BGP Open
-    to establish agreement of the (peer, customer, provider, internal) relationship
-    of two BGP neighboring speakers to enforce appropriate configuration on both sides.
-    Propagated routes are then marked with a eOTC and iOTC attributes according to
-    agreed relationship allowing prevetion and detection of route leaks.</p>"
-  format: text/html
+  content: |-
+    <p>Route Leaks are propagation of BGP prefixes which violate assumptions
+       of BGP topology relationships; e.g. passing a route learned from one
+       peer to another peer or to a transit provider, passing a route
+       learned from one transit provider to another transit provider or to a
+       peer.  Today, approaches to leak prevention rely on marking routes
+       according to some configuration options without any check of the
+       configuration corresponds to that of the BGP neighbor, or enforcement
+       that the two BGP speakers agree on the relationship.  This document
+       enhances BGP Open to establish agreement of the (peer, customer,
+       provider, internal) relationship of two BGP neighboring speakers to
+       enforce appropriate configuration on both sides.  Propagated routes
+       are then marked with a eOTC and iOTC attributes according to agreed
+       relationship allowing prevetion and detection of route leaks.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ymbk-idr-bgp-open-policy-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ymbk-idr-bgp-open-policy-00
     docidentifier:
     - content: draft-ymbk-idr-bgp-open-policy-00
       type: Internet-Draft
@@ -110,10 +118,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ymbk-idr-bgp-open-policy-03
-      format: text/plain
+      content: draft-ymbk-idr-bgp-open-policy-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ymbk-idr-bgp-open-policy-02
     docidentifier:
-    - content: draft-ymbk-idr-bgp-open-policy-03
+    - content: draft-ymbk-idr-bgp-open-policy-02
       type: Internet-Draft
       primary: true
 series:
@@ -122,10 +132,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ymbk-idr-bgp-open-policy-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

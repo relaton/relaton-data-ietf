@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Deterministic Path Forwarding (DPF)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-idr-dpf-01
 docidentifier:
+- content: draft-wang-idr-dpf
+  type: Internet-Draft
 - content: draft-wang-idr-dpf-01
   type: Internet-Draft
   primary: true
-- content: I-D.wang-idr-dpf
-  type: IETF
-  scope: anchor
 docnumber: I-D.wang-idr-dpf
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kevin
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michal
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mahesh
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -107,15 +115,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -129,15 +140,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Audi
+        - language: en
+          content: Audi
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Diptanshu
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -151,7 +165,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Oracle Cloud Infrastructure
+        - language: en
+          content: Oracle Cloud Infrastructure
 version:
 - content: '01'
 language:
@@ -161,27 +176,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Modern data center (DC) fabrics typically employ Clos topologies with
-    External BGP (EBGP) for plain IPv4/IPv6 routing. While hop-by-hop EBGP routing
-    is simple and scalable, it provides only a single best- effort forwarding service
-    for all types of traffic. This single best-effort service might be insufficient
-    for increasingly diverse traffic requirements in modern DC environments. For example,
-    loss and latency sensitive AI/ML flows may demand stronger Service Level Agreements
-    (SLA) than general purpose traffic. Duplication schemes which are standardized
-    through protocols such as Parallel Redundancy Protocol (PRP) require disjoint
-    forwarding paths to avoid single points of failure. Congestion avoidance may require
-    more deterministic forwarding behavior. This document introduces BGP Deterministic
-    Path Forwarding (DPF), a mechanism that partitions the physical fabric into multiple
-    logical fabrics. Flows can be mapped to different logical fabrics based on their
-    specific requirements, enabling deterministic forwarding behavior within the data
-    center.</p>"
-  format: text/html
+  content: |-
+    <p>Modern data center (DC) fabrics typically employ Clos topologies with
+       External BGP (EBGP) for plain IPv4/IPv6 routing.  While hop-by-hop
+       EBGP routing is simple and scalable, it provides only a single best-
+       effort forwarding service for all types of traffic.  This single
+       best-effort service might be insufficient for increasingly diverse
+       traffic requirements in modern DC environments.  For example, loss
+       and latency sensitive AI/ML flows may demand stronger Service Level
+       Agreements (SLA) than general purpose traffic.  Duplication schemes
+       which are standardized through protocols such as Parallel Redundancy
+       Protocol (PRP) require disjoint forwarding paths to avoid single
+       points of failure.  Congestion avoidance may require more
+       deterministic forwarding behavior.
+
+       This document introduces BGP Deterministic Path Forwarding (DPF), a
+       mechanism that partitions the physical fabric into multiple logical
+       fabrics.  Flows can be mapped to different logical fabrics based on
+       their specific requirements, enabling deterministic forwarding
+       behavior within the data center.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-wang-idr-dpf-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-dpf-00
     docidentifier:
     - content: draft-wang-idr-dpf-00
       type: Internet-Draft
@@ -192,10 +213,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wang-idr-dpf-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

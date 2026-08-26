@@ -1,12 +1,13 @@
 ---
 id: drafthelixarhdpagenticdelegation
 schema_version: v1.5.6
+formattedref:
+  content: draft-helixar-hdp-agentic-delegation
 title:
 - language: en
   script: Latn
   content: 'Human Delegation Provenance Protocol (HDP): Cryptographic Chain-of-Custody
     for Agentic AI Systems'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-helixar-hdp-agentic-delegation-01
@@ -20,31 +21,40 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agentic AI systems operate on behalf of human principals, often delegating
-    tasks through multi-step chains of AI agents. There is currently no standard mechanism
-    to record who authorized an agent to act, under what scope, and through what chain
-    of delegation, in a way that can be verified offline, without a central registry,
-    and without third-party trust anchors. This document specifies the Human Delegation
-    Provenance Protocol (HDP) version 0.1, a lightweight token-based protocol that
-    captures, structures, cryptographically signs, and verifies human delegation context
-    in agentic AI systems. An HDP token binds a human authorization event to a session,
-    records each agent's delegation action as a signed hop in an append-only chain,
-    and enables any participant to verify the full provenance record using only the
-    issuer's Ed25519 public key and the current session identifier. Verification is
-    fully offline. No registry lookup, no network call, and no third-party trust anchor
-    is required. HDP's distinguishing contribution is a signed, tamper-evident record
-    of each agent's declared action at each hop, an execution audit trail that complements,
-    rather than replaces, capability-based delegation formats such as UCAN and ZCAP-LD.
-    The underlying append-only, offline-verifiable chain-of-custody mechanism is payload-agnostic;
-    human-authorized agentic delegation is the reference profile specified in this
-    document.</p>"
-  format: text/html
+  content: |-
+    <p>Agentic AI systems operate on behalf of human principals, often
+       delegating tasks through multi-step chains of AI agents.  There is
+       currently no standard mechanism to record who authorized an agent to
+       act, under what scope, and through what chain of delegation, in a way
+       that can be verified offline, without a central registry, and without
+       third-party trust anchors.
+
+       This document specifies the Human Delegation Provenance Protocol
+       (HDP) version 0.1, a lightweight token-based protocol that captures,
+       structures, cryptographically signs, and verifies human delegation
+       context in agentic AI systems.  An HDP token binds a human
+       authorization event to a session, records each agent's delegation
+       action as a signed hop in an append-only chain, and enables any
+       participant to verify the full provenance record using only the
+       issuer's Ed25519 public key and the current session identifier.
+       Verification is fully offline.  No registry lookup, no network call,
+       and no third-party trust anchor is required.
+
+       HDP's distinguishing contribution is a signed, tamper-evident record
+       of each agent's declared action at each hop, an execution audit trail
+       that complements, rather than replaces, capability-based delegation
+       formats such as UCAN and ZCAP-LD.  The underlying append-only,
+       offline-verifiable chain-of-custody mechanism is payload-agnostic;
+       human-authorized agentic delegation is the reference profile
+       specified in this document.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-helixar-hdp-agentic-delegation-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-helixar-hdp-agentic-delegation-00
     docidentifier:
     - content: draft-helixar-hdp-agentic-delegation-00
       type: Internet-Draft
@@ -53,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-helixar-hdp-agentic-delegation-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-helixar-hdp-agentic-delegation-01
     docidentifier:
     - content: draft-helixar-hdp-agentic-delegation-01
       type: Internet-Draft
@@ -62,4 +74,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

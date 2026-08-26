@@ -1,11 +1,12 @@
 ---
 id: draftietftcpimplrestart
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-tcpimpl-restart
 title:
 - language: en
   script: Latn
   content: Issues in TCP Slow-Start Restart After Idle
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpimpl-restart-00
@@ -19,25 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft discusses variations in the TCP 'slow-start restart' (SSR)
-    algorithm, and the unintended failure of some variations to properly restart in
-    some environments. SSR is intended to avoid line-rate bursts after idle periods,
-    where TCP accumulates permission to send in the form of ACKs, but does not consume
-    that permission immediately. SSR's original 'restart after send is idle' is commonly
-    implemented as 'restart after receive is idle'. The latter unintentionally fails
-    to restart for bidirectional connections where the sender's burst is triggered
-    by a reverse-path data packet, such as in persistent HTTP. Both the former and
-    latter are shown to permit bursts in other circumstances. Three solutions are
-    discussed, and their implementations evaluated. This document is a product of
-    the LSAM project at ISI. Comments are solicited and should be addressed to the
-    authors.</p>"
-  format: text/html
+  content: "<p>This draft discusses variations in the TCP 'slow-start restart' (SSR)\n
+    \  algorithm, and the unintended failure of some variations to properly\n   restart
+    in some environments. SSR is intended to avoid line-rate\n   bursts after idle
+    periods, where TCP accumulates permission to send\n   in the form of ACKs, but
+    does not consume that permission\n   immediately. SSR's original 'restart after
+    send is idle' is commonly\n   implemented as 'restart after receive is idle'.
+    The latter\n   unintentionally fails to restart for bidirectional connections
+    where\n   the sender's burst is triggered by a reverse-path data packet, such\n
+    \  as in persistent HTTP. Both the former and latter are shown to permit\n   bursts
+    in other circumstances. Three solutions are discussed, and\n   their implementations
+    evaluated.\n \n   This document is a product of the LSAM project at ISI.  Comments
+    are\n   solicited and should be addressed to the authors.</p>"
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-tcpimpl-restart-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpimpl-restart-00
     docidentifier:
     - content: draft-ietf-tcpimpl-restart-00
       type: Internet-Draft
@@ -46,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

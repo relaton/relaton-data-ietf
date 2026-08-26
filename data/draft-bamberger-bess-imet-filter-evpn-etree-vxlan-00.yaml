@@ -7,17 +7,15 @@ title:
   script: Latn
   content: IMET Route Filtering for Ethernet VPN (EVPN) Ethernet Tree (E-Tree) with
     VXLAN Encapsulation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bamberger-bess-imet-filter-evpn-etree-vxlan-00
 docidentifier:
+- content: draft-bamberger-bess-imet-filter-evpn-etree-vxlan
+  type: Internet-Draft
 - content: draft-bamberger-bess-imet-filter-evpn-etree-vxlan-00
   type: Internet-Draft
   primary: true
-- content: I-D.bamberger-bess-imet-filter-evpn-etree-vxlan
-  type: IETF
-  scope: anchor
 docnumber: I-D.bamberger-bess-imet-filter-evpn-etree-vxlan
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Aaron
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Akhil
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -66,15 +69,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sergey
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -88,17 +94,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Arivudainambi
       - language: en
+        script: Latn
         initial: A
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -112,7 +122,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 version:
 - content: '00'
 language:
@@ -122,32 +133,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RFC 8317 defines EVPN Ethernet Tree (E-Tree) and associated filtering
-    rules for both known unicast and broadcast, unknown unicast, and multicast (BUM)
-    traffic, using Multiprotocol Label Switching (MPLS) encapsulation. The processes
-    and protocols specified in RFC 8317 for performing E-Tree filtering on known unicast
-    traffic are implemented entirely with EVPN routes, and are thus also applicable
-    to networks using Virtual Extensible LAN (VXLAN) encapsulation. However, E-Tree
-    filtering for BUM traffic is accomplished using specific features of MPLS encapsulation,
-    and is thus not applicable for networks using VXLAN encapsulation. In networks
-    where E-Tree root/leaf role classification is done per- provider edge (PE) device,
-    or per-attachment circuit (AC) on each PE device, an extension to EVPN type-3
-    inclusive multicast (IMET) routes can be added to allow E-Tree filtering for BUM
-    traffic in networks using VXLAN encapsulation. Additionally, this proposal specifies
-    filtering BUM traffic on ingress, as opposed to the egress filtering specified
-    by RFC 8317, which can be considered to be more optimal, as it reduces the amount
-    of unnecessary BUM traffic transmitted over the network.</p>"
-  format: text/html
+  content: |-
+    <p>RFC 8317 defines EVPN Ethernet Tree (E-Tree) and associated filtering
+       rules for both known unicast and broadcast, unknown unicast, and
+       multicast (BUM) traffic, using Multiprotocol Label Switching (MPLS)
+       encapsulation.  The processes and protocols specified in RFC 8317 for
+       performing E-Tree filtering on known unicast traffic are implemented
+       entirely with EVPN routes, and are thus also applicable to networks
+       using Virtual Extensible LAN (VXLAN) encapsulation.  However, E-Tree
+       filtering for BUM traffic is accomplished using specific features of
+       MPLS encapsulation, and is thus not applicable for networks using
+       VXLAN encapsulation.
+
+       In networks where E-Tree root/leaf role classification is done per-
+       provider edge (PE) device, or per-attachment circuit (AC) on each PE
+       device, an extension to EVPN type-3 inclusive multicast (IMET) routes
+       can be added to allow E-Tree filtering for BUM traffic in networks
+       using VXLAN encapsulation.  Additionally, this proposal specifies
+       filtering BUM traffic on ingress, as opposed to the egress filtering
+       specified by RFC 8317, which can be considered to be more optimal, as
+       it reduces the amount of unnecessary BUM traffic transmitted over the
+       network.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bamberger-bess-imet-filter-evpn-etree-vxlan-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

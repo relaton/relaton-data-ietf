@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: LSA Correlation to Schedule Routing Table Calculations
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-goyal-ospf-lsacorr-00
 docidentifier:
+- content: draft-goyal-ospf-lsacorr
+  type: Internet-Draft
 - content: draft-goyal-ospf-lsacorr-00
   type: Internet-Draft
   primary: true
-- content: I-D.goyal-ospf-lsacorr
-  type: IETF
-  scope: anchor
 docnumber: I-D.goyal-ospf-lsacorr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mukul
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,13 +43,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Wisconsin Milwaukee
+        - language: en
+          content: University of Wisconsin Milwaukee
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: AT&T
+        - language: en
+          content: AT&T
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Aman
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -88,8 +93,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kishor
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -103,15 +110,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Duke University
+        - language: en
+          content: Duke University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hossein
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -125,7 +135,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Wisconsin Milwaukee
+        - language: en
+          content: University of Wisconsin Milwaukee
 version:
 - content: '00'
 language:
@@ -135,30 +146,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>OSPF requires a router to recalculate its routing table whenever it
-    receives a new router or network LSA. However, a topology change, such as a router
-    down event, may cause a number of new LSAs to be generated. These LSAs may arrive
-    at a router at different times. In order to avoid several routing table calculations
-    in quick succession in such cases, commercial routers enforce a hold time between
-    successive routing table calculations. The hold time based schemes, while limiting
-    the number of routing table calculations, may also cause undesirable delays in
-    convergence to the topology change. This ID describes an alternate approach to
-    schedule routing table calculations, called LSA Correlation. Rather than using
-    individual LSAs as triggers for routing table calculations, LSA Correlation scheme
-    correlates the information in the LSAs to identify the topology change. A routing
-    table calculation can be performed when the topology change has been identified,
-    which could span multiple LSAs.</p>"
-  format: text/html
+  content: |-
+    <p>OSPF requires a router to recalculate its routing table whenever it
+    receives a new router or network LSA.  However, a topology change,
+    such as a router down event, may cause a number of new LSAs to be
+    generated.  These LSAs may arrive at a router at different times.  In
+    order to avoid several routing table calculations in quick succession
+    in such cases, commercial routers enforce a hold time between
+    successive routing table calculations.  The hold time based schemes,
+    while limiting the number of routing table calculations, may also
+    cause undesirable delays in convergence to the topology change.  This
+    ID describes an alternate approach to schedule routing table
+    calculations, called LSA Correlation.  Rather than using individual
+    LSAs as triggers for routing table calculations, LSA Correlation
+    scheme correlates the information in the LSAs to identify the
+    topology change.  A routing table calculation can be performed when
+    the topology change has been identified, which could span multiple
+    LSAs.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-goyal-ospf-lsacorr-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

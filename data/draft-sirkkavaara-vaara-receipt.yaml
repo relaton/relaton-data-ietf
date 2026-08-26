@@ -1,12 +1,13 @@
 ---
 id: draftsirkkavaaravaarareceipt
 schema_version: v1.5.6
+formattedref:
+  content: draft-sirkkavaara-vaara-receipt
 title:
 - language: en
   script: Latn
   content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Autonomous
     Actions'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-07
@@ -20,31 +21,38 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies vaara.receipt/v1, a signed and independently
-    recomputable record that binds a decision about an autonomous action to the evidence
-    the decision was made on, and optionally to one or more external timestamp anchors.
-    The format is canonicalized with the JSON Canonicalization Scheme (JCS) so that
-    any third party can recompute its digests and verify its signature without access
-    to the issuer. A decision and the execution receipt that answers it form one recomputable
-    pair through the envelope's back link. The receipt's trust is root-agnostic: the
-    same record is verifiable with or without a hardware trusted execution environment
-    and is re- expressible as an IETF RATS Entity Attestation Result. Downstream specifications
-    (a payment rail, a compliance regime, a framework integration) define profiles
-    that pin to a version of this document and add only their own evidence schema;
-    they do not redefine the envelope. The format described here is deployed, and
-    its receipts are independently recomputable from public conformance vectors that
-    ship with standalone checkers importing no issuer code. The minimal profile is
-    a governance decision over a single autonomous action, bound to the action's own
-    intent with no external rail; it is the floor of the format, and a reference library
-    offers a matching adoption floor at the API layer as a one-line decorator over
-    the governed function.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies vaara.receipt/v1, a signed and independently
+       recomputable record that binds a decision about an autonomous action
+       to the evidence the decision was made on, and optionally to one or
+       more external timestamp anchors.  The format is canonicalized with
+       the JSON Canonicalization Scheme (JCS) so that any third party can
+       recompute its digests and verify its signature without access to the
+       issuer.  A decision and the execution receipt that answers it form
+       one recomputable pair through the envelope's back link.
+
+       The receipt's trust is root-agnostic: the same record is verifiable
+       with or without a hardware trusted execution environment and is re-
+       expressible as an IETF RATS Entity Attestation Result.  Downstream
+       specifications (a payment rail, a compliance regime, a framework
+       integration) define profiles that pin to a version of this document
+       and add only their own evidence schema; they do not redefine the
+       envelope.  The format described here is deployed, and its receipts
+       are independently recomputable from public conformance vectors that
+       ship with standalone checkers importing no issuer code.  The minimal
+       profile is a governance decision over a single autonomous action,
+       bound to the action's own intent with no external rail; it is the
+       floor of the format, and a reference library offers a matching
+       adoption floor at the API layer as a one-line decorator over the
+       governed function.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-00
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-00
       type: Internet-Draft
@@ -53,7 +61,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-01
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-01
       type: Internet-Draft
@@ -62,7 +72,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-02
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-02
       type: Internet-Draft
@@ -71,7 +83,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-03
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-03
       type: Internet-Draft
@@ -80,7 +94,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-04
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-04
       type: Internet-Draft
@@ -89,7 +105,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-05
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-05
       type: Internet-Draft
@@ -98,7 +116,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-06
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-06
       type: Internet-Draft
@@ -107,7 +127,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sirkkavaara-vaara-receipt-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-07
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-07
       type: Internet-Draft
@@ -116,4 +138,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

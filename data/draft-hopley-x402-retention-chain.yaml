@@ -1,11 +1,12 @@
 ---
 id: drafthopleyx402retentionchain
 schema_version: v1.5.6
+formattedref:
+  content: draft-hopley-x402-retention-chain
 title:
 - language: en
   script: Latn
   content: Self-Verifiable Retention Chain for Payment Receipts
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-07
@@ -19,44 +20,53 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies eight cryptographic constructions for self-verifiable
-    agentic payment records. The first, the Retention Chain Reference (retention_chain_ref),
-    enables tamper-evident audit chains linking payment receipts without requiring
-    external infrastructure. The second, the Payment Action Lifecycle, defines a content-addressed
-    model for the exactly-once execution of payment actions, including an action reference
-    primitive (action_ref) and a per-state transition hash (transition_hash) with
-    a provable SKIP-on- retry idempotency guarantee. The third, the Settlement-Action
-    Binding (binding_ref), binds a settled payment to the verified agent action it
-    paid for and to the retention chain entry recording it, so that a settlement attestation
-    proves not only that a payment occurred but which verified action it corresponds
-    to. The fourth, the Policy Binding (policy_bound_ref), binds a content-addressed
-    snapshot of the governing policy to an existing binding or chain reference, so
-    that a decision is verifiable against the exact policy version that admitted it
-    and a policy rotation is detectable by recomputation. The fifth, the Compliance
-    Gate Binding (gate_ref), binds a categorical ALLOW/REFER/DENY compliance verdict
-    and a no-PII payer reference to a policy or binding reference, so that a screening
-    decision is provably tied to the policy in force when it was made and carries
-    no personal data in the bound record. The sixth, the Pre-Payment Decision Chain
-    (guardrail_ref), composes an agent identity reference, a spend authority reference,
-    and the policy in force into one recomputable pre-payment ALLOW/DENY decision.
-    The seventh, Post-Decision Execution Evidence (execution_ref), binds an executed
-    action to the exact decision that authorized it, so the recorded execution is
-    provably consistent with the decision and not merely correlated with an agent
-    identity. The eighth, Cross-Party Authority Delegation (delegation_ref), binds
-    a delegation of authority from one party to another and chains hand-offs, so a
-    verifier can confirm that authority did not widen across an organizational boundary.
-    All constructions use only SHA-256 and the JSON Canonicalization Scheme (JCS,
-    RFC 8785), and are verifiable by any party holding the relevant receipts without
-    contacting the issuer. The constructions satisfy the transaction recording and
-    audit trail obligations of MiCA Article 80, DORA Article 14, and AMLR Article
-    56.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies eight cryptographic constructions for
+       self-verifiable agentic payment records.  The first, the Retention
+       Chain Reference (retention_chain_ref), enables tamper-evident audit
+       chains linking payment receipts without requiring external
+       infrastructure.  The second, the Payment Action Lifecycle, defines
+       a content-addressed model for the exactly-once execution of payment
+       actions, including an action reference primitive (action_ref) and a
+       per-state transition hash (transition_hash) with a provable SKIP-on-
+       retry idempotency guarantee.  The third, the Settlement-Action
+       Binding (binding_ref), binds a settled payment to the verified agent
+       action it paid for and to the retention chain entry recording it, so
+       that a settlement attestation proves not only that a payment occurred
+       but which verified action it corresponds to.  The fourth, the Policy
+       Binding (policy_bound_ref), binds a content-addressed snapshot of the
+       governing policy to an existing binding or chain reference, so that a
+       decision is verifiable against the exact policy version that admitted
+       it and a policy rotation is detectable by recomputation.  The fifth,
+       the Compliance Gate Binding (gate_ref), binds a categorical
+       ALLOW/REFER/DENY compliance verdict and a no-PII payer reference to a
+       policy or binding reference, so that a screening decision is provably
+       tied to the policy in force when it was made and carries no personal
+       data in the bound record.  The sixth, the Pre-Payment Decision
+       Chain (guardrail_ref), composes an agent identity reference, a spend
+       authority reference, and the policy in force into one recomputable
+       pre-payment ALLOW/DENY decision.  The seventh, Post-Decision
+       Execution Evidence (execution_ref), binds an executed action to the
+       exact decision that authorized it, so the recorded execution is
+       provably consistent with the decision and not merely correlated with
+       an agent identity.  The eighth, Cross-Party Authority Delegation
+       (delegation_ref), binds a delegation of authority from one party to
+       another and chains hand-offs, so a verifier can confirm that authority
+       did not widen across an organizational boundary.  All
+       constructions use only SHA-256 and the JSON Canonicalization Scheme
+       (JCS, RFC 8785),
+       and are verifiable by any party holding the relevant receipts without
+       contacting the issuer.  The constructions satisfy the transaction
+       recording and audit trail obligations of MiCA Article 80, DORA
+       Article 14, and AMLR Article 56.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-00
     docidentifier:
     - content: draft-hopley-x402-retention-chain-00
       type: Internet-Draft
@@ -65,7 +75,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-01
     docidentifier:
     - content: draft-hopley-x402-retention-chain-01
       type: Internet-Draft
@@ -74,7 +86,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-02
     docidentifier:
     - content: draft-hopley-x402-retention-chain-02
       type: Internet-Draft
@@ -83,7 +97,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-03
     docidentifier:
     - content: draft-hopley-x402-retention-chain-03
       type: Internet-Draft
@@ -92,7 +108,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-04
     docidentifier:
     - content: draft-hopley-x402-retention-chain-04
       type: Internet-Draft
@@ -101,7 +119,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-05
     docidentifier:
     - content: draft-hopley-x402-retention-chain-05
       type: Internet-Draft
@@ -110,7 +130,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-06
     docidentifier:
     - content: draft-hopley-x402-retention-chain-06
       type: Internet-Draft
@@ -119,7 +141,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hopley-x402-retention-chain-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-retention-chain-07
     docidentifier:
     - content: draft-hopley-x402-retention-chain-07
       type: Internet-Draft
@@ -128,4 +152,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

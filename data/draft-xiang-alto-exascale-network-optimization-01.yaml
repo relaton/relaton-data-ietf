@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Traffic Optimization for ExaScale Science Applications
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-xiang-alto-exascale-network-optimization-01
 docidentifier:
+- content: draft-xiang-alto-exascale-network-optimization
+  type: Internet-Draft
 - content: draft-xiang-alto-exascale-network-optimization-01
   type: Internet-Draft
   primary: true
-- content: I-D.xiang-alto-exascale-network-optimization
-  type: IETF
-  scope: anchor
 docnumber: I-D.xiang-alto-exascale-network-optimization
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Qiao
       - language: en
+        script: Latn
         initial: Q
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Harvey
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -64,10 +66,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -84,8 +89,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Azher
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -102,8 +109,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Justas
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -120,8 +129,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jingxuan
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -138,8 +149,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Haizhou
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -156,8 +169,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "Y"
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -177,43 +192,55 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Massive datasets continue to be acquired, simulated, processed and
-    analyzed by globally distributed scientific collaborations, and the volume of
-    this data is growing exponentially. These datasets need to be exchanged through
-    a global network infrastructure. Applications that manage and analyze such massive
-    data volumes can benefit substantially from the information about networking,
-    computing and storage resources from each member sites, and more directly from
-    network-resident services that optimize and load balance resource usage among
-    multiple data transfer and analytic requests, and achieve a better utilization
-    of multi-resources in clusters. The Application-Layer Traffic Optimization (ALTO)
-    protocol can provide via extensions the network information about different clusters/sites,
-    to both users and proactive network management services where applicable, with
-    the goal of improving both application performance and network resource utilization.
-    However, it has been verified in both science networks and commercial data center
-    networks that network resource in many cases is not the bottleneck preventing
-    the efficiency of large dataset transfer and data-intensive analytics. To achieve
-    a greater overall efficiency of the science programs' workflows information about
-    different resources, such as computing, storage and networking, should be provided
-    to data intensive applications simultaneously. In this document, we propose that
-    it is feasible to use existing ALTO services to provides not only network information,
-    but also information about other resources in science networks including computing
-    and storage. We introduce an Exascale Science Application Orchestrator (ExaO),
-    which achieves an efficient multi-resource allocation to support low-latency dataset
-    transfer and data intensive analytics in exascale science networks. ExaO provides
-    simple APIs for users to submit and manage dataset transfer and analytic requests
-    and to monitor the status of each request, along with fine-grained local and global
-    network and site state information in real-time. It collects cluster information
-    from multiple ALTO services utilizing topology extensions and leverages emerging
-    SDN control capabilities to orchestrate the resource allocation for dataset transfers
-    and analytic tasks, leading to improved transfer and analytic latency as well
-    as more efficient utilization of multi-resources in clusters/ sites.</p>"
-  format: text/html
+  content: |-
+    <p>Massive datasets continue to be acquired, simulated, processed and
+       analyzed by globally distributed scientific collaborations, and the
+       volume of this data is growing exponentially.  These datasets need to
+       be exchanged through a global network infrastructure.  Applications
+       that manage and analyze such massive data volumes can benefit
+       substantially from the information about networking, computing and
+       storage resources from each member sites, and more directly from
+       network-resident services that optimize and load balance resource
+       usage among multiple data transfer and analytic requests, and achieve
+       a better utilization of multi-resources in clusters.
+
+       The Application-Layer Traffic Optimization (ALTO) protocol can
+       provide via extensions the network information about different
+       clusters/sites, to both users and proactive network management
+       services where applicable, with the goal of improving both
+       application performance and network resource utilization.  However,
+       it has been verified in both science networks and commercial data
+       center networks that network resource in many cases is not the
+       bottleneck preventing the efficiency of large dataset transfer and
+       data-intensive analytics.  To achieve a greater overall efficiency of
+       the science programs' workflows information about different
+       resources, such as computing, storage and networking, should be
+       provided to data intensive applications simultaneously.
+
+       In this document, we propose that it is feasible to use existing ALTO
+       services to provides not only network information, but also
+       information about other resources in science networks including
+       computing and storage.  We introduce an Exascale Science Application
+       Orchestrator (ExaO), which achieves an efficient multi-resource
+       allocation to support low-latency dataset transfer and data intensive
+       analytics in exascale science networks.  ExaO provides simple APIs
+       for users to submit and manage dataset transfer and analytic requests
+       and to monitor the status of each request, along with fine-grained
+       local and global network and site state information in real-time.  It
+       collects cluster information from multiple ALTO services utilizing
+       topology extensions and leverages emerging SDN control capabilities
+       to orchestrate the resource allocation for dataset transfers and
+       analytic tasks, leading to improved transfer and analytic latency as
+       well as more efficient utilization of multi-resources in clusters/
+       sites.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-xiang-alto-exascale-network-optimization-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xiang-alto-exascale-network-optimization-00
     docidentifier:
     - content: draft-xiang-alto-exascale-network-optimization-00
       type: Internet-Draft
@@ -221,10 +248,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-xiang-alto-exascale-network-optimization-03
-      format: text/plain
+      content: draft-xiang-alto-exascale-network-optimization-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xiang-alto-exascale-network-optimization-02
     docidentifier:
-    - content: draft-xiang-alto-exascale-network-optimization-03
+    - content: draft-xiang-alto-exascale-network-optimization-02
       type: Internet-Draft
       primary: true
 series:
@@ -233,10 +262,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-xiang-alto-exascale-network-optimization-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

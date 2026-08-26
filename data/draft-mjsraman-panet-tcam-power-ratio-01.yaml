@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Computing Power Saving Paths using TCAM Power Ratio
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mjsraman-panet-tcam-power-ratio-01
 docidentifier:
+- content: draft-mjsraman-panet-tcam-power-ratio
+  type: Internet-Draft
 - content: draft-mjsraman-panet-tcam-power-ratio-01
   type: Internet-Draft
   primary: true
-- content: I-D.mjsraman-panet-tcam-power-ratio
-  type: IETF
-  scope: anchor
 docnumber: I-D.mjsraman-panet-tcam-power-ratio
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shankar
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -46,10 +46,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Balaji
       - language: en
+        script: Latn
         initial: B
       - language: en
+        script: Latn
         initial: V
       formatted_initials:
         language: en
@@ -66,8 +69,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kamakoti
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -87,35 +92,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A power saving scheme for switching of TCAM banks of fine granularity
-    is discussed in [ID-TCAM-POWER-EFF]. This scheme switches of TCAM banks of fine
-    granularity and their corresponding SRAM banks depending on the occupancy of routes
-    and their rewrites within the TCAM of a intelligent router line card (where one
-    or more such TCAM entities along with their SRAM banks may reside) by using an
-    algorithm specified in [ID-TCAM-POWER-EFF]. This takes care of switching off TCAM
-    and SRAM banks within a router's line card and correspondingly saves power when
-    the traffic matrix is not large with respect to the routes the packets lookup
-    where the occupancy of such routes is low in the line card. This is with reference
-    to both single and multi-chassis devices. The algorithm specified therein tends
-    to switch off banks which are not in use. The aim of this draft is to use the
-    device level characteristic in the form of a TCAM Power Ratio and disseminate
-    it as a metric within an area or an Autonomous system (where multiple such areas
-    exist within an AS) to compute power saving paths through the set of routers where
-    the TCAM-POWER-RATIO is low. The TCAM-POWER-RATIO is arrived at by dividing the
-    number of bits in the TCAM banks that are switched off by the Total Available
-    TCAM bank space in bits. This ratio is then subjected to the SPF algorithm as
-    in a link state protocol like OSPF or IS-IS with available utilization on the
-    links also being a factor. This way those routers that have more TCAM banks switched
-    off are avoided and those with higher power consumption but with available bandwidth
-    are used hence not increasing the total power consumed within the area and hence
-    within the AS.</p>"
-  format: text/html
+  content: |-
+    <p>A power saving scheme for switching of TCAM banks of fine granularity
+       is discussed in [ID-TCAM-POWER-EFF]. This scheme switches of TCAM
+       banks of fine granularity and their corresponding SRAM banks
+       depending on the occupancy of routes and their rewrites within the
+       TCAM of a intelligent router line card (where one or more such TCAM
+       entities along with their SRAM banks may reside) by using an
+       algorithm specified in [ID-TCAM-POWER-EFF]. This takes care of
+       switching off TCAM and SRAM banks within a router's line card and
+       correspondingly saves power when the traffic matrix is not large with
+       respect to the routes the packets lookup where the occupancy of such
+       routes is low in the line card. This is with reference to both single
+       and multi-chassis devices. The algorithm specified therein tends to
+       switch off banks which are not in use. The aim of this draft is to
+       use the device level characteristic in the form of a TCAM Power Ratio
+       and disseminate it as a metric within an area or an Autonomous system
+       (where multiple such areas exist within an AS) to compute power
+       saving paths through the set of routers where the TCAM-POWER-RATIO is
+       low. The TCAM-POWER-RATIO is arrived at by dividing the number of
+       bits in the TCAM banks that are switched off by the Total Available
+       TCAM bank space in bits. This ratio is then subjected to the SPF
+       algorithm as in a link state protocol like OSPF or IS-IS with
+       available utilization on the links also being a factor. This way
+       those routers that have more TCAM banks switched off are avoided and
+       those with higher power consumption but with available bandwidth are
+       used hence not increasing the total power consumed within the area
+       and hence within the AS.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-mjsraman-panet-tcam-power-ratio-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mjsraman-panet-tcam-power-ratio-00
     docidentifier:
     - content: draft-mjsraman-panet-tcam-power-ratio-00
       type: Internet-Draft
@@ -124,7 +135,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mjsraman-panet-tcam-power-ratio-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mjsraman-panet-tcam-power-ratio-02
     docidentifier:
     - content: draft-mjsraman-panet-tcam-power-ratio-02
       type: Internet-Draft
@@ -135,10 +148,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mjsraman-panet-tcam-power-ratio-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

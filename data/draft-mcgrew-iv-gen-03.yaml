@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Generation of Deterministic Initialization Vectors (IVs) and Nonces
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mcgrew-iv-gen-03
 docidentifier:
+- content: draft-mcgrew-iv-gen
+  type: Internet-Draft
 - content: draft-mcgrew-iv-gen-03
   type: Internet-Draft
   primary: true
-- content: I-D.mcgrew-iv-gen
-  type: IETF
-  scope: anchor
 docnumber: I-D.mcgrew-iv-gen
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 version:
 - content: '03'
 language:
@@ -53,21 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Many cryptographic algorithms use deterministic IVs, including CTR,
-    GCM, CCM, GMAC. This type of IV is also called a (deterministic) nonce. Deterministic
-    IVs must be distinct, for each fixed key, to guarantee the security of the algorithm.
-    This note describes best practices for the generation of such IVs, and summarizes
-    how they are generated and used in different protocols. Some problem areas are
-    highlighted, and test considerations are outlined. This note will be useful to
-    implementers of algorithms using deterministic IVs, and to protocol or system
-    designers using them.</p>"
-  format: text/html
+  content: |-
+    <p>Many cryptographic algorithms use deterministic IVs, including CTR,
+       GCM, CCM, GMAC.  This type of IV is also called a (deterministic)
+       nonce.  Deterministic IVs must be distinct, for each fixed key, to
+       guarantee the security of the algorithm.  This note describes best
+       practices for the generation of such IVs, and summarizes how they are
+       generated and used in different protocols.  Some problem areas are
+       highlighted, and test considerations are outlined.  This note will be
+       useful to implementers of algorithms using deterministic IVs, and to
+       protocol or system designers using them.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-mcgrew-iv-gen-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcgrew-iv-gen-02
     docidentifier:
     - content: draft-mcgrew-iv-gen-02
       type: Internet-Draft
@@ -78,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mcgrew-iv-gen-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

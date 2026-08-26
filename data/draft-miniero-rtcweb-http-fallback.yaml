@@ -1,11 +1,12 @@
 ---
 id: draftminierortcwebhttpfallback
 schema_version: v1.5.6
+formattedref:
+  content: draft-miniero-rtcweb-http-fallback
 title:
 - language: en
   script: Latn
   content: HTTP Fallback for RTP Media Streams
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-miniero-rtcweb-http-fallback-00
@@ -19,20 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Almost all VoIP endpoints, especially SIP and RTCWEB ones, make use
-    of RTP to tranport media frames in real-time and communicate with each other.
-    Since RTP uses UDP, the presence of network elements that filter UDP packets and/or
-    only allow some protocols like SMTP or HTTP to pass through would make such a
-    communication very hard to accomplish, if not impossible. This draft describes
-    a way to implement an HTTP Fallback for RTP media streams, that is, a way to effectively
-    encapsulate RTP packets in HTTP messages in order to traverse proxies and firewalls.</p>"
-  format: text/html
+  content: |-
+    <p>Almost all VoIP endpoints, especially SIP and RTCWEB ones, make use
+       of RTP to tranport media frames in real-time and communicate with
+       each other.  Since RTP uses UDP, the presence of network elements
+       that filter UDP packets and/or only allow some protocols like SMTP or
+       HTTP to pass through would make such a communication very hard to
+       accomplish, if not impossible.
+
+       This draft describes a way to implement an HTTP Fallback for RTP
+       media streams, that is, a way to effectively encapsulate RTP packets
+       in HTTP messages in order to traverse proxies and firewalls.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-miniero-rtcweb-http-fallback-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-miniero-rtcweb-http-fallback-00
     docidentifier:
     - content: draft-miniero-rtcweb-http-fallback-00
       type: Internet-Draft
@@ -41,4 +47,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

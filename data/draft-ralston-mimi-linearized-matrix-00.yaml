@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Linearized Matrix API
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ralston-mimi-linearized-matrix-00
 docidentifier:
+- content: draft-ralston-mimi-linearized-matrix
+  type: Internet-Draft
 - content: draft-ralston-mimi-linearized-matrix-00
   type: Internet-Draft
   primary: true
-- content: I-D.ralston-mimi-linearized-matrix
-  type: IETF
-  scope: anchor
 docnumber: I-D.ralston-mimi-linearized-matrix
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Travis
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: The Matrix.org Foundation C.I.C.
+        - language: en
+          content: The Matrix.org Foundation C.I.C.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matthew
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: The Matrix.org Foundation C.I.C.
+        - language: en
+          content: The Matrix.org Foundation C.I.C.
 version:
 - content: '00'
 language:
@@ -75,27 +79,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Matrix is an existing openly specified decentralized secure communications
-    protocol able to provide a framework for instant messaging interoperability. Matrix
-    rooms (aka conversations) currently use a Directed Acyclic Graph (DAG) for persisting
-    events/ messages. Servers broadcast their changes to the DAG to every other server
-    in order to create new events. This model provides excellent decentralization
-    characteristics and conversation history replication, but proves complex when
-    aiming to use Matrix strictly for interoperability between today's existing messaging
-    service providers, which often do not persist chat history serverside, and do
-    not seek to replicate it between servers. This document explores an API surface
-    for Matrix which optimizes for ease of interoperability at the expense of decentralized
-    conversation history at a per-room level. We call this API surface "Linearized
-    Matrix".</p>
-  format: text/html
+  content: |-
+    <p>Matrix is an existing openly specified decentralized secure
+       communications protocol able to provide a framework for instant
+       messaging interoperability.  Matrix rooms (aka conversations)
+       currently use a Directed Acyclic Graph (DAG) for persisting events/
+       messages.  Servers broadcast their changes to the DAG to every other
+       server in order to create new events.
+
+       This model provides excellent decentralization characteristics and
+       conversation history replication, but proves complex when aiming to
+       use Matrix strictly for interoperability between today's existing
+       messaging service providers, which often do not persist chat history
+       serverside, and do not seek to replicate it between servers.
+
+       This document explores an API surface for Matrix which optimizes for
+       ease of interoperability at the expense of decentralized conversation
+       history at a per-room level.  We call this API surface "Linearized
+       Matrix".</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ralston-mimi-linearized-matrix-03
-      format: text/plain
+      content: draft-ralston-mimi-linearized-matrix-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ralston-mimi-linearized-matrix-01
     docidentifier:
-    - content: draft-ralston-mimi-linearized-matrix-03
+    - content: draft-ralston-mimi-linearized-matrix-01
       type: Internet-Draft
       primary: true
 series:
@@ -104,10 +115,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ralston-mimi-linearized-matrix-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

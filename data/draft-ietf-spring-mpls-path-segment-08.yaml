@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Path Segment in MPLS Based Segment Routing Network
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-mpls-path-segment-08
 docidentifier:
+- content: draft-ietf-spring-mpls-path-segment
+  type: Internet-Draft
 - content: draft-ietf-spring-mpls-path-segment-08
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-spring-mpls-path-segment
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-spring-mpls-path-segment
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Weiqiang
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Han
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mach
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rakesh
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - language: en
+          content: Cisco Systems, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Royi
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -131,7 +143,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Broadcom
+        - language: en
+          content: Broadcom
 version:
 - content: '08'
 language:
@@ -141,38 +154,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A Segment Routing (SR) path is identified by an SR segment list. Only
-    the complete segment list can identify the end-to-end SR path, and a sub-set of
-    segments from the segment list cannot distinguish one SR path from another as
-    they may be partially congruent. SR path identification is a pre-requisite for
-    various use-cases such as Performance Measurement (PM), bidirectional paths correlation,
-    and end-to-end 1+1 path protection. In SR for MPLS data plane (SR-MPLS), the segment
-    identifiers are stripped from the packet through label popping as the packet transits
-    the network. This means that when a packet reaches the egress of the SR path,
-    it is not possible to determine on which SR path it traversed the network. This
-    document defines a new type of segment that is referred to as Path Segment, which
-    is used to identify an SR path in an SR-MPLS network. When used, it is inserted
-    by the ingress node of the SR path and immediately follows the last segment identifier
-    in the segment list of the SR path. The Path Segment is preserved until it reaches
-    the egress node for SR path identification and correlation.</p>"
-  format: text/html
+  content: |-
+    <p>A Segment Routing (SR) path is identified by an SR segment list.
+       Only the complete segment list can identify the end-to-end SR path,
+       and a sub-set of segments from the segment list cannot distinguish
+       one SR path from another as they may be partially congruent.  SR path
+       identification is a pre-requisite for various use-cases such as
+       Performance Measurement (PM), bidirectional paths correlation, and
+       end-to-end 1+1 path protection.
+
+       In SR for MPLS data plane (SR-MPLS), the segment identifiers are
+       stripped from the packet through label popping as the packet transits
+       the network.  This means that when a packet reaches the egress of the
+       SR path, it is not possible to determine on which SR path it
+       traversed the network.
+
+       This document defines a new type of segment that is referred to as
+       Path Segment, which is used to identify an SR path in an SR-MPLS
+       network.  When used, it is inserted by the ingress node of the SR
+       path and immediately follows the last segment identifier in the
+       segment list of the SR path.  The Path Segment is preserved until it
+       reaches the egress node for SR path identification and correlation.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-spring-mpls-path-segment-02
-      format: text/plain
+      content: draft-ietf-spring-mpls-path-segment-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-mpls-path-segment-07
     docidentifier:
-    - content: draft-ietf-spring-mpls-path-segment-02
+    - content: draft-ietf-spring-mpls-path-segment-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-spring-mpls-path-segment-11
-      format: text/plain
+      content: draft-ietf-spring-mpls-path-segment-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-mpls-path-segment-09
     docidentifier:
-    - content: draft-ietf-spring-mpls-path-segment-11
+    - content: draft-ietf-spring-mpls-path-segment-09
       type: Internet-Draft
       primary: true
 series:
@@ -181,10 +204,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-spring-mpls-path-segment-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

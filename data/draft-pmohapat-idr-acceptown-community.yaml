@@ -1,11 +1,12 @@
 ---
 id: draftpmohapatidracceptowncommunity
 schema_version: v1.5.6
+formattedref:
+  content: draft-pmohapat-idr-acceptown-community
 title:
 - language: en
   script: Latn
   content: BGP ACCEPT_OWN Well-known Community Attribute
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pmohapat-idr-acceptown-community-01
@@ -19,23 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>It may be useful for a BGP speaker in an autonomous system to receive
-    and accept its own advertised route from a route reflector with more fine-grained
-    route control. For example, the route reflector can change certain attributes
-    of a route as desired, and then re- advertise it back to the originator. Though
-    it is possible to perform such policy control directly at the originator, it may
-    be operationally cumbersome in a network with a large number of border routers
-    having complex BGP policies. This draft defines a new and well-known BGP community
-    value, ACCEPT_OWN, that signals a BGP speaker to accept an UPDATE message and
-    process the associated routes even when the ORIGINATOR_ID or the NEXT_HOP matches
-    that of the receiving speaker.</p>"
-  format: text/html
+  content: |-
+    <p>It may be useful for a BGP speaker in an autonomous system to receive
+       and accept its own advertised route from a route reflector with more
+       fine-grained route control. For example, the route reflector can
+       change certain attributes of a route as desired, and then re-
+       advertise it back to the originator. Though it is possible to perform
+       such policy control directly at the originator, it may be
+       operationally cumbersome in a network with a large number of border
+       routers having complex BGP policies.
+
+       This draft defines a new and well-known BGP community value,
+       ACCEPT_OWN, that signals a BGP speaker to accept an UPDATE message
+       and process the associated routes even when the ORIGINATOR_ID or the
+       NEXT_HOP matches that of the receiving speaker.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-pmohapat-idr-acceptown-community-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pmohapat-idr-acceptown-community-01
     docidentifier:
     - content: draft-pmohapat-idr-acceptown-community-01
       type: Internet-Draft
@@ -44,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftjiangmoqmultimodalfeedback
 schema_version: v1.5.6
+formattedref:
+  content: draft-jiang-moq-multimodal-feedback
 title:
 - language: en
   script: Latn
   content: MoQ Multimodal Feedback
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-jiang-moq-multimodal-feedback-00
@@ -19,22 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an extension to Media over QUIC Transport (MOQT)
-    that enables MoQ receivers to report delivery quality information for media Objects
-    to senders. The MoQ layer synthesizes MMF feedback and local congestion control
-    (CC) output to compute control decisions such as bitrate, frame rate, and pacing,
-    and inform the CC algorithm module via a cross-layer control interface. This mechanism
-    reuses the MOQT Track/Object data model without introducing new control message
-    types. While QUIC ACK and reception timestamp extensions continue to provide per-packet
-    CC signals; this mechanism adds per-Object media semantic feedback when the MMF
-    extension is negotiated and enabled.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines an extension to Media over QUIC Transport
+       (MOQT) that enables MoQ receivers to report delivery quality
+       information for media Objects to senders.  The MoQ layer synthesizes
+       MMF feedback and local congestion control (CC) output to compute
+       control decisions such as bitrate, frame rate, and pacing, and inform
+       the CC algorithm module via a cross-layer control interface.  This
+       mechanism reuses the MOQT Track/Object data model without introducing
+       new control message types.  While QUIC ACK and reception timestamp
+       extensions continue to provide per-packet CC signals; this mechanism
+       adds per-Object media semantic feedback when the MMF extension is
+       negotiated and enabled.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-jiang-moq-multimodal-feedback-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-jiang-moq-multimodal-feedback-00
     docidentifier:
     - content: draft-jiang-moq-multimodal-feedback-00
       type: Internet-Draft
@@ -43,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

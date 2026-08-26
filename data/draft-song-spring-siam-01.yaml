@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SRv6 In-situ Active Measurement
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-song-spring-siam-01
 docidentifier:
+- content: draft-song-spring-siam
+  type: Internet-Draft
 - content: draft-song-spring-siam-01
   type: Internet-Draft
   primary: true
-- content: I-D.song-spring-siam
-  type: IETF
-  scope: anchor
 docnumber: I-D.song-spring-siam
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Haoyu
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - language: en
+          content: Futurewei Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tian
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: BUPT
+        - language: en
+          content: BUPT
 version:
 - content: '01'
 language:
@@ -75,21 +79,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft describes a data-plane in-band active measurement method
-    for SRv6. A packet containing an SRH uses a flag bit to indicate it is a probing
-    packet. The IOAM header and data are encapsulated in UDP payload. The probing
-    packet originates from a segment source node and terminates at a configured segment
-    endpoint node. Each segment node on the path, when detecting the flag, parses
-    the UDP header and the IOAM header, and adds data to the IOAM node data fields.
-    The method avoids the performance and encapsulation issues for applying IOAM in
-    SRv6 networks. Multiple applications can be supported by the method.</p>"
-  format: text/html
+  content: |-
+    <p>This draft describes a data-plane in-band active measurement method
+       for SRv6.  A packet containing an SRH uses a flag bit to indicate it
+       is a probing packet.  The IOAM header and data are encapsulated in
+       UDP payload.  The probing packet originates from a segment source
+       node and terminates at a configured segment endpoint node.  Each
+       segment node on the path, when detecting the flag, parses the UDP
+       header and the IOAM header, and adds data to the IOAM node data
+       fields.  The method avoids the performance and encapsulation issues
+       for applying IOAM in SRv6 networks.  Multiple applications can be
+       supported by the method.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-song-spring-siam-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-song-spring-siam-00
     docidentifier:
     - content: draft-song-spring-siam-00
       type: Internet-Draft
@@ -97,10 +105,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-song-spring-siam-04
-      format: text/plain
+      content: draft-song-spring-siam-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-song-spring-siam-02
     docidentifier:
-    - content: draft-song-spring-siam-04
+    - content: draft-song-spring-siam-02
       type: Internet-Draft
       primary: true
 series:
@@ -109,10 +119,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-song-spring-siam-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

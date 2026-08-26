@@ -1,11 +1,12 @@
 ---
 id: draftcheshirerecursivepcp
 schema_version: v1.5.6
+formattedref:
+  content: draft-cheshire-recursive-pcp
 title:
 - language: en
   script: Latn
   content: Recursive PCP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-cheshire-recursive-pcp-02
@@ -19,22 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Port Control Protocol (PCP) allows clients to request explicit
-    dynamic inbound and outbound port mappings in their closest on-path NAT, firewall,
-    or other middlebox. However, in today's world, there may be more than one NAT
-    on the path between a client and the public Internet. This document describes
-    how the closest on-path middlebox generates a corresponding upstream PCP request
-    to the next closest on-path middlebox, to request an appropriate explicit dynamic
-    port mapping in that middlebox too. Applied recursively, this generates the necessary
-    chain of port mappings in any number of middleboxes on the path between the client
-    and the public Internet.</p>"
-  format: text/html
+  content: |-
+    <p>The Port Control Protocol (PCP) allows clients to request explicit
+       dynamic inbound and outbound port mappings in their closest on-path
+       NAT, firewall, or other middlebox.  However, in today's world, there
+       may be more than one NAT on the path between a client and the public
+       Internet.  This document describes how the closest on-path middlebox
+       generates a corresponding upstream PCP request to the next closest
+       on-path middlebox, to request an appropriate explicit dynamic port
+       mapping in that middlebox too.  Applied recursively, this generates
+       the necessary chain of port mappings in any number of middleboxes on
+       the path between the client and the public Internet.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-cheshire-recursive-pcp-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cheshire-recursive-pcp-00
     docidentifier:
     - content: draft-cheshire-recursive-pcp-00
       type: Internet-Draft
@@ -43,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-cheshire-recursive-pcp-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cheshire-recursive-pcp-01
     docidentifier:
     - content: draft-cheshire-recursive-pcp-01
       type: Internet-Draft
@@ -52,7 +58,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-cheshire-recursive-pcp-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cheshire-recursive-pcp-02
     docidentifier:
     - content: draft-cheshire-recursive-pcp-02
       type: Internet-Draft
@@ -61,4 +69,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

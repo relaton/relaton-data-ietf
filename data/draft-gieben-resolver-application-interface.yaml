@@ -1,11 +1,12 @@
 ---
 id: draftgiebenresolverapplicationinterface
 schema_version: v1.5.6
+formattedref:
+  content: draft-gieben-resolver-application-interface
 title:
 - language: en
   script: Latn
   content: DNSSEC Resolver Interface to Applications
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gieben-resolver-application-interface-00
@@ -19,26 +20,35 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an interface between a DNSSEC aware resolver
-    and an application. This interface will define which kind of information a DNSSEC
-    aware resolver is able to send back to an application. The basic question we want
-    to answer is: 'What does an application want to know from a secure aware resolver?'.
-    In Section 4 we define an error bit array. The secure aware resolver will set
-    specific bits in the array. With the added information in the error array, the
-    application can have extra control on what to do with bogus data. When something
-    goes wrong during the secure resolving process the application may also want to
-    know where in the DNS tree this happened. With a simple error array one can not
-    convey this information. A possibility might be to give the application the owner
-    name of the DNS node where the validation failed. This document is written in
-    the hope that it will lead to a discussion within the IETF on the resolver-application
-    interaction(s).</p>"
-  format: text/html
+  content: |-
+    <p>This document describes an interface between a DNSSEC aware resolver
+       and an application. This interface will define which kind of
+       information a DNSSEC aware resolver is able to send back to an
+       application. The basic question we want to answer is: 'What does an
+       application want to know from a secure aware resolver?'.
+
+       In Section 4 we define an error bit array. The secure aware resolver
+       will set specific bits in the array. With the added information in
+       the error array, the application can have extra control on what to do
+       with bogus data.
+
+       When something goes wrong during the secure resolving process the
+       application may also want to know where in the DNS tree this
+       happened. With a simple error array one can not convey this
+       information. A possibility might be to give the application the owner
+       name of the DNS node where the validation failed.
+
+       This document is written in the hope that it will lead to a
+       discussion within the IETF on the resolver-application
+       interaction(s).</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-gieben-resolver-application-interface-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gieben-resolver-application-interface-00
     docidentifier:
     - content: draft-gieben-resolver-application-interface-00
       type: Internet-Draft
@@ -47,4 +57,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

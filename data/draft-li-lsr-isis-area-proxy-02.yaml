@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Area Proxy for IS-IS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-lsr-isis-area-proxy-02
 docidentifier:
+- content: draft-li-lsr-isis-area-proxy
+  type: Internet-Draft
 - content: draft-li-lsr-isis-area-proxy-02
   type: Internet-Draft
   primary: true
-- content: I-D.li-lsr-isis-area-proxy
-  type: IETF
-  scope: anchor
 docnumber: I-D.li-lsr-isis-area-proxy
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tony
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sarah
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 version:
 - content: '02'
 language:
@@ -75,20 +79,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Link state routing protocols have hierarchical abstraction already
-    built into them. However, when lower levels are used for transit, they must expose
-    their internal topologies to each other, leading to scale issues. To avoid this,
-    this document discusses extensions to the IS-IS routing protocol that would allow
-    level 1 areas to provide transit, yet only inject an abstraction of the level
-    1 topology into level 2. Each level 1 area is represented as a single level 2
-    node, thereby enabling greater scale.</p>"
-  format: text/html
+  content: |-
+    <p>Link state routing protocols have hierarchical abstraction already
+       built into them.  However, when lower levels are used for transit,
+       they must expose their internal topologies to each other, leading to
+       scale issues.
+
+       To avoid this, this document discusses extensions to the IS-IS
+       routing protocol that would allow level 1 areas to provide transit,
+       yet only inject an abstraction of the level 1 topology into level 2.
+       Each level 1 area is represented as a single level 2 node, thereby
+       enabling greater scale.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-li-lsr-isis-area-proxy-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-lsr-isis-area-proxy-01
     docidentifier:
     - content: draft-li-lsr-isis-area-proxy-01
       type: Internet-Draft
@@ -96,10 +105,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-li-lsr-isis-area-proxy-04
-      format: text/plain
+      content: draft-li-lsr-isis-area-proxy-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-lsr-isis-area-proxy-03
     docidentifier:
-    - content: draft-li-lsr-isis-area-proxy-04
+    - content: draft-li-lsr-isis-area-proxy-03
       type: Internet-Draft
       primary: true
 series:
@@ -108,10 +119,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-li-lsr-isis-area-proxy-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

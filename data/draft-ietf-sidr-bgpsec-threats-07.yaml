@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Threat Model for BGP Path Security
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-bgpsec-threats-07
 docidentifier:
+- content: draft-ietf-sidr-bgpsec-threats
+  type: Internet-Draft
 - content: draft-ietf-sidr-bgpsec-threats-07
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-sidr-bgpsec-threats
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-sidr-bgpsec-threats
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Stephen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrew
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -67,33 +69,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a threat model for the context in which (E)BGP
-    path security mechanisms will be developed. The threat model includes an analysis
-    of the RPKI, and focuses on the ability of an AS to verify the authenticity of
-    the AS path info received in a BGP update. We use the term PATHSEC to refer to
-    any BGP path security technology that makes use of the RPKI. PATHSEC will secure
-    BGP [RFC4271], consistent with the inter-AS security focus of the RPKI [RFC6480].
-    The document characterizes classes of potential adversaries that are considered
-    to be threats, and examines classes of attacks that might be launched against
-    PATHSEC. It does not revisit attacks against unprotected BGP, as that topic has
-    already been addressed in [RFC4271]. It concludes with brief discussion of residual
-    vulnerabilities.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a threat model for the context in which
+       (E)BGP path security mechanisms will be developed.  The threat model
+       includes an analysis of the RPKI, and focuses on the ability of an AS
+       to verify the authenticity of the AS path info received in a BGP
+       update.  We use the term PATHSEC to refer to any BGP path security
+       technology that makes use of the RPKI.  PATHSEC will secure BGP
+       [RFC4271], consistent with the inter-AS security focus of the RPKI
+       [RFC6480].
+
+       The document characterizes classes of potential adversaries that are
+       considered to be threats, and examines classes of attacks that might
+       be launched against PATHSEC.  It does not revisit attacks against
+       unprotected BGP, as that topic has already been addressed in
+       [RFC4271].  It concludes with brief discussion of residual
+       vulnerabilities.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-sidr-bgpsec-threats-04
-      format: text/plain
+      content: draft-ietf-sidr-bgpsec-threats-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-bgpsec-threats-06
     docidentifier:
-    - content: draft-ietf-sidr-bgpsec-threats-04
+    - content: draft-ietf-sidr-bgpsec-threats-06
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-sidr-bgpsec-threats-08
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-bgpsec-threats-08
     docidentifier:
     - content: draft-ietf-sidr-bgpsec-threats-08
       type: Internet-Draft
@@ -104,10 +114,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-sidr-bgpsec-threats-07
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

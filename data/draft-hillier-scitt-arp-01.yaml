@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Attestation Reconciliation Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hillier-scitt-arp-01
 docidentifier:
+- content: draft-hillier-scitt-arp
+  type: Internet-Draft
 - content: draft-hillier-scitt-arp-01
   type: Internet-Draft
   primary: true
-- content: I-D.hillier-scitt-arp
-  type: IETF
-  scope: anchor
 docnumber: I-D.hillier-scitt-arp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Joel
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Certisyn, Inc.
+        - language: en
+          content: Certisyn, Inc.
 version:
 - content: '01'
 language:
@@ -53,35 +54,42 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the Attestation Reconciliation Protocol (ARP),
-    a deterministic, bilateral, zero-knowledge-capable mechanism for reconciling verification
-    claims against a plurality of sovereign authoritative registers without raw register
-    records leaving their data-residency jurisdiction. ARP extends the SCITT (Supply
-    Chain Integrity, Transparency, and Trust) architecture to cross-sovereign claim
-    reconciliation. A reconciliation server canonicalises a structured claim, binds
-    the identity of the requesting principal -- including, where the requester is
-    an autonomous agent, a friend-or- foe determination of that agent's verifiable
-    principal binding -- projects the claim through register-specific controlled projection
-    functions producing the greatest-lower-bound predicate supported by each addressed
-    register, transmits register-specific ciphertexts, receives partial attestations
-    whose payload discloses only a verdict and an optional divergence axis, aggregates
-    the partial attestations through either homomorphic or hash-linkage aggregation,
-    and seals the resulting reconciliation output against a policy-version hash. An
-    append-only cross-jurisdictional settlement-layer ledger records only hashes,
-    with no content. The protocol supports retroactive re- evaluation of historical
-    reconciliations under updated pattern libraries or policy versions without bilateral
-    renegotiation, and a cryptographic-primitive-upgrade path including post-quantum
-    primitives. This revision adds agentic-principal reconciliation, requester identity
-    binding, alignment with HTTP Message Signatures and COSE Receipts, and composition
-    of heterogeneous agent-action accountability attestations into a single producer-agnostic
-    reconciled verdict evaluated at decision time.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies the Attestation Reconciliation Protocol
+       (ARP), a deterministic, bilateral, zero-knowledge-capable mechanism
+       for reconciling verification claims against a plurality of sovereign
+       authoritative registers without raw register records leaving their
+       data-residency jurisdiction.  ARP extends the SCITT (Supply Chain
+       Integrity, Transparency, and Trust) architecture to cross-sovereign
+       claim reconciliation.  A reconciliation server canonicalises a
+       structured claim, binds the identity of the requesting principal --
+       including, where the requester is an autonomous agent, a friend-or-
+       foe determination of that agent's verifiable principal binding --
+       projects the claim through register-specific controlled projection
+       functions producing the greatest-lower-bound predicate supported by
+       each addressed register, transmits register-specific ciphertexts,
+       receives partial attestations whose payload discloses only a verdict
+       and an optional divergence axis, aggregates the partial attestations
+       through either homomorphic or hash-linkage aggregation, and seals the
+       resulting reconciliation output against a policy-version hash.  An
+       append-only cross-jurisdictional settlement-layer ledger records only
+       hashes, with no content.  The protocol supports retroactive re-
+       evaluation of historical reconciliations under updated pattern
+       libraries or policy versions without bilateral renegotiation, and a
+       cryptographic-primitive-upgrade path including post-quantum
+       primitives.  This revision adds agentic-principal reconciliation,
+       requester identity binding, alignment with HTTP Message Signatures
+       and COSE Receipts, and composition of heterogeneous agent-action
+       accountability attestations into a single producer-agnostic
+       reconciled verdict evaluated at decision time.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-hillier-scitt-arp-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hillier-scitt-arp-00
     docidentifier:
     - content: draft-hillier-scitt-arp-00
       type: Internet-Draft
@@ -90,7 +98,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hillier-scitt-arp-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hillier-scitt-arp-02
     docidentifier:
     - content: draft-hillier-scitt-arp-02
       type: Internet-Draft
@@ -101,10 +111,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hillier-scitt-arp-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

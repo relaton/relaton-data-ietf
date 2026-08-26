@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Bundle Transfer Protocol - Unidirectional
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-taylor-dtn-btpu-01
 docidentifier:
+- content: draft-taylor-dtn-btpu
+  type: Internet-Draft
 - content: draft-taylor-dtn-btpu-01
   type: Internet-Draft
   primary: true
-- content: I-D.taylor-dtn-btpu
-  type: IETF
-  scope: anchor
 docnumber: I-D.taylor-dtn-btpu
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rick
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aalyria Technologies
+        - language: en
+          content: Aalyria Technologies
 version:
 - content: '01'
 language:
@@ -53,23 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a protocol for the unidirectional transfer of
-    large binary objects, typically Bundle Protocol version 7 bundles, between two
-    nodes connected by a unidirectional, unreliable, frame- based link-layer protocol,
-    without requiring IP services. The protocol does not require a return path for
-    acknowledgements, but instead supports data repetition as a mechanism to protect
-    against data loss. It fully supports the disaggregation of flows of bundles of
-    different priority, preventing head-of-line blocking impacting performance. The
-    binary wire format of the protocol is designed to enable performant implementation
-    in hardware or software, with the aim of enabling protocol implementations to
-    run at the line-rate of the underlying link-layer protocol.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines a protocol for the unidirectional transfer of
+       large binary objects, typically Bundle Protocol version 7 bundles,
+       between two nodes connected by a unidirectional, unreliable, frame-
+       based link-layer protocol, without requiring IP services.
+
+       The protocol does not require a return path for acknowledgements, but
+       instead supports data repetition as a mechanism to protect against
+       data loss.  It fully supports the disaggregation of flows of bundles
+       of different priority, preventing head-of-line blocking impacting
+       performance.
+
+       The binary wire format of the protocol is designed to enable
+       performant implementation in hardware or software, with the aim of
+       enabling protocol implementations to run at the line-rate of the
+       underlying link-layer protocol.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-taylor-dtn-btpu-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-taylor-dtn-btpu-00
     docidentifier:
     - content: draft-taylor-dtn-btpu-00
       type: Internet-Draft
@@ -78,7 +86,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-taylor-dtn-btpu-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-taylor-dtn-btpu-02
     docidentifier:
     - content: draft-taylor-dtn-btpu-02
       type: Internet-Draft
@@ -89,10 +99,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-taylor-dtn-btpu-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

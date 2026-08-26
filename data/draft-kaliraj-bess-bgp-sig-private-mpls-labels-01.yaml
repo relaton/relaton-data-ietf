@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP signalled private MPLS-labels
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kaliraj-bess-bgp-sig-private-mpls-labels-01
 docidentifier:
+- content: draft-kaliraj-bess-bgp-sig-private-mpls-labels
+  type: Internet-Draft
 - content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-01
   type: Internet-Draft
   primary: true
-- content: I-D.kaliraj-bess-bgp-sig-private-mpls-labels
-  type: IETF
-  scope: anchor
 docnumber: I-D.kaliraj-bess-bgp-sig-private-mpls-labels
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeyananth
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,7 +71,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 version:
 - content: '01'
 language:
@@ -77,24 +82,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The MPLS-forwarding-layer in a core network is a shared resource. The
-    MPLS FIB at nodes in this layer contains labels that are dynamically allocated
-    and locally significant at that node. For some usecases like upstream-label-allocation,
-    it is useful to be able to create virtual private MPLS-forwarding-layers over
-    this shared MPLS-forwarding-layer. This allows installing deterministic private
-    label-values in the private-FIBs created at nodes participating in this private
-    MPLS forwarding-layer, while preserving the "locally significant" nature of the
-    underlying shared 'public' MPLS-forwarding-layer. This specification describes
-    the procedures to create such virtual private MPLS-forwarding layers (private
-    MPLS-planes) using a new BGP family. And gives a few example use-cases on how
-    this private forwarding-layers can be used.</p>
-  format: text/html
+  content: |-
+    <p>The MPLS-forwarding-layer in a core network is a shared resource.
+       The MPLS FIB at nodes in this layer contains labels that are
+       dynamically allocated and locally significant at that node.
+
+       For some usecases like upstream-label-allocation, it is useful to be
+       able to create virtual private MPLS-forwarding-layers over this
+       shared MPLS-forwarding-layer.  This allows installing deterministic
+       private label-values in the private-FIBs created at nodes
+       participating in this private MPLS forwarding-layer, while preserving
+       the "locally significant" nature of the underlying shared 'public'
+       MPLS-forwarding-layer.
+
+       This specification describes the procedures to create such virtual
+       private MPLS-forwarding layers (private MPLS-planes) using a new BGP
+       family.  And gives a few example use-cases on how this private
+       forwarding-layers can be used.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-bess-bgp-sig-private-mpls-labels-00
     docidentifier:
     - content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-00
       type: Internet-Draft
@@ -102,10 +114,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-09
-      format: text/plain
+      content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-bess-bgp-sig-private-mpls-labels-02
     docidentifier:
-    - content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-09
+    - content: draft-kaliraj-bess-bgp-sig-private-mpls-labels-02
       type: Internet-Draft
       primary: true
 series:
@@ -114,10 +128,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kaliraj-bess-bgp-sig-private-mpls-labels-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

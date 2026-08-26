@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Enhanced Usage of HTTP Digest Authentication for SIP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-undery-sip-auth-01
 docidentifier:
+- content: draft-undery-sip-auth
+  type: Internet-Draft
 - content: draft-undery-sip-auth-01
   type: Internet-Draft
   primary: true
-- content: I-D.undery-sip-auth
-  type: IETF
-  scope: anchor
 docnumber: I-D.undery-sip-auth
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: James
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ubiquity
+        - language: en
+          content: Ubiquity
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sanjoy
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nortel Networks
+        - language: en
+          content: Nortel Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Vesa
       - language: en
+        script: Latn
         initial: V
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 version:
 - content: '01'
 language:
@@ -98,28 +105,26 @@ abstract:
 - language: en
   script: Latn
   content: "<p>HTTP Digest has some shortcomings if applied for SIP. Firstly, SIP
-    UA has serious difficulties to distinguish the source of Authentication-Info and
-    Proxy-Authentication-Info headers in SIP forking situations. This is due to the
-    absence of the ‘realm’ parameter in these headers. Secondly, HTTP authentication
-    is particularly vulnerable against MITM bid-down attacks on the list of algorithms
-    (e.g., MD-5, SHA-1) or the desired security level (auth, auth-int). Thirdly, HTTP
-    authentication provides limited integrity protection of only the message body.
-    In SIP, important information can be carried in many of the headers that may need
-    integrity protection. This draft proposes to add the realm parameter in the *-
-    Authentication-Info headers, recommends a format for computing the nonce for detection
-    of bid-down attack and proposes a mechanism for integrity protection of SIP headers
-    using MIME body.</p>"
-  format: text/html
+    \nUA has serious difficulties to distinguish the source of \nAuthentication-Info
+    and Proxy-Authentication-Info headers in SIP \nforking situations. This is due
+    to the absence of the ‘realm’ \nparameter in these headers. Secondly, HTTP authentication
+    is \nparticularly vulnerable against MITM bid-down attacks on the list of \nalgorithms
+    (e.g., MD-5, SHA-1) or the desired security level (auth, \nauth-int). Thirdly,
+    HTTP authentication provides limited integrity \nprotection of only the message
+    body. In SIP, important information \ncan be carried in many of the headers that
+    may need integrity \nprotection. This draft proposes to add the realm parameter
+    in the *-\nAuthentication-Info headers, recommends a format for computing the
+    \nnonce for detection of bid-down attack and proposes a mechanism for \nintegrity
+    protection of SIP headers using MIME body.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-undery-sip-auth-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

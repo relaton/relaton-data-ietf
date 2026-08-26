@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Zero Trust Secure Layer (ZTSL) Protocol Specification with Opcode Framework
     and Application Binding Layer
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ztsl-secdispatch-protocol-00
 docidentifier:
+- content: draft-ztsl-secdispatch-protocol
+  type: Internet-Draft
 - content: draft-ztsl-secdispatch-protocol-00
   type: Internet-Draft
   primary: true
-- content: I-D.ztsl-secdispatch-protocol
-  type: IETF
-  scope: anchor
 docnumber: I-D.ztsl-secdispatch-protocol
 date:
 - type: published
@@ -29,10 +27,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: sripad
       - language: en
+        script: Latn
         initial: S
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -46,7 +47,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - language: en
+          content: Independent
 version:
 - content: '00'
 language:
@@ -56,33 +58,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the Zero Trust Secure Layer (ZTSL) protocol,
-    a transport-layer security framework that enforces Zero Trust principles at the
-    protocol level by embedding continuous identity verification, device trust validation,
-    policy-driven communication, and cryptographic session management into every protocol
-    message. ZTSL introduces the First Authentication Needed (FAN) mechanism, Zessions
-    (Zero Trust Sessions), the Device Trust Flag (DTF), the Client Security Routing
-    Profile (CSRP), the Triple Signature Model, the Trust Triangle, Adaptive Protocol
-    Negotiation, and Heartbeat Fingerprint (HBF) synchronization. This document also
-    specifies the ZTSL Opcode Framework, a structured, extensible opcode namespace
-    that encodes every protocol operation as a precisely identified, versioned, and
-    trust-contextualized instruction. Every FAN exchange, Zession state transition,
-    socket operation, signing step, routing decision, heartbeat synchronization, threat
-    event, and recovery action is assigned a unique opcode and transmitted as an opcode-bearing
-    ZTSL frame. The document further specifies the Application Binding Layer (ABL),
-    the transparent shim through which any application interacts with ZTSL via a familiar
-    socket-like API, completely insulated from the underlying trust machinery.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies the Zero Trust Secure Layer (ZTSL) protocol,
+       a transport-layer security framework that enforces Zero Trust
+       principles at the protocol level by embedding continuous identity
+       verification, device trust validation, policy-driven communication,
+       and cryptographic session management into every protocol message.
+
+       ZTSL introduces the First Authentication Needed (FAN) mechanism,
+       Zessions (Zero Trust Sessions), the Device Trust Flag (DTF), the
+       Client Security Routing Profile (CSRP), the Triple Signature Model,
+       the Trust Triangle, Adaptive Protocol Negotiation, and Heartbeat
+       Fingerprint (HBF) synchronization.
+
+       This document also specifies the ZTSL Opcode Framework, a structured,
+       extensible opcode namespace that encodes every protocol operation as
+       a precisely identified, versioned, and trust-contextualized
+       instruction.  Every FAN exchange, Zession state transition, socket
+       operation, signing step, routing decision, heartbeat synchronization,
+       threat event, and recovery action is assigned a unique opcode and
+       transmitted as an opcode-bearing ZTSL frame.
+
+       The document further specifies the Application Binding Layer (ABL),
+       the transparent shim through which any application interacts with
+       ZTSL via a familiar socket-like API, completely insulated from the
+       underlying trust machinery.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ztsl-secdispatch-protocol-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

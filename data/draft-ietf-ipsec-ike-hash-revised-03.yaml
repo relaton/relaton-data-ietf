@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Fixing IKE Phase 1 & 2 Authentication HASH
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsec-ike-hash-revised-03
 docidentifier:
+- content: draft-ietf-ipsec-ike-hash-revised
+  type: Internet-Draft
 - content: draft-ietf-ipsec-ike-hash-revised-03
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ipsec-ike-hash-revised
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ipsec-ike-hash-revised
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tero
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SSH Communications Security
+        - language: en
+          content: SSH Communications Security
 version:
 - content: '03'
 language:
@@ -53,26 +54,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines new method of calculating the authentication
-    HASH of the IKE [RFC-2409] protocol. It fixes known problems with the IKE. The
-    way the HASH is currently defined in the [RFC-2409] does not authen- ticate the
-    ISAKMP [RFC-2408] packet header, nor does it authenticate any extra ISAKMP payloads
-    inside phase 1 ISAKMP packets. This causes a secu- rity problem when using extra
-    ISAKMP payloads as already defined in the IKE and DOI [RFC-2407] (vendor ID payload,
-    INITIAL-CONTACT notification etc). There is also suggestion how to fix the Phase
-    2 authentication hashes so that they will also authenticate the ISAKMP packet
-    header.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines new method of calculating the authentication HASH
+    of the IKE [RFC-2409] protocol. It fixes known problems with the IKE.
+    The way the HASH is currently defined in the [RFC-2409] does not authen-
+    ticate the ISAKMP [RFC-2408] packet header, nor does it authenticate any
+    extra ISAKMP payloads inside phase 1 ISAKMP packets. This causes a secu-
+    rity problem when using extra ISAKMP payloads as already defined in the
+    IKE and DOI [RFC-2407] (vendor ID payload, INITIAL-CONTACT notification
+    etc).  There is also suggestion how to fix the Phase 2 authentication
+    hashes so that they will also authenticate the ISAKMP packet header.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ipsec-ike-hash-revised-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

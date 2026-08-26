@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Certificate Transparency
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-laurie-pki-sunlight-03
 docidentifier:
+- content: draft-laurie-pki-sunlight
+  type: Internet-Draft
 - content: draft-laurie-pki-sunlight-03
   type: Internet-Draft
   primary: true
-- content: I-D.laurie-pki-sunlight
-  type: IETF
-  scope: anchor
 docnumber: I-D.laurie-pki-sunlight
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ben
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Adam
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Emilia
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -85,40 +89,51 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The aim of Certificate Transparency is to have every public end- entity
-    and intermediate TLS certificate issued by a known Certificate Authority recorded
-    in one or more certificate logs. In order to detect mis-issuance of certificates,
-    all logs are publicly auditable. In particular, domain owners or their agents
-    will be able to monitor logs for certificates issued on their own domain. To protect
-    clients from unlogged mis-issued certificates, logs sign all recorded certificates,
-    and clients can choose not to trust certificates that are not accompanied by an
-    appropriate log signature. For privacy and performance reasons log signatures
-    are embedded in the TLS handshake via the TLS authorization extension [RFC5878],
-    in a stapled [RFC6066] OCSP extension [RFC2560], or in the certificate itself
-    via an X.509v3 certificate extension [RFC5280]. To ensure a globally consistent
-    view of the log, logs also provide a global signature over the entire log. Any
-    inconsistency of logs can be detected through cross-checks on the global signature.
-    Consistency between any pair of global signatures, corresponding to snapshots
-    of the log at different times, can be efficiently shown. Logs are only expected
-    to certify that they have seen a certificate, and thus we do not specify any revocation
-    mechanism for log signatures in this document. Logs are append-only, and log signatures
-    will be valid indefinitely.</p>"
-  format: text/html
+  content: |-
+    <p>The aim of Certificate Transparency is to have every public end-
+       entity and intermediate TLS certificate issued by a known Certificate
+       Authority recorded in one or more certificate logs.  In order to
+       detect mis-issuance of certificates, all logs are publicly auditable.
+       In particular, domain owners or their agents will be able to monitor
+       logs for certificates issued on their own domain.
+
+       To protect clients from unlogged mis-issued certificates, logs sign
+       all recorded certificates, and clients can choose not to trust
+       certificates that are not accompanied by an appropriate log
+       signature.  For privacy and performance reasons log signatures are
+       embedded in the TLS handshake via the TLS authorization extension
+       [RFC5878], in a stapled [RFC6066] OCSP extension [RFC2560], or in the
+       certificate itself via an X.509v3 certificate extension [RFC5280].
+
+       To ensure a globally consistent view of the log, logs also provide a
+       global signature over the entire log.  Any inconsistency of logs can
+       be detected through cross-checks on the global signature.
+       Consistency between any pair of global signatures, corresponding to
+       snapshots of the log at different times, can be efficiently shown.
+
+       Logs are only expected to certify that they have seen a certificate,
+       and thus we do not specify any revocation mechanism for log
+       signatures in this document.  Logs are append-only, and log
+       signatures will be valid indefinitely.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-laurie-pki-sunlight-00
-      format: text/plain
+      content: draft-laurie-pki-sunlight-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-laurie-pki-sunlight-02
     docidentifier:
-    - content: draft-laurie-pki-sunlight-00
+    - content: draft-laurie-pki-sunlight-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-laurie-pki-sunlight-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-laurie-pki-sunlight-04
     docidentifier:
     - content: draft-laurie-pki-sunlight-04
       type: Internet-Draft
@@ -129,10 +144,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-laurie-pki-sunlight-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

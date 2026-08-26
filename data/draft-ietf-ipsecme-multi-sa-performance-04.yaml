@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IKEv2 support for per-resource Child SAs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-multi-sa-performance-04
 docidentifier:
+- content: draft-ietf-ipsecme-multi-sa-performance
+  type: Internet-Draft
 - content: draft-ietf-ipsecme-multi-sa-performance-04
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ipsecme-multi-sa-performance
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ipsecme-multi-sa-performance
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Antony
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: secunet Security Networks AG
+        - language: en
+          content: secunet Security Networks AG
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tobias
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: codelabs GmbH
+        - language: en
+          content: codelabs GmbH
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steffen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: secunet Security Networks AG
+        - language: en
+          content: secunet Security Networks AG
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aiven
+        - language: en
+          content: Aiven
 version:
 - content: '04'
 language:
@@ -119,37 +129,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines two Notify Message Type Payloads for the Internet
-    Key Exchange Protocol Version 2 (IKEv2) to support the negotiation of multiple
-    Child SAs with the same Traffic Selectors used on different resources, such as
-    CPUs, to increase bandwidth of IPsec traffic between peers. The SA_RESOURCE_INFO
-    notification is used to convey information that the negotiated Child SA and subsequent
-    new Child SAs with the same Traffic Selectors are a logical group of Child SAs
-    where most or all of the Child SAs are bound to a specific resource, such as a
-    specific CPU. The TS_MAX_QUEUE notify conveys that the peer is unwilling to create
-    more additional Child SAs for this particular negotiated Traffic Selector combination.
-    Using multiple Child SAs with the same Traffic Selectors has the benefit that
-    each resource holding the Child SA has its own Sequence Number Counter, ensuring
-    that CPUs don't have to synchronize their crypto state or disable their packet
-    replay protection.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines two Notify Message Type Payloads for the
+       Internet Key Exchange Protocol Version 2 (IKEv2) to support the
+       negotiation of multiple Child SAs with the same Traffic Selectors
+       used on different resources, such as CPUs, to increase bandwidth of
+       IPsec traffic between peers.
+
+       The SA_RESOURCE_INFO notification is used to convey information that
+       the negotiated Child SA and subsequent new Child SAs with the same
+       Traffic Selectors are a logical group of Child SAs where most or all
+       of the Child SAs are bound to a specific resource, such as a specific
+       CPU.  The TS_MAX_QUEUE notify conveys that the peer is unwilling to
+       create more additional Child SAs for this particular negotiated
+       Traffic Selector combination.
+
+       Using multiple Child SAs with the same Traffic Selectors has the
+       benefit that each resource holding the Child SA has its own Sequence
+       Number Counter, ensuring that CPUs don't have to synchronize their
+       crypto state or disable their packet replay protection.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-ipsecme-multi-sa-performance-01
-      format: text/plain
+      content: draft-ietf-ipsecme-multi-sa-performance-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-multi-sa-performance-03
     docidentifier:
-    - content: draft-ietf-ipsecme-multi-sa-performance-01
+    - content: draft-ietf-ipsecme-multi-sa-performance-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-ipsecme-multi-sa-performance-06
-      format: text/plain
+      content: draft-ietf-ipsecme-multi-sa-performance-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-multi-sa-performance-05
     docidentifier:
-    - content: draft-ietf-ipsecme-multi-sa-performance-06
+    - content: draft-ietf-ipsecme-multi-sa-performance-05
       type: Internet-Draft
       primary: true
 series:
@@ -158,10 +177,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ipsecme-multi-sa-performance-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

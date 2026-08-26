@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Using QUIC to traverse NATs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-nat-traversal-02
 docidentifier:
+- content: draft-seemann-quic-nat-traversal
+  type: Internet-Draft
 - content: draft-seemann-quic-nat-traversal-02
   type: Internet-Draft
   primary: true
-- content: I-D.seemann-quic-nat-traversal
-  type: IETF
-  scope: anchor
 docnumber: I-D.seemann-quic-nat-traversal
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marten
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Eric
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -61,7 +63,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Apple Inc.
+        - language: en
+          content: Apple Inc.
 version:
 - content: '02'
 language:
@@ -71,22 +74,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC is well-suited to various NAT traversal techniques. As it operates
-    over UDP, and because the QUIC header was designed to be demultipexed from other
-    protocols, STUN can be used on the same UDP socket, enabling ICE to be used with
-    QUIC. Furthermore, QUIC’s path validation mechanism can be used to test the viability
-    of an address candidate pair while at the same time creating the NAT bindings
-    required for a direction connection, after which QUIC connection migration can
-    be used to migrate the connection to a direct path.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC is well-suited to various NAT traversal techniques.  As it
+       operates over UDP, and because the QUIC header was designed to be
+       demultipexed from other protocols, STUN can be used on the same UDP
+       socket, enabling ICE to be used with QUIC.  Furthermore, QUIC’s path
+       validation mechanism can be used to test the viability of an address
+       candidate pair while at the same time creating the NAT bindings
+       required for a direction connection, after which QUIC connection
+       migration can be used to migrate the connection to a direct path.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-seemann-quic-nat-traversal-00
-      format: text/plain
+      content: draft-seemann-quic-nat-traversal-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-nat-traversal-01
     docidentifier:
-    - content: draft-seemann-quic-nat-traversal-00
+    - content: draft-seemann-quic-nat-traversal-01
       type: Internet-Draft
       primary: true
 series:
@@ -95,10 +101,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-seemann-quic-nat-traversal-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

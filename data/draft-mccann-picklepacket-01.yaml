@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Authenticated Middlebox Traversal with the Pickle Packet
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mccann-picklepacket-01
 docidentifier:
+- content: draft-mccann-picklepacket
+  type: Internet-Draft
 - content: draft-mccann-picklepacket-01
   type: Internet-Draft
   primary: true
-- content: I-D.mccann-picklepacket
-  type: IETF
-  scope: anchor
 docnumber: I-D.mccann-picklepacket
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Pete
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steve
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -61,7 +63,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Motorola, Inc.
+        - language: en
+          content: Motorola, Inc.
 version:
 - content: '01'
 language:
@@ -71,26 +74,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the Pickle Packet, a message that can be used
-    to coordinate the opening of a transport connection with various middleboxes that
-    may lie on the path. It contains the DNS names of both the initiator and the responder
-    of the connection and some authentication data. Because the authentication data
-    uses public key cryptography, any middlebox can independently authenticate the
-    initiator and make a policy decision whether to allow or deny the flow based on
-    the DNS names. The Pickle Packet allows for middleboxes to establish state such
-    as firewall pinholes or security associations that can be used to filter out unwanted
-    traffic.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the Pickle Packet, a message that can be used
+    to coordinate the opening of a transport connection with various
+    middleboxes that may lie on the path.  It contains the DNS names of
+    both the initiator and the responder of the connection and some
+    authentication data.  Because the authentication data uses public key
+    cryptography, any middlebox can independently authenticate the
+    initiator and make a policy decision whether to allow or deny the
+    flow based on the DNS names.  The Pickle Packet allows for
+    middleboxes to establish state such as firewall pinholes or security
+    associations that can be used to filter out unwanted traffic.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mccann-picklepacket-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

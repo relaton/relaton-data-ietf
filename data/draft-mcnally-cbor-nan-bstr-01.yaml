@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: A CBOR Tag for Lossless Transport of IEEE-754 NaN Bit Patterns
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mcnally-cbor-nan-bstr-01
 docidentifier:
+- content: draft-mcnally-cbor-nan-bstr
+  type: Internet-Draft
 - content: draft-mcnally-cbor-nan-bstr-01
   type: Internet-Draft
   primary: true
-- content: I-D.mcnally-cbor-nan-bstr
-  type: IETF
-  scope: anchor
 docnumber: I-D.mcnally-cbor-nan-bstr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wolf
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Blockchain Commons
+        - language: en
+          content: Blockchain Commons
 version:
 - content: '01'
 language:
@@ -53,23 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>IEEE-754 NaN formations are not numbers and have no equivalence class.
-    They are not comparable to anything, including reflexively, and therefore each
-    attribute - sign bit, signaling/quiet bit, payload bits, and representation width
-    (binary16, binary32, binary64, binary128) - can carry meaning for an implementation.
-    CBOR permits encoding NaNs as floating-point values, but generic processing, preferred
-    serialization, and deterministic profiles may canonicalize or otherwise alter
-    NaN encodings, losing information. This document defines a CBOR tag, colloquially
-    "nan-bstr", whose content is a byte string carrying the exact IEEE-754 NaN bit
-    pattern so that all attributes are preserved across encode/decode, enabling use
-    cases like NaN boxing, platform-specific error signaling, diagnostics, and forensics.</p>
-  format: text/html
+  content: |-
+    <p>IEEE-754 NaN formations are not numbers and have no equivalence
+       class.  They are not comparable to anything, including reflexively,
+       and therefore each attribute - sign bit, signaling/quiet bit, payload
+       bits, and representation width (binary16, binary32, binary64,
+       binary128) - can carry meaning for an implementation.  CBOR permits
+       encoding NaNs as floating-point values, but generic processing,
+       preferred serialization, and deterministic profiles may canonicalize
+       or otherwise alter NaN encodings, losing information.  This document
+       defines a CBOR tag, colloquially "nan-bstr", whose content is a byte
+       string carrying the exact IEEE-754 NaN bit pattern so that all
+       attributes are preserved across encode/decode, enabling use cases
+       like NaN boxing, platform-specific error signaling, diagnostics, and
+       forensics.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-mcnally-cbor-nan-bstr-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcnally-cbor-nan-bstr-00
     docidentifier:
     - content: draft-mcnally-cbor-nan-bstr-00
       type: Internet-Draft
@@ -80,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mcnally-cbor-nan-bstr-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftferrodnsopapertoid
 schema_version: v1.5.6
+formattedref:
+  content: draft-ferro-dnsop-apertoid
 title:
 - language: en
   script: Latn
   content: 'ApertoID: DNS-Based Agent Identity Declaration Protocol'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ferro-dnsop-apertoid-02
@@ -19,24 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document defines ApertoID, a DNS-based protocol that enables domain
-    owners to declare authorized AI agents acting on their behalf, publish cryptographic
-    keys for agent identity verification, and specify enforcement policies for unauthorized
-    agents. ApertoID uses existing DNS TXT records under the "_apertoid" underscore-scoped
-    domain name to provide a decentralized, standards-based mechanism for AI agent
-    identity declaration and verification. ApertoID defines two record types: a Policy
-    Record analogous to DMARC that specifies domain-level enforcement behavior, and
-    Agent Declaration Records analogous to DKIM key records that bind agent endpoints
-    to Ed25519 public keys with mandatory expiration. A companion document [APERTOID-SIG]
-    defines the HTTP request signing mechanism that enables agents to cryptographically
-    prove their identity on each request.</p>'
-  format: text/html
+  content: |-
+    <p>This document defines ApertoID, a DNS-based protocol that enables
+       domain owners to declare authorized AI agents acting on their behalf,
+       publish cryptographic keys for agent identity verification, and
+       specify enforcement policies for unauthorized agents.  ApertoID uses
+       existing DNS TXT records under the "_apertoid" underscore-scoped
+       domain name to provide a decentralized, standards-based mechanism for
+       AI agent identity declaration and verification.
+
+       ApertoID defines two record types: a Policy Record analogous to DMARC
+       that specifies domain-level enforcement behavior, and Agent
+       Declaration Records analogous to DKIM key records that bind agent
+       endpoints to Ed25519 public keys with mandatory expiration.  A
+       companion document [APERTOID-SIG] defines the HTTP request signing
+       mechanism that enables agents to cryptographically prove their
+       identity on each request.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ferro-dnsop-apertoid-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-dnsop-apertoid-00
     docidentifier:
     - content: draft-ferro-dnsop-apertoid-00
       type: Internet-Draft
@@ -45,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ferro-dnsop-apertoid-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-dnsop-apertoid-01
     docidentifier:
     - content: draft-ferro-dnsop-apertoid-01
       type: Internet-Draft
@@ -54,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ferro-dnsop-apertoid-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-dnsop-apertoid-02
     docidentifier:
     - content: draft-ferro-dnsop-apertoid-02
       type: Internet-Draft
@@ -63,4 +74,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

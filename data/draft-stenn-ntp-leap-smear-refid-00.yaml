@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Network Time Protocol Leap Smear REFID
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-leap-smear-refid-00
 docidentifier:
+- content: draft-stenn-ntp-leap-smear-refid
+  type: Internet-Draft
 - content: draft-stenn-ntp-leap-smear-refid-00
   type: Internet-Draft
   primary: true
-- content: I-D.stenn-ntp-leap-smear-refid
-  type: IETF
-  scope: anchor
 docnumber: I-D.stenn-ntp-leap-smear-refid
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Harlan
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -49,30 +49,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>RFC 5905 [RFC5905] and earlier versions of NTP are the overwhelming
-    method of distributing time on networks. Leap Seconds will continue to exist for
-    a good number of years' time, and since the timescale mandated by POSIX effectively
-    ignores any instances where there are not 86,400 seconds' time in a day, something
-    must be done to reliably synchronize clocks during the application of leap second
-    corrections. One mechanism for dealing with the application that has recently
-    become visible is to apply the leap second using a "smear", where the time reported
-    by leap-second aware servers is gradually adjusted so there is no major disruption
-    to time synchronization when processing a leap second. While leap second processing
-    can be expected to be properly handled by up-to-date software and by time servers,
-    there are large numbers of out-of-date software installations and client systems
-    that are just not able to properly handle a leap second correction. This proposal
-    offers a way for a system to generate a REFID that indicates that the time being
-    supplied in the NTP packet already contains an amount of leap smear correction,
-    and what that amount is.</p>
-  format: text/html
+  content: |-
+    <p>RFC 5905 [RFC5905] and earlier versions of NTP are the overwhelming
+       method of distributing time on networks.  Leap Seconds will continue
+       to exist for a good number of years' time, and since the timescale
+       mandated by POSIX effectively ignores any instances where there are
+       not 86,400 seconds' time in a day, something must be done to reliably
+       synchronize clocks during the application of leap second corrections.
+       One mechanism for dealing with the application that has recently
+       become visible is to apply the leap second using a "smear", where the
+       time reported by leap-second aware servers is gradually adjusted so
+       there is no major disruption to time synchronization when processing
+       a leap second.
+
+       While leap second processing can be expected to be properly handled
+       by up-to-date software and by time servers, there are large numbers
+       of out-of-date software installations and client systems that are
+       just not able to properly handle a leap second correction.
+
+       This proposal offers a way for a system to generate a REFID that
+       indicates that the time being supplied in the NTP packet already
+       contains an amount of leap smear correction, and what that amount is.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-stenn-ntp-leap-smear-refid-02
-      format: text/plain
+      content: draft-stenn-ntp-leap-smear-refid-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-stenn-ntp-leap-smear-refid-01
     docidentifier:
-    - content: draft-stenn-ntp-leap-smear-refid-02
+    - content: draft-stenn-ntp-leap-smear-refid-01
       type: Internet-Draft
       primary: true
 series:
@@ -81,10 +88,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-stenn-ntp-leap-smear-refid-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

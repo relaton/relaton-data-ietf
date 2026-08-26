@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Extended DNS Errors
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wkumari-dnsop-extended-error-00
 docidentifier:
+- content: draft-wkumari-dnsop-extended-error
+  type: Internet-Draft
 - content: draft-wkumari-dnsop-extended-error-00
   type: Internet-Draft
   primary: true
-- content: I-D.wkumari-dnsop-extended-error
-  type: IETF
-  scope: anchor
 docnumber: I-D.wkumari-dnsop-extended-error
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Warren
       - language: en
+        script: Latn
         initial: W
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -48,8 +49,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Evan
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -66,8 +69,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Roy
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -84,8 +89,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wes
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -105,31 +112,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document defines an extensible method to return additional information
-    about the cause of DNS errors. The primary use case is to extend SERVFAIL to provide
-    additional information about the cause of DNS and DNSSEC failures. [ Note: I always
-    have a hard time with EDNS terminology - I''m saying that Extended DNS Errors
-    are carried as EDNS Options, but is this correct? They are optional TLVs in "options"
-    in RDATA in OPTion RR, but that''s not readable. ] [ Open question: The document
-    currently defines a registry for errors. It has also been suggested that the option
-    also carry human readable (text) messages, so allow the server admin to provide
-    additional debugging information (e.g: "example.com pointed their NS at us. No
-    idea why...", "We don''t provide recursive DNS to 192.0.2.0. Please stop asking...",
-    "Have you tried Acme Anvil and DNS? We do DNS right..." (!). Please let us know
-    if you think text is needed, or if a 16bit FCFS registry is expressive enough.
-    ] [ Open question: This document discusses extended *errors*, but it has been
-    suggested that this could be used to also annotate *non- error* messages. The
-    authors do not think that this is a good idea, but could be persuaded otherwise.
-    ]</p>'
-  format: text/html
+  content: |-
+    <p>This document defines an extensible method to return additional
+       information about the cause of DNS errors.  The primary use case is
+       to extend SERVFAIL to provide additional information about the cause
+       of DNS and DNSSEC failures.
+
+       [ Note: I always have a hard time with EDNS terminology - I'm saying
+       that Extended DNS Errors are carried as EDNS Options, but is this
+       correct?  They are optional TLVs in "options" in RDATA in OPTion RR ,
+       but that's not readable. ]
+
+       [ Open question: The document currently defines a registry for
+       errors.  It has also been suggested that the option also carry human
+       readable (text) messages, so allow the server admin to provide
+       additional debugging information (e.g: "example.com pointed their NS
+       at us.  No idea why...", "We don't provide recursive DNS to
+       192.0.2.0.  Please stop asking...", "Have you tried Acme Anvil and
+       DNS?  We do DNS right..." (!).  Please let us know if you think text
+       is needed, or if a 16bit FCFS registry is expressive enough. ]
+
+       [ Open question: This document discusses extended *errors*, but it
+       has been suggested that this could be used to also annotate *non-
+       error* messages.  The authors do not think that this is a good idea,
+       but could be persuaded otherwise. ]</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-wkumari-dnsop-extended-error-02
-      format: text/plain
+      content: draft-wkumari-dnsop-extended-error-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wkumari-dnsop-extended-error-01
     docidentifier:
-    - content: draft-wkumari-dnsop-extended-error-02
+    - content: draft-wkumari-dnsop-extended-error-01
       type: Internet-Draft
       primary: true
 series:
@@ -138,10 +154,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wkumari-dnsop-extended-error-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

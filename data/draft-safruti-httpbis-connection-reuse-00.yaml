@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Connection Reuse for Multiple Hostnames and for Fast Redirect
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-safruti-httpbis-connection-reuse-00
 docidentifier:
+- content: draft-safruti-httpbis-connection-reuse
+  type: Internet-Draft
 - content: draft-safruti-httpbis-connection-reuse-00
   type: Internet-Draft
   primary: true
-- content: I-D.safruti-httpbis-connection-reuse
-  type: IETF
-  scope: anchor
 docnumber: I-D.safruti-httpbis-connection-reuse
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ido
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -49,24 +49,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a suggested enhancement to HTTP, in which a
-    user-agent and a server can use a single connection to exchange requests/responses
-    for multiple requested hostnames for which the server is authorized to serve.
-    This enhancement suggests that user- agents will prefer to re-use an existing
-    connection if it can be used to other hosts, and presents methods for a server
-    to announce hosts that are served by it, as well as a mechanism for the user-agent
-    to validate that the server is indeed trusted to serve this hosts. This is highly
-    relevant when the server is actually a surrogate (like in a case of a CDN server),
-    or in multi-hosts hosting environments, where the same server serves multiple
-    hostnames/domains and can improve performance by the reuse of established and
-    already optimized connections.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a suggested enhancement to HTTP, in which a
+       user-agent and a server can use a single connection to exchange
+       requests/responses for multiple requested hostnames for which the
+       server is authorized to serve.  This enhancement suggests that user-
+       agents will prefer to re-use an existing connection if it can be used
+       to other hosts, and presents methods for a server to announce hosts
+       that are served by it, as well as a mechanism for the user-agent to
+       validate that the server is indeed trusted to serve this hosts.
+
+       This is highly relevant when the server is actually a surrogate (like
+       in a case of a CDN server), or in multi-hosts hosting environments,
+       where the same server serves multiple hostnames/domains and can
+       improve performance by the reuse of established and already optimized
+       connections.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-safruti-httpbis-connection-reuse-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-safruti-httpbis-connection-reuse-01
     docidentifier:
     - content: draft-safruti-httpbis-connection-reuse-01
       type: Internet-Draft
@@ -77,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-safruti-httpbis-connection-reuse-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

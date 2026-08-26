@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: HTTP Datagrams and the Capsule Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-h3-datagram-08
 docidentifier:
+- content: draft-ietf-masque-h3-datagram
+  type: Internet-Draft
 - content: draft-ietf-masque-h3-datagram-08
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-masque-h3-datagram
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-masque-h3-datagram
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - language: en
+          content: Google LLC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lucas
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - language: en
+          content: Cloudflare
 version:
 - content: '08'
 language:
@@ -75,28 +79,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes HTTP Datagrams, a convention for conveying
-    multiplexed, potentially unreliable datagrams inside an HTTP connection. In HTTP/3,
-    HTTP Datagrams can be conveyed natively using the QUIC DATAGRAM extension. When
-    the QUIC DATAGRAM frame is unavailable or undesirable, they can be sent using
-    the Capsule Protocol, a more general convention for conveying data in HTTP connections.
-    Both are intended for use by HTTP extensions, not applications.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes HTTP Datagrams, a convention for conveying
+       multiplexed, potentially unreliable datagrams inside an HTTP
+       connection.
+
+       In HTTP/3, HTTP Datagrams can be conveyed natively using the QUIC
+       DATAGRAM extension.  When the QUIC DATAGRAM frame is unavailable or
+       undesirable, they can be sent using the Capsule Protocol, a more
+       general convention for conveying data in HTTP connections.
+
+       Both are intended for use by HTTP extensions, not applications.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-masque-h3-datagram-01
-      format: text/plain
+      content: draft-ietf-masque-h3-datagram-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-h3-datagram-07
     docidentifier:
-    - content: draft-ietf-masque-h3-datagram-01
+    - content: draft-ietf-masque-h3-datagram-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-masque-h3-datagram-09
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-h3-datagram-09
     docidentifier:
     - content: draft-ietf-masque-h3-datagram-09
       type: Internet-Draft
@@ -107,10 +119,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-masque-h3-datagram-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

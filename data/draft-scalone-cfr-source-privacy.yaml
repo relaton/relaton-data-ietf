@@ -1,12 +1,13 @@
 ---
 id: draftscalonecfrsourceprivacy
 schema_version: v1.5.6
+formattedref:
+  content: draft-scalone-cfr-source-privacy
 title:
 - language: en
   script: Latn
   content: 'Customer-Facing Relay (CFR): Enhancing Source Privacy in Encrypted Transport
     and CDN Scenarios'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-scalone-cfr-source-privacy-01
@@ -20,22 +21,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Encrypted Client Hello (ECH) improves destination privacy by encrypting
-    the Server Name Indication in TLS, but the customer source identity-- typically
-    the IP address and network metadata--remains observable to intermediaries such
-    as CDNs, hosting providers, and recursive resolvers. This document introduces
-    the _Customer-Facing Relay (CFR)_, a lightweight, transport-agnostic relay operated
-    by access providers to decouple customer identity from encrypted destinations.
-    By forwarding opaque encrypted payloads (TCP or UDP) without terminating TLS or
-    QUIC, a CFR complements ECH encryption to strengthen source privacy and reduce
-    metadata correlation.</p>"
-  format: text/html
+  content: |-
+    <p>Encrypted Client Hello (ECH) improves destination privacy by
+       encrypting the Server Name Indication in TLS, but the customer source
+       identity-- typically the IP address and network metadata--remains
+       observable to intermediaries such as CDNs, hosting providers, and
+       recursive resolvers.  This document introduces the _Customer-Facing
+       Relay (CFR)_, a lightweight, transport-agnostic relay operated by
+       access providers to decouple customer identity from encrypted
+       destinations.
+       By forwarding opaque encrypted payloads (TCP or UDP) without
+       terminating TLS or QUIC, a CFR complements ECH encryption to
+       strengthen source privacy and reduce metadata correlation.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-scalone-cfr-source-privacy-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-scalone-cfr-source-privacy-00
     docidentifier:
     - content: draft-scalone-cfr-source-privacy-00
       type: Internet-Draft
@@ -44,7 +49,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-scalone-cfr-source-privacy-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-scalone-cfr-source-privacy-01
     docidentifier:
     - content: draft-scalone-cfr-source-privacy-01
       type: Internet-Draft
@@ -53,4 +60,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

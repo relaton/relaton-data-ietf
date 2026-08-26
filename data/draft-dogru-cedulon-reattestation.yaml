@@ -1,0 +1,54 @@
+---
+id: draftdogrucedulonreattestation
+schema_version: v1.5.6
+formattedref:
+  content: draft-dogru-cedulon-reattestation
+title:
+- language: en
+  script: Latn
+  content: 'Cedulon Re-Attestation: Carrying Spend Evidence Across Algorithm Retirement'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-reattestation-00
+docidentifier:
+- content: draft-dogru-cedulon-reattestation
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-25'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Audit evidence is only useful for as long as it can be verified.
+       Cedulon produces COSE spend receipts and epoch checkpoints whose
+       signature algorithms will eventually be deprecated or broken; the
+       recent transition from polymorphic EdDSA to fully-specified Ed25519
+       algorithm identifiers shows that even identifiers change within a
+       decade.  This document proposes a re-attestation profile for Cedulon
+       evidence: a signed statement, produced while the original algorithm
+       is still trustworthy, that binds the original evidence bytes to a
+       successor algorithm and is registered in a SCITT transparency
+       service.  Chains of such statements allow a verifier decades later to
+       trust evidence whose original cipher has been retired.  Structures
+       are meant to outlive ciphers.  This is an extension proposal to the
+       Cedulon core document; its normative language is provisional and the
+       companion implementation does not implement it yet.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dogru-cedulon-reattestation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-reattestation-00
+    docidentifier:
+    - content: draft-dogru-cedulon-reattestation-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

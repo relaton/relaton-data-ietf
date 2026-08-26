@@ -1,11 +1,12 @@
 ---
 id: draftwchuangmsmd
 schema_version: v1.5.6
+formattedref:
+  content: draft-wchuang-msmd
 title:
 - language: en
   script: Latn
   content: 'MSMD: Mandatory Secure Mail Delivery'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wchuang-msmd-00
@@ -19,23 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>Opportunistic SMTP TLS does not enforce electronic mail delivery using
-    TLS leading to potential loss of privacy and security. We propose an optional
-    mail header extension "mandatory-secure-mail- delivery:" and SMTP EHLO response
-    extension "MSMD" that indicates mail must be delivered privately using TLS and
-    with integrity using DKIM, and thereby provide a security guarantee to the user.
-    When mail is sent with the header indicating privacy and integrity and if the
-    receiving party does not support this, the mail is instead bounced. To protect
-    the mail after delivery, the destination SMTP server must advertise its capabilities
-    as part of the EHLO response, and the sender can choose whether the destination
-    is able to honor the privacy requirements specified on the mail header.</p>
-  format: text/html
+  content: |-
+    <p>Opportunistic SMTP TLS does not enforce electronic mail delivery
+       using TLS leading to potential loss of privacy and security.  We
+       propose an optional mail header extension "mandatory-secure-mail-
+       delivery:" and SMTP EHLO response extension "MSMD" that indicates
+       mail must be delivered privately using TLS and with integrity using
+       DKIM, and thereby provide a security guarantee to the user.  When
+       mail is sent with the header indicating privacy and integrity and if
+       the receiving party does not support this, the mail is instead
+       bounced.  To protect the mail after delivery, the destination SMTP
+       server must advertise its capabilities as part of the EHLO response,
+       and the sender can choose whether the destination is able to honor
+       the privacy requirements specified on the mail header.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-wchuang-msmd-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wchuang-msmd-00
     docidentifier:
     - content: draft-wchuang-msmd-00
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

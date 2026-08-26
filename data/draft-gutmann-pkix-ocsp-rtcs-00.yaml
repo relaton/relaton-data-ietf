@@ -7,17 +7,15 @@ title:
   script: Latn
   content: X.509 Internet Public Key Infrastructure Real-time Certificate Status Facility
     for OCSP - (RTCS)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gutmann-pkix-ocsp-rtcs-00
 docidentifier:
+- content: draft-gutmann-pkix-ocsp-rtcs
+  type: Internet-Draft
 - content: draft-gutmann-pkix-ocsp-rtcs-00
   type: Internet-Draft
   primary: true
-- content: I-D.gutmann-pkix-ocsp-rtcs
-  type: IETF
-  scope: anchor
 docnumber: I-D.gutmann-pkix-ocsp-rtcs
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Peter
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Auckland
+        - language: en
+          content: University of Auckland
 version:
 - content: '00'
 language:
@@ -54,35 +55,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When the OCSP protocol was defined, the design was based on full compatibility
-    with CRL-based mechanisms. This requires the use of a complex means of certificate
-    identification that has resulted in interoperability problems among implementations,
-    the inability to provide an unambiguous certificate status response (the only
-    thing that a CRL can say with certainty is 'revoked'), and an online responder
-    tied to an offline mechanism (some CAs issue CRLs only once or twice a day, even
-    though they have an online, realtime certificate store available). Fortunately,
-    the authors of the OCSP RFC foresaw this situation by allowing a client to specify,
-    and a responder to return, more than one type of response. Just as the original
-    OCSP responses were designed for completely CRL- compatible operation, this document
-    specifies a response type that is designed for real-time status operation, providing
-    a response not from a stored CRL using CRL-only mechanisms but directly from a
-    live certificate store. This allows the responder to provide extended information
-    not possible with CRLs. In abstract terms, the responder is providing an implementation
-    of an authenticated dictionary that responds to membership queries from relying
-    parties. A conventional OCSP responder answers the question 'Is x excluded from
-    D?', while an OCSP responder with RTCS capability answers the question 'Is x present
-    in D?'.</p>"
-  format: text/html
+  content: |-
+    <p>When the OCSP protocol was defined, the design was based on full compatibility with CRL-based mechanisms.  This requires the use of a complex means of certificate identification that has resulted in interoperability problems among implementations, the inability to provide an unambiguous certificate status response (the only thing that a CRL can say with certainty is 'revoked'), and an online responder tied to an offline mechanism (some CAs issue CRLs only once or twice a day, even though they have an online, realtime certificate store available).
+    Fortunately, the authors of the OCSP RFC foresaw this situation by allowing a client to specify, and a responder to return, more than one type of response.
+    Just as the original OCSP responses were designed for completely CRL-
+    compatible operation, this document specifies a response type that is designed for real-time status operation, providing a response not from a stored CRL using CRL-only mechanisms but directly from a live certificate store.  This allows the responder to provide extended information not possible with CRLs.
+
+    In abstract terms, the responder is providing an implementation of an
+    authenticated dictionary that responds to membership queries from relying parties.  A conventional OCSP responder answers the question 'Is x excluded from D?', while an OCSP responder with RTCS capability answers the question 'Is x present in D?'.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gutmann-pkix-ocsp-rtcs-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

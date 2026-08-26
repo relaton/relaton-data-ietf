@@ -1,11 +1,12 @@
 ---
 id: draftfujiwaradnsopfragmentattack
 schema_version: v1.5.6
+formattedref:
+  content: draft-fujiwara-dnsop-fragment-attack
 title:
 - language: en
   script: Latn
   content: Measures against cache poisoning attacks using IP fragmentation in DNS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-fujiwara-dnsop-fragment-attack-01
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Researchers proposed practical DNS cache poisoning attacks using IP
-    fragmentation. This document shows feasible and adequate measures at full-service
-    resolvers and authoritative servers against these attacks. To protect resolvers
-    from these attacks, avoid fragmentation (limit requestor's UDP payload size to
-    1220/1232), drop fragmented UDP DNS responses and use TCP at resolver side. To
-    make a domain name robust against these attacks, limit EDNS0 Responder's maximum
-    payload size to 1220, set DONTFRAG option to DNS response packets and use good
-    random fragmentation ID at authoritative server side.</p>"
-  format: text/html
+  content: |-
+    <p>Researchers proposed practical DNS cache poisoning attacks using IP
+       fragmentation.  This document shows feasible and adequate measures at
+       full-service resolvers and authoritative servers against these
+       attacks.  To protect resolvers from these attacks, avoid
+       fragmentation (limit requestor's UDP payload size to 1220/1232), drop
+       fragmented UDP DNS responses and use TCP at resolver side.  To make a
+       domain name robust against these attacks, limit EDNS0 Responder's
+       maximum payload size to 1220, set DONTFRAG option to DNS response
+       packets and use good random fragmentation ID at authoritative server
+       side.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-fujiwara-dnsop-fragment-attack-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-fujiwara-dnsop-fragment-attack-00
     docidentifier:
     - content: draft-fujiwara-dnsop-fragment-attack-00
       type: Internet-Draft
@@ -42,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-fujiwara-dnsop-fragment-attack-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-fujiwara-dnsop-fragment-attack-01
     docidentifier:
     - content: draft-fujiwara-dnsop-fragment-attack-01
       type: Internet-Draft
@@ -51,4 +58,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

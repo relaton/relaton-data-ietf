@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Reusable templates and checksum offload for CONNECT-IP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rosomakho-masque-connect-ip-optimizations-00
 docidentifier:
+- content: draft-rosomakho-masque-connect-ip-optimizations
+  type: Internet-Draft
 - content: draft-rosomakho-masque-connect-ip-optimizations-00
   type: Internet-Draft
   primary: true
-- content: I-D.rosomakho-masque-connect-ip-optimizations
-  type: IETF
-  scope: anchor
 docnumber: I-D.rosomakho-masque-connect-ip-optimizations
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yaroslav
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zscaler
+        - language: en
+          content: Zscaler
 version:
 - content: '00'
 language:
@@ -53,23 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines extensions to the CONNECT-IP protocol (RFC 9484)
-    that improve the efficiency of datagram transmission by introducing reusable templates
-    and checksum offload capabilities. Reusable templates allow endpoints to associate
-    Context Identifiers with static portions of packet headers, enabling datagrams
-    to omit repeated byte sequences while remaining self-contained and stateless on
-    the wire. Checksum offload enables endpoints to delegate computation of transport-layer
-    checksums to the receiver by signaling the relevant offsets within the reconstructed
-    packet. These optimisations reduce per-packet overhead, processing cost, and effectively
-    increase the usable maximum transmission unit (MTU) when CONNECT-IP datagrams
-    are encapsulated in QUIC DATAGRAM frames.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines extensions to the CONNECT-IP protocol (RFC
+       9484) that improve the efficiency of datagram transmission by
+       introducing reusable templates and checksum offload capabilities.
+
+       Reusable templates allow endpoints to associate Context Identifiers
+       with static portions of packet headers, enabling datagrams to omit
+       repeated byte sequences while remaining self-contained and stateless
+       on the wire.  Checksum offload enables endpoints to delegate
+       computation of transport-layer checksums to the receiver by signaling
+       the relevant offsets within the reconstructed packet.
+
+       These optimisations reduce per-packet overhead, processing cost, and
+       effectively increase the usable maximum transmission unit (MTU) when
+       CONNECT-IP datagrams are encapsulated in QUIC DATAGRAM frames.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-rosomakho-masque-connect-ip-optimizations-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosomakho-masque-connect-ip-optimizations-01
     docidentifier:
     - content: draft-rosomakho-masque-connect-ip-optimizations-01
       type: Internet-Draft
@@ -80,10 +87,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rosomakho-masque-connect-ip-optimizations-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: A Name-Value Language (ANVL)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kunze-anvl-02
 docidentifier:
+- content: draft-kunze-anvl
+  type: Internet-Draft
 - content: draft-kunze-anvl-02
   type: Internet-Draft
   primary: true
-- content: I-D.kunze-anvl
-  type: IETF
-  scope: anchor
 docnumber: I-D.kunze-anvl
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of California
+        - language: en
+          content: University of California
 version:
 - content: '02'
 language:
@@ -55,25 +57,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>ANVL (A Name-Value Language) is a simple record syntax based on email
-    headers. An ANVL record is a sequence of data elements ending in a blank line.
-    An element consists of a label, a colon, and an optional value, and a long value
-    may be folded (continued) onto the next line by inserting a CRLF and indenting
-    the next line. A value folded across several lines is treated as if the lines
-    were joined on one long line; any line beginning with `#'' is treated as a "comment".
-    Example ANVL record: entry: # first draft who: Gilbert, W.S. | Sullivan, Arthur
-    what: The Yeomen of the Guard when/created: 1888</p>'
-  format: text/html
+  content: |-
+    <p>ANVL (A Name-Value Language) is a simple record syntax based on email
+       headers.  An ANVL record is a sequence of data elements ending in a
+       blank line.  An element consists of a label, a colon, and an optional
+       value, and a long value may be folded (continued) onto the next line
+       by inserting a CRLF and indenting the next line.  A value folded
+       across several lines is treated as if the lines were joined on one
+       long line; any line beginning with `#' is treated as a "comment".
+       Example ANVL record:
+
+             entry:
+             # first draft
+             who:   Gilbert, W.S. | Sullivan, Arthur
+             what:  The Yeomen of
+                    the Guard
+             when/created:  1888</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kunze-anvl-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SIP Egress Route Use in ENUM
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-malas-dispatch-sip-egress-route-00
 docidentifier:
+- content: draft-malas-dispatch-sip-egress-route
+  type: Internet-Draft
 - content: draft-malas-dispatch-sip-egress-route-00
   type: Internet-Draft
   primary: true
-- content: I-D.malas-dispatch-sip-egress-route
-  type: IETF
-  scope: anchor
 docnumber: I-D.malas-dispatch-sip-egress-route
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Daryl
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 version:
 - content: '00'
 language:
@@ -53,29 +54,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In some cases a UA (or proxy) within a Session Initiation Protocol
-    [RFC3261] Service Provider (SSP) has multiple parallel egress proxy options to
-    reach an ingress proxy within another SSP to reach the target UA. If the originating
-    SSP uses ENUM to identify the ingress proxy of the target SSP, there is currently
-    no way for the ENUM NAPTR response to identify a specific preferred egress proxy
-    from the set of multiple parallel proxies. This draft solves this problem by defining
-    a method for returning deterministic routing information within an ENUM NAPTR
-    response enabling the UA (or proxy) to choose a preferred egress proxy. Using
-    this information, the originating UA now sends the SIP request through the predetermined
-    preferred egress proxy to reach the target SSP's proxy. This document describes
-    several methods to make this determination by incorporating variables into a SIP
-    service URI contained in the E.164 Number Mapping (ENUM) response.</p>"
-  format: text/html
+  content: |-
+    <p>In some cases a UA (or proxy) within a Session Initiation Protocol
+    [RFC3261] Service Provider (SSP) has multiple parallel egress proxy
+    options to reach an ingress proxy within another SSP to reach the
+    target UA.  If the originating SSP uses ENUM to identify the ingress
+    proxy of the target SSP, there is currently no way for the ENUM NAPTR
+    response to identify a specific preferred egress proxy from the set
+    of multiple parallel proxies.  This draft solves this problem by
+    defining a method for returning deterministic routing information
+    within an ENUM NAPTR response enabling the UA (or proxy) to choose a
+    preferred egress proxy.  Using this information, the originating UA
+    now sends the SIP request through the predetermined preferred egress
+    proxy to reach the target SSP's proxy.  This document describes
+    several methods to make this determination by incorporating variables
+    into a SIP service URI contained in the E.164 Number Mapping (ENUM)
+    response.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-malas-dispatch-sip-egress-route-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

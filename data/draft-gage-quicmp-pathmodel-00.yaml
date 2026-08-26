@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: An Alternate Path Model for Multipath QUIC
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gage-quicmp-pathmodel-00
 docidentifier:
+- content: draft-gage-quicmp-pathmodel
+  type: Internet-Draft
 - content: draft-gage-quicmp-pathmodel-00
   type: Internet-Draft
   primary: true
-- content: I-D.gage-quicmp-pathmodel
-  type: IETF
-  scope: anchor
 docnumber: I-D.gage-quicmp-pathmodel
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bill
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Unaffiliated
+        - language: en
+          content: Unaffiliated
 version:
 - content: '00'
 language:
@@ -53,26 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The path model used in the current MPQUIC draft binds a connection
-    identifier to a path. In fact, the sequence number of a connection identifier
-    is used as an implicit path identifier. This has a number of consequences that
-    may cause MPQUIC to diverge from the principles of RFC9000. One of these consequences,
-    for example, is to associate each connection with a different application data
-    packet number space rather than maintaining a single application data packet number
-    space across all connections as defined in RFC9000. This document proposes a different
-    path model for Multipath QUIC using explicit path identifiers, enabling a multipath
-    management framework that retains the principles and operations of RFC9000.</p>"
-  format: text/html
+  content: |-
+    <p>The path model used in the current MPQUIC draft binds a connection
+       identifier to a path.  In fact, the sequence number of a connection
+       identifier is used as an implicit path identifier.  This has a number
+       of consequences that may cause MPQUIC to diverge from the principles
+       of RFC9000.  One of these consequences, for example, is to associate
+       each connection with a different application data packet number space
+       rather than maintaining a single application data packet number space
+       across all connections as defined in RFC9000.
+
+       This document proposes a different path model for Multipath QUIC
+       using explicit path identifiers, enabling a multipath management
+       framework that retains the principles and operations of RFC9000.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gage-quicmp-pathmodel-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

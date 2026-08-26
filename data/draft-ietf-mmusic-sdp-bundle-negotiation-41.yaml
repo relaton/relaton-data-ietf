@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Negotiating Media Multiplexing Using the Session Description Protocol (SDP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-41
 docidentifier:
+- content: draft-ietf-mmusic-sdp-bundle-negotiation
+  type: Internet-Draft
 - content: draft-ietf-mmusic-sdp-bundle-negotiation-41
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-mmusic-sdp-bundle-negotiation
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-mmusic-sdp-bundle-negotiation
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Christer
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Harald
       - language: en
+        script: Latn
         initial: H
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -67,17 +71,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Cullen
       - language: en
+        script: Latn
         initial: C
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -91,7 +99,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 version:
 - content: '41'
 language:
@@ -101,40 +110,51 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This specification defines a new Session Description Protocol (SDP)
-    Grouping Framework extension, 'BUNDLE'. The extension can be used with the SDP
-    Offer/Answer mechanism to negotiate the usage of a single transport (5-tuple)
-    for sending and receiving media described by multiple SDP media descriptions ("m="
-    sections). Such transport is referred to as a BUNDLE transport, and the media
-    is referred to as bundled media. The "m=" sections that use the BUNDLE transport
-    form a BUNDLE group. To assist endpoints in negotiating the use of bundle this
-    specification defines a new SDP attribute, 'bundle-only', which can be used to
-    request that specific media is only used if bundled. The specification also updates
-    RFC 3264, to allow assigning a zero port value to a "m= section without meaning
-    that the media described by the "m=" section is disabled or rejected. When RTP-based
-    media is used, there are multiple ways to correlate bundled RTP packets with the
-    appropriate "m=" section. This specification defines a new Real-time Transport
-    Protocol (RTP) source description (SDES) item and a new RTP header extension that
-    provides an additional way to do this correlation by using them to carry a value
-    that associates the RTP/RTCP packets with a specific "m=" section.</p>
-  format: text/html
+  content: |-
+    <p>This specification defines a new Session Description Protocol (SDP)
+       Grouping Framework extension, 'BUNDLE'.  The extension can be used
+       with the SDP Offer/Answer mechanism to negotiate the usage of a
+       single transport (5-tuple) for sending and receiving media described
+       by multiple SDP media descriptions ("m=" sections).  Such transport
+       is referred to as a BUNDLE transport, and the media is referred to as
+       bundled media.  The "m=" sections that use the BUNDLE transport form
+       a BUNDLE group.
+
+       To assist endpoints in negotiating the use of bundle this
+       specification defines a new SDP attribute, 'bundle-only', which can
+       be used to request that specific media is only used if bundled.  The
+       specification also updates RFC 3264, to allow assigning a zero port
+       value to a "m= section without meaning that the media described by
+       the "m=" section is disabled or rejected.
+
+       When RTP-based media is used, there are multiple ways to correlate
+       bundled RTP packets with the appropriate "m=" section.  This
+       specification defines a new Real-time Transport Protocol (RTP) source
+       description (SDES) item and a new RTP header extension that provides
+       an additional way to do this correlation by using them to carry a
+       value that associates the RTP/RTCP packets with a specific "m="
+       section.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-mmusic-sdp-bundle-negotiation-36
-      format: text/plain
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-40
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-40
     docidentifier:
-    - content: draft-ietf-mmusic-sdp-bundle-negotiation-36
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-40
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-mmusic-sdp-bundle-negotiation-47
-      format: text/plain
+      content: draft-ietf-mmusic-sdp-bundle-negotiation-42
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mmusic-sdp-bundle-negotiation-42
     docidentifier:
-    - content: draft-ietf-mmusic-sdp-bundle-negotiation-47
+    - content: draft-ietf-mmusic-sdp-bundle-negotiation-42
       type: Internet-Draft
       primary: true
 series:
@@ -143,10 +163,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-mmusic-sdp-bundle-negotiation-41
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

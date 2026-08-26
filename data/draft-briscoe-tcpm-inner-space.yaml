@@ -1,11 +1,12 @@
 ---
 id: draftbriscoetcpminnerspace
 schema_version: v1.5.6
+formattedref:
+  content: draft-briscoe-tcpm-inner-space
 title:
 - language: en
   script: Latn
   content: Inner Space for TCP Options
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-briscoe-tcpm-inner-space-01
@@ -19,27 +20,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an experimental method to extend the limited
-    space for control options in every segment of a TCP connection. It can use a dual
-    handshake so that, from the very first SYN segment, extra option space can immediately
-    start to be used optimistically. At the same time a dual handshake prevents a
-    legacy server from getting confused and sending the control options to the application
-    as user-data. The dual handshake is only one strategy - a single handshake will
-    usually suffice once deployment has got started. The protocol is designed to traverse
-    most known middleboxes including connection splitters, because it sits wholly
-    within the TCP Data. It also provides reliable ordered delivery for control options.
-    Therefore, it should allow new TCP options to be introduced i) with minimal middlebox
-    traversal problems; ii) with incremental deployment from legacy servers; iii)
-    without an extra round of handshaking delay iv) without having to provide its
-    own loss recovery and ordering mechanism and v) without arbitrary limits on available
-    space.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes an experimental method to extend the limited
+       space for control options in every segment of a TCP connection.  It
+       can use a dual handshake so that, from the very first SYN segment,
+       extra option space can immediately start to be used optimistically.
+       At the same time a dual handshake prevents a legacy server from
+       getting confused and sending the control options to the application
+       as user-data.  The dual handshake is only one strategy - a single
+       handshake will usually suffice once deployment has got started.  The
+       protocol is designed to traverse most known middleboxes including
+       connection splitters, because it sits wholly within the TCP Data.  It
+       also provides reliable ordered delivery for control options.
+       Therefore, it should allow new TCP options to be introduced i) with
+       minimal middlebox traversal problems; ii) with incremental deployment
+       from legacy servers; iii) without an extra round of handshaking delay
+       iv) without having to provide its own loss recovery and ordering
+       mechanism and v) without arbitrary limits on available space.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-briscoe-tcpm-inner-space-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-tcpm-inner-space-00
     docidentifier:
     - content: draft-briscoe-tcpm-inner-space-00
       type: Internet-Draft
@@ -48,7 +53,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-briscoe-tcpm-inner-space-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-tcpm-inner-space-01
     docidentifier:
     - content: draft-briscoe-tcpm-inner-space-01
       type: Internet-Draft
@@ -57,4 +64,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

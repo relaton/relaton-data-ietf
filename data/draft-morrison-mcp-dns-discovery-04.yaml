@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Discovery of Model Context Protocol Servers via DNS TXT Records
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-04
 docidentifier:
+- content: draft-morrison-mcp-dns-discovery
+  type: Internet-Draft
 - content: draft-morrison-mcp-dns-discovery-04
   type: Internet-Draft
   primary: true
-- content: I-D.morrison-mcp-dns-discovery
-  type: IETF
-  scope: anchor
 docnumber: I-D.morrison-mcp-dns-discovery
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Blake
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alter Meridian Pty Ltd
+        - language: en
+          content: Alter Meridian Pty Ltd
 version:
 - content: '04'
 language:
@@ -53,46 +54,56 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a DNS-based mechanism for the discovery of Model
-    Context Protocol (MCP) servers, the identity properties of the organisations that
-    operate them, and (new in this revision) the cryptographic identity envelope bound
-    to an individual Sovereign- tier ~handle published under the same zone. Three
-    TXT resource records are defined. The _mcp.&lt;domain&gt; record (defined in v01)
-    advertises the presence, endpoint URL, transport protocol, cryptographic identity,
-    and capability profile of an MCP server associated with a domain name. The _org-alter.&lt;domain&gt;
-    record (introduced in v02) advertises the canonical organisational identity of
-    the domain operator: legal entity name, registry identifier, founding date, primary
-    regions of operation, and any regulatory frameworks under which the operator is
-    bound to refuse external automated access. The _alter.&lt;domain&gt; record (introduced
-    in this revision) publishes an Ed25519-signed identity envelope binding a ~handle
-    to a public key, an IdentityLog Signed Tree Head root, and a revocation commitment.
-    Taken together, the three records provide service discovery, organisational identity
-    bootstrap, and individual identity recognition from a single canonical source:
-    the domain's own DNS zone. This revision additionally requires DNSSEC [RFC4033]
-    validation of envelope responses and a DANE TLSA [RFC6698] pin binding the MCP
-    endpoint's leaf certificate to the published zone. A companion URI scheme (alter:)
-    is registered provisionally with IANA per [RFC7595] for handle dispatch. The mechanism
-    complements HTTPS- based discovery (.well-known/mcp/server-card.json and.well-known/
-    alter-envelope.json) by providing a lightweight, resolver-cached bootstrap that
-    requires no HTTPS round-trip. The design follows the precedent established by
-    DKIM [RFC6376], SPF [RFC7208], DMARC [RFC7489], MTA-STS [RFC8461], and the existing
-    _mcp. / _org-alter. labels of v01-v02.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines a DNS-based mechanism for the discovery of
+       Model Context Protocol (MCP) servers, the identity properties of the
+       organisations that operate them, and (new in this revision) the
+       cryptographic identity envelope bound to an individual Sovereign-
+       tier ~handle published under the same zone.  Three TXT resource
+       records are defined.  The _mcp.&lt;domain&gt; record (defined in v01)
+       advertises the presence, endpoint URL, transport protocol,
+       cryptographic identity, and capability profile of an MCP server
+       associated with a domain name.  The _org-alter.&lt;domain&gt; record
+       (introduced in v02) advertises the canonical organisational identity
+       of the domain operator: legal entity name, registry identifier,
+       founding date, primary regions of operation, and any regulatory
+       frameworks under which the operator is bound to refuse external
+       automated access.  The _alter.&lt;domain&gt; record (introduced in this
+       revision) publishes an Ed25519-signed identity envelope binding a
+       ~handle to a public key, an IdentityLog Signed Tree Head root, and a
+       revocation commitment.  Taken together, the three records provide
+       service discovery, organisational identity bootstrap, and individual
+       identity recognition from a single canonical source: the domain's own
+       DNS zone.  This revision additionally requires DNSSEC [RFC4033]
+       validation of envelope responses and a DANE TLSA [RFC6698] pin
+       binding the MCP endpoint's leaf certificate to the published zone.  A
+       companion URI scheme (alter:) is registered provisionally with IANA
+       per [RFC7595] for handle dispatch.  The mechanism complements HTTPS-
+       based discovery (.well-known/mcp/server-card.json and .well-known/
+       alter-envelope.json) by providing a lightweight, resolver-cached
+       bootstrap that requires no HTTPS round-trip.  The design follows the
+       precedent established by DKIM [RFC6376], SPF [RFC7208], DMARC
+       [RFC7489], MTA-STS [RFC8461], and the existing _mcp. / _org-alter.
+       labels of v01-v02.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-morrison-mcp-dns-discovery-02
-      format: text/plain
+      content: draft-morrison-mcp-dns-discovery-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-03
     docidentifier:
-    - content: draft-morrison-mcp-dns-discovery-02
+    - content: draft-morrison-mcp-dns-discovery-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-morrison-mcp-dns-discovery-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-05
     docidentifier:
     - content: draft-morrison-mcp-dns-discovery-05
       type: Internet-Draft
@@ -103,10 +114,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-morrison-mcp-dns-discovery-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

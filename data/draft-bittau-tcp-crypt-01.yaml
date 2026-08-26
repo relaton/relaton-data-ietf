@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Cryptographic protection of TCP Streams (tcpcrypt)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bittau-tcp-crypt-01
 docidentifier:
+- content: draft-bittau-tcp-crypt
+  type: Internet-Draft
 - content: draft-bittau-tcp-crypt-01
   type: Internet-Draft
   primary: true
-- content: I-D.bittau-tcp-crypt
-  type: IETF
-  scope: anchor
 docnumber: I-D.bittau-tcp-crypt
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrea
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dan
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -82,10 +86,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mark
       - language: en
+        script: Latn
         initial: M
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -102,8 +109,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -120,8 +129,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Quinn
       - language: en
+        script: Latn
         initial: Q
       formatted_initials:
         language: en
@@ -141,27 +152,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document presents tcpcrypt, a TCP extension for cryptographically
-    protecting TCP segments. Tcpcrypt maintains the confidentiality of data transmitted
-    in TCP segments against a passive eavesdropper. It can be used to protect already
-    established TCP connections against denial-of-service attacks involving injection
-    of forged RST segments or desynchronizing of sequence numbers. Finally, applications
-    that perform authentication can obtain end-to-end confidentiality and integrity
-    guarantees by tying authentication to tcpcrypt Session ID values. The extension
-    defines two new TCP options, CRYPT and MAC, which are designed to provide compatible
-    interworking with TCPs that do not implement tcpcrypt. The CRYPT option allows
-    hosts to negotiate the use of tcpcrypt and establish shared secret encryption
-    keys. The MAC option carries a message authentication code with which hosts can
-    verify the integrity of transmitted TCP segments. Tcpcrypt is designed to require
-    relatively low overhead, particularly at servers, so as to be useful even in the
-    case of servers accepting many TCP connections per second.</p>"
-  format: text/html
+  content: |-
+    <p>This document presents tcpcrypt, a TCP extension for
+       cryptographically protecting TCP segments.  Tcpcrypt maintains the
+       confidentiality of data transmitted in TCP segments against a passive
+       eavesdropper.  It can be used to protect already established TCP
+       connections against denial-of-service attacks involving injection of
+       forged RST segments or desynchronizing of sequence numbers.  Finally,
+       applications that perform authentication can obtain end-to-end
+       confidentiality and integrity guarantees by tying authentication to
+       tcpcrypt Session ID values.
+
+       The extension defines two new TCP options, CRYPT and MAC, which are
+       designed to provide compatible interworking with TCPs that do not
+       implement tcpcrypt.  The CRYPT option allows hosts to negotiate the
+       use of tcpcrypt and establish shared secret encryption keys.  The MAC
+       option carries a message authentication code with which hosts can
+       verify the integrity of transmitted TCP segments.  Tcpcrypt is
+       designed to require relatively low overhead, particularly at servers,
+       so as to be useful even in the case of servers accepting many TCP
+       connections per second.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bittau-tcp-crypt-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bittau-tcp-crypt-02
     docidentifier:
     - content: draft-bittau-tcp-crypt-02
       type: Internet-Draft
@@ -172,10 +190,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bittau-tcp-crypt-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: In-Band SCONE Reporting over QUIC
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-duke-scone-scone-echo-01
 docidentifier:
+- content: draft-duke-scone-scone-echo
+  type: Internet-Draft
 - content: draft-duke-scone-scone-echo-01
   type: Internet-Draft
   primary: true
-- content: I-D.duke-scone-scone-echo
-  type: IETF
-  scope: anchor
 docnumber: I-D.duke-scone-scone-echo
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Martin
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 version:
 - content: '01'
 language:
@@ -53,19 +54,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The SCONE protocol relies on the receiver of SCONE packets to send
-    bandwidth estimates back to the sender via unspecified application- layer messages.
-    In some cases, a peer might have SCONE receive capability at the QUIC layer but
-    not implement the necessary application level functionality. A new QUIC frame
-    that directly reports the contents of received SCONE packets can address these
-    use cases. There are no changes in the interaction with SCONE Network Elements.</p>"
-  format: text/html
+  content: |-
+    <p>The SCONE protocol relies on the receiver of SCONE packets to send
+       bandwidth estimates back to the sender via unspecified application-
+       layer messages.  In some cases, a peer might have SCONE receive
+       capability at the QUIC layer but not implement the necessary
+       application level functionality.  A new QUIC frame that directly
+       reports the contents of received SCONE packets can address these use
+       cases.  There are no changes in the interaction with SCONE Network
+       Elements.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-duke-scone-scone-echo-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-scone-scone-echo-00
     docidentifier:
     - content: draft-duke-scone-scone-echo-00
       type: Internet-Draft
@@ -74,7 +79,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-duke-scone-scone-echo-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-scone-scone-echo-02
     docidentifier:
     - content: draft-duke-scone-scone-echo-02
       type: Internet-Draft
@@ -85,10 +92,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-duke-scone-scone-echo-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

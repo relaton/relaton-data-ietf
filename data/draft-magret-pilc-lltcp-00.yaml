@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Long-lived TCP connections
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-magret-pilc-lltcp-00
 docidentifier:
+- content: draft-magret-pilc-lltcp
+  type: Internet-Draft
 - content: draft-magret-pilc-lltcp-00
   type: Internet-Draft
   primary: true
-- content: I-D.magret-pilc-lltcp
-  type: IETF
-  scope: anchor
 docnumber: I-D.magret-pilc-lltcp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Vincent
       - language: en
+        script: Latn
         initial: V
       formatted_initials:
         language: en
@@ -43,13 +43,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alcatel
+        - language: en
+          content: Alcatel
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -69,30 +71,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a protocol enhancement allowing TCP connec-
-    tions to switch from an active state to an idle state during a wire- less link's
-    outage. Within such state all timers are cancelled and packets' transmission is
-    suspended. The protocol defines a mechanism by which the mobile station may detect
-    a link failure and changes TCP connections' state to idle. This same mechanism
-    allows the mobile host to detect connectivity regain. All TCP connections are
-    then resumed. The protocol defines how the supervisor host, which can monitor
-    the wireless link quality, can alert the fixed host of a failure of the wireless
-    link. The fixed host can suspend the outgoing activity with the unreachable mobile
-    node. When the fixed hosts start receiving packets from the mobile node, the activity
-    can be resumed. This protocol increases the capacity of both parties involved
-    in a communication that is carried via a wireless link to handled connec- tivity
-    disruption without impacting the overall performance of the TCP connections.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a protocol enhancement allowing TCP connec-
+    tions to switch from an active state to an idle state during a wire-
+    less link's outage. Within such state all timers are cancelled and
+    packets' transmission is suspended. The protocol defines a mechanism
+    by which the mobile station may detect a link failure and changes TCP
+    connections' state to idle. This same mechanism allows the mobile
+    host to detect connectivity regain. All TCP connections are then
+    resumed.
+    The protocol defines how the supervisor host, which can monitor the
+    wireless link quality, can alert the fixed host of a failure of the
+    wireless link.  The fixed host can suspend the outgoing activity with
+    the unreachable mobile node. When the fixed hosts start receiving
+    packets from the mobile node, the activity can be resumed.
+    This protocol increases the capacity of both parties involved in a
+    communication that is carried via a wireless link to handled connec-
+    tivity disruption without impacting the overall performance of the
+    TCP connections.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-magret-pilc-lltcp-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

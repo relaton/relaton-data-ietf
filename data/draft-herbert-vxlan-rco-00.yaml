@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Remote checksum offload for VXLAN
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-herbert-vxlan-rco-00
 docidentifier:
+- content: draft-herbert-vxlan-rco
+  type: Internet-Draft
 - content: draft-herbert-vxlan-rco-00
   type: Internet-Draft
   primary: true
-- content: I-D.herbert-vxlan-rco
-  type: IETF
-  scope: anchor
 docnumber: I-D.herbert-vxlan-rco
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tom
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -49,22 +49,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification describes remote checksum offload for VXLAN. Remote
-    checksum offload is a mechanism that provides checksum offload of transport checksums
-    in encapsulated packets using rudimentary offload capabilities found in most Network
-    Interface Card (NIC) devices. The outer UDP checksum is enabled on transmit and,
-    with some additional meta data, a receiver is able to deduce the checksum to be
-    set in an encapsulated packet. Effectively this offloads the computation of the
-    inner checksum which can be a significant performance optimization. Enabling the
-    UDP checksum has the additional advantage that it covers more of the packet including
-    the IP pseudo header and virtual network identifier.</p>"
-  format: text/html
+  content: |-
+    <p>This specification describes remote checksum offload for VXLAN.
+       Remote checksum offload is a mechanism that provides checksum offload
+       of transport checksums in encapsulated packets using rudimentary
+       offload capabilities found in most Network Interface Card (NIC)
+       devices. The outer UDP checksum is enabled on transmit and, with some
+       additional meta data, a receiver is able to deduce the checksum to be
+       set in an encapsulated packet. Effectively this offloads the
+       computation of the inner checksum which can be a significant
+       performance optimization. Enabling the UDP checksum has the
+       additional advantage that it covers more of the packet including the
+       IP pseudo header and virtual network identifier.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-herbert-vxlan-rco-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-herbert-vxlan-rco-01
     docidentifier:
     - content: draft-herbert-vxlan-rco-01
       type: Internet-Draft
@@ -75,10 +79,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-herbert-vxlan-rco-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

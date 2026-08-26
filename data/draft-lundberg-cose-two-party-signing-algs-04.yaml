@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Split signing algorithms for COSE
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-lundberg-cose-two-party-signing-algs-04
 docidentifier:
+- content: draft-lundberg-cose-two-party-signing-algs
+  type: Internet-Draft
 - content: draft-lundberg-cose-two-party-signing-algs-04
   type: Internet-Draft
   primary: true
-- content: I-D.lundberg-cose-two-party-signing-algs
-  type: IETF
-  scope: anchor
 docnumber: I-D.lundberg-cose-two-party-signing-algs
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Emil
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yubico
+        - language: en
+          content: Yubico
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -67,7 +71,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Self-Issued Consulting
+        - language: en
+          content: Self-Issued Consulting
 version:
 - content: '04'
 language:
@@ -77,33 +82,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines COSE algorithm identifiers for negotiating
-    how to split a signature algorithm between two cooperating parties. Typically
-    the first party hashes the data to be signed and the second party finishes the
-    signature over the hashed data. This is a common technique, useful for example
-    when the signing private key is held in a smart card or similar hardware component
-    with limited processing power and communication bandwidth. The resulting signatures
-    are identical in structure to those computed by a single party, and can be verified
-    using the same verification algorithm without additional steps to preprocess the
-    signed data.</p>"
-  format: text/html
+  content: |-
+    <p>This specification defines COSE algorithm identifiers for negotiating
+       how to split a signature algorithm between two cooperating parties.
+       Typically the first party hashes the data to be signed and the second
+       party finishes the signature over the hashed data.  This is a common
+       technique, useful for example when the signing private key is held in
+       a smart card or similar hardware component with limited processing
+       power and communication bandwidth.  The resulting signatures are
+       identical in structure to those computed by a single party, and can
+       be verified using the same verification algorithm without additional
+       steps to preprocess the signed data.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-lundberg-cose-two-party-signing-algs-00
-      format: text/plain
+      content: draft-lundberg-cose-two-party-signing-algs-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lundberg-cose-two-party-signing-algs-03
     docidentifier:
-    - content: draft-lundberg-cose-two-party-signing-algs-00
+    - content: draft-lundberg-cose-two-party-signing-algs-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-lundberg-cose-two-party-signing-algs-06
-      format: text/plain
+      content: draft-lundberg-cose-two-party-signing-algs-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lundberg-cose-two-party-signing-algs-05
     docidentifier:
-    - content: draft-lundberg-cose-two-party-signing-algs-06
+    - content: draft-lundberg-cose-two-party-signing-algs-05
       type: Internet-Draft
       primary: true
 series:
@@ -112,10 +122,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-lundberg-cose-two-party-signing-algs-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

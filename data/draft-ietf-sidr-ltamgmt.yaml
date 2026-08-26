@@ -1,11 +1,12 @@
 ---
 id: draftietfsidrltamgmt
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-sidr-ltamgmt
 title:
 - language: en
   script: Latn
   content: Local Trust Anchor Management for the Resource Public Key Infrastructure
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-ltamgmt-08
@@ -19,35 +20,41 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a facility to enable a relying party (RP) to
-    manage trust anchors (TAs) in the context of the Resource Public Key Infrastructure
-    (RPKI). It is common in RP software (not just in the RPKI) to allow an RP to import
-    TA material in the form of self-signed certificates. However, this approach to
-    incorporating TAs is potentially dangerous. (These self-signed certificates rarely
-    incorporate any extensions that impose constraints on the scope of the imported
-    public keys, and the RP is not able to impose such constraints.) The facility
-    described in this document allows an RP to impose constraints on such TAs. Because
-    this mechanism is designed to operate in the RPKI context, the most important
-    constraints are the Internet Number Resources (INRs) expressed via RFC 3779 extensions.
-    These extentions bind address spaces and/or autonomous system (AS) numbers to
-    entities. The primary motivation for the facility described in this document is
-    to enable an RP to ensure that INR information that it has acquired via some trusted
-    channel is not overridden by the information acquired from the RPKI repository
-    system or by the putative TAs that the RP imports. Specifically, the mechanism
-    allows an RP to specify a set of overriding bindings between public key identifiers
-    and INR data. These bindings take precedence over any conflicting bindings acquired
-    by the putative TAs and the certificates downloaded from the RPKI repository system.
-    This mechanism is designed for local use by an RP, but any entity that is accorded
-    administrative control over a set of RPs may use this mechanism to convey its
-    view of the RPKI to RPs within its jurisdiction. The means by which this latter
-    use case is effected is outside the scope of this document.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a facility to enable a relying party (RP) to
+       manage trust anchors (TAs) in the context of the Resource Public Key
+       Infrastructure (RPKI). It is common in RP software (not just in the
+       RPKI) to allow an RP to import TA material in the form of self-signed
+       certificates. However, this approach to incorporating TAs is
+       potentially dangerous. (These self-signed certificates rarely
+       incorporate any extensions that impose constraints on the scope of
+       the imported public keys, and the RP is not able to impose such
+       constraints.) The facility described in this document allows an RP to
+       impose constraints on such TAs. Because this mechanism is designed to
+       operate in the RPKI context, the most important constraints are the
+       Internet Number Resources (INRs) expressed via RFC 3779 extensions.
+       These extentions bind address spaces and/or autonomous system (AS)
+       numbers to entities. The primary motivation for the facility described
+       in this document is to enable an RP to ensure that INR information
+       that it has acquired via some trusted channel is not overridden by the
+       information acquired from the RPKI repository system or by the putative
+       TAs that the RP imports. Specifically, the mechanism allows an RP to
+       specify a set of overriding bindings between public key identifiers and
+       INR data. These bindings take precedence over any conflicting bindings
+       acquired by the putative TAs and the certificates downloaded from the
+       RPKI repository system. This mechanism is designed for local use by an RP,
+       but any entity that is accorded administrative control over a set of RPs
+       may use this mechanism to convey its view of the RPKI to RPs within its
+       jurisdiction. The means by which this latter use case is effected is
+       outside the scope of this document.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-sidr-ltamgmt-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-ltamgmt-04
     docidentifier:
     - content: draft-ietf-sidr-ltamgmt-04
       type: Internet-Draft
@@ -56,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-sidr-ltamgmt-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-ltamgmt-05
     docidentifier:
     - content: draft-ietf-sidr-ltamgmt-05
       type: Internet-Draft
@@ -65,7 +74,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-sidr-ltamgmt-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-ltamgmt-06
     docidentifier:
     - content: draft-ietf-sidr-ltamgmt-06
       type: Internet-Draft
@@ -74,7 +85,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-sidr-ltamgmt-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-ltamgmt-07
     docidentifier:
     - content: draft-ietf-sidr-ltamgmt-07
       type: Internet-Draft
@@ -83,7 +96,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-sidr-ltamgmt-08
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidr-ltamgmt-08
     docidentifier:
     - content: draft-ietf-sidr-ltamgmt-08
       type: Internet-Draft
@@ -92,4 +107,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,13 +1,14 @@
 ---
 id: draftrosenbergsiphttppnonce
 schema_version: v1.5.6
+formattedref:
+  content: draft-rosenberg-sip-http-pnonce
 title:
 - language: en
   script: Latn
   content: |
     Request Header Integrity in SIP and HTTP Digest using
     Predictive Nonces
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rosenberg-sip-http-pnonce-00
@@ -21,21 +22,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The HTTP Digest algorithm, specified in RFC 2617, allows for authentication
-    of a request, along with integrity checks over the method, request URI, and optionally,
-    the body. HTTP Digest is the primary client authentication mechanism used by SIP.
-    However, Digest does not provide for integrity checks over several key SIP headers,
-    including the To, From, Call-ID and Contact headers. We define a mechanism for
-    supporting integrity over these headers, using a new algorithm we call predictive
-    nonces. The mechanism requires no changes in clients, and no protocol changes.
-    It requires only a change in the way the nonce is computed by servers.</p>"
-  format: text/html
+  content: |-
+    <p>The HTTP Digest algorithm, specified in RFC 2617, allows for
+    authentication of a request, along with integrity checks over the
+    method, request URI, and optionally, the body. HTTP Digest is the
+    primary client authentication mechanism used by SIP. However, Digest
+    does not provide for integrity checks over several key SIP headers,
+    including the To, From, Call-ID and Contact headers. We define a
+    mechanism for supporting integrity over these headers, using a new
+    algorithm we call predictive nonces. The mechanism requires no
+    changes in clients, and no protocol changes. It requires only a
+    change in the way the nonce is computed by servers.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-rosenberg-sip-http-pnonce-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosenberg-sip-http-pnonce-00
     docidentifier:
     - content: draft-rosenberg-sip-http-pnonce-00
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

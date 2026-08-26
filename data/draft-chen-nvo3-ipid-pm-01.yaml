@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Using IPID for Performance Monitoring in VxLAN Network
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-nvo3-ipid-pm-01
 docidentifier:
+- content: draft-chen-nvo3-ipid-pm
+  type: Internet-Draft
 - content: draft-chen-nvo3-ipid-pm-01
   type: Internet-Draft
   primary: true
-- content: I-D.chen-nvo3-ipid-pm
-  type: IETF
-  scope: anchor
 docnumber: I-D.chen-nvo3-ipid-pm
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hao
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 version:
 - content: '01'
 language:
@@ -53,22 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IP Identification(IPID)is a field in IP header primarily used to uniquely
-    identify the group of fragments of a single IP packet. The value of IPID field
-    in a packet from a specific traffic flow or source IP address keeps increasing
-    until wrapped-around. This document specifies a method by carefully examining
-    IPID value to monitor the performance of VxLAN network. In this memo packet loss
-    measurement is mainly considered. This method requires no extra hardware support,
-    which means it is compatible with most of the deployed routers or switches. Such
-    a mechanism is applicable to IPv4 network and potential useful in overlay network
-    with different data encapsulation.</p>"
-  format: text/html
+  content: |-
+    <p>IP Identification(IPID)is a field in IP header primarily used to
+       uniquely identify the group of fragments of a single IP packet. The
+       value of IPID field in a packet from a specific traffic flow or
+       source IP address keeps increasing until wrapped-around.
+
+       This document specifies a method by carefully examining IPID value to
+       monitor the performance of VxLAN network. In this memo packet loss
+       measurement is mainly considered. This method requires no extra
+       hardware support, which means it is compatible with most of the
+       deployed routers or switches. Such a mechanism is applicable to IPv4
+       network and potential useful in overlay network with different data
+       encapsulation.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-chen-nvo3-ipid-pm-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-nvo3-ipid-pm-00
     docidentifier:
     - content: draft-chen-nvo3-ipid-pm-00
       type: Internet-Draft
@@ -79,10 +85,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chen-nvo3-ipid-pm-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

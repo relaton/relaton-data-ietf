@@ -1,11 +1,12 @@
 ---
 id: draftietfmospfprunes
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-mospf-prunes
 title:
 - language: en
   script: Latn
   content: MOSPF Prunes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-mospf-prunes-00
@@ -19,26 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>MOSPF is a link-state multicast routing protocol, based on OSPF. Inside
-    a single OSPF area, the delivery of multicast datagrams is restricted to group
-    members only, by propagating the location of group members through group-membership-LSAs.
-    However, group membership is not propagated across area and/or AS boundaries,
-    relying instead on so-called wild-card multicast receivers. This means that in
-    some cases multicast datagrams are transmitted further than necessary, wasting
-    link and processor resources in the process. This document defines a way to prune
-    these excess branches off the MOSPF delivery tree, using a new Prune-LSA. In concept
-    these are similar to the prunes employed by the DVMRP protocol. However, to reuse
-    the reliability mechanisms present in the base OSPF protocol, MOSPF prunes are
-    implemented as local-scope Opaque-LSAs. As a result, inter-area and inter-AS multicast
-    datagrams are forwarded by MOSPF using the broadcast-and-prune strategy employed
+  content: "<p>MOSPF is a link-state multicast routing protocol, based on OSPF.\n
+    \   Inside a single OSPF area, the delivery of multicast datagrams is\n    restricted
+    to group members only, by propagating the location of\n    group members through
+    group-membership-LSAs. However, group\n    membership is not propagated across
+    area and/or AS boundaries,\n    relying instead on so-called wild-card multicast
+    receivers. This\n    means that in some cases multicast datagrams are transmitted
+    further\n    than necessary, wasting link and processor resources in the process.\n
+    \n    This document defines a way to prune these excess branches off the\n    MOSPF
+    delivery tree, using a new Prune-LSA. In concept these are\n    similar to the
+    prunes employed by the DVMRP protocol. However, to\n    reuse the reliability
+    mechanisms present in the base OSPF protocol,\n    MOSPF prunes are implemented
+    as local-scope Opaque-LSAs. As a\n    result, inter-area and inter-AS multicast
+    datagrams are forwarded by\n    MOSPF using the broadcast-and-prune strategy employed
     by DVMRP.</p>"
-  format: text/html
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-mospf-prunes-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mospf-prunes-00
     docidentifier:
     - content: draft-ietf-mospf-prunes-00
       type: Internet-Draft
@@ -47,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

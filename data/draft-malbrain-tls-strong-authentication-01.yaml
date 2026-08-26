@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Problem Statement: Deployment of TLS Strong Authentication'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-malbrain-tls-strong-authentication-01
 docidentifier:
+- content: draft-malbrain-tls-strong-authentication
+  type: Internet-Draft
 - content: draft-malbrain-tls-strong-authentication-01
   type: Internet-Draft
   primary: true
-- content: I-D.malbrain-tls-strong-authentication
-  type: IETF
-  scope: anchor
 docnumber: I-D.malbrain-tls-strong-authentication
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Karl
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Petz Enterprises LLC
+        - language: en
+          content: Petz Enterprises LLC
 version:
 - content: '01'
 language:
@@ -53,21 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The security provided by authenticated TLS connection between clients
-    and servers should protect both parties from "Man-in- the-Middle" (MITM) attacks.
-    Clients should be authenticating that their server connection is to the server
-    they requested. Servers that act as client agents need to authenticate that the
-    connection is directly to their client secure against eavesdropping or account/password
-    hacking. An extension to the Domain Name System (DNS), The DNS-Based Authentication
-    of Named Entities (DANE) (RFC 6698), allows TLS servers to publish their public
-    certificates for use by TLS clients to authenticate the server connection.</p>
-  format: text/html
+  content: |-
+    <p>The security provided by authenticated TLS connection between
+       clients and servers should protect both parties from "Man-in-
+       the-Middle" (MITM) attacks.  Clients should be authenticating
+       that their server connection is to the server they requested.
+
+       Servers that act as client agents need to authenticate that
+       the connection is directly to their client secure against
+       eavesdropping or account/password hacking.
+
+       An extension to the Domain Name System (DNS), The DNS-Based
+       Authentication of Named Entities (DANE) (RFC 6698), allows TLS
+       servers to publish their public certificates for use by TLS
+       clients to authenticate the server connection.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-malbrain-tls-strong-authentication-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-malbrain-tls-strong-authentication-00
     docidentifier:
     - content: draft-malbrain-tls-strong-authentication-00
       type: Internet-Draft
@@ -78,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-malbrain-tls-strong-authentication-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

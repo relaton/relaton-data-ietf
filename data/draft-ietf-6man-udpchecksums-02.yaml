@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: UDP Checksums for Tunneled Packets
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-udpchecksums-02
 docidentifier:
+- content: draft-ietf-6man-udpchecksums
+  type: Internet-Draft
 - content: draft-ietf-6man-udpchecksums-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-6man-udpchecksums
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-6man-udpchecksums
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marshall
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Phil
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -67,24 +69,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document provides an update of RFC 2460[RFC2460] in order to improve
-    the performance of IPv6 in an increasingly important use case, the use of tunneling
-    to carry new transport protocols. The performance improvement is obtained by relaxing
-    the IPv6 UDP checksum requirement for suitable tunneling protocol where header
-    information is protected on the "inner" packet being carried. This relaxation
-    removes the overhead associated with the computation of UDP checksums on tunneled
-    IPv6 packets and thereby improves the efficiency of the traversal of firewalls
-    and other network middleware by such new protocols. We describe how the IPv6 UDP
-    checksum requirement can be relaxed in the situation where the encapsulated packet
-    itself contains a checksum, the limitations and risks of this approach, and provides
-    restrictions on the use of this relaxation to mitigate these risks.</p>
-  format: text/html
+  content: |-
+    <p>This document provides an update of RFC 2460[RFC2460] in order to
+       improve the performance of IPv6 in an increasingly important use
+       case, the use of tunneling to carry new transport protocols.  The
+       performance improvement is obtained by relaxing the IPv6 UDP checksum
+       requirement for suitable tunneling protocol where header information
+       is protected on the "inner" packet being carried.  This relaxation
+       removes the overhead associated with the computation of UDP checksums
+       on tunneled IPv6 packets and thereby improves the efficiency of the
+       traversal of firewalls and other network middleware by such new
+       protocols.  We describe how the IPv6 UDP checksum requirement can be
+       relaxed in the situation where the encapsulated packet itself
+       contains a checksum, the limitations and risks of this approach, and
+       provides restrictions on the use of this relaxation to mitigate these
+       risks.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-6man-udpchecksums-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-udpchecksums-01
     docidentifier:
     - content: draft-ietf-6man-udpchecksums-01
       type: Internet-Draft
@@ -92,10 +99,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-6man-udpchecksums-08
-      format: text/plain
+      content: draft-ietf-6man-udpchecksums-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-6man-udpchecksums-03
     docidentifier:
-    - content: draft-ietf-6man-udpchecksums-08
+    - content: draft-ietf-6man-udpchecksums-03
       type: Internet-Draft
       primary: true
 series:
@@ -104,10 +113,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-6man-udpchecksums-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

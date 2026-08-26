@@ -1,11 +1,12 @@
 ---
 id: draftdavieintservcompress
 schema_version: v1.5.6
+formattedref:
+  content: draft-davie-intserv-compress
 title:
 - language: en
   script: Latn
   content: Integrated Services in the Presence of Compressible Flows
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-davie-intserv-compress-01
@@ -19,26 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>An Integrated Services router performs admission control and resource
-    allocation based on the information contained in a TSpec (among other things).
-    As currently defined, TSpecs convey information about the data rate (using a token
-    bucket) and range of packet sizes of the flow in question. However, the TSpec
-    may not be an accurate representation of the resources needed to support the reservation
-    if the router is able to compress the data at the link level. This draft describes
-    an extension to the TSpec which enables a sender of potentially compressible data
-    to provide hints to int-serv routers about the compressibility they may obtain.
-    Routers which support appropriate compression take advantage of the hint in their
-    admission control decisions and resource allocation procedures; other routers
-    ignore the hint. An initial application of this approach is to notify routers
-    performing RTP header compression that they may allocate fewer resources to RTP
-    flows.</p>"
-  format: text/html
+  content: |-
+    <p>An Integrated Services router performs admission control and resource
+       allocation based on the information contained in a TSpec (among other
+       things).  As currently defined, TSpecs convey information about the
+       data rate (using a token bucket) and range of packet sizes of the
+       flow in question. However, the TSpec may not be an accurate
+       representation of the resources needed to support the reservation if
+       the router is able to compress the data at the link level.  This
+       draft describes an extension to the TSpec which enables a sender of
+       potentially compressible data to provide hints to int-serv routers
+       about the compressibility they may obtain.  Routers which support
+       appropriate compression take advantage of the hint in their admission
+       control decisions and resource allocation procedures; other routers
+       ignore the hint.  An initial application of this approach is to
+       notify routers performing RTP header compression that they may
+       allocate fewer resources to RTP flows.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-davie-intserv-compress-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-davie-intserv-compress-01
     docidentifier:
     - content: draft-davie-intserv-compress-01
       type: Internet-Draft
@@ -47,4 +52,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

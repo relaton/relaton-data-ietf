@@ -1,11 +1,12 @@
 ---
 id: draftsfccontainerformat
 schema_version: v1.5.6
+formattedref:
+  content: draft-sfc-container-format
 title:
 - language: en
   script: Latn
   content: 'SFC: Self-Describing Resilient Container File Format'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sfc-container-format-01
@@ -19,24 +20,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the Self-Describing Resilient Container (SFC)
-    file format, a general-purpose binary container format designed for reliable transmission
-    of arbitrary file data over unreliable, bandwidth-constrained, or asynchronous
-    channels including physical media hand-carry, multi-session transfers, and heterogeneous
-    delivery paths. SFC encapsulates any file or directory tree into independently
-    addressable, self-identifying chunks. Each chunk carries sufficient metadata to
-    identify itself and verify its own integrity in isolation. Full reconstruction
-    additionally requires a Global Header; this distinction is made explicit throughout.
-    This document defines a Core specification and five optional Profiles: Image (SFC/P1),
-    Split Transport (SFC/P2), HTTP Hints (SFC/P3), Preprocessing (SFC/P4), and Directory
-    (SFC/P5).</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies the Self-Describing Resilient Container
+       (SFC) file format, a general-purpose binary container format
+       designed for reliable transmission of arbitrary file data over
+       unreliable, bandwidth-constrained, or asynchronous channels
+       including physical media hand-carry, multi-session transfers,
+       and heterogeneous delivery paths.
+
+       SFC encapsulates any file or directory tree into independently
+       addressable, self-identifying chunks.  Each chunk carries
+       sufficient metadata to identify itself and verify its own
+       integrity in isolation.  Full reconstruction additionally requires
+       a Global Header; this distinction is made explicit throughout.
+
+       This document defines a Core specification and five optional
+       Profiles: Image (SFC/P1), Split Transport (SFC/P2), HTTP Hints
+       (SFC/P3), Preprocessing (SFC/P4), and Directory (SFC/P5).</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-sfc-container-format-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sfc-container-format-00
     docidentifier:
     - content: draft-sfc-container-format-00
       type: Internet-Draft
@@ -45,7 +53,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sfc-container-format-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sfc-container-format-01
     docidentifier:
     - content: draft-sfc-container-format-01
       type: Internet-Draft
@@ -54,4 +64,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

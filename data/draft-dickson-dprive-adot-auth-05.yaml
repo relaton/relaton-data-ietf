@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Authenticated DNS over TLS to Authoritative Servers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dickson-dprive-adot-auth-05
 docidentifier:
+- content: draft-dickson-dprive-adot-auth
+  type: Internet-Draft
 - content: draft-dickson-dprive-adot-auth-05
   type: Internet-Draft
   primary: true
-- content: I-D.dickson-dprive-adot-auth
-  type: IETF
-  scope: anchor
 docnumber: I-D.dickson-dprive-adot-auth
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: GoDaddy
+        - language: en
+          content: GoDaddy
 version:
 - content: '05'
 language:
@@ -53,22 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This Internet Draft proposes a mechanism for DNS resolvers to discover
-    support for TLS transport to authoritative DNS servers, to validate this indication
-    of support, and to authenticate the TLS certificates involved. This requires that
-    the name server _names_ are in a DNSSEC signed zone. This also requires that the
-    delegation of the zone served is protected by [I-D.dickson-dnsop-ds-hack], since
-    the NS names are the keys used for discovery of TLS transport support. Additional
-    recommendations relate to use of various techniques for efficiency and scalability,
-    and new EDNS options to minimize round trips and for signaling between clients
-    and resolvers.</p>"
-  format: text/html
+  content: |-
+    <p>This Internet Draft proposes a mechanism for DNS resolvers to
+       discover support for TLS transport to authoritative DNS servers, to
+       validate this indication of support, and to authenticate the TLS
+       certificates involved.
+
+       This requires that the name server _names_ are in a DNSSEC signed
+       zone.
+
+       This also requires that the delegation of the zone served is
+       protected by [I-D.dickson-dnsop-ds-hack], since the NS names are the
+       keys used for discovery of TLS transport support.
+
+       Additional recommendations relate to use of various techniques for
+       efficiency and scalability, and new EDNS options to minimize round
+       trips and for signaling between clients and resolvers.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-dickson-dprive-adot-auth-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dickson-dprive-adot-auth-04
     docidentifier:
     - content: draft-dickson-dprive-adot-auth-04
       type: Internet-Draft
@@ -77,7 +86,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-dickson-dprive-adot-auth-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dickson-dprive-adot-auth-06
     docidentifier:
     - content: draft-dickson-dprive-adot-auth-06
       type: Internet-Draft
@@ -88,10 +99,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-dickson-dprive-adot-auth-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

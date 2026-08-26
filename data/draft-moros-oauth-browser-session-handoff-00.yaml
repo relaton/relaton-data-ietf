@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Browser Session Establishment Using OAuth 2.0 Token Exchange and Short-Lived
     Authorization Codes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-moros-oauth-browser-session-handoff-00
 docidentifier:
+- content: draft-moros-oauth-browser-session-handoff
+  type: Internet-Draft
 - content: draft-moros-oauth-browser-session-handoff-00
   type: Internet-Draft
   primary: true
-- content: I-D.moros-oauth-browser-session-handoff
-  type: IETF
-  scope: anchor
 docnumber: I-D.moros-oauth-browser-session-handoff
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gio
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Midas Labs
+        - language: en
+          content: Midas Labs
 version:
 - content: '00'
 language:
@@ -54,30 +55,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a usage profile that composes OAuth 2.0 Token
-    Exchange [RFC8693] with a short-lived, single-use authorization code to establish
-    an authenticated browser session at a Relying Party (RP) on behalf of a user authenticated
-    at an Identity Provider (IdP) operating an independent OAuth 2.0 Security Token
-    Service (STS). The server-to-server leg uses RFC 8693 to convey user identity
-    and authorization context to the RP's STS, which issues an RP-scoped access token.
-    A short-lived opaque code is then used to mediate delivery of session state into
-    the user's browser without ever exposing the access token on the front channel.
-    The profile is designed to avoid the class of front-channel token leakage (browser
-    history, HTTP Referer header, intermediary access logs) that motivated the deprecation
-    of the OAuth 2.0 implicit grant in [RFC9700]. The profile also defines a minimum
-    claims contract on the RP-issued access token to enable stateless authorization
-    enforcement at the RP without synchronous callbacks to the IdP.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a usage profile that composes OAuth 2.0 Token
+       Exchange [RFC8693] with a short-lived, single-use authorization code
+       to establish an authenticated browser session at a Relying Party (RP)
+       on behalf of a user authenticated at an Identity Provider (IdP)
+       operating an independent OAuth 2.0 Security Token Service (STS).  The
+       server-to-server leg uses RFC 8693 to convey user identity and
+       authorization context to the RP's STS, which issues an RP-scoped
+       access token.  A short-lived opaque code is then used to mediate
+       delivery of session state into the user's browser without ever
+       exposing the access token on the front channel.
+
+       The profile is designed to avoid the class of front-channel token
+       leakage (browser history, HTTP Referer header, intermediary access
+       logs) that motivated the deprecation of the OAuth 2.0 implicit grant
+       in [RFC9700].  The profile also defines a minimum claims contract on
+       the RP-issued access token to enable stateless authorization
+       enforcement at the RP without synchronous callbacks to the IdP.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-moros-oauth-browser-session-handoff-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

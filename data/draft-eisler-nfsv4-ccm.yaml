@@ -1,11 +1,12 @@
 ---
 id: drafteislernfsv4ccm
 schema_version: v1.5.6
+formattedref:
+  content: draft-eisler-nfsv4-ccm
 title:
 - language: en
   script: Latn
   content: 'CCM: The Credential Cache GSS Mechanism'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-eisler-nfsv4-ccm-00
@@ -19,22 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a new mechanism under the GSS [RFC2743]. Some
-    protocols, such as RPCSEC_GSS [RFC2203], use GSS to authenticate every message
-    transfer, thereby incurring significant overhead due to the costs of cryptographic
-    computation. While hardware-based cryptographic accelerators can mitigate such
-    overhead, it is more likely that acceleration will be available for lower layer
-    protocols, such as IPsec [RFC2401] than for upper layer protocols like RPCSEC_GSS.
-    CCM can be used as a way to allow GSS mechanism- independent upper layer protocols
-    to leverage the data stream protections of lower layer protocols, without the
-    inconvenience of modifying the upper layer protocol to do so.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a new mechanism under the GSS [RFC2743].
+    Some protocols, such as RPCSEC_GSS [RFC2203], use GSS to authenticate
+    every message transfer, thereby incurring significant overhead due to
+    the costs of cryptographic computation. While hardware-based
+    cryptographic accelerators can mitigate such overhead, it is more
+    likely that acceleration will be available for lower layer protocols,
+    such as IPsec [RFC2401] than for upper layer protocols like
+    RPCSEC_GSS.  CCM can be used as a way to allow GSS mechanism-
+    independent upper layer protocols to leverage the data stream
+    protections of lower layer protocols, without the inconvenience of
+    modifying the upper layer protocol to do so.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-eisler-nfsv4-ccm-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-eisler-nfsv4-ccm-00
     docidentifier:
     - content: draft-eisler-nfsv4-ccm-00
       type: Internet-Draft
@@ -43,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

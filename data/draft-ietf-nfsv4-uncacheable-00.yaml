@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Adding an Uncacheable Attribute to NFSv4.2
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-00
 docidentifier:
+- content: draft-ietf-nfsv4-uncacheable
+  type: Internet-Draft
 - content: draft-ietf-nfsv4-uncacheable-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-nfsv4-uncacheable
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-nfsv4-uncacheable
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hammerspace
+        - language: en
+          content: Hammerspace
 version:
 - content: '00'
 language:
@@ -53,26 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Network File System version 4.2 (NFSv4.2) allows a client to cache
-    both metadata and data for file objects, as well as metadata for directory objects.
-    While caching directory entries (dirents) can improve performance, it can also
-    prevent the server from enforcing access control on individual dirents. Similarly,
-    caching file data can lead to performance issues if the cache hit rate is low.
-    This document introduces a new uncacheable attribute for NFSv4. Files and dirents
-    marked as uncacheable MUST NOT be stored in client-side caches. This ensures data
-    consistency and integrity by requiring clients to always retrieve the most recent
-    data directly from the server. This document extends NFSv4.2 (see RFC7862).</p>"
-  format: text/html
+  content: |-
+    <p>The Network File System version 4.2 (NFSv4.2) allows a client to
+       cache both metadata and data for file objects, as well as metadata
+       for directory objects.  While caching directory entries (dirents) can
+       improve performance, it can also prevent the server from enforcing
+       access control on individual dirents.  Similarly, caching file data
+       can lead to performance issues if the cache hit rate is low.  This
+       document introduces a new uncacheable attribute for NFSv4.  Files and
+       dirents marked as uncacheable MUST NOT be stored in client-side
+       caches.  This ensures data consistency and integrity by requiring
+       clients to always retrieve the most recent data directly from the
+       server.  This document extends NFSv4.2 (see RFC7862).</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-nfsv4-uncacheable-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

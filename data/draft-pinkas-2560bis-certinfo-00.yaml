@@ -7,17 +7,15 @@ title:
   script: Latn
   content: CertInfo single response extension Update to OCSP < draft-pinkas-2560bis-certinfo-00.txt
     >
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pinkas-2560bis-certinfo-00
 docidentifier:
+- content: draft-pinkas-2560bis-certinfo
+  type: Internet-Draft
 - content: draft-pinkas-2560bis-certinfo-00
   type: Internet-Draft
   primary: true
-- content: I-D.pinkas-2560bis-certinfo
-  type: IETF
-  scope: anchor
 docnumber: I-D.pinkas-2560bis-certinfo
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Denis
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bull SAS
+        - language: en
+          content: Bull SAS
 version:
 - content: '00'
 language:
@@ -54,26 +55,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>OCSP [RFC2560] has been designed to allow an OCSP server to use any
-    kind of trustable information to answer to a client varying from CRLs to an access
-    to a database of issued certificates. In its original version, OCSP does not allow
-    taking full advantage of an access to a database of issued certificates. When
-    a database of issued certificates is used by an OCSP server, this document explains
-    how the OCSP server shall respond and how OCSP clients shall react. The proposal
-    is intended to update 2560bis. It defines a new single extension in a single response,
-    called certInfo. The extension is non critical. The meaning of "good", "revoked"
-    and "unknown" are unchanged.</p>
-  format: text/html
+  content: |-
+    <p>OCSP [RFC2560] has been designed to allow an OCSP server to use
+       any kind of trustable information to answer to a client varying
+       from CRLs to an access to a database of issued certificates.
+
+       In its original version, OCSP does not allow taking full advantage
+       of an access to a database of issued certificates.
+
+       When a database of issued certificates is used by an OCSP server,
+       this document explains how the OCSP server shall respond and how
+       OCSP clients shall react.
+
+       The proposal is intended to update 2560bis. It defines a new single
+       extension in a single response, called certInfo.  The extension is
+       non critical.  The meaning of "good", "revoked" and "unknown" are
+       unchanged.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pinkas-2560bis-certinfo-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

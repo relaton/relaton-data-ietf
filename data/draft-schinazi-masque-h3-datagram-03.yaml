@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Using QUIC Datagrams with HTTP/3
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-schinazi-masque-h3-datagram-03
 docidentifier:
+- content: draft-schinazi-masque-h3-datagram
+  type: Internet-Draft
 - content: draft-schinazi-masque-h3-datagram-03
   type: Internet-Draft
   primary: true
-- content: I-D.schinazi-masque-h3-datagram
-  type: IETF
-  scope: anchor
 docnumber: I-D.schinazi-masque-h3-datagram
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - language: en
+          content: Google LLC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lucas
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - language: en
+          content: Cloudflare
 version:
 - content: '03'
 language:
@@ -75,33 +79,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The QUIC DATAGRAM extension provides application protocols running
-    over QUIC with a mechanism to send unreliable data while leveraging the security
-    and congestion-control properties of QUIC. However, QUIC DATAGRAM frames do not
-    provide a means to demultiplex application contexts. This document defines how
-    to use QUIC DATAGRAM frames when the application protocol running over QUIC is
-    HTTP/3 by adding an identifier at the start of the frame payload. This allows
-    HTTP messages to convey related information using unreliable DATAGRAM frames,
-    ensuring those frames are properly associated with an HTTP message. Discussion
-    of this work is encouraged to happen on the MASQUE IETF mailing list (masque@ietf.org
-    (mailto:masque@ietf.org)) or on the GitHub repository which contains the draft:
-    https://github.com/DavidSchinazi/draft-h3-datagram.</p>"
-  format: text/html
+  content: |-
+    <p>The QUIC DATAGRAM extension provides application protocols running
+       over QUIC with a mechanism to send unreliable data while leveraging
+       the security and congestion-control properties of QUIC.  However,
+       QUIC DATAGRAM frames do not provide a means to demultiplex
+       application contexts.  This document defines how to use QUIC DATAGRAM
+       frames when the application protocol running over QUIC is HTTP/3 by
+       adding an identifier at the start of the frame payload.  This allows
+       HTTP messages to convey related information using unreliable DATAGRAM
+       frames, ensuring those frames are properly associated with an HTTP
+       message.
+
+       Discussion of this work is encouraged to happen on the MASQUE IETF
+       mailing list (masque@ietf.org (mailto:masque@ietf.org)) or on the
+       GitHub repository which contains the draft:
+       https://github.com/DavidSchinazi/draft-h3-datagram.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-schinazi-masque-h3-datagram-01
-      format: text/plain
+      content: draft-schinazi-masque-h3-datagram-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schinazi-masque-h3-datagram-02
     docidentifier:
-    - content: draft-schinazi-masque-h3-datagram-01
+    - content: draft-schinazi-masque-h3-datagram-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-schinazi-masque-h3-datagram-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schinazi-masque-h3-datagram-04
     docidentifier:
     - content: draft-schinazi-masque-h3-datagram-04
       type: Internet-Draft
@@ -112,10 +124,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-schinazi-masque-h3-datagram-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

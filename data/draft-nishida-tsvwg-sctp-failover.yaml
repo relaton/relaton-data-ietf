@@ -1,11 +1,12 @@
 ---
 id: draftnishidatsvwgsctpfailover
 schema_version: v1.5.6
+formattedref:
+  content: draft-nishida-tsvwg-sctp-failover
 title:
 - language: en
   script: Latn
   content: Quick Failover Algorithm in SCTP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-nishida-tsvwg-sctp-failover-05
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>One of the major advantages in SCTP is supporting multi-homing communication.
-    If a multi-homed end-point has redundant network connections, SCTP sessions can
-    have a good chance to survive from network failures by migrating inactive network
-    to active one. However, if we follow the SCTP standard, there can be significant
-    delay for the network migration. During this migration period, SCTP cannot transmit
-    much data to the destination. This issue drastically impairs the usability of
-    SCTP in some situations. This memo describes the issue of SCTP failover mechanism
-    and discuss its solutions which require minimal modification to the current standard.</p>"
-  format: text/html
+  content: |-
+    <p>One of the major advantages in SCTP is supporting multi-homing
+       communication.  If a multi-homed end-point has redundant network
+       connections, SCTP sessions can have a good chance to survive from
+       network failures by migrating inactive network to active one.
+       However, if we follow the SCTP standard, there can be significant
+       delay for the network migration.  During this migration period, SCTP
+       cannot transmit much data to the destination.  This issue drastically
+       impairs the usability of SCTP in some situations.  This memo
+       describes the issue of SCTP failover mechanism and discuss its
+       solutions which require minimal modification to the current standard.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-nishida-tsvwg-sctp-failover-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nishida-tsvwg-sctp-failover-04
     docidentifier:
     - content: draft-nishida-tsvwg-sctp-failover-04
       type: Internet-Draft
@@ -42,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-nishida-tsvwg-sctp-failover-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nishida-tsvwg-sctp-failover-05
     docidentifier:
     - content: draft-nishida-tsvwg-sctp-failover-05
       type: Internet-Draft
@@ -51,4 +58,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

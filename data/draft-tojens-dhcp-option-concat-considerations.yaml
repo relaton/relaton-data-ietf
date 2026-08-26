@@ -1,11 +1,12 @@
 ---
 id: drafttojensdhcpoptionconcatconsiderations
 schema_version: v1.5.6
+formattedref:
+  content: draft-tojens-dhcp-option-concat-considerations
 title:
 - language: en
   script: Latn
   content: DHCP Option Concatenation Considerations
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-tojens-dhcp-option-concat-considerations-01
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DHCP has a length limit of 255 on individual options because of its
-    one-byte length field for options. To accommodate longer options, splitting option
-    data across multiple instances of the same Option Type is defined by RFC 3396.
-    However, this mechanism was defined to require support for all option types. This
-    has led to real-world implementations in the years since the RFC was published
-    to deviate from these requirements to avoid breaking basic functionality. This
-    document updates RFC 3396 to be more flexible regarding when DHCP agents are required
-    to concatenate options to reflect deployement experiences.</p>"
-  format: text/html
+  content: |-
+    <p>DHCP has a length limit of 255 on individual options because of its
+       one-byte length field for options.  To accommodate longer options,
+       splitting option data across multiple instances of the same Option
+       Type is defined by RFC 3396.  However, this mechanism was defined to
+       require support for all option types.  This has led to real-world
+       implementations in the years since the RFC was published to deviate
+       from these requirements to avoid breaking basic functionality.  This
+       document updates RFC 3396 to be more flexible regarding when DHCP
+       agents are required to concatenate options to reflect deployement
+       experiences.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-tojens-dhcp-option-concat-considerations-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tojens-dhcp-option-concat-considerations-00
     docidentifier:
     - content: draft-tojens-dhcp-option-concat-considerations-00
       type: Internet-Draft
@@ -42,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-tojens-dhcp-option-concat-considerations-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tojens-dhcp-option-concat-considerations-01
     docidentifier:
     - content: draft-tojens-dhcp-option-concat-considerations-01
       type: Internet-Draft
@@ -51,4 +58,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

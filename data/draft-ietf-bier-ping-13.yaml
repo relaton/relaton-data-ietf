@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BIER Ping and Trace
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-ping-13
 docidentifier:
+- content: draft-ietf-bier-ping
+  type: Internet-Draft
 - content: draft-ietf-bier-ping-13
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-bier-ping
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-bier-ping
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nagendra
       - language: en
+        script: Latn
         initial: "N"
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -45,15 +46,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc.
+        - language: en
+          content: Cisco Systems, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Carlos
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: North Carolina State University
+        - language: en
+          content: North Carolina State University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mach
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -89,15 +96,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -111,7 +121,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 version:
 - content: '13'
 language:
@@ -121,36 +132,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
-    optimal multicast forwarding through a "BIER domain" without requiring intermediate
-    routers to maintain any multicast-related per- flow state. BIER also does not
-    require any explicit tree-building protocol for its operation. A multicast data
-    packet enters a BIER domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves
-    the BIER domain at one or more "Bit-Forwarding Egress Routers" (BFERs). The BFIR
-    router adds a BIER header to the packet. The BIER header contains a bit-string
-    in which each bit represents exactly one BFER to forward the packet to. The set
-    of BFERs to which the multicast packet needs to be forwarded is expressed by setting
-    the bits that correspond to those routers in the BIER header. This document describes
-    the mechanism and basic BIER OAM packet format that can be used to perform failure
-    detection and isolation on the BIER data plane.</p>
-  format: text/html
+  content: |-
+    <p>Bit Index Explicit Replication (BIER) is an architecture that
+       provides optimal multicast forwarding through a "BIER domain" without
+       requiring intermediate routers to maintain any multicast-related per-
+       flow state.  BIER also does not require any explicit tree-building
+       protocol for its operation.  A multicast data packet enters a BIER
+       domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves the
+       BIER domain at one or more "Bit-Forwarding Egress Routers" (BFERs).
+       The BFIR router adds a BIER header to the packet.  The BIER header
+       contains a bit-string in which each bit represents exactly one BFER
+       to forward the packet to.  The set of BFERs to which the multicast
+       packet needs to be forwarded is expressed by setting the bits that
+       correspond to those routers in the BIER header.
+
+       This document describes the mechanism and basic BIER OAM packet
+       format that can be used to perform failure detection and isolation on
+       the BIER data plane.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-bier-ping-08
-      format: text/plain
+      content: draft-ietf-bier-ping-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-ping-12
     docidentifier:
-    - content: draft-ietf-bier-ping-08
+    - content: draft-ietf-bier-ping-12
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-bier-ping-18
-      format: text/plain
+      content: draft-ietf-bier-ping-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-ping-14
     docidentifier:
-    - content: draft-ietf-bier-ping-18
+    - content: draft-ietf-bier-ping-14
       type: Internet-Draft
       primary: true
 series:
@@ -159,10 +178,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-bier-ping-13
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

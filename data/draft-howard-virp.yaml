@@ -1,11 +1,12 @@
 ---
 id: drafthowardvirp
 schema_version: v1.5.6
+formattedref:
+  content: draft-howard-virp
 title:
 - language: en
   script: Latn
   content: 'VIRP: Verified Infrastructure Response Protocol'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-howard-virp-06
@@ -19,40 +20,51 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Verified Infrastructure Response Protocol (VIRP) defines a trust
-    framework for operators -- human or autonomous -- acting on live network infrastructure.
-    As operations shift toward agentic and automated systems that can autonomously
-    configure, audit, and remediate production environments, the absence of a verifiable
-    chain of custody for observations and actions introduces fundamental risks: fabricated
-    telemetry, unauthorized state changes, and the inability to distinguish legitimate
-    operations from compromise. VIRP routes every observation and every authorization
-    decision through a designated collection-and- verification boundary that the requesting
-    party does not control. Observations are authenticated at collection time using
-    HMAC-SHA256; in session-bound mode (Section 6.4) authentication uses a per-session
-    key and binds the response to session, device, sequence, and a command-digest
-    field. Validating the command binding additionally requires trusted request context
-    from which the verifier recomputes the command digest. A two-channel architecture
-    separates read-only Observation from write-intent Intent, and trust tiers (GREEN/YELLOW/RED/BLACK)
-    govern action authorization with human-in-the-loop controls for elevated operations.
-    VIRP's observation and chain-integrity guarantees are symmetric and explicitly
-    scoped by key role; approval and federation records use asymmetric Ed25519 signatures.
-    Distinct key roles authenticate observations, chain entries, intents, approvals,
-    and federation records (Section 6.1), though the reference implementation currently
-    reuses one key across the v1-observation and v2-derivation roles; a holder of
-    a symmetric key can both verify and forge within that key's scope, so VIRP does
-    not provide publicly verifiable observation origin and does not defend a record
-    against an adversary holding the relevant key or controlling the collection boundary.
-    Authentication does not certify that a response reflects the managed device's
-    true state, only that the boundary obtained and authenticated those bytes for
-    that recorded request. Asymmetric proof of origin and external anchoring of the
-    chain are distinct, independent items of future work (Section 17).</p>"
-  format: text/html
+  content: |-
+    <p>The Verified Infrastructure Response Protocol (VIRP) defines a trust
+       framework for operators -- human or autonomous -- acting on live
+       network infrastructure.  As operations shift toward agentic and
+       automated systems that can autonomously configure, audit, and
+       remediate production environments, the absence of a verifiable chain
+       of custody for observations and actions introduces fundamental risks:
+       fabricated telemetry, unauthorized state changes, and the inability
+       to distinguish legitimate operations from compromise.  VIRP routes
+       every observation and every authorization decision through a
+       designated collection-and- verification boundary that the requesting
+       party does not control.  Observations are authenticated at collection
+       time using HMAC-SHA256; in session-bound mode (Section 6.4)
+       authentication uses a per-session key and binds the response to
+       session, device, sequence, and a command-digest field.  Validating
+       the command binding additionally requires trusted request context
+       from which the verifier recomputes the command digest.  A two-channel
+       architecture separates read-only Observation from write-intent
+       Intent, and trust tiers (GREEN/YELLOW/RED/BLACK) govern action
+       authorization with human-in-the-loop controls for elevated
+       operations.
+
+       VIRP's observation and chain-integrity guarantees are symmetric and
+       explicitly scoped by key role; approval and federation records use
+       asymmetric Ed25519 signatures.  Distinct key roles authenticate
+       observations, chain entries, intents, approvals, and federation
+       records (Section 6.1), though the reference implementation currently
+       reuses one key across the v1-observation and v2-derivation roles; a
+       holder of a symmetric key can both verify and forge within that key's
+       scope, so VIRP does not provide publicly verifiable observation
+       origin and does not defend a record against an adversary holding the
+       relevant key or controlling the collection boundary.  Authentication
+       does not certify that a response reflects the managed device's true
+       state, only that the boundary obtained and authenticated those bytes
+       for that recorded request.  Asymmetric proof of origin and external
+       anchoring of the chain are distinct, independent items of future work
+       (Section 17).</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-howard-virp-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-00
     docidentifier:
     - content: draft-howard-virp-00
       type: Internet-Draft
@@ -61,7 +73,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-howard-virp-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-01
     docidentifier:
     - content: draft-howard-virp-01
       type: Internet-Draft
@@ -70,7 +84,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-howard-virp-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-02
     docidentifier:
     - content: draft-howard-virp-02
       type: Internet-Draft
@@ -79,7 +95,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-howard-virp-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-03
     docidentifier:
     - content: draft-howard-virp-03
       type: Internet-Draft
@@ -88,7 +106,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-howard-virp-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-04
     docidentifier:
     - content: draft-howard-virp-04
       type: Internet-Draft
@@ -97,7 +117,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-howard-virp-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-05
     docidentifier:
     - content: draft-howard-virp-05
       type: Internet-Draft
@@ -106,7 +128,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-howard-virp-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-06
     docidentifier:
     - content: draft-howard-virp-06
       type: Internet-Draft
@@ -115,4 +139,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

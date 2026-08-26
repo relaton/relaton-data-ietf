@@ -7,17 +7,15 @@ title:
   script: Latn
   content: A Server-Side Model for Gating Agent-Initiated Human-Sourced Asynchronous
     HTTP Tasks on Payment or Entitlement
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-king-yew-choo-agentic-payments-00
 docidentifier:
+- content: draft-king-yew-choo-agentic-payments
+  type: Internet-Draft
 - content: draft-king-yew-choo-agentic-payments-00
   type: Internet-Draft
   primary: true
-- content: I-D.king-yew-choo-agentic-payments
-  type: IETF
-  scope: anchor
 docnumber: I-D.king-yew-choo-agentic-payments
 date:
 - type: published
@@ -29,10 +27,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: King
       - language: en
+        script: Latn
         initial: K
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -46,7 +47,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: True Primary
+        - language: en
+          content: True Primary
 version:
 - content: '00'
 language:
@@ -56,27 +58,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document presents a server-side model for paid, human-sourced
-    asynchronous HTTP tasks initiated by software agents acting on behalf of a principal.
-    Clients may retry after uncertain outcomes and act under authority delegated in
-    advance, while fulfilment incurs cost and may not be freely reversible. The model
-    places a payment or entitlement gate before fulfilment, maps that gate to adjacent
-    protocols, and defines a task state machine. Under stated well-formedness constraints
-    and operating assumptions, it yields gate-before-fulfilment safety, at most one
-    task per retained idempotency key, at most one gate acceptance per payment requirement,
-    and an operator-checkable record linking a delivered artefact to operator-controlled
-    records. It defines no protocol, wire format, or conformance requirements.</p>"
-  format: text/html
+  content: |-
+    <p>This document presents a server-side model for paid, human-sourced
+       asynchronous HTTP tasks initiated by software agents acting on behalf
+       of a principal.  Clients may retry after uncertain outcomes and act
+       under authority delegated in advance, while fulfilment incurs cost
+       and may not be freely reversible.
+
+       The model places a payment or entitlement gate before fulfilment,
+       maps that gate to adjacent protocols, and defines a task state
+       machine.  Under stated well-formedness constraints and operating
+       assumptions, it yields gate-before-fulfilment safety, at most one
+       task per retained idempotency key, at most one gate acceptance per
+       payment requirement, and an operator-checkable record linking a
+       delivered artefact to operator-controlled records.  It defines no
+       protocol, wire format, or conformance requirements.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-king-yew-choo-agentic-payments-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: WIMSE Service to Service Authentication
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-wimse-s2s-protocol-02
 docidentifier:
+- content: draft-ietf-wimse-s2s-protocol
+  type: Internet-Draft
 - content: draft-ietf-wimse-s2s-protocol-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-wimse-s2s-protocol
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-wimse-s2s-protocol
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ping Identity
+        - language: en
+          content: Ping Identity
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Joe
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Venafi
+        - language: en
+          content: Venafi
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Arndt
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SPIRL
+        - language: en
+          content: SPIRL
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yaron
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Intuit
+        - language: en
+          content: Intuit
 version:
 - content: '02'
 language:
@@ -119,25 +129,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The WIMSE architecture defines authentication and authorization for
-    software workloads in a variety of runtime environments, from the most basic ones
-    up to complex multi-service, multi-cloud, multi- tenant deployments. This document
-    defines the simplest, atomic unit of this architecture: the protocol between two
-    workloads that need to verify each other's identity in order to communicate securely.
-    The scope of this protocol is a single HTTP request-and-response pair. To address
-    the needs of different setups, we propose two protocols, one at the application
-    level and one that makes use of trusted TLS transport. These two protocols are
-    compatible, in the sense that a single call chain can have some calls use one
-    protocol and some use the other. Service A can call Service B with mutual TLS
-    authentication, while the next call from Service B to Service C would be authenticated
-    at the application level.</p>"
-  format: text/html
+  content: |-
+    <p>The WIMSE architecture defines authentication and authorization for
+       software workloads in a variety of runtime environments, from the
+       most basic ones up to complex multi-service, multi-cloud, multi-
+       tenant deployments.  This document defines the simplest, atomic unit
+       of this architecture: the protocol between two workloads that need to
+       verify each other's identity in order to communicate securely.  The
+       scope of this protocol is a single HTTP request-and-response pair.
+       To address the needs of different setups, we propose two protocols,
+       one at the application level and one that makes use of trusted TLS
+       transport.  These two protocols are compatible, in the sense that a
+       single call chain can have some calls use one protocol and some use
+       the other.  Service A can call Service B with mutual TLS
+       authentication, while the next call from Service B to Service C would
+       be authenticated at the application level.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-wimse-s2s-protocol-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-wimse-s2s-protocol-01
     docidentifier:
     - content: draft-ietf-wimse-s2s-protocol-01
       type: Internet-Draft
@@ -145,10 +159,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-wimse-s2s-protocol-04
-      format: text/plain
+      content: draft-ietf-wimse-s2s-protocol-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-wimse-s2s-protocol-03
     docidentifier:
-    - content: draft-ietf-wimse-s2s-protocol-04
+    - content: draft-ietf-wimse-s2s-protocol-03
       type: Internet-Draft
       primary: true
 series:
@@ -157,10 +173,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-wimse-s2s-protocol-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

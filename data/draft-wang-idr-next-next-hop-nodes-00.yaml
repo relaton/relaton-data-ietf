@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Next-next Hop Nodes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-idr-next-next-hop-nodes-00
 docidentifier:
+- content: draft-wang-idr-next-next-hop-nodes
+  type: Internet-Draft
 - content: draft-wang-idr-next-next-hop-nodes-00
   type: Internet-Draft
   primary: true
-- content: I-D.wang-idr-next-next-hop-nodes
-  type: IETF
-  scope: anchor
 docnumber: I-D.wang-idr-next-next-hop-nodes
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kevin
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeffrey
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 version:
 - content: '00'
 language:
@@ -75,25 +79,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>BGP speakers learn their next hop addresse for NLRI in [RFC4271] in
-    the NEXT_HOP field and in [RFC4760] in the "Network Address of Next Hop" field.
-    Under certain circumstances, it might be desirable for a BGP speaker to know both
-    the next hops and the next-next hops of NLRI to make optimal forwarding decisions.
-    One such example is global load balancing (GLB) in a Clos network. [I-D.ietf-idr-entropy-label]
-    defines the "Next Hop Dependent Capabilities Attribute" (NHC) which allows a BGP
-    speaker to signal the forwarding capabilities associated with a given next hop.
-    This document defines a new NHC capability, the Next-next Hop Nodes (NNHN) capability,
-    which can be used to advertise the next-next hop nodes associated with a given
-    next hop.</p>
-  format: text/html
+  content: |-
+    <p>BGP speakers learn their next hop addresse for NLRI in [RFC4271] in
+       the NEXT_HOP field and in [RFC4760] in the "Network Address of Next
+       Hop" field.  Under certain circumstances, it might be desirable for a
+       BGP speaker to know both the next hops and the next-next hops of NLRI
+       to make optimal forwarding decisions.  One such example is global
+       load balancing (GLB) in a Clos network.
+
+       [I-D.ietf-idr-entropy-label] defines the "Next Hop Dependent
+       Capabilities Attribute" (NHC) which allows a BGP speaker to signal
+       the forwarding capabilities associated with a given next hop.
+
+       This document defines a new NHC capability, the Next-next Hop Nodes
+       (NNHN) capability, which can be used to advertise the next-next hop
+       nodes associated with a given next hop.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-wang-idr-next-next-hop-nodes-04
-      format: text/plain
+      content: draft-wang-idr-next-next-hop-nodes-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-next-next-hop-nodes-01
     docidentifier:
-    - content: draft-wang-idr-next-next-hop-nodes-04
+    - content: draft-wang-idr-next-next-hop-nodes-01
       type: Internet-Draft
       primary: true
 series:
@@ -102,10 +112,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wang-idr-next-next-hop-nodes-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

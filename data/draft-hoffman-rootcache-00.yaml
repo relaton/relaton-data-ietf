@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'RootCache: Filling Resolver Caches with Root Zone Records'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hoffman-rootcache-00
 docidentifier:
+- content: draft-hoffman-rootcache
+  type: Internet-Draft
 - content: draft-hoffman-rootcache-00
   type: Internet-Draft
   primary: true
-- content: I-D.hoffman-rootcache
-  type: IETF
-  scope: anchor
 docnumber: I-D.hoffman-rootcache
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ICANN
+        - language: en
+          content: ICANN
 version:
 - content: '00'
 language:
@@ -55,21 +57,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Some DNS recursive resolver operators want to reduce the number of
-    queries they send to the root servers of the global DNS in order to give faster
-    responses to their clients. Some DNS recursive resolver operators want to prevent
-    snooping by third parties of requests sent to DNS root servers. In both cases,
-    resolvers can reduce the number of queries sent to root server, and thus prevent
-    observation of requests, by caching a copy of the full root zone. This document
-    shows how a resolver can securely receive the full root zone and put it into the
-    resolver's cache. This document obsoletes RFC 8806.</p>"
-  format: text/html
+  content: |-
+    <p>Some DNS recursive resolver operators want to reduce the number of
+       queries they send to the root servers of the global DNS in order to
+       give faster responses to their clients.  Some DNS recursive resolver
+       operators want to prevent snooping by third parties of requests sent
+       to DNS root servers.  In both cases, resolvers can reduce the number
+       of queries sent to root server, and thus prevent observation of
+       requests, by caching a copy of the full root zone.  This document
+       shows how a resolver can securely receive the full root zone and put
+       it into the resolver's cache.
+
+       This document obsoletes RFC 8806.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-hoffman-rootcache-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hoffman-rootcache-01
     docidentifier:
     - content: draft-hoffman-rootcache-01
       type: Internet-Draft
@@ -80,10 +87,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hoffman-rootcache-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

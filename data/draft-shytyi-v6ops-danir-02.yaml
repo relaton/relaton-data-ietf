@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DHCPv6_PD, PDP and NDP Implementation in IoT Router (DANIR)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-shytyi-v6ops-danir-02
 docidentifier:
+- content: draft-shytyi-v6ops-danir
+  type: Internet-Draft
 - content: draft-shytyi-v6ops-danir-02
   type: Internet-Draft
   primary: true
-- content: I-D.shytyi-v6ops-danir
-  type: IETF
-  scope: anchor
 docnumber: I-D.shytyi-v6ops-danir
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dmytro
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Société Française du Radiotéléphone(SFR)
+        - language: en
+          content: Société Française du Radiotéléphone(SFR)
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Giorgio
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -68,8 +71,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexandre
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -83,7 +88,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CEA, LIST
+        - language: en
+          content: CEA, LIST
 version:
 - content: '02'
 language:
@@ -93,37 +99,45 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides a description of the implementation of Dynamic
-    Host Configuration Protocol version 6 Prefix Delegation, Neighbour Discovery Protocol
-    and of the use of the Packet Data Protocol in an Internet of Things Router. This
-    Internet of Things Router is connected on a cellular network; it is a DHCPv6-PD
-    Client and it requests a /56 pool of prefixes from the server; the DHCPv6-PD server
-    is placed in the PGW and is a part of the cellular infrastructure. After the pool
-    of prefixes is delegated, the Internet of Things Router derives sub-prefixes from
-    the prefix pool; each one of these sub-prefixes is aimed at one ingress interface.
-    After the Internet of Things Router finishes the network prefix assignment procedure,
-    it advertises the network prefixes on the ingress links by using the Neighbour
-    Discovery protocol. Finally, when Hosts receive the sub-prefixes via Router Adverticement
-    messages, they configure the Global Unique Address with the Stateless Address
-    Auto-configuration protocol.</p>"
-  format: text/html
+  content: |-
+    <p>This document provides a description of the implementation of Dynamic
+       Host Configuration Protocol version 6 Prefix Delegation, Neighbour
+       Discovery Protocol and of the use of the Packet Data Protocol in an
+       Internet of Things Router.  This Internet of Things Router is
+       connected on a cellular network; it is a DHCPv6-PD Client and it
+       requests a /56 pool of prefixes from the server; the DHCPv6-PD server
+       is placed in the PGW and is a part of the cellular infrastructure.
+       After the pool of prefixes is delegated, the Internet of Things
+       Router derives sub-prefixes from the prefix pool; each one of these
+       sub-prefixes is aimed at one ingress interface.
+
+       After the Internet of Things Router finishes the network prefix
+       assignment procedure, it advertises the network prefixes on the
+       ingress links by using the Neighbour Discovery protocol.  Finally,
+       when Hosts receive the sub-prefixes via Router Adverticement
+       messages, they configure the Global Unique Address with the Stateless
+       Address Auto-configuration protocol.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-shytyi-v6ops-danir-00
-      format: text/plain
+      content: draft-shytyi-v6ops-danir-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-shytyi-v6ops-danir-01
     docidentifier:
-    - content: draft-shytyi-v6ops-danir-00
+    - content: draft-shytyi-v6ops-danir-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-shytyi-v6ops-danir-05
-      format: text/plain
+      content: draft-shytyi-v6ops-danir-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-shytyi-v6ops-danir-03
     docidentifier:
-    - content: draft-shytyi-v6ops-danir-05
+    - content: draft-shytyi-v6ops-danir-03
       type: Internet-Draft
       primary: true
 series:
@@ -132,10 +146,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-shytyi-v6ops-danir-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

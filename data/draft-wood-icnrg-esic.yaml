@@ -1,11 +1,12 @@
 ---
 id: draftwoodicnrgesic
 schema_version: v1.5.6
+formattedref:
+  content: draft-wood-icnrg-esic
 title:
 - language: en
   script: Latn
   content: Encrypted Sessions In CCNx (ESIC)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wood-icnrg-esic-01
@@ -19,23 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how to transport CCNx packets inside an encrypted
-    session between peers that share a traffic secret, such as that which is derived
-    from [CCNxKE]. The peers create an outer naming context to identify the encryption
-    session in one direction between the consumer and the producer. The consumer sends
-    encrypted Interest messages to the producer, who responds with encrypted Content
-    Objects. Inside the outer context, the consumer sends Interests with different
-    names, which the producer may respond to or may send InterestReturns for. There
-    does not need to be a naming relationship between the outer names and the inner
-    names. The inner content is still protected by normal CCNx authentication mechanisms
-    and possiby encrypted under other schemes.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes how to transport CCNx packets inside an
+       encrypted session between peers that share a traffic secret, such as
+       that which is derived from [CCNxKE].  The peers create an outer
+       naming context to identify the encryption session in one direction
+       between the consumer and the producer.  The consumer sends encrypted
+       Interest messages to the producer, who responds with encrypted
+       Content Objects.  Inside the outer context, the consumer sends
+       Interests with different names, which the producer may respond to or
+       may send InterestReturns for.  There does not need to be a naming
+       relationship between the outer names and the inner names.  The inner
+       content is still protected by normal CCNx authentication mechanisms
+       and possiby encrypted under other schemes.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-wood-icnrg-esic-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wood-icnrg-esic-00
     docidentifier:
     - content: draft-wood-icnrg-esic-00
       type: Internet-Draft
@@ -44,7 +49,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wood-icnrg-esic-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wood-icnrg-esic-01
     docidentifier:
     - content: draft-wood-icnrg-esic-01
       type: Internet-Draft
@@ -53,4 +60,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

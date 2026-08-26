@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DomainKeys Identified Mail Signatures v2 (DKIM2)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-spec-02
 docidentifier:
+- content: draft-ietf-dkim-dkim2-spec
+  type: Internet-Draft
 - content: draft-ietf-dkim-dkim2-spec-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-dkim-dkim2-spec
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-dkim-dkim2-spec
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Richard
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yahoo
+        - language: en
+          content: Yahoo
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wei
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bron
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fastmail Pty Ltd
+        - language: en
+          content: Fastmail Pty Ltd
 version:
 - content: '02'
 language:
@@ -97,37 +104,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>DomainKeys Identified Mail v2 (DKIM2) permits a person, role, or organization
-    that owns a signing domain to document that it has handled an email message by
-    associating their domain with the message. This is achieved by providing a hash
-    value that has been calculated on the current contents of the message and then
-    applying a cryptographic signature that covers the hash values and other details
-    about the transmission of the message. Verification is performed by querying an
-    entry within the signing domain's DNS space to retrieve an appropriate public
-    key. As a message is transferred from author to recipient systems that alter the
-    body or header fields will provide details of their changes and calculate new
-    hash values. Further signatures will be added to provide a validatable "chain".
-    This permits validators to identify the nature of changes made by intermediaries
-    and apply a reputation to the systems that made changed. DKIM2 also allows recipients
-    to detect when messages have been unexpectedly "replayed" and will ensure that
-    Delivery Status Notifications are only sent to entities that were involved in
-    the transmission of a message.</p>
-  format: text/html
+  content: |-
+    <p>DomainKeys Identified Mail v2 (DKIM2) permits a person, role, or
+       organization that owns a signing domain to document that it has
+       handled an email message by associating their domain with the
+       message.  This is achieved by providing a hash value that has been
+       calculated on the current contents of the message and then applying a
+       cryptographic signature that covers the hash values and other details
+       about the transmission of the message.  Verification is performed by
+       querying an entry within the signing domain's DNS space to retrieve
+       an appropriate public key.  As a message is transferred from author
+       to recipient systems that alter the body or header fields will
+       provide details of their changes and calculate new hash values.
+       Further signatures will be added to provide a validatable "chain".
+       This permits validators to identify the nature of changes made by
+       intermediaries and apply a reputation to the systems that made
+       changed.  DKIM2 also allows recipients to detect when messages have
+       been unexpectedly "replayed" and will ensure that Delivery Status
+       Notifications are only sent to entities that were involved in the
+       transmission of a message.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-dkim-dkim2-spec-00
-      format: text/plain
+      content: draft-ietf-dkim-dkim2-spec-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-spec-01
     docidentifier:
-    - content: draft-ietf-dkim-dkim2-spec-00
+    - content: draft-ietf-dkim-dkim2-spec-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-dkim-dkim2-spec-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-spec-03
     docidentifier:
     - content: draft-ietf-dkim-dkim2-spec-03
       type: Internet-Draft
@@ -138,10 +152,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-dkim-dkim2-spec-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

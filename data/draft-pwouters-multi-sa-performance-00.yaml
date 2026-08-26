@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IKEv2 support for per-queue Child SAs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pwouters-multi-sa-performance-00
 docidentifier:
+- content: draft-pwouters-multi-sa-performance
+  type: Internet-Draft
 - content: draft-pwouters-multi-sa-performance-00
   type: Internet-Draft
   primary: true
-- content: I-D.pwouters-multi-sa-performance
-  type: IETF
-  scope: anchor
 docnumber: I-D.pwouters-multi-sa-performance
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Antony
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: secunet Security Networks AG
+        - language: en
+          content: secunet Security Networks AG
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steffen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: secunet Security Networks AG
+        - language: en
+          content: secunet Security Networks AG
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Red Hat
+        - language: en
+          content: Red Hat
 version:
 - content: '00'
 language:
@@ -97,20 +104,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines two Notification Payload (NUM_QUEUES and QUEUE_INFO)
-    for the Internet Key Exchange Protocol Version 2 (IKEv2). These payloads add support
-    for negotiating multiple identical Child SAs that can be used to to optimize performance
-    based on the number of queues or CPUs, orcw to create multiple Child SAs for different
-    Quality of Service (QoS) levels. Using multiple identical Child Sa's has the additional
-    benefit that multiple streams have their own Sequence Number, ensuring that CPU's
-    don't have to synchronize their crypto state or disable their replay window detection.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines two Notification Payload (NUM_QUEUES and
+       QUEUE_INFO) for the Internet Key Exchange Protocol Version 2 (IKEv2).
+       These payloads add support for negotiating multiple identical Child
+       SAs that can be used to to optimize performance based on the number
+       of queues or CPUs, orcw to create multiple Child SAs for different
+       Quality of Service (QoS) levels.
+
+       Using multiple identical Child Sa's has the additional benefit that
+       multiple streams have their own Sequence Number, ensuring that CPU's
+       don't have to synchronize their crypto state or disable their replay
+       window detection.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-pwouters-multi-sa-performance-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pwouters-multi-sa-performance-01
     docidentifier:
     - content: draft-pwouters-multi-sa-performance-01
       type: Internet-Draft
@@ -121,10 +134,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pwouters-multi-sa-performance-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

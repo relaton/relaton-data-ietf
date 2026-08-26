@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Simple New Mail Notification
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gellens-notify-mail-02
 docidentifier:
+- content: draft-gellens-notify-mail
+  type: Internet-Draft
 - content: draft-gellens-notify-mail-02
   type: Internet-Draft
   primary: true
-- content: I-D.gellens-notify-mail
-  type: IETF
-  scope: anchor
 docnumber: I-D.gellens-notify-mail
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randall
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: QUALCOMM
+        - language: en
+          content: QUALCOMM
 version:
 - content: '02'
 language:
@@ -53,25 +54,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This memo documents a long-standing technique, supported by a large
-    number of mail servers, which allows users to be notified of new mail. In addition
-    to server support, there are a number of clients that support this, ranging from
-    full email clients to specialized clients whose only purpose is to receive new
-    mail notifications and alert a mail client. In brief, the server sends the string
-    "nm_notifyuser" CRLF to the finger port on the IP address (either configured or
-    last used) of the user who has received new mail. This memo provides information
-    for the Internet community.</p>
-  format: text/html
+  content: |-
+    <p>This memo documents a long-standing technique, supported by a large number of mail servers, which allows users to be notified of new mail. In addition to server support, there are a number of clients that support this, ranging from full email clients to specialized clients whose only purpose is to receive new mail notifications and alert a mail client.
+
+     In brief, the server sends the string "nm_notifyuser" CRLF to the finger port on the IP address (either configured or last used) of the user who has received new mail. This memo provides information for the Internet community.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gellens-notify-mail-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

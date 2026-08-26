@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Route Leak Prevention using Roles in Update and Open messages
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-open-policy-13
 docidentifier:
+- content: draft-ietf-idr-bgp-open-policy
+  type: Internet-Draft
 - content: draft-ietf-idr-bgp-open-policy-13
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-idr-bgp-open-policy
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-idr-bgp-open-policy
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Qrator Labs & Yandex
+        - language: en
+          content: Qrator Labs & Yandex
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Eugene
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Qrator Labs
+        - language: en
+          content: Qrator Labs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randy
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Internet Initiative Japan & Arrcus, Inc.
+        - language: en
+          content: Internet Initiative Japan & Arrcus, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Keyur
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arrcus
+        - language: en
+          content: Arrcus
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kotikalapudi
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -131,7 +143,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: USA National Institute of Standards and Technology
+        - language: en
+          content: USA National Institute of Standards and Technology
 version:
 - content: '13'
 language:
@@ -141,34 +154,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Route leaks are the propagation of BGP prefixes which violate assumptions
-    of BGP topology relationships; e.g. passing a route learned from one lateral peer
-    to another lateral peer or a transit provider, passing a route learned from one
-    transit provider to another transit provider or a lateral peer. Existing approaches
-    to leak prevention rely on marking routes by operator configuration, with no check
-    that the configuration corresponds to that of the eBGP neighbor, or enforcement
-    that the two eBGP speakers agree on the relationship. This document enhances BGP
-    OPEN to establish agreement of the (peer, customer, provider, Route Server, Route
-    Server client) relationship of two neighboring eBGP speakers to enforce appropriate
-    configuration on both sides. Propagated routes are then marked with an Only to
-    Customer (OTC) attribute according to the agreed relationship, allowing both prevention
-    and detection of route leaks.</p>"
-  format: text/html
+  content: |-
+    <p>Route leaks are the propagation of BGP prefixes which violate
+       assumptions of BGP topology relationships; e.g. passing a route
+       learned from one lateral peer to another lateral peer or a transit
+       provider, passing a route learned from one transit provider to
+       another transit provider or a lateral peer.  Existing approaches to
+       leak prevention rely on marking routes by operator configuration,
+       with no check that the configuration corresponds to that of the eBGP
+       neighbor, or enforcement that the two eBGP speakers agree on the
+       relationship.  This document enhances BGP OPEN to establish agreement
+       of the (peer, customer, provider, Route Server, Route Server client)
+       relationship of two neighboring eBGP speakers to enforce appropriate
+       configuration on both sides.  Propagated routes are then marked with
+       an Only to Customer (OTC) attribute according to the agreed
+       relationship, allowing both prevention and detection of route leaks.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-idr-bgp-open-policy-08
-      format: text/plain
+      content: draft-ietf-idr-bgp-open-policy-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-open-policy-12
     docidentifier:
-    - content: draft-ietf-idr-bgp-open-policy-08
+    - content: draft-ietf-idr-bgp-open-policy-12
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-idr-bgp-open-policy-14
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-open-policy-14
     docidentifier:
     - content: draft-ietf-idr-bgp-open-policy-14
       type: Internet-Draft
@@ -179,10 +198,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-idr-bgp-open-policy-13
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

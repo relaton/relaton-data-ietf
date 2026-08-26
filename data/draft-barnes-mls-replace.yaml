@@ -1,11 +1,12 @@
 ---
 id: draftbarnesmlsreplace
 schema_version: v1.5.6
+formattedref:
+  content: draft-barnes-mls-replace
 title:
 - language: en
   script: Latn
   content: The MLS Replace Proposal
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-barnes-mls-replace-00
@@ -19,23 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Post-compromise security is one of the core security guarantees provided
-    by the Messaging Layer Security (MLS) protocol. MLS provides post-compromise security
-    for a member when the member's leaf node in the MLS ratchet tree is updated, either
-    by that member sending a Commit message, or by an Update proposal from that member
-    being committed. Unfortunately, Update proposals can only be committed in the
-    epoch in which they are sent, leading to missed opportunities for post-compromise
-    security. This document defines a Replace proposal that allows the fresh leaf
-    node in an Update proposal to be applied in a future epoch, thus enabling post-
-    compromise security for the affected member even if their Update proposal is received
-    too late to be committed.</p>"
-  format: text/html
+  content: |-
+    <p>Post-compromise security is one of the core security guarantees
+       provided by the Messaging Layer Security (MLS) protocol.  MLS
+       provides post-compromise security for a member when the member's leaf
+       node in the MLS ratchet tree is updated, either by that member
+       sending a Commit message, or by an Update proposal from that member
+       being committed.  Unfortunately, Update proposals can only be
+       committed in the epoch in which they are sent, leading to missed
+       opportunities for post-compromise security.  This document defines a
+       Replace proposal that allows the fresh leaf node in an Update
+       proposal to be applied in a future epoch, thus enabling post-
+       compromise security for the affected member even if their Update
+       proposal is received too late to be committed.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-barnes-mls-replace-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-barnes-mls-replace-00
     docidentifier:
     - content: draft-barnes-mls-replace-00
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The DOCSIS(r) Queue Protection Algorithm to Preserve Low Latency
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-briscoe-docsis-q-protection-05
 docidentifier:
+- content: draft-briscoe-docsis-q-protection
+  type: Internet-Draft
 - content: draft-briscoe-docsis-q-protection-05
   type: Internet-Draft
   primary: true
-- content: I-D.briscoe-docsis-q-protection
-  type: IETF
-  scope: anchor
 docnumber: I-D.briscoe-docsis-q-protection
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - language: en
+          content: Independent
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 version:
 - content: '05'
 language:
@@ -75,35 +79,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This informational document explains the specification of the queue
-    protection algorithm used in DOCSIS technology since version 3.1. A shared low
-    latency queue relies on the non-queue-building behaviour of every traffic flow
-    using it. However, some flows might not take such care, either accidentally or
-    maliciously. If a queue is about to exceed a threshold level of delay, the queue
-    protection algorithm can rapidly detect the flows most likely to be responsible.
-    It can then prevent harm to other traffic in the low latency queue by ejecting
-    selected packets (or all packets) of these flows. The document is designed for
-    four types of audience: a) congestion control designers who need to understand
-    how to keep on the 'good' side of the algorithm; b) implementers of the algorithm
-    who want to understand it in more depth; c) designers of algorithms with similar
-    goals, perhaps for non-DOCSIS scenarios; and d) researchers interested in evaluating
-    the algorithm.</p>"
-  format: text/html
+  content: |-
+    <p>This informational document explains the specification of the queue
+       protection algorithm used in DOCSIS technology since version 3.1.  A
+       shared low latency queue relies on the non-queue-building behaviour
+       of every traffic flow using it.  However, some flows might not take
+       such care, either accidentally or maliciously.  If a queue is about
+       to exceed a threshold level of delay, the queue protection algorithm
+       can rapidly detect the flows most likely to be responsible.  It can
+       then prevent harm to other traffic in the low latency queue by
+       ejecting selected packets (or all packets) of these flows.  The
+       document is designed for four types of audience: a) congestion
+       control designers who need to understand how to keep on the 'good'
+       side of the algorithm; b) implementers of the algorithm who want to
+       understand it in more depth; c) designers of algorithms with similar
+       goals, perhaps for non-DOCSIS scenarios; and d) researchers
+       interested in evaluating the algorithm.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-briscoe-docsis-q-protection-02
-      format: text/plain
+      content: draft-briscoe-docsis-q-protection-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-docsis-q-protection-04
     docidentifier:
-    - content: draft-briscoe-docsis-q-protection-02
+    - content: draft-briscoe-docsis-q-protection-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-briscoe-docsis-q-protection-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-docsis-q-protection-06
     docidentifier:
     - content: draft-briscoe-docsis-q-protection-06
       type: Internet-Draft
@@ -114,10 +124,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-briscoe-docsis-q-protection-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftnordmarkmulti6cb64
 schema_version: v1.5.6
+formattedref:
+  content: draft-nordmark-multi6-cb64
 title:
 - language: en
   script: Latn
   content: Multihoming using 64-bit Crypto-based IDs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-nordmark-multi6-cb64-00
@@ -19,25 +20,32 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document outlines a potential solution to IPv6 multihoming in
-    order to stimulate discussion. This proposal is a middle ground between the NOID
-    and CB128 proposals. This proposed solution relies on verification the crypto-based
-    identifier properties (using public-key crypto during uncommon operations), while
-    allowing locator rewriting by (border) routers, with no per-packet overhead. The
-    solution does have something which could be viewed as a 'stack name' type of identifier,
-    but this isn't exposed to upper layer protocols. Instead it ensures that all upper
-    layer protocols can operate unmodified in a multihomed setting while still seeing
-    a stable IPv6 address, even though the address internally consists of 64-bits
-    worth of subnet locator plus 64-bits of crypto-based identifier. This solution
-    (and this draft) is remarkably similar to draft- nordmark-multi6-noid-00.txt;
-    only issues related to prevention of redirection attacks differ.</p>"
-  format: text/html
+  content: |-
+    <p>This document outlines a potential solution to IPv6 multihoming in
+    order to stimulate discussion.  This proposal is a middle ground
+    between the NOID and CB128 proposals.
+    This proposed solution relies on verification the crypto-based
+    identifier properties (using public-key crypto during uncommon
+    operations), while allowing locator rewriting by (border) routers,
+    with no per-packet overhead.  The solution does have something which
+    could be viewed as a 'stack name' type of identifier, but this isn't
+    exposed to upper layer protocols.  Instead it ensures that all upper
+    layer protocols can operate unmodified in a multihomed setting while
+    still seeing a stable IPv6 address, even though the address
+    internally consists of 64-bits worth of subnet locator plus 64-bits
+    of crypto-based identifier.
+
+    This solution (and this draft) is remarkably similar to draft-
+    nordmark-multi6-noid-00.txt; only issues related to prevention of
+    redirection attacks differ.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-nordmark-multi6-cb64-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nordmark-multi6-cb64-00
     docidentifier:
     - content: draft-nordmark-multi6-cb64-00
       type: Internet-Draft
@@ -46,4 +54,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

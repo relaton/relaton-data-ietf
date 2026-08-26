@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Prevent IP Spoofing Based On Link State Database (pisl)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bi-savi-pisl-00
 docidentifier:
+- content: draft-bi-savi-pisl
+  type: Internet-Draft
 - content: draft-bi-savi-pisl-00
   type: Internet-Draft
   primary: true
-- content: I-D.bi-savi-pisl
-  type: IETF
-  scope: anchor
 docnumber: I-D.bi-savi-pisl
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jun
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua Univ.
+        - language: en
+          content: Tsinghua Univ.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Baobao
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua Univ.
+        - language: en
+          content: Tsinghua Univ.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bingyang
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua Univ.
+        - language: en
+          content: Tsinghua Univ.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Fred
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 version:
 - content: '00'
 language:
@@ -119,30 +129,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Internet is suffering from severe DoS and DDoS attacks, and IP
-    spoofing is one common used method to do DoS and DDoS attacks. IP spoofing refers
-    to that attackers send packets with forged source IP addresses. In this memo,
-    we propose one new approach of preventing IP spoofing, which we name PISL. The
-    PISL-enabled router generates the incoming table for source addresses using link
-    state database, which exists in two most widely used intra-domain protocols: OSPF
-    and IS-IS. In this memo, we only describe PISL in the OSPF environment. The PISL-enabled
-    router determines that a packet is spoofed if the packet arrives at an invalid
-    incoming interface. PISL only uses the existing information and does not impose
-    new control messages, so it is easy to be deployed. We have conducted simple simulation,
-    which shows the high effectiveness of PISL: even if PISL is only deployed in 10%
-    of all OSPF routers in a network, 80%~99% of spoofing cases in the network can
-    be detected. Requirements</p>"
-  format: text/html
+  content: |-
+    <p>The Internet is suffering from severe DoS and DDoS attacks, and IP
+       spoofing is one common used method to do DoS and DDoS attacks.  IP
+       spoofing refers to that attackers send packets with forged source IP
+       addresses.  In this memo, we propose one new approach of preventing
+       IP spoofing, which we name PISL.  The PISL-enabled router generates
+       the incoming table for source addresses using link state database,
+       which exists in two most widely used intra-domain protocols:  OSPF
+       and IS-IS.  In this memo, we only describe PISL in the OSPF
+       environment.  The PISL-enabled router determines that a packet is
+       spoofed if the packet arrives at an invalid incoming interface.  PISL
+       only uses the existing information and does not impose new control
+       messages, so it is easy to be deployed.  We have conducted simple
+       simulation, which shows the high effectiveness of PISL:  even if PISL
+       is only deployed in 10% of all OSPF routers in a network, 80%~99% of
+       spoofing cases in the network can be detected.
+
+       Requirements</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bi-savi-pisl-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

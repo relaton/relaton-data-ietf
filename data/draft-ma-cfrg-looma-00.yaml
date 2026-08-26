@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Looma: Low-Latency Post-Quantum Authentication for TLS 1.3 in Datacenters'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ma-cfrg-looma-00
 docidentifier:
+- content: draft-ma-cfrg-looma
+  type: Internet-Draft
 - content: draft-ma-cfrg-looma-00
   type: Internet-Draft
   primary: true
-- content: I-D.ma-cfrg-looma
-  type: IETF
-  scope: anchor
 docnumber: I-D.ma-cfrg-looma
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xinshu
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Edinburgh
+        - language: en
+          content: University of Edinburgh
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michio
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Edinburgh
+        - language: en
+          content: University of Edinburgh
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Colin
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Glasgow
+        - language: en
+          content: University of Glasgow
 version:
 - content: '00'
 language:
@@ -97,27 +104,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Post-quantum (PQ) authentication in TLS 1.3 can add tens to hundreds
-    of microseconds of handshake processing time. In datacenters, where mutual authentication
-    is mandatory, this authentication cost becomes a dominant contributor to end-to-end
-    request latency, particularly when connections are short-lived and handshake rates
-    are high. This document specifies Looma, an online/offline authentication architecture
-    integrated into the TLS 1.3 handshake. Looma replaces the on-path, per-handshake
-    PQ signature with a fast, one-time signature over the TLS transcript and moves
-    expensive work (including the multi-use PQ signature) to an asynchronous background
-    plane. Looma includes a fallback strategy to preserve correct authentication when
-    the verifier does not have the peer's one-time verification key cached.</p>"
-  format: text/html
+  content: |-
+    <p>Post-quantum (PQ) authentication in TLS 1.3 can add tens to hundreds
+       of microseconds of handshake processing time.  In datacenters, where
+       mutual authentication is mandatory, this authentication cost becomes
+       a dominant contributor to end-to-end request latency, particularly
+       when connections are short-lived and handshake rates are high.
+
+       This document specifies Looma, an online/offline authentication
+       architecture integrated into the TLS 1.3 handshake.  Looma replaces
+       the on-path, per-handshake PQ signature with a fast, one-time
+       signature over the TLS transcript and moves expensive work (including
+       the multi-use PQ signature) to an asynchronous background plane.
+       Looma includes a fallback strategy to preserve correct authentication
+       when the verifier does not have the peer's one-time verification key
+       cached.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ma-cfrg-looma-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

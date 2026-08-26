@@ -7,17 +7,15 @@ title:
   script: Latn
   content: A SASL and GSS-API Mechanism family using the asymmetric password-authenticated
     key agreement OPAQUE
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-reitzenstein-kitten-opaque-01
 docidentifier:
+- content: draft-reitzenstein-kitten-opaque
+  type: Internet-Draft
 - content: draft-reitzenstein-kitten-opaque-01
   type: Internet-Draft
   primary: true
-- content: I-D.reitzenstein-kitten-opaque
-  type: IETF
-  scope: anchor
 docnumber: I-D.reitzenstein-kitten-opaque
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nadja
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -50,24 +50,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification describes a family of Simple Authentication and
-    Security Layer (SASL, RFC4422) authentication mechanisms based on the OPAQUE asymmetric
-    password-authenticated key agreement (PAKE) algorithm. They offer two distinct
-    advantages over the SCRAM family of mechanisms. The underlying OPAQUE algorithm
-    provides the ability for clients to register without the servers getting access
-    to the clear text password of an user, preventing password exfiltration at registration.
-    Secondly a successful authentication produces a long- term secret key only known
-    to the client that can be used to access encrypted server-side data without needing
-    to share keys between clients via a side-band mechanism. When used in combination
-    with TLS or an equivalent security layer these mechanisms allow for secure channel
-    binding.</p>"
-  format: text/html
+  content: |-
+    <p>This specification describes a family of Simple Authentication and
+       Security Layer (SASL, RFC4422) authentication mechanisms based on the
+       OPAQUE asymmetric password-authenticated key agreement (PAKE)
+       algorithm.
+
+       They offer two distinct advantages over the SCRAM family of
+       mechanisms.  The underlying OPAQUE algorithm provides the ability for
+       clients to register without the servers getting access to the clear
+       text password of an user, preventing password exfiltration at
+       registration.  Secondly a successful authentication produces a long-
+       term secret key only known to the client that can be used to access
+       encrypted server-side data without needing to share keys between
+       clients via a side-band mechanism.
+
+       When used in combination with TLS or an equivalent security layer
+       these mechanisms allow for secure channel binding.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-reitzenstein-kitten-opaque-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reitzenstein-kitten-opaque-00
     docidentifier:
     - content: draft-reitzenstein-kitten-opaque-00
       type: Internet-Draft
@@ -76,7 +83,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-reitzenstein-kitten-opaque-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reitzenstein-kitten-opaque-02
     docidentifier:
     - content: draft-reitzenstein-kitten-opaque-02
       type: Internet-Draft
@@ -87,10 +96,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-reitzenstein-kitten-opaque-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

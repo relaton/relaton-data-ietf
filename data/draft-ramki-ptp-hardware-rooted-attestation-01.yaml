@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'Hardware-Rooted Attestation for Precision Time Protocol: Scalable Workload
     Identity and Phased PQC Readiness'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ramki-ptp-hardware-rooted-attestation-01
 docidentifier:
+- content: draft-ramki-ptp-hardware-rooted-attestation
+  type: Internet-Draft
 - content: draft-ramki-ptp-hardware-rooted-attestation-01
   type: Internet-Draft
   primary: true
-- content: I-D.ramki-ptp-hardware-rooted-attestation
-  type: IETF
-  scope: anchor
 docnumber: I-D.ramki-ptp-hardware-rooted-attestation
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ramki
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: JPMorgan Chase
+        - language: en
+          content: JPMorgan Chase
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -66,15 +69,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Sandelman Software Works Inc
+        - language: en
+          content: Sandelman Software Works Inc
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Diego
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -88,13 +94,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - language: en
+          content: Telefonica
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -108,15 +116,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - language: en
+          content: Oracle
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Srinivasa
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -130,7 +141,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aryaka
+        - language: en
+          content: Aryaka
 version:
 - content: '01'
 language:
@@ -140,24 +152,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a scalable framework for hardware-rooted cryptographic
-    attestation in the Precision Time Protocol (PTP). Standard PTP security mechanisms
-    rely on symmetric keys, which suffer from identity ambiguity and source non-repudiation
-    failures—vulnerabilities that allow any node possessing the shared secret to impersonate
-    a Grandmaster. To resolve these issues while overcoming the silicon throughput
-    limits of traditional TPMs and the overhead of Post-Quantum Cryptography (PQC),
-    this draft specifies a tiered trust model. A Hardware Root (e.g., TPM) establishes
-    a long- term PQC identity, while a workload identity management plane (e.g., SPIFFE/SPIRE)
-    manages the frequent rotation of short-lived operational keys. These keys perform
-    amortized signing of PTP message batches via Merkle Trees, ensuring wire-speed
-    synchronization and irrefutable provenance for regulated environments.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines a scalable framework for hardware-rooted
+       cryptographic attestation in the Precision Time Protocol (PTP).
+       Standard PTP security mechanisms rely on symmetric keys, which suffer
+       from identity ambiguity and source non-repudiation
+       failures—vulnerabilities that allow any node possessing the shared
+       secret to impersonate a Grandmaster.  To resolve these issues while
+       overcoming the silicon throughput limits of traditional TPMs and the
+       overhead of Post-Quantum Cryptography (PQC), this draft specifies a
+       tiered trust model.  A Hardware Root (e.g., TPM) establishes a long-
+       term PQC identity, while a workload identity management plane (e.g.,
+       SPIFFE/SPIRE) manages the frequent rotation of short-lived
+       operational keys.  These keys perform amortized signing of PTP
+       message batches via Merkle Trees, ensuring wire-speed synchronization
+       and irrefutable provenance for regulated environments.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ramki-ptp-hardware-rooted-attestation-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ramki-ptp-hardware-rooted-attestation-00
     docidentifier:
     - content: draft-ramki-ptp-hardware-rooted-attestation-00
       type: Internet-Draft
@@ -168,10 +185,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ramki-ptp-hardware-rooted-attestation-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

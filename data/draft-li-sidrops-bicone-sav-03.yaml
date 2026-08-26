@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Bicone Source Address Validation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-sidrops-bicone-sav-03
 docidentifier:
+- content: draft-li-sidrops-bicone-sav
+  type: Internet-Draft
 - content: draft-li-sidrops-bicone-sav-03
   type: Internet-Draft
   primary: true
-- content: I-D.li-sidrops-bicone-sav
-  type: IETF
-  scope: anchor
 docnumber: I-D.li-sidrops-bicone-sav
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dan
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lancheng
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Libin
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -107,7 +115,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 version:
 - content: '03'
 language:
@@ -117,35 +126,42 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The primary design goal of source address validation (SAV) is avoiding
-    improper block (i.e., blocking legitimate traffic) while maintaining directionality,
-    especially in partial deployment scenarios (see [I-D.ietf-savnet-inter-domain-problem-statement]
-    and [RFC8704]). Existing advanced SAV solutions ([RFC8704] and [I-D.ietf-sidrops-bar-sav])
-    typically generate ingress SAV allowlist filters on interfaces facing a customer
-    or lateral peer AS. This document analyzes potential improper block problems when
-    using the allowlist. To enhance the SAV robustness and avoid improper block, this
-    document provides an additional option for network operators, i.e., generating
-    a blocklist filter by using BGP updates, ROAs, and ASPAs related to the provider
-    cone. Network operators can flexibly use the allowlist or blocklist on different
-    interfaces according to their requirements and actual conditions.</p>"
-  format: text/html
+  content: |-
+    <p>The primary design goal of source address validation (SAV) is
+       avoiding improper block (i.e., blocking legitimate traffic) while
+       maintaining directionality, especially in partial deployment
+       scenarios (see [I-D.ietf-savnet-inter-domain-problem-statement] and
+       [RFC8704]).  Existing advanced SAV solutions ([RFC8704] and
+       [I-D.ietf-sidrops-bar-sav]) typically generate ingress SAV allowlist
+       filters on interfaces facing a customer or lateral peer AS.  This
+       document analyzes potential improper block problems when using the
+       allowlist.  To enhance the SAV robustness and avoid improper block,
+       this document provides an additional option for network operators,
+       i.e., generating a blocklist filter by using BGP updates, ROAs, and
+       ASPAs related to the provider cone.  Network operators can flexibly
+       use the allowlist or blocklist on different interfaces according to
+       their requirements and actual conditions.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-li-sidrops-bicone-sav-00
-      format: text/plain
+      content: draft-li-sidrops-bicone-sav-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-sidrops-bicone-sav-02
     docidentifier:
-    - content: draft-li-sidrops-bicone-sav-00
+    - content: draft-li-sidrops-bicone-sav-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-li-sidrops-bicone-sav-05
-      format: text/plain
+      content: draft-li-sidrops-bicone-sav-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-sidrops-bicone-sav-04
     docidentifier:
-    - content: draft-li-sidrops-bicone-sav-05
+    - content: draft-li-sidrops-bicone-sav-04
       type: Internet-Draft
       primary: true
 series:
@@ -154,10 +170,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-li-sidrops-bicone-sav-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

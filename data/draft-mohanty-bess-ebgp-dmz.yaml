@@ -1,11 +1,12 @@
 ---
 id: draftmohantybessebgpdmz
 schema_version: v1.5.6
+formattedref:
+  content: draft-mohanty-bess-ebgp-dmz
 title:
 - language: en
   script: Latn
   content: Cumulative DMZ Link Bandwidth and load-balancing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mohanty-bess-ebgp-dmz-03
@@ -19,25 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The DMZ Link Bandwidth draft provides a way to load-balance traffic
-    to a destination (which is in a different AS than the source) which is reachable
-    via more than one path. Typically, the link bandwidth (either configured on the
-    link of the EBGP egress interface or set via a policy) is encoded in an extended
-    community and then sent to the IBGP peer which employs multi-path. The link-bandwidth
-    value is then extracted from the path extended community and is used as a weight
-    in the FIB, which does the load-balancing. This draft extends the usage of the
-    DMZ link bandwidth to another setting where the ingress BGP speaker requires knowledge
-    of the cumulative bandwidth while doing the load-balancing. The draft also proposes
-    neighbor- level knobs to enable the link bandwidth extended community to be regenerated
-    and then advertised to EBGP peers to override the default behavior of not advertising
-    optional non-transitive attributes to EBGP peers.</p>"
-  format: text/html
+  content: |-
+    <p>The DMZ Link Bandwidth draft provides a way to load-balance traffic
+       to a destination (which is in a different AS than the source) which
+       is reachable via more than one path.  Typically, the link bandwidth
+       (either configured on the link of the EBGP egress interface or set
+       via a policy) is encoded in an extended community and then sent to
+       the IBGP peer which employs multi-path.  The link-bandwidth value is
+       then extracted from the path extended community and is used as a
+       weight in the FIB, which does the load-balancing.  This draft extends
+       the usage of the DMZ link bandwidth to another setting where the
+       ingress BGP speaker requires knowledge of the cumulative bandwidth
+       while doing the load-balancing.  The draft also proposes neighbor-
+       level knobs to enable the link bandwidth extended community to be
+       regenerated and then advertised to EBGP peers to override the default
+       behavior of not advertising optional non-transitive attributes to
+       EBGP peers.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mohanty-bess-ebgp-dmz-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mohanty-bess-ebgp-dmz-00
     docidentifier:
     - content: draft-mohanty-bess-ebgp-dmz-00
       type: Internet-Draft
@@ -46,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mohanty-bess-ebgp-dmz-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mohanty-bess-ebgp-dmz-01
     docidentifier:
     - content: draft-mohanty-bess-ebgp-dmz-01
       type: Internet-Draft
@@ -55,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mohanty-bess-ebgp-dmz-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mohanty-bess-ebgp-dmz-02
     docidentifier:
     - content: draft-mohanty-bess-ebgp-dmz-02
       type: Internet-Draft
@@ -64,7 +74,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mohanty-bess-ebgp-dmz-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mohanty-bess-ebgp-dmz-03
     docidentifier:
     - content: draft-mohanty-bess-ebgp-dmz-03
       type: Internet-Draft
@@ -73,4 +85,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

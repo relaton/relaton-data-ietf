@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Multicast Support for Mapping of Address and Port Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sarikaya-softwire-map-multicast-01
 docidentifier:
+- content: draft-sarikaya-softwire-map-multicast
+  type: Internet-Draft
 - content: draft-sarikaya-softwire-map-multicast-01
   type: Internet-Draft
   primary: true
-- content: I-D.sarikaya-softwire-map-multicast
-  type: IETF
-  scope: anchor
 docnumber: I-D.sarikaya-softwire-map-multicast
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Behcet
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -49,27 +49,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo specifies MAP-E's multicast component so that IPv4 hosts
-    can receive multicast data from IPv4 servers over an IPv6 network. In the encapsulation
-    solution for encapsulation variant of Mapping of Address and Port (MAP), MAP-E,
-    IGMP Proxy at the MAP-E Customer Edge router uses IPv4-in-IPv6 tunnel established
-    by MAP-E to exchange IGMP messages to establish multicast state at MAP-E Border
-    Relay so that MAP-E Border Relay can tunnel IPv4 multicast data to IPv4 hosts
-    connected to MAP-E Customer Edge device. In the Translation Multicast solution
-    for the translation variant of MAP, MAP-T and 4rd, IGMP messages are translated
-    into MLD messages at the CE router which is IGMP/MLD Proxy and sent to the network
-    in IPv6. MAP-T/4rd Border Relay does the reverse translation and joins IPv4 multicast
-    group for MAP-T/4rd hosts. Border Relay as multicast router receives IPv4 multicast
-    data and translates the packet into IPv6 multicast data and sends downstream on
-    the multicast tree. Member CEs receive multicast data, translate it back to IPv4
-    and transmit to the hosts.</p>"
-  format: text/html
+  content: |-
+    <p>This memo specifies MAP-E's multicast component so that IPv4 hosts
+       can receive multicast data from IPv4 servers over an IPv6 network.
+       In the encapsulation solution for encapsulation variant of Mapping of
+       Address and Port (MAP), MAP-E, IGMP Proxy at the MAP-E Customer Edge
+       router uses IPv4-in-IPv6 tunnel established by MAP-E to exchange IGMP
+       messages to establish multicast state at MAP-E Border Relay so that
+       MAP-E Border Relay can tunnel IPv4 multicast data to IPv4 hosts
+       connected to MAP-E Customer Edge device.  In the Translation
+       Multicast solution for the translation variant of MAP, MAP-T and 4rd,
+       IGMP messages are translated into MLD messages at the CE router which
+       is IGMP/MLD Proxy and sent to the network in IPv6.  MAP-T/4rd Border
+       Relay does the reverse translation and joins IPv4 multicast group for
+       MAP-T/4rd hosts.  Border Relay as multicast router receives IPv4
+       multicast data and translates the packet into IPv6 multicast data and
+       sends downstream on the multicast tree.  Member CEs receive multicast
+       data, translate it back to IPv4 and transmit to the hosts.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-sarikaya-softwire-map-multicast-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sarikaya-softwire-map-multicast-00
     docidentifier:
     - content: draft-sarikaya-softwire-map-multicast-00
       type: Internet-Draft
@@ -77,10 +81,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-sarikaya-softwire-map-multicast-03
-      format: text/plain
+      content: draft-sarikaya-softwire-map-multicast-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sarikaya-softwire-map-multicast-02
     docidentifier:
-    - content: draft-sarikaya-softwire-map-multicast-03
+    - content: draft-sarikaya-softwire-map-multicast-02
       type: Internet-Draft
       primary: true
 series:
@@ -89,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-sarikaya-softwire-map-multicast-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

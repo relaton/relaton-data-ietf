@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Exploring SCHC Compression of QUIC Frames
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sirohi-schc-quic-frame-compression-00
 docidentifier:
+- content: draft-sirohi-schc-quic-frame-compression
+  type: Internet-Draft
 - content: draft-sirohi-schc-quic-frame-compression-00
   type: Internet-Draft
   primary: true
-- content: I-D.sirohi-schc-quic-frame-compression
-  type: IETF
-  scope: anchor
 docnumber: I-D.sirohi-schc-quic-frame-compression
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Samar
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMT Atlantique
+        - language: en
+          content: IMT Atlantique
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Laurent
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMT Atlantique
+        - language: en
+          content: IMT Atlantique
 version:
 - content: '00'
 language:
@@ -75,29 +79,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document explores whether Static Context Header Compression (SCHC)
-    can be applied to the metadata carried in QUIC frames. QUIC already uses compact
-    frame encodings and variable-length integers, so any compressed representation
-    has to recover enough bytes to pay for its own integration overhead. The document
-    compares several possible organizations for SCHC rules, discusses how frame compression
-    could be integrated, and analyzes representative STREAM and ACK frame examples.
-    The analysis suggests that SCHC compression of QUIC frames is technically possible,
-    but that generic or base rules are likely to provide only modest savings at best.
-    More substantial savings require predictable traffic, pre-provisioned or negotiated
-    rules, bundling of several frames under one rule, or a negotiated QUIC payload
-    syntax with low per-packet overhead. This document is exploratory. It does not
-    define an interoperable QUIC extension, SCHC profile, wire format, or IANA allocation.</p>"
-  format: text/html
+  content: |-
+    <p>This document explores whether Static Context Header Compression
+       (SCHC) can be applied to the metadata carried in QUIC frames.  QUIC
+       already uses compact frame encodings and variable-length integers, so
+       any compressed representation has to recover enough bytes to pay for
+       its own integration overhead.  The document compares several possible
+       organizations for SCHC rules, discusses how frame compression could
+       be integrated, and analyzes representative STREAM and ACK frame
+       examples.
+
+       The analysis suggests that SCHC compression of QUIC frames is
+       technically possible, but that generic or base rules are likely to
+       provide only modest savings at best.  More substantial savings
+       require predictable traffic, pre-provisioned or negotiated rules,
+       bundling of several frames under one rule, or a negotiated QUIC
+       payload syntax with low per-packet overhead.  This document is
+       exploratory.  It does not define an interoperable QUIC extension,
+       SCHC profile, wire format, or IANA allocation.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-sirohi-schc-quic-frame-compression-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

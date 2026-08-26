@@ -1,11 +1,12 @@
 ---
 id: draftantonyipsecmemuse
 schema_version: v1.5.6
+formattedref:
+  content: draft-antony-ipsecme-muse
 title:
 - language: en
   script: Latn
   content: Multiple Ephemeral UDP Source Ports for ESP in UDP Encapsulation (MUSE)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-antony-ipsecme-muse-00
@@ -19,22 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a mechanism to improve network path distribution
-    and host receive-queue load distribution for IPsec traffic using ESP in UDP encapsulation
-    [RFC3948]. Using the per- resource Child SA mechanism of [RFC9611], peers negotiate
-    multiple Child SAs each bound to a distinct UDP source port. The resulting entropy
-    in the UDP source port enables network devices to distribute per-resource traffic
-    across distinct paths (equal-cost multi-path, ECMP) and lets the host NIC steer
-    each per-resource flow to a distinct receive queue via receive-side scaling (RSS),
-    supporting efficient per-CPU IPsec processing. This document specifies the IKEv2
-    negotiation, NAT traversal behavior, and operational requirements for this mechanism.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a mechanism to improve network path
+       distribution and host receive-queue load distribution for IPsec
+       traffic using ESP in UDP encapsulation [RFC3948].  Using the per-
+       resource Child SA mechanism of [RFC9611], peers negotiate multiple
+       Child SAs each bound to a distinct UDP source port.  The resulting
+       entropy in the UDP source port enables network devices to distribute
+       per-resource traffic across distinct paths (equal-cost multi-path,
+       ECMP) and lets the host NIC steer each per-resource flow to a
+       distinct receive queue via receive-side scaling (RSS), supporting
+       efficient per-CPU IPsec processing.  This document specifies the
+       IKEv2 negotiation, NAT traversal behavior, and operational
+       requirements for this mechanism.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-antony-ipsecme-muse-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-antony-ipsecme-muse-00
     docidentifier:
     - content: draft-antony-ipsecme-muse-00
       type: Internet-Draft
@@ -43,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

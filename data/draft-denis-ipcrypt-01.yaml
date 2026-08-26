@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Methods for IP Address Encryption and Obfuscation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-denis-ipcrypt-01
 docidentifier:
+- content: draft-denis-ipcrypt
+  type: Internet-Draft
 - content: draft-denis-ipcrypt-01
   type: Internet-Draft
   primary: true
-- content: I-D.denis-ipcrypt
-  type: IETF
-  scope: anchor
 docnumber: I-D.denis-ipcrypt
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Frank
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fastly Inc.
+        - language: en
+          content: Fastly Inc.
 version:
 - content: '01'
 language:
@@ -53,29 +54,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies methods for encrypting and obfuscating IP addresses,
-    providing both deterministic format-preserving and non-deterministic constructions.
-    These methods address privacy concerns raised in [RFC6973] and [RFC7258] regarding
-    pervasive monitoring and data collection. The methods apply uniformly to both
-    IPv4 and IPv6 addresses by converting them into a 16-byte representation. Two
-    generic constructions are defined—one using a 128-bit block cipher and the other
-    using a 128-bit tweakable block cipher—along with three concrete instantiations:
-    * *ipcrypt-deterministic:* Deterministic encryption using AES128 (applied as a
-    single-block operation). * *ipcrypt-nd:* Non-deterministic encryption using the
-    KIASU-BC tweakable block cipher with an 8-byte tweak. * *ipcrypt-ndx:* Non-deterministic
-    encryption using the AES-XTS tweakable block cipher with a 16-byte tweak. Deterministic
-    mode produces a 16-byte ciphertext (enabling format preservation), while non-deterministic
-    modes prepend a randomly sampled tweak (which MUST be uniformly random when generated,
-    as specified in [RFC4086]) to produce larger ciphertexts that resist correlation
-    attacks. Discussion Venues This note is to be removed before publishing as an
-    RFC. Source for this draft and an issue tracker can be found at https://github.com/jedisct1/draft-denis-ipcrypt.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies methods for encrypting and obfuscating IP
+       addresses, providing both deterministic format-preserving and
+       non-deterministic constructions.  These methods address privacy
+       concerns raised in [RFC6973] and [RFC7258] regarding pervasive
+       monitoring and data collection.
+
+       The methods apply uniformly to both IPv4 and IPv6 addresses by
+       converting them into a 16-byte representation.  Two generic
+       constructions are defined—one using a 128-bit block cipher and the
+       other using a 128-bit tweakable block cipher—along with three
+       concrete instantiations:
+
+       *  *ipcrypt-deterministic:* Deterministic encryption using AES128
+          (applied as a single-block operation).
+
+       *  *ipcrypt-nd:* Non-deterministic encryption using the KIASU-BC
+          tweakable block cipher with an 8-byte tweak.
+
+       *  *ipcrypt-ndx:* Non-deterministic encryption using the AES-XTS
+          tweakable block cipher with a 16-byte tweak.
+
+       Deterministic mode produces a 16-byte ciphertext (enabling format
+       preservation), while non-deterministic modes prepend a randomly
+       sampled tweak (which MUST be uniformly random when generated, as
+       specified in [RFC4086]) to produce larger ciphertexts that resist
+       correlation attacks.
+
+    Discussion Venues
+
+       This note is to be removed before publishing as an RFC.
+
+       Source for this draft and an issue tracker can be found at
+       https://github.com/jedisct1/draft-denis-ipcrypt.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-denis-ipcrypt-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-denis-ipcrypt-00
     docidentifier:
     - content: draft-denis-ipcrypt-00
       type: Internet-Draft
@@ -83,10 +103,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-denis-ipcrypt-11
-      format: text/plain
+      content: draft-denis-ipcrypt-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-denis-ipcrypt-02
     docidentifier:
-    - content: draft-denis-ipcrypt-11
+    - content: draft-denis-ipcrypt-02
       type: Internet-Draft
       primary: true
 series:
@@ -95,10 +117,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-denis-ipcrypt-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

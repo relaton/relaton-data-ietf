@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Non-work Conserving Stateless Core Fair Queuing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ryoo-detnet-nscore-00
 docidentifier:
+- content: draft-ryoo-detnet-nscore
+  type: Internet-Draft
 - content: draft-ryoo-detnet-nscore-00
   type: Internet-Draft
   primary: true
-- content: I-D.ryoo-detnet-nscore
-  type: IETF
-  scope: anchor
 docnumber: I-D.ryoo-detnet-nscore
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yeoncheol
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ETRI
+        - language: en
+          content: ETRI
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jinoo
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Sangmyung University
+        - language: en
+          content: Sangmyung University
 version:
 - content: '00'
 language:
@@ -75,28 +79,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the framework and operational procedure for
-    deterministic networking that guarantees maximum and minimum end-to- end latency
-    bounds to flows. The solution has non-periodic, asynchronous, flow-level, non-work
-    conserving, on-time, and rate- based functional characteristics, according to
-    the taxonomy suggested by [draft-ietf-detnet-dataplane-taxonomy-02]. The packets
-    are stored in the queue in ascending order of the ideal service start time, called
-    Eligible Time (ET), and the ideal service completion time, called Finish Time
-    (FT). The queued packets were forwarded between ET and FT in a non-work conserving
-    manner. The ET and FT are calculated at the entrance node according to the packet
-    size and rate of the flow. All subsequent core nodes are stateless and asynchronously
-    compute ET and FT based on metadata received via packet headers. This mechanism
-    is called non-work-preserving stateless fair queuing, which guarantees both E2E
-    latency upper and lower bounds.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies the framework and operational procedure for
+       deterministic networking that guarantees maximum and minimum end-to-
+       end latency bounds to flows.  The solution has non-periodic,
+       asynchronous, flow-level, non-work conserving, on-time, and rate-
+       based functional characteristics, according to the taxonomy suggested
+       by [draft-ietf-detnet-dataplane-taxonomy-02].
+
+       The packets are stored in the queue in ascending order of the ideal
+       service start time, called Eligible Time (ET), and the ideal service
+       completion time, called Finish Time (FT).  The queued packets were
+       forwarded between ET and FT in a non-work conserving manner.  The ET
+       and FT are calculated at the entrance node according to the packet
+       size and rate of the flow.  All subsequent core nodes are stateless
+       and asynchronously compute ET and FT based on metadata received via
+       packet headers.  This mechanism is called non-work-preserving
+       stateless fair queuing, which guarantees both E2E latency upper and
+       lower bounds.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ryoo-detnet-nscore-02
-      format: text/plain
+      content: draft-ryoo-detnet-nscore-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ryoo-detnet-nscore-01
     docidentifier:
-    - content: draft-ryoo-detnet-nscore-02
+    - content: draft-ryoo-detnet-nscore-01
       type: Internet-Draft
       primary: true
 series:
@@ -105,10 +115,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ryoo-detnet-nscore-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

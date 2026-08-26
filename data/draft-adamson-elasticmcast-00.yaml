@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Elastic Multicast Routing Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-adamson-elasticmcast-00
 docidentifier:
+- content: draft-adamson-elasticmcast
+  type: Internet-Draft
 - content: draft-adamson-elasticmcast-00
   type: Internet-Draft
   primary: true
-- content: I-D.adamson-elasticmcast
-  type: IETF
-  scope: anchor
 docnumber: I-D.adamson-elasticmcast
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Naval Research Laboratory
+        - language: en
+          content: Naval Research Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Claudiu
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -65,17 +68,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Boeing Corporation
+        - language: en
+          content: Boeing Corporation
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Joseph
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -89,7 +96,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Naval Research Laboratory
+        - language: en
+          content: Naval Research Laboratory
 version:
 - content: '00'
 language:
@@ -99,30 +107,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an Internet Protocol (IP) multicast routing
-    protocol suitable for dynamic network environments including mobile wireless.
-    To handle high dynamics, this routing mechanism uses redundant forwarding, based
-    upon the Simplified Multicast Forwarding (SMF) approach of [RFC6621], while converging
-    to regular multicast distribution trees where or when the network becomes relatively
-    stable. The rationale is that intermittent connectivity directly affects the ability
-    of routers to synchronize on their view of the network, thus making it difficult
-    to converge on efficient distribution trees, while network wide broadcast may
-    be prohibitively expensive for relatively sparse groups. A hybrid approach, called
-    Elastic Multicast, is specified which dynamically switches between limited scope
-    broadcast and tree path forwarding independently at each node. The trees created
-    during stable periods and portions of the network are pruned from the SMF efficient
-    flooding mesh.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes an Internet Protocol (IP) multicast routing
+       protocol suitable for dynamic network environments including mobile
+       wireless.  To handle high dynamics, this routing mechanism uses
+       redundant forwarding, based upon the Simplified Multicast Forwarding
+       (SMF) approach of [RFC6621], while converging to regular multicast
+       distribution trees where or when the network becomes relatively
+       stable.  The rationale is that intermittent connectivity directly
+       affects the ability of routers to synchronize on their view of the
+       network, thus making it difficult to converge on efficient
+       distribution trees, while network wide broadcast may be prohibitively
+       expensive for relatively sparse groups.  A hybrid approach, called
+       Elastic Multicast, is specified which dynamically switches between
+       limited scope broadcast and tree path forwarding independently at
+       each node.  The trees created during stable periods and portions of
+       the network are pruned from the SMF efficient flooding mesh.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-adamson-elasticmcast-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

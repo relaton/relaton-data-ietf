@@ -1,11 +1,12 @@
 ---
 id: draftjenningsaimcpovermoq
 schema_version: v1.5.6
+formattedref:
+  content: draft-jennings-ai-mcp-over-moq
 title:
 - language: en
   script: Latn
   content: Model Context Protocol and Agent Skills over Media over QUIC Transport
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-jennings-ai-mcp-over-moq-00
@@ -19,29 +20,40 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines how to use Media over QUIC Transport (MOQT) as
-    the underlying transport protocol for the Model Context Protocol (MCP). MCP is
-    a protocol that enables seamless integration between language model applications
-    and external data sources and tools. MOQT provides efficient, low-latency, publish-subscribe
-    media delivery over QUIC and WebTransport. This specification describes the mapping
-    of MCP messages onto MOQT objects and defines the procedures for establishing
-    and maintaining MCP sessions over MOQT. It covers transport of MCP's core primitives
-    including resources, tools, prompts, and notifications through dedicated MOQT
-    tracks with appropriate priority management and delivery guarantees. A key focus
-    of this document is the delivery and execution of Agent Skills - composed instructions
-    that extend AI capabilities beyond atomic tool operations. Skills use progressive
-    loading (metadata, instructions, resources) that aligns naturally with MOQT's
-    object- based delivery, enabling efficient bandwidth utilization and aggressive
-    caching strategies. The specification also describes relay support for scalable
-    MCP deployments, including subscription aggregation, content caching, and multi-hop
-    architectures that enable global distribution of MCP services with optimized performance.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines how to use Media over QUIC Transport (MOQT) as
+       the underlying transport protocol for the Model Context Protocol
+       (MCP).  MCP is a protocol that enables seamless integration between
+       language model applications and external data sources and tools.
+       MOQT provides efficient, low-latency, publish-subscribe media
+       delivery over QUIC and WebTransport.
+
+       This specification describes the mapping of MCP messages onto MOQT
+       objects and defines the procedures for establishing and maintaining
+       MCP sessions over MOQT.  It covers transport of MCP's core primitives
+       including resources, tools, prompts, and notifications through
+       dedicated MOQT tracks with appropriate priority management and
+       delivery guarantees.
+
+       A key focus of this document is the delivery and execution of Agent
+       Skills - composed instructions that extend AI capabilities beyond
+       atomic tool operations.  Skills use progressive loading (metadata,
+       instructions, resources) that aligns naturally with MOQT's object-
+       based delivery, enabling efficient bandwidth utilization and
+       aggressive caching strategies.
+
+       The specification also describes relay support for scalable MCP
+       deployments, including subscription aggregation, content caching, and
+       multi-hop architectures that enable global distribution of MCP
+       services with optimized performance.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-jennings-ai-mcp-over-moq-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-jennings-ai-mcp-over-moq-00
     docidentifier:
     - content: draft-jennings-ai-mcp-over-moq-00
       type: Internet-Draft
@@ -50,4 +62,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

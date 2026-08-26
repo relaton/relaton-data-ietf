@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Proportional Rate Reduction for TCP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-proportional-rate-reduction-02
 docidentifier:
+- content: draft-ietf-tcpm-proportional-rate-reduction
+  type: Internet-Draft
 - content: draft-ietf-tcpm-proportional-rate-reduction-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tcpm-proportional-rate-reduction
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tcpm-proportional-rate-reduction
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matt
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nandita
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yuchung
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -85,28 +89,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an experimental algorithm, Proportional Rate
-    Reduction (PPR) to improve the accuracy of the amount of data sent by TCP during
-    loss recovery. Standard Congestion Control requires that TCP and other protocols
-    reduce their congestion window in response to losses. This window reduction naturally
-    occurs in the same round trip as the data retransmissions to repair the losses,
-    and is implemented by choosing not to transmit any data in response to some ACKs
-    arriving from the receiver. Two widely deployed algorithms are used to implement
-    this window reduction: Fast Recovery and Rate Halving. Both algorithms are needlessly
-    fragile under a number of conditions, particularly when there is a burst of losses
-    such that the number of ACKs returning to the sender is small. Proportional Rate
-    Reduction minimizes these excess window reductions such that at the end of recovery
-    the actual window size will be as close as possible to ssthresh, the window size
-    determined by the congestion control algorithm. It is patterned after Rate Halving,
-    but using the fraction that is appropriate for target window chosen by the congestion
-    control algorithm.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes an experimental algorithm, Proportional Rate
+       Reduction (PPR) to improve the accuracy of the amount of data sent by
+       TCP during loss recovery.  Standard Congestion Control requires that
+       TCP and other protocols reduce their congestion window in response to
+       losses.  This window reduction naturally occurs in the same round
+       trip as the data retransmissions to repair the losses, and is
+       implemented by choosing not to transmit any data in response to some
+       ACKs arriving from the receiver.  Two widely deployed algorithms are
+       used to implement this window reduction: Fast Recovery and Rate
+       Halving.  Both algorithms are needlessly fragile under a number of
+       conditions, particularly when there is a burst of losses such that
+       the number of ACKs returning to the sender is small.  Proportional
+       Rate Reduction minimizes these excess window reductions such that at
+       the end of recovery the actual window size will be as close as
+       possible to ssthresh, the window size determined by the congestion
+       control algorithm.  It is patterned after Rate Halving, but using the
+       fraction that is appropriate for target window chosen by the
+       congestion control algorithm.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-tcpm-proportional-rate-reduction-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-proportional-rate-reduction-01
     docidentifier:
     - content: draft-ietf-tcpm-proportional-rate-reduction-01
       type: Internet-Draft
@@ -114,10 +123,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tcpm-proportional-rate-reduction-04
-      format: text/plain
+      content: draft-ietf-tcpm-proportional-rate-reduction-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-proportional-rate-reduction-03
     docidentifier:
-    - content: draft-ietf-tcpm-proportional-rate-reduction-04
+    - content: draft-ietf-tcpm-proportional-rate-reduction-03
       type: Internet-Draft
       primary: true
 series:
@@ -126,10 +137,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tcpm-proportional-rate-reduction-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

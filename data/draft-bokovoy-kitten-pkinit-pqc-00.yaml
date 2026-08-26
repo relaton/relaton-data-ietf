@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Post-quantum Key Encapsulation with ML-KEM in Public Key Cryptography for
     Initial Authentication in Kerberos (PKINIT)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bokovoy-kitten-pkinit-pqc-00
 docidentifier:
+- content: draft-bokovoy-kitten-pkinit-pqc
+  type: Internet-Draft
 - content: draft-bokovoy-kitten-pkinit-pqc-00
   type: Internet-Draft
   primary: true
-- content: I-D.bokovoy-kitten-pkinit-pqc
-  type: IETF
-  scope: anchor
 docnumber: I-D.bokovoy-kitten-pkinit-pqc
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Red Hat, Inc.
+        - language: en
+          content: Red Hat, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Julien
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -66,13 +69,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Red Hat, Inc.
+        - language: en
+          content: Red Hat, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -86,7 +91,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cryptonector
+        - language: en
+          content: Cryptonector
 version:
 - content: '00'
 language:
@@ -96,22 +102,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies extensions to the Kerberos PKINIT pre- authentication
-    mechanism [RFC4556] [RFC8636] to support post-quantum key establishment using
-    the Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM) algorithms defined
-    in [FIPS203]. The extensions define a new kemInfo arm in PA-PK-AS-REP, a KDCKEMInfo
-    structure signed by the KDC, HKDF-based AS reply key derivation (HKDF-SHA-512
-    for ML-KEM), downgrade-prevention rules, and a PAChecksum2 extension providing
-    checksum algorithm agility in PKAuthenticator. The KEM path framework supports
-    multiple KEM algorithms including ML-KEM, composite ML-KEM algorithms, and future
-    KEM standards.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies extensions to the Kerberos PKINIT pre-
+       authentication mechanism [RFC4556] [RFC8636] to support post-quantum
+       key establishment using the Module-Lattice-Based Key-Encapsulation
+       Mechanism (ML-KEM) algorithms defined in [FIPS203].
+
+       The extensions define a new kemInfo arm in PA-PK-AS-REP, a KDCKEMInfo
+       structure signed by the KDC, HKDF-based AS reply key derivation
+       (HKDF-SHA-512 for ML-KEM), downgrade-prevention rules, and a
+       PAChecksum2 extension providing checksum algorithm agility in
+       PKAuthenticator.  The KEM path framework supports multiple KEM
+       algorithms including ML-KEM, composite ML-KEM algorithms, and future
+       KEM standards.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bokovoy-kitten-pkinit-pqc-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bokovoy-kitten-pkinit-pqc-01
     docidentifier:
     - content: draft-bokovoy-kitten-pkinit-pqc-01
       type: Internet-Draft
@@ -122,10 +133,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bokovoy-kitten-pkinit-pqc-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Classful Transport Planes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-07
 docidentifier:
+- content: draft-ietf-idr-bgp-ct
+  type: Internet-Draft
 - content: draft-ietf-idr-bgp-ct-07
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-idr-bgp-ct
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-idr-bgp-ct
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Natrajan
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 version:
 - content: '07'
 language:
@@ -75,47 +79,64 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document specifies a mechanism, referred to as "Intent Driven Service
-    Mapping" to express association of overlay routes with underlay routes satisfying
-    a certain SLA using BGP. The document describes a framework for classifying underlay
-    routes into transport classes and mapping service routes to a specific transport
-    class. The "Transport class" construct maps to a desired SLA and can be used to
-    realize the "Topology Slice" in 5G Network slicing architecture. This document
-    specifies BGP protocol procedures that enable dissemination of such service mapping
-    information that may span multiple cooperating administrative domains. These domains
-    may be administered by the same provider or by closely co-ordinating provider
-    networks. A new BGP transport layer address family (SAFI 76) is defined for this
-    purpose that uses RFC-4364 technology and follows RFC-8277 NLRI encoding. This
-    new address family is called "BGP Classful Transport", aka BGP CT. BGP CT makes
-    it possible to advertise multiple tunnels to the same destination address, thus
-    avoiding need of multiple loopbacks on the egress node. It carries transport prefixes
-    across tunnel domain boundaries (e.g. in Inter-AS Option-C networks), which is
-    parallel to BGP LU (SAFI 4). It disseminates "Transport class" information for
-    the transport prefixes across the participating domains, which is not possible
-    with BGP LU. This makes the end-to-end network a "Transport Class" aware tunneled
-    network. Just like BGP LU (SAFI 4), BGP CT family (SAFI 76) is used in inter-
-    AS option-C networks. The Service Mapping procedures described in this document
-    apply in the same manner to Intra-AS service endpoints as well as Inter-AS option-A,
-    option-B, option-C variations. Examples of these variations are given in Appendix
-    A.</p>
-  format: text/html
+  content: |-
+    <p>This document specifies a mechanism, referred to as "Intent Driven
+       Service Mapping" to express association of overlay routes with
+       underlay routes satisfying a certain SLA using BGP.  The document
+       describes a framework for classifying underlay routes into transport
+       classes and mapping service routes to a specific transport class.
+
+       The "Transport class" construct maps to a desired SLA and can be used
+       to realize the "Topology Slice" in 5G Network slicing architecture.
+
+       This document specifies BGP protocol procedures that enable
+       dissemination of such service mapping information that may span
+       multiple cooperating administrative domains.  These domains may be
+       administered by the same provider or by closely co-ordinating
+       provider networks.
+
+       A new BGP transport layer address family (SAFI 76) is defined for
+       this purpose that uses RFC-4364 technology and follows RFC-8277 NLRI
+       encoding.  This new address family is called "BGP Classful
+       Transport", aka BGP CT.
+
+       BGP CT makes it possible to advertise multiple tunnels to the same
+       destination address, thus avoiding need of multiple loopbacks on the
+       egress node.
+
+       It carries transport prefixes across tunnel domain boundaries (e.g.
+       in Inter-AS Option-C networks), which is parallel to BGP LU (SAFI 4).
+       It disseminates "Transport class" information for the transport
+       prefixes across the participating domains, which is not possible with
+       BGP LU.  This makes the end-to-end network a "Transport Class" aware
+       tunneled network.
+
+       Just like BGP LU (SAFI 4), BGP CT family (SAFI 76) is used in inter-
+       AS option-C networks.  The Service Mapping procedures described in
+       this document apply in the same manner to Intra-AS service endpoints
+       as well as Inter-AS option-A, option-B, option-C variations.
+       Examples of these variations are given in Appendix A.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-idr-bgp-ct-01
-      format: text/plain
+      content: draft-ietf-idr-bgp-ct-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-06
     docidentifier:
-    - content: draft-ietf-idr-bgp-ct-01
+    - content: draft-ietf-idr-bgp-ct-06
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-idr-bgp-ct-10
-      format: text/plain
+      content: draft-ietf-idr-bgp-ct-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-08
     docidentifier:
-    - content: draft-ietf-idr-bgp-ct-10
+    - content: draft-ietf-idr-bgp-ct-08
       type: Internet-Draft
       primary: true
 series:
@@ -124,10 +145,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-idr-bgp-ct-07
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

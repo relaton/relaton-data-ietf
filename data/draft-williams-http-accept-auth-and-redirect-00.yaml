@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Accept-Auth HTTP Header for 3xx/401 Negotiation, and Redirect Authentication
     Scheme
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-williams-http-accept-auth-and-redirect-00
 docidentifier:
+- content: draft-williams-http-accept-auth-and-redirect
+  type: Internet-Draft
 - content: draft-williams-http-accept-auth-and-redirect-00
   type: Internet-Draft
   primary: true
-- content: I-D.williams-http-accept-auth-and-redirect
-  type: IETF
-  scope: anchor
 docnumber: I-D.williams-http-accept-auth-and-redirect
 date:
 - type: published
@@ -29,6 +27,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -42,7 +41,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cryptonector, LLC
+        - language: en
+          content: Cryptonector, LLC
 version:
 - content: '00'
 language:
@@ -52,22 +52,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The Hyper-Text Transport Protocol (HTTP) offers several authentication
-    chemes, but many sites use redirection-based protocols to authenticate users.
-    Some servers are faced with a connundrum, having to choose between two mutually-exclusive
-    options: redirect responses or 401 (authentication required) responses without
-    knowing which the user-agent is most likely to support. This document specifies
-    a new HTTP request header, "Accept-Auth", that user-agents may use to indicate
-    their authentication capabilities, including support (or not) for chasing redirects.
-    Also specified is a new HTTP authentication scheme named Redirect, operating via
-    3xx or 401 responses at the server''s choice.</p>'
-  format: text/html
+  content: |-
+    <p>The Hyper-Text Transport Protocol (HTTP) offers several
+       authentication chemes, but many sites use redirection-based protocols
+       to authenticate users.  Some servers are faced with a connundrum,
+       having to choose between two mutually-exclusive options: redirect
+       responses or 401 (authentication required) responses without knowing
+       which the user-agent is most likely to support.
+
+       This document specifies a new HTTP request header, "Accept-Auth",
+       that user-agents may use to indicate their authentication
+       capabilities, including support (or not) for chasing redirects.  Also
+       specified is a new HTTP authentication scheme named Redirect,
+       operating via 3xx or 401 responses at the server's choice.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-williams-http-accept-auth-and-redirect-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-williams-http-accept-auth-and-redirect-01
     docidentifier:
     - content: draft-williams-http-accept-auth-and-redirect-01
       type: Internet-Draft
@@ -78,10 +83,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-williams-http-accept-auth-and-redirect-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

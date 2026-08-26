@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Considerations for Route Reflection and EBGP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-scudder-idr-ebgp-rr-02
 docidentifier:
+- content: draft-scudder-idr-ebgp-rr
+  type: Internet-Draft
 - content: draft-scudder-idr-ebgp-rr-02
   type: Internet-Draft
   primary: true
-- content: I-D.scudder-idr-ebgp-rr
-  type: IETF
-  scope: anchor
 docnumber: I-D.scudder-idr-ebgp-rr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 version:
 - content: '02'
 language:
@@ -53,20 +54,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Although originally conceived of as a purely IBGP device, in some cases
-    a route reflector may function as an EBGP speaker in addition to its role as envisioned
-    in RFC 4456. When it does so, just like any other EBGP speaker it must advertise
-    its routes to its IBGP peers. This document updates RFC 4456 by explaining what
-    behavior is required of a route reflector that also functions as an EBGP speaker.
-    It also clarifies the use of the ORIGINATOR_ID and CLUSTER_LIST attributes in
-    this environment.</p>"
-  format: text/html
+  content: |-
+    <p>Although originally conceived of as a purely IBGP device, in some
+       cases a route reflector may function as an EBGP speaker in addition
+       to its role as envisioned in RFC 4456.  When it does so, just like
+       any other EBGP speaker it must advertise its routes to its IBGP
+       peers.  This document updates RFC 4456 by explaining what behavior is
+       required of a route reflector that also functions as an EBGP speaker.
+       It also clarifies the use of the ORIGINATOR_ID and CLUSTER_LIST
+       attributes in this environment.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-scudder-idr-ebgp-rr-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-scudder-idr-ebgp-rr-01
     docidentifier:
     - content: draft-scudder-idr-ebgp-rr-01
       type: Internet-Draft
@@ -77,10 +81,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-scudder-idr-ebgp-rr-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Fast ReRoute (FRR) Extensions for BIER-TE
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-eckert-bier-te-frr-01
 docidentifier:
+- content: draft-eckert-bier-te-frr
+  type: Internet-Draft
 - content: draft-eckert-bier-te-frr-01
   type: Internet-Draft
   primary: true
-- content: I-D.eckert-bier-te-frr
-  type: IETF
-  scope: anchor
 docnumber: I-D.eckert-bier-te-frr
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Toerless
       - language: en
+        script: Latn
         initial: T
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -45,15 +46,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies Inc.
+        - language: en
+          content: Futurewei Technologies Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gregory
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bouygues Telecom
+        - language: en
+          content: Bouygues Telecom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wolfgang
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -89,15 +96,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -111,7 +121,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 version:
 - content: '01'
 language:
@@ -121,26 +132,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document proposes an Fast ReRoute (FRR) extension to the BIER-TE
-    Architecture [I-D.eckert-bier-te-arch]. The FRR procedure has to be supported
-    by the BIER-TE Controller host and the BFRs that are attached to a link/adjacency
-    for which FRR support is required. Thus, the FRR concept can be incrementally
-    deployed in the data plane to only those BFR adjacent to adjacencies for which
-    FRR protection is desired. The FRR procedure does not require changes to the packet
-    format described in [I-D.ietf-bier-architecture] that is also used for BIER- TE.
-    Existing BIER-TE tables do not have to be altered. FRR procedures do require additional
-    forwarding plane logic on the BFR that need to support FRR. An additional table
-    is needed that carries information about pre- computed backup paths. This table
-    is used to modify upon detection of failure the bitstring in the BIER header.
-    To prevent packet duplicates, tunneling mechanisms such as remote adjacencies
-    or BIER- in-BIER encapsulation can be leveraged.</p>"
-  format: text/html
+  content: |-
+    <p>This document proposes an Fast ReRoute (FRR) extension to the BIER-TE
+       Architecture [I-D.eckert-bier-te-arch].  The FRR procedure has to be
+       supported by the BIER-TE Controller host and the BFRs that are
+       attached to a link/adjacency for which FRR support is required.
+       Thus, the FRR concept can be incrementally deployed in the data plane
+       to only those BFR adjacent to adjacencies for which FRR protection is
+       desired.
+
+       The FRR procedure does not require changes to the packet format
+       described in [I-D.ietf-bier-architecture] that is also used for BIER-
+       TE.  Existing BIER-TE tables do not have to be altered.  FRR
+       procedures do require additional forwarding plane logic on the BFR
+       that need to support FRR.
+
+       An additional table is needed that carries information about pre-
+       computed backup paths.  This table is used to modify upon detection
+       of failure the bitstring in the BIER header.  To prevent packet
+       duplicates, tunneling mechanisms such as remote adjacencies or BIER-
+       in-BIER encapsulation can be leveraged.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-eckert-bier-te-frr-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-eckert-bier-te-frr-00
     docidentifier:
     - content: draft-eckert-bier-te-frr-00
       type: Internet-Draft
@@ -148,10 +167,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-eckert-bier-te-frr-03
-      format: text/plain
+      content: draft-eckert-bier-te-frr-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-eckert-bier-te-frr-02
     docidentifier:
-    - content: draft-eckert-bier-te-frr-03
+    - content: draft-eckert-bier-te-frr-02
       type: Internet-Draft
       primary: true
 series:
@@ -160,10 +181,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-eckert-bier-te-frr-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

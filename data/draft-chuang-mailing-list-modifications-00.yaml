@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Tolerating Mailing-List Modifications
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chuang-mailing-list-modifications-00
 docidentifier:
+- content: draft-chuang-mailing-list-modifications
+  type: Internet-Draft
 - content: draft-chuang-mailing-list-modifications-00
   type: Internet-Draft
   primary: true
-- content: I-D.chuang-mailing-list-modifications
-  type: IETF
-  scope: anchor
 docnumber: I-D.chuang-mailing-list-modifications
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wei
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google, Inc.
+        - language: en
+          content: Google, Inc.
 version:
 - content: '00'
 language:
@@ -53,24 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Mailing-lists distribute email to multiple recipients by forwarding
-    and potentially modifying messages to document the distribution to the recipients.
-    Unfortunately forwarding breaks SPF (RFC7208) authentication and message modification
-    breaks DKIM (RFC6376) authentication. This document is based on draft-chuang-replay-
-    resistant-arc which is built on ARC (RFC8617) with extensions to tolerate common
-    mailing-list message modifications. This specification characterizes the mailing-list
-    transforms such that a receiver can reverse them to enable digital signatures
-    verification and attribution of the message content. These message modifications
-    are: 1) prepending a description string to the Subject header, 2) rewriting the
-    From header, 3) removing the original DKIM-Signature and 4) appending a footer
-    to the message body.</p>"
-  format: text/html
+  content: |-
+    <p>Mailing-lists distribute email to multiple recipients by forwarding
+       and potentially modifying messages to document the distribution to
+       the recipients.  Unfortunately forwarding breaks SPF (RFC7208)
+       authentication and message modification breaks DKIM (RFC6376)
+       authentication.  This document is based on draft-chuang-replay-
+       resistant-arc which is built on ARC (RFC8617) with extensions to
+       tolerate common mailing-list message modifications.  This
+       specification characterizes the mailing-list transforms such that a
+       receiver can reverse them to enable digital signatures verification
+       and attribution of the message content.  These message modifications
+       are: 1) prepending a description string to the Subject header, 2)
+       rewriting the From header, 3) removing the original DKIM-Signature
+       and 4) appending a footer to the message body.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-chuang-mailing-list-modifications-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-mailing-list-modifications-01
     docidentifier:
     - content: draft-chuang-mailing-list-modifications-01
       type: Internet-Draft
@@ -81,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chuang-mailing-list-modifications-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

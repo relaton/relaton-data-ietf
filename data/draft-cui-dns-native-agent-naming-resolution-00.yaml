@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DNS-Native AI Agent Naming and Resolution
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-cui-dns-native-agent-naming-resolution-00
 docidentifier:
+- content: draft-cui-dns-native-agent-naming-resolution
+  type: Internet-Draft
 - content: draft-cui-dns-native-agent-naming-resolution-00
   type: Internet-Draft
   primary: true
-- content: I-D.cui-dns-native-agent-naming-resolution
-  type: IETF
-  scope: anchor
 docnumber: I-D.cui-dns-native-agent-naming-resolution
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yong
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 version:
 - content: '00'
 language:
@@ -53,23 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a DNS-native naming and resolution mechanism
-    for AI agents. Building upon the DNS specification (RFC 1035) and leveraging Service
-    Binding (SVCB) records (RFC 9460, RFC 9461), it defines how AI agents are identified
-    using Fully Qualified Domain Names (FQDNs), how their identity and cryptographic
-    keys are published via DNS TXT records, and how multi-version, multi-protocol
-    service resolution is achieved using DNS SVCB records. The design philosophy emphasizes
-    DNS as the authoritative source, protocol autonomy, and graceful degradation for
-    legacy clients. When version is not explicitly specified, the highest priority
-    (default) version is provided. This approach maximizes reuse of existing Internet
-    infrastructure while enabling the rapid evolution of AI agent ecosystems.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a DNS-native naming and resolution mechanism
+       for AI agents.  Building upon the DNS specification (RFC 1035) and
+       leveraging Service Binding (SVCB) records (RFC 9460, RFC 9461), it
+       defines how AI agents are identified using Fully Qualified Domain
+       Names (FQDNs), how their identity and cryptographic keys are
+       published via DNS TXT records, and how multi-version, multi-protocol
+       service resolution is achieved using DNS SVCB records.  The design
+       philosophy emphasizes DNS as the authoritative source, protocol
+       autonomy, and graceful degradation for legacy clients.  When version
+       is not explicitly specified, the highest priority (default) version
+       is provided.  This approach maximizes reuse of existing Internet
+       infrastructure while enabling the rapid evolution of AI agent
+       ecosystems.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-cui-dns-native-agent-naming-resolution-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cui-dns-native-agent-naming-resolution-01
     docidentifier:
     - content: draft-cui-dns-native-agent-naming-resolution-01
       type: Internet-Draft
@@ -80,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-cui-dns-native-agent-naming-resolution-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

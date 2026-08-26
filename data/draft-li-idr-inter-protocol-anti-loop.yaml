@@ -1,11 +1,12 @@
 ---
 id: draftliidrinterprotocolantiloop
 schema_version: v1.5.6
+formattedref:
+  content: draft-li-idr-inter-protocol-anti-loop
 title:
 - language: en
   script: Latn
   content: Loop prevention for route import between protocols
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-idr-inter-protocol-anti-loop-00
@@ -19,23 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>BGP and IGP are commonly used network protocols during network construction.
-    At the beginning of BGP protocol design, EBGP and IBGP loop prevention are considered.
-    Similarly, the IGP protocol has a loop prevention mechanism. In actual deployment,
-    some or even all routes of the two protocols are imported to each other. Route
-    import causes the loss of the anti-loop attribute of the protocol. As a result,
-    the anti-loop fails. This document provides a feasible solution to the above problems.
-    Attribute information is added when routes are imported between protocols. The
-    added attribute information can be advertised to neighboring neighbors through
-    BGP peers or IGP peers. How the new attributes are advertised using IGP peers
-    is beyond the scope of this article.</p>"
-  format: text/html
+  content: |-
+    <p>BGP and IGP are commonly used network protocols during network
+       construction.  At the beginning of BGP protocol design, EBGP and IBGP
+       loop prevention are considered.  Similarly, the IGP protocol has a
+       loop prevention mechanism.  In actual deployment, some or even all
+       routes of the two protocols are imported to each other.  Route import
+       causes the loss of the anti-loop attribute of the protocol.  As a
+       result, the anti-loop fails.
+
+       This document provides a feasible solution to the above problems.
+       Attribute information is added when routes are imported between
+       protocols.  The added attribute information can be advertised to
+       neighboring neighbors through BGP peers or IGP peers.  How the new
+       attributes are advertised using IGP peers is beyond the scope of this
+       article.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-li-idr-inter-protocol-anti-loop-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-idr-inter-protocol-anti-loop-00
     docidentifier:
     - content: draft-li-idr-inter-protocol-anti-loop-00
       type: Internet-Draft
@@ -44,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

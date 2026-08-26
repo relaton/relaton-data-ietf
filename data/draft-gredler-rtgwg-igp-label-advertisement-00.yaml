@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Advertising MPLS labels in IGPs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gredler-rtgwg-igp-label-advertisement-00
 docidentifier:
+- content: draft-gredler-rtgwg-igp-label-advertisement
+  type: Internet-Draft
 - content: draft-gredler-rtgwg-igp-label-advertisement-00
   type: Internet-Draft
   primary: true
-- content: I-D.gredler-rtgwg-igp-label-advertisement
-  type: IETF
-  scope: anchor
 docnumber: I-D.gredler-rtgwg-igp-label-advertisement
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -49,24 +49,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Historically MPLS label distribution was driven by session oriented
-    protocols. In order to obtain a particular routers label binding for a given destination
-    FEC one needs to have first an established session with that node. This document
-    describes a mechanism to distribute FEC/label mappings trough flooding protocols.
-    Flooding protocols publish their objects for an unknown set of receivers, therefore
-    one can efficiently scale label distribution for use cases where the receiver
-    of label information is not directly connected. Application of this technique
-    are found in the field of backup (LFA) computation, Label switched path stitching,
-    traffic engineering and egress link load balancing.</p>"
-  format: text/html
+  content: |-
+    <p>Historically MPLS label distribution was driven by session oriented
+       protocols.  In order to obtain a particular routers label binding for
+       a given destination FEC one needs to have first an established
+       session with that node.
+
+       This document describes a mechanism to distribute FEC/label mappings
+       trough flooding protocols.  Flooding protocols publish their objects
+       for an unknown set of receivers, therefore one can efficiently scale
+       label distribution for use cases where the receiver of label
+       information is not directly connected.
+
+       Application of this technique are found in the field of backup (LFA)
+       computation, Label switched path stitching, traffic engineering and
+       egress link load balancing.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-gredler-rtgwg-igp-label-advertisement-02
-      format: text/plain
+      content: draft-gredler-rtgwg-igp-label-advertisement-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gredler-rtgwg-igp-label-advertisement-01
     docidentifier:
-    - content: draft-gredler-rtgwg-igp-label-advertisement-02
+    - content: draft-gredler-rtgwg-igp-label-advertisement-01
       type: Internet-Draft
       primary: true
 series:
@@ -75,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gredler-rtgwg-igp-label-advertisement-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

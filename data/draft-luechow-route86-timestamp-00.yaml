@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Route86: A Compact Context-Dependent Timestamp Format'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-luechow-route86-timestamp-00
 docidentifier:
+- content: draft-luechow-route86-timestamp
+  type: Internet-Draft
 - content: draft-luechow-route86-timestamp-00
   type: Internet-Draft
   primary: true
-- content: I-D.luechow-route86-timestamp
-  type: IETF
-  scope: anchor
 docnumber: I-D.luechow-route86-timestamp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Dorfzwockel
+        - language: en
+          content: Dorfzwockel
 version:
 - content: '00'
 language:
@@ -53,19 +54,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies Route86, a compact textual timestamp representation
-    intended for constrained message transports. A Route86 timestamp combines a Base36-encoded
-    calendar-day component with a three-digit decimal Internet Time component. The
-    representation occupies six ASCII characters in its canonical form. Interpretation
-    of the calendar component requires knowledge of a shared reference date, which
-    may be application-specific or salted.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies Route86, a compact textual timestamp
+       representation intended for constrained message transports.  A
+       Route86 timestamp combines a Base36-encoded calendar-day component
+       with a three-digit decimal Internet Time component.
+
+       The representation occupies six ASCII characters in its canonical
+       form.  Interpretation of the calendar component requires knowledge of
+       a shared reference date, which may be application-specific or salted.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-luechow-route86-timestamp-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-luechow-route86-timestamp-01
     docidentifier:
     - content: draft-luechow-route86-timestamp-01
       type: Internet-Draft
@@ -76,10 +81,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-luechow-route86-timestamp-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

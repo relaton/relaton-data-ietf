@@ -1,11 +1,12 @@
 ---
 id: draftgllsrmetricnormalize
 schema_version: v1.5.6
+formattedref:
+  content: draft-gl-lsr-metric-normalize
 title:
 - language: en
   script: Latn
   content: Metric Normalize for IGP Flex-algo
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gl-lsr-metric-normalize-01
@@ -19,23 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When multiple links in a network have the same metric, they can serve
-    as ECMP equivalent links for load balancing during forwarding. However, slight
-    fluctuations in metric values can prevent the formation of ECMP equivalent links,
-    leading to the idle state of suboptimal links and thus wasting bandwidth resources.
-    This document proposes a metric normalization method by advertising metric normalization
-    parameters corresponding to a specific Metric- Type for Flexible Algorithm. During
-    route calculation, slight fluctuations across multiple links are adjusted according
-    to these normalization parameters, making the computed metric values more consistent.
-    This approach enables the formation of ECMP equivalent links and promotes load
-    sharing in the forwarding process.</p>"
-  format: text/html
+  content: |-
+    <p>When multiple links in a network have the same metric, they can
+       serve as ECMP equivalent links for load balancing during forwarding.
+       However, slight fluctuations in metric values can prevent the
+       formation of ECMP equivalent links, leading to the idle state of
+       suboptimal links and thus wasting bandwidth resources.
+
+       This document proposes a metric normalization method by advertising
+       metric normalization parameters corresponding to a specific Metric-
+       Type for Flexible Algorithm. During route calculation, slight
+       fluctuations across multiple links are adjusted according to these
+       normalization parameters, making the computed metric values more
+       consistent. This approach enables the formation of ECMP equivalent
+       links and promotes load sharing in the forwarding process.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-gl-lsr-metric-normalize-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gl-lsr-metric-normalize-00
     docidentifier:
     - content: draft-gl-lsr-metric-normalize-00
       type: Internet-Draft
@@ -44,7 +50,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-gl-lsr-metric-normalize-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gl-lsr-metric-normalize-01
     docidentifier:
     - content: draft-gl-lsr-metric-normalize-01
       type: Internet-Draft
@@ -53,4 +61,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

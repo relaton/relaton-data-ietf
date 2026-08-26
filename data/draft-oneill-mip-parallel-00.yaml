@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Parallel MIP for Aggregated Mobility Management
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-oneill-mip-parallel-00
 docidentifier:
+- content: draft-oneill-mip-parallel
+  type: Internet-Draft
 - content: draft-oneill-mip-parallel-00
   type: Internet-Draft
   primary: true
-- content: I-D.oneill-mip-parallel
-  type: IETF
-  scope: anchor
 docnumber: I-D.oneill-mip-parallel
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alan
       - language: en
+        script: Latn
         initial: A
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Flarion Technologies
+        - language: en
+          content: Flarion Technologies
 version:
 - content: '00'
 language:
@@ -56,31 +58,29 @@ abstract:
 - language: en
   script: Latn
   content: "<p>Nested MIP [NestMIP] provides a means to support both localization
-    and aggregation of MIP signalling. It achieves this by providing two distinct
+    and \naggregation of MIP signalling. It achieves this by providing two distinct
     layers of MIP signalling and forwarding; a local access layer that provides local
     mobility management and local access services, and a remote access layer that
     provides remote access back to a home subnet. Nested MIP and an associated proposal,
     Concatenated MIP [ConcatMIP] are necessary because existing MIP signalling is
     HA/HoA specific and therefore not easily amenable to aggregation for supporting
-    multiple MIP sessions per MN. This document describes an alternative proposal
+    multiple MIP sessions per MN. \nThis document describes an alternative proposal
     for introducing aggregation that has significantly lower functionality but that
     is a smaller change from existing MIP standards and implementations. It is described
     here for completeness as part of the overall problem space. The solution uses
     a single HA/HoA specific MIP Registration as a master signal within which is carried
-    an extension that defines an include/exclude list of the other HA/HoA pairs that
+    an extension that defines  an include/exclude list of the other HA/HoA pairs that
     should/should not be handed off. This extension can be carried in inter-FA hand-off
     signals and in regional registrations, and is also used within Nested/Concat MIP.</p>"
-  format: text/html
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-oneill-mip-parallel-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

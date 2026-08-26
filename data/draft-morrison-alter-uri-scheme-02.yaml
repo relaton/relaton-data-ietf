@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The 'alter' URI Scheme for Dispatchable ~handle References
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-morrison-alter-uri-scheme-02
 docidentifier:
+- content: draft-morrison-alter-uri-scheme
+  type: Internet-Draft
 - content: draft-morrison-alter-uri-scheme-02
   type: Internet-Draft
   primary: true
-- content: I-D.morrison-alter-uri-scheme
-  type: IETF
-  scope: anchor
 docnumber: I-D.morrison-alter-uri-scheme
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Blake
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alter Meridian Pty Ltd
+        - language: en
+          content: Alter Meridian Pty Ltd
 version:
 - content: '02'
 language:
@@ -53,31 +54,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the alter URI scheme as a dispatchable reference
-    syntax for ~handle identity references published under the DNS substrate defined
-    in [MCPDNS]. An alter: URI binds a textual ~handle reference to a resolution and
-    verification procedure that retrieves the handle's envelope from the publishing
-    zone, validates the envelope's signature chain, and dispatches the result to an
-    operating-system URI handler. The reference may be scoped to an organisation,
-    narrowed to a named facet of the identity, and addressed to a typed action surface.
-    The scheme is the addressing form of the ~handle@org:facet/action reference; its
-    resolution semantics are those of [MCPDNS], reused without modification. The scheme
-    is provider-neutral, introduces no new cryptographic primitive, and reuses the
-    resolution and verification procedures of [MCPDNS] without modification. The principal
-    contribution is a single, self-verifying dispatch surface for handle-typed references:
-    clicking, typing, or scanning an alter: URI yields a verified handle resolution
-    rather than a free-text string or an unauthenticated fetch, and where an action
-    is addressed it yields a verify-before- side-effect dispatch. This document requests
-    provisional registration of the alter scheme with IANA per [RFC7595] Section 3.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the alter URI scheme as a dispatchable
+       reference syntax for ~handle identity references published under the
+       DNS substrate defined in [MCPDNS].  An alter: URI binds a textual
+       ~handle reference to a resolution and verification procedure that
+       retrieves the handle's envelope from the publishing zone, validates
+       the envelope's signature chain, and dispatches the result to an
+       operating-system URI handler.  The reference may be scoped to an
+       organisation, narrowed to a named facet of the identity, and
+       addressed to a typed action surface.  The scheme is the addressing
+       form of the ~handle@org:facet/action reference; its resolution
+       semantics are those of [MCPDNS], reused without modification.
+
+       The scheme is provider-neutral, introduces no new cryptographic
+       primitive, and reuses the resolution and verification procedures of
+       [MCPDNS] without modification.  The principal contribution is a
+       single, self-verifying dispatch surface for handle-typed references:
+       clicking, typing, or scanning an alter: URI yields a verified handle
+       resolution rather than a free-text string or an unauthenticated
+       fetch, and where an action is addressed it yields a verify-before-
+       side-effect dispatch.  This document requests provisional
+       registration of the alter scheme with IANA per [RFC7595] Section 3.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-morrison-alter-uri-scheme-00
-      format: text/plain
+      content: draft-morrison-alter-uri-scheme-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-alter-uri-scheme-01
     docidentifier:
-    - content: draft-morrison-alter-uri-scheme-00
+    - content: draft-morrison-alter-uri-scheme-01
       type: Internet-Draft
       primary: true
 series:
@@ -86,10 +94,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-morrison-alter-uri-scheme-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

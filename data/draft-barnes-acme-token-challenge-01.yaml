@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ACME Challenges using an Authority Token
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-barnes-acme-token-challenge-01
 docidentifier:
+- content: draft-barnes-acme-token-challenge
+  type: Internet-Draft
 - content: draft-barnes-acme-token-challenge-01
   type: Internet-Draft
   primary: true
-- content: I-D.barnes-acme-token-challenge
-  type: IETF
-  scope: anchor
 docnumber: I-D.barnes-acme-token-challenge
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mary
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: iconectiv
+        - language: en
+          content: iconectiv
 version:
 - content: '01'
 language:
@@ -53,23 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A number of proposed challenges for the Automated Certificate Management
-    Environment (ACME) effectively rely on an external authority issuing a token according
-    to a particular policy. This document specifies a generic Authority Token challenge
-    for ACME which admits of subtypes for different identifiers or namespaces. This
-    document specifies a generic Authority Token challenge for ACME which consists
-    of subtype for different identifiers or namespace. The Authority Token is issued
-    by an Authority with whom the Certification Authority (CA) has a trust relationship.
-    The entity requesting a certificate also has a relationship with the Authority,
-    such that the authority assigns a unique code to the entity. This entity code
-    is included as part of the token that the administrative authority issues.</p>"
-  format: text/html
+  content: |-
+    <p>A number of proposed challenges for the Automated Certificate
+       Management Environment (ACME) effectively rely on an external
+       authority issuing a token according to a particular policy.  This
+       document specifies a generic Authority Token challenge for ACME which
+       admits of subtypes for different identifiers or namespaces.  This
+       document specifies a generic Authority Token challenge for ACME which
+       consists of subtype for different identifiers or namespace.  The
+       Authority Token is issued by an Authority with whom the Certification
+       Authority (CA) has a trust relationship.  The entity requesting a
+       certificate also has a relationship with the Authority, such that the
+       authority assigns a unique code to the entity.  This entity code is
+       included as part of the token that the administrative authority
+       issues.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-barnes-acme-token-challenge-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-barnes-acme-token-challenge-00
     docidentifier:
     - content: draft-barnes-acme-token-challenge-00
       type: Internet-Draft
@@ -78,7 +84,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-barnes-acme-token-challenge-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-barnes-acme-token-challenge-02
     docidentifier:
     - content: draft-barnes-acme-token-challenge-02
       type: Internet-Draft
@@ -89,10 +97,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-barnes-acme-token-challenge-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

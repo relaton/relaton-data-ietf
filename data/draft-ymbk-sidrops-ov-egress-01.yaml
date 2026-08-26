@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP RPKI-Based Origin Validation on Export
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ymbk-sidrops-ov-egress-01
 docidentifier:
+- content: draft-ymbk-sidrops-ov-egress
+  type: Internet-Draft
 - content: draft-ymbk-sidrops-ov-egress-01
   type: Internet-Draft
   primary: true
-- content: I-D.ymbk-sidrops-ov-egress
-  type: IETF
-  scope: anchor
 docnumber: I-D.ymbk-sidrops-ov-egress
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randy
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,13 +43,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Internet Initiative Japan
+        - language: en
+          content: Internet Initiative Japan
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Deutsche Telekom
+        - language: en
+          content: Deutsche Telekom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jakob
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -85,7 +90,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 version:
 - content: '01'
 language:
@@ -95,20 +101,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A BGP speaker may perform RPKI origin validation not only on routes
-    received from BGP neighbors and routes that are redistributed from other routing
-    protocols, but also on routes it sends to BGP neighbors. For egress policy, it
-    is important that the classification uses the effective origin AS of the processed
-    route, which may specifically be altered by the commonly available knobs such
-    as removing private ASs, confederation handling, and other modifications of the
-    origin AS.</p>"
-  format: text/html
+  content: |-
+    <p>A BGP speaker may perform RPKI origin validation not only on routes
+       received from BGP neighbors and routes that are redistributed from
+       other routing protocols, but also on routes it sends to BGP
+       neighbors.  For egress policy, it is important that the
+       classification uses the effective origin AS of the processed route,
+       which may specifically be altered by the commonly available knobs
+       such as removing private ASs, confederation handling, and other
+       modifications of the origin AS.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ymbk-sidrops-ov-egress-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ymbk-sidrops-ov-egress-00
     docidentifier:
     - content: draft-ymbk-sidrops-ov-egress-00
       type: Internet-Draft
@@ -119,10 +128,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ymbk-sidrops-ov-egress-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Mitigating HTTP/3 Connection Contamination in Multi-Tenant and CDN-Fronted
     Deployments
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rajappa-httpbis-connection-contamination-03
 docidentifier:
+- content: draft-rajappa-httpbis-connection-contamination
+  type: Internet-Draft
 - content: draft-rajappa-httpbis-connection-contamination-03
   type: Internet-Draft
   primary: true
-- content: I-D.rajappa-httpbis-connection-contamination
-  type: IETF
-  scope: anchor
 docnumber: I-D.rajappa-httpbis-connection-contamination
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Madhusudhan
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IBM
+        - language: en
+          content: IBM
 version:
 - content: '03'
 language:
@@ -54,37 +55,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>HTTP/3 [RFC9114] clients commonly reuse ("coalesce") an existing QUIC
-    [RFC9000] connection for requests to a second origin when the TLS certificate
-    presented on that connection is also valid for the second origin, even though
-    the two origins may route to entirely different backends. This document describes
-    "connection contamination," a class of security exposure that arises when a routing
-    layer -- reverse proxy, load balancer, or CDN edge -- determines backend routing
-    using a signal established at connection setup rather than re-validated per request.
-    Under that condition, a coalesced connection can be used to reach an unintended
-    backend origin, potentially enabling cross-tenant data leakage, authentication
-    bypass, and response-queue interference analogous to HTTP request smuggling. This
-    document defines the underlying mechanism, characterizes the attacker model, distinguishes
-    connection contamination from related QUIC exposures, and provides normative operational
-    guidance for implementers and operators of HTTP/3-terminating infrastructure.</p>
-  format: text/html
+  content: |-
+    <p>HTTP/3 [RFC9114] clients commonly reuse ("coalesce") an existing QUIC
+       [RFC9000] connection for requests to a second origin when the TLS
+       certificate presented on that connection is also valid for the second
+       origin, even though the two origins may route to entirely different
+       backends.  This document describes "connection contamination," a
+       class of security exposure that arises when a routing layer --
+       reverse proxy, load balancer, or CDN edge -- determines backend
+       routing using a signal established at connection setup rather than
+       re-validated per request.  Under that condition, a coalesced
+       connection can be used to reach an unintended backend origin,
+       potentially enabling cross-tenant data leakage, authentication
+       bypass, and response-queue interference analogous to HTTP request
+       smuggling.
+
+       This document defines the underlying mechanism, characterizes the
+       attacker model, distinguishes connection contamination from related
+       QUIC exposures, and provides normative operational guidance for
+       implementers and operators of HTTP/3-terminating infrastructure.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-rajappa-httpbis-connection-contamination-01
-      format: text/plain
+      content: draft-rajappa-httpbis-connection-contamination-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rajappa-httpbis-connection-contamination-02
     docidentifier:
-    - content: draft-rajappa-httpbis-connection-contamination-01
+    - content: draft-rajappa-httpbis-connection-contamination-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-rajappa-httpbis-connection-contamination-05
-      format: text/plain
+      content: draft-rajappa-httpbis-connection-contamination-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rajappa-httpbis-connection-contamination-04
     docidentifier:
-    - content: draft-rajappa-httpbis-connection-contamination-05
+    - content: draft-rajappa-httpbis-connection-contamination-04
       type: Internet-Draft
       primary: true
 series:
@@ -93,10 +103,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rajappa-httpbis-connection-contamination-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

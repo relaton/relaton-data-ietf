@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Special host name for 464xlat connections
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rosenau-464xlat-hostname-00
 docidentifier:
+- content: draft-rosenau-464xlat-hostname
+  type: Internet-Draft
 - content: draft-rosenau-464xlat-hostname-00
   type: Internet-Draft
   primary: true
-- content: I-D.rosenau-464xlat-hostname
-  type: IETF
-  scope: anchor
 docnumber: I-D.rosenau-464xlat-hostname
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Martin
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -49,24 +49,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes an idea for a special DNS query whose use is
-    to get the IPv6 address representing an IPv4 address in a 464xlat environment.
-    The query can also be used to force the IPv4 client to connect to the server via
-    IPv6 by returning the "real" IPv6 address of a dual-stack server instead of the
-    IPv6 address used to connect to the server's IPv4 address using NAT64. The query
-    is supposed to be compatible to the existing DNS system so no changes to the DNS
-    protocol or DNS servers need to be done.</p>
-  format: text/html
+  content: |-
+    <p>This document describes an idea for a special DNS query whose use is
+       to get the IPv6 address representing an IPv4 address in a 464xlat
+       environment.
+
+       The query can also be used to force the IPv4 client to connect to the
+       server via IPv6 by returning the "real" IPv6 address of a dual-stack
+       server instead of the IPv6 address used to connect to the server's
+       IPv4 address using NAT64.
+
+       The query is supposed to be compatible to the existing DNS system so
+       no changes to the DNS protocol or DNS servers need to be done.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rosenau-464xlat-hostname-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

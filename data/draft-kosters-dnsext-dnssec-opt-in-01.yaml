@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DNSSEC Opt-in for Large Zones
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kosters-dnsext-dnssec-opt-in-01
 docidentifier:
+- content: draft-kosters-dnsext-dnssec-opt-in
+  type: Internet-Draft
 - content: draft-kosters-dnsext-dnssec-opt-in-01
   type: Internet-Draft
   primary: true
-- content: I-D.kosters-dnsext-dnssec-opt-in
-  type: IETF
-  scope: anchor
 docnumber: I-D.kosters-dnsext-dnssec-opt-in
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mark
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Network Solutions
+        - language: en
+          content: Network Solutions
 version:
 - content: '01'
 language:
@@ -53,25 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In order for DNSSEC to be deployed operationally with large zones and
-    little operational impact, there needs to be included a mechanism that allows
-    for the separation of secure versus unsecure views of zones. This needs to be
-    done in a transparent fashion that allows DNSSEC to be deployed in an incremental
-    manner. This document proposes the use of an extended RCODE to signify that a
-    DNSSEC-aware requestor may have to re-query for the information, if and only if,
-    the delegation is not yet secure. Thus, one can maintain two views of the zone
-    and expand the DNSSEC zone as demand warrants.</p>"
-  format: text/html
+  content: |-
+    <p>In order for DNSSEC to be deployed operationally with large zones
+    and little operational impact, there needs to be included a
+    mechanism that allows for the separation of secure versus unsecure
+    views of zones. This needs to be done in a transparent fashion that
+    allows DNSSEC to be deployed in an incremental manner.  This
+    document proposes the use of an extended RCODE to signify that a
+    DNSSEC-aware requestor may have to re-query for the information, if
+    and only if, the delegation is not yet secure. Thus, one can
+    maintain two views of the zone and expand the DNSSEC zone as demand
+    warrants.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kosters-dnsext-dnssec-opt-in-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

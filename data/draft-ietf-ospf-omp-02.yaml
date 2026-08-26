@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: OSPF Optimized Multipath (OSPF-OMP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ospf-omp-02
 docidentifier:
+- content: draft-ietf-ospf-omp
+  type: Internet-Draft
 - content: draft-ietf-ospf-omp-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ospf-omp
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ospf-omp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Curtis
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -49,28 +49,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>OSPF may form multiple equal cost paths between points. This is true
-    of any link state protocol. In the absense of any explicit support to take advantage
-    of this, a path may be chosen arbitrarily. Tech- niques have been utilized to
-    divide traffic somewhat evenly among the available paths. These techniques have
-    been referred to as Equal Cost Multipath (ECMP). An unequal division of traffic
-    among the available paths is generally preferable. Routers generally have no knowledge
-    of traffic loading on distant links and therefore have no basis to optimize the
-    allocation of traffic. Optimized Mulitpath is a compatible extension to OSPF,
-    utilizing the Opaque LSA to distribute loading information, proposing a means
-    to adjust forwarding, and providing an algorithm to make the adjustments gradually
-    enough to insure stability yet provide reasonably fast ad- justment when needed.</p>"
-  format: text/html
+  content: |-
+    <p>OSPF may form multiple equal cost paths between points.  This is true
+      of any link state protocol.  In the absense of any explicit support
+      to take advantage of this, a path may be chosen arbitrarily.  Tech-
+      niques have been utilized to divide traffic somewhat evenly among the
+      available paths.  These techniques have been referred to as Equal Cost
+      Multipath (ECMP). An unequal division of traffic among the available
+      paths is generally preferable.  Routers generally have no knowledge
+      of traffic loading on distant links and therefore have no basis to
+      optimize the allocation of traffic.
+      Optimized Mulitpath is a compatible extension to OSPF, utilizing the
+      Opaque LSA to distribute loading information, proposing a means to
+      adjust forwarding, and providing an algorithm to make the adjustments
+      gradually enough to insure stability yet provide reasonably fast ad-
+      justment when needed.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ospf-omp-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftjohnsondhcserveroverride
 schema_version: v1.5.6
+formattedref:
+  content: draft-johnson-dhc-server-override
 title:
 - language: en
   script: Latn
   content: DHCP Server-ID Override Suboption
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-johnson-dhc-server-override-00
@@ -19,22 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo defines a new suboption of the DHCP relay information option
-    [6] which allows the DHCP relay to specify a new value for the Server-ID option,
-    which is inserted by the DHCP Server. In some cases it is convenient for the DHCP
-    relay to act as the actual DHCP server such that DHCP RENEWAL requests will come
-    to the relay instead of going to the server directly. This gives the relay the
-    opportunity to include the Relay Agent option with appropriate suboptions even
-    on RENEWAL messages. This new relay agent suboption allows the relay to tell the
-    DHCP server what value to use in the Server-ID option [3]. If this suboption is
-    not present, the server should build the Server-ID option in the normal fashion.</p>"
-  format: text/html
+  content: |-
+    <p>This memo defines a new suboption of the DHCP relay information
+    option [6] which allows the DHCP relay to specify a new value for the
+    Server-ID option, which is inserted by the DHCP Server.  In some
+    cases it is convenient for the DHCP relay to act as the actual DHCP
+    server such that DHCP RENEWAL requests will come to the relay instead
+    of going to the server directly.  This gives the relay the
+    opportunity to include the Relay Agent option with appropriate
+    suboptions even on RENEWAL messages.
+    This new relay agent suboption allows the relay to tell the DHCP
+    server what value to use in the Server-ID option [3].  If this
+    suboption is not present, the server should build the Server-ID
+    option in the normal fashion.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-johnson-dhc-server-override-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-johnson-dhc-server-override-00
     docidentifier:
     - content: draft-johnson-dhc-server-override-00
       type: Internet-Draft
@@ -43,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

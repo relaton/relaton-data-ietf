@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'RTCP-based Feedback: Concepts and Message  Timing Rules'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wenger-avt-rtcp-feedback-02
 docidentifier:
+- content: draft-wenger-avt-rtcp-feedback
+  type: Internet-Draft
 - content: draft-wenger-avt-rtcp-feedback-02
   type: Internet-Draft
   primary: true
-- content: I-D.wenger-avt-rtcp-feedback
-  type: IETF
-  scope: anchor
 docnumber: I-D.wenger-avt-rtcp-feedback
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Stephan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: TU Berlin
+        - language: en
+          content: TU Berlin
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Joerg
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Universitaet Bremen TZI
+        - language: en
+          content: Universitaet Bremen TZI
 version:
 - content: '02'
 language:
@@ -75,27 +79,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Real-time media streams are not resilient against packet losses. RTP
-    [1] provides all the necessary mechanisms to restore ordering and timing to properly
-    reproduce a media stream at the recipient. RTP also provides continuous feedback
-    about the overall reception quality from all receivers -- thereby allowing the
-    sender(s) in the mid-term (in the order of several seconds to minutes) to adapt
-    their coding scheme and transmission behavior to the observed network QoS. However,
-    except for a few payload specific mechanisms [2], RTP makes no provision for timely
-    feedback that would allow a sender to repair the media stream immediately: through
-    retransmissions, retro-active FEC, or media-specific mechanisms such as reference
-    picture selection.</p>"
-  format: text/html
+  content: |-
+    <p>Real-time media streams are not resilient against packet losses. RTP
+    [1] provides all the necessary mechanisms to restore ordering and
+    timing to properly reproduce a media stream at the recipient.  RTP
+    also provides continuous feedback about the overall reception quality
+    from all receivers -- thereby allowing the sender(s) in the mid-term
+    (in the order of several seconds to minutes) to adapt their coding
+    scheme and transmission behavior to the observed network QoS.
+    However, except for a few payload specific mechanisms [2], RTP makes
+    no provision for timely feedback that would allow a sender to repair
+    the media stream immediately: through retransmissions, retro-active
+    FEC, or media-specific mechanisms such as reference picture
+    selection.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wenger-avt-rtcp-feedback-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

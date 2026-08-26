@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Congestion control for the Saratoga protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wood-tsvwg-saratoga-congestion-control-07
 docidentifier:
+- content: draft-wood-tsvwg-saratoga-congestion-control
+  type: Internet-Draft
 - content: draft-wood-tsvwg-saratoga-congestion-control-07
   type: Internet-Draft
   primary: true
-- content: I-D.wood-tsvwg-saratoga-congestion-control
-  type: IETF
-  scope: anchor
 docnumber: I-D.wood-tsvwg-saratoga-congestion-control
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lloyd
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wesley
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Will
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -85,37 +89,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Saratoga is a data transfer protocol designed to carry potentially
-    large volumes of data over difficult network paths, often including only a single
-    high-rate link and only one application flow. As the requirements for use vary
-    across deployment environments, the base Saratoga specification only assumes that
-    an implementation will be able to clock packets out at a configurable rate, and
-    beyond this specifies no inherent or particular congestion-control behaviour.
-    The design of Saratoga deliberately supports the integration of congestion-control
-    algorithms without modification to the base protocol. This document describes
-    how congestion control can be supported in the Saratoga transfer protocol. Saratoga
-    is intended for use in private networks, where its use is engineered as a single
-    flow to fill a link. However, as Saratoga is implemented over UDP, it can be multiplexed,
-    and can be run across the public Internet, in which case congestion control in
-    accordance with the UDP Guidelines becomes necessary.</p>"
-  format: text/html
+  content: |-
+    <p>Saratoga is a data transfer protocol designed to carry potentially
+       large volumes of data over difficult network paths, often including
+       only a single high-rate link and only one application flow.  As the
+       requirements for use vary across deployment environments, the base
+       Saratoga specification only assumes that an implementation will be
+       able to clock packets out at a configurable rate, and beyond this
+       specifies no inherent or particular congestion-control behaviour.
+       The design of Saratoga deliberately supports the integration of
+       congestion-control algorithms without modification to the base
+       protocol.  This document describes how congestion control can be
+       supported in the Saratoga transfer protocol.  Saratoga is intended
+       for use in private networks, where its use is engineered as a single
+       flow to fill a link.  However, as Saratoga is implemented over UDP,
+       it can be multiplexed, and can be run across the public Internet, in
+       which case congestion control in accordance with the UDP Guidelines
+       becomes necessary.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-wood-tsvwg-saratoga-congestion-control-00
-      format: text/plain
+      content: draft-wood-tsvwg-saratoga-congestion-control-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wood-tsvwg-saratoga-congestion-control-06
     docidentifier:
-    - content: draft-wood-tsvwg-saratoga-congestion-control-00
+    - content: draft-wood-tsvwg-saratoga-congestion-control-06
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-wood-tsvwg-saratoga-congestion-control-11
-      format: text/plain
+      content: draft-wood-tsvwg-saratoga-congestion-control-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wood-tsvwg-saratoga-congestion-control-08
     docidentifier:
-    - content: draft-wood-tsvwg-saratoga-congestion-control-11
+    - content: draft-wood-tsvwg-saratoga-congestion-control-08
       type: Internet-Draft
       primary: true
 series:
@@ -124,10 +135,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wood-tsvwg-saratoga-congestion-control-07
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

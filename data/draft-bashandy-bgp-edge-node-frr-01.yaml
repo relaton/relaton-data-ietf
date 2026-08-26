@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Scalable BGP FRR Protection against Edge Node Failure
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bashandy-bgp-edge-node-frr-01
 docidentifier:
+- content: draft-bashandy-bgp-edge-node-frr
+  type: Internet-Draft
 - content: draft-bashandy-bgp-edge-node-frr-01
   type: Internet-Draft
   primary: true
-- content: I-D.bashandy-bgp-edge-node-frr
-  type: IETF
-  scope: anchor
 docnumber: I-D.bashandy-bgp-edge-node-frr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ahmed
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -49,29 +49,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Consider a BGP free core scenario. Suppose the edge BGP speakers PE1,
-    PE2,..., PEn know about a prefix P/p via the external routers CE1, CE2,..., CEm.
-    If the edge router PEi crashes or becomes totally disconnected from the core,
-    it desirable for a penultimate hop route "P" carrying traffic to the failed edge
-    router PEi to immediately restore traffic by re-tunneling packets originally tunneled
-    to PEi and destined to the prefix P/p to one of the other edge routers that advertised
-    P/p, say PEj, until BGP re-converges. In doing so, it is highly desirable to keep
-    the core BGP-free while not imposing restrictions on external connectivity. Thus
-    (1) a core router should not be required to learn any BGP prefix, (2) the size
-    of the forwarding and routing tables in the core routers should be independent
-    of the number of BGP prefixes,(3) there should be no special router (or group
-    of routers) that handles restoring traffic, and (4) there should be no restrictions
-    on what edge routers advertise what prefixes. For labeled prefixes, (5) the penultimate
-    hop router must swap the label advertised by the failed edge router PEi for the
-    prefix P/p with the label advertised for the same prefix by the edge router PEj
-    before re-tunneling the packet to PEj</p>
-  format: text/html
+  content: |-
+    <p>Consider a BGP free core scenario. Suppose the edge BGP speakers PE1,
+    PE2,..., PEn know about a prefix P/p via the external routers CE1,
+    CE2,..., CEm.  If the edge router PEi crashes or becomes totally
+    disconnected from the core, it desirable for a penultimate hop route
+    "P" carrying traffic to the failed edge router PEi to immediately
+    restore traffic by re-tunneling packets originally tunneled to PEi
+    and destined to the prefix P/p to one of the other edge routers that
+    advertised P/p, say PEj, until BGP re-converges. In doing so, it is
+    highly desirable to keep the core BGP-free while not imposing
+    restrictions on external connectivity. Thus (1) a core router should
+    not be required to learn any BGP prefix, (2) the size of the
+    forwarding and routing tables in the core routers should be
+    independent of the number of BGP prefixes,(3) there should be no
+    special router (or group of routers) that handles restoring traffic,
+    and (4) there should be no restrictions on what edge routers
+    advertise what prefixes. For labeled prefixes, (5) the penultimate
+    hop router must swap the label advertised by the failed edge router
+    PEi for the prefix P/p with the label advertised for the same prefix
+    by the edge router PEj before re-tunneling the packet to PEj</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bashandy-bgp-edge-node-frr-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bashandy-bgp-edge-node-frr-02
     docidentifier:
     - content: draft-bashandy-bgp-edge-node-frr-02
       type: Internet-Draft
@@ -82,10 +87,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bashandy-bgp-edge-node-frr-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

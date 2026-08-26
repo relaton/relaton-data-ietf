@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: QUIC Transport for Network Telemetry
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-netana-opsawg-telemetry-over-quic-00
 docidentifier:
+- content: draft-netana-opsawg-telemetry-over-quic
+  type: Internet-Draft
 - content: draft-netana-opsawg-telemetry-over-quic-00
   type: Internet-Draft
   primary: true
-- content: I-D.netana-opsawg-telemetry-over-quic
-  type: IETF
-  scope: anchor
 docnumber: I-D.netana-opsawg-telemetry-over-quic
 date:
 - type: published
@@ -28,6 +26,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -41,15 +40,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Everything OPS & Arrcus
+        - language: en
+          content: Everything OPS & Arrcus
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - language: en
+          content: Swisscom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paolo
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NTT
+        - language: en
+          content: NTT
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Holger
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -107,15 +115,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Deutsche Telekom
+        - language: en
+          content: Deutsche Telekom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alan
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -129,7 +140,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: InkBridge Networks
+        - language: en
+          content: InkBridge Networks
 version:
 - content: '00'
 language:
@@ -139,34 +151,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the use of the QUIC transport protocol as a
-    common transport substrate for operational Network Telemetry protocols that currently
-    rely on UDP. Specifically, it discusses carrying protocols such as IPFIX, Syslog,
-    YANG-Push UDP-Notif, and RADIUS Accounting over QUIC connections. For telemetry
-    protocols whose data plane is inherently loss-tolerant (where a missing sample
-    is preferable to a delayed retransmission) this document recommends use of the
-    Unreliable Datagram Extension to QUIC (DATAGRAM frames). A primary motivation
-    for this work is the unification of transport- layer security across heterogeneous
-    telemetry protocols. Protocols that currently have no mandatory transport security
-    (syslog over UDP) or optional-only security (IPFIX over UDP with DTLS) or weak
-    security (RADIUS with MD5 obfuscation) would all benefit from the mandatory TLS
-    1.3 mutual authentication that QUIC provides. This document specifically addresses
-    the operational advantages of managing a single PKI certificate lifecycle per
-    Network Node to authenticate all telemetry streams. This document is intended
-    as a framework and applicability statement. Per-protocol bindings that require
-    normative specification are expected to be chartered in their respective IETF
-    working groups.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the use of the QUIC transport protocol as a
+       common transport substrate for operational Network Telemetry
+       protocols that currently rely on UDP.  Specifically, it discusses
+       carrying protocols such as IPFIX, Syslog, YANG-Push UDP-Notif, and
+       RADIUS Accounting over QUIC connections.  For telemetry protocols
+       whose data plane is inherently loss-tolerant (where a missing sample
+       is preferable to a delayed retransmission) this document recommends
+       use of the Unreliable Datagram Extension to QUIC (DATAGRAM frames).
+
+       A primary motivation for this work is the unification of transport-
+       layer security across heterogeneous telemetry protocols.  Protocols
+       that currently have no mandatory transport security (syslog over UDP)
+       or optional-only security (IPFIX over UDP with DTLS) or weak security
+       (RADIUS with MD5 obfuscation) would all benefit from the mandatory
+       TLS 1.3 mutual authentication that QUIC provides.  This document
+       specifically addresses the operational advantages of managing a
+       single PKI certificate lifecycle per Network Node to authenticate all
+       telemetry streams.
+
+       This document is intended as a framework and applicability statement.
+       Per-protocol bindings that require normative specification are
+       expected to be chartered in their respective IETF working groups.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-netana-opsawg-telemetry-over-quic-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

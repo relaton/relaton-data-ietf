@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Guidance to Avoid Carrying RPKI Validation States in BGP Path Attributes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
 docidentifier:
+- content: draft-ietf-sidrops-avoid-rpki-state-in-bgp
+  type: Internet-Draft
 - content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-sidrops-avoid-rpki-state-in-bgp
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-sidrops-avoid-rpki-state-in-bgp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Job
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: BSD Software Development
+        - language: en
+          content: BSD Software Development
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tobias
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Technische Universität Wien
+        - language: en
+          content: Technische Universität Wien
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Massimiliano
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Glevia GmbH
+        - language: en
+          content: Glevia GmbH
 version:
 - content: '12'
 language:
@@ -97,27 +104,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides guidance to avoid carrying Resource Public Key
-    Infrastructure (RPKI) derived validation states in Border Gateway Protocol (BGP)
-    Path Attributes whose change triggers a BGP UPDATE being sent across external
-    BGP (EBGP) sessions. Annotating routes with BGP Path Attributes carried across
-    EBGP sessions signaling validation states may cause needless flooding of BGP UPDATE
-    messages through the global Internet routing system, for example when Route Origin
-    Authorizations (ROAs) are issued, or are revoked, or when RPKI-To-Router sessions
-    are terminated. Operators should ensure RPKI-derived validation states are not
-    signaled in BGP Path Attributes whose change triggers a BGP UPDATE being sent
-    across EBGP sessions. Specifically, operators should not associate Prefix Origin
-    Validation state with BGP routes using any form of BGP Communities carried across
-    EBGP session.</p>"
-  format: text/html
+  content: |-
+    <p>This document provides guidance to avoid carrying Resource Public Key
+       Infrastructure (RPKI) derived validation states in Border Gateway
+       Protocol (BGP) Path Attributes whose change triggers a BGP UPDATE
+       being sent across external BGP (EBGP) sessions.  Annotating routes
+       with BGP Path Attributes carried across EBGP sessions signaling
+       validation states may cause needless flooding of BGP UPDATE messages
+       through the global Internet routing system, for example when Route
+       Origin Authorizations (ROAs) are issued, or are revoked, or when
+       RPKI-To-Router sessions are terminated.
+
+       Operators should ensure RPKI-derived validation states are not
+       signaled in BGP Path Attributes whose change triggers a BGP UPDATE
+       being sent across EBGP sessions.  Specifically, operators should not
+       associate Prefix Origin Validation state with BGP routes using any
+       form of BGP Communities carried across EBGP session.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-09
-      format: text/plain
+      content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-avoid-rpki-state-in-bgp-11
     docidentifier:
-    - content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-09
+    - content: draft-ietf-sidrops-avoid-rpki-state-in-bgp-11
       type: Internet-Draft
       primary: true
 series:
@@ -126,10 +138,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-sidrops-avoid-rpki-state-in-bgp-12
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

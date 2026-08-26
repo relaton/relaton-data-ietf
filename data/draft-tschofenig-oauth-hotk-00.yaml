@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'The OAuth 2.0 Authorization Framework: Holder-of-the-Key Token Usage'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-tschofenig-oauth-hotk-00
 docidentifier:
+- content: draft-tschofenig-oauth-hotk
+  type: Internet-Draft
 - content: draft-tschofenig-oauth-hotk-00
   type: Internet-Draft
   primary: true
-- content: I-D.tschofenig-oauth-hotk
-  type: IETF
-  scope: anchor
 docnumber: I-D.tschofenig-oauth-hotk
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -49,28 +49,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>OAuth 2.0 deployments currently rely on bearer tokens for securing
-    access to protected resources. Bearer tokens require Transport Layer Security
-    to be used between an OAuth client and the resource server when presenting the
-    access token in order to get access. The security model is based on proof-of-possession
-    of the access token: access token storage and transfer has to be done with care
-    to prevent leakage. There are, however, use cases that require a more active involvement
-    of the OAuth client to offer increased security, particularly against token leakage.
-    This document specifies an OAuth security framework using ephemeral asymmetric
-    credentials that are bound to the access token. A client can create these key
-    pairs dynamically and use them, after they are bound to an access token by the
-    authorization server, in communication interactions with resource servers. This
-    document is discussed at https://www.ietf.org/mailman/listinfo/oauth. This initial
-    version of the specification shall serve as a discussion starter.</p>"
-  format: text/html
+  content: |-
+    <p>OAuth 2.0 deployments currently rely on bearer tokens for securing
+       access to protected resources.  Bearer tokens require Transport Layer
+       Security to be used between an OAuth client and the resource server
+       when presenting the access token in order to get access.  The
+       security model is based on proof-of-possession of the access token:
+       access token storage and transfer has to be done with care to prevent
+       leakage.
+
+       There are, however, use cases that require a more active involvement
+       of the OAuth client to offer increased security, particularly against
+       token leakage.  This document specifies an OAuth security framework
+       using ephemeral asymmetric credentials that are bound to the access
+       token.  A client can create these key pairs dynamically and use them,
+       after they are bound to an access token by the authorization server,
+       in communication interactions with resource servers.
+
+       This document is discussed at
+       https://www.ietf.org/mailman/listinfo/oauth.  This initial version of
+       the specification shall serve as a discussion starter.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-tschofenig-oauth-hotk-03
-      format: text/plain
+      content: draft-tschofenig-oauth-hotk-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tschofenig-oauth-hotk-01
     docidentifier:
-    - content: draft-tschofenig-oauth-hotk-03
+    - content: draft-tschofenig-oauth-hotk-01
       type: Internet-Draft
       primary: true
 series:
@@ -79,10 +87,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-tschofenig-oauth-hotk-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

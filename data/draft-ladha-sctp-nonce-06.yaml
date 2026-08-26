@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ECN Nonces for Stream Control Transmission Protocol (SCTP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ladha-sctp-nonce-06
 docidentifier:
+- content: draft-ladha-sctp-nonce
+  type: Internet-Draft
 - content: draft-ladha-sctp-nonce-06
   type: Internet-Draft
   primary: true
-- content: I-D.ladha-sctp-nonce
-  type: IETF
-  scope: anchor
 docnumber: I-D.ladha-sctp-nonce
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sourabh
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Qualcomm
+        - language: en
+          content: Qualcomm
 version:
 - content: '06'
 language:
@@ -53,28 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the addition of the ECN-nonce RFC 3540 [4]
-    to the Stream Control Transmission Protocol (SCTP) RFC 2960 [3]. The ECN-nonce
-    reduces the vulnerability of ECN senders to misbehaving receivers that conceal
-    congestion signals like ECN marks and packet losses. The ECN-nonce approach is
-    different in SCTP because SCTP uses chunks for extensible protocol features and
-    is selective acknowlegement (SACK)-based; this document describes those differences.
-    In particular this document describes (1) protocol extensions in the form of a
-    single new parameter for the INIT/ INIT-ACK chunks, and a single bit flag in the
-    SACK chunk, and (2) rules governing the sender and receiver side implementation.
-    This document outlines a minimum response that an SCTP sender should apply after
-    detecting a misbehaving receiver.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the addition of the ECN-nonce RFC 3540 [4] to
+       the Stream Control Transmission Protocol (SCTP) RFC 2960 [3].  The
+       ECN-nonce reduces the vulnerability of ECN senders to misbehaving
+       receivers that conceal congestion signals like ECN marks and packet
+       losses.  The ECN-nonce approach is different in SCTP because SCTP
+       uses chunks for extensible protocol features and is selective
+       acknowlegement (SACK)-based; this document describes those
+       differences.  In particular this document describes (1) protocol
+       extensions in the form of a single new parameter for the INIT/
+       INIT-ACK chunks, and a single bit flag in the SACK chunk, and (2)
+       rules governing the sender and receiver side implementation.
+
+       This document outlines a minimum response that an SCTP sender should
+       apply after detecting a misbehaving receiver.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ladha-sctp-nonce-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

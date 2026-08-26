@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: MPLS Egress Protection Framework
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-egress-protection-framework-02
 docidentifier:
+- content: draft-ietf-mpls-egress-protection-framework
+  type: Internet-Draft
 - content: draft-ietf-mpls-egress-protection-framework-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-mpls-egress-protection-framework
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-mpls-egress-protection-framework
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yimin
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeyananth
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bruno
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -89,15 +96,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - language: en
+          content: Orange
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -111,15 +121,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: RtBrick Inc
+        - language: en
+          content: RtBrick Inc
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Carsten
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -133,15 +146,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Deutsche Telekom
+        - language: en
+          content: Deutsche Telekom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Huaimo
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -155,15 +171,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co., Ltd.
+        - language: en
+          content: Huawei Technologies Co., Ltd.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yuanlong
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -177,7 +196,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co., Ltd.
+        - language: en
+          content: Huawei Technologies Co., Ltd.
 version:
 - content: '02'
 language:
@@ -187,39 +207,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a fast reroute framework for protecting IP/
-    MPLS services and MPLS transport tunnels against egress node and egress link failures.
-    In this framework, the penultimate-hop router of an MPLS tunnel acts as the point
-    of local repair (PLR) for an egress node failure, and the egress router of the
-    MPLS tunnel acts as the PLR for an egress link failure. Each of them pre-establishes
-    a bypass tunnel to a protector. Upon an egress node or link failure, the corresponding
-    PLR performs local failure detection and local repair, by rerouting packets over
-    the corresponding bypass tunnel. The protector in turn performs context label
-    switching or context IP forwarding to send the packets to the ultimate service
-    destination(s). This mechanism can be used to reduce traffic loss before global
-    repair reacts to the failure and control plane protocols converge on the topology
-    changes due to the failure. The framework is applicable to all types of IP/MPLS
-    services and MPLS tunnels. Under the framework, service protocol extensions may
-    be further specified to support service label distribution from an egress router
-    to a protector.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a fast reroute framework for protecting IP/
+       MPLS services and MPLS transport tunnels against egress node and
+       egress link failures.  In this framework, the penultimate-hop router
+       of an MPLS tunnel acts as the point of local repair (PLR) for an
+       egress node failure, and the egress router of the MPLS tunnel acts as
+       the PLR for an egress link failure.  Each of them pre-establishes a
+       bypass tunnel to a protector.  Upon an egress node or link failure,
+       the corresponding PLR performs local failure detection and local
+       repair, by rerouting packets over the corresponding bypass tunnel.
+       The protector in turn performs context label switching or context IP
+       forwarding to send the packets to the ultimate service
+       destination(s).  This mechanism can be used to reduce traffic loss
+       before global repair reacts to the failure and control plane
+       protocols converge on the topology changes due to the failure.  The
+       framework is applicable to all types of IP/MPLS services and MPLS
+       tunnels.  Under the framework, service protocol extensions may be
+       further specified to support service label distribution from an
+       egress router to a protector.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-mpls-egress-protection-framework-00
-      format: text/plain
+      content: draft-ietf-mpls-egress-protection-framework-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-egress-protection-framework-01
     docidentifier:
-    - content: draft-ietf-mpls-egress-protection-framework-00
+    - content: draft-ietf-mpls-egress-protection-framework-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-mpls-egress-protection-framework-04
-      format: text/plain
+      content: draft-ietf-mpls-egress-protection-framework-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-egress-protection-framework-03
     docidentifier:
-    - content: draft-ietf-mpls-egress-protection-framework-04
+    - content: draft-ietf-mpls-egress-protection-framework-03
       type: Internet-Draft
       primary: true
 series:
@@ -228,10 +255,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-mpls-egress-protection-framework-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

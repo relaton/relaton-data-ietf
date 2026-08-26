@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Validation of Locations Around a Planned Change
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ecrit-lost-planned-changes-01
 docidentifier:
+- content: draft-ietf-ecrit-lost-planned-changes
+  type: Internet-Draft
 - content: draft-ietf-ecrit-lost-planned-changes-01
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ecrit-lost-planned-changes
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ecrit-lost-planned-changes
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Neustar
+        - language: en
+          content: Neustar
 version:
 - content: '01'
 language:
@@ -53,23 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an extension to LoST (RFC5222) that allows a
-    planned change to the data in the LoST server to occur. Records that previously
-    were valid will become invalid at a date in the future, and new locations will
-    become valid after the date. The extension adds two elements to the &lt;findservice&gt;
-    request: A URI to be used to inform the LIS that previously valid locations will
-    be invalid after the planned change date, and add a date which requests the server
-    to perform validation as of the date specified. It also adds an optional Time-To-Live
-    element to the response, which informs clients about the current expected lifetime
-    of the validation. This document also provides a conventional XML schema for LoST,
-    as backwards compatible alternative to the RelaxNG schema in RFC5222</p>"
-  format: text/html
+  content: |-
+    <p>This document defines an extension to LoST (RFC5222) that allows a
+       planned change to the data in the LoST server to occur.  Records that
+       previously were valid will become invalid at a date in the future,
+       and new locations will become valid after the date.  The extension
+       adds two elements to the &lt;findservice&gt; request: A URI to be used to
+       inform the LIS that previously valid locations will be invalid after
+       the planned change date, and add a date which requests the server to
+       perform validation as of the date specified.  It also adds an
+       optional Time-To-Live element to the response, which informs clients
+       about the current expected lifetime of the validation.  This document
+       also provides a conventional XML schema for LoST, as backwards
+       compatible alternative to the RelaxNG schema in RFC5222</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-ecrit-lost-planned-changes-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ecrit-lost-planned-changes-00
     docidentifier:
     - content: draft-ietf-ecrit-lost-planned-changes-00
       type: Internet-Draft
@@ -77,10 +82,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-ecrit-lost-planned-changes-03
-      format: text/plain
+      content: draft-ietf-ecrit-lost-planned-changes-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ecrit-lost-planned-changes-02
     docidentifier:
-    - content: draft-ietf-ecrit-lost-planned-changes-03
+    - content: draft-ietf-ecrit-lost-planned-changes-02
       type: Internet-Draft
       primary: true
 series:
@@ -89,10 +96,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ecrit-lost-planned-changes-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

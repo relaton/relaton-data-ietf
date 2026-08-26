@@ -7,17 +7,15 @@ title:
   script: Latn
   content: PCEP extension to support service migration from rsvp to spring or vice
     versa
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-paul-pce-rsvp-spring-migration-01
 docidentifier:
+- content: draft-paul-pce-rsvp-spring-migration
+  type: Internet-Draft
 - content: draft-paul-pce-rsvp-spring-migration-01
   type: Internet-Draft
   primary: true
-- content: I-D.paul-pce-rsvp-spring-migration
-  type: IETF
-  scope: anchor
 docnumber: I-D.paul-pce-rsvp-spring-migration
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Arijit
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 version:
 - content: '01'
 language:
@@ -54,26 +55,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In a SDN environment, path computation element protocol(PCEP) (RFC
-    5440) is used between a controller and the network devices, using which controller
-    can setup and tear down Resource ReserVation Protocol (RSVP) based label switched
-    paths(LSPs) in the network having Path Computation Client (PCC) as Label Switched
-    Router (LSR). Draft draft-sivabalan-pce-segment-routing extends PCEP specification
-    in order to support setup and teardown of Segment Routing(SR) Label Switched Path(LSR).
-    In a mixed environment where some of the LSPs are setup using PCEP use RSVP and
-    some LSPs are based on Segment routing(SR). The specifications lacks a method
-    to advertise the LSP preferenace to use one type of LSP over other when those
-    are setup using PCEP. This draft defines a method to advertise the preference
-    for any LSP which is setup using PCEP. This document proposes new optional TLV
-    that can be used to announce the preference of LSP which is being setup using
-    PCEP.</p>"
-  format: text/html
+  content: |-
+    <p>In a SDN environment, path computation element protocol(PCEP)
+       (RFC 5440) is used between a controller and the network devices,
+       using which controller can setup and tear down Resource ReserVation
+       Protocol (RSVP) based label switched paths(LSPs) in the network
+       having Path Computation Client (PCC) as Label Switched Router (LSR).
+       Draft draft-sivabalan-pce-segment-routing extends PCEP specification
+       in order to support setup and teardown of Segment Routing(SR) Label
+       Switched Path(LSR). In a mixed environment where some of the LSPs are
+       setup using PCEP use RSVP and some LSPs are based on Segment
+       routing(SR). The specifications lacks a method to advertise the
+       LSP preferenace to use one type of LSP over other when those are
+       setup using PCEP. This draft defines a method to advertise the
+       preference for any LSP which is setup using PCEP.
+
+       This document proposes new optional TLV that can be used to announce
+       the preference of LSP which is being setup using PCEP.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-paul-pce-rsvp-spring-migration-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-paul-pce-rsvp-spring-migration-00
     docidentifier:
     - content: draft-paul-pce-rsvp-spring-migration-00
       type: Internet-Draft
@@ -84,10 +90,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-paul-pce-rsvp-spring-migration-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

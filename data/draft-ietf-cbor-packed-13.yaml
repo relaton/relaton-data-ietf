@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Packed CBOR
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-packed-13
 docidentifier:
+- content: draft-ietf-cbor-packed
+  type: Internet-Draft
 - content: draft-ietf-cbor-packed-13
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-cbor-packed
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-cbor-packed
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Carsten
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Universität Bremen TZI
+        - language: en
+          content: Universität Bremen TZI
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mikolai
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: TUD Dresden University of Technology
+        - language: en
+          content: TUD Dresden University of Technology
 version:
 - content: '13'
 language:
@@ -75,26 +79,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Concise Binary Object Representation (CBOR, RFC 8949 == STD 94)
-    is a data format whose design goals include the possibility of extremely small
-    code size, fairly small message size, and extensibility without the need for version
-    negotiation. CBOR does not provide any forms of data compression. CBOR data items,
-    in particular when generated from legacy data models, often allow considerable
-    gains in compactness when applying data compression. While traditional data compression
-    techniques such as DEFLATE (RFC 1951) can work well for CBOR encoded data items,
-    their disadvantage is that the recipient needs to decompress the compressed form
-    to make use of the data. This specification describes Packed CBOR, a simple transformation
-    of a CBOR data item into another CBOR data item that is almost as easy to consume
-    as the original CBOR data item. A separate decompression step is therefore often
-    not required at the recipient. // The present version (-13) is a refresh of the
-    implementation draft // -12 with minor editorial improvements.</p>"
-  format: text/html
+  content: |-
+    <p>The Concise Binary Object Representation (CBOR, RFC 8949 == STD 94)
+       is a data format whose design goals include the possibility of
+       extremely small code size, fairly small message size, and
+       extensibility without the need for version negotiation.
+
+       CBOR does not provide any forms of data compression.  CBOR data
+       items, in particular when generated from legacy data models, often
+       allow considerable gains in compactness when applying data
+       compression.  While traditional data compression techniques such as
+       DEFLATE (RFC 1951) can work well for CBOR encoded data items, their
+       disadvantage is that the recipient needs to decompress the compressed
+       form to make use of the data.
+
+       This specification describes Packed CBOR, a simple transformation of
+       a CBOR data item into another CBOR data item that is almost as easy
+       to consume as the original CBOR data item.  A separate decompression
+       step is therefore often not required at the recipient.
+
+
+       // The present version (-13) is a refresh of the implementation draft
+       // -12 with minor editorial improvements.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-cbor-packed-12
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-packed-12
     docidentifier:
     - content: draft-ietf-cbor-packed-12
       type: Internet-Draft
@@ -103,7 +117,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-cbor-packed-14
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-packed-14
     docidentifier:
     - content: draft-ietf-cbor-packed-14
       type: Internet-Draft
@@ -114,10 +130,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-cbor-packed-13
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

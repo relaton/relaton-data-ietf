@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Hierarchy of Provider Edge Device in  BGP/MPLS VPN
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-libin-hierarchy-pe-bgp-mpls-vpn-02
 docidentifier:
+- content: draft-libin-hierarchy-pe-bgp-mpls-vpn
+  type: Internet-Draft
 - content: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
   type: Internet-Draft
   primary: true
-- content: I-D.libin-hierarchy-pe-bgp-mpls-vpn
-  type: IETF
-  scope: anchor
 docnumber: I-D.libin-hierarchy-pe-bgp-mpls-vpn
 date:
 - type: published
@@ -28,6 +26,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -41,15 +40,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dong
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -63,7 +65,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 version:
 - content: '02'
 language:
@@ -73,39 +76,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In the deployment of BGP/MPLS VPN,the PE(Provider Edge)Device should
-    maintain all the VPN routes of the VPNs which it belong to.When there are many
-    VPNs converged by a PE,and the capacity of PE is relevant limited,then the bottleneck
-    will be encountered.Another problem is that the current BGP/MPLS VPN model is
-    something of a 'Plane Modle' where the demand of the performance of the PE device
-    are all the same no matter which layer the PE device is belongs to.However,the
-    typical network is 'Core-Convergence-Access(Edge)' model,and the performance of
-    the device is superior in Core Layer and inferior in Access Layer,and the scale
-    of network is large in Access Layer and small in Core Layer,the routes are converged
-    in every layer,so in current 'Plane Modle',when PE device push to the edge layer,it
-    has to maintain more VPN routes,this makes it difficult to extend the PE device
-    to edge layer.This document defines an model of Hierarchy of Provider Edge Device
-    in BGP/MPLS VPN,where Hierarchy of Provider Edge Device can be composed of several
-    device and every device take on the different part,partake the function of the
-    former concentrative PE,we call this model 'Hierarchy Model',In this model the
-    demand of performance in Routing and Switching is strict to the PE device in High
-    layer,loose to the PE device in edge layer. One HoPE can be composed of a SPE
-    and UPES connected to the SPE, or be composed of a high-level SPE and HoPEs connected
-    the high level SPE and and build up a new HoPE.This build is called nesting of
-    HoPE,and this kind of nesting can be done for many times.Thus the former HoPE
-    connect to the high-level SPE as a role of UPE,and the new HoPE can connect a
-    single UPE too.</p>"
-  format: text/html
+  content: "<p>In the deployment of BGP/MPLS VPN,the PE(Provider Edge)Device should\nmaintain
+    all the VPN routes of the VPNs which it belong to.When there \nare many VPNs converged
+    by a PE,and the capacity of PE is relevant\nlimited,then the bottleneck will be
+    encountered.Another problem is \nthat the current BGP/MPLS VPN model is something
+    of a 'Plane Modle'\nwhere the demand of the performance of the PE device are all
+    the \nsame no matter which layer the PE device is belongs to.However,the \ntypical
+    network is 'Core-Convergence-Access(Edge)' model,and the \nperformance of the
+    device is superior in Core Layer and inferior in \nAccess Layer,and the scale
+    of network is large in Access Layer and \nsmall in Core Layer,the routes are converged
+    in every layer,so in \ncurrent 'Plane Modle',when PE device push to the edge layer,it
+    has \nto maintain more VPN routes,this makes it difficult to extend the PE\ndevice
+    to edge layer.This document defines an model of Hierarchy of \nProvider Edge Device
+    in BGP/MPLS VPN,where Hierarchy of Provider \nEdge Device can be composed of several
+    device and every device take \non the different part,partake the function of the
+    former \nconcentrative PE,we call this model 'Hierarchy Model',In this model\nthe
+    demand of performance in Routing and Switching is strict to the \nPE device in
+    High layer,loose to the PE device in edge layer.\n \n   One HoPE can be composed
+    of a SPE and UPES connected to the SPE, \n   or be composed of a high-level SPE
+    and HoPEs connected the high \n   level SPE and and build up a new HoPE.This build
+    is called nesting \n   of HoPE,and this kind of nesting can be done for many times.Thus
+    the \n   former HoPE connect to the high-level SPE as a role of UPE,and the \n
+    \  new HoPE can connect a single UPE too.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-libin-hierarchy-pe-bgp-mpls-vpn-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

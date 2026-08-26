@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IPv6 traceroute option
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-durand-ipv6-traceroute-00
 docidentifier:
+- content: draft-durand-ipv6-traceroute
+  type: Internet-Draft
 - content: draft-durand-ipv6-traceroute-00
   type: Internet-Draft
   primary: true
-- content: I-D.durand-ipv6-traceroute
-  type: IETF
-  scope: anchor
 docnumber: I-D.durand-ipv6-traceroute
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alain
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMAG
+        - language: en
+          content: IMAG
 version:
 - content: '00'
 language:
@@ -53,37 +54,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The traceroute program has proven very useful and has been extensively
-    used in the Internet for measurement and debugging purposes. However, it only
-    shows the originator to target path and gives no indication on the reverse path.
-    Source routing may sometimes be used to find it, but it's very often disable by
-    intermediary routers. Another problem occurs when packets do not follow the same
-    routes: traceroute outputs are very difficult to read. Other solutions has been
-    proposed to record the route taken by an IPv4 packet. Originally, IPv4 contains
-    an option in which every intermediary router can add its address [RFC791]. Unfortunately,
-    the limitation in size imposed by the options design of IPv4 limits its use to
-    9 routers. In [RFC1393] another strategy was proposed. An new IPv4 option was
-    created. When a router receives a packet containing this option, it generates
-    a ICMP Echo message to the source. This technique couldn't be widely deployed
-    in IPv4 because it needed a change in every single router to be efficient. These
-    two methods create less traffic on the network and are more accurate, since they
-    give the real route taken by packets and are less sensitive to fluttering. The
-    IPv6 deployment could be the opportunity to widely deploy a new traceroute mechanism
-    based on those two methods. We propose to combine the two previous methods by
-    defining a new hop-by-hop option and a new ICMP message type to record the direct
-    path from the originator to the target and the reverse path from the target to
-    the originator.</p>"
-  format: text/html
+  content: "<p>The traceroute program has proven very useful and has been\n    extensively
+    used in the Internet for measurement and debugging\n    purposes. However, it
+    only shows the originator to target path\n    and gives no indication on the reverse
+    path. Source routing may\n    sometimes be used to find it, but it's very often
+    disable by\n    intermediary routers.\n    Another problem occurs when packets
+    do not follow the same routes:\n    traceroute outputs are very difficult to read.\n
+    \n    Other solutions has been proposed to record the route taken by\n    an IPv4
+    packet. Originally, IPv4 contains an option in which every\n    intermediary router
+    can add its address [RFC791]. Unfortunately,\n    the limitation in size imposed
+    by the options design of IPv4 limits\n    its use to 9 routers.\n \n    In [RFC1393]
+    another strategy was proposed. An new IPv4 option was\n    created. When a router
+    receives a packet containing this option,\n    it generates a ICMP Echo message
+    to the source. This technique\n    couldn't be widely deployed in IPv4 because
+    it needed a change\n    in every single router to be efficient.\n \n    These
+    two methods create less traffic on the network and are more\n    accurate, since
+    they give the real route taken by packets and are\n    less sensitive to fluttering.
+    The IPv6 deployment could be the\n    opportunity to widely deploy a new traceroute
+    mechanism based on\n    those two methods.\n \n    We propose to combine the two
+    previous methods by defining a new\n    hop-by-hop option and a new ICMP message
+    type to record the direct\n    path from the originator to the target and the
+    reverse path from\n    the target to the originator.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-durand-ipv6-traceroute-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

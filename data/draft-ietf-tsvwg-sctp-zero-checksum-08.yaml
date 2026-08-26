@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Zero Checksum for the Stream Control Transmission Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-zero-checksum-08
 docidentifier:
+- content: draft-ietf-tsvwg-sctp-zero-checksum
+  type: Internet-Draft
 - content: draft-ietf-tsvwg-sctp-zero-checksum-08
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tsvwg-sctp-zero-checksum
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tsvwg-sctp-zero-checksum
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Münster University of Applied Sciences
+        - language: en
+          content: Münster University of Applied Sciences
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Victor
       - language: en
+        script: Latn
         initial: V
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Florent
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randell
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Mozilla Corporation
+        - language: en
+          content: Mozilla Corporation
 version:
 - content: '08'
 language:
@@ -119,32 +129,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Stream Control Transmission Protocol (SCTP) uses a 32-bit checksum
-    in the common header of each packet to provide some level of data integrity. If
-    another method used by SCTP provides already the same or a higher level of data
-    integrity, computing this checksum does not provide any additional protection,
-    but does consume computing resources. This document provides a simple extension
-    to SCTP allowing to save these computing resources by using zero as the checksum
-    in a backwards compatible way. It also defines how this feature can be used when
-    SCTP packets are encapsulated in Datagram Transport Layer Security (DTLS) packets.</p>"
-  format: text/html
+  content: |-
+    <p>The Stream Control Transmission Protocol (SCTP) uses a 32-bit
+       checksum in the common header of each packet to provide some level of
+       data integrity.  If another method used by SCTP provides already the
+       same or a higher level of data integrity, computing this checksum
+       does not provide any additional protection, but does consume
+       computing resources.
+
+       This document provides a simple extension to SCTP allowing to save
+       these computing resources by using zero as the checksum in a
+       backwards compatible way.  It also defines how this feature can be
+       used when SCTP packets are encapsulated in Datagram Transport Layer
+       Security (DTLS) packets.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-sctp-zero-checksum-04
-      format: text/plain
+      content: draft-ietf-tsvwg-sctp-zero-checksum-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-zero-checksum-07
     docidentifier:
-    - content: draft-ietf-tsvwg-sctp-zero-checksum-04
+    - content: draft-ietf-tsvwg-sctp-zero-checksum-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-sctp-zero-checksum-10
-      format: text/plain
+      content: draft-ietf-tsvwg-sctp-zero-checksum-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-sctp-zero-checksum-09
     docidentifier:
-    - content: draft-ietf-tsvwg-sctp-zero-checksum-10
+    - content: draft-ietf-tsvwg-sctp-zero-checksum-09
       type: Internet-Draft
       primary: true
 series:
@@ -153,10 +171,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tsvwg-sctp-zero-checksum-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

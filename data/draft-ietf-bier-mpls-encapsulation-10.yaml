@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Encapsulation for Bit Index Explicit Replication in MPLS and non-MPLS Networks
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-mpls-encapsulation-10
 docidentifier:
+- content: draft-ietf-bier-mpls-encapsulation
+  type: Internet-Draft
 - content: draft-ietf-bier-mpls-encapsulation-10
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-bier-mpls-encapsulation
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-bier-mpls-encapsulation
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: IJsbrand
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Eric
       - language: en
+        script: Latn
         initial: E
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrew
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -89,15 +96,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeff
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -111,15 +121,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Individual
+        - language: en
+          content: Individual
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sam
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -133,15 +146,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google, Inc.
+        - language: en
+          content: Google, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Israel
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -155,7 +171,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Broadcom
+        - language: en
+          content: Broadcom
 version:
 - content: '10'
 language:
@@ -165,34 +182,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
-    optimal multicast forwarding through a "multicast domain", without requiring intermediate
-    routers to maintain any per-flow state or to engage in an explicit tree-building
-    protocol. When a multicast data packet enters the domain, the ingress router determines
-    the set of egress routers to which the packet needs to be sent. The ingress router
-    then encapsulates the packet in a BIER header. The BIER header contains a bitstring
-    in which each bit represents exactly one egress router in the domain; to forward
-    the packet to a given set of egress routers, the bits corresponding to those routers
-    are set in the BIER header. The details of the encapsulation depend on the type
-    of network used to realize the multicast domain. This document specifies a BIER
-    encapsulation that can be used in an MPLS network, or with slight differences,
-    in a non-MPLS network.</p>
-  format: text/html
+  content: |-
+    <p>Bit Index Explicit Replication (BIER) is an architecture that
+       provides optimal multicast forwarding through a "multicast domain",
+       without requiring intermediate routers to maintain any per-flow state
+       or to engage in an explicit tree-building protocol.  When a multicast
+       data packet enters the domain, the ingress router determines the set
+       of egress routers to which the packet needs to be sent.  The ingress
+       router then encapsulates the packet in a BIER header.  The BIER
+       header contains a bitstring in which each bit represents exactly one
+       egress router in the domain; to forward the packet to a given set of
+       egress routers, the bits corresponding to those routers are set in
+       the BIER header.  The details of the encapsulation depend on the type
+       of network used to realize the multicast domain.  This document
+       specifies a BIER encapsulation that can be used in an MPLS network,
+       or with slight differences, in a non-MPLS network.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-bier-mpls-encapsulation-02
-      format: text/plain
+      content: draft-ietf-bier-mpls-encapsulation-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-mpls-encapsulation-09
     docidentifier:
-    - content: draft-ietf-bier-mpls-encapsulation-02
+    - content: draft-ietf-bier-mpls-encapsulation-09
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-bier-mpls-encapsulation-11
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-mpls-encapsulation-11
     docidentifier:
     - content: draft-ietf-bier-mpls-encapsulation-11
       type: Internet-Draft
@@ -203,10 +226,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-bier-mpls-encapsulation-10
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

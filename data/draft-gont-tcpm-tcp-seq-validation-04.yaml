@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: On the Validation of TCP Sequence Numbers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gont-tcpm-tcp-seq-validation-04
 docidentifier:
+- content: draft-gont-tcpm-tcp-seq-validation
+  type: Internet-Draft
 - content: draft-gont-tcpm-tcp-seq-validation-04
   type: Internet-Draft
   primary: true
-- content: I-D.gont-tcpm-tcp-seq-validation
-  type: IETF
-  scope: anchor
 docnumber: I-D.gont-tcpm-tcp-seq-validation
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Fernando
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -61,7 +63,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Quantum Corporation
+        - language: en
+          content: Quantum Corporation
 version:
 - content: '04'
 language:
@@ -71,26 +74,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When TCP receives packets that lie outside of the receive window, the
-    corresponding packets are dropped and either an ACK, RST or no response is generated
-    due to the out-of-window packet, with no further processing of the packet. Most
-    of the time, this works just fine and TCP remains stable, especially when a TCP
-    connection has unidirectional data flow. However, there are three scenarios in
-    which packets that are outside of the receive window should still have their ACK
-    field processed, or else a packet war will take place. The aforementioned issues
-    have affected a number of popular TCP implementations, typically leading to connection
-    failures, system crashes, or other undesirable behaviors. This document describes
-    the three scenarios in which the aforementioned issues might arise, and formally
-    updates RFC 793 such that these potential problems are mitigated.</p>"
-  format: text/html
+  content: |-
+    <p>When TCP receives packets that lie outside of the receive window, the
+       corresponding packets are dropped and either an ACK, RST or no
+       response is generated due to the out-of-window packet, with no
+       further processing of the packet.  Most of the time, this works just
+       fine and TCP remains stable, especially when a TCP connection has
+       unidirectional data flow.  However, there are three scenarios in
+       which packets that are outside of the receive window should still
+       have their ACK field processed, or else a packet war will take place.
+       The aforementioned issues have affected a number of popular TCP
+       implementations, typically leading to connection failures, system
+       crashes, or other undesirable behaviors.  This document describes the
+       three scenarios in which the aforementioned issues might arise, and
+       formally updates RFC 793 such that these potential problems are
+       mitigated.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-gont-tcpm-tcp-seq-validation-02
-      format: text/plain
+      content: draft-gont-tcpm-tcp-seq-validation-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gont-tcpm-tcp-seq-validation-03
     docidentifier:
-    - content: draft-gont-tcpm-tcp-seq-validation-02
+    - content: draft-gont-tcpm-tcp-seq-validation-03
       type: Internet-Draft
       primary: true
 series:
@@ -99,10 +107,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gont-tcpm-tcp-seq-validation-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

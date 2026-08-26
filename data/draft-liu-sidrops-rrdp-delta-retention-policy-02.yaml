@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: RPKI Repository Delta Protocol (RRDP) Delta File Retention Policy
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-liu-sidrops-rrdp-delta-retention-policy-02
 docidentifier:
+- content: draft-liu-sidrops-rrdp-delta-retention-policy
+  type: Internet-Draft
 - content: draft-liu-sidrops-rrdp-delta-retention-policy-02
   type: Internet-Draft
   primary: true
-- content: I-D.liu-sidrops-rrdp-delta-retention-policy
-  type: IETF
-  scope: anchor
 docnumber: I-D.liu-sidrops-rrdp-delta-retention-policy
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Libin
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zhiwei
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CNNIC
+        - language: en
+          content: CNNIC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dan
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -107,7 +115,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 version:
 - content: '02'
 language:
@@ -117,26 +126,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document updates RFC 8182 (The RPKI Repository Delta Protocol)
-    by specifying an optimized delta file retention policy based on client access
-    patterns. The proposed mechanism allows RRDP servers to maintain only the delta
-    files required by active clients, reducing storage requirements while maintaining
-    compatibility with existing clients. By tracking which serial numbers are being
-    requested by active clients, the repository can determine the minimum serial number
-    needed by any client and safely prune delta files that update from earlier serial
-    numbers. The proposed mechanism provides several benefits, including reduced storage
-    requirements, smaller notification files, and more efficient use of bandwidth
-    and processing resources. It also maintains backward compatibility with existing
-    RRDP clients, requiring no changes to client implementations.</p>"
-  format: text/html
+  content: |-
+    <p>This document updates RFC 8182 (The RPKI Repository Delta Protocol)
+       by specifying an optimized delta file retention policy based on
+       client access patterns.  The proposed mechanism allows RRDP servers
+       to maintain only the delta files required by active clients, reducing
+       storage requirements while maintaining compatibility with existing
+       clients.  By tracking which serial numbers are being requested by
+       active clients, the repository can determine the minimum serial
+       number needed by any client and safely prune delta files that update
+       from earlier serial numbers.
+
+       The proposed mechanism provides several benefits, including reduced
+       storage requirements, smaller notification files, and more efficient
+       use of bandwidth and processing resources.  It also maintains
+       backward compatibility with existing RRDP clients, requiring no
+       changes to client implementations.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-liu-sidrops-rrdp-delta-retention-policy-00
-      format: text/plain
+      content: draft-liu-sidrops-rrdp-delta-retention-policy-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-sidrops-rrdp-delta-retention-policy-01
     docidentifier:
-    - content: draft-liu-sidrops-rrdp-delta-retention-policy-00
+    - content: draft-liu-sidrops-rrdp-delta-retention-policy-01
       type: Internet-Draft
       primary: true
 series:
@@ -145,10 +160,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-liu-sidrops-rrdp-delta-retention-policy-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

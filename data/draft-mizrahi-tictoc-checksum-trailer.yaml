@@ -1,11 +1,12 @@
 ---
 id: draftmizrahitictocchecksumtrailer
 schema_version: v1.5.6
+formattedref:
+  content: draft-mizrahi-tictoc-checksum-trailer
 title:
 - language: en
   script: Latn
   content: UDP Checksum Trailer in Timing Protocols
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mizrahi-tictoc-checksum-trailer-00
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Various time synchronization and delay measurement protocols are transported
-    over UDP, e.g., PTP, NTP, and OWAMP/TWAMP. These protocols use timestamped packets
-    that often have to be modified by intermediate nodes in the network. In such cases
-    the UDP checksum field must be updated to reflect these modifications. The IEEE
-    1588 standard suggests to append 2 octets to every protocol message, allowing
-    intermediate nodes to reflect the checksum modification in the last 2 octets rather
-    than in the UDP checksum field. This document generalizes this concept, and defines
-    a UDP Checksum Trailer for NTP and for OWAMP/TWAMP.</p>"
-  format: text/html
+  content: |-
+    <p>Various time synchronization and delay measurement protocols are
+       transported over UDP, e.g., PTP, NTP, and OWAMP/TWAMP. These
+       protocols use timestamped packets that often have to be modified by
+       intermediate nodes in the network. In such cases the UDP checksum
+       field must be updated to reflect these modifications. The IEEE 1588
+       standard suggests to append 2 octets to every protocol message,
+       allowing intermediate nodes to reflect the checksum modification in
+       the last 2 octets rather than in the UDP checksum field. This
+       document generalizes this concept, and defines a UDP Checksum Trailer
+       for NTP and for OWAMP/TWAMP.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mizrahi-tictoc-checksum-trailer-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mizrahi-tictoc-checksum-trailer-00
     docidentifier:
     - content: draft-mizrahi-tictoc-checksum-trailer-00
       type: Internet-Draft
@@ -42,4 +47,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

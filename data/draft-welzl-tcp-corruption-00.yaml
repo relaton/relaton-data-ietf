@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TCP Corruption Notification Options
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-welzl-tcp-corruption-00
 docidentifier:
+- content: draft-welzl-tcp-corruption
+  type: Internet-Draft
 - content: draft-welzl-tcp-corruption-00
   type: Internet-Draft
   primary: true
-- content: I-D.welzl-tcp-corruption
-  type: IETF
-  scope: anchor
 docnumber: I-D.welzl-tcp-corruption
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Innsbruck
+        - language: en
+          content: University of Innsbruck
 version:
 - content: '00'
 language:
@@ -53,24 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo specifies options that enable TCP to detect corruption in
-    the presence of link layers which hand over known-corrupt data to upper layers.
-    The receiver notifies the sender of an erroneous segment that would otherwise
-    be lost and assumed to be a sign of congestion. The sender uses this ACK to drive
-    its RTO calculation, retransmit the segment and react to congestion earlier if
-    ECE=1. In addition, this feedback could be used to realize a more appropriate
-    rate change in response to such lost segments.</p>"
-  format: text/html
+  content: |-
+    <p>This memo specifies options that enable TCP to detect corruption in
+       the presence of link layers which hand over known-corrupt data to
+       upper layers.  The receiver notifies the sender of an erroneous
+       segment that would otherwise be lost and assumed to be a sign of
+       congestion. The sender uses this ACK to drive its RTO calculation,
+       retransmit the segment and react to congestion earlier if ECE=1. In
+       addition, this feedback could be used to realize a more appropriate
+       rate change in response to such lost segments.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-welzl-tcp-corruption-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

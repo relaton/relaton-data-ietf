@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'The OAuth 2.0 Authorization Framework: JWT-Secured Authorization Request
     (JAR)'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-jwsreq-34
 docidentifier:
+- content: draft-ietf-oauth-jwsreq
+  type: Internet-Draft
 - content: draft-ietf-oauth-jwsreq-34
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-oauth-jwsreq
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-oauth-jwsreq
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nat
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NAT.Consulting
+        - language: en
+          content: NAT.Consulting
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -66,15 +69,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yubico
+        - language: en
+          content: Yubico
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -88,7 +94,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - language: en
+          content: Microsoft
 version:
 - content: '34'
 language:
@@ -98,28 +105,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The authorization request in OAuth 2.0 described in RFC 6749 utilizes
-    query parameter serialization, which means that authorization request parameters
-    are encoded in the URI of the request and sent through user agents such as web
-    browsers. While it is easy to implement, it means that a) the communication through
-    the user agents is not integrity protected and thus, the parameters can be tainted,
-    b) the source of the communication is not authenticated, and c) the communication
-    through the user agents can be monitored. Because of these weaknesses, several
-    attacks to the protocol have now been put forward. This document introduces the
-    ability to send request parameters in a JSON Web Token (JWT) instead, which allows
-    the request to be signed with JSON Web Signature (JWS) and encrypted with JSON
-    Web Encryption (JWE) so that the integrity, source authentication, and confidentiality
-    properties of the authorization request are attained. The request can be sent
-    by value or by reference.</p>"
-  format: text/html
+  content: |-
+    <p>The authorization request in OAuth 2.0 described in RFC 6749 utilizes query parameter serialization, which means that authorization request parameters are encoded in the URI of the request and sent through user agents such as web browsers. While it is easy to implement, it means that a) the communication through the user agents is not integrity protected and thus, the parameters can be tainted, b) the source of the communication is not authenticated, and c) the communication through the user agents can be monitored. Because of these weaknesses, several attacks to the protocol have now been put forward.
+
+     This document introduces the ability to send request parameters in a JSON Web Token (JWT) instead, which allows the request to be signed with JSON Web Signature (JWS) and encrypted with JSON Web Encryption (JWE) so that the integrity, source authentication, and confidentiality properties of the authorization request are attained. The request can be sent by value or by reference.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-oauth-jwsreq-09
-      format: text/plain
+      content: draft-ietf-oauth-jwsreq-33
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-oauth-jwsreq-33
     docidentifier:
-    - content: draft-ietf-oauth-jwsreq-09
+    - content: draft-ietf-oauth-jwsreq-33
       type: Internet-Draft
       primary: true
 series:
@@ -128,10 +127,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-oauth-jwsreq-34
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

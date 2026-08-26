@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Identity-Attributed Git Commits via Tier-Structured Trailers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-01
 docidentifier:
+- content: draft-morrison-identity-attributed-commits
+  type: Internet-Draft
 - content: draft-morrison-identity-attributed-commits-01
   type: Internet-Draft
   primary: true
-- content: I-D.morrison-identity-attributed-commits
-  type: IETF
-  scope: anchor
 docnumber: I-D.morrison-identity-attributed-commits
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Blake
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alter Meridian Pty Ltd
+        - language: en
+          content: Alter Meridian Pty Ltd
 version:
 - content: '01'
 language:
@@ -53,25 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a git commit trailer grammar for identity- attributed
-    contributions using the ~handle identity primitive defined in [MCPDNS]. The grammar
-    binds sovereign actors, automated bots, and AI instruments to specific commits
-    via three tier-structured trailers (Acted-By, Executed-By, Drafted-With) and three
-    optional cryptographic trailers (Identity-Signature, Identity-Key-Id, Identity-Anchor).
-    The signature is computed with Ed25519 over the commit's tree hash rather than
-    its commit hash, preserving attribution across rebase, cherry-pick, and squash
-    merge operations. Conformant parsers reject cross-tier category errors (e.g.,
-    an Instrument-tier handle in an Acted-By slot) as malformed. The mechanism is
-    provider-neutral, depends only on DNS [RFC1035] and the ~handle resolution algorithm
-    of [MCPDNS], and requires no central authority or platform-specific verification
-    service.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines a git commit trailer grammar for identity-
+       attributed contributions using the ~handle identity primitive defined
+       in [MCPDNS].  The grammar binds sovereign actors, automated bots, and
+       AI instruments to specific commits via three tier-structured trailers
+       (Acted-By, Executed-By, Drafted-With) and three optional
+       cryptographic trailers (Identity-Signature, Identity-Key-Id,
+       Identity-Anchor).  The signature is computed with Ed25519 over the
+       commit's tree hash rather than its commit hash, preserving
+       attribution across rebase, cherry-pick, and squash merge operations.
+       Conformant parsers reject cross-tier category errors (e.g., an
+       Instrument-tier handle in an Acted-By slot) as malformed.  The
+       mechanism is provider-neutral, depends only on DNS [RFC1035] and the
+       ~handle resolution algorithm of [MCPDNS], and requires no central
+       authority or platform-specific verification service.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-morrison-identity-attributed-commits-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-00
     docidentifier:
     - content: draft-morrison-identity-attributed-commits-00
       type: Internet-Draft
@@ -80,7 +85,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-morrison-identity-attributed-commits-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-identity-attributed-commits-02
     docidentifier:
     - content: draft-morrison-identity-attributed-commits-02
       type: Internet-Draft
@@ -91,10 +98,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-morrison-identity-attributed-commits-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

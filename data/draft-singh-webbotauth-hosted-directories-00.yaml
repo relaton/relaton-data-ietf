@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Hosted Key Directories for Web Bot Auth
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-singh-webbotauth-hosted-directories-00
 docidentifier:
+- content: draft-singh-webbotauth-hosted-directories
+  type: Internet-Draft
 - content: draft-singh-webbotauth-hosted-directories-00
   type: Internet-Draft
   primary: true
-- content: I-D.singh-webbotauth-hosted-directories
-  type: IETF
-  scope: anchor
 docnumber: I-D.singh-webbotauth-hosted-directories
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shivdeep
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Airlock Protocol
+        - language: en
+          content: Airlock Protocol
 version:
 - content: '00'
 language:
@@ -53,31 +54,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Web Bot Auth authenticates automated clients to origins using HTTP
-    Message Signatures, with verification keys published in a key directory at a well-known
-    URI. Current drafts assume that each agent operator hosts its own key directory.
-    A large and growing population of agents is operated by individuals and small
-    organizations for whom hosting a directory is impractical, and whose legitimate
-    traffic is otherwise indistinguishable from abusive automation. This document
-    describes the hosted (multi-tenant) key directory deployment model, in which a
-    registry operator publishes key directories on behalf of many independent agent
-    operators while the operators retain exclusive custody of their private keys.
-    It analyzes principal mapping, proof of key possession, freshness, and accountability
-    in this model; reports interoperability observations from an independent implementation;
-    and offers operational guidance for hosted directory operators and for verifiers.
-    It is intended as input to the Web Bot Auth working group's operational and deployment
-    guidance.</p>"
-  format: text/html
+  content: |-
+    <p>Web Bot Auth authenticates automated clients to origins using HTTP
+       Message Signatures, with verification keys published in a key
+       directory at a well-known URI.  Current drafts assume that each agent
+       operator hosts its own key directory.  A large and growing population
+       of agents is operated by individuals and small organizations for whom
+       hosting a directory is impractical, and whose legitimate traffic is
+       otherwise indistinguishable from abusive automation.
+
+       This document describes the hosted (multi-tenant) key directory
+       deployment model, in which a registry operator publishes key
+       directories on behalf of many independent agent operators while the
+       operators retain exclusive custody of their private keys.  It
+       analyzes principal mapping, proof of key possession, freshness, and
+       accountability in this model; reports interoperability observations
+       from an independent implementation; and offers operational guidance
+       for hosted directory operators and for verifiers.  It is intended as
+       input to the Web Bot Auth working group's operational and deployment
+       guidance.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-singh-webbotauth-hosted-directories-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

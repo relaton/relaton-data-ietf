@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: JMAP for Sieve Scripts
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-sieve-02
 docidentifier:
+- content: draft-ietf-jmap-sieve
+  type: Internet-Draft
 - content: draft-ietf-jmap-sieve-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-jmap-sieve
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-jmap-sieve
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kenneth
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fastmail US LLC
+        - language: en
+          content: Fastmail US LLC
 version:
 - content: '02'
 language:
@@ -53,31 +54,43 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document specifies a data model for managing Sieve scripts on a
-    server using JMAP. Open Issues o Should we introduce an "isIncluded" or "isInUse"
-    filter/sort condition for the /query method to locate scripts which are included
-    by others? o Do we need any (rate) limits for /test? o Should ":fcc" and associated
-    arguments (e.g., ":flags", ":create":, etc) reported in the /test response be
-    in their own "fcc" sub-object rather than listed inline with the rest of the arguments
-    for the action?</p>
-  format: text/html
+  content: |-
+    <p>This document specifies a data model for managing Sieve scripts on a
+       server using JMAP.
+
+    Open Issues
+
+       o  Should we introduce an "isIncluded" or "isInUse" filter/sort
+          condition for the /query method to locate scripts which are
+          included by others?
+
+       o  Do we need any (rate) limits for /test?
+
+       o  Should ":fcc" and associated arguments (e.g., ":flags",
+          ":create":, etc) reported in the /test response be in their own
+          "fcc" sub-object rather than listed inline with the rest of the
+          arguments for the action?</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-jmap-sieve-00
-      format: text/plain
+      content: draft-ietf-jmap-sieve-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-sieve-01
     docidentifier:
-    - content: draft-ietf-jmap-sieve-00
+    - content: draft-ietf-jmap-sieve-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-jmap-sieve-18
-      format: text/plain
+      content: draft-ietf-jmap-sieve-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-sieve-03
     docidentifier:
-    - content: draft-ietf-jmap-sieve-18
+    - content: draft-ietf-jmap-sieve-03
       type: Internet-Draft
       primary: true
 series:
@@ -86,10 +99,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-jmap-sieve-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

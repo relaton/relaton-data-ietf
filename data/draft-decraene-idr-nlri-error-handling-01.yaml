@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The Key List BGP Attribute for NLRI Error handling
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-decraene-idr-nlri-error-handling-01
 docidentifier:
+- content: draft-decraene-idr-nlri-error-handling
+  type: Internet-Draft
 - content: draft-decraene-idr-nlri-error-handling-01
   type: Internet-Draft
   primary: true
-- content: I-D.decraene-idr-nlri-error-handling
-  type: IETF
-  scope: anchor
 docnumber: I-D.decraene-idr-nlri-error-handling
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bruno
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - language: en
+          content: Orange
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 version:
 - content: '01'
 language:
@@ -75,27 +79,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>RFC 7606 partially revises the error handling for BGP UPDATE messages.
-    It reduces the cases of BGP session reset by defining and using less impactful
-    error handling approaches, such as attribute discard and treat-as-withdraw when
-    applicable. The treat-as-withdraw approach requires that the entire NLRI field
-    of the MP_REACH_NLRI attribute be successfully parsed. This typically means parsing
-    errors in MP_REACH_NLRI cannot be handled by any means short of session reset.
-    This is exacerbated by the use of non-key data within NLRI, which introduces parsing
-    complexity and additional error cases. This specification defines a non-transitive
-    BGP attribute, the "NLRI_KEY_LIST attribute", to encode NLRIs as per the format
-    of MP_UNREACH_NLRI. This attribute is used to allow the treat-as- withdraw error-handling
-    approach to be used in case an error in the MP_REACH_NLRI attribute prevents the
-    parsing of its NLRIs. This document updates RFC 7606 by mandating that the NLRI_KEY_LIST
-    attribute appear before the MP_REACH_NLRI (or any other) attribute in an UPDATE
-    message.</p>
-  format: text/html
+  content: |-
+    <p>RFC 7606 partially revises the error handling for BGP UPDATE
+       messages.  It reduces the cases of BGP session reset by defining and
+       using less impactful error handling approaches, such as attribute
+       discard and treat-as-withdraw when applicable.  The treat-as-withdraw
+       approach requires that the entire NLRI field of the MP_REACH_NLRI
+       attribute be successfully parsed.  This typically means parsing
+       errors in MP_REACH_NLRI cannot be handled by any means short of
+       session reset.  This is exacerbated by the use of non-key data within
+       NLRI, which introduces parsing complexity and additional error cases.
+
+       This specification defines a non-transitive BGP attribute, the
+       "NLRI_KEY_LIST attribute", to encode NLRIs as per the format of
+       MP_UNREACH_NLRI.  This attribute is used to allow the treat-as-
+       withdraw error-handling approach to be used in case an error in the
+       MP_REACH_NLRI attribute prevents the parsing of its NLRIs.
+
+       This document updates RFC 7606 by mandating that the NLRI_KEY_LIST
+       attribute appear before the MP_REACH_NLRI (or any other) attribute in
+       an UPDATE message.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-decraene-idr-nlri-error-handling-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-decraene-idr-nlri-error-handling-00
     docidentifier:
     - content: draft-decraene-idr-nlri-error-handling-00
       type: Internet-Draft
@@ -104,7 +115,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-decraene-idr-nlri-error-handling-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-decraene-idr-nlri-error-handling-02
     docidentifier:
     - content: draft-decraene-idr-nlri-error-handling-02
       type: Internet-Draft
@@ -115,10 +128,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-decraene-idr-nlri-error-handling-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Sequence ID calibration for mis-ordered requests
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-01
 docidentifier:
+- content: draft-mzhang-nfsv4-sequence-id-calibration
+  type: Internet-Draft
 - content: draft-mzhang-nfsv4-sequence-id-calibration-01
   type: Internet-Draft
   primary: true
-- content: I-D.mzhang-nfsv4-sequence-id-calibration
-  type: IETF
-  scope: anchor
 docnumber: I-D.mzhang-nfsv4-sequence-id-calibration
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zhang
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co.
+        - language: en
+          content: Huawei Technologies Co.
 - role:
   - type: author
   person:
@@ -59,17 +60,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co.
+        - language: en
+          content: Huawei Technologies Co.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sai
       - language: en
+        script: Latn
         initial: S
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -83,17 +88,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co.
+        - language: en
+          content: Huawei Technologies Co.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rijesh
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -107,7 +116,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies Co.
+        - language: en
+          content: Huawei Technologies Co.
 version:
 - content: '01'
 language:
@@ -117,24 +127,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document updates RFC8881, Network File System (NFS) version 4
-    minor version 1, by adding two operations to prevent the client from destroying
-    session when getting the reply of a mis-ordered request with NFS4ERR_SEQ_MISORDERED.
-    In NFSv4 minor version 1, sequence ID is used to ensure that the size of the needed
-    reply cache is tightly bounded. If the server gets a mis-ordered request, the
-    client will often break the session and establish a new session with the server.
-    This approach results in a significant burden on the client and the server. During
-    the process of session rebuilding, IO performance will be affected. This is especially
-    troublesome when network latency is substantial, as, for example when client and
-    server are in different locations. This document will propose extensions to NFSv4
-    that would allow client reconnection to be dispensed with.</p>"
-  format: text/html
+  content: |-
+    <p>This document updates RFC8881, Network File System (NFS) version 4
+       minor version 1, by adding two operations to prevent the client from
+       destroying session when getting the reply of a mis-ordered request
+       with NFS4ERR_SEQ_MISORDERED.
+
+       In NFSv4 minor version 1, sequence ID is used to ensure that the size
+       of the needed reply cache is tightly bounded.  If the server gets a
+       mis-ordered request, the client will often break the session and
+       establish a new session with the server.  This approach results in a
+       significant burden on the client and the server.  During the process
+       of session rebuilding, IO performance will be affected.  This is
+       especially troublesome when network latency is substantial, as, for
+       example when client and server are in different locations.  This
+       document will propose extensions to NFSv4 that would allow client
+       reconnection to be dispensed with.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-mzhang-nfsv4-sequence-id-calibration-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-00
     docidentifier:
     - content: draft-mzhang-nfsv4-sequence-id-calibration-00
       type: Internet-Draft
@@ -142,10 +158,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-mzhang-nfsv4-sequence-id-calibration-03
-      format: text/plain
+      content: draft-mzhang-nfsv4-sequence-id-calibration-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-02
     docidentifier:
-    - content: draft-mzhang-nfsv4-sequence-id-calibration-03
+    - content: draft-mzhang-nfsv4-sequence-id-calibration-02
       type: Internet-Draft
       primary: true
 series:
@@ -154,10 +172,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mzhang-nfsv4-sequence-id-calibration-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

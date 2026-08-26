@@ -1,11 +1,12 @@
 ---
 id: draftcaragentstxtwellknown
 schema_version: v1.5.6
+formattedref:
+  content: draft-car-agents-txt-wellknown
 title:
 - language: en
   script: Latn
   content: 'AGENTS.TXT: Capability Declarations for Web Agents'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-car-agents-txt-wellknown-00
@@ -19,23 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document requests registration of two Well-Known URIs under the
-    "/.well-known/" path: "agents.txt" and "agents.json". These URIs define a machine-readable
-    capability declaration format: a positive statement of what web agents CAN do
-    on a site -- which endpoints are sanctioned for agent use, which protocols (REST,
-    MCP, A2A, GraphQL, WebSocket) are supported, what authentication mechanisms are
-    expected, and what rate limits the site advertises. This is distinct from "robots.txt",
-    which uses a restriction syntax to declare what crawlers may not do. Where "robots.txt"
-    expresses prohibition, "agents.txt" expresses capability -- a sanctioned channel
-    for agent interaction that is otherwise routinely blocked by bot detection, CAPTCHAs,
-    and rate limiters because no positive declaration surface exists.</p>'
-  format: text/html
+  content: |-
+    <p>This document requests registration of two Well-Known URIs under the
+       "/.well-known/" path: "agents.txt" and "agents.json".  These URIs
+       define a machine-readable capability declaration format: a positive
+       statement of what web agents CAN do on a site -- which endpoints are
+       sanctioned for agent use, which protocols (REST, MCP, A2A, GraphQL,
+       WebSocket) are supported, what authentication mechanisms are
+       expected, and what rate limits the site advertises.
+
+       This is distinct from "robots.txt", which uses a restriction syntax
+       to declare what crawlers may not do.  Where "robots.txt" expresses
+       prohibition, "agents.txt" expresses capability -- a sanctioned
+       channel for agent interaction that is otherwise routinely blocked by
+       bot detection, CAPTCHAs, and rate limiters because no positive
+       declaration surface exists.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-car-agents-txt-wellknown-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-car-agents-txt-wellknown-00
     docidentifier:
     - content: draft-car-agents-txt-wellknown-00
       type: Internet-Draft
@@ -44,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Extensible Delegation for DNS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-11
 docidentifier:
+- content: draft-ietf-deleg
+  type: Internet-Draft
 - content: draft-ietf-deleg-11
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-deleg
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-deleg
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Petr
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ISC
+        - language: en
+          content: ISC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ralf
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
+        - language: en
+          content: Akamai Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       formatted_initials:
         language: en
@@ -84,7 +89,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Salesforce
+        - language: en
+          content: Salesforce
 version:
 - content: '11'
 language:
@@ -94,24 +100,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a new extensible method for the delegation
-    of authority for a domain in the Domain Name System (DNS) using DELEG and DELEGPARAM
-    records. A delegation in the DNS enables efficient and distributed management
-    of the DNS namespace. The traditional DNS delegation is based on NS records which
-    contain only hostnames of servers and no other parameters. In classic DNS, both
-    parent and child zones contain copies of NS delegation records, which can potentially
-    be out of sync and confusing. The new delegation records are extensible, can be
-    secured with DNSSEC, and eliminate the problem of having two sources of truth
-    for delegation information.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a new extensible method for the delegation of
+       authority for a domain in the Domain Name System (DNS) using DELEG
+       and DELEGPARAM records.
+
+       A delegation in the DNS enables efficient and distributed management
+       of the DNS namespace.  The traditional DNS delegation is based on NS
+       records which contain only hostnames of servers and no other
+       parameters.  In classic DNS, both parent and child zones contain
+       copies of NS delegation records, which can potentially be out of sync
+       and confusing.  The new delegation records are extensible, can be
+       secured with DNSSEC, and eliminate the problem of having two sources
+       of truth for delegation information.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-deleg-00
-      format: text/plain
+      content: draft-ietf-deleg-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-deleg-10
     docidentifier:
-    - content: draft-ietf-deleg-00
+    - content: draft-ietf-deleg-10
       type: Internet-Draft
       primary: true
 series:
@@ -120,10 +131,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-deleg-11
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -8,17 +8,15 @@ title:
   content: 'BGRP: A Framework for Scalable Resource Reservation
 
     '
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pan-bgrp-framework-00
 docidentifier:
+- content: draft-pan-bgrp-framework
+  type: Internet-Draft
 - content: draft-pan-bgrp-framework-00
   type: Internet-Draft
   primary: true
-- content: I-D.pan-bgrp-framework
-  type: IETF
-  scope: anchor
 docnumber: I-D.pan-bgrp-framework
 date:
 - type: published
@@ -30,8 +28,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Henning
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -45,15 +45,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bell Labs/Columbia U.
+        - language: en
+          content: Bell Labs/Columbia U.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ping
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -67,15 +70,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bell Labs/Columbia U.
+        - language: en
+          content: Bell Labs/Columbia U.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: E
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -89,7 +95,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bell Labs/Columbia U.
+        - language: en
+          content: Bell Labs/Columbia U.
 version:
 - content: '00'
 language:
@@ -99,37 +106,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Resource reservation needs to accommodate the rapidly growing size
-    and increasing service diversity of the Internet. This memo first defines the
-    scaling problem in today's Internet backbone, and briefly discusses several existing
-    resource management approaches. Then we will present a distributed approach and
-    introduce a protocol, called the Border Gateway Reservation Protocol (BGRP), for
-    inter-domain resource reservation that can scale in terms of message processing
-    load, state storage and control message bandwidth. The main idea of our approach
-    is to build a sink tree for each domain network. Each sink tree aggregates reservations
-    from all data sources in the network. Sink tree initiation, maintenance and termination
-    involve only backbone border routers. Within each domain, the network service
-    providers manage network resource and direct user traffic independently. At the
-    border routers, the service providers can use BGRP to setup domain-level reservation
-    trunks base on bi- lateral agreement. Since routers only maintain the sink tree
-    information, the total number of reservation states at each router scales, in
-    the worst case, linearly with the number of domains in the Internet. For bandwidth
-    reservation, BGRP relies on differentiated services for data forwarding. As a
-    result, the number of packet classifier entries is small. To reduce the protocol
-    message traffic, routers may reserve domain bandwidth beyond the current load
-    so that sources can join or leave the tree or change their reservation without
-    having to send messages all the way to the root for every such change.</p>"
-  format: text/html
+  content: |-
+    <p>Resource reservation needs to accommodate the rapidly growing size
+    and increasing service diversity of the Internet. This memo first
+    defines the scaling problem in today's Internet backbone, and briefly
+    discusses several existing resource management approaches. Then we
+    will present a distributed approach and introduce a protocol, called
+    the Border Gateway Reservation Protocol (BGRP), for inter-domain
+    resource reservation that can scale in terms of message processing
+    load, state storage and control message bandwidth.
+    The main idea of our approach is to build a sink tree for each domain
+    network.  Each sink tree aggregates reservations from all data
+    sources in the network. Sink tree initiation, maintenance and
+    termination involve only backbone border routers. Within each domain,
+    the network service providers manage network resource and direct user
+    traffic independently. At the border routers, the service providers
+    can use BGRP to setup domain-level reservation trunks base on bi-
+    lateral agreement. Since routers only maintain the sink tree
+    information, the total number of reservation states at each router
+    scales, in the worst case, linearly with the number of domains in the
+    Internet.
+    For bandwidth reservation, BGRP relies on differentiated services for
+    data forwarding. As a result, the number of packet classifier entries
+    is small.  To reduce the protocol message traffic, routers may
+    reserve domain bandwidth beyond the current load so that sources can
+    join or leave the tree or change their reservation without having to
+    send messages all the way to the root for every such change.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pan-bgrp-framework-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

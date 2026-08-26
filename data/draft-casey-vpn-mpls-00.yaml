@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IP VPN Realization using MPLS Tunnels
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-casey-vpn-mpls-00
 docidentifier:
+- content: draft-casey-vpn-mpls
+  type: Internet-Draft
 - content: draft-casey-vpn-mpls-00
   type: Internet-Draft
   primary: true
-- content: I-D.casey-vpn-mpls
-  type: IETF
-  scope: anchor
 docnumber: I-D.casey-vpn-mpls
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Robert
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,13 +43,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nortel Networks
+        - language: en
+          content: Nortel Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nortel Networks
+        - language: en
+          content: Nortel Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ian
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -85,7 +90,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nortel Networks
+        - language: en
+          content: Nortel Networks
 version:
 - content: '00'
 language:
@@ -95,31 +101,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This Internet Draft describes a method of using MPLS to realize a provider
-    IP VPN capability. The approach described here exploits the Label Switch Path
-    (LSP) mesh implicitly established between all edge routers in an MPLS domain [4].
-    It uses 2 levels of LSP tunneling. The outer or base level is the hop by hop LSP
-    tunnels that interconnect all VPN Border (Label Switch) Routers (VBR\\022s). The
-    'bottom of label stack', nested level provides logically single hop tunnels between
-    VBR\\022s. For each IP VPN, single hop nested tunnels are established between
-    all VBR's serving that particular VPN. The draft outlines the components involved
-    in the MPLS IP VPN architecture and outlines how they interact. The proposed realization
-    is caste in terms of the VPN areas introduced in [1] and is geared to take advantage
-    of a virtual router (VR) capability in the VBR's. This results in a powerful and
-    flexible method of providing an IP VPN service that meets the requirements outlined
-    in [3]. Also described are two extensions: offering MPLS VPN service to the customer
-    (rather than IP service) and using Label Switching to traverse VPN areas[1].</p>"
-  format: text/html
+  content: |-
+    <p>This Internet Draft describes a method of using MPLS to realize
+      a provider IP VPN capability. The approach described here
+      exploits the Label Switch Path (LSP) mesh implicitly established
+      between all edge routers in an MPLS domain [4]. It uses 2 levels
+      of LSP tunneling. The outer or base level is the hop by hop LSP
+      tunnels that interconnect all VPN Border (Label Switch) Routers
+      (VBR\022s). The 'bottom of label stack', nested level provides
+      logically single hop tunnels between VBR\022s. For each IP VPN,
+      single hop nested tunnels are established between all VBR's
+      serving that particular VPN. The draft outlines the components
+      involved in the MPLS IP VPN architecture and outlines how they
+      interact. The proposed realization is caste in terms of the VPN
+      areas introduced in [1] and is geared to take advantage of a
+      virtual router (VR) capability in the VBR's. This results in a
+      powerful and flexible method of providing an IP VPN service that
+      meets the requirements outlined in [3]. Also described are two
+      extensions: offering MPLS VPN service to the customer (rather
+      than IP service) and using Label Switching to traverse VPN
+      areas[1].</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-casey-vpn-mpls-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

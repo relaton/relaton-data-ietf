@@ -1,11 +1,12 @@
 ---
 id: draftlidnsopresponsepreprocessing
 schema_version: v1.5.6
+formattedref:
+  content: draft-li-dnsop-response-preprocessing
 title:
 - language: en
   script: Latn
   content: 'DNS Response Pre-processing Security Guidelines: Awaiting Valid Responses'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-response-preprocessing-02
@@ -19,28 +20,35 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>The security and robustness of the Domain Name System (DNS) significantly
-    depend on how resolvers handle received responses. Current DNS specifications
-    lack exhaustive and consistent guidance on response pre-processing, particularly
-    for malformed or unexpected packets. This specification gap has led to implementation
-    divergences and has been shown to introduce security vulnerabilities such as DNS
-    cache poisoning, Denial of Service (DoS), and resource exhaustion, as detailed
-    in the TUDOOR attack research. This document aims to clarify and standardize the
-    behavior of DNS resolvers when receiving and initially processing responses from
-    upstream servers. The core proposal is the "Awaiting Valid Responses" mechanism,
-    which mandates that a resolver, after issuing a query, MUST maintain a defined
-    waiting period to receive a well- formed, relevant, and validated response. During
-    this period, non- compliant incoming packets should be discarded, and the resolver
-    should continue to wait until a valid response is received or the query times
-    out. This document provides guidance for DNS implementers to mitigate security
-    risks arising from flaws in response pre-processing logic.</p>
-  format: text/html
+  content: |-
+    <p>The security and robustness of the Domain Name System (DNS)
+       significantly depend on how resolvers handle received responses.
+       Current DNS specifications lack exhaustive and consistent guidance on
+       response pre-processing, particularly for malformed or unexpected
+       packets.  This specification gap has led to implementation
+       divergences and has been shown to introduce security vulnerabilities
+       such as DNS cache poisoning, Denial of Service (DoS), and resource
+       exhaustion, as detailed in the TUDOOR attack research.
+
+       This document aims to clarify and standardize the behavior of DNS
+       resolvers when receiving and initially processing responses from
+       upstream servers.  The core proposal is the "Awaiting Valid
+       Responses" mechanism, which mandates that a resolver, after issuing a
+       query, MUST maintain a defined waiting period to receive a well-
+       formed, relevant, and validated response.  During this period, non-
+       compliant incoming packets should be discarded, and the resolver
+       should continue to wait until a valid response is received or the
+       query times out.  This document provides guidance for DNS
+       implementers to mitigate security risks arising from flaws in
+       response pre-processing logic.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-li-dnsop-response-preprocessing-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-response-preprocessing-00
     docidentifier:
     - content: draft-li-dnsop-response-preprocessing-00
       type: Internet-Draft
@@ -49,7 +57,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-dnsop-response-preprocessing-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-response-preprocessing-01
     docidentifier:
     - content: draft-li-dnsop-response-preprocessing-01
       type: Internet-Draft
@@ -58,7 +68,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-dnsop-response-preprocessing-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-response-preprocessing-02
     docidentifier:
     - content: draft-li-dnsop-response-preprocessing-02
       type: Internet-Draft
@@ -67,4 +79,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

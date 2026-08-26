@@ -1,11 +1,12 @@
 ---
 id: draftietfospfdbexopt
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-ospf-dbex-opt
 title:
 - language: en
   script: Latn
   content: OSPF Database Exchange Summary List Optimization
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ospf-dbex-opt-02
@@ -19,21 +20,24 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a backward compatible optimization for the
-    Database Exchange process in OSPFv2 and OSPFv3. In this optimization, a router
-    does not list an LSA in Database Description packets sent to a neighbor, if the
-    same or a more recent instance of the LSA was listed in a Database Description
-    packet already received from the neighbor. This optimization reduces Database
-    Description overhead by about 50% in large networks. This optimization does not
-    affect synchronization, since it only omits unnecessary information from Database
-    Description packets.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a backward compatible optimization for the
+    Database Exchange process in OSPFv2 and OSPFv3.  In this
+    optimization, a router does not list an LSA in Database Description
+    packets sent to a neighbor, if the same or a more recent instance of
+    the LSA was listed in a Database Description packet already received
+    from the neighbor.  This optimization reduces Database Description
+    overhead by about 50% in large networks.  This optimization does not
+    affect synchronization, since it only omits unnecessary information
+    from Database Description packets.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-ospf-dbex-opt-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ospf-dbex-opt-02
     docidentifier:
     - content: draft-ietf-ospf-dbex-opt-02
       type: Internet-Draft
@@ -42,4 +46,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

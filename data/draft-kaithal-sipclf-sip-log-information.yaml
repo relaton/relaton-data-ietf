@@ -1,11 +1,12 @@
 ---
 id: draftkaithalsipclfsiploginformation
 schema_version: v1.5.6
+formattedref:
+  content: draft-kaithal-sipclf-sip-log-information
 title:
 - language: en
   script: Latn
   content: Session Initiation Protocol (SIP) Extension for logging and debugging
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kaithal-sipclf-sip-log-information-00
@@ -19,24 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>The current mechanisms to debug issues in SIP network are not very efficient.
-    It requires to enable debugging logs across different devices, recreate the problem
-    and then collect the logs. The idea is to provide a solution to automatically
-    enable relevant logs (SIP messages and any other debugging logs meaningful to
-    SIP devices), and also to indicate where the logs are to be collected or stored.
-    The enabling of logs will happen at all the SIP devices(upstream or downstream).
-    This will help to get the logs from all the SIP devices in a Common logging format
-    (CLF). The solution extends SIP to provide the infrastructure to enable logging
-    for upstream and downstream devices with each server deciding how much troubleshooting
-    information it wants to log - with freedom to simply ignore requests if required.
-    This document specifies a new header called "Log-Me" Header in all the SIP messages.</p>
-  format: text/html
+  content: |-
+    <p>The current mechanisms to debug issues in SIP network are not very
+       efficient.  It requires to enable debugging logs across different
+       devices, recreate the problem and then collect the logs.  The idea is
+       to provide a solution to automatically enable relevant logs (SIP
+       messages and any other debugging logs meaningful to SIP devices), and
+       also to indicate where the logs are to be collected or stored.  The
+       enabling of logs will happen at all the SIP devices(upstream or
+       downstream).  This will help to get the logs from all the SIP devices
+       in a Common logging format (CLF).  The solution extends SIP to
+       provide the infrastructure to enable logging for upstream and
+       downstream devices with each server deciding how much troubleshooting
+       information it wants to log - with freedom to simply ignore requests
+       if required.  This document specifies a new header called "Log-Me"
+       Header in all the SIP messages.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-kaithal-sipclf-sip-log-information-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaithal-sipclf-sip-log-information-00
     docidentifier:
     - content: draft-kaithal-sipclf-sip-log-information-00
       type: Internet-Draft
@@ -45,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

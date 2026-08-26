@@ -1,11 +1,12 @@
 ---
 id: draftogudfakenxdomaintype
 schema_version: v1.5.6
+formattedref:
+  content: draft-ogud-fake-nxdomain-type
 title:
 - language: en
   script: Latn
   content: Signaling NSEC record owner name nonexistence
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ogud-fake-nxdomain-type-00
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DNSSEC was to large extent designed for off-line signing. A number
-    of new opportunities arise when on-line signing is used. In negative answers case
-    there is no real need for the wildcard proof and the server can just state that
-    the queried name and type do not exist in a single NSEC/NSEC3 record. But such
-    a minimally covering NSEC record that shares the name with the query name can
-    not set the NXDOMAIN RCODE. Still, some applications want to explicitly know if
-    the name does exist. This document allocates a new DNS RRtype that can be used
-    to signal nonexistence of the owner names of NSEC/NSEC3 records.</p>"
-  format: text/html
+  content: |-
+    <p>DNSSEC was to large extent designed for off-line signing.  A number
+       of new opportunities arise when on-line signing is used.  In negative
+       answers case there is no real need for the wildcard proof and the
+       server can just state that the queried name and type do not exist in
+       a single NSEC/NSEC3 record.  But such a minimally covering NSEC
+       record that shares the name with the query name can not set the
+       NXDOMAIN RCODE.  Still, some applications want to explicitly know if
+       the name does exist.  This document allocates a new DNS RRtype that
+       can be used to signal nonexistence of the owner names of NSEC/NSEC3
+       records.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ogud-fake-nxdomain-type-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ogud-fake-nxdomain-type-00
     docidentifier:
     - content: draft-ogud-fake-nxdomain-type-00
       type: Internet-Draft
@@ -42,4 +47,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

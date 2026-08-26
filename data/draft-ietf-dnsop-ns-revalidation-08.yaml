@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Delegation Revalidation by DNS Resolvers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-08
 docidentifier:
+- content: draft-ietf-dnsop-ns-revalidation
+  type: Internet-Draft
 - content: draft-ietf-dnsop-ns-revalidation-08
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-dnsop-ns-revalidation
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-dnsop-ns-revalidation
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shumon
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Salesforce
+        - language: en
+          content: Salesforce
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SIE Europe, U.G.
+        - language: en
+          content: SIE Europe, U.G.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Willem
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -89,7 +96,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NLnet Labs
+        - language: en
+          content: NLnet Labs
 version:
 - content: '08'
 language:
@@ -99,33 +107,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document recommends improved DNS resolver behavior with respect
-    to the processing of Name Server (NS) resource record (RR) sets (RRsets) during
-    iterative resolution. When following a referral response from an authoritative
-    server to a child zone, DNS resolvers should explicitly query the authoritative
-    NS RRset at the apex of the child zone and cache this in preference to the NS
-    RRset on the parent side of the zone cut. The (A and AAAA) address RRsets in the
-    additional section from referral responses and authoritative NS answers for the
-    names of the NS RRset, should similarly be re-queried and used to replace the
-    entries with the lower trustworthiness ranking in cache. Resolvers should also
-    periodically revalidate the child delegation by re-querying the parent zone at
-    the expiration of the TTL of the parent side NS RRset.</p>"
-  format: text/html
+  content: |-
+    <p>This document recommends improved DNS resolver behavior with respect
+       to the processing of Name Server (NS) resource record (RR) sets
+       (RRsets) during iterative resolution.  When following a referral
+       response from an authoritative server to a child zone, DNS resolvers
+       should explicitly query the authoritative NS RRset at the apex of the
+       child zone and cache this in preference to the NS RRset on the parent
+       side of the zone cut.  The (A and AAAA) address RRsets in the
+       additional section from referral responses and authoritative NS
+       answers for the names of the NS RRset, should similarly be re-queried
+       and used to replace the entries with the lower trustworthiness
+       ranking in cache.  Resolvers should also periodically revalidate the
+       child delegation by re-querying the parent zone at the expiration of
+       the TTL of the parent side NS RRset.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-dnsop-ns-revalidation-02
-      format: text/plain
+      content: draft-ietf-dnsop-ns-revalidation-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-07
     docidentifier:
-    - content: draft-ietf-dnsop-ns-revalidation-02
+    - content: draft-ietf-dnsop-ns-revalidation-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-dnsop-ns-revalidation-09
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-ns-revalidation-09
     docidentifier:
     - content: draft-ietf-dnsop-ns-revalidation-09
       type: Internet-Draft
@@ -136,10 +150,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-dnsop-ns-revalidation-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

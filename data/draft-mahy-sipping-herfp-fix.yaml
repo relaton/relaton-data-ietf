@@ -1,12 +1,13 @@
 ---
 id: draftmahysippingherfpfix
 schema_version: v1.5.6
+formattedref:
+  content: draft-mahy-sipping-herfp-fix
 title:
 - language: en
   script: Latn
   content: A Solution to the Heterogeneous Error Response Forking Problem (HERFP)
     in the Session Initiation Protocol (SIP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mahy-sipping-herfp-fix-01
@@ -20,22 +21,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>The SIP protocol defines a role for proxy servers which can forward
-    requests to multiple contacts associated with a specific resource or person. While
-    each of these contacts is expected to send a response of some kind, responses
-    for each branch are not necessarily sent back to the original requester. The proxy
-    server forwards only the "best" final response back to the original request. This
-    behavior causes a situation known as the Herterogeneous Error Response Forking
-    Problem (HERFP) in which the original requester has no opportunity to see or fix
-    a variety of potentially repairable errors. This document describes a backwards
-    compatible solution to the HERFP problem for INVITE transactions.</p>
-  format: text/html
+  content: |-
+    <p>The SIP protocol defines a role for proxy servers which can forward
+    requests to multiple contacts associated with a specific resource or
+    person.  While each of these contacts is expected to send a response
+    of some kind, responses for each branch are not necessarily sent back
+    to the original requester.  The proxy server forwards only the "best"
+    final response back to the original request.  This behavior causes a
+    situation known as the Herterogeneous Error Response Forking Problem
+    (HERFP) in which the original requester has no opportunity to see or
+    fix a variety of potentially repairable errors.  This document
+    describes a backwards compatible solution to the HERFP problem for
+    INVITE transactions.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mahy-sipping-herfp-fix-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mahy-sipping-herfp-fix-01
     docidentifier:
     - content: draft-mahy-sipping-herfp-fix-01
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

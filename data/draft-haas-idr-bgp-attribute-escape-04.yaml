@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Attribute Escape
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-haas-idr-bgp-attribute-escape-04
 docidentifier:
+- content: draft-haas-idr-bgp-attribute-escape
+  type: Internet-Draft
 - content: draft-haas-idr-bgp-attribute-escape-04
   type: Internet-Draft
   primary: true
-- content: I-D.haas-idr-bgp-attribute-escape
-  type: IETF
-  scope: anchor
 docnumber: I-D.haas-idr-bgp-attribute-escape
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeff
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 version:
 - content: '04'
 language:
@@ -53,36 +54,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>BGP-4 [RFC 4271] has been very successful in being extended over the
-    years it has been deployed. A significant part of that success is due to its ability
-    to incrementally add new features to its Path Attributes when they are marked
-    "optional transitive". Implementations that are ignorant of a feature for an unknown
-    Path Attribute that are so marked will propagate BGP routes with such attributes.
-    Unfortunately, this blind propagation of unknown Path Attributes may happen for
-    features that are intended to be used in a limited scope. When such Path Attributes
-    inadvertently are carried beyond that scope, it can lead to things such as unintended
-    disclosure of sensitive information, or cause improper routing. In their worst
-    cases, such propagation may be for malformed Path Attributes and lead to BGP session
-    resets or crashes. This document calls such inadvertent propagation of BGP Path
-    Attributes, "attribute escape". This document further describes some of the scenarios
-    that leads to this behavior and makes recommendations on practices that may limit
-    its impact.</p>
-  format: text/html
+  content: |-
+    <p>BGP-4 [RFC 4271] has been very successful in being extended over the
+       years it has been deployed.  A significant part of that success is
+       due to its ability to incrementally add new features to its Path
+       Attributes when they are marked "optional transitive".
+       Implementations that are ignorant of a feature for an unknown Path
+       Attribute that are so marked will propagate BGP routes with such
+       attributes.
+
+       Unfortunately, this blind propagation of unknown Path Attributes may
+       happen for features that are intended to be used in a limited scope.
+       When such Path Attributes inadvertently are carried beyond that
+       scope, it can lead to things such as unintended disclosure of
+       sensitive information, or cause improper routing.  In their worst
+       cases, such propagation may be for malformed Path Attributes and lead
+       to BGP session resets or crashes.
+
+       This document calls such inadvertent propagation of BGP Path
+       Attributes, "attribute escape".  This document further describes some
+       of the scenarios that leads to this behavior and makes
+       recommendations on practices that may limit its impact.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-haas-idr-bgp-attribute-escape-01
-      format: text/plain
+      content: draft-haas-idr-bgp-attribute-escape-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haas-idr-bgp-attribute-escape-03
     docidentifier:
-    - content: draft-haas-idr-bgp-attribute-escape-01
+    - content: draft-haas-idr-bgp-attribute-escape-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-haas-idr-bgp-attribute-escape-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-haas-idr-bgp-attribute-escape-05
     docidentifier:
     - content: draft-haas-idr-bgp-attribute-escape-05
       type: Internet-Draft
@@ -93,10 +104,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-haas-idr-bgp-attribute-escape-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

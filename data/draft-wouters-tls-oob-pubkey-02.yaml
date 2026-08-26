@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TLS out-of-band public key validation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wouters-tls-oob-pubkey-02
 docidentifier:
+- content: draft-wouters-tls-oob-pubkey
+  type: Internet-Draft
 - content: draft-wouters-tls-oob-pubkey-02
   type: Internet-Draft
   primary: true
-- content: I-D.wouters-tls-oob-pubkey
-  type: IETF
-  scope: anchor
 docnumber: I-D.wouters-tls-oob-pubkey
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Xelerance
+        - language: en
+          content: Xelerance
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,17 +68,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia Siemens Networks
+        - language: en
+          content: Nokia Siemens Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -92,8 +99,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tero
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -107,15 +116,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: AuthenTec
+        - language: en
+          content: AuthenTec
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Samuel
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -129,7 +141,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SPARTA, Inc.
+        - language: en
+          content: SPARTA, Inc.
 version:
 - content: '02'
 language:
@@ -139,30 +152,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a new TLS certificate type for exchanging raw
-    public keys in Transport Layer Security (TLS) and Datagram Transport Layer Security
-    (DTLS) for use with out-of-band authentication. Currently, TLS authentication
-    can only occur via PKIX or OpenPGP certificates. By specifying a minimum resource
-    for raw public key exchange, implementations can use alternative authentication
-    methods. One such method is using DANE Resource Records secured by DNSSEC, Another
-    use case is to provide authentication functionality when used with devices in
-    a constrained environment that use whitelists and blacklists, as is the case with
-    sensors and other embedded devices that are constrained by memory, computational,
-    and communication limitations where the usage of PKIX is not feasible. The new
-    certificate type specified can also be used to reduce the latency of a TLS client
-    that is already in possession of a validated public key of the TLS server before
-    it starts a (non-resumed) TLS handshake.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a new TLS certificate type for exchanging raw
+       public keys in Transport Layer Security (TLS) and Datagram Transport
+       Layer Security (DTLS) for use with out-of-band authentication.
+       Currently, TLS authentication can only occur via PKIX or OpenPGP
+       certificates.  By specifying a minimum resource for raw public key
+       exchange, implementations can use alternative authentication methods.
+
+       One such method is using DANE Resource Records secured by DNSSEC,
+       Another use case is to provide authentication functionality when used
+       with devices in a constrained environment that use whitelists and
+       blacklists, as is the case with sensors and other embedded devices
+       that are constrained by memory, computational, and communication
+       limitations where the usage of PKIX is not feasible.
+
+       The new certificate type specified can also be used to reduce the
+       latency of a TLS client that is already in possession of a validated
+       public key of the TLS server before it starts a (non-resumed) TLS
+       handshake.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wouters-tls-oob-pubkey-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

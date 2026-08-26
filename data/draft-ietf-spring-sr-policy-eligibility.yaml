@@ -1,11 +1,12 @@
 ---
 id: draftietfspringsrpolicyeligibility
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-spring-sr-policy-eligibility
 title:
 - language: en
   script: Latn
   content: Eligibility Concept in Segment Routing Policies
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-sr-policy-eligibility-01
@@ -19,25 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Segment Routing (SR) introduces new challenges for pinning candidate
-    paths on their intended paths (the path the PCE computed based on provided intent
-    and may have made bandwidth reservations on). The actual path through a network
-    can change or no longer meet the required constraints if a SID list of an SR Policy
-    candidate path is not fully expressed as a list of adjacency SIDs or when a change
-    in the topology does happen. The introduction of the new candidate path eligibility
-    concept permits a path to be signaled and established as operationally up, but
-    controls whether the path is eligible to carry traffic, thus influencing its active
-    state. The eligibility concept allows a system (operator, pce, headend, etc.)
-    to set eligibility as false when path deviations may have occurred, or path constraints
-    are no longer met for one or more SID lists of a candidate path and clear it when
-    candidate path deviations are removed or constraints are met again.</p>"
-  format: text/html
+  content: |-
+    <p>Segment Routing (SR) introduces new challenges for pinning candidate
+       paths on their intended paths (the path the PCE computed based on
+       provided intent and may have made bandwidth reservations on).  The
+       actual path through a network can change or no longer meet the
+       required constraints if a SID list of an SR Policy candidate path is
+       not fully expressed as a list of adjacency SIDs or when a change in
+       the topology does happen.  The introduction of the new candidate path
+       eligibility concept permits a path to be signaled and established as
+       operationally up, but controls whether the path is eligible to carry
+       traffic, thus influencing its active state.
+       The eligibility concept allows a system (operator, pce, headend,
+       etc.) to set eligibility as false when path deviations may have
+       occurred, or path constraints are no longer met for one or more SID
+       lists of a candidate path and clear it when candidate path deviations
+       are removed or constraints are met again.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-spring-sr-policy-eligibility-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-sr-policy-eligibility-00
     docidentifier:
     - content: draft-ietf-spring-sr-policy-eligibility-00
       type: Internet-Draft
@@ -46,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-spring-sr-policy-eligibility-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-spring-sr-policy-eligibility-01
     docidentifier:
     - content: draft-ietf-spring-sr-policy-eligibility-01
       type: Internet-Draft
@@ -55,4 +63,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

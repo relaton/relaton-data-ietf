@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Japanese Message Signing Procedure with Security Multipart
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kazu-jmsg-sign-secmime-00
 docidentifier:
+- content: draft-kazu-jmsg-sign-secmime
+  type: Internet-Draft
 - content: draft-kazu-jmsg-sign-secmime-00
   type: Internet-Draft
   primary: true
-- content: I-D.kazu-jmsg-sign-secmime
-  type: IETF
-  scope: anchor
 docnumber: I-D.kazu-jmsg-sign-secmime
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kazuhiko
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -52,26 +52,25 @@ abstract:
   content: "<p>This memo defines a signing procedure for Japanese message in the context
     of security multipart. The procedure guarantees signature validity even if messages
     are processed through message transfer agents which carelessly transform character
-    set encodings. To sign Japanese message digitally, local forms such as EUC/Japanese,
-    Shift-JIS, etc., are first converted into the transfer form, ISO-2022-JP with
-    an appropriate set of MIME headers. Then it is duplicated into two objects. The
-    first object is transformed into the signature form defined in this memo and a
-    detached digital signature is calculated over it. A 'Multipart/Signed' part is
-    created with the second object and the detached digital signature. Japanese text
-    is verified as the signature form instead of the transfer form. To encrypt Japanese
-    message, the transfer form, ISO-2022-JP with an appropriate set of MIME headers,
-    is used.</p>"
-  format: text/html
+    set encodings.                                         To sign Japanese message
+    digitally, local forms such as EUC/Japanese, Shift-JIS, etc., are first converted
+    into the transfer form, ISO-2022-JP with an appropriate set of MIME headers. Then
+    it is duplicated into two objects. The first object is transformed into the signature
+    form defined in this memo and a detached digital signature is calculated over
+    it. A 'Multipart/Signed' part is created with the second object and the detached
+    digital signature. Japanese text is verified as the signature form instead of
+    the transfer form.                                                      To encrypt
+    Japanese message, the transfer form, ISO-2022-JP with an appropriate set of MIME
+    headers, is used.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kazu-jmsg-sign-secmime-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

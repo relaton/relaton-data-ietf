@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: UDP Checksum Complement in the Network Time Protocol (NTP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ntp-checksum-trailer-02
 docidentifier:
+- content: draft-ietf-ntp-checksum-trailer
+  type: Internet-Draft
 - content: draft-ietf-ntp-checksum-trailer-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ntp-checksum-trailer
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ntp-checksum-trailer
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tal
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -49,34 +49,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Network Time Protocol (NTP) allows clients to synchronize to a
-    time server using timestamped protocol messages. To faciliate accurate timestamping,
-    some implementations use hardware-based timestamping engines that integrate the
-    accurate transmission time into every outgoing NTP packet during transmission.
-    Since these packets are transported over UDP, the UDP checksum field is then updated
-    to reflect this modification. This document proposes an extension field that includes
-    a 2-octet Checksum Complement, allowing timestamping engines to reflect the checksum
-    modification in the last 2 octets of the packet rather than in the UDP checksum
-    field. The behavior defined in this document is interoperable with existing NTP
-    implementations.</p>"
-  format: text/html
+  content: |-
+    <p>The Network Time Protocol (NTP) allows clients to synchronize to a
+       time server using timestamped protocol messages. To faciliate
+       accurate timestamping, some implementations use hardware-based
+       timestamping engines that integrate the accurate transmission time
+       into every outgoing NTP packet during transmission. Since these
+       packets are transported over UDP, the UDP checksum field is then
+       updated to reflect this modification. This document proposes an
+       extension field that includes a 2-octet Checksum Complement, allowing
+       timestamping engines to reflect the checksum modification in the last
+       2 octets of the packet rather than in the UDP checksum field. The
+       behavior defined in this document is interoperable with existing NTP
+       implementations.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-ntp-checksum-trailer-00
-      format: text/plain
+      content: draft-ietf-ntp-checksum-trailer-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ntp-checksum-trailer-01
     docidentifier:
-    - content: draft-ietf-ntp-checksum-trailer-00
+    - content: draft-ietf-ntp-checksum-trailer-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-ntp-checksum-trailer-06
-      format: text/plain
+      content: draft-ietf-ntp-checksum-trailer-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ntp-checksum-trailer-03
     docidentifier:
-    - content: draft-ietf-ntp-checksum-trailer-06
+    - content: draft-ietf-ntp-checksum-trailer-03
       type: Internet-Draft
       primary: true
 series:
@@ -85,10 +91,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ntp-checksum-trailer-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

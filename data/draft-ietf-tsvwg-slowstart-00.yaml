@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Limited Slow-Start for TCP with Large Congestion Windows
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-slowstart-00
 docidentifier:
+- content: draft-ietf-tsvwg-slowstart
+  type: Internet-Draft
 - content: draft-ietf-tsvwg-slowstart-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tsvwg-slowstart
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tsvwg-slowstart
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sally
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ICSI
+        - language: en
+          content: ICSI
 version:
 - content: '00'
 language:
@@ -54,29 +55,27 @@ abstract:
 - language: en
   script: Latn
   content: "<p>This document describes an optional modification for TCP's slow-start
-    for use with TCP connections with large congestion windows. For TCP connections
+    for use with TCP connections with large congestion windows.  For TCP connections
     that are able to use congestion windows of thousands (or tens of thousands) of
     MSS-sized segments (for MSS the sender's MAXIMUM SEGMENT SIZE), the current slow-start
     procedure can result in increasing the congestion window by thousands of segments
-    in a single round-trip time. Such an increase can easily result in thousands of
-    packets being dropped in one round-trip time. This is often counter-productive
+    in a single round-trip time.  Such an increase can easily result in thousands
+    of packets being dropped in one round-trip time.  This is often counter-productive
     for the TCP flow itself, and is also hard on the rest of the traffic sharing the
-    congested link. This note describes Limited Slow-Start as an optional mechanism
+    congested link.  This note describes Limited Slow-Start as an optional mechanism
     for limiting the number of segments by which the congestion window is increased
     for one window of data during slow-start, in order to improve performance for
-    TCP connections with large congestion windows. This memo defines an Experimental
+    TCP connections with large congestion windows.  This memo defines an Experimental
     Protocol for the Internet community.</p>"
-  format: text/html
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tsvwg-slowstart-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

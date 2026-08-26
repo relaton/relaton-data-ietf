@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Reliable QUIC Stream Resets
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-reliable-stream-reset-03
 docidentifier:
+- content: draft-ietf-quic-reliable-stream-reset
+  type: Internet-Draft
 - content: draft-ietf-quic-reliable-stream-reset-03
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-quic-reliable-stream-reset
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-quic-reliable-stream-reset
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marten
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Protocol Labs
+        - language: en
+          content: Protocol Labs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kazuho
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fastly
+        - language: en
+          content: Fastly
 version:
 - content: '03'
 language:
@@ -75,19 +79,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC defines a RESET_STREAM frame to abort sending on a stream. When
-    a sender resets a stream, it also stops retransmitting STREAM frames for this
-    stream in the of packet loss. On the receiving side, there is no guarantee that
-    any data sent on that stream is delivered. This document defines a new QUIC frame,
-    the RESET_STREAM_AT frame, that allows resetting a stream, while guaranteeing
-    reliable delivery of stream data up to a certain byte offset.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC defines a RESET_STREAM frame to abort sending on a stream.  When
+       a sender resets a stream, it also stops retransmitting STREAM frames
+       for this stream in the of packet loss.  On the receiving side, there
+       is no guarantee that any data sent on that stream is delivered.
+
+       This document defines a new QUIC frame, the RESET_STREAM_AT frame,
+       that allows resetting a stream, while guaranteeing reliable delivery
+       of stream data up to a certain byte offset.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-quic-reliable-stream-reset-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-reliable-stream-reset-02
     docidentifier:
     - content: draft-ietf-quic-reliable-stream-reset-02
       type: Internet-Draft
@@ -95,10 +103,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-quic-reliable-stream-reset-06
-      format: text/plain
+      content: draft-ietf-quic-reliable-stream-reset-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-reliable-stream-reset-04
     docidentifier:
-    - content: draft-ietf-quic-reliable-stream-reset-06
+    - content: draft-ietf-quic-reliable-stream-reset-04
       type: Internet-Draft
       primary: true
 series:
@@ -107,10 +117,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-quic-reliable-stream-reset-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

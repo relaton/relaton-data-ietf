@@ -1,11 +1,12 @@
 ---
 id: draftrosenaurequestv6option
 schema_version: v1.5.6
+formattedref:
+  content: draft-rosenau-request-v6-option
 title:
 - language: en
   script: Latn
   content: TCP option "request IPv6 connection"
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rosenau-request-v6-option-00
@@ -19,22 +20,33 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes an idea for a header "option" for the Transmission
-    Control Protocol (TCP). The extension is used by dual-stack nodes to force the
-    use of the IPv6 protocol instead of the IPv4 protocol when exchanging data over
-    TCP. Especially if one of the two nodes is a NAT64 or NAT46 router it makes sense
-    not to use IPv4 but IPv6 if both nodes are dual-stack nodes. This document also
-    suggests to declare the usage of such a method mandatory for all nodes that use
-    IPv4 addresses that will be assigned by RIRs in the future. Doing so will make
-    it impossible to (mis-) use IPv4 addresses assigned by RIRs to ISPs for IPv4-only
-    nodes that do not support IPv6.</p>
-  format: text/html
+  content: |-
+    <p>This document describes an idea for a header "option" for the
+       Transmission Control Protocol (TCP).
+
+       The extension is used by dual-stack nodes to force the use of the
+       IPv6 protocol instead of the IPv4 protocol when exchanging data over
+       TCP.
+
+       Especially if one of the two nodes is a NAT64 or NAT46 router it
+       makes sense not to use IPv4 but IPv6 if both nodes are dual-stack
+       nodes.
+
+       This document also suggests to declare the usage of such a method
+       mandatory for all nodes that use IPv4 addresses that will be assigned
+       by RIRs in the future.
+
+       Doing so will make it impossible to (mis-) use IPv4 addresses
+       assigned by RIRs to ISPs for IPv4-only nodes that do not support
+       IPv6.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-rosenau-request-v6-option-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosenau-request-v6-option-00
     docidentifier:
     - content: draft-rosenau-request-v6-option-00
       type: Internet-Draft
@@ -43,4 +55,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

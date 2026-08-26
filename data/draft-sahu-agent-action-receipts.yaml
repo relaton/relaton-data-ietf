@@ -1,11 +1,12 @@
 ---
 id: draftsahuagentactionreceipts
 schema_version: v1.5.6
+formattedref:
+  content: draft-sahu-agent-action-receipts
 title:
 - language: en
   script: Latn
   content: Signed, Hash-Chained Action Receipts for AI Agents
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sahu-agent-action-receipts-00
@@ -19,24 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a format for action receipts: compact, individually
-    signed JSON records that state that a specific AI agent attempted a specific action
-    at a specific time, under a specific policy decision, and what the outcome was.
-    Receipts are linked into an append-only hash chain so that deletion, insertion,
-    reordering, or modification of any previously recorded receipt is detectable by
-    a verifier that holds only the records and the signer's public key. The format
-    is deliberately small and self-contained. Verification requires no network access,
-    no service operated by the producer of the receipts, and no state beyond the records
-    themselves and a trust anchor obtained out of band. This document specifies the
-    record fields, the canonical byte sequence that is signed, the chain linkage rule,
-    the verification procedure, and test vectors.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies a format for action receipts: compact,
+       individually signed JSON records that state that a specific AI agent
+       attempted a specific action at a specific time, under a specific
+       policy decision, and what the outcome was.  Receipts are linked into
+       an append-only hash chain so that deletion, insertion, reordering, or
+       modification of any previously recorded receipt is detectable by a
+       verifier that holds only the records and the signer's public key.
+
+       The format is deliberately small and self-contained.  Verification
+       requires no network access, no service operated by the producer of
+       the receipts, and no state beyond the records themselves and a trust
+       anchor obtained out of band.  This document specifies the record
+       fields, the canonical byte sequence that is signed, the chain linkage
+       rule, the verification procedure, and test vectors.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-sahu-agent-action-receipts-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sahu-agent-action-receipts-00
     docidentifier:
     - content: draft-sahu-agent-action-receipts-00
       type: Internet-Draft
@@ -45,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

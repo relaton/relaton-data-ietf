@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The 'taler' URI scheme for GNU Taler Wallet interactions
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-grothoff-taler-00
 docidentifier:
+- content: draft-grothoff-taler
+  type: Internet-Draft
 - content: draft-grothoff-taler-00
   type: Internet-Draft
   primary: true
-- content: I-D.grothoff-taler
-  type: IETF
-  scope: anchor
 docnumber: I-D.grothoff-taler
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Christian
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: BFH
+        - language: en
+          content: BFH
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Florian
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Taler Systems SA
+        - language: en
+          content: Taler Systems SA
 version:
 - content: '00'
 language:
@@ -75,23 +79,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the 'taler' Uniform Resource Identifier (URI)
-    scheme for triggering interactions with a GNU Taler wallet. This URI scheme allows
-    applications to trigger interactions with the GNU Taler wallet, such as withdrawing
-    money, making payments, receiving refunds and restoring a wallet from a backup.
-    Applications may receive such URIs in many ways (including via NFC, QR codes,
-    Web links or messaging applications), or might generate them internally to interact
-    with a wallet. By having a Taler wallet handle the respective URIs, applications
-    can integrate Taler payments without having to support the Taler protocol directly.
-    Furthermore, by passing control to a Taler wallet process, the wallet's database
-    with its financial data might be better protected from application failures.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the 'taler' Uniform Resource Identifier (URI)
+       scheme for triggering interactions with a GNU Taler wallet.
+
+       This URI scheme allows applications to trigger interactions with the
+       GNU Taler wallet, such as withdrawing money, making payments,
+       receiving refunds and restoring a wallet from a backup.  Applications
+       may receive such URIs in many ways (including via NFC, QR codes, Web
+       links or messaging applications), or might generate them internally
+       to interact with a wallet.  By having a Taler wallet handle the
+       respective URIs, applications can integrate Taler payments without
+       having to support the Taler protocol directly.  Furthermore, by
+       passing control to a Taler wallet process, the wallet's database with
+       its financial data might be better protected from application
+       failures.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-grothoff-taler-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-grothoff-taler-01
     docidentifier:
     - content: draft-grothoff-taler-01
       type: Internet-Draft
@@ -102,10 +112,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-grothoff-taler-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

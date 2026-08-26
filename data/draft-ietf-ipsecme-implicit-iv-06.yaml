@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Implicit IV for Counter-based Ciphers in Encapsulating Security Payload
     (ESP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-implicit-iv-06
 docidentifier:
+- content: draft-ietf-ipsecme-implicit-iv
+  type: Internet-Draft
 - content: draft-ietf-ipsecme-implicit-iv-06
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ipsecme-implicit-iv
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ipsecme-implicit-iv
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Daniel
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tobias
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -66,15 +69,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: LMU Munich
+        - language: en
+          content: LMU Munich
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yoav
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -88,7 +94,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Dell EMC
+        - language: en
+          content: Dell EMC
 version:
 - content: '06'
 language:
@@ -98,21 +105,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Encapsulating Security Payload (ESP) sends an initialization vector
-    (IV) or nonce in each packet. The size of IV depends on the applied transform,
-    being usually 8 or 16 octets for the transforms defined by the time this document
-    is written. Some algorithms such as AES-GCM, AES-CCM, AES-CTR and ChaCha20-Poly1305
-    require a unique nonce but do not require an unpredictable nonce. When using such
-    algorithms the packet counter value can be used to generate a nonce. This avoids
-    sending the nonce itself, and saves in the case of AES-GCM, AES-CCM, AES-CTR and
-    ChaCha20-Poly1305 8 octets per packet. This document describes how to do this.</p>"
-  format: text/html
+  content: |-
+    <p>Encapsulating Security Payload (ESP) sends an initialization vector
+       (IV) or nonce in each packet.  The size of IV depends on the applied
+       transform, being usually 8 or 16 octets for the transforms defined by
+       the time this document is written.  Some algorithms such as AES-GCM,
+       AES-CCM, AES-CTR and ChaCha20-Poly1305 require a unique nonce but do
+       not require an unpredictable nonce.  When using such algorithms the
+       packet counter value can be used to generate a nonce.  This avoids
+       sending the nonce itself, and saves in the case of AES-GCM, AES-CCM,
+       AES-CTR and ChaCha20-Poly1305 8 octets per packet.  This document
+       describes how to do this.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-ipsecme-implicit-iv-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-implicit-iv-05
     docidentifier:
     - content: draft-ietf-ipsecme-implicit-iv-05
       type: Internet-Draft
@@ -120,10 +131,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-ipsecme-implicit-iv-08
-      format: text/plain
+      content: draft-ietf-ipsecme-implicit-iv-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-implicit-iv-07
     docidentifier:
-    - content: draft-ietf-ipsecme-implicit-iv-08
+    - content: draft-ietf-ipsecme-implicit-iv-07
       type: Internet-Draft
       primary: true
 series:
@@ -132,10 +145,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ipsecme-implicit-iv-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

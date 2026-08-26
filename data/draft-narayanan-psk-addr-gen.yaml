@@ -1,13 +1,14 @@
 ---
 id: draftnarayananpskaddrgen
 schema_version: v1.5.6
+formattedref:
+  content: draft-narayanan-psk-addr-gen
 title:
 - language: en
   script: Latn
   content: 'Pre-Shared Key (PSK) Based Addresses (PBA)
 
     '
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-narayanan-psk-addr-gen-00
@@ -21,25 +22,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Cryptographically generated addresses (CGAs) provide a means of generating
-    an IP address that is tied to a public key of a node. Using this means, the address
-    ownership of the node can be verified by using the public key of the node to decrypt
-    data signed by the node using its private key. In AAA-based systems, there is
-    currently no means of performing such absolute address ownership checks, since
-    address authorization is traditionally outside the scope of AAA. However, in some
-    key generation protocols, it may be critical to perform address ownership verification
-    or authorization before the generated key can be used. When such key generation
-    protocols are AAA-based, there is no known method of address authorization to
-    allow this operation. This draft provides a means of IPv6 address generation using
-    a shared secret so that the IP address of a node can be verified by the entity
-    with which the node shares the secret.</p>"
-  format: text/html
+  content: |-
+    <p>Cryptographically generated addresses (CGAs) provide a means of
+    generating an IP address that is tied to a public key of a node.
+    Using this means, the address ownership of the node can be verified
+    by using the public key of the node to decrypt data signed by the
+    node using its private key.  In AAA-based systems, there is currently
+    no means of performing such absolute address ownership checks, since
+    address authorization is traditionally outside the scope of AAA.
+    However, in some key generation protocols, it may be critical to
+    perform address ownership verification or authorization before the
+    generated key can be used.  When such key generation protocols are
+    AAA-based, there is no known method of address authorization to allow
+    this operation.
+
+    This draft provides a means of IPv6 address generation using a shared
+    secret so that the IP address of a node can be verified by the entity
+    with which the node shares the secret.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-narayanan-psk-addr-gen-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-narayanan-psk-addr-gen-00
     docidentifier:
     - content: draft-narayanan-psk-addr-gen-00
       type: Internet-Draft
@@ -48,4 +55,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftdelanynullmx
 schema_version: v1.5.6
+formattedref:
+  content: draft-delany-nullmx
 title:
 - language: en
   script: Latn
   content: A NULL MX Resource Record for Domains that Accept No Mail
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-delany-nullmx-02
@@ -19,20 +20,24 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When the 5321.MailFrom domain in an e-mail message has a DNS MX Resource
-    Record (RR), it is making an explicit statement that it is willing to accept email.
-    However, when the domain has just a DNS A or AAAA RR, there mail clients cannot
-    easily tell whether the domain accepts mail, as many hosts on the Internet advertise
-    an A or AAAA RR regardless of whether they want to accept email. The NULL MX RR
-    formalizes the existing mechanism by which a domain announces that it accepts
-    no mail.</p>"
-  format: text/html
+  content: |-
+    <p>When the 5321.MailFrom domain in an e-mail message has a DNS MX
+       Resource Record (RR), it is making an explicit statement that it is
+       willing to accept email.  However, when the domain has just a DNS A
+       or AAAA RR, there mail clients cannot easily tell whether the domain
+       accepts mail, as many hosts on the Internet advertise an A or AAAA RR
+       regardless of whether they want to accept email.
+
+       The NULL MX RR formalizes the existing mechanism by which a domain
+       announces that it accepts no mail.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-delany-nullmx-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-delany-nullmx-00
     docidentifier:
     - content: draft-delany-nullmx-00
       type: Internet-Draft
@@ -41,7 +46,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-delany-nullmx-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-delany-nullmx-01
     docidentifier:
     - content: draft-delany-nullmx-01
       type: Internet-Draft
@@ -50,7 +57,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-delany-nullmx-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-delany-nullmx-02
     docidentifier:
     - content: draft-delany-nullmx-02
       type: Internet-Draft
@@ -59,4 +68,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

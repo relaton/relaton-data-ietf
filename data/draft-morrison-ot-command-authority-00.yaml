@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Consented and Attributable Agent Authority for Operational-Technology Control
     Actions
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-00
 docidentifier:
+- content: draft-morrison-ot-command-authority
+  type: Internet-Draft
 - content: draft-morrison-ot-command-authority-00
   type: Internet-Draft
   primary: true
-- content: I-D.morrison-ot-command-authority
-  type: IETF
-  scope: anchor
 docnumber: I-D.morrison-ot-command-authority
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Blake
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alter Meridian Pty Ltd
+        - language: en
+          content: Alter Meridian Pty Ltd
 version:
 - content: '00'
 language:
@@ -54,29 +55,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo specifies a binding profile by which a control action issued
-    to an operational-technology (OT) or industrial control system on the authority
-    of a software agent is refused unless it carries a verifiable statement of who
-    the agent is, which human principal it acts for, whether that principal consented
-    to this specific action on this specific asset, whether a human authorised the
-    action where the action's risk class requires it, and an append-only record sufficient
-    to attribute the action afterward. The profile does not invent new cryptography
-    or a new identity mechanism. It composes primitives defined elsewhere, DNSSEC-rooted
-    agent discovery, scoped and revocable consent, a human-in-the-loop binding moment,
-    and a provenance-labelled audit record, into a single structure, the Command Authority
-    Envelope, that an OT conduit evaluates and, on any missing or invalid binding,
-    refuses. The profile is availability- first and fails closed on authority, never
-    on safety: it MUST NOT be placed in the trip path of a safety function. The memo
-    maps the profile onto the identification, use-control, and audit requirements
-    that [IEC62443] and [NERCCIP] state but do not give a wire mechanism for. The
-    methods by which a principal's identity is inferred are out of scope by construction.</p>"
-  format: text/html
+  content: |-
+    <p>This memo specifies a binding profile by which a control action
+       issued to an operational-technology (OT) or industrial control system
+       on the authority of a software agent is refused unless it carries a
+       verifiable statement of who the agent is, which human principal it
+       acts for, whether that principal consented to this specific action on
+       this specific asset, whether a human authorised the action where the
+       action's risk class requires it, and an append-only record sufficient
+       to attribute the action afterward.  The profile does not invent new
+       cryptography or a new identity mechanism.  It composes primitives
+       defined elsewhere, DNSSEC-rooted agent discovery, scoped and
+       revocable consent, a human-in-the-loop binding moment, and a
+       provenance-labelled audit record, into a single structure, the
+       Command Authority Envelope, that an OT conduit evaluates and, on any
+       missing or invalid binding, refuses.  The profile is availability-
+       first and fails closed on authority, never on safety: it MUST NOT be
+       placed in the trip path of a safety function.  The memo maps the
+       profile onto the identification, use-control, and audit requirements
+       that [IEC62443] and [NERCCIP] state but do not give a wire mechanism
+       for.  The methods by which a principal's identity is inferred are out
+       of scope by construction.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-morrison-ot-command-authority-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-01
     docidentifier:
     - content: draft-morrison-ot-command-authority-01
       type: Internet-Draft
@@ -87,10 +94,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-morrison-ot-command-authority-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

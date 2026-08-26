@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Self-Synchronous Scramblers For PPP Over Sonet/SDH: Some Analysis'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ferguson-pppsonet-selfsync-00
 docidentifier:
+- content: draft-ferguson-pppsonet-selfsync
+  type: Internet-Draft
 - content: draft-ferguson-pppsonet-selfsync-00
   type: Internet-Draft
   primary: true
-- content: I-D.ferguson-pppsonet-selfsync
-  type: IETF
-  scope: anchor
 docnumber: I-D.ferguson-pppsonet-selfsync
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dennis
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ravi
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -67,27 +69,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The use of a self-synchronous scrambler to minimize the possibility
-    that a carefully chosen PPP over SONET/SDH payload can cause a long sequence of
-    zero bits to be transmitted is examined. It is pointed out that, while self-synchronous
-    scramblers have some attractive properties for the application, the x^43 + 1 scrambler
-    used by ATM for the same purpose has some unfortunate interactions with the 16-bit
-    CRC Frame Check Sequence which is the PPP default FCS. It is suggested that adding
-    a third term to the self-synchronous generator polynomial might improve its behaviour,
-    and that inverting the scrambler bit ordering so it is applied to the data in
-    the same bit order as the PPP CRC FCS algorithms are defined for may eliminate
-    any remaining effect such scramblers have on either PPP FCS.</p>"
-  format: text/html
+  content: |-
+    <p>The use of a self-synchronous scrambler to minimize the possibility
+       that a carefully chosen PPP over SONET/SDH payload can cause a long
+       sequence of zero bits to be transmitted is examined.  It is pointed
+       out that, while self-synchronous scramblers have some attractive
+       properties for the application, the x^43 + 1 scrambler used by ATM
+       for the same purpose has some unfortunate interactions with the
+       16-bit CRC Frame Check Sequence which is the PPP default FCS.  It is
+       suggested that adding a third term to the self-synchronous generator
+       polynomial might improve its behaviour, and that inverting the
+       scrambler bit ordering so it is applied to the data in the same bit
+       order as the PPP CRC FCS algorithms are defined for may eliminate any
+       remaining effect such scramblers have on either PPP FCS.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ferguson-pppsonet-selfsync-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: drafthfabierpimtunneling
 schema_version: v1.5.6
+formattedref:
+  content: draft-hfa-bier-pim-tunneling
 title:
 - language: en
   script: Latn
   content: PIM Tunneling Through BIER Core
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hfa-bier-pim-tunneling-00
@@ -19,26 +20,32 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
-    multicast forwarding through a "BIER domain" without requiring intermediate routers
-    to maintain multicast related per-flow state. Neither does BIER require an explicit
-    tree-building protocol for its operation. A multicast data packet enters a BIER
-    domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves the BIER domain
-    at one or more "Bit-Forwarding Egress Routers" (BFERs). The BFIR router adds a
-    BIER header to the packet. Such header contains a bit-string in which each bit
-    represents exactly one BFER to forward the packet to. The set of BFERs to which
-    the multicast packet needs to be forwarded is expressed by the according set of
-    bits switched on in BIER packet header. This document describes the procedure
-    needed for PIM to be tunneled through a BIER core. Allowing access CEs or PEs
-    to run traditional PIM multicast services including draft rosen multicast MVPN
-    through a core of BIER.</p>
-  format: text/html
+  content: |-
+    <p>Bit Index Explicit Replication (BIER) is an architecture that
+       provides multicast forwarding through a "BIER domain" without
+       requiring intermediate routers to maintain multicast related per-flow
+       state.  Neither does BIER require an explicit tree-building protocol
+       for its operation.  A multicast data packet enters a BIER domain at a
+       "Bit-Forwarding Ingress Router" (BFIR), and leaves the BIER domain at
+       one or more "Bit-Forwarding Egress Routers" (BFERs).  The BFIR router
+       adds a BIER header to the packet.  Such header contains a bit-string
+       in which each bit represents exactly one BFER to forward the packet
+       to.  The set of BFERs to which the multicast packet needs to be
+       forwarded is expressed by the according set of bits switched on in
+       BIER packet header.
+
+       This document describes the procedure needed for PIM to be tunneled
+       through a BIER core. Allowing access CEs or PEs to run traditional
+       PIM multicast services including draft rosen multicast MVPN through a
+       core of BIER.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-hfa-bier-pim-tunneling-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hfa-bier-pim-tunneling-00
     docidentifier:
     - content: draft-hfa-bier-pim-tunneling-00
       type: Internet-Draft
@@ -47,4 +54,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

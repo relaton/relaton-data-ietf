@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Relay Flow Identifier
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chuang-relay-flow-identifier-01
 docidentifier:
+- content: draft-chuang-relay-flow-identifier
+  type: Internet-Draft
 - content: draft-chuang-relay-flow-identifier-01
   type: Internet-Draft
   primary: true
-- content: I-D.chuang-relay-flow-identifier
-  type: IETF
-  scope: anchor
 docnumber: I-D.chuang-relay-flow-identifier
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wei
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google, Inc.
+        - language: en
+          content: Google, Inc.
 version:
 - content: '01'
 language:
@@ -53,21 +54,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>To prevent spammers from using relay forwarding, we propose to identify
-    relay flows. We do this by having relays categorize their authenticated traffic
-    flows and publish to receivers identifiers associated with those flows. This is
-    a unique, persistent over time, relay flow identifier name that is secured by
-    some digital signature. Receivers can use this identifier to help categorize traffic
-    through the relay and use that identifier to apply fine-grain anti-abuse policies
-    instead of on the entire traffic through the relay. This document provides a specification
-    for DKIM ([RFC6376]) for originating traffic and ARC [RFC8617] for forwarded traffic.</p>"
-  format: text/html
+  content: |-
+    <p>To prevent spammers from using relay forwarding, we propose to
+       identify relay flows.  We do this by having relays categorize their
+       authenticated traffic flows and publish to receivers identifiers
+       associated with those flows.  This is a unique, persistent over time,
+       relay flow identifier name that is secured by some digital signature.
+       Receivers can use this identifier to help categorize traffic through
+       the relay and use that identifier to apply fine-grain anti-abuse
+       policies instead of on the entire traffic through the relay.  This
+       document provides a specification for DKIM ([RFC6376]) for
+       originating traffic and ARC [RFC8617] for forwarded traffic.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-chuang-relay-flow-identifier-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-relay-flow-identifier-00
     docidentifier:
     - content: draft-chuang-relay-flow-identifier-00
       type: Internet-Draft
@@ -76,7 +81,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-chuang-relay-flow-identifier-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chuang-relay-flow-identifier-02
     docidentifier:
     - content: draft-chuang-relay-flow-identifier-02
       type: Internet-Draft
@@ -87,10 +94,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chuang-relay-flow-identifier-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

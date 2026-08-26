@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'QUIC-LB: Generating Routable QUIC Connection IDs'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-load-balancers-02
 docidentifier:
+- content: draft-ietf-quic-load-balancers
+  type: Internet-Draft
 - content: draft-ietf-quic-load-balancers-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-quic-load-balancers
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-quic-load-balancers
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Martin
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: F5 Networks, Inc.
+        - language: en
+          content: F5 Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nick
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - language: en
+          content: Microsoft
 version:
 - content: '02'
 language:
@@ -75,21 +79,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC connection IDs allow continuation of connections across address/
-    port 4-tuple changes, and can store routing information for stateless or low-state
-    load balancers. They also can prevent linkability of connections across deliberate
-    address migration through the use of protected communications between client and
-    server. This creates issues for load-balancing intermediaries. This specification
-    standardizes methods for encoding routing information given a small set of configuration
-    parameters. This framework also enables offload of other QUIC functions to trusted
-    intermediaries, given the explicit cooperation of the QUIC server.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC connection IDs allow continuation of connections across address/
+       port 4-tuple changes, and can store routing information for stateless
+       or low-state load balancers.  They also can prevent linkability of
+       connections across deliberate address migration through the use of
+       protected communications between client and server.  This creates
+       issues for load-balancing intermediaries.  This specification
+       standardizes methods for encoding routing information given a small
+       set of configuration parameters.  This framework also enables offload
+       of other QUIC functions to trusted intermediaries, given the explicit
+       cooperation of the QUIC server.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-quic-load-balancers-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-load-balancers-01
     docidentifier:
     - content: draft-ietf-quic-load-balancers-01
       type: Internet-Draft
@@ -97,10 +105,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-quic-load-balancers-12
-      format: text/plain
+      content: draft-ietf-quic-load-balancers-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-load-balancers-03
     docidentifier:
-    - content: draft-ietf-quic-load-balancers-12
+    - content: draft-ietf-quic-load-balancers-03
       type: Internet-Draft
       primary: true
 series:
@@ -109,10 +119,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-quic-load-balancers-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

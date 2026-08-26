@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: A Framework for Fast Reroute with Bit Index Explicit Replication (BIER-FRR)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-frr-12
 docidentifier:
+- content: draft-ietf-bier-frr
+  type: Internet-Draft
 - content: draft-ietf-bier-frr-12
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-bier-frr
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-bier-frr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Huaimo
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steffen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -109,17 +118,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Toerless
       - language: en
+        script: Latn
         initial: T
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -133,7 +146,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 version:
 - content: '12'
 language:
@@ -143,36 +157,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document provides a framework for the development of Fast Reroute
-    (FRR) mechanisms for Bit Index Explicit Replication forwarding (BIER-FRR). BIER-FRR
-    can provide protection against link or BFR failure by invoking locally pre-determined
-    repair paths that can react in the same time-scales as (unicast) FRR for MPLS
-    or IP networks - "sub 50msec", and without the creation of additional per- path
-    or per-flow state coordinated across multiple routers/LSR. BIER-FRR can be implemed
-    locally within a router/LSR with minimal interoperability requirements against
-    other router/LSR. It can therefore easily be introduced incrementally or selectively
-    where needed. BIER-FRR implementing nodes only need to understand the routing
-    topology of the network for calculation of repair paths and know what type of
-    unicast encapsulation can be used to send ("tunnel") BIER packets to remote BFR.
-    This document proposes and discusses different options for BIER forwardng (BIFT)
-    extensions to support BIER-FRR. These are exemplary and non-normative. This document
-    does not specify any standards or experiments but aims to support such efforts.</p>
-  format: text/html
+  content: |-
+    <p>This document provides a framework for the development of Fast
+       Reroute (FRR) mechanisms for Bit Index Explicit Replication
+       forwarding (BIER-FRR).  BIER-FRR can provide protection against link
+       or BFR failure by invoking locally pre-determined repair paths that
+       can react in the same time-scales as (unicast) FRR for MPLS or IP
+       networks - "sub 50msec", and without the creation of additional per-
+       path or per-flow state coordinated across multiple routers/LSR.
+
+       BIER-FRR can be implemed locally within a router/LSR with minimal
+       interoperability requirements against other router/LSR.  It can
+       therefore easily be introduced incrementally or selectively where
+       needed.  BIER-FRR implementing nodes only need to understand the
+       routing topology of the network for calculation of repair paths and
+       know what type of unicast encapsulation can be used to send
+       ("tunnel") BIER packets to remote BFR.
+
+       This document proposes and discusses different options for BIER
+       forwardng (BIFT) extensions to support BIER-FRR.  These are exemplary
+       and non-normative.  This document does not specify any standards or
+       experiments but aims to support such efforts.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-bier-frr-02
-      format: text/plain
+      content: draft-ietf-bier-frr-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-frr-11
     docidentifier:
-    - content: draft-ietf-bier-frr-02
+    - content: draft-ietf-bier-frr-11
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-bier-frr-13
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bier-frr-13
     docidentifier:
     - content: draft-ietf-bier-frr-13
       type: Internet-Draft
@@ -183,10 +207,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-bier-frr-12
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

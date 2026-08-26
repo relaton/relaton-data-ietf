@@ -1,11 +1,12 @@
 ---
 id: draftzhuoauthasyncdelegation
 schema_version: v1.5.6
+formattedref:
+  content: draft-zhu-oauth-async-delegation
 title:
 - language: en
   script: Latn
   content: Delegated Refresh Tokens for OAuth 2.0 Token Exchange
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-05
@@ -19,33 +20,42 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>OAuth 2.0 Token Exchange permits an authorization server to issue a
-    refresh token when a client needs continued access after the original credential
-    is no longer valid. However, RFC 8693 does not define how a refresh token issued
-    by a delegated Token Exchange preserves the subject, actor chain, resource restrictions,
-    or other delegated authorization state. This specification profiles refresh tokens
-    issued by delegated OAuth 2.0 Token Exchange for asynchronous and long-running
-    workflows. It defines authorization-server metadata advertising profile support
-    and a Token Exchange request signal by which a client requests delegated continuation,
-    together with preservation of subject and actor relationships, client and actor
-    binding, resource confinement, scope monotonicity, authorization re-evaluation,
-    rotation, task-scoped revocation, and a bounded delegation lifetime. The common
-    discovery signal, request signal, and semantics enable autonomous agents and other
-    product components to interoperate with independently implemented authorization
-    servers across trust domains. Because a client generally cannot determine the
-    effective lifetime of an opaque refresh token, this profile requires the client
-    to request continuation only for an identified asynchronous task and to promptly
-    revoke the refresh-token family when that task reaches a terminal state. These
-    requirements reduce unnecessary issuance and limit the period in which residual
-    delegated authority can be abused. The profile uses the existing OAuth refresh
-    token response and grant and introduces no new token type or grant type.</p>"
-  format: text/html
+  content: |-
+    <p>OAuth 2.0 Token Exchange permits an authorization server to issue a
+       refresh token when a client needs continued access after the original
+       credential is no longer valid.  However, RFC 8693 does not define how
+       a refresh token issued by a delegated Token Exchange preserves the
+       subject, actor chain, resource restrictions, or other delegated
+       authorization state.
+
+       This specification profiles refresh tokens issued by delegated OAuth
+       2.0 Token Exchange for asynchronous and long-running workflows.  It
+       defines authorization-server metadata advertising profile support and
+       a Token Exchange request signal by which a client requests delegated
+       continuation, together with preservation of subject and actor
+       relationships, client and actor binding, resource confinement, scope
+       monotonicity, authorization re-evaluation, rotation, task-scoped
+       revocation, and a bounded delegation lifetime.  The common discovery
+       signal, request signal, and semantics enable autonomous agents and
+       other product components to interoperate with independently
+       implemented authorization servers across trust domains.
+
+       Because a client generally cannot determine the effective lifetime of
+       an opaque refresh token, this profile requires the client to request
+       continuation only for an identified asynchronous task and to promptly
+       revoke the refresh-token family when that task reaches a terminal
+       state.  These requirements reduce unnecessary issuance and limit the
+       period in which residual delegated authority can be abused.  The
+       profile uses the existing OAuth refresh token response and grant and
+       introduces no new token type or grant type.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-zhu-oauth-async-delegation-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-00
     docidentifier:
     - content: draft-zhu-oauth-async-delegation-00
       type: Internet-Draft
@@ -54,7 +64,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhu-oauth-async-delegation-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-01
     docidentifier:
     - content: draft-zhu-oauth-async-delegation-01
       type: Internet-Draft
@@ -63,7 +75,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhu-oauth-async-delegation-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-02
     docidentifier:
     - content: draft-zhu-oauth-async-delegation-02
       type: Internet-Draft
@@ -72,7 +86,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhu-oauth-async-delegation-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-03
     docidentifier:
     - content: draft-zhu-oauth-async-delegation-03
       type: Internet-Draft
@@ -81,7 +97,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhu-oauth-async-delegation-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-04
     docidentifier:
     - content: draft-zhu-oauth-async-delegation-04
       type: Internet-Draft
@@ -90,7 +108,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhu-oauth-async-delegation-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-05
     docidentifier:
     - content: draft-zhu-oauth-async-delegation-05
       type: Internet-Draft
@@ -99,4 +119,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

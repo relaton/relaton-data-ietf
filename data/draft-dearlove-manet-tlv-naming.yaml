@@ -1,11 +1,12 @@
 ---
 id: draftdearlovemanettlvnaming
 schema_version: v1.5.6
+formattedref:
+  content: draft-dearlove-manet-tlv-naming
 title:
 - language: en
   script: Latn
   content: TLV Naming in the MANET Generalized Packet/Message Format
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dearlove-manet-tlv-naming-00
@@ -19,31 +20,42 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>TLVs (type-length-value structures) as defined by RFC5444 have both
-    a type (one octet) and a type extension (one octet), together forming a full type
-    (of two octets). RFC5444 sets up IANA registries for TLV types, specifying that
-    an allocation of a TLV type entails creation of an IANA registry for the corresponding
-    type extensions. In some cases, reserving all 256 type extensions for use for
-    a common purpose for a given TLV is meaningful, and thus it makes sense to record
-    a common name for such a TLV type (and all of its type extensions) in the corresponding
-    IANA registries. An example of such is a LINK_METRIC TLV Type, with its type extensions
-    reserved for use to be indicating the "kind" of metric expressed by the value
-    of the TLV. In some other cases, there may not be 256 full types that share a
-    common purpose and, as such, it is not meaningful to record a common name for
-    all the type extensions for a TLV type in the corresponding IANA registries. Rather,
-    it is appropriate to record an individual name per full type. This document reorganizes
-    the naming of already allocated TLV types and type extensions in those registries
-    to use names appropriately. It has no consequences in terms of any protocol implementation.
-    This document also updates the Expert Review guidelines from RFC5444, so as to
-    establish a policy for consistent naming of future TLV type and type extension
-    allocations.</p>
-  format: text/html
+  content: |-
+    <p>TLVs (type-length-value structures) as defined by RFC5444 have both a
+       type (one octet) and a type extension (one octet), together forming a
+       full type (of two octets).  RFC5444 sets up IANA registries for TLV
+       types, specifying that an allocation of a TLV type entails creation
+       of an IANA registry for the corresponding type extensions.
+
+       In some cases, reserving all 256 type extensions for use for a common
+       purpose for a given TLV is meaningful, and thus it makes sense to
+       record a common name for such a TLV type (and all of its type
+       extensions) in the corresponding IANA registries.  An example of such
+       is a LINK_METRIC TLV Type, with its type extensions reserved for use
+       to be indicating the "kind" of metric expressed by the value of the
+       TLV.
+
+       In some other cases, there may not be 256 full types that share a
+       common purpose and, as such, it is not meaningful to record a common
+       name for all the type extensions for a TLV type in the corresponding
+       IANA registries.  Rather, it is appropriate to record an individual
+       name per full type.
+
+       This document reorganizes the naming of already allocated TLV types
+       and type extensions in those registries to use names appropriately.
+       It has no consequences in terms of any protocol implementation.
+
+       This document also updates the Expert Review guidelines from RFC5444,
+       so as to establish a policy for consistent naming of future TLV type
+       and type extension allocations.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-dearlove-manet-tlv-naming-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dearlove-manet-tlv-naming-00
     docidentifier:
     - content: draft-dearlove-manet-tlv-naming-00
       type: Internet-Draft
@@ -52,4 +64,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

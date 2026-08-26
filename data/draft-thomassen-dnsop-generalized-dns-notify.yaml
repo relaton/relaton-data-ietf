@@ -1,11 +1,12 @@
 ---
 id: draftthomassendnsopgeneralizeddnsnotify
 schema_version: v1.5.6
+formattedref:
+  content: draft-thomassen-dnsop-generalized-dns-notify
 title:
 - language: en
   script: Latn
   content: Generalized DNS Notifications
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-generalized-dns-notify-02
@@ -19,31 +20,45 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>Changes in CDS/CDNSKEY, CSYNC, and other records related to delegation
-    maintenance are usually detected through scheduled scans run by the consuming
-    party (e.g. top-level domain registry), incurring an uncomfortable trade-off between
-    scanning cost and update latency. A similar problem exists when scheduling zone
-    transfers, and has been solved using the well-known DNS NOTIFY mechanism ([RFC1996]).
-    This mechanism enables a primary nameserver to proactively inform secondaries
-    about zone changes, allowing the secondary to initiate an ad-hoc transfer independently
-    of when the next SOA check would be due. This document extends the use of DNS
-    NOTIFY beyond conventional zone transfer hints, bringing the benefits of ad-hoc
-    notifications to DNS delegation maintenance in general. Use cases include DNSSEC
-    key rollovers hints via NOTIFY(CDS) and NOTIFY(DNSKEY) messages, and quicker changes
-    to a delegation''s NS record set via NOTIFY(CSYNC) messages. Furthermore, this
-    document proposes a new DNS record type, tentatively referred to as "NOTIFY record",
-    which is used to publish details about where generalized notifications should
-    be sent. TO BE REMOVED: This document is being collaborated on in Github at: https://github.com/peterthomassen/draft-thomassen-dnsop-generalized-
-    dns-notify (https://github.com/peterthomassen/draft-thomassen-dnsop- generalized-dns-notify).
-    The most recent working version of the document, open issues, etc. should all
-    be available there. The authors (gratefully) accept pull requests.</p>'
-  format: text/html
+  content: |-
+    <p>Changes in CDS/CDNSKEY, CSYNC, and other records related to
+       delegation maintenance are usually detected through scheduled scans
+       run by the consuming party (e.g. top-level domain registry),
+       incurring an uncomfortable trade-off between scanning cost and update
+       latency.
+
+       A similar problem exists when scheduling zone transfers, and has been
+       solved using the well-known DNS NOTIFY mechanism ([RFC1996]).  This
+       mechanism enables a primary nameserver to proactively inform
+       secondaries about zone changes, allowing the secondary to initiate an
+       ad-hoc transfer independently of when the next SOA check would be
+       due.
+
+       This document extends the use of DNS NOTIFY beyond conventional zone
+       transfer hints, bringing the benefits of ad-hoc notifications to DNS
+       delegation maintenance in general.  Use cases include DNSSEC key
+       rollovers hints via NOTIFY(CDS) and NOTIFY(DNSKEY) messages, and
+       quicker changes to a delegation's NS record set via NOTIFY(CSYNC)
+       messages.
+
+       Furthermore, this document proposes a new DNS record type,
+       tentatively referred to as "NOTIFY record", which is used to publish
+       details about where generalized notifications should be sent.
+
+       TO BE REMOVED: This document is being collaborated on in Github at:
+       https://github.com/peterthomassen/draft-thomassen-dnsop-generalized-
+       dns-notify (https://github.com/peterthomassen/draft-thomassen-dnsop-
+       generalized-dns-notify).  The most recent working version of the
+       document, open issues, etc. should all be available there.  The
+       authors (gratefully) accept pull requests.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-generalized-dns-notify-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-generalized-dns-notify-00
     docidentifier:
     - content: draft-thomassen-dnsop-generalized-dns-notify-00
       type: Internet-Draft
@@ -52,7 +67,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-generalized-dns-notify-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-generalized-dns-notify-01
     docidentifier:
     - content: draft-thomassen-dnsop-generalized-dns-notify-01
       type: Internet-Draft
@@ -61,7 +78,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-generalized-dns-notify-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-generalized-dns-notify-02
     docidentifier:
     - content: draft-thomassen-dnsop-generalized-dns-notify-02
       type: Internet-Draft
@@ -70,4 +89,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

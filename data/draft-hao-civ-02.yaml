@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Caller ID Verification In Heterogeneous Telecommunication Networks
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hao-civ-02
 docidentifier:
+- content: draft-hao-civ
+  type: Internet-Draft
 - content: draft-hao-civ-02
   type: Internet-Draft
   primary: true
-- content: I-D.hao-civ
-  type: IETF
-  scope: anchor
 docnumber: I-D.hao-civ
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Feng
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Warwick
+        - language: en
+          content: University of Warwick
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Basil
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Squire Technologies Ltd
+        - language: en
+          content: Squire Technologies Ltd
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Stephen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,17 +93,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: trueCall Ltd
+        - language: en
+          content: trueCall Ltd
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Muhammad
       - language: en
+        script: Latn
         initial: M
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -111,15 +121,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Birmingham City University
+        - language: en
+          content: Birmingham City University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -133,7 +146,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Warwick
+        - language: en
+          content: University of Warwick
 version:
 - content: '02'
 language:
@@ -143,34 +157,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines an extension to the INVITE header of the Session
-    Initiation Protocol (SIP) to support a Caller ID Verification (CIV) method. CIV
-    authenticates the caller ID of an incoming call through a challenge-and-response
-    process across both IP and non-IP networks without requiring a trusted third party
-    or a public key infrastructure. When receiving a call with a claimed phone number,
-    the called party holds the call and sends a quickly terminated INVITE request
-    (like a flash call) to that number, carrying a short 4-digit challenge embedded
-    as part of the caller ID. A genuine caller would receive the challenge and respond
-    by echoing the same digits, e.g., through DTMF (Dual-Tone Multi-Frequency). The
-    proposed extension involves two changes to the INVITE header. First, it adds a
-    new option tag, "civ", in the Supported header field of the INVITE request. This
-    tag allows the calling party to indicate support for CIV in the initial call.
-    Second, it adds a special value "civ-veri- call" for the Purpose parameter of
-    the Call-Info header field. This value allows the called party to make a verification
-    call, indicating the purpose of the call is to transmit a challenge rather than
-    establish a phone conversation. CIV uses the standard Session-ID header in the
-    INVITE request to allow the calling party to explicitly match the verification
-    call with the initial call. Whilst this document focuses on IP networks, the same
-    CIV protocol also works with non-IP networks (e.g., SS7) by including the "civ"
-    tag, the "civ-veri-call" value and the session ID in the User-to-User Information
-    (UUI) parameter.</p>
-  format: text/html
+  content: |-
+    <p>This document defines an extension to the INVITE header of the
+       Session Initiation Protocol (SIP) to support a Caller ID Verification
+       (CIV) method.  CIV authenticates the caller ID of an incoming call
+       through a challenge-and-response process across both IP and non-IP
+       networks without requiring a trusted third party or a public key
+       infrastructure.  When receiving a call with a claimed phone number,
+       the called party holds the call and sends a quickly terminated INVITE
+       request (like a flash call) to that number, carrying a short 4-digit
+       challenge embedded as part of the caller ID.  A genuine caller would
+       receive the challenge and respond by echoing the same digits, e.g.,
+       through DTMF (Dual-Tone Multi-Frequency).  The proposed extension
+       involves two changes to the INVITE header.  First, it adds a new
+       option tag, "civ", in the Supported header field of the INVITE
+       request.  This tag allows the calling party to indicate support for
+       CIV in the initial call.  Second, it adds a special value "civ-veri-
+       call" for the Purpose parameter of the Call-Info header field.  This
+       value allows the called party to make a verification call, indicating
+       the purpose of the call is to transmit a challenge rather than
+       establish a phone conversation.  CIV uses the standard Session-ID
+       header in the INVITE request to allow the calling party to explicitly
+       match the verification call with the initial call.  Whilst this
+       document focuses on IP networks, the same CIV protocol also works
+       with non-IP networks (e.g., SS7) by including the "civ" tag, the
+       "civ-veri-call" value and the session ID in the User-to-User
+       Information (UUI) parameter.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-hao-civ-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hao-civ-01
     docidentifier:
     - content: draft-hao-civ-01
       type: Internet-Draft
@@ -179,7 +199,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hao-civ-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hao-civ-03
     docidentifier:
     - content: draft-hao-civ-03
       type: Internet-Draft
@@ -190,10 +212,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hao-civ-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

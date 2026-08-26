@@ -1,11 +1,12 @@
 ---
 id: draftzzhangbierphp
 schema_version: v1.5.6
+formattedref:
+  content: draft-zzhang-bier-php
 title:
 - language: en
   script: Latn
   content: BIER Penultimate Hop Popping
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zzhang-bier-php-01
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Bit Index Explicit Replication (BIER) can be used as provider tunnel
-    for MVPN/GTM [RFC6514] [RFC7716] or EVPN BUM [RFC7432]. It is possible that not
-    all routers in the provider network support BIER and there are various methods
-    to handle BIER incapable transit routers. However the MVPN/EVPN PEs are assumed
-    to be BIER capable - they are BFIRs/BFERs. This document specifies a method to
-    allow BIER incapable routers to act as MVPN/EVPN PEs with BIER as the transport,
-    by having the upstream BFR (connected directly or indirectly via a tunnel) of
-    a PE remove the BIER header and send the payload to the PE.</p>"
-  format: text/html
+  content: |-
+    <p>Bit Index Explicit Replication (BIER) can be used as provider tunnel
+       for MVPN/GTM [RFC6514] [RFC7716] or EVPN BUM [RFC7432].  It is
+       possible that not all routers in the provider network support BIER
+       and there are various methods to handle BIER incapable transit
+       routers.  However the MVPN/EVPN PEs are assumed to be BIER capable -
+       they are BFIRs/BFERs.  This document specifies a method to allow BIER
+       incapable routers to act as MVPN/EVPN PEs with BIER as the transport,
+       by having the upstream BFR (connected directly or indirectly via a
+       tunnel) of a PE remove the BIER header and send the payload to the
+       PE.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-zzhang-bier-php-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zzhang-bier-php-00
     docidentifier:
     - content: draft-zzhang-bier-php-00
       type: Internet-Draft
@@ -42,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zzhang-bier-php-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zzhang-bier-php-01
     docidentifier:
     - content: draft-zzhang-bier-php-01
       type: Internet-Draft
@@ -51,4 +58,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

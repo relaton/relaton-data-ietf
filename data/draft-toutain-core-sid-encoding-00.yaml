@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: YANG SID Discovery Using the Domain Name System
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-toutain-core-sid-encoding-00
 docidentifier:
+- content: draft-toutain-core-sid-encoding
+  type: Internet-Draft
 - content: draft-toutain-core-sid-encoding-00
   type: Internet-Draft
   primary: true
-- content: I-D.toutain-core-sid-encoding
-  type: IETF
-  scope: anchor
 docnumber: I-D.toutain-core-sid-encoding
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sandoche
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Afnic
+        - language: en
+          content: Afnic
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMT Atlantique
+        - language: en
+          content: IMT Atlantique
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Laurent
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMT Atlantique
+        - language: en
+          content: IMT Atlantique
 version:
 - content: '00'
 language:
@@ -97,28 +104,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>CORECONF is an interface for managing YANG-modeled data using CBOR.
-    It replaces verbose YANG schema item identifiers with compact 64-bit integers
-    called Schema Item iDentifiers (SIDs). Interpreting a SID requires two resources:
-    the YANG module definition and the SID dictionary (the.sid file) that maps each
-    integer to the corresponding YANG schema item. Pre-loading every possible YANG
-    module and its SID dictionary is not practical as the set of deployed modules
-    grows; a dynamic discovery mechanism is therefore needed. This document specifies
-    a DNS reverse-lookup mechanism analogous to ip6.arpa that maps a SID to a DNS
-    name under the sid.yt. tree (where "yt" stands for YANG Tracker). Resolving that
-    name returns TXT records pointing to the authoritative repository for the corresponding
-    YANG module.</p>'
-  format: text/html
+  content: |-
+    <p>CORECONF is an interface for managing YANG-modeled data using CBOR.
+       It replaces verbose YANG schema item identifiers with compact 64-bit
+       integers called Schema Item iDentifiers (SIDs).  Interpreting a SID
+       requires two resources: the YANG module definition and the SID
+       dictionary (the .sid file) that maps each integer to the
+       corresponding YANG schema item.  Pre-loading every possible YANG
+       module and its SID dictionary is not practical as the set of deployed
+       modules grows; a dynamic discovery mechanism is therefore needed.
+       This document specifies a DNS reverse-lookup mechanism analogous to
+       ip6.arpa that maps a SID to a DNS name under the sid.yt. tree (where
+       "yt" stands for YANG Tracker).  Resolving that name returns TXT
+       records pointing to the authoritative repository for the
+       corresponding YANG module.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-toutain-core-sid-encoding-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

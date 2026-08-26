@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ACLs within the NFSv4 Protocols
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dnoveck-nfsv4-acls-06
 docidentifier:
+- content: draft-dnoveck-nfsv4-acls
+  type: Internet-Draft
 - content: draft-dnoveck-nfsv4-acls-06
   type: Internet-Draft
   primary: true
-- content: I-D.dnoveck-nfsv4-acls
-  type: IETF
-  scope: anchor
 docnumber: I-D.dnoveck-nfsv4-acls
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NetApp
+        - language: en
+          content: NetApp
 version:
 - content: '06'
 language:
@@ -53,51 +54,70 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document is part of the set of documents intended to update the
-    description of NFSv4 Minor Version One as part of the rfc5661bis respecification
-    effort for NFv4.1. It describes the structure and function of Access Control Lists
-    within all existing minor versions of NFSv4. It describes the structure of NFSv4
-    ACLs and their role in the NFSv4 security architecture. While the focus of this
-    document is on the role of ACLs in providing a more flexible approach to file
-    access authorization than is made available by the POSIX-derived authorization-related
-    attributes, the potential provision of other security-related functionality is
-    covered as well. [Consensus Needed (Item #117a)]: Because of the failure of previous
-    specifications to provide a satisfactory approach to either of the two ACL models
-    for which support was originally intended, this document clarifies the status
-    of draft POSIX ACLs, with the expectation that support for these might be provided
-    via a later extension. In addition, this document will include some small protocol
-    extensions to correct protocol defects, as provided for in RFC8178. [Consensus
-    Needed (Item #117a)]: In this document, the relationship among the multiple ACL
-    models supported has changed. A core set of functionality, shared in large part
-    with that derived from a subset of the functionality provided by the now-withdrawn
-    draft POSIX ACLs is presented as the conceptual base of the feature set. Additional
-    sets of features used to provide the functionality within the NFSv4 ACL model
-    and the full draft POSIX ACL model are considered as OPTIONAL extensions to that
-    core, with the latter not yet present in NFsv4.1. The current version of the document
-    is intended, in large part, to result in working group discussion regarding repairing
-    problems with previous specifications of ACL-related features and to enable work
-    to provide a greater degree of interoperability than has been available heretofore.
-    The drafts provide a framework for addressing these issues and obtaining working
-    group consensus regarding necessary changes. When the resulting document is eventually
-    published as an RFC, it will supersede the descriptions of ACL structure and semantics
-    appearing in existing minor version specification documents for NFSv4.0 and NFSv4.1,
-    thereby updating RFC7530 and RFC8881.</p>"
-  format: text/html
+  content: |-
+    <p>This document is part of the set of documents intended to update the
+       description of NFSv4 Minor Version One as part of the rfc5661bis
+       respecification effort for NFv4.1.  It describes the structure and
+       function of Access Control Lists within all existing minor versions
+       of NFSv4.
+
+       It describes the structure of NFSv4 ACLs and their role in the NFSv4
+       security architecture.  While the focus of this document is on the
+       role of ACLs in providing a more flexible approach to file access
+       authorization than is made available by the POSIX-derived
+       authorization-related attributes, the potential provision of other
+       security-related functionality is covered as well.
+
+       [Consensus Needed (Item #117a)]: Because of the failure of previous
+       specifications to provide a satisfactory approach to either of the
+       two ACL models for which support was originally intended, this
+       document clarifies the status of draft POSIX ACLs, with the
+       expectation that support for these might be provided via a later
+       extension.  In addition, this document will include some small
+       protocol extensions to correct protocol defects, as provided for in
+       RFC8178.
+
+       [Consensus Needed (Item #117a)]: In this document, the relationship
+       among the multiple ACL models supported has changed.  A core set of
+       functionality, shared in large part with that derived from a subset
+       of the functionality provided by the now-withdrawn draft POSIX ACLs
+       is presented as the conceptual base of the feature set.  Additional
+       sets of features used to provide the functionality within the NFSv4
+       ACL model and the full draft POSIX ACL model are considered as
+       OPTIONAL extensions to that core, with the latter not yet present in
+       NFsv4.1.
+
+       The current version of the document is intended, in large part, to
+       result in working group discussion regarding repairing problems with
+       previous specifications of ACL-related features and to enable work to
+       provide a greater degree of interoperability than has been available
+       heretofore.  The drafts provide a framework for addressing these
+       issues and obtaining working group consensus regarding necessary
+       changes.
+
+       When the resulting document is eventually published as an RFC, it
+       will supersede the descriptions of ACL structure and semantics
+       appearing in existing minor version specification documents for
+       NFSv4.0 and NFSv4.1, thereby updating RFC7530 and RFC8881.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-dnoveck-nfsv4-acls-03
-      format: text/plain
+      content: draft-dnoveck-nfsv4-acls-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dnoveck-nfsv4-acls-05
     docidentifier:
-    - content: draft-dnoveck-nfsv4-acls-03
+    - content: draft-dnoveck-nfsv4-acls-05
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-dnoveck-nfsv4-acls-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dnoveck-nfsv4-acls-07
     docidentifier:
     - content: draft-dnoveck-nfsv4-acls-07
       type: Internet-Draft
@@ -108,10 +128,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-dnoveck-nfsv4-acls-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

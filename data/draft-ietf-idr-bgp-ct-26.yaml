@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Classful Transport Planes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-26
 docidentifier:
+- content: draft-ietf-idr-bgp-ct
+  type: Internet-Draft
 - content: draft-ietf-idr-bgp-ct-26
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-idr-bgp-ct
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-idr-bgp-ct
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Natrajan
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 version:
 - content: '26'
 language:
@@ -75,40 +79,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document specifies a mechanism referred to as "Intent Driven Service
-    Mapping". The mechanism uses BGP to express intent based association of overlay
-    routes with underlay routes having specific Traffic Engineering (TE) characteristics
-    satisfying a certain Service Level Agreement (SLA). This is achieved by defining
-    new constructs to group underlay routes with sufficiently similar TE characteristics
-    into identifiable classes (called "Transport Classes"), that overlay routes use
-    as an ordered set to resolve reachability (Resolution Schemes) towards service
-    endpoints. These constructs can be used, for example, to realize the "IETF Network
-    Slice" defined in TEAS Network Slices framework. Additionally, this document specifies
-    protocol procedures for BGP that enable dissemination of service mapping information
-    in a network that may span multiple cooperating administrative domains. These
-    domains may be administered either by the same provider or by closely coordinating
-    providers. A new BGP address family that leverages RFC 4364 procedures and follows
-    RFC 8277 NLRI encoding is defined to advertise underlay routes with its identified
-    class. This new address family is called "BGP Classful Transport", a.k.a., BGP
-    CT.</p>
-  format: text/html
+  content: |-
+    <p>This document specifies a mechanism referred to as "Intent Driven
+       Service Mapping".  The mechanism uses BGP to express intent based
+       association of overlay routes with underlay routes having specific
+       Traffic Engineering (TE) characteristics satisfying a certain Service
+       Level Agreement (SLA).  This is achieved by defining new constructs
+       to group underlay routes with sufficiently similar TE characteristics
+       into identifiable classes (called "Transport Classes"), that overlay
+       routes use as an ordered set to resolve reachability (Resolution
+       Schemes) towards service endpoints.  These constructs can be used,
+       for example, to realize the "IETF Network Slice" defined in TEAS
+       Network Slices framework.
+
+       Additionally, this document specifies protocol procedures for BGP
+       that enable dissemination of service mapping information in a network
+       that may span multiple cooperating administrative domains.  These
+       domains may be administered either by the same provider or by closely
+       coordinating providers.  A new BGP address family that leverages RFC
+       4364 procedures and follows RFC 8277 NLRI encoding is defined to
+       advertise underlay routes with its identified class.  This new
+       address family is called "BGP Classful Transport", a.k.a., BGP CT.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-idr-bgp-ct-22
-      format: text/plain
+      content: draft-ietf-idr-bgp-ct-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-25
     docidentifier:
-    - content: draft-ietf-idr-bgp-ct-22
+    - content: draft-ietf-idr-bgp-ct-25
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-idr-bgp-ct-30
-      format: text/plain
+      content: draft-ietf-idr-bgp-ct-27
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-bgp-ct-27
     docidentifier:
-    - content: draft-ietf-idr-bgp-ct-30
+    - content: draft-ietf-idr-bgp-ct-27
       type: Internet-Draft
       primary: true
 series:
@@ -117,10 +129,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-idr-bgp-ct-26
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

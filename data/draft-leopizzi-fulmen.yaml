@@ -1,11 +1,12 @@
 ---
 id: draftleopizzifulmen
 schema_version: v1.5.6
+formattedref:
+  content: draft-leopizzi-fulmen
 title:
 - language: en
   script: Latn
   content: 'FULMEN 1.0: Event-Driven Bidirectional Client-Server Communication Protocol'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-leopizzi-fulmen-01
@@ -19,25 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies FULMEN version 1.0, an event-driven, bidirectional
-    client-server communication protocol with a binary wire format. Within a FULMEN
-    connection, both the client and the server can send events. An event is a message
-    frame identified by a sequential identifier and addressed by a UTF-8 path used
-    for routing and dispatching; its sender can request an acknowledgment, a response
-    correlated to the event that carries a status code describing the outcome of its
-    processing. Events and acknowledgments can carry a binary payload, either inline
-    within the frame or delivered incrementally in chunks through a stream. The protocol
-    version in use is negotiated during the connection handshake. FULMEN also defines
-    an extension mechanism, based on typed data units attached to protocol messages,
-    through which additional functionality can be introduced without changes to the
-    wire format.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies FULMEN version 1.0, an event-driven,
+       bidirectional client-server communication protocol with a binary wire
+       format.  Within a FULMEN connection, both the client and the server
+       can send events.  An event is a message frame identified by a
+       sequential identifier and addressed by a UTF-8 path used for routing
+       and dispatching; its sender can request an acknowledgment, a response
+       correlated to the event that carries a status code describing the
+       outcome of its processing.  Events and acknowledgments can carry a
+       binary payload, either inline within the frame or delivered
+       incrementally in chunks through a stream.  The protocol version in
+       use is negotiated during the connection handshake.  FULMEN also
+       defines an extension mechanism, based on typed data units attached to
+       protocol messages, through which additional functionality can be
+       introduced without changes to the wire format.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-leopizzi-fulmen-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-leopizzi-fulmen-00
     docidentifier:
     - content: draft-leopizzi-fulmen-00
       type: Internet-Draft
@@ -46,7 +51,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-leopizzi-fulmen-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-leopizzi-fulmen-01
     docidentifier:
     - content: draft-leopizzi-fulmen-01
       type: Internet-Draft
@@ -55,4 +62,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

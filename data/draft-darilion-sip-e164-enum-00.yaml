@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: E.164 Ownership using Public Keys stored in ENUM
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-darilion-sip-e164-enum-00
 docidentifier:
+- content: draft-darilion-sip-e164-enum
+  type: Internet-Draft
 - content: draft-darilion-sip-e164-enum-00
   type: Internet-Draft
   primary: true
-- content: I-D.darilion-sip-e164-enum
-  type: IETF
-  scope: anchor
 docnumber: I-D.darilion-sip-e164-enum
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Klaus
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: enum.at
+        - language: en
+          content: enum.at
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia Siemens Networks
+        - language: en
+          content: Nokia Siemens Networks
 version:
 - content: '00'
 language:
@@ -75,25 +79,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>To determine which domain is allowed to claim ownership of a certain
-    telephone number is difficult. This may cause problems when to authenticate endpoints
-    that use telephone number URIs and domain names in their From address. This document
-    investigates a proposal that stores a public key below the corresponding ENUM
-    tree in the DNS. The verifier can determine ownership by performing an ENUM lookup
-    to retrieve the public key from the DNS and to use it for verifying the signature
-    created as part of the SIP Identity mechanism. This document is a contribution
-    to the ongoing discussion on RFC 4474 when used in combination with E.164 numbers.</p>"
-  format: text/html
+  content: |-
+    <p>To determine which domain is allowed to claim ownership of a certain
+    telephone number is difficult.  This may cause problems when to
+    authenticate endpoints that use telephone number URIs and domain
+    names in their From address.  This document investigates a proposal
+    that stores a public key below the corresponding ENUM tree in the
+    DNS.  The verifier can determine ownership by performing an ENUM
+    lookup to retrieve the public key from the DNS and to use it for
+    verifying the signature created as part of the SIP Identity
+    mechanism.
+
+    This document is a contribution to the ongoing discussion on RFC 4474
+    when used in combination with E.164 numbers.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-darilion-sip-e164-enum-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

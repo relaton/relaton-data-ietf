@@ -1,11 +1,12 @@
 ---
 id: draftsaldanatsvwgsimplemux
 schema_version: v1.5.6
+formattedref:
+  content: draft-saldana-tsvwg-simplemux
 title:
 - language: en
   script: Latn
   content: Simplemux. A generic multiplexing protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-12
@@ -19,31 +20,40 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>The high amount of small packets present in nowaday's networks results
-    in a low efficiency, as the size of both the headers and the payload in these
-    packets can be comparably large, often falling within the same order of magnitude.
-    In some situations, multiplexing (i.e. aggregating) a number of small packets
-    into a bigger one is desirable to improve the efficiency. For example, a number
-    of small packets can be sent together between a pair of machines if they share
-    a common network path. This may happen between machines in different locations
-    or even inside a datacenter with a number of servers hosting virtual machines.
-    The traffic profile can be shifted from small to larger packets, thus reducing
-    the network overhead and the number of packets per second to be managed by intermediate
-    devices. This document describes Simplemux, a protocol able to encapsulate a number
-    of packets belonging to different protocols into a single packet. Small headers
-    (separators) are added at the beginning of each multiplexed packet, including
-    some flags, the packet length and a "Protocol" field. The presence of this "Protocol"
-    field allows it to aggregate packets belonging to any protocol (the "multiplexed
-    packets"), in a single packet belonging to other (or the same) protocol (the "tunneling
-    protocol"). To reduce the overhead, the size of the multiplexing headers is kept
-    very low (it may be a single byte when multiplexing packets of small size).</p>
-  format: text/html
+  content: |-
+    <p>The high amount of small packets present in nowaday's networks
+       results in a low efficiency, as the size of both the headers and the
+       payload in these packets can be comparably large, often falling
+       within the same order of magnitude.  In some situations, multiplexing
+       (i.e. aggregating) a number of small packets into a bigger one is
+       desirable to improve the efficiency.  For example, a number of small
+       packets can be sent together between a pair of machines if they share
+       a common network path.  This may happen between machines in different
+       locations or even inside a datacenter with a number of servers
+       hosting virtual machines.  The traffic profile can be shifted from
+       small to larger packets, thus reducing the network overhead and the
+       number of packets per second to be managed by intermediate devices.
+
+       This document describes Simplemux, a protocol able to encapsulate a
+       number of packets belonging to different protocols into a single
+       packet.  Small headers (separators) are added at the beginning of
+       each multiplexed packet, including some flags, the packet length and
+       a "Protocol" field.  The presence of this "Protocol" field allows it
+       to aggregate packets belonging to any protocol (the "multiplexed
+       packets"), in a single packet belonging to other (or the same)
+       protocol (the "tunneling protocol").
+
+       To reduce the overhead, the size of the multiplexing headers is kept
+       very low (it may be a single byte when multiplexing packets of small
+       size).</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-00
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-00
       type: Internet-Draft
@@ -52,7 +62,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-01
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-01
       type: Internet-Draft
@@ -61,7 +73,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-02
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-02
       type: Internet-Draft
@@ -70,7 +84,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-03
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-03
       type: Internet-Draft
@@ -79,7 +95,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-04
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-04
       type: Internet-Draft
@@ -88,7 +106,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-05
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-05
       type: Internet-Draft
@@ -97,7 +117,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-06
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-06
       type: Internet-Draft
@@ -106,7 +128,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-07
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-07
       type: Internet-Draft
@@ -115,7 +139,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-08
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-08
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-08
       type: Internet-Draft
@@ -124,7 +150,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-09
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-09
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-09
       type: Internet-Draft
@@ -133,7 +161,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-10
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-10
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-10
       type: Internet-Draft
@@ -142,7 +172,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-11
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-11
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-11
       type: Internet-Draft
@@ -151,7 +183,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-saldana-tsvwg-simplemux-12
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-12
     docidentifier:
     - content: draft-saldana-tsvwg-simplemux-12
       type: Internet-Draft
@@ -160,4 +194,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Datapath Processing Architecture for In-Band Congestion Signaling (IBCS)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-tian-ccwg-ibcs-datapath-processing-00
 docidentifier:
+- content: draft-tian-ccwg-ibcs-datapath-processing
+  type: Internet-Draft
 - content: draft-tian-ccwg-ibcs-datapath-processing-00
   type: Internet-Draft
   primary: true
-- content: I-D.tian-ccwg-ibcs-datapath-processing
-  type: IETF
-  scope: anchor
 docnumber: I-D.tian-ccwg-ibcs-datapath-processing
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yuchi
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Weiqiang
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jin
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Junjie
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Centec
+        - language: en
+          content: Centec
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Guoying
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -131,15 +143,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Centec
+        - language: en
+          content: Centec
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kan
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -153,7 +168,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 version:
 - content: '00'
 language:
@@ -163,31 +179,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>In-band congestion signaling protocols, such as Congestion Signaling
-    (CSIG) and High Precision Congestion Control (HPCC++), require intermediate Network
-    Elements (NEs) to actively parse scalar congestion metrics from packet headers,
-    evaluate them against local link states, and conditionally rewrite these fields
-    before transmission. To ensure end-to-end algorithmic consistency and avoid unintended
-    interactions with routing topologies (e.g., packet reordering), the datapath of
-    these NEs must adhere to a standardized logical processing model. This document
-    defines the normative datapath processing architecture for Network Elements participating
-    in In-Band Congestion Signaling (IBCS). By establishing abstract topological roles
-    (Edge vs. Transit NEs) and standardizing the "Compare-and-Replace" operational
-    paradigm, this specification abstracts the signal update logic from hardware-specific
-    pipelines. It guarantees strict orthogonality between congestion signaling and
-    Equal-Cost Multi-Path (ECMP) routing invariants, supporting diverse congestion
-    metrics across multi-vendor deployments.</p>
-  format: text/html
+  content: |-
+    <p>In-band congestion signaling protocols, such as Congestion Signaling
+       (CSIG) and High Precision Congestion Control (HPCC++), require
+       intermediate Network Elements (NEs) to actively parse scalar
+       congestion metrics from packet headers, evaluate them against local
+       link states, and conditionally rewrite these fields before
+       transmission.  To ensure end-to-end algorithmic consistency and avoid
+       unintended interactions with routing topologies (e.g., packet
+       reordering), the datapath of these NEs must adhere to a standardized
+       logical processing model.
+
+       This document defines the normative datapath processing architecture
+       for Network Elements participating in In-Band Congestion Signaling
+       (IBCS).  By establishing abstract topological roles (Edge vs. Transit
+       NEs) and standardizing the "Compare-and-Replace" operational
+       paradigm, this specification abstracts the signal update logic from
+       hardware-specific pipelines.  It guarantees strict orthogonality
+       between congestion signaling and Equal-Cost Multi-Path (ECMP) routing
+       invariants, supporting diverse congestion metrics across multi-vendor
+       deployments.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-tian-ccwg-ibcs-datapath-processing-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

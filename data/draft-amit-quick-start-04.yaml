@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Quick-Start for TCP and IP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-amit-quick-start-04
 docidentifier:
+- content: draft-amit-quick-start
+  type: Internet-Draft
 - content: draft-amit-quick-start-04
   type: Internet-Draft
   primary: true
-- content: I-D.amit-quick-start
-  type: IETF
-  scope: anchor
 docnumber: I-D.amit-quick-start
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Amit
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: F5 Networks
+        - language: en
+          content: F5 Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sally
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: M. Allman
+        - language: en
+          content: M. Allman
 version:
 - content: '04'
 language:
@@ -75,35 +79,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft specifies an optional Quick-Start mechanism for transport
-    protocols, in cooperation with routers, to determine an allowed sending rate at
-    the start and at times in the middle of a data transfer. While Quick-Start is
-    designed to be used by a range of transport protocols, in this document we describe
-    its use with TCP. By using Quick-Start, a TCP host, say, host A, would indicate
-    its desired sending rate in bytes per second, using a Quick Start Request option
-    in the IP header of a TCP packet. A Quick-Start request for a higher sending rate
-    would be sent in a TCP packet. Each router along the path could, in turn, either
-    approve the requested rate, reduce the requested rate, or indicate that the Quick-Start
-    request is not approved. If the Quick-Start request is not approved, then the
-    sender would use the default congestion control mechanisms. The Quick-Start mechanism
-    can determine if there are routers along the path that do not understand the Quick-
-    Start Request option, or have not agreed to the Quick-Start rate request. TCP
-    host B communicates the final rate request to TCP host A in a transport-level
-    Quick-Start Response in an answering TCP packet. Quick-Start is designed to allow
-    connections to use higher sending rates when there is significant unused bandwidth
-    along the path, and all of the routers along the path support the Quick-Start
-    Request.</p>"
-  format: text/html
+  content: |-
+    <p>This draft specifies an optional Quick-Start mechanism for transport
+        protocols, in cooperation with routers, to determine an allowed
+        sending rate at the start and at times in the middle of a data
+        transfer.  While Quick-Start is designed to be used by a range of
+        transport protocols, in this document we describe its use with TCP.
+        By using Quick-Start, a TCP host, say, host A, would indicate its
+        desired sending rate in bytes per second, using a Quick Start
+        Request option in the IP header of a TCP packet.  A Quick-Start
+        request for a higher sending rate would be sent in a TCP packet.
+        Each router along the path could, in turn, either approve the
+        requested rate, reduce the requested rate, or indicate that the
+        Quick-Start request is not approved.  If the Quick-Start request is
+        not approved, then the sender would use the default congestion
+        control mechanisms.  The Quick-Start mechanism can determine if
+        there are routers along the path that do not understand the Quick-
+        Start Request option, or have not agreed to the Quick-Start rate
+        request.  TCP host B communicates the final rate request to TCP host
+        A in a transport-level Quick-Start Response in an answering TCP
+        packet.  Quick-Start is designed to allow connections to use higher
+        sending rates when there is significant unused bandwidth along the
+        path, and all of the routers along the path support the Quick-Start
+        Request.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-amit-quick-start-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SCIM Soft Delete
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ansari-scim-soft-delete-00
 docidentifier:
+- content: draft-ansari-scim-soft-delete
+  type: Internet-Draft
 - content: draft-ansari-scim-soft-delete-00
   type: Internet-Draft
   primary: true
-- content: I-D.ansari-scim-soft-delete
-  type: IETF
-  scope: anchor
 docnumber: I-D.ansari-scim-soft-delete
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Morteza
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Phil
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - language: en
+          content: Oracle
 version:
 - content: '00'
 language:
@@ -75,30 +79,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The System for Cross-Domain Identity Management (SCIM) specification
-    is an HTTP based protocol that makes managing identities in multi- domain scenarios
-    easier to support through a standardized HTTP service. Among other operations,
-    SCIM defines delete operation where upon successful completion of the call, the
-    SCIM endpoint is supposed to delete the requested object and the object should
-    not be available for future SCIM calls and not used in uniqueness criteria requirements.
-    While this model is sufficient for a number of SCIM implementations, there are
-    cases this simple definition of delete may not meet product or business requirements.
-    For example a service provider may require a user object to continue to exist
-    as other objects/data is linked with it or for billing purposes, etc. For example
-    a cloud file storage mechanism may require to show basic information about who
-    created a given file or modified one even if the user is de- provisioned from
-    the system.</p>"
-  format: text/html
+  content: |-
+    <p>The System for Cross-Domain Identity Management (SCIM) specification
+       is an HTTP based protocol that makes managing identities in multi-
+       domain scenarios easier to support through a standardized HTTP
+       service.
+
+       Among other operations, SCIM defines delete operation where upon
+       successful completion of the call, the SCIM endpoint is supposed to
+       delete the requested object and the object should not be available
+       for future SCIM calls and not used in uniqueness criteria
+       requirements.
+
+       While this model is sufficient for a number of SCIM implementations,
+       there are cases this simple definition of delete may not meet product
+       or business requirements.  For example a service provider may require
+       a user object to continue to exist as other objects/data is linked
+       with it or for billing purposes, etc.  For example a cloud file
+       storage mechanism may require to show basic information about who
+       created a given file or modified one even if the user is de-
+       provisioned from the system.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ansari-scim-soft-delete-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SRV record query extension for XMPP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-harada-xmpp-srv-record-query-00
 docidentifier:
+- content: draft-harada-xmpp-srv-record-query
+  type: Internet-Draft
 - content: draft-harada-xmpp-srv-record-query-00
   type: Internet-Draft
   primary: true
-- content: I-D.harada-xmpp-srv-record-query
-  type: IETF
-  scope: anchor
 docnumber: I-D.harada-xmpp-srv-record-query
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Akari
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Maebashi Kyoai Gakuen College
+        - language: en
+          content: Maebashi Kyoai Gakuen College
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hirotaka
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Keio Univ.
+        - language: en
+          content: Keio Univ.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nobuo
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Maebashi Kyoai Gakuen College
+        - language: en
+          content: Maebashi Kyoai Gakuen College
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yoshihiro
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: D3 Communications
+        - language: en
+          content: D3 Communications
 version:
 - content: '00'
 language:
@@ -119,29 +129,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>According to RFC 6120, XMPP clients should use SRV records within the
-    connection establishment process to servers. There are two purposes for using
-    SRV records. The one is to advertise the FQDN of at least one server to clients
-    to establish an initial TCP connection. The other purpose is to advertise at least
-    two or more FQDN with priority and weight information to clients to accomplish
-    load balancing, a redundant server environment and so on. However, most standard
-    resolver libraries of recent client OSs don't support SRV record resolution. Furthermore,
-    many DNS hosting services also don't support SRV records. This document proposes
-    a solution that enables a server and client to achieve load balancing and a redundant
-    server environment in case SRV records cannot be used. Moreover, the proposed
-    IQ-result message can include minimum wait time to reconnect, allowing clients
-    to reconnect after the most suitable wait time avoiding congestion.</p>"
-  format: text/html
+  content: |-
+    <p>According to RFC 6120, XMPP clients should use SRV records within
+       the connection establishment process to servers. There are two
+       purposes for using SRV records. The one is to advertise the FQDN of
+       at least one server to clients to establish an initial TCP
+       connection. The other purpose is to advertise at least two or more
+       FQDN with priority and weight information to clients to accomplish
+       load balancing, a redundant server environment and so on. However,
+       most standard resolver libraries of recent client OSs don't support
+       SRV record resolution. Furthermore, many DNS hosting services also
+       don't support SRV records. This document proposes a solution that
+       enables a server and client to achieve load balancing and a
+       redundant server environment in case SRV records cannot be used.
+       Moreover, the proposed IQ-result message can include minimum wait
+       time to reconnect, allowing clients to reconnect after the most
+       suitable wait time avoiding congestion.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-harada-xmpp-srv-record-query-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

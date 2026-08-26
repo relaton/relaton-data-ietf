@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Transport Layer Security (TLS) Session Hash and Extended Master Secret
     Extension
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bhargavan-tls-session-hash-00
 docidentifier:
+- content: draft-bhargavan-tls-session-hash
+  type: Internet-Draft
 - content: draft-bhargavan-tls-session-hash-00
   type: Internet-Draft
   primary: true
-- content: I-D.bhargavan-tls-session-hash
-  type: IETF
-  scope: anchor
 docnumber: I-D.bhargavan-tls-session-hash
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Karthikeyan
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -47,8 +47,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Antoine
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,8 +67,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alfredo
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -83,8 +87,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Adam
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -101,8 +107,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marsh
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -122,23 +130,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Transport Layer Security (TLS) master secret is not cryptographically
-    bound to important session parameters such as the client and server identities.
-    Consequently, it is possible for an active attacker to set up two sessions, one
-    with a client and another with a server such that the master secrets on the two
-    sessions are the same. Thereafter, any mechanism that relies on the master secret
-    for authentication, including renegotiation after session resumption, becomes
-    vulnerable to a man-in-the-middle attack, where the attacker can simply forward
-    messages back and forth between the client and server. This specification defines
-    a TLS extension that contextually binds the master secret to a log of the full
-    handshake that computes it, thus preventing such attacks.</p>"
-  format: text/html
+  content: |-
+    <p>The Transport Layer Security (TLS) master secret is not
+       cryptographically bound to important session parameters such as the
+       client and server identities.  Consequently, it is possible for an
+       active attacker to set up two sessions, one with a client and another
+       with a server such that the master secrets on the two sessions are
+       the same.  Thereafter, any mechanism that relies on the master secret
+       for authentication, including renegotiation after session resumption,
+       becomes vulnerable to a man-in-the-middle attack, where the attacker
+       can simply forward messages back and forth between the client and
+       server.  This specification defines a TLS extension that contextually
+       binds the master secret to a log of the full handshake that computes
+       it, thus preventing such attacks.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bhargavan-tls-session-hash-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bhargavan-tls-session-hash-01
     docidentifier:
     - content: draft-bhargavan-tls-session-hash-01
       type: Internet-Draft
@@ -149,10 +161,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bhargavan-tls-session-hash-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

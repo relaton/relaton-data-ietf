@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Structured and Constraint Extensions for OAuth Scopes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-oauth-scope-agent-extensions-00
 docidentifier:
+- content: draft-chen-oauth-scope-agent-extensions
+  type: Internet-Draft
 - content: draft-chen-oauth-scope-agent-extensions-00
   type: Internet-Draft
   primary: true
-- content: I-D.chen-oauth-scope-agent-extensions
-  type: IETF
-  scope: anchor
 docnumber: I-D.chen-oauth-scope-agent-extensions
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jia
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Meiling
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -85,7 +90,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 version:
 - content: '00'
 language:
@@ -95,34 +101,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines an extension to the OAuth 2.0 scope parameter,
-    as specified in RFC 6749, which is used to express the permissions granted to
-    an access token. The proposed extension introduces a structured syntax for scope
-    values to enable fine- grained authorization for the installation and execution
-    of Modular Capability Units (encapsulated and reusable functional modules such
-    as skills) within Agent ecosystems. However, current mechanisms for authorizing
-    such modules generally lack a standardized way to express and obtain consent for
-    the complex, fine-grained permissions they require during installation. This document
-    addresses this limitation by defining a structured format for the scope parameter.
-    The format extends the simple space- delimited strings with a colon-separated
-    syntax: [resource_type]:[action]:[target][:constraints]. This syntax allows for
-    the precise description of permissions for operations such as file system access,
-    command-line execution, network access, tool invocation, and scheduled tasks.
-    These extensions provide a standardized, machine-readable way to request, convey,
-    and validate detailed permissions, thereby enhancing users' security control over
-    their resources while maintaining compatibility with the existing OAuth token
-    issuance and validation flows.</p>"
-  format: text/html
+  content: |-
+    <p>This specification defines an extension to the OAuth 2.0 scope
+       parameter, as specified in RFC 6749, which is used to express the
+       permissions granted to an access token.  The proposed extension
+       introduces a structured syntax for scope values to enable fine-
+       grained authorization for the installation and execution of Modular
+       Capability Units (encapsulated and reusable functional modules such
+       as skills) within Agent ecosystems.  However, current mechanisms for
+       authorizing such modules generally lack a standardized way to express
+       and obtain consent for the complex, fine-grained permissions they
+       require during installation.
+
+       This document addresses this limitation by defining a structured
+       format for the scope parameter.  The format extends the simple space-
+       delimited strings with a colon-separated syntax:
+       [resource_type]:[action]:[target][:constraints].  This syntax allows
+       for the precise description of permissions for operations such as
+       file system access, command-line execution, network access, tool
+       invocation, and scheduled tasks.  These extensions provide a
+       standardized, machine-readable way to request, convey, and validate
+       detailed permissions, thereby enhancing users' security control over
+       their resources while maintaining compatibility with the existing
+       OAuth token issuance and validation flows.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chen-oauth-scope-agent-extensions-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftlioauthdelegatedauthorization
 schema_version: v1.5.6
+formattedref:
+  content: draft-li-oauth-delegated-authorization
 title:
 - language: en
   script: Latn
   content: OAuth 2.0 Delegated Authorization
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-oauth-delegated-authorization-03
@@ -19,21 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines Delegated Authorization Tokens, key-bound
-    tokens that enable an OAuth client to delegate a constrained subset of its authorization
-    to another client without contacting the authorization server for each delegation.
-    An authorization server issues the root token and binds it to a client key. That
-    client can use the bound key either to prove possession when accessing a protected
-    resource or to sign a further token bound to a delegate client's key. Resource
-    servers validate the ordered token chain, the restrictions imposed at every delegation
-    step, and a DPoP proof signed by the key bound to the leaf token.</p>"
-  format: text/html
+  content: |-
+    <p>This specification defines Delegated Authorization Tokens, key-bound
+       tokens that enable an OAuth client to delegate a constrained subset
+       of its authorization to another client without contacting the
+       authorization server for each delegation.  An authorization server
+       issues the root token and binds it to a client key.  That client can
+       use the bound key either to prove possession when accessing a
+       protected resource or to sign a further token bound to a delegate
+       client's key.  Resource servers validate the ordered token chain, the
+       restrictions imposed at every delegation step, and a DPoP proof
+       signed by the key bound to the leaf token.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-li-oauth-delegated-authorization-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-oauth-delegated-authorization-00
     docidentifier:
     - content: draft-li-oauth-delegated-authorization-00
       type: Internet-Draft
@@ -42,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-oauth-delegated-authorization-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-oauth-delegated-authorization-01
     docidentifier:
     - content: draft-li-oauth-delegated-authorization-01
       type: Internet-Draft
@@ -51,7 +58,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-oauth-delegated-authorization-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-oauth-delegated-authorization-02
     docidentifier:
     - content: draft-li-oauth-delegated-authorization-02
       type: Internet-Draft
@@ -60,7 +69,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-oauth-delegated-authorization-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-oauth-delegated-authorization-03
     docidentifier:
     - content: draft-li-oauth-delegated-authorization-03
       type: Internet-Draft
@@ -69,4 +80,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

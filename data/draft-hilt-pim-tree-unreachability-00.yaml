@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Join failure notification for PIM-SM multicast routing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hilt-pim-tree-unreachability-00
 docidentifier:
+- content: draft-hilt-pim-tree-unreachability
+  type: Internet-Draft
 - content: draft-hilt-pim-tree-unreachability-00
   type: Internet-Draft
   primary: true
-- content: I-D.hilt-pim-tree-unreachability
-  type: IETF
-  scope: anchor
 docnumber: I-D.hilt-pim-tree-unreachability
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Benoit
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: MIPS
+        - language: en
+          content: MIPS
 version:
 - content: '00'
 language:
@@ -53,28 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Currently, PIM-SM is the most widely deployed multicast routing protocol
-    in the Internet. Nevertheless this multicast protocol lacks connectivity debugging
-    function, making it difficult to identify for example; -multicast routing problem,
-    -source unavailability, -RP failure, etc... When a host wants to receive a multicast
-    group/ channel, if for any reason the associated tree branch cannot be built,
-    nothing exists to inform the receiver or its network about this failure. We propose
-    here a new PIM message suitable for Join forwarding error notification. It is
-    able to inform where and why such an error happened in the network and this without
-    using a multicast traceroute mechanism. This message is also suitable to reduce
-    globally the impact of useless branches in a PIM domain. Furthermore it should
-    be used to block DDoS (Distributed Denial of Service) attacks.</p>"
-  format: text/html
+  content: |-
+    <p>Currently, PIM-SM is the most widely deployed multicast routing
+       protocol in the Internet.  Nevertheless this multicast protocol lacks
+       connectivity debugging function, making it difficult to identify for
+       example; -multicast routing problem, -source unavailability, -RP
+       failure, etc...  When a host wants to receive a multicast group/
+       channel, if for any reason the associated tree branch cannot be
+       built, nothing exists to inform the receiver or its network about
+       this failure.  We propose here a new PIM message suitable for Join
+       forwarding error notification.  It is able to inform where and why
+       such an error happened in the network and this without using a
+       multicast traceroute mechanism.  This message is also suitable to
+       reduce globally the impact of useless branches in a PIM domain.
+       Furthermore it should be used to block DDoS (Distributed Denial of
+       Service) attacks.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hilt-pim-tree-unreachability-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

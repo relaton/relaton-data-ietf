@@ -1,0 +1,114 @@
+---
+id: RFC4806
+schema_version: v1.5.6
+type: standard
+title:
+- content: Online Certificate Status Protocol (OCSP) Extensions to IKEv2
+  type: main
+source:
+- type: src
+  content: https://www.rfc-editor.org/info/rfc4806
+docidentifier:
+- content: RFC 4806
+  type: IETF
+  primary: true
+- content: 10.17487/RFC4806
+  type: DOI
+docnumber: RFC4806
+date:
+- type: published
+  at: 2007-02
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        script: Latn
+        content: M.
+      surname:
+        language: en
+        script: Latn
+        content: Myers
+      completename:
+        language: en
+        script: Latn
+        content: M. Myers
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        script: Latn
+        content: H.
+      surname:
+        language: en
+        script: Latn
+        content: Tschofenig
+      completename:
+        language: en
+        script: Latn
+        content: H. Tschofenig
+- role:
+  - type: publisher
+  organization:
+    name:
+    - language: en
+      content: RFC Publisher
+- role:
+  - type: authorizer
+  organization:
+    name:
+    - language: en
+      content: RFC Series
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: <p>While the Internet Key Exchange Protocol version 2 (IKEv2) supports
+    public key based authentication, the corresponding use of in-band Certificate
+    Revocation Lists (CRL) is problematic due to unbounded CRL size. The size of an
+    Online Certificate Status Protocol (OCSP) response is however well-bounded and
+    small. This document defines the "OCSP Content" extension to IKEv2. A CERTREQ
+    payload with "OCSP Content" identifies zero or more trusted OCSP responders and
+    is a request for inclusion of an OCSP response in the IKEv2 handshake. A cooperative
+    recipient of such a request responds with a CERT payload containing the appropriate
+    OCSP response. This content is recognizable via the same "OCSP Content" identifier.</p><p>When
+    certificates are used with IKEv2, the communicating peers need a mechanism to
+    determine the revocation status of the peer's certificate. OCSP is one such mechanism.
+    This document applies when OCSP is desired and security policy prevents one of
+    the IKEv2 peers from accessing the relevant OCSP responder directly. Firewalls
+    are often deployed in a manner that prevents such access by IKEv2 peers outside
+    of an enterprise network. [STANDARDS-TRACK]</p>
+status:
+  stage:
+    content: PROPOSED STANDARD
+series:
+- title:
+  - content: RFC
+  number: '4806'
+- type: stream
+  title:
+  - content: IETF
+keyword:
+- vocab:
+    content: internet key exchange version 2
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: rfc
+  flavor: ietf
+  stream: IETF

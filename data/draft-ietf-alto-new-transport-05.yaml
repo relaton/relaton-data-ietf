@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ALTO Transport Information Publication Service
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-05
 docidentifier:
+- content: draft-ietf-alto-new-transport
+  type: Internet-Draft
 - content: draft-ietf-alto-new-transport-05
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-alto-new-transport
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-alto-new-transport
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Roland
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Deutsche Telekom
+        - language: en
+          content: Deutsche Telekom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "Y"
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yale University
+        - language: en
+          content: Yale University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kai
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Sichuan University
+        - language: en
+          content: Sichuan University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lachlan
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yale University
+        - language: en
+          content: Yale University
 version:
 - content: '05'
 language:
@@ -119,44 +129,53 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The ALTO base protocol [RFC7285] is based on HTTP/1.x, designed for
-    the simple, sequential request-reply use case, in which an ALTO client requests
-    a sequence of information resources, and the server sends the complete content
-    of each information resource to the client one by one. To support the use case
-    that an ALTO client can monitor multiple resources at the same time and the ALTO
-    server sends only their updates, the ALTO Working Group introduced ALTO/SSE [RFC8895],
-    which defines a new, SSE-based multiplexing protocol on top of HTTP/1.x, to allow
-    the server to concurrently, and incrementally push updates to the client whenever
-    monitored network information resources change. However, newer versions of HTTP
-    (e.g., HTTP/2 [RFC7540]) already support concurrent, non-blocking transport of
-    multiple streams in the same HTTP connection. This document introduces the ALTO
-    transport information publication service (TIPS), which allows the naming of (i.e.,
-    assigning resource identifiers to) individual incremental updates to multiple
-    ALTO information resources and the distribution of the naming, enabling ALTO to
-    take advantage of newer HTTP versions. In particular, it gives an ALTO client
-    the new capability to explicitly request (pull) a specific incremental update.
-    It also provides an ALTO server the new capability to push a specific incremental
-    update using native HTTP/2 or HTTP/3 server push. This document defines TIPS as
-    a service, independent of client pull or server push. A companion document [draft-schott-alto-new-transport-push]
-    defines the complete server- push ALTO transport based on ALTO TIPS.</p>"
-  format: text/html
+  content: |-
+    <p>The ALTO base protocol [RFC7285] is based on HTTP/1.x, designed for
+       the simple, sequential request-reply use case, in which an ALTO
+       client requests a sequence of information resources, and the server
+       sends the complete content of each information resource to the client
+       one by one.  To support the use case that an ALTO client can monitor
+       multiple resources at the same time and the ALTO server sends only
+       their updates, the ALTO Working Group introduced ALTO/SSE [RFC8895],
+       which defines a new, SSE-based multiplexing protocol on top of
+       HTTP/1.x, to allow the server to concurrently, and incrementally push
+       updates to the client whenever monitored network information
+       resources change.  However, newer versions of HTTP (e.g., HTTP/2
+       [RFC7540]) already support concurrent, non-blocking transport of
+       multiple streams in the same HTTP connection.  This document
+       introduces the ALTO transport information publication service (TIPS),
+       which allows the naming of (i.e., assigning resource identifiers to)
+       individual incremental updates to multiple ALTO information resources
+       and the distribution of the naming, enabling ALTO to take advantage
+       of newer HTTP versions.  In particular, it gives an ALTO client the
+       new capability to explicitly request (pull) a specific incremental
+       update.  It also provides an ALTO server the new capability to push a
+       specific incremental update using native HTTP/2 or HTTP/3 server
+       push.  This document defines TIPS as a service, independent of client
+       pull or server push.  A companion document
+       [draft-schott-alto-new-transport-push] defines the complete server-
+       push ALTO transport based on ALTO TIPS.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-alto-new-transport-02
-      format: text/plain
+      content: draft-ietf-alto-new-transport-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-04
     docidentifier:
-    - content: draft-ietf-alto-new-transport-02
+    - content: draft-ietf-alto-new-transport-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-alto-new-transport-22
-      format: text/plain
+      content: draft-ietf-alto-new-transport-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-new-transport-06
     docidentifier:
-    - content: draft-ietf-alto-new-transport-22
+    - content: draft-ietf-alto-new-transport-06
       type: Internet-Draft
       primary: true
 series:
@@ -165,10 +184,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-alto-new-transport-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

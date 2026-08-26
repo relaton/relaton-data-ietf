@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SCHClet - Modular Use of the SCHC Framework
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-schc-schclet-00
 docidentifier:
+- content: draft-ietf-schc-schclet
+  type: Internet-Draft
 - content: draft-ietf-schc-schclet-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-schc-schclet
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-schc-schclet
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IMT Atlantique
+        - language: en
+          content: IMT Atlantique
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Quentin
       - language: en
+        script: Latn
         initial: Q
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - language: en
+          content: Orange
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marion
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - language: en
+          content: Orange
 version:
 - content: '00'
 language:
@@ -97,33 +104,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document introduces the concept of a SCHClet: a modular sub- function
-    within the SCHC (Static Context Header Compression) framework. Inspired by chiplet
-    architectures in hardware design, a SCHClet encapsulates a specific SCHC function—such
-    as compression, fragmentation, or acknowledgments—as a self-contained unit. This
-    modularization enables tailored implementations that avoid the overhead of deploying
-    a full SCHC stack. By decomposing SCHC functionality into SCHClets, the framework
-    becomes more adaptable, extensible, and suitable for a wider range of network
-    environments—including, but not limited to, constrained networks. A system using
-    SCHClets remains compliant with the SCHC framework and can interoperate with a
-    full SCHC implementation, provided compatible configuration parameters are used.
-    Each SCHClet is defined by the SCHC Profiles and configuration parameters necessary
-    for interoperability. It operates within a single Stratum and a single SCHC Instance.
-    For example, a device may implement only the NoAck fragmentation mode as a standalone
-    SCHClet, potentially with fixed parameters. This modular approach simplifies development,
-    reduces resource demands, and provides a framework for future extensibility of
-    the SCHC architecture.</p>"
-  format: text/html
+  content: |-
+    <p>This document introduces the concept of a SCHClet: a modular sub-
+       function within the SCHC (Static Context Header Compression)
+       framework.  Inspired by chiplet architectures in hardware design, a
+       SCHClet encapsulates a specific SCHC function—such as compression,
+       fragmentation, or acknowledgments—as a self-contained unit.  This
+       modularization enables tailored implementations that avoid the
+       overhead of deploying a full SCHC stack.
+
+       By decomposing SCHC functionality into SCHClets, the framework
+       becomes more adaptable, extensible, and suitable for a wider range of
+       network environments—including, but not limited to, constrained
+       networks.  A system using SCHClets remains compliant with the SCHC
+       framework and can interoperate with a full SCHC implementation,
+       provided compatible configuration parameters are used.
+
+       Each SCHClet is defined by the SCHC Profiles and configuration
+       parameters necessary for interoperability.  It operates within a
+       single Stratum and a single SCHC Instance.  For example, a device may
+       implement only the NoAck fragmentation mode as a standalone SCHClet,
+       potentially with fixed parameters.  This modular approach simplifies
+       development, reduces resource demands, and provides a framework for
+       future extensibility of the SCHC architecture.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-schc-schclet-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: WIMSE Trust Domain Discovery
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-schwenkschuster-wimse-trust-domain-discovery-00
 docidentifier:
+- content: draft-schwenkschuster-wimse-trust-domain-discovery
+  type: Internet-Draft
 - content: draft-schwenkschuster-wimse-trust-domain-discovery-00
   type: Internet-Draft
   primary: true
-- content: I-D.schwenkschuster-wimse-trust-domain-discovery
-  type: IETF
-  scope: anchor
 docnumber: I-D.schwenkschuster-wimse-trust-domain-discovery
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Arndt
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Defakto Security
+        - language: en
+          content: Defakto Security
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yaroslav
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zscaler
+        - language: en
+          content: Zscaler
 version:
 - content: '00'
 language:
@@ -75,28 +79,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The WIMSE architecture scopes workload identifiers to a trust domain.
-    To validate a workload identity credential, a relying party must securely obtain
-    the cryptographic trust anchors associated with the credential's trust domain.
-    The WIMSE architecture requires that this mapping between a trust domain and its
-    trust anchors is obtained through a secure mechanism, but leaves that mechanism
-    undefined. This document defines such a mechanism for open environments in which
-    no prior trust relationship exists between the relying party and the trust domain.
-    It specifies the WIMSE Trust Bundle, a document that conveys the trust anchors
-    of a trust domain for both JWT-based and X.509-based workload identity credentials,
-    and a discovery mechanism based on a well-known HTTPS endpoint that allows a relying
-    party to resolve a trust domain name to its trust bundle on demand.</p>"
-  format: text/html
+  content: |-
+    <p>The WIMSE architecture scopes workload identifiers to a trust domain.
+       To validate a workload identity credential, a relying party must
+       securely obtain the cryptographic trust anchors associated with the
+       credential's trust domain.  The WIMSE architecture requires that this
+       mapping between a trust domain and its trust anchors is obtained
+       through a secure mechanism, but leaves that mechanism undefined.
+
+       This document defines such a mechanism for open environments in which
+       no prior trust relationship exists between the relying party and the
+       trust domain.  It specifies the WIMSE Trust Bundle, a document that
+       conveys the trust anchors of a trust domain for both JWT-based and
+       X.509-based workload identity credentials, and a discovery mechanism
+       based on a well-known HTTPS endpoint that allows a relying party to
+       resolve a trust domain name to its trust bundle on demand.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-schwenkschuster-wimse-trust-domain-discovery-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

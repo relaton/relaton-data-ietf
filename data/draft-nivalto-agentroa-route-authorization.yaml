@@ -1,12 +1,13 @@
 ---
 id: draftnivaltoagentroarouteauthorization
 schema_version: v1.5.6
+formattedref:
+  content: draft-nivalto-agentroa-route-authorization
 title:
 - language: en
   script: Latn
   content: 'Agent Route Origin Authorization (AgentROA): A Cryptographic Policy Enforcement
     Framework for AI Agent Actions'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-nivalto-agentroa-route-authorization-01
@@ -20,36 +21,45 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the Agent Route Origin Authorization (AgentROA)
-    framework, a cryptographic policy enforcement model for governing the actions
-    of autonomous AI agents. AgentROA introduces three core protocol objects: the
-    Agent Route Origin Authorization (ROA) envelope, the Agent Route Attestation (ARA)
-    per-hop receipt, and the Agent Execution Receipt (AER). Together these objects
-    enable: (1) cryptographic binding of an agent's authorized action scope to a signed
-    policy envelope at session initialization, (2) per-hop attestation across multi-agent
-    delegation chains with monotonic scope-narrowing semantics (no policy envelope
-    may be expanded by a downstream delegation), and (3) cryptographic receipts produced
-    intrinsically by the enforcement decision at each capability invocation boundary.
-    The framework is modeled on the BGP Route Origin Authorization (ROA) concept from
-    RPKI (RFC 6480) applied to the AI agent execution domain. The Border Gateway enforcement
-    model positions a cryptographic enforcement process at a capability invocation
-    boundary — external to the agent's execution context — reducing the risk that
-    governance decisions are influenced by the governed agent by placing enforcement
-    in a separate process boundary. The Border Gateway model is topology-independent:
-    it may be deployed as a protocol- specific proxy in front of Model Context Protocol
-    (MCP) servers, as a service mesh enforcement component covering all inter-service
-    calls, as a network egress gateway covering all outbound capability invocations
-    regardless of protocol, or as a domain-specific execution boundary. The protocol
-    objects defined herein function identically across all deployment topologies.
-    This document establishes the architectural model, protocol object schemas, and
-    enforcement semantics for the AgentROA framework.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies the Agent Route Origin Authorization
+       (AgentROA) framework, a cryptographic policy enforcement model for
+       governing the actions of autonomous AI agents.  AgentROA introduces
+       three core protocol objects: the Agent Route Origin Authorization
+       (ROA) envelope, the Agent Route Attestation (ARA) per-hop receipt,
+       and the Agent Execution Receipt (AER).  Together these objects
+       enable: (1) cryptographic binding of an agent's authorized action
+       scope to a signed policy envelope at session initialization,
+       (2) per-hop attestation across multi-agent delegation chains with
+       monotonic scope-narrowing semantics (no policy envelope may be
+       expanded by a downstream delegation), and (3) cryptographic receipts
+       produced intrinsically by the enforcement decision at each capability
+       invocation boundary.  The framework is modeled on the BGP Route
+       Origin Authorization (ROA) concept from RPKI (RFC 6480) applied to
+       the AI agent execution domain.
+
+       The Border Gateway enforcement model positions a cryptographic
+       enforcement process at a capability invocation boundary — external
+       to the agent's execution context — reducing the risk that governance
+       decisions are influenced by the governed agent by placing
+       enforcement in a separate process boundary.  The Border Gateway
+       model is topology-independent: it may be deployed as a protocol-
+       specific proxy in front of Model Context Protocol (MCP) servers,
+       as a service mesh enforcement component covering all inter-service
+       calls, as a network egress gateway covering all outbound capability
+       invocations regardless of protocol, or as a domain-specific
+       execution boundary.  The protocol objects defined herein function
+       identically across all deployment topologies.  This document
+       establishes the architectural model, protocol object schemas, and
+       enforcement semantics for the AgentROA framework.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-nivalto-agentroa-route-authorization-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nivalto-agentroa-route-authorization-00
     docidentifier:
     - content: draft-nivalto-agentroa-route-authorization-00
       type: Internet-Draft
@@ -58,7 +68,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-nivalto-agentroa-route-authorization-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nivalto-agentroa-route-authorization-01
     docidentifier:
     - content: draft-nivalto-agentroa-route-authorization-01
       type: Internet-Draft
@@ -67,4 +79,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

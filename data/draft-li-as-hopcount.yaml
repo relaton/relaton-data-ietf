@@ -1,11 +1,12 @@
 ---
 id: draftliashopcount
 schema_version: v1.5.6
+formattedref:
+  content: draft-li-as-hopcount
 title:
 - language: en
   script: Latn
   content: The AS_HOPCOUNT Path Attribute
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-as-hopcount-03
@@ -19,21 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the AS hopcount path attribute for BGP. This
-    is an optional, transitive path attribute that is designed to help limit the distribution
-    of routing information in the Internet. By default, prefixes advertised into the
-    BGP mesh are distributed freely, and if not blocked by policy will propagate globally.
-    This is harmful to the scalability of the routing subsystem since information
-    that only has a local effect on routing will cause state creation throughout the
-    default-free zone. This attribute can be attached to a particular path to limit
-    its scope to a subset of the Internet.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the AS hopcount path attribute for BGP.  This
+       is an optional, transitive path attribute that is designed to help
+       limit the distribution of routing information in the Internet.
+
+       By default, prefixes advertised into the BGP mesh are distributed
+       freely, and if not blocked by policy will propagate globally.  This
+       is harmful to the scalability of the routing subsystem since
+       information that only has a local effect on routing will cause state
+       creation throughout the default-free zone.  This attribute can be
+       attached to a particular path to limit its scope to a subset of the
+       Internet.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-li-as-hopcount-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-as-hopcount-03
     docidentifier:
     - content: draft-li-as-hopcount-03
       type: Internet-Draft
@@ -42,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

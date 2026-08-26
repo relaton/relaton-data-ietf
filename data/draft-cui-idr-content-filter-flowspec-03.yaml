@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Packet Content Filter for BGP FlowSpec
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-cui-idr-content-filter-flowspec-03
 docidentifier:
+- content: draft-cui-idr-content-filter-flowspec
+  type: Internet-Draft
 - content: draft-cui-idr-content-filter-flowspec-03
   type: Internet-Draft
   primary: true
-- content: I-D.cui-idr-content-filter-flowspec
-  type: IETF
-  scope: anchor
 docnumber: I-D.cui-idr-content-filter-flowspec
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yong
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yujia
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Susan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hickory Hill Consulting
+        - language: en
+          content: Hickory Hill Consulting
 version:
 - content: '03'
 language:
@@ -97,23 +104,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The BGP Flow Specification enables the distribution of traffic filter
-    policies (traffic filters and actions) via BGP, facilitating DDoS traffic filtering.
-    However, the traffic filter in FSv1 and FSv2 predominantly focuses on IP header
-    fields, which may not adequately address volumetric DDoS attack traffic characterized
-    by fixed patterns within the packet content. This document introduces a new flow
-    specification filter type designed for packet content filtering. The match field
-    includes ptype, otype, offset, content-length, content, and mask encoded in the
-    Flowspec NLRI. This new filter aims to leverage network devices such as routers
-    and switches to defend against simple volumetric DDoS attacks, reducing the overall
-    defence cost of carrier network.</p>"
-  format: text/html
+  content: |-
+    <p>The BGP Flow Specification enables the distribution of traffic filter
+       policies (traffic filters and actions) via BGP, facilitating DDoS
+       traffic filtering.  However, the traffic filter in FSv1 and FSv2
+       predominantly focuses on IP header fields, which may not adequately
+       address volumetric DDoS attack traffic characterized by fixed
+       patterns within the packet content.  This document introduces a new
+       flow specification filter type designed for packet content filtering.
+       The match field includes ptype, otype, offset, content-length,
+       content, and mask encoded in the Flowspec NLRI.  This new filter aims
+       to leverage network devices such as routers and switches to defend
+       against simple volumetric DDoS attacks, reducing the overall defence
+       cost of carrier network.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-cui-idr-content-filter-flowspec-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cui-idr-content-filter-flowspec-02
     docidentifier:
     - content: draft-cui-idr-content-filter-flowspec-02
       type: Internet-Draft
@@ -122,7 +133,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-cui-idr-content-filter-flowspec-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cui-idr-content-filter-flowspec-04
     docidentifier:
     - content: draft-cui-idr-content-filter-flowspec-04
       type: Internet-Draft
@@ -133,10 +146,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-cui-idr-content-filter-flowspec-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

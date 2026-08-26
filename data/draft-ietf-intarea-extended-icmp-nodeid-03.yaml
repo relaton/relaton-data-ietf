@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Adding Extensions to ICMP Errors for Originating Node Identification
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-intarea-extended-icmp-nodeid-03
 docidentifier:
+- content: draft-ietf-intarea-extended-icmp-nodeid
+  type: Internet-Draft
 - content: draft-ietf-intarea-extended-icmp-nodeid-03
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-intarea-extended-icmp-nodeid
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-intarea-extended-icmp-nodeid
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bill
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Reji
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 version:
 - content: '03'
 language:
@@ -75,31 +79,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RFC5837 describes a mechanism for Extending ICMP for Interface and
-    Next-Hop Identification, which allows providing additional information in an ICMP
-    error that helps identify interfaces participating in the path. This is especially
-    useful in environments where a given interface may not have a unique IP address
-    to respond to, e.g., a traceroute. This document introduces a similar ICMP extension
-    for Node Identification. It allows providing a unique IP address and/or a textual
-    name for the node, in the case where each node may not have a unique IP address
-    (e.g., a deployment in which all interfaces have IPv6 addresses and all nexthops
-    are IPv6 nexthops, even for IPv4 routes).</p>"
-  format: text/html
+  content: |-
+    <p>RFC5837 describes a mechanism for Extending ICMP for Interface and
+       Next-Hop Identification, which allows providing additional
+       information in an ICMP error that helps identify interfaces
+       participating in the path.  This is especially useful in environments
+       where a given interface may not have a unique IP address to respond
+       to, e.g., a traceroute.
+
+       This document introduces a similar ICMP extension for Node
+       Identification.  It allows providing a unique IP address and/or a
+       textual name for the node, in the case where each node may not have a
+       unique IP address (e.g., a deployment in which all interfaces have
+       IPv6 addresses and all nexthops are IPv6 nexthops, even for IPv4
+       routes).</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-intarea-extended-icmp-nodeid-01
-      format: text/plain
+      content: draft-ietf-intarea-extended-icmp-nodeid-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-intarea-extended-icmp-nodeid-02
     docidentifier:
-    - content: draft-ietf-intarea-extended-icmp-nodeid-01
+    - content: draft-ietf-intarea-extended-icmp-nodeid-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-intarea-extended-icmp-nodeid-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-intarea-extended-icmp-nodeid-04
     docidentifier:
     - content: draft-ietf-intarea-extended-icmp-nodeid-04
       type: Internet-Draft
@@ -110,10 +122,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-intarea-extended-icmp-nodeid-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

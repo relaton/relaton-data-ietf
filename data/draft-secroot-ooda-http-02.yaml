@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'OODA-HTTP: Adaptive Security Framework for HTTP Communications'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-secroot-ooda-http-02
 docidentifier:
+- content: draft-secroot-ooda-http
+  type: Internet-Draft
 - content: draft-secroot-ooda-http-02
   type: Internet-Draft
   primary: true
-- content: I-D.secroot-ooda-http
-  type: IETF
-  scope: anchor
 docnumber: I-D.secroot-ooda-http
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rachid
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SecRoot.io
+        - language: en
+          content: SecRoot.io
 version:
 - content: '02'
 language:
@@ -53,34 +54,45 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines OODA-HTTP, a protocol extension and adaptive
-    security framework that applies the Observe-Orient-Decide-Act (OODA) loop to HTTP/HTTPS
-    communications. Each HTTP request is transformed into an observation signal, a
-    decision vector, and an opportunity for active defense. OODA-HTTP extends the
-    traditional 4-phase loop into 7 phases: Observe, Orient, Decide, Act, Memorize,
-    Adjust, and Cooperate - allowing systems to evolve and adapt during communication.
-    The protocol introduces a structured header, 'OODA-Action', that carries context-driven
-    actions between endpoints. OODA-HTTP offers compatibility with existing infrastructure
-    (e.g., TLS, HTTP/2/3), while enabling resilience against classical, behavioral,
-    and quantum threats. It supports inter-protocol cooperation with DOTS, STAMP,
-    SIEMs, and behavioral inference engines such as SVDD and PSLPSO. This document
-    defines protocol behavior, header format, core logic, and interoperability strategy.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines OODA-HTTP, a protocol extension and adaptive
+    security framework that applies the Observe-Orient-Decide-Act (OODA)
+    loop to HTTP/HTTPS communications. Each HTTP request is transformed into
+    an observation signal, a decision vector, and an opportunity for active
+    defense.
+
+    OODA-HTTP extends the traditional 4-phase loop into 7 phases: Observe,
+    Orient, Decide, Act, Memorize, Adjust, and Cooperate - allowing systems
+    to evolve and adapt during communication. The protocol introduces a
+    structured header, 'OODA-Action', that carries context-driven actions
+    between endpoints.
+
+    OODA-HTTP offers compatibility with existing infrastructure (e.g., TLS,
+    HTTP/2/3), while enabling resilience against classical, behavioral, and
+    quantum threats. It supports inter-protocol cooperation with DOTS,
+    STAMP, SIEMs, and behavioral inference engines such as SVDD and PSLPSO.
+
+    This document defines protocol behavior, header format, core logic, and
+    interoperability strategy.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-secroot-ooda-http-00
-      format: text/plain
+      content: draft-secroot-ooda-http-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-secroot-ooda-http-01
     docidentifier:
-    - content: draft-secroot-ooda-http-00
+    - content: draft-secroot-ooda-http-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-secroot-ooda-http-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-secroot-ooda-http-03
     docidentifier:
     - content: draft-secroot-ooda-http-03
       type: Internet-Draft
@@ -91,10 +103,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-secroot-ooda-http-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DKIM is Harmful as Specified
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-otis-dkim-harmful-03
 docidentifier:
+- content: draft-otis-dkim-harmful
+  type: Internet-Draft
 - content: draft-otis-dkim-harmful-03
   type: Internet-Draft
   primary: true
-- content: I-D.otis-dkim-harmful
-  type: IETF
-  scope: anchor
 docnumber: I-D.otis-dkim-harmful
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Douglas
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -67,36 +69,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Currently, email lacks conventions ensuring SMTP clients can be identified
-    by an authenticated domain. Unfortunately many hope to use DKIM as an alternative,
-    but it is independent of intended recipients and domains accountable for having
-    sent the message. This means DKIM is poorly suited at establishing abuse assessments
-    of unsolicited commercial email otherwise known as SPAM, nor was this initially
-    DKIM's intent. DKIM lacks message context essential to ensure fair assessment
-    and to ensure this assessment is not poisoned (Who initiated the transaction and
-    to whom). DKIM was instead intended to establish increased levels of trust based
-    upon valid DKIM signatures controlling acceptance and what a user sees within
-    the FROM header field. But DKIM failed to guard against pre-pended header fields
-    where any acceptance based on valid DKIM signatures is sure to exclude header
-    field spoofing, especially that of the FROM. This weakness allows malefactors
-    to exploit DKIM signature acceptance established by high-volume DKIM domains to
-    spoof ANY other domain, even when prohibited within the Signer's network.</p>"
-  format: text/html
+  content: |-
+    <p>Currently, email lacks conventions ensuring SMTP clients can be
+       identified by an authenticated domain.  Unfortunately many hope to
+       use DKIM as an alternative, but it is independent of intended
+       recipients and domains accountable for having sent the message.  This
+       means DKIM is poorly suited at establishing abuse assessments of
+       unsolicited commercial email otherwise known as SPAM, nor was this
+       initially DKIM's intent.  DKIM lacks message context essential to
+       ensure fair assessment and to ensure this assessment is not poisoned
+       (Who initiated the transaction and to whom).
+
+       DKIM was instead intended to establish increased levels of trust
+       based upon valid DKIM signatures controlling acceptance and what a
+       user sees within the FROM header field.  But DKIM failed to guard
+       against pre-pended header fields where any acceptance based on valid
+       DKIM signatures is sure to exclude header field spoofing, especially
+       that of the FROM.  This weakness allows malefactors to exploit DKIM
+       signature acceptance established by high-volume DKIM domains to spoof
+       ANY other domain, even when prohibited within the Signer's network.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-otis-dkim-harmful-00
-      format: text/plain
+      content: draft-otis-dkim-harmful-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-otis-dkim-harmful-02
     docidentifier:
-    - content: draft-otis-dkim-harmful-00
+    - content: draft-otis-dkim-harmful-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-otis-dkim-harmful-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-otis-dkim-harmful-04
     docidentifier:
     - content: draft-otis-dkim-harmful-04
       type: Internet-Draft
@@ -107,10 +117,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-otis-dkim-harmful-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

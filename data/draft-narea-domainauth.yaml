@@ -1,11 +1,12 @@
 ---
 id: draftnareadomainauth
 schema_version: v1.5.6
+formattedref:
+  content: draft-narea-domainauth
 title:
 - language: en
   script: Latn
   content: DomainAuth Version 1
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-narea-domainauth-00
@@ -19,22 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document defines DomainAuth, a protocol to attribute digital signatures
-    to domain names in such a way that verification can occur entirely offline without
-    a prior distribution of public keys. Each signature is distributed as part of
-    a self-contained "signature bundle" that encapsulates a complete chain of trust
-    comprising: (1) a DNSSEC chain from the root zone to a TXT record containing a
-    public key or its digest, (2) an X.509 certificate chain from the key specified
-    in the TXT record to the final signing key, and (3) the digital signature in the
-    form of a CMS SignedData structure. Finally, signatures can be attributed to the
-    domain name itself (e.g. "example.com") or specific users (e.g. "alice" of "example.com").</p>'
-  format: text/html
+  content: |-
+    <p>This document defines DomainAuth, a protocol to attribute digital
+       signatures to domain names in such a way that verification can occur
+       entirely offline without a prior distribution of public keys.
+
+       Each signature is distributed as part of a self-contained "signature
+       bundle" that encapsulates a complete chain of trust comprising: (1) a
+       DNSSEC chain from the root zone to a TXT record containing a public
+       key or its digest, (2) an X.509 certificate chain from the key
+       specified in the TXT record to the final signing key, and (3) the
+       digital signature in the form of a CMS SignedData structure.
+
+       Finally, signatures can be attributed to the domain name itself (e.g.
+       "example.com") or specific users (e.g. "alice" of "example.com").</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-narea-domainauth-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-narea-domainauth-00
     docidentifier:
     - content: draft-narea-domainauth-00
       type: Internet-Draft
@@ -43,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Protected QUIC Initial Packets
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-duke-quic-protected-initial-00
 docidentifier:
+- content: draft-duke-quic-protected-initial
+  type: Internet-Draft
 - content: draft-duke-quic-protected-initial-00
   type: Internet-Draft
   primary: true
-- content: I-D.duke-quic-protected-initial
-  type: IETF
-  scope: anchor
 docnumber: I-D.duke-quic-protected-initial
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Martin
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: F5 Networks, Inc.
+        - language: en
+          content: F5 Networks, Inc.
 version:
 - content: '00'
 language:
@@ -53,22 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC encrypts its Initial Packets using keys derived from well-known
-    constants, meaning that observers can inspect the contents of these packets and
-    successfully spoof them. This document proposes a new version of QUIC that encrypts
-    Initial Packets more securely by leveraging a Public Key distributed via the Domain
-    Name System (DNS) or other out-of-band system. Discussion of this work is encouraged
-    to happen on the QUIC IETF mailing list quic@ietf.org or on the GitHub repository
-    which contains the draft: https://github.com/martinduke/quic-version-aliasing.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC encrypts its Initial Packets using keys derived from well-known
+       constants, meaning that observers can inspect the contents of these
+       packets and successfully spoof them.  This document proposes a new
+       version of QUIC that encrypts Initial Packets more securely by
+       leveraging a Public Key distributed via the Domain Name System (DNS)
+       or other out-of-band system.
+
+       Discussion of this work is encouraged to happen on the QUIC IETF
+       mailing list quic@ietf.org or on the GitHub repository which contains
+       the draft: https://github.com/martinduke/quic-version-aliasing.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-duke-quic-protected-initial-04
-      format: text/plain
+      content: draft-duke-quic-protected-initial-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-duke-quic-protected-initial-01
     docidentifier:
-    - content: draft-duke-quic-protected-initial-04
+    - content: draft-duke-quic-protected-initial-01
       type: Internet-Draft
       primary: true
 series:
@@ -77,10 +83,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-duke-quic-protected-initial-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -7,17 +7,15 @@ title:
   script: Latn
   content: UDP Encapsulation of Stream Control Transmission Protocol (SCTP) Packets
     for End-Host to End-Host Communication
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-tuexen-tsvwg-rfc6951-bis-00
 docidentifier:
+- content: draft-tuexen-tsvwg-rfc6951-bis
+  type: Internet-Draft
 - content: draft-tuexen-tsvwg-rfc6951-bis-00
   type: Internet-Draft
   primary: true
-- content: I-D.tuexen-tsvwg-rfc6951-bis
-  type: IETF
-  scope: anchor
 docnumber: I-D.tuexen-tsvwg-rfc6951-bis
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -44,17 +44,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Muenster University of Applied Sciences
+        - language: en
+          content: Muenster University of Applied Sciences
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Randall
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -68,7 +72,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Adara Networks
+        - language: en
+          content: Adara Networks
 version:
 - content: '00'
 language:
@@ -78,25 +83,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a simple method of encapsulating Stream Control
-    Transmission Protocol (SCTP) packets into UDP packets and its limitations. This
-    allows the usage of SCTP in networks with legacy NATs that do not support SCTP.
-    It can also be used to implement SCTP on hosts without directly accessing the
-    IP layer, for example, implementing it as part of the application without requiring
-    special privileges. Please note that this document only describes the functionality
-    required within an SCTP stack to add on UDP encapsulation, providing only those
-    mechanisms for two end-hosts to communicate with each other over UDP ports. In
-    particular, it does not provide mechanisms to determine whether UDP encapsulation
-    is being used by the peer, nor the mechanisms for determining which remote UDP
-    port number can be used. These functions are out of scope for this document. This
-    document covers only end-hosts and not tunneling (egress or ingress) endpoints.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a simple method of encapsulating Stream
+       Control Transmission Protocol (SCTP) packets into UDP packets and its
+       limitations.  This allows the usage of SCTP in networks with legacy
+       NATs that do not support SCTP.  It can also be used to implement SCTP
+       on hosts without directly accessing the IP layer, for example,
+       implementing it as part of the application without requiring special
+       privileges.
+
+       Please note that this document only describes the functionality
+       required within an SCTP stack to add on UDP encapsulation, providing
+       only those mechanisms for two end-hosts to communicate with each
+       other over UDP ports.  In particular, it does not provide mechanisms
+       to determine whether UDP encapsulation is being used by the peer, nor
+       the mechanisms for determining which remote UDP port number can be
+       used.  These functions are out of scope for this document.
+
+       This document covers only end-hosts and not tunneling (egress or
+       ingress) endpoints.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-tuexen-tsvwg-rfc6951-bis-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tuexen-tsvwg-rfc6951-bis-01
     docidentifier:
     - content: draft-tuexen-tsvwg-rfc6951-bis-01
       type: Internet-Draft
@@ -107,10 +120,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-tuexen-tsvwg-rfc6951-bis-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

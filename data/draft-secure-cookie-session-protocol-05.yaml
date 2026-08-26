@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'SCS: Secure Cookie Sessions for HTTP'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-secure-cookie-session-protocol-05
 docidentifier:
+- content: draft-secure-cookie-session-protocol
+  type: Internet-Draft
 - content: draft-secure-cookie-session-protocol-05
   type: Internet-Draft
   primary: true
-- content: I-D.secure-cookie-session-protocol
-  type: IETF
-  scope: anchor
 docnumber: I-D.secure-cookie-session-protocol
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Stefano
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steven
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -85,46 +89,60 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides an overview of SCS, a small cryptographic protocol
-    layered on top of the HTTP cookie facility, that allows its users to produce and
-    consume authenticated and encrypted cookies, as opposed to usual cookies, which
-    are un-authenticated and sent in clear text. An interesting property, rising naturally
-    from the given confidentiality and authentication properties, is that by using
-    SCS cookies, it is possible to avoid storing the session state material on the
-    server side altogether. In fact, an SCS cookie presented by the user agent to
-    the origin server can always be validated (i.e. possibly recognized as self-produced,
-    fresh, untampered material) and, as such, be used to safely restore application
-    state. Hence, typical use cases may include devices with little or no storage
-    offering some functionality via an HTTP interface, as well as web applications
-    with high availability or load balancing requirements which would prefer to handle
-    application state without the need to synchronize the pool through shared storage
-    or peering. Another noteworthy application scenario is represented by the distribution
-    of authorized web content (e.g. by CDNs), where an SCS token can be used, either
-    in a cookie or embedded in the URI, to provide evidence of the entitlement to
-    access the associated resource by the requesting user agent. Nevertheless, its
-    security properties allow SCS to be used whenever the privacy and integrity of
-    cookies is a concern, by paying an affordable price in terms of increased cookie
-    size, additional CPU clock cycles needed by the symmetric key encryption and HMAC
-    algorithms, and related key management, which can be made a nearly transparent
-    task.</p>"
-  format: text/html
+  content: |-
+    <p>This document provides an overview of SCS, a small cryptographic
+       protocol layered on top of the HTTP cookie facility, that allows its
+       users to produce and consume authenticated and encrypted cookies, as
+       opposed to usual cookies, which are un-authenticated and sent in
+       clear text.
+
+       An interesting property, rising naturally from the given
+       confidentiality and authentication properties, is that by using SCS
+       cookies, it is possible to avoid storing the session state material
+       on the server side altogether.  In fact, an SCS cookie presented by
+       the user agent to the origin server can always be validated (i.e.
+       possibly recognized as self-produced, fresh, untampered material)
+       and, as such, be used to safely restore application state.
+
+       Hence, typical use cases may include devices with little or no
+       storage offering some functionality via an HTTP interface, as well as
+       web applications with high availability or load balancing
+       requirements which would prefer to handle application state without
+       the need to synchronize the pool through shared storage or peering.
+
+       Another noteworthy application scenario is represented by the
+       distribution of authorized web content (e.g. by CDNs), where an SCS
+       token can be used, either in a cookie or embedded in the URI, to
+       provide evidence of the entitlement to access the associated resource
+       by the requesting user agent.
+
+       Nevertheless, its security properties allow SCS to be used whenever
+       the privacy and integrity of cookies is a concern, by paying an
+       affordable price in terms of increased cookie size, additional CPU
+       clock cycles needed by the symmetric key encryption and HMAC
+       algorithms, and related key management, which can be made a nearly
+       transparent task.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-secure-cookie-session-protocol-03
-      format: text/plain
+      content: draft-secure-cookie-session-protocol-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-secure-cookie-session-protocol-04
     docidentifier:
-    - content: draft-secure-cookie-session-protocol-03
+    - content: draft-secure-cookie-session-protocol-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-secure-cookie-session-protocol-09
-      format: text/plain
+      content: draft-secure-cookie-session-protocol-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-secure-cookie-session-protocol-06
     docidentifier:
-    - content: draft-secure-cookie-session-protocol-09
+    - content: draft-secure-cookie-session-protocol-06
       type: Internet-Draft
       primary: true
 series:
@@ -133,10 +151,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-secure-cookie-session-protocol-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

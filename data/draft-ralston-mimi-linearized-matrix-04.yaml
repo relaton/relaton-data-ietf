@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Linearized Matrix
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ralston-mimi-linearized-matrix-04
 docidentifier:
+- content: draft-ralston-mimi-linearized-matrix
+  type: Internet-Draft
 - content: draft-ralston-mimi-linearized-matrix-04
   type: Internet-Draft
   primary: true
-- content: I-D.ralston-mimi-linearized-matrix
-  type: IETF
-  scope: anchor
 docnumber: I-D.ralston-mimi-linearized-matrix
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Travis
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: The Matrix.org Foundation C.I.C.
+        - language: en
+          content: The Matrix.org Foundation C.I.C.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matthew
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: The Matrix.org Foundation C.I.C.
+        - language: en
+          content: The Matrix.org Foundation C.I.C.
 version:
 - content: '04'
 language:
@@ -75,29 +79,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies Linearized Matrix (LM). LM is an extensible
-    protocol for interoperability between messaging providers, using Matrix's (matrix.org
-    (https://matrix.org)) decentralized room model. LM simplifies the Directed Acyclic
-    Graph (DAG) persistence of Matrix while maintaining compatibility with non-linearized
-    servers within a room. It does this by using a doubly-linked list of events/messages
-    per room with hub and spoke fanout. LM's extensibility enables a wide range of
-    transport protocol and end-to-end encryption possibilities. This document uses
-    Matrix's room access control semantics supported by Messaging Layer Security (MLS),
-    transported via HTTPS and JSON. The details of which server- to-server transport
-    to use and what is put over MLS are replaceable. The threat model of LM does not
-    place trust in a central owning server for each conversation. Instead, it defines
-    a hub server which handles maintaining linearized room history for other servers
-    in the room. This model permits transparent interconnection between LM servers
-    and Matrix servers, in the same room.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies Linearized Matrix (LM).  LM is an extensible
+       protocol for interoperability between messaging providers, using
+       Matrix's (matrix.org (https://matrix.org)) decentralized room model.
+       LM simplifies the Directed Acyclic Graph (DAG) persistence of Matrix
+       while maintaining compatibility with non-linearized servers within a
+       room.  It does this by using a doubly-linked list of events/messages
+       per room with hub and spoke fanout.
+
+       LM's extensibility enables a wide range of transport protocol and
+       end-to-end encryption possibilities.  This document uses Matrix's
+       room access control semantics supported by Messaging Layer Security
+       (MLS), transported via HTTPS and JSON.  The details of which server-
+       to-server transport to use and what is put over MLS are replaceable.
+
+       The threat model of LM does not place trust in a central owning
+       server for each conversation.  Instead, it defines a hub server which
+       handles maintaining linearized room history for other servers in the
+       room.  This model permits transparent interconnection between LM
+       servers and Matrix servers, in the same room.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ralston-mimi-linearized-matrix-00
-      format: text/plain
+      content: draft-ralston-mimi-linearized-matrix-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ralston-mimi-linearized-matrix-03
     docidentifier:
-    - content: draft-ralston-mimi-linearized-matrix-00
+    - content: draft-ralston-mimi-linearized-matrix-03
       type: Internet-Draft
       primary: true
 series:
@@ -106,10 +117,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ralston-mimi-linearized-matrix-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

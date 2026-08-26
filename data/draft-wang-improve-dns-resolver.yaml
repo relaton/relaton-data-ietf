@@ -1,11 +1,12 @@
 ---
 id: draftwangimprovednsresolver
 schema_version: v1.5.6
+formattedref:
+  content: draft-wang-improve-dns-resolver
 title:
 - language: en
   script: Latn
   content: Improving the caching DNS resolvers on "authority failure"
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-improve-dns-resolver-01
@@ -19,18 +20,21 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides a new mechanism for caching DNS resolvers. When
-    all the authoritative name servers for a zone fail, and the request can't be found
-    in the cache, during a period of time the caching DNS resolvers won't query the
-    authoritative name servers, but directly return a SERVFAIL to the clients to reduce
-    the recursive name server load and the network load.</p>"
-  format: text/html
+  content: |-
+    <p>This document provides a new mechanism for caching DNS resolvers.
+    When all the authoritative name servers for a zone fail, and the
+    request can't be found in the cache, during a period of time the
+    caching DNS resolvers won't query the authoritative name servers, but
+    directly return a SERVFAIL to the clients to reduce the recursive
+    name server load and the network load.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-wang-improve-dns-resolver-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-improve-dns-resolver-01
     docidentifier:
     - content: draft-wang-improve-dns-resolver-01
       type: Internet-Draft
@@ -39,4 +43,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

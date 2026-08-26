@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Plasma Service CMS Processing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-schaad-plasma-cms-00
 docidentifier:
+- content: draft-schaad-plasma-cms
+  type: Internet-Draft
 - content: draft-schaad-plasma-cms-00
   type: Internet-Draft
   primary: true
-- content: I-D.schaad-plasma-cms
-  type: IETF
-  scope: anchor
 docnumber: I-D.schaad-plasma-cms
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jim
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -49,28 +49,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Secure Mime (S/MIME) defined a method of placing security labels on
-    a Cryptographic Message Syntax (CMS) object. These labels are placed as part of
-    the data signed and validated by the parties. This means that the message content
-    is visible to the recipient prior to the label enforcement. In [EPS-WS-TRUST]
-    a new model has been presented where a third party is used as the enforcement
-    point of the label. This document provides the details needed to implement the
-    new Plasma model in the CMS infrastructure. Additional benefits of using the Plasma
-    module include moving responsibility of building lock boxes to the server and
-    determining, based on policy, who should be a message recipient. The document
-    describes and details how the encryption process is performed, defines a new lock
-    box attribute to hold the information needed to valid the label and to obtain
-    the keys needed to decrypt the message. The document does not cover the protocol
-    between the client and the Plasma policy enforcement server.</p>"
-  format: text/html
+  content: |-
+    <p>Secure Mime (S/MIME) defined a method of placing security labels on a
+       Cryptographic Message Syntax (CMS) object.  These labels are placed
+       as part of the data signed and validated by the parties.  This means
+       that the message content is visible to the recipient prior to the
+       label enforcement.  In [EPS-WS-TRUST] a new model has been presented
+       where a third party is used as the enforcement point of the label.
+       This document provides the details needed to implement the new Plasma
+       model in the CMS infrastructure.
+
+       Additional benefits of using the Plasma module include moving
+       responsibility of building lock boxes to the server and determining,
+       based on policy, who should be a message recipient.
+
+       The document describes and details how the encryption process is
+       performed, defines a new lock box attribute to hold the information
+       needed to valid the label and to obtain the keys needed to decrypt
+       the message.  The document does not cover the protocol between the
+       client and the Plasma policy enforcement server.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-schaad-plasma-cms-05
-      format: text/plain
+      content: draft-schaad-plasma-cms-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schaad-plasma-cms-01
     docidentifier:
-    - content: draft-schaad-plasma-cms-05
+    - content: draft-schaad-plasma-cms-01
       type: Internet-Draft
       primary: true
 series:
@@ -79,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-schaad-plasma-cms-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

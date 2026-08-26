@@ -7,17 +7,15 @@ title:
   script: Latn
   content: RTP Payload Format for the Secure Communication Interoperability Protocol
     (SCIP) Codec
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-scip-08
 docidentifier:
+- content: draft-ietf-avtcore-rtp-scip
+  type: Internet-Draft
 - content: draft-ietf-avtcore-rtp-scip-08
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-avtcore-rtp-scip
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-avtcore-rtp-scip
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dan
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: General Dynamics Mission Systems, Inc.
+        - language: en
+          content: General Dynamics Mission Systems, Inc.
 - role:
   - type: author
   person:
@@ -60,15 +61,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: General Dynamics Mission Systems, Inc.
+        - language: en
+          content: General Dynamics Mission Systems, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Keith
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -82,7 +86,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: General Dynamics Mission Systems, Inc.
+        - language: en
+          content: General Dynamics Mission Systems, Inc.
 version:
 - content: '08'
 language:
@@ -92,43 +97,57 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the RTP payload format of the Secure Communication
-    Interoperability Protocol (SCIP). SCIP is an application layer protocol that provides
-    end-to-end capability exchange, packetization/de-packetization of media, reliable
-    transport, and security services such as confidentiality and integrity protection.
-    SCIP handles packetization/de-packetization of the encrypted media and acts as
-    a tunneling protocol, treating SCIP payloads as opaque octets to be encapsulated
-    within RTP payloads prior to transmission or decapsulated on reception. SCIP payloads
-    are sized to fit within the maximum transmission unit (MTU) when transported over
-    RTP thereby avoiding fragmentation. SCIP provides confidentiality and integrity
-    of the tunneled media, therefore the SCIP payload does not require the use of
-    Secure RTP (SRTP) for payload protection. SCIP also provides for reliable transport
-    at the application layer, so it is not necessary to negotiate RTCP retransmission
-    capabilities. To establish reliable communications using SCIP over RTP, it is
-    important that middle boxes avoid parsing or modifying SCIP payloads. Because
-    SCIP payloads are confidentiality and integrity protected and are only decipherable
-    by the originating and receiving SCIP devices, modification of the payload by
-    middle boxes would be detected as an integrity failure in SCIP devices, resulting
-    in retransmission and/or communication failure. Middle boxes do not need to parse
-    the SCIP payloads to correctly transport them. Not only is parsing unnecessary
-    to tunnel/detunnel SCIP within RTP, but the parsing and filtering of SCIP payloads
-    by middle boxes would likely lead to ossification of the evolving SCIP protocol.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the RTP payload format of the Secure
+       Communication Interoperability Protocol (SCIP).  SCIP is an
+       application layer protocol that provides end-to-end capability
+       exchange, packetization/de-packetization of media, reliable
+       transport, and security services such as confidentiality and
+       integrity protection.
+
+       SCIP handles packetization/de-packetization of the encrypted media
+       and acts as a tunneling protocol, treating SCIP payloads as opaque
+       octets to be encapsulated within RTP payloads prior to transmission
+       or decapsulated on reception.  SCIP payloads are sized to fit within
+       the maximum transmission unit (MTU) when transported over RTP thereby
+       avoiding fragmentation.
+
+       SCIP provides confidentiality and integrity of the tunneled media,
+       therefore the SCIP payload does not require the use of Secure RTP
+       (SRTP) for payload protection.  SCIP also provides for reliable
+       transport at the application layer, so it is not necessary to
+       negotiate RTCP retransmission capabilities.
+
+       To establish reliable communications using SCIP over RTP, it is
+       important that middle boxes avoid parsing or modifying SCIP payloads.
+       Because SCIP payloads are confidentiality and integrity protected and
+       are only decipherable by the originating and receiving SCIP devices,
+       modification of the payload by middle boxes would be detected as an
+       integrity failure in SCIP devices, resulting in retransmission and/or
+       communication failure.  Middle boxes do not need to parse the SCIP
+       payloads to correctly transport them.  Not only is parsing
+       unnecessary to tunnel/detunnel SCIP within RTP, but the parsing and
+       filtering of SCIP payloads by middle boxes would likely lead to
+       ossification of the evolving SCIP protocol.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-avtcore-rtp-scip-06
-      format: text/plain
+      content: draft-ietf-avtcore-rtp-scip-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-scip-07
     docidentifier:
-    - content: draft-ietf-avtcore-rtp-scip-06
+    - content: draft-ietf-avtcore-rtp-scip-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-avtcore-rtp-scip-09
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-avtcore-rtp-scip-09
     docidentifier:
     - content: draft-ietf-avtcore-rtp-scip-09
       type: Internet-Draft
@@ -139,10 +158,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-avtcore-rtp-scip-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The Mercure Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dunglas-mercure-08
 docidentifier:
+- content: draft-dunglas-mercure
+  type: Internet-Draft
 - content: draft-dunglas-mercure-08
   type: Internet-Draft
   primary: true
-- content: I-D.dunglas-mercure
-  type: IETF
-  scope: anchor
 docnumber: I-D.dunglas-mercure
 date:
 - type: published
@@ -28,6 +26,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -41,7 +40,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Les-Tilleuls.coop
+        - language: en
+          content: Les-Tilleuls.coop
 version:
 - content: '08'
 language:
@@ -51,24 +51,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Mercure provides a common publish-subscribe mechanism for public and
-    private web resources. It pushes any web content to web browsers and other clients
-    over a single long-lived HTTP connection, avoiding polling and its associated
-    latency and power cost. Mercure is especially useful for delivering real-time
-    updates of resources served through sites and web APIs to web and mobile applications,
-    and can also be used as a general-purpose publish-subscribe system. Subscription
-    requests are relayed through hubs, which validate them. When new or updated content
-    becomes available, hubs check whether subscribers are authorized to receive it
-    and then distribute it.</p>"
-  format: text/html
+  content: |-
+    <p>Mercure provides a common publish-subscribe mechanism for public and
+       private web resources.  It pushes any web content to web browsers and
+       other clients over a single long-lived HTTP connection, avoiding
+       polling and its associated latency and power cost.  Mercure is
+       especially useful for delivering real-time updates of resources
+       served through sites and web APIs to web and mobile applications, and
+       can also be used as a general-purpose publish-subscribe system.
+
+       Subscription requests are relayed through hubs, which validate them.
+       When new or updated content becomes available, hubs check whether
+       subscribers are authorized to receive it and then distribute it.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-dunglas-mercure-03
-      format: text/plain
+      content: draft-dunglas-mercure-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dunglas-mercure-07
     docidentifier:
-    - content: draft-dunglas-mercure-03
+    - content: draft-dunglas-mercure-07
       type: Internet-Draft
       primary: true
 series:
@@ -77,10 +81,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-dunglas-mercure-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

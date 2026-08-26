@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Model Based Bulk Performance Metrics
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-model-based-metrics-02
 docidentifier:
+- content: draft-ietf-ippm-model-based-metrics
+  type: Internet-Draft
 - content: draft-ietf-ippm-model-based-metrics-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ippm-model-based-metrics
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ippm-model-based-metrics
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matt
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: A
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -67,32 +69,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>We introduce a new class of model based metrics designed to determine
-    if an end-to-end Internet path can meet predefined transport performance targets
-    by applying a suite of IP diagnostic tests to successive subpaths. The subpath-at-a-time
-    tests are designed to accurately detect if any subpath will prevent the full end-to-end
-    path from meeting the specified target performance. Each IP diagnostic test consists
-    of a precomputed traffic pattern and a statistical criteria for evaluating packet
-    delivery. The IP diagnostics tests are based on traffic patterns that are precomputed
-    to mimic TCP or other transport protocol over a long path but are independent
-    of the actual details of the subpath under test. Likewise the success criteria
-    depends on the target performance and not the actual performance of the subpath.
-    This makes the measurements open loop, eliminating nearly all of the difficulties
-    encountered by traditional bulk transport metrics. This document does not fully
-    define diagnostic tests, but provides a framework for designing suites of diagnostics
-    tests that are tailored the confirming the target performance. By making the tests
-    open loop, we eliminate standards congestion control equilibrium behavior, which
-    otherwise causes every measured parameter to be sensitive to every component of
-    the system. As an open loop test, various measurable properties become independent,
-    and potentially subject to an algebra enabling several important new uses. Interim
-    DRAFT Formatted: Fri Feb 14 14:07:33 PST 2014</p>"
-  format: text/html
+  content: |-
+    <p>We introduce a new class of model based metrics designed to determine
+       if an end-to-end Internet path can meet predefined transport
+       performance targets by applying a suite of IP diagnostic tests to
+       successive subpaths.  The subpath-at-a-time tests are designed to
+       accurately detect if any subpath will prevent the full end-to-end
+       path from meeting the specified target performance.  Each IP
+       diagnostic test consists of a precomputed traffic pattern and a
+       statistical criteria for evaluating packet delivery.
+
+       The IP diagnostics tests are based on traffic patterns that are
+       precomputed to mimic TCP or other transport protocol over a long path
+       but are independent of the actual details of the subpath under test.
+       Likewise the success criteria depends on the target performance and
+       not the actual performance of the subpath.  This makes the
+       measurements open loop, eliminating nearly all of the difficulties
+       encountered by traditional bulk transport metrics.
+
+       This document does not fully define diagnostic tests, but provides a
+       framework for designing suites of diagnostics tests that are tailored
+       the confirming the target performance.
+
+       By making the tests open loop, we eliminate standards congestion
+       control equilibrium behavior, which otherwise causes every measured
+       parameter to be sensitive to every component of the system.  As an
+       open loop test, various measurable properties become independent, and
+       potentially subject to an algebra enabling several important new
+       uses.
+
+       Interim DRAFT Formatted: Fri Feb 14 14:07:33 PST 2014</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-ippm-model-based-metrics-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-model-based-metrics-01
     docidentifier:
     - content: draft-ietf-ippm-model-based-metrics-01
       type: Internet-Draft
@@ -100,10 +114,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-ippm-model-based-metrics-09
-      format: text/plain
+      content: draft-ietf-ippm-model-based-metrics-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ippm-model-based-metrics-03
     docidentifier:
-    - content: draft-ietf-ippm-model-based-metrics-09
+    - content: draft-ietf-ippm-model-based-metrics-03
       type: Internet-Draft
       primary: true
 series:
@@ -112,10 +128,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ippm-model-based-metrics-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

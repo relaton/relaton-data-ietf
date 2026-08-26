@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Rooting Decentralized Identifiers in DNSSEC: A DANE-EE Key-Binding Profile'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ranjbar-dane-did-01
 docidentifier:
+- content: draft-ranjbar-dane-did
+  type: Internet-Draft
 - content: draft-ranjbar-dane-did-01
   type: Internet-Draft
   primary: true
-- content: I-D.ranjbar-dane-did
-  type: IETF
-  scope: anchor
 docnumber: I-D.ranjbar-dane-did
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaveh
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Whisper Security (viaGraph B.V.)
+        - language: en
+          content: Whisper Security (viaGraph B.V.)
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Anivar
       - language: en
+        script: Latn
         initial: A
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -67,7 +71,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Independent Researcher
+        - language: en
+          content: Independent Researcher
 version:
 - content: '01'
 language:
@@ -77,28 +82,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Several Decentralized Identifier (DID) methods root trust in a DNS
-    name: did:web binds an identifier to a domain and today verifies its keys over
-    the Web PKI, did:dns serves DID data from DNS resource records, and did:webvh
-    retrieves its history from an HTTPS location derived from a name. Each either
-    depends on the Web PKI, treats DNSSEC as an optional recommendation, or does not
-    bind the verification-method key to the name at all. This document defines a single,
-    normative DANE-EE key-binding profile that any DNS-anchored DID method can point
-    at rather than reinventing: a verification method's public key is published as
-    a TLSA record with certificate usage DANE-EE(3), selector SubjectPublicKeyInfo(1),
-    and matching type SHA2-256(1) under a DNSSEC-signed name, so that a relying party
-    can confirm the key from the DNS root of trust with no certificate authority and
-    no fetch from the subject. The profile binds a name to a key and the key to the
-    specific DID document it signs, and no further; it states precisely what it does
-    not cover, including continuity of holding, and points to where those answers
-    live.</p>"
-  format: text/html
+  content: |-
+    <p>Several Decentralized Identifier (DID) methods root trust in a DNS
+       name: did:web binds an identifier to a domain and today verifies its
+       keys over the Web PKI, did:dns serves DID data from DNS resource
+       records, and did:webvh retrieves its history from an HTTPS location
+       derived from a name.  Each either depends on the Web PKI, treats
+       DNSSEC as an optional recommendation, or does not bind the
+       verification-method key to the name at all.  This document defines a
+       single, normative DANE-EE key-binding profile that any DNS-anchored
+       DID method can point at rather than reinventing: a verification
+       method's public key is published as a TLSA record with certificate
+       usage DANE-EE(3), selector SubjectPublicKeyInfo(1), and matching type
+       SHA2-256(1) under a DNSSEC-signed name, so that a relying party can
+       confirm the key from the DNS root of trust with no certificate
+       authority and no fetch from the subject.  The profile binds a name to
+       a key and the key to the specific DID document it signs, and no
+       further; it states precisely what it does not cover, including
+       continuity of holding, and points to where those answers live.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ranjbar-dane-did-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ranjbar-dane-did-00
     docidentifier:
     - content: draft-ranjbar-dane-did-00
       type: Internet-Draft
@@ -109,10 +118,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ranjbar-dane-did-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

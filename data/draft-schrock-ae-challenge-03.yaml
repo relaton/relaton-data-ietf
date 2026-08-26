@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: An Authorization Evidence Challenge for High-Risk Agent Actions
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-03
 docidentifier:
+- content: draft-schrock-ae-challenge
+  type: Internet-Draft
 - content: draft-schrock-ae-challenge-03
   type: Internet-Draft
   primary: true
-- content: I-D.schrock-ae-challenge
-  type: IETF
-  scope: anchor
 docnumber: I-D.schrock-ae-challenge
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Iman
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: EMILIA Protocol, Inc.
+        - language: en
+          content: EMILIA Protocol, Inc.
 version:
 - content: '03'
 language:
@@ -53,36 +54,43 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When a relying party refuses a consequential agent action because authorization
-    evidence is missing, stale, or unverifiable, the agent needs a machine-readable
-    description of what remains necessary. This document defines a transport-neutral
-    Authorization Evidence Challenge data model bound to the relying party's exact
-    action. The challenge identifies outstanding evidence requirements, freshness
-    and status constraints, acceptable presentation profiles, and retry state. It
-    authorizes nothing, transfers no admission ownership, and provides no promise
-    that a later request will execute. The document also defines an HTTP binding using
-    403 Forbidden and RFC 9457 Problem Details, and describes an informative gateway-handoff
-    profile for DMSC-style federation. The gateway profile communicates evidence requirements;
-    it does not solve conserved admission or double-admission across independently
-    operated gateways.</p>"
-  format: text/html
+  content: |-
+    <p>When a relying party refuses a consequential agent action because
+       authorization evidence is missing, stale, or unverifiable, the agent
+       needs a machine-readable description of what remains necessary.  This
+       document defines a transport-neutral Authorization Evidence Challenge
+       data model bound to the relying party's exact action.  The challenge
+       identifies outstanding evidence requirements, freshness and status
+       constraints, acceptable presentation profiles, and retry state.  It
+       authorizes nothing, transfers no admission ownership, and provides no
+       promise that a later request will execute.
+
+       The document also defines an HTTP binding using 403 Forbidden and RFC
+       9457 Problem Details, and describes an informative gateway-handoff
+       profile for DMSC-style federation.  The gateway profile communicates
+       evidence requirements; it does not solve conserved admission or
+       double-admission across independently operated gateways.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-schrock-ae-challenge-00
-      format: text/plain
+      content: draft-schrock-ae-challenge-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-02
     docidentifier:
-    - content: draft-schrock-ae-challenge-00
+    - content: draft-schrock-ae-challenge-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-schrock-ae-challenge-07
-      format: text/plain
+      content: draft-schrock-ae-challenge-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-04
     docidentifier:
-    - content: draft-schrock-ae-challenge-07
+    - content: draft-schrock-ae-challenge-04
       type: Internet-Draft
       primary: true
 series:
@@ -91,10 +99,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-schrock-ae-challenge-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

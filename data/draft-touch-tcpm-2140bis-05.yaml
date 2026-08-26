@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TCP Control Block Interdependence
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-touch-tcpm-2140bis-05
 docidentifier:
+- content: draft-touch-tcpm-2140bis
+  type: Internet-Draft
 - content: draft-touch-tcpm-2140bis-05
   type: Internet-Draft
   primary: true
-- content: I-D.touch-tcpm-2140bis
-  type: IETF
-  scope: anchor
 docnumber: I-D.touch-tcpm-2140bis
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -61,15 +63,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - language: en
+          content: University of Oslo
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Safiqul
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -83,7 +88,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - language: en
+          content: University of Oslo
 version:
 - content: '05'
 language:
@@ -93,33 +99,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo describes interdependent TCP control blocks, where part of
-    the TCP state is shared among similar concurrent or consecutive connections. TCP
-    state includes a combination of parameters, such as connection state, current
-    round-trip time estimates, congestion control information, and process information.
-    Most of this state is maintained on a per-connection basis in the TCP Control
-    Block (TCB), but implementations can (and do) share certain TCB information across
-    connections to the same host. Such sharing is intended to improve overall transient
-    transport performance, while maintaining backward-compatibility with existing
-    implementations. The sharing described herein is limited to only the TCB initialization
-    and so has no effect on the long-term behavior of TCP after a connection has been
-    established.</p>"
-  format: text/html
+  content: |-
+    <p>This memo describes interdependent TCP control blocks, where part of
+       the TCP state is shared among similar concurrent or consecutive
+       connections. TCP state includes a combination of parameters, such as
+       connection state, current round-trip time estimates, congestion
+       control information, and process information. Most of this state is
+       maintained on a per-connection basis in the TCP Control Block (TCB),
+       but implementations can (and do) share certain TCB information
+       across connections to the same host. Such sharing is intended to
+       improve overall transient transport performance, while maintaining
+       backward-compatibility with existing implementations. The sharing
+       described herein is limited to only the TCB initialization and so
+       has no effect on the long-term behavior of TCP after a connection
+       has been established.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-touch-tcpm-2140bis-03
-      format: text/plain
+      content: draft-touch-tcpm-2140bis-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-touch-tcpm-2140bis-04
     docidentifier:
-    - content: draft-touch-tcpm-2140bis-03
+    - content: draft-touch-tcpm-2140bis-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-touch-tcpm-2140bis-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-touch-tcpm-2140bis-06
     docidentifier:
     - content: draft-touch-tcpm-2140bis-06
       type: Internet-Draft
@@ -130,10 +142,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-touch-tcpm-2140bis-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

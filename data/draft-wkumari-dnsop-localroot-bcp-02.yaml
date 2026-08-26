@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Populating resolvers with the root zone
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wkumari-dnsop-localroot-bcp-02
 docidentifier:
+- content: draft-wkumari-dnsop-localroot-bcp
+  type: Internet-Draft
 - content: draft-wkumari-dnsop-localroot-bcp-02
   type: Internet-Draft
   primary: true
-- content: I-D.wkumari-dnsop-localroot-bcp
-  type: IETF
-  scope: anchor
 docnumber: I-D.wkumari-dnsop-localroot-bcp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Warren
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google, Inc.
+        - language: en
+          content: Google, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wes
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: USC/ISI and Google, Inc.
+        - language: en
+          content: USC/ISI and Google, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jim
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: RTFM llp
+        - language: en
+          content: RTFM llp
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Geoff
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: APNIC
+        - language: en
+          content: APNIC
 version:
 - content: '02'
 language:
@@ -119,22 +129,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DNS recursive resolver operators need to provide the best service possible
-    for their users, which includes providing an operationally robust and privacy
-    protecting service. Challenges to these deployment goals include difficulty of
-    getting responses from the root servers (such as during a network attack), longer-than-desired
-    round-trip times to the closest DNS root server, and privacy issues relating to
-    queries sent to the DNS root servers. Resolvers can solve all of these issues
-    by simply serving an already cached a copy of the full root zone. This document
-    shows how resolvers can fetch, cache and maintain a copy of the root zone, how
-    to detect if the contents becomes stale, and procedures for handling error conditions.</p>"
-  format: text/html
+  content: |-
+    <p>DNS recursive resolver operators need to provide the best service
+       possible for their users, which includes providing an operationally
+       robust and privacy protecting service.  Challenges to these
+       deployment goals include difficulty of getting responses from the
+       root servers (such as during a network attack), longer-than-desired
+       round-trip times to the closest DNS root server, and privacy issues
+       relating to queries sent to the DNS root servers.  Resolvers can
+       solve all of these issues by simply serving an already cached a copy
+       of the full root zone.
+
+       This document shows how resolvers can fetch, cache and maintain a
+       copy of the root zone, how to detect if the contents becomes stale,
+       and procedures for handling error conditions.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-wkumari-dnsop-localroot-bcp-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wkumari-dnsop-localroot-bcp-01
     docidentifier:
     - content: draft-wkumari-dnsop-localroot-bcp-01
       type: Internet-Draft
@@ -142,10 +158,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-wkumari-dnsop-localroot-bcp-05
-      format: text/plain
+      content: draft-wkumari-dnsop-localroot-bcp-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wkumari-dnsop-localroot-bcp-03
     docidentifier:
-    - content: draft-wkumari-dnsop-localroot-bcp-05
+    - content: draft-wkumari-dnsop-localroot-bcp-03
       type: Internet-Draft
       primary: true
 series:
@@ -154,10 +172,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wkumari-dnsop-localroot-bcp-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

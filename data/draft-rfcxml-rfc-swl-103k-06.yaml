@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SW103K PROTOCOL
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-06
 docidentifier:
+- content: draft-rfcxml-rfc-swl-103k
+  type: Internet-Draft
 - content: draft-rfcxml-rfc-swl-103k-06
   type: Internet-Draft
   primary: true
-- content: I-D.rfcxml-rfc-swl-103k
-  type: IETF
-  scope: anchor
 docnumber: I-D.rfcxml-rfc-swl-103k
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Chazah
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Organization ChazahGroup
+        - language: en
+          content: Organization ChazahGroup
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: micheal
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Chazah Group
+        - language: en
+          content: Chazah Group
 version:
 - content: '06'
 language:
@@ -75,37 +79,58 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines a new protocol sw103k addresses challenges
-    in networks with limited bandwidth, latency constraints, and data integrity concerns.
-    It provides compression and decompression to optimize bandwidth utilization in
-    environments such as Data centers, internet exchange points, and mobile communications.
-    The protocol operates at the data link layer with a custom frame format including
-    SW103K and HAVI headers. Key features include: - Batch processing of 103 packets
-    with compression - Merkle tree- based integrity verification (merklesw103k root
-    hash) - QoS mechanisms with 8-bit priority field - Security features including
-    AES-256-GCM encryption - Physical layer synchronization with +-1us accuracy Jutifying
-    why sw103k is unique: The sw103k protocol is a Layer-2 mechanism that applies
-    stateful compression to complete payloads using shared context between communicating
-    entities. The protocol assumes that traffic in constrained networks is often structured
-    and repetitive and therefore allows endpoints to provision payload templates,
-    dictionaries, and delta-encoding state prior to data exchange. During operation,
-    payloads may be represented by compact identifiers together with fields that describe
-    deviations from previously established state. For traffic patterns that conform
-    to these assumptions, this approach can substantially reduce the number of transmitted
-    octets and may achieve compression ratios on the order of 103:1 for selected telemetry
-    and control messages. By operating independently of IP version, transport protocol,
-    and application encoding, sw103k is intended to reduce airtime usage, energy consumption,
-    and the need for fragmentation in environments where link capacity and device
-    resources are limited.</p>"
-  format: text/html
+  content: |-
+    <p>This specification defines a new protocol sw103k addresses challenges
+       in networks with limited bandwidth, latency constraints, and data
+       integrity concerns.  It provides compression and decompression to
+       optimize bandwidth utilization in environments such as Data centers,
+       internet exchange points, and mobile communications.  The protocol
+       operates at the data link layer with a custom frame format including
+       SW103K and HAVI headers.  Key features include:
+
+       - Batch processing of 103 packets with compression - Merkle tree-
+       based integrity verification (merklesw103k root hash) - QoS
+       mechanisms with 8-bit priority field - Security features including
+       AES-256-GCM encryption - Physical layer synchronization with +-1us
+       accuracy
+
+       Jutifying why sw103k is unique:
+
+       The sw103k protocol is a Layer-2 mechanism that applies stateful
+       compression to complete payloads using shared context between
+       communicating entities.
+
+       The protocol assumes that traffic in constrained networks is often
+       structured and repetitive and therefore allows endpoints to provision
+       payload templates,
+
+       dictionaries, and delta-encoding state prior to data exchange.
+
+       During operation, payloads may be represented by compact identifiers
+       together with fields that describe deviations from previously
+       established state.
+
+       For traffic patterns that conform to these assumptions,
+
+       this approach can substantially reduce the number of transmitted
+       octets and may achieve compression ratios on the order of 103:1
+       for selected telemetry and control messages.  By operating
+       independently of IP version, transport protocol, and application
+       encoding,
+
+       sw103k is intended to reduce airtime usage, energy consumption, and
+       the need for fragmentation in environments where link capacity and
+       device resources are limited.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-rfcxml-rfc-swl-103k-01
-      format: text/plain
+      content: draft-rfcxml-rfc-swl-103k-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rfcxml-rfc-swl-103k-05
     docidentifier:
-    - content: draft-rfcxml-rfc-swl-103k-01
+    - content: draft-rfcxml-rfc-swl-103k-05
       type: Internet-Draft
       primary: true
 series:
@@ -114,10 +139,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rfcxml-rfc-swl-103k-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

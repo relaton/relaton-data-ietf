@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: NirvanAI Behavioral Trust Protocol (NBTP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-nirvanai-nbtp-behavioral-trust-00
 docidentifier:
+- content: draft-nirvanai-nbtp-behavioral-trust
+  type: Internet-Draft
 - content: draft-nirvanai-nbtp-behavioral-trust-00
   type: Internet-Draft
   primary: true
-- content: I-D.nirvanai-nbtp-behavioral-trust
-  type: IETF
-  scope: anchor
 docnumber: I-D.nirvanai-nbtp-behavioral-trust
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Edward
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NirvanAI
+        - language: en
+          content: NirvanAI
 version:
 - content: '00'
 language:
@@ -53,32 +54,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The NirvanAI Behavioral Trust Protocol (NBTP) defines a cryptographic
-    framework for continuous attestation of AI agent behavioral integrity in distributed
-    networks. NBTP treats trust as a volatile, time- decaying state variable measured
-    by an oracle-federated layer of independent scanner nodes. Unlike static credential
-    systems that answer "Is this agent authorized?", NBTP answers "Is this agent currently
-    acting like itself?" Trust computation is performed locally by each verifying
-    party using signed attestations from independent oracle scanners; no centralized
-    policy engine or authorization server is required at verification time. NBTP introduces
-    a temporal decay model with context-dependent decay rates, a four-state trust
-    machine (PROBATIONARY, TRUSTED, SUSPECT, QUARANTINED), cross-context co-silence
-    detection, and a genesis bootstrapping mechanism (Creole gate) using formal CHALLENGE/RESPONSE
-    packet types. Absence of attestation data is treated as a security- relevant signal.
-    This document specifies the protocol wire format, state machine, decay model,
-    security properties, and IANA considerations. Implementation-specific measurement
-    heuristics are out of scope.</p>
-  format: text/html
+  content: |-
+    <p>The NirvanAI Behavioral Trust Protocol (NBTP) defines a cryptographic
+       framework for continuous attestation of AI agent behavioral integrity
+       in distributed networks.  NBTP treats trust as a volatile, time-
+       decaying state variable measured by an oracle-federated layer of
+       independent scanner nodes.  Unlike static credential systems that
+       answer "Is this agent authorized?", NBTP answers "Is this agent
+       currently acting like itself?"  Trust computation is performed
+       locally by each verifying party using signed attestations from
+       independent oracle scanners; no centralized policy engine or
+       authorization server is required at verification time.
+
+       NBTP introduces a temporal decay model with context-dependent decay
+       rates, a four-state trust machine (PROBATIONARY, TRUSTED, SUSPECT,
+       QUARANTINED), cross-context co-silence detection, and a genesis
+       bootstrapping mechanism (Creole gate) using formal CHALLENGE/RESPONSE
+       packet types.  Absence of attestation data is treated as a security-
+       relevant signal.  This document specifies the protocol wire format,
+       state machine, decay model, security properties, and IANA
+       considerations.  Implementation-specific measurement heuristics are
+       out of scope.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-nirvanai-nbtp-behavioral-trust-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

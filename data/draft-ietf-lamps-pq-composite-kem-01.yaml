@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Composite KEM For Use In Internet PKI
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-01
 docidentifier:
+- content: draft-ietf-lamps-pq-composite-kem
+  type: Internet-Draft
 - content: draft-ietf-lamps-pq-composite-kem-01
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-lamps-pq-composite-kem
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-lamps-pq-composite-kem
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 version:
 - content: '01'
 language:
@@ -75,22 +79,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines Post-Quantum / Traditional composite Key Encapsulation
-    Mechanism (KEM) algorithms suitable for use within X.509 and PKIX and CMS protocols.
-    Composite algorithms are provided which combine ML-KEM with RSA-KEM and ECDH-KEM.
-    The provided set of composite algorithms should meet most Internet needs. This
-    document assumes that all component algorithms are KEMs, and therefore it depends
-    on [RFC5990] and [I-D.ounsworth-lamps-cms-dhkem] in order to promote RSA and ECDH
-    respectively into KEMs. For the purpose of combining KEMs, the combiner function
-    from [I-D.ounsworth-cfrg-kem-combiners] is used. For use within CMS, this document
-    is intended to be coupled with the CMS KEMRecipientInfo mechanism in [I-D.housley-lamps-cms-kemri].</p>"
-  format: text/html
+  content: |-
+    <p>This document defines Post-Quantum / Traditional composite Key
+       Encapsulation Mechanism (KEM) algorithms suitable for use within
+       X.509 and PKIX and CMS protocols.  Composite algorithms are provided
+       which combine ML-KEM with RSA-KEM and ECDH-KEM.  The provided set of
+       composite algorithms should meet most Internet needs.
+
+       This document assumes that all component algorithms are KEMs, and
+       therefore it depends on [RFC5990] and [I-D.ounsworth-lamps-cms-dhkem]
+       in order to promote RSA and ECDH respectively into KEMs.  For the
+       purpose of combining KEMs, the combiner function from
+       [I-D.ounsworth-cfrg-kem-combiners] is used.  For use within CMS, this
+       document is intended to be coupled with the CMS KEMRecipientInfo
+       mechanism in [I-D.housley-lamps-cms-kemri].</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-lamps-pq-composite-kem-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-00
     docidentifier:
     - content: draft-ietf-lamps-pq-composite-kem-00
       type: Internet-Draft
@@ -98,10 +108,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-lamps-pq-composite-kem-16
-      format: text/plain
+      content: draft-ietf-lamps-pq-composite-kem-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-pq-composite-kem-02
     docidentifier:
-    - content: draft-ietf-lamps-pq-composite-kem-16
+    - content: draft-ietf-lamps-pq-composite-kem-02
       type: Internet-Draft
       primary: true
 series:
@@ -110,10 +122,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-lamps-pq-composite-kem-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

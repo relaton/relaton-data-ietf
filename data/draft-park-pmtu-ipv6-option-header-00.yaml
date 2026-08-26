@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The PMTU Discovery for IPv6 Using Hop-by-Hop Option Header
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-park-pmtu-ipv6-option-header-00
 docidentifier:
+- content: draft-park-pmtu-ipv6-option-header
+  type: Internet-Draft
 - content: draft-park-pmtu-ipv6-option-header-00
   type: Internet-Draft
   primary: true
-- content: I-D.park-pmtu-ipv6-option-header
-  type: IETF
-  scope: anchor
 docnumber: I-D.park-pmtu-ipv6-option-header
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Soohong
       - language: en
+        script: Latn
         initial: S
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SAMSUNG Electronics
+        - language: en
+          content: SAMSUNG Electronics
 version:
 - content: '00'
 language:
@@ -56,29 +58,27 @@ abstract:
 - language: en
   script: Latn
   content: "<p>This document presents a new method for the PMTU discovery for IPv6.
-    To discover the PMTU of a path, a source node measures its actual PMTU using the
-    newly defined Hop-by-Hop Option header, whereas a source node initially assumes
-    that the PMTU of a path is the known MTU of the first hop in the path in the previous
-    one [1981]. In order to measure the actual PMTU, the source node sends the IP
-    packet with the newly defined Hop-by-Hop Option header to the destination node
-    with the first data packet when node is beginning. This can eliminate the chance
-    of occurrence of several iterations of the somewhat complex discovery cycle (sending
-    a packet, receiving a Packet Too Big message, reducing a packet size). Most of
-    all, since existing PMTU has a weak point for security and denial-of-service attacks,
-    this document suggests a security function when PMTU is going on. All IPv6 nodes,
-    including both hosts and routers, must implement newly Options as defined in this
-    specification.</p>"
-  format: text/html
+    \nTo discover the PMTU of a path, a source node measures its actual PMTU\nusing
+    the newly defined Hop-by-Hop Option header, whereas a source \nnode initially
+    assumes that the PMTU of a path is the known MTU of \nthe first hop in the path
+    in the previous one [1981]. In order to \nmeasure the actual PMTU, the source
+    node sends the IP packet with the\nnewly defined Hop-by-Hop Option header to the
+    destination node with \nthe first data packet when node is beginning. This can
+    eliminate the \nchance of occurrence of several iterations of the somewhat complex
+    \ndiscovery cycle (sending a packet, receiving a Packet Too Big message,\nreducing
+    a packet size). Most of all, since existing PMTU has a weak \npoint for security
+    and denial-of-service attacks, this document \nsuggests a security function when
+    PMTU is going on.\nAll IPv6 nodes, including both hosts and routers, must implement
+    newly\nOptions as defined in this specification.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-park-pmtu-ipv6-option-header-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

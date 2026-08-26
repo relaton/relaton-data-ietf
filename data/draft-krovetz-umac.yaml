@@ -1,11 +1,12 @@
 ---
 id: draftkrovetzumac
 schema_version: v1.5.6
+formattedref:
+  content: draft-krovetz-umac
 title:
 - language: en
   script: Latn
   content: 'UMAC: Message Authentication Code using Universal Hashing'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-krovetz-umac-07
@@ -19,24 +20,18 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This specification describes how to generate an authentication tag using
-    the UMAC message authentication algorithm. UMAC is designed to be very fast to
-    compute in software on contemporary uniprocessors. Measured speeds are as low
-    as one cycle per byte. UMAC relies on addition of 32-bit and 64-bit numbers and
-    multiplication of 32-bit numbers, operations well-supported by contemporary machines.
-    To generate the authentication tag on a given message, a "universal" hash function
-    is applied to the message and key to produce a short, fixed-length hash value,
-    and this hash value is then xor'ed with a key-derived pseudorandom pad. UMAC enjoys
-    a rigorous security analysis, and its only internal "cryptographic" component
-    is a block cipher used to generate the pseudorandom pads and internal key material.
-    This memo provides information for the Internet community.</p>
-  format: text/html
+  content: |-
+    <p>This specification describes how to generate an authentication tag using the UMAC message authentication algorithm. UMAC is designed to be very fast to compute in software on contemporary uniprocessors. Measured speeds are as low as one cycle per byte. UMAC relies on addition of 32-bit and 64-bit numbers and multiplication of 32-bit numbers, operations well-supported by contemporary machines.
+
+     To generate the authentication tag on a given message, a "universal" hash function is applied to the message and key to produce a short, fixed-length hash value, and this hash value is then xor'ed with a key-derived pseudorandom pad. UMAC enjoys a rigorous security analysis, and its only internal "cryptographic" component is a block cipher used to generate the pseudorandom pads and internal key material. This memo provides information for the Internet community.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-krovetz-umac-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-krovetz-umac-07
     docidentifier:
     - content: draft-krovetz-umac-07
       type: Internet-Draft
@@ -45,4 +40,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

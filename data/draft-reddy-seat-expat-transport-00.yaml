@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Application-Layer Transport for Exported Authenticators and Attestation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-reddy-seat-expat-transport-00
 docidentifier:
+- content: draft-reddy-seat-expat-transport
+  type: Internet-Draft
 - content: draft-reddy-seat-expat-transport-00
   type: Internet-Draft
   primary: true
-- content: I-D.reddy-seat-expat-transport
-  type: IETF
-  scope: anchor
 docnumber: I-D.reddy-seat-expat-transport
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tirumaleswar
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of the Bundeswehr Munich
+        - language: en
+          content: University of the Bundeswehr Munich
 version:
 - content: '00'
 language:
@@ -75,24 +79,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines a binary, application-layer transport protocol
-    for exchanging Exported Authenticator messages between two peers over TLS. It
-    provides the signaling required to initiate and complete post-handshake authentication
-    exchanges at the application layer, without requiring modifications to the TLS
-    layer itself. While primarily intended to support attestation exchange, the transport
-    is generic and can be used independently for any Exported Authenticator exchange.
-    The document further specifies how protocol messages are conveyed as Capsules
-    over an HTTP connection established using the Extended CONNECT method, with support
-    for both HTTP/2 and HTTP/3. In addition, it defines how the protocol can operate
-    directly over TLS or DTLS 1.3 without an HTTP binding, using a so-called "Shim
-    Mode".</p>
-  format: text/html
+  content: |-
+    <p>This document defines a binary, application-layer transport protocol
+       for exchanging Exported Authenticator messages between two peers over
+       TLS.  It provides the signaling required to initiate and complete
+       post-handshake authentication exchanges at the application layer,
+       without requiring modifications to the TLS layer itself.
+
+       While primarily intended to support attestation exchange, the
+       transport is generic and can be used independently for any Exported
+       Authenticator exchange.
+
+       The document further specifies how protocol messages are conveyed as
+       Capsules over an HTTP connection established using the Extended
+       CONNECT method, with support for both HTTP/2 and HTTP/3.  In
+       addition, it defines how the protocol can operate directly over TLS
+       or DTLS 1.3 without an HTTP binding, using a so-called "Shim Mode".</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-reddy-seat-expat-transport-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reddy-seat-expat-transport-01
     docidentifier:
     - content: draft-reddy-seat-expat-transport-01
       type: Internet-Draft
@@ -103,10 +113,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-reddy-seat-expat-transport-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

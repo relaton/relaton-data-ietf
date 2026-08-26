@@ -1,11 +1,12 @@
 ---
 id: draftietfdnsopletlocalhostbelocalhost
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-dnsop-let-localhost-be-localhost
 title:
 - language: en
   script: Latn
   content: Let 'localhost' be localhost.
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-let-localhost-be-localhost-02
@@ -19,23 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document updates the treatment of the special-use domain name "localhost"
-    as specified in RFC6761, Section 6.3, with the goal of ensuring that it can be
-    safely relied upon as a name for the local host's loopback interface. To that
-    end, stub resolvers are required to resolve localhost names to loopback addresses.
-    Recursive DNS servers are required to return "NXDOMAIN" when queried for localhost
-    names, making non-conformant stub resolvers more likely to fail and produce problem
-    reports that result in updates. Together, these requirements would allow applications
-    and specifications to join regular users in drawing the common-sense conclusions
-    that "localhost" means "localhost", and doesn't resolve to somewhere else on the
-    network.</p>
-  format: text/html
+  content: |-
+    <p>This document updates the treatment of the special-use domain name
+       "localhost" as specified in RFC6761, Section 6.3, with the goal of
+       ensuring that it can be safely relied upon as a name for the local
+       host's loopback interface.  To that end, stub resolvers are required
+       to resolve localhost names to loopback addresses.  Recursive DNS
+       servers are required to return "NXDOMAIN" when queried for localhost
+       names, making non-conformant stub resolvers more likely to fail and
+       produce problem reports that result in updates.
+
+       Together, these requirements would allow applications and
+       specifications to join regular users in drawing the common-sense
+       conclusions that "localhost" means "localhost", and doesn't resolve
+       to somewhere else on the network.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-dnsop-let-localhost-be-localhost-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-let-localhost-be-localhost-00
     docidentifier:
     - content: draft-ietf-dnsop-let-localhost-be-localhost-00
       type: Internet-Draft
@@ -44,7 +50,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-dnsop-let-localhost-be-localhost-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-let-localhost-be-localhost-01
     docidentifier:
     - content: draft-ietf-dnsop-let-localhost-be-localhost-01
       type: Internet-Draft
@@ -53,7 +61,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-dnsop-let-localhost-be-localhost-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-let-localhost-be-localhost-02
     docidentifier:
     - content: draft-ietf-dnsop-let-localhost-be-localhost-02
       type: Internet-Draft
@@ -62,4 +72,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

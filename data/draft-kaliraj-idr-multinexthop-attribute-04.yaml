@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP MultiNexthop Attribute
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kaliraj-idr-multinexthop-attribute-04
 docidentifier:
+- content: draft-kaliraj-idr-multinexthop-attribute
+  type: Internet-Draft
 - content: draft-kaliraj-idr-multinexthop-attribute-04
   type: Internet-Draft
   primary: true
-- content: I-D.kaliraj-idr-multinexthop-attribute
-  type: IETF
-  scope: anchor
 docnumber: I-D.kaliraj-idr-multinexthop-attribute
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeyananth
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,17 +71,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gyan
       - language: en
+        script: Latn
         initial: G
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -91,7 +99,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon Communications Inc.
+        - language: en
+          content: Verizon Communications Inc.
 version:
 - content: '04'
 language:
@@ -101,48 +110,62 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in
-    an Update. This nexthop can be encoded in either the BGP-Nexthop attribute (code
-    3), or inside the MP_REACH_NLRI attribute (code 14). For cases where multiple
-    nexthops need to be advertised, BGP-Addpath is used. Though Addpath allows basic
-    ability to advertise multiple- nexthops, it does not allow the sender to specify
-    desired relationship between the multiple nexthops being advertised e.g., relative-preference,
-    type of load-balancing. These are local decisions at the receiving speaker based
-    on local configuration and path-selection between the various additional-paths,
-    which may tie- break on some arbitrary step like Router-Id or BGP nexthop address.
-    Some scenarios with a BGP-free core may benefit from having a mechanism, where
-    egress-node can signal multiple-nexthops along with their relationship, in one
-    BGP route, to ingress nodes. This document defines a new BGP attribute "MultiNexthop
-    (MNH)" that can be used for this purpose. This attribute can be used for both
-    labeled and unlabled BGP families. The MNH can be used to advertise MPLS label
-    along with nexthop for unlabeled families (e.g. Inet Unicast, Inet6 Unicast).
-    Such that, mechanisms at the transport layer can work uniformly on labeled and
-    unlabled BGP families. Service route scale can be confined closer to the service
-    edge nodes, making the transport layer nodes light and nimble. They dont have
-    any service route state, only have service end-point state. The MNH plays different
-    role in "downstream allocation" scenario than "upstream allocation" scenario.
-    E.g. for [RFC8277] families that advertise downstream allocated labels, the MNH
-    can play the "Label Descriptor" role, describing the forwarding semantics of the
-    label being advertised. This can be useful in network visualization and controller
-    based traffic engineering (e.g. EPE).</p>
-  format: text/html
+  content: |-
+    <p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in
+       an Update.  This nexthop can be encoded in either the BGP-Nexthop
+       attribute (code 3), or inside the MP_REACH_NLRI attribute (code 14).
+
+       For cases where multiple nexthops need to be advertised, BGP-Addpath
+       is used.  Though Addpath allows basic ability to advertise multiple-
+       nexthops, it does not allow the sender to specify desired
+       relationship between the multiple nexthops being advertised e.g.,
+       relative-preference, type of load-balancing.  These are local
+       decisions at the receiving speaker based on local configuration and
+       path-selection between the various additional-paths, which may tie-
+       break on some arbitrary step like Router-Id or BGP nexthop address.
+
+       Some scenarios with a BGP-free core may benefit from having a
+       mechanism, where egress-node can signal multiple-nexthops along with
+       their relationship, in one BGP route, to ingress nodes.  This
+       document defines a new BGP attribute "MultiNexthop (MNH)" that can be
+       used for this purpose.
+
+       This attribute can be used for both labeled and unlabled BGP
+       families.  The MNH can be used to advertise MPLS label along with
+       nexthop for unlabeled families (e.g.  Inet Unicast, Inet6 Unicast).
+       Such that, mechanisms at the transport layer can work uniformly on
+       labeled and unlabled BGP families.  Service route scale can be
+       confined closer to the service edge nodes, making the transport layer
+       nodes light and nimble.  They dont have any service route state, only
+       have service end-point state.
+
+       The MNH plays different role in "downstream allocation" scenario than
+       "upstream allocation" scenario.  E.g. for [RFC8277] families that
+       advertise downstream allocated labels, the MNH can play the "Label
+       Descriptor" role, describing the forwarding semantics of the label
+       being advertised.  This can be useful in network visualization and
+       controller based traffic engineering (e.g.  EPE).</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-kaliraj-idr-multinexthop-attribute-01
-      format: text/plain
+      content: draft-kaliraj-idr-multinexthop-attribute-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-idr-multinexthop-attribute-03
     docidentifier:
-    - content: draft-kaliraj-idr-multinexthop-attribute-01
+    - content: draft-kaliraj-idr-multinexthop-attribute-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-kaliraj-idr-multinexthop-attribute-07
-      format: text/plain
+      content: draft-kaliraj-idr-multinexthop-attribute-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-idr-multinexthop-attribute-05
     docidentifier:
-    - content: draft-kaliraj-idr-multinexthop-attribute-07
+    - content: draft-kaliraj-idr-multinexthop-attribute-05
       type: Internet-Draft
       primary: true
 series:
@@ -151,10 +174,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kaliraj-idr-multinexthop-attribute-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

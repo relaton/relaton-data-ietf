@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Transaction ID Mechanism for NETCONF
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-lindblad-netconf-transaction-id-01
 docidentifier:
+- content: draft-lindblad-netconf-transaction-id
+  type: Internet-Draft
 - content: draft-lindblad-netconf-transaction-id-01
   type: Internet-Draft
   primary: true
-- content: I-D.lindblad-netconf-transaction-id
-  type: IETF
-  scope: anchor
 docnumber: I-D.lindblad-netconf-transaction-id
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jan
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 version:
 - content: '01'
 language:
@@ -53,21 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>NETCONF clients and servers often need to have a synchronized view
-    of the server's configuration data stores. The volume of configuration data in
-    a server may be very large, while data store changes typically are small when
-    observed at typical client resynchronization intervals. Rereading the entire data
-    store and analyzing the response for changes is an inefficient mechanism for synchronization.
-    This document specifies an extension to NETCONF that allows clients and servers
-    to keep synchronized with a much smaller data exchange and without any need for
-    servers to store information about the clients.</p>"
-  format: text/html
+  content: |-
+    <p>NETCONF clients and servers often need to have a synchronized view of
+       the server's configuration data stores.  The volume of configuration
+       data in a server may be very large, while data store changes
+       typically are small when observed at typical client resynchronization
+       intervals.
+
+       Rereading the entire data store and analyzing the response for
+       changes is an inefficient mechanism for synchronization.  This
+       document specifies an extension to NETCONF that allows clients and
+       servers to keep synchronized with a much smaller data exchange and
+       without any need for servers to store information about the clients.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-lindblad-netconf-transaction-id-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lindblad-netconf-transaction-id-00
     docidentifier:
     - content: draft-lindblad-netconf-transaction-id-00
       type: Internet-Draft
@@ -76,7 +82,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-lindblad-netconf-transaction-id-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lindblad-netconf-transaction-id-02
     docidentifier:
     - content: draft-lindblad-netconf-transaction-id-02
       type: Internet-Draft
@@ -87,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-lindblad-netconf-transaction-id-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

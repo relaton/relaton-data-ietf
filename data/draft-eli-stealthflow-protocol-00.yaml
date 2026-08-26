@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: StealthFlow Protocol (SFP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-eli-stealthflow-protocol-00
 docidentifier:
+- content: draft-eli-stealthflow-protocol
+  type: Internet-Draft
 - content: draft-eli-stealthflow-protocol-00
   type: Internet-Draft
   primary: true
-- content: I-D.eli-stealthflow-protocol
-  type: IETF
-  scope: anchor
 docnumber: I-D.eli-stealthflow-protocol
 date:
 - type: published
@@ -43,24 +41,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The StealthFlow Protocol (SFP) is a low-observability, stateless pre-authentication
-    and transport armor mechanism designed to precede existing TLS or QUIC sessions.
-    SFP aims to reduce handshake fingerprinting, limit asymmetric denial-of-service
-    amplification, and minimize early plaintext metadata exposure, while preserving
-    compatibility with the existing PKI and TLS ecosystems. SFP does not replace TLS
-    or QUIC. Instead, it provides an optional single-round pre-filtering and authentication
-    layer that enables servers to reject illegitimate traffic with minimal computational
-    cost and minimal network observability. This document supersedes the prior informal
-    specification known as draft-eli-z-protocol-00.</p>"
-  format: text/html
+  content: |-
+    <p>The StealthFlow Protocol (SFP) is a low-observability, stateless
+       pre-authentication and transport armor mechanism designed to precede
+       existing TLS or QUIC sessions.  SFP aims to reduce handshake
+       fingerprinting, limit asymmetric denial-of-service amplification,
+       and minimize early plaintext metadata exposure, while preserving
+       compatibility with the existing PKI and TLS ecosystems.
+
+       SFP does not replace TLS or QUIC.  Instead, it provides an optional
+       single-round pre-filtering and authentication layer that enables
+       servers to reject illegitimate traffic with minimal computational
+       cost and minimal network observability.
+
+       This document supersedes the prior informal specification known as
+       draft-eli-z-protocol-00.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-eli-stealthflow-protocol-02
-      format: text/plain
+      content: draft-eli-stealthflow-protocol-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-eli-stealthflow-protocol-01
     docidentifier:
-    - content: draft-eli-stealthflow-protocol-02
+    - content: draft-eli-stealthflow-protocol-01
       type: Internet-Draft
       primary: true
 series:
@@ -69,10 +74,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-eli-stealthflow-protocol-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

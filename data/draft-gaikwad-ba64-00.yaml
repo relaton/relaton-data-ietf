@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'ba64: A Binary-to-Text Encoding That Is Never Larger Than Base64'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gaikwad-ba64-00
 docidentifier:
+- content: draft-gaikwad-ba64
+  type: Internet-Draft
 - content: draft-gaikwad-ba64-00
   type: Internet-Draft
   primary: true
-- content: I-D.gaikwad-ba64
-  type: IETF
-  scope: anchor
 docnumber: I-D.gaikwad-ba64
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Madhava
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - language: en
+          content: Independent
 version:
 - content: '00'
 language:
@@ -53,26 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>ba64 is a text encoding for binary data that is never larger than standard
-    base64. An encoder races DEFLATE compression against plain base64 and emits whichever
-    final text is shorter. Compressed output is marked by a leading "=" character,
-    which is inside the base64 alphabet, so it survives every base64-safe channel,
-    yet can never begin a valid base64 string, so the two forms are unambiguous. A
-    CRC-32 over the decoded bytes guarantees that a ba64 decoder never silently returns
-    wrong data. The plain form is byte-identical to base64, so ba64 decoders are a
-    drop-in replacement wherever base64 is read today. An optional padding method
-    decouples the emitted length from the compressibility of the input.</p>
-  format: text/html
+  content: |-
+    <p>ba64 is a text encoding for binary data that is never larger than
+       standard base64.  An encoder races DEFLATE compression against plain
+       base64 and emits whichever final text is shorter.  Compressed output
+       is marked by a leading "=" character, which is inside the base64
+       alphabet, so it survives every base64-safe channel, yet can never
+       begin a valid base64 string, so the two forms are unambiguous.  A
+       CRC-32 over the decoded bytes guarantees that a ba64 decoder never
+       silently returns wrong data.  The plain form is byte-identical to
+       base64, so ba64 decoders are a drop-in replacement wherever base64 is
+       read today.  An optional padding method decouples the emitted length
+       from the compressibility of the input.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gaikwad-ba64-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Scalable, Loop-Free BGP FRR using Repair Label
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bashandy-idr-bgp-repair-label-03
 docidentifier:
+- content: draft-bashandy-idr-bgp-repair-label
+  type: Internet-Draft
 - content: draft-bashandy-idr-bgp-repair-label-03
   type: Internet-Draft
   primary: true
-- content: I-D.bashandy-idr-bgp-repair-label
-  type: IETF
-  scope: anchor
 docnumber: I-D.bashandy-idr-bgp-repair-label
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ahmed
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -46,6 +46,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -62,8 +63,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jakob
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -83,23 +86,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Consider a BGP free core scenario. Suppose the provider edge BGP speakers
-    PE1, PE2,..., PEn know about a prefix P/p via the external routers CE1, CE2,...,
-    CEm. If the PE router PEi loses connectivity to the primary path, it is desirable
-    to immediately restore traffic by rerouting packets arriving from the core to
-    PEi and destined to the prefix P/p to one of the other PE routers that advertised
-    P/p, say PEj, until BGP re-converges. However if the loss of connectivity of PEi
-    to the primary path also resulted in the loss of connectivity between PEj and
-    CEj, rerouting a packet before the control plane converges may result in a loop.
-    In this document, we propose using a repair label for traffic restoration while
-    avoiding loops. We propose advertising the "repair" label through BGP.</p>
-  format: text/html
+  content: |-
+    <p>Consider a BGP free core scenario. Suppose the provider edge BGP
+    speakers PE1, PE2,..., PEn know about a prefix P/p via the external
+    routers CE1, CE2,..., CEm.  If the PE router PEi loses connectivity to
+    the primary path, it is desirable to immediately restore traffic by
+    rerouting packets arriving from the core to PEi and destined to the
+    prefix P/p to one of the other PE routers that advertised P/p, say PEj,
+    until BGP re-converges. However if the loss of connectivity of PEi to
+    the primary path also resulted in the loss of connectivity between PEj
+    and CEj, rerouting a packet before the control plane converges may
+    result in a loop. In this document, we propose using a repair label for
+    traffic restoration while avoiding loops. We propose advertising the
+    "repair" label through BGP.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bashandy-idr-bgp-repair-label-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bashandy-idr-bgp-repair-label-04
     docidentifier:
     - content: draft-bashandy-idr-bgp-repair-label-04
       type: Internet-Draft
@@ -110,10 +117,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bashandy-idr-bgp-repair-label-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

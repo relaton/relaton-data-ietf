@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The Human Escalation Mechanism (HEM) for Agentic AI Systems
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sato-soos-hem-00
 docidentifier:
+- content: draft-sato-soos-hem
+  type: Internet-Draft
 - content: draft-sato-soos-hem-00
   type: Internet-Draft
   primary: true
-- content: I-D.sato-soos-hem
-  type: IETF
-  scope: anchor
 docnumber: I-D.sato-soos-hem
 date:
 - type: published
@@ -28,6 +26,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tom
       formatted_initials:
         language: en
@@ -40,7 +39,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: MyAuberge K.K.
+        - language: en
+          content: MyAuberge K.K.
 version:
 - content: '00'
 language:
@@ -50,29 +50,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>AI agents operating autonomously encounter situations where their authorized
-    action space is insufficient for the task at hand, where policy mandates human
-    judgment regardless of agent capability, or where the agent itself assesses that
-    human oversight is required. No existing standard specifies the kernel-level contract
-    that governs what happens in these moments: what triggers escalation, what a human
-    principal may decide, how the system behaves while awaiting that decision, and
-    what happens when the designated human is unreachable. This document defines the
-    Human Escalation Mechanism (HEM): a normative protocol in which a governing OS
-    kernel places an agent session into a formally defined HEM_PENDING state, routes
-    a structured escalation request to one or more designated human principals, enforces
-    a prohibition on state transitions until a human decision is received, and processes
-    five defined human decision types. HEM is a first-class kernel session state,
-    not an application-layer confirmation protocol. HEM provides the technical specification
-    for human oversight of agentic AI systems required by EU AI Act Article 14.</p>"
-  format: text/html
+  content: |-
+    <p>AI agents operating autonomously encounter situations where their
+       authorized action space is insufficient for the task at hand, where
+       policy mandates human judgment regardless of agent capability, or
+       where the agent itself assesses that human oversight is required.
+       No existing standard specifies the kernel-level contract that governs
+       what happens in these moments: what triggers escalation, what a human
+       principal may decide, how the system behaves while awaiting that
+       decision, and what happens when the designated human is unreachable.
+
+       This document defines the Human Escalation Mechanism (HEM): a
+       normative protocol in which a governing OS kernel places an agent
+       session into a formally defined HEM_PENDING state, routes a
+       structured escalation request to one or more designated human
+       principals, enforces a prohibition on state transitions until a
+       human decision is received, and processes five defined human decision
+       types. HEM is a first-class kernel session state, not an
+       application-layer confirmation protocol. HEM provides the technical
+       specification for human oversight of agentic AI systems required by
+       EU AI Act Article 14.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-sato-soos-hem-03
-      format: text/plain
+      content: draft-sato-soos-hem-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sato-soos-hem-01
     docidentifier:
-    - content: draft-sato-soos-hem-03
+    - content: draft-sato-soos-hem-01
       type: Internet-Draft
       primary: true
 series:
@@ -81,10 +88,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-sato-soos-hem-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

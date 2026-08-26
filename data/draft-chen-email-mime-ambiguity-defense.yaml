@@ -1,11 +1,12 @@
 ---
 id: draftchenemailmimeambiguitydefense
 schema_version: v1.5.6
+formattedref:
+  content: draft-chen-email-mime-ambiguity-defense
 title:
 - language: en
   script: Latn
   content: Defensive Handling of MIME Parsing Ambiguities in Email Delivery
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-email-mime-ambiguity-defense-00
@@ -19,24 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>Email security gateways and endpoint mail clients frequently rely on
-    different MIME parsers, decoders, and error-recovery behavior. An attacker can
-    exploit those differences so that a security control fails to extract or scan
-    an attachment that a downstream client later exposes to a user. This document
-    describes defensive processing guidance for SMTP receivers, mail gateways, and
-    message stores that handle MIME messages with malformed or ambiguous structure.
-    This document provides operational guidance for ingress validation, strict decoding
-    floors, ambiguity detection, multi-view extraction, union scanning, logging, and
-    policy handling. It also defines an optional "MIME-Ambiguity-Results" header field
-    for conveying receiver-generated ambiguity assessments to downstream components
-    inside an administrative domain.</p>
-  format: text/html
+  content: |-
+    <p>Email security gateways and endpoint mail clients frequently rely on
+       different MIME parsers, decoders, and error-recovery behavior.  An
+       attacker can exploit those differences so that a security control
+       fails to extract or scan an attachment that a downstream client later
+       exposes to a user.  This document describes defensive processing
+       guidance for SMTP receivers, mail gateways, and message stores that
+       handle MIME messages with malformed or ambiguous structure.
+
+       This document provides operational guidance for ingress validation,
+       strict decoding floors, ambiguity detection, multi-view extraction,
+       union scanning, logging, and policy handling.  It also defines an
+       optional "MIME-Ambiguity-Results" header field for conveying
+       receiver-generated ambiguity assessments to downstream components
+       inside an administrative domain.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-chen-email-mime-ambiguity-defense-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-email-mime-ambiguity-defense-00
     docidentifier:
     - content: draft-chen-email-mime-ambiguity-defense-00
       type: Internet-Draft
@@ -45,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

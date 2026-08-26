@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Demultiplexing Streamed DNS from HTTP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dkg-dprive-demux-dns-http-00
 docidentifier:
+- content: draft-dkg-dprive-demux-dns-http
+  type: Internet-Draft
 - content: draft-dkg-dprive-demux-dns-http-00
   type: Internet-Draft
   primary: true
-- content: I-D.dkg-dprive-demux-dns-http
-  type: IETF
-  scope: anchor
 docnumber: I-D.dkg-dprive-demux-dns-http
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Daniel
       - language: en
+        script: Latn
         initial: D
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -51,22 +52,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DNS over TCP and traditional HTTP are both stream-oriented, client-
-    speaks-first protocols. They can both be run over a stream-based security protocol
-    like TLS. A server accepting a stream-based client can distinguish between a valid
-    stream of DNS queries and valid stream of HTTP requests by simple observation
-    of the first few octets sent by the client. This can be done without any external
-    demultiplexing mechanism like TCP port number or ALPN. Implicit multiplexing of
-    the two protocols over a single listening port can be useful for obscuring the
-    presence of DNS queries from a network observer, which makes it relevant for DNS
-    privacy.</p>"
-  format: text/html
+  content: |-
+    <p>DNS over TCP and traditional HTTP are both stream-oriented, client-
+       speaks-first protocols.  They can both be run over a stream-based
+       security protocol like TLS.  A server accepting a stream-based client
+       can distinguish between a valid stream of DNS queries and valid
+       stream of HTTP requests by simple observation of the first few octets
+       sent by the client.  This can be done without any external
+       demultiplexing mechanism like TCP port number or ALPN.
+
+       Implicit multiplexing of the two protocols over a single listening
+       port can be useful for obscuring the presence of DNS queries from a
+       network observer, which makes it relevant for DNS privacy.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-dkg-dprive-demux-dns-http-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dkg-dprive-demux-dns-http-01
     docidentifier:
     - content: draft-dkg-dprive-demux-dns-http-01
       type: Internet-Draft
@@ -77,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-dkg-dprive-demux-dns-http-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

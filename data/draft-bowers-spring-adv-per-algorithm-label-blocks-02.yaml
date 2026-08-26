@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Advertising Per-Topology and Per-Algorithm Label Blocks
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bowers-spring-adv-per-algorithm-label-blocks-02
 docidentifier:
+- content: draft-bowers-spring-adv-per-algorithm-label-blocks
+  type: Internet-Draft
 - content: draft-bowers-spring-adv-per-algorithm-label-blocks-02
   type: Internet-Draft
   primary: true
-- content: I-D.bowers-spring-adv-per-algorithm-label-blocks
-  type: IETF
-  scope: anchor
 docnumber: I-D.bowers-spring-adv-per-algorithm-label-blocks
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Chris
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hannes
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Uma
       - language: en
+        script: Latn
         initial: U
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson Inc
+        - language: en
+          content: Ericsson Inc
 version:
 - content: '02'
 language:
@@ -97,30 +104,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>When segment routing is used in a network that is controlled by a link
-    state IGP (such as ISIS or OSPF), each node in the network can be assigned one
-    or more index numbers, known as "node-SIDs". The node-SIDs are unique within the
-    network, and are known to all the nodes in the network. If an ingress node has
-    a data packet to be sent to an egress node, the ingress node may select a node-SID
-    corresponding to the egress node, and "translate" that node-SID to an MPLS label.
-    The MPLS label represents a particular path to the egress node; the path is determined
-    by applying a routing algorithm to a particular view of the network topology and
-    a particular set of metric assignments to the links of that topology. The packet
-    can then be forwarded by pushing the label on the packet's label stack and transmitting
-    the packet to the next hop on the corresponding path to the egress node. This
-    document compares two different procedures for translating a node-SID to the MPLS
-    label that represents a path chosen by a particular algorithm operating on a particular
-    topology. It also specifies the ISIS extensions needed to support one of the procedures
-    (known as the "per-topology/per-algorithm label block" procedure).</p>
-  format: text/html
+  content: |-
+    <p>When segment routing is used in a network that is controlled by a
+       link state IGP (such as ISIS or OSPF), each node in the network can
+       be assigned one or more index numbers, known as "node-SIDs".  The
+       node-SIDs are unique within the network, and are known to all the
+       nodes in the network.  If an ingress node has a data packet to be
+       sent to an egress node, the ingress node may select a node-SID
+       corresponding to the egress node, and "translate" that node-SID to an
+       MPLS label.  The MPLS label represents a particular path to the
+       egress node; the path is determined by applying a routing algorithm
+       to a particular view of the network topology and a particular set of
+       metric assignments to the links of that topology.  The packet can
+       then be forwarded by pushing the label on the packet's label stack
+       and transmitting the packet to the next hop on the corresponding path
+       to the egress node.  This document compares two different procedures
+       for translating a node-SID to the MPLS label that represents a path
+       chosen by a particular algorithm operating on a particular topology.
+       It also specifies the ISIS extensions needed to support one of the
+       procedures (known as the "per-topology/per-algorithm label block"
+       procedure).</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-bowers-spring-adv-per-algorithm-label-blocks-00
-      format: text/plain
+      content: draft-bowers-spring-adv-per-algorithm-label-blocks-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bowers-spring-adv-per-algorithm-label-blocks-01
     docidentifier:
-    - content: draft-bowers-spring-adv-per-algorithm-label-blocks-00
+    - content: draft-bowers-spring-adv-per-algorithm-label-blocks-01
       type: Internet-Draft
       primary: true
 series:
@@ -129,10 +142,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bowers-spring-adv-per-algorithm-label-blocks-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

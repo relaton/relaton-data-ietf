@@ -1,11 +1,12 @@
 ---
 id: draftrobertmlsslim
 schema_version: v1.5.6
+formattedref:
+  content: draft-robert-mls-slim
 title:
 - language: en
   script: Latn
   content: SlimMLS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-robert-mls-slim-01
@@ -19,25 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines SlimMLS, an extension to the Messaging Layer
-    Security (MLS) protocol for reducing wire and per-client storage overhead in groups
-    that use ciphersuites with large public keys, ciphertexts, signatures, and credentials.
-    SlimMLS replaces many large objects that appear in MLS authenticated or transcript-hashed
-    structures with typed hash references. Clients resolve the referenced objects
-    only when needed, using a per-message carrier, a local cache, or an application-specific
-    retrieval channel. The extension is most useful when an independent Delivery Service
-    can assist with retrieval and per-recipient delivery, although local caching and
-    delayed fetching also help without such assistance. SlimMLS defines slim variants
-    of KeyPackage, Commit, Welcome, GroupInfo, and message framing. When placing a
-    signature outside an encrypted envelope would reveal the signer, SlimMLS keeps
-    the signature inside the ciphertext.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines SlimMLS, an extension to the Messaging Layer
+       Security (MLS) protocol for reducing wire and per-client storage
+       overhead in groups that use ciphersuites with large public keys,
+       ciphertexts, signatures, and credentials.  SlimMLS replaces many
+       large objects that appear in MLS authenticated or transcript-hashed
+       structures with typed hash references.  Clients resolve the
+       referenced objects only when needed, using a per-message carrier, a
+       local cache, or an application-specific retrieval channel.  The
+       extension is most useful when an independent Delivery Service can
+       assist with retrieval and per-recipient delivery, although local
+       caching and delayed fetching also help without such assistance.
+       SlimMLS defines slim variants of KeyPackage, Commit, Welcome,
+       GroupInfo, and message framing.  When placing a signature outside an
+       encrypted envelope would reveal the signer, SlimMLS keeps the
+       signature inside the ciphertext.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-robert-mls-slim-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-robert-mls-slim-00
     docidentifier:
     - content: draft-robert-mls-slim-00
       type: Internet-Draft
@@ -46,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-robert-mls-slim-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-robert-mls-slim-01
     docidentifier:
     - content: draft-robert-mls-slim-01
       type: Internet-Draft
@@ -55,4 +63,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

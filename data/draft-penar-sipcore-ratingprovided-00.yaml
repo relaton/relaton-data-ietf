@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: A Session Initiation Protocol (SIP) Response Code for Call Rating
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-penar-sipcore-ratingprovided-00
 docidentifier:
+- content: draft-penar-sipcore-ratingprovided
+  type: Internet-Draft
 - content: draft-penar-sipcore-ratingprovided-00
   type: Internet-Draft
   primary: true
-- content: I-D.penar-sipcore-ratingprovided
-  type: IETF
-  scope: anchor
 docnumber: I-D.penar-sipcore-ratingprovided
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Russ
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - language: en
+          content: Microsoft
 version:
 - content: '00'
 language:
@@ -55,26 +57,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the 120 (Rated) Session Initiation Protocol (SIP)
-    response code. This response code enables calling parties to learn an intermediary
-    rated their call attempt. Depending on rating (e.g. Likely Scam), the call may
-    be rejected or go unanswered. Through a 1xx code, the caller's network may become
-    aware future attempts to contact the same User Agent Server will likely go unanswered.
-    The initial use case driving the need for a 120 response code is when the intermediary
-    is an analytics engine. In this case, the rating is constructed via machine or
-    other process. This contrasts with 607 (Unwanted) &amp; 608 (Rejected) SIP response
-    codes in which a human at target User Agent Server, or terminating network analytics,indicate
-    the call may not completed. This document also defines use of a Call-Info header
-    field in 120 responses to enable negatively rated callers to contact entities
-    that rated their calls in error. This provides a remediation mechanism for legal
-    callers who find their calls going unanswered (not necessarily blocked).</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the 120 (Rated) Session Initiation Protocol
+       (SIP) response code. This response code enables calling parties to
+       learn an intermediary rated their call attempt.  Depending on
+       rating (e.g. Likely Scam), the call may be rejected or go unanswered.
+       Through a 1xx code, the caller's network may become aware future
+       attempts to contact the same User Agent Server will likely go
+       unanswered. The initial use case driving the need for a 120 response
+       code is when the intermediary is an analytics engine. In this case,
+       the rating is constructed via machine or other process. This
+       contrasts with 607 (Unwanted) &amp; 608 (Rejected) SIP response codes in
+       which a human at target User Agent Server, or terminating network
+       analytics,indicate the call may not completed.  This document also
+       defines use of a Call-Info header field in 120 responses to enable
+       negatively rated callers to contact entities that rated their calls
+       in error. This provides a remediation mechanism for legal callers
+       who find their calls going unanswered (not necessarily blocked).</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-penar-sipcore-ratingprovided-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-penar-sipcore-ratingprovided-01
     docidentifier:
     - content: draft-penar-sipcore-ratingprovided-01
       type: Internet-Draft
@@ -85,10 +92,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-penar-sipcore-ratingprovided-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

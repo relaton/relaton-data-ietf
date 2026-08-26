@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Directory-Based Information Services: Hosts, Networks and Services'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bannister-dbis-devices-00
 docidentifier:
+- content: draft-bannister-dbis-devices
+  type: Internet-Draft
 - content: draft-bannister-dbis-devices-00
   type: Internet-Draft
   primary: true
-- content: I-D.bannister-dbis-devices
-  type: IETF
-  scope: anchor
 docnumber: I-D.bannister-dbis-devices
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mark
       - language: en
+        script: Latn
         initial: M
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -51,22 +52,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document extends Directory-Based Information Services (DBIS) described
-    in [draft-bannister-dbis-mapping-00] to support ethers and bootparams databases.
-    The database schemas SHALL be backwards compatible with the Network Information
-    Service [NIS] but stored within [X.500] entries so that they may be resolved with
-    the Lightweight Directory Access Protocol [RFC4510]. An ethers database maps 48-bit
-    Ethernet addresses to IP addresses or host names, and bootparams maps hosts to
-    boot-time kernel parameters. This document describes LDAP object classes and attributes
-    required to extend hosts entries [draft-bannister-dbis-hosts-00] to support parameters
-    for ethers and bootparams maps.</p>"
-  format: text/html
+  content: |-
+    <p>This document extends Directory-Based Information Services (DBIS)
+       described in [draft-bannister-dbis-mapping-00] to support ethers and
+       bootparams databases.
+
+       The database schemas SHALL be backwards compatible with the Network
+       Information Service [NIS] but stored within [X.500] entries so that
+       they may be resolved with the Lightweight Directory Access Protocol
+       [RFC4510].
+
+       An ethers database maps 48-bit Ethernet addresses to IP addresses or
+       host names, and bootparams maps hosts to boot-time kernel parameters.
+
+       This document describes LDAP object classes and attributes required
+       to extend hosts entries [draft-bannister-dbis-hosts-00] to support
+       parameters for ethers and bootparams maps.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bannister-dbis-devices-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bannister-dbis-devices-01
     docidentifier:
     - content: draft-bannister-dbis-devices-01
       type: Internet-Draft
@@ -77,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bannister-dbis-devices-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ISP Location in DNS Queries
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pan-dnsop-edns-isp-location-06
 docidentifier:
+- content: draft-pan-dnsop-edns-isp-location
+  type: Internet-Draft
 - content: draft-pan-dnsop-edns-isp-location-06
   type: Internet-Draft
   primary: true
-- content: I-D.pan-dnsop-edns-isp-location
-  type: IETF
-  scope: anchor
 docnumber: I-D.pan-dnsop-edns-isp-location
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Pan
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -46,6 +46,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -59,15 +60,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Unicom
+        - language: en
+          content: China Unicom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Cuicui
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -81,7 +85,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Unicom
+        - language: en
+          content: China Unicom
 version:
 - content: '06'
 language:
@@ -91,24 +96,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Nowadays, many authoritative servers support GeoIP feature, they guess
-    the client's geolocation by the client subnet of EDNS Client Subnet (ECS) or by
-    the source IP address of DNS query, return tailor DNS response based on the client's
-    geolocation. However, ECS raises some privacy concerns because it leaks client
-    subnet information on the resolution path to the authoritative server. This document
-    describes an improved GeoIP solution, defines an EDNS ISP Location (EIL) extension
-    to address the privacy problem of ECS, tries to find the right balance between
-    privacy improvement and user experience optimization. EIL is defined to convey
-    isp location &lt; COUNTRY, AREA, ISP &gt; information that is relevant to the
-    DNS message. It will directly provide sufficient information for the GeoIP-enabled
-    authoritative server as ECS, decide the response without guessing client's geolocation.</p>"
-  format: text/html
+  content: |-
+    <p>Nowadays, many authoritative servers support GeoIP feature, they
+       guess the client's geolocation by the client subnet of EDNS Client
+       Subnet (ECS) or by the source IP address of DNS query, return tailor
+       DNS response based on the client's geolocation.  However, ECS raises
+       some privacy concerns because it leaks client subnet information on
+       the resolution path to the authoritative server.
+
+       This document describes an improved GeoIP solution, defines an EDNS
+       ISP Location (EIL) extension to address the privacy problem of ECS,
+       tries to find the right balance between privacy improvement and user
+       experience optimization.
+
+       EIL is defined to convey isp location &lt; COUNTRY, AREA, ISP &gt;
+       information that is relevant to the DNS message.  It will directly
+       provide sufficient information for the GeoIP-enabled authoritative
+       server as ECS, decide the response without guessing client's
+       geolocation.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-pan-dnsop-edns-isp-location-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pan-dnsop-edns-isp-location-05
     docidentifier:
     - content: draft-pan-dnsop-edns-isp-location-05
       type: Internet-Draft
@@ -119,10 +132,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pan-dnsop-edns-isp-location-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

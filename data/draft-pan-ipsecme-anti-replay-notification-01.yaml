@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IKEv2 Support for Anti-Replay Status Notification
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pan-ipsecme-anti-replay-notification-01
 docidentifier:
+- content: draft-pan-ipsecme-anti-replay-notification
+  type: Internet-Draft
 - content: draft-pan-ipsecme-anti-replay-notification-01
   type: Internet-Draft
   primary: true
-- content: I-D.pan-ipsecme-anti-replay-notification
-  type: IETF
-  scope: anchor
 docnumber: I-D.pan-ipsecme-anti-replay-notification
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wei
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,13 +43,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: Q
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -85,7 +90,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aiven
+        - language: en
+          content: Aiven
 version:
 - content: '01'
 language:
@@ -95,22 +101,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Although RFC 4302 and RFC 4303 don't prohibit using Extended Sequence
-    Number (ESN) when the anti-replay function is not enabled, many IPsec implementations
-    require ESN to be used only with anti-replay. Therefore, failing to negotiate
-    the use of ESN when the anti-replay is disabled will cause the sequence numbers
-    to exhaust rapidly in high-traffic-volume scenarios, leading to the frequent rekey
-    of Child SAs. This document defines the REPLAY_PROT_AND_ESN_STATUS Notify Message
-    Status Type Payload in the Internet Key Exchange Protocol Version 2 (IKEv2) to
-    inform the peer of its replay protection status and capability of using ESN without
-    anti-replay when creating the Child SAs, to address the above problem.</p>"
-  format: text/html
+  content: |-
+    <p>Although RFC 4302 and RFC 4303 don't prohibit using Extended Sequence
+       Number (ESN) when the anti-replay function is not enabled, many IPsec
+       implementations require ESN to be used only with anti-replay.
+       Therefore, failing to negotiate the use of ESN when the anti-replay
+       is disabled will cause the sequence numbers to exhaust rapidly in
+       high-traffic-volume scenarios, leading to the frequent rekey of Child
+       SAs.
+
+       This document defines the REPLAY_PROT_AND_ESN_STATUS Notify Message
+       Status Type Payload in the Internet Key Exchange Protocol Version 2
+       (IKEv2) to inform the peer of its replay protection status and
+       capability of using ESN without anti-replay when creating the Child
+       SAs, to address the above problem.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-pan-ipsecme-anti-replay-notification-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pan-ipsecme-anti-replay-notification-00
     docidentifier:
     - content: draft-pan-ipsecme-anti-replay-notification-00
       type: Internet-Draft
@@ -121,10 +133,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pan-ipsecme-anti-replay-notification-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

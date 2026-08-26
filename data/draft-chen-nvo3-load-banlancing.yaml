@@ -1,11 +1,12 @@
 ---
 id: draftchennvo3loadbanlancing
 schema_version: v1.5.6
+formattedref:
+  content: draft-chen-nvo3-load-banlancing
 title:
 - language: en
   script: Latn
   content: Load balancing without packet reordering in NVO3
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-nvo3-load-banlancing-00
@@ -19,20 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Traditional ECMP can not balance loads well in the data center network
-    because it splits loads at the granularity of flow. Packets belong to a single
-    flow have to be delivered along the same path. Though it is able to avoid packet
-    reordering, it may degrade the bandwidth utilization. This document describes
-    method of splitting a single flow to across multiple parallel paths without causing
-    packet reordering, which is more effective when large flows exist. The specific
-    path selection algorithm is NOT discussed in this document.</p>"
-  format: text/html
+  content: |-
+    <p>Traditional ECMP can not balance loads well in the data center
+       network because it splits loads at the granularity of flow.  Packets
+       belong to a single flow have to be delivered along the same path.
+       Though it is able to avoid packet reordering, it may degrade the
+       bandwidth utilization.
+
+       This document describes method of splitting a single flow to across
+       multiple parallel paths without causing packet reordering, which is
+       more effective when large flows exist.  The specific path selection
+       algorithm is NOT discussed in this document.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-chen-nvo3-load-banlancing-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-nvo3-load-banlancing-00
     docidentifier:
     - content: draft-chen-nvo3-load-banlancing-00
       type: Internet-Draft
@@ -41,4 +47,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,12 +1,13 @@
 ---
 id: draftthomassendnsopdnssecbootstrapping
 schema_version: v1.5.6
+formattedref:
+  content: draft-thomassen-dnsop-dnssec-bootstrapping
 title:
 - language: en
   script: Latn
   content: Automatic DNSSEC Bootstrapping using Authenticated Signals from the Zone's
     Operator
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-dnssec-bootstrapping-03
@@ -20,30 +21,40 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document introduces an in-band method for DNS operators to publish
-    arbitrary information about the zones they are authoritative for, in an authenticated
-    fashion and on a per-zone basis. The mechanism allows managed DNS operators to
-    securely announce DNSSEC key parameters for zones under their management, including
-    for zones that are not currently securely delegated. Whenever DS records are absent
-    for a zone''s delegation, this signal enables the parent''s registry or registrar
-    to cryptographically validate the CDS/CDNSKEY records found at the child''s apex.
-    The parent can then provision DS records for the delegation without resorting
-    to out-of-band validation or weaker types of cross-checks such as "Accept after
-    Delay" ([RFC8078]). This document updates [RFC8078] and replaces its Section 3
-    with Section 3.2 of this document. [ Ed note: Text inside square brackets ([])
-    is additional background information, answers to frequently asked questions, general
-    musings, etc. They will be removed before publication. This document is being
-    collaborated on at https://github.com/desec-io/draft-thomassen- dnsop-dnssec-bootstrapping/
-    (https://github.com/desec-io/draft- thomassen-dnsop-dnssec-bootstrapping/). The
-    most recent version of the document, open issues, etc. should all be available
-    there. The authors gratefully accept pull requests. ]</p>'
-  format: text/html
+  content: |-
+    <p>This document introduces an in-band method for DNS operators to
+       publish arbitrary information about the zones they are authoritative
+       for, in an authenticated fashion and on a per-zone basis.  The
+       mechanism allows managed DNS operators to securely announce DNSSEC
+       key parameters for zones under their management, including for zones
+       that are not currently securely delegated.
+
+       Whenever DS records are absent for a zone's delegation, this signal
+       enables the parent's registry or registrar to cryptographically
+       validate the CDS/CDNSKEY records found at the child's apex.  The
+       parent can then provision DS records for the delegation without
+       resorting to out-of-band validation or weaker types of cross-checks
+       such as "Accept after Delay" ([RFC8078]).
+
+       This document updates [RFC8078] and replaces its Section 3 with
+       Section 3.2 of this document.
+
+       [ Ed note: Text inside square brackets ([]) is additional background
+       information, answers to frequently asked questions, general musings,
+       etc.  They will be removed before publication.  This document is
+       being collaborated on at https://github.com/desec-io/draft-thomassen-
+       dnsop-dnssec-bootstrapping/ (https://github.com/desec-io/draft-
+       thomassen-dnsop-dnssec-bootstrapping/).  The most recent version of
+       the document, open issues, etc. should all be available there.  The
+       authors gratefully accept pull requests. ]</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-dnssec-bootstrapping-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-dnssec-bootstrapping-00
     docidentifier:
     - content: draft-thomassen-dnsop-dnssec-bootstrapping-00
       type: Internet-Draft
@@ -52,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-dnssec-bootstrapping-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-dnssec-bootstrapping-01
     docidentifier:
     - content: draft-thomassen-dnsop-dnssec-bootstrapping-01
       type: Internet-Draft
@@ -61,7 +74,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-dnssec-bootstrapping-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-dnssec-bootstrapping-02
     docidentifier:
     - content: draft-thomassen-dnsop-dnssec-bootstrapping-02
       type: Internet-Draft
@@ -70,7 +85,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-thomassen-dnsop-dnssec-bootstrapping-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomassen-dnsop-dnssec-bootstrapping-03
     docidentifier:
     - content: draft-thomassen-dnsop-dnssec-bootstrapping-03
       type: Internet-Draft
@@ -79,4 +96,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

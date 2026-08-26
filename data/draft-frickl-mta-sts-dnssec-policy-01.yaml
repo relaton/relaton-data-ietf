@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Filename:'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-frickl-mta-sts-dnssec-policy-01
 docidentifier:
+- content: draft-frickl-mta-sts-dnssec-policy
+  type: Internet-Draft
 - content: draft-frickl-mta-sts-dnssec-policy-01
   type: Internet-Draft
   primary: true
-- content: I-D.frickl-mta-sts-dnssec-policy
-  type: IETF
-  scope: anchor
 docnumber: I-D.frickl-mta-sts-dnssec-policy
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gunther
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Private Contributor
+        - language: en
+          content: Private Contributor
 version:
 - content: '01'
 language:
@@ -53,20 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document proposes a minimal, backward-compatible extension to the
-    SMTP MTA-STS policy format by adding an optional field "dnssec:" to indicate whether
-    the recipient domain operator expects DNSSEC validation to be active. This allows
-    sending MTAs to detect silent DNSSEC stripping attacks and apply more secure delivery
-    behavior accordingly. The mechanism leverages the existing HTTPS-secured delivery
-    channel of MTA-STS and does not require changes to the DNS infrastructure or SMTP
+  content: |-
+    <p>This document proposes a minimal, backward-compatible extension to the
+    SMTP MTA-STS policy format by adding an optional field "dnssec:" to
+    indicate whether the recipient domain operator expects DNSSEC validation
+    to be active. This allows sending MTAs to detect silent DNSSEC stripping
+    attacks and apply more secure delivery behavior accordingly. The
+
+    mechanism leverages the existing HTTPS-secured delivery channel of
+    MTA-STS and does not require changes to the DNS infrastructure or SMTP
     protocol.</p>
-  format: text/html
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-frickl-mta-sts-dnssec-policy-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-frickl-mta-sts-dnssec-policy-00
     docidentifier:
     - content: draft-frickl-mta-sts-dnssec-policy-00
       type: Internet-Draft
@@ -75,7 +80,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-frickl-mta-sts-dnssec-policy-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-frickl-mta-sts-dnssec-policy-02
     docidentifier:
     - content: draft-frickl-mta-sts-dnssec-policy-02
       type: Internet-Draft
@@ -86,10 +93,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-frickl-mta-sts-dnssec-policy-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

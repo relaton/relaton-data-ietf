@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Crypto-Conditions
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-thomas-crypto-conditions-04
 docidentifier:
+- content: draft-thomas-crypto-conditions
+  type: Internet-Draft
 - content: draft-thomas-crypto-conditions-04
   type: Internet-Draft
   primary: true
-- content: I-D.thomas-crypto-conditions
-  type: IETF
-  scope: anchor
 docnumber: I-D.thomas-crypto-conditions
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Stefan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ripple
+        - language: en
+          content: Ripple
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rome
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ripple
+        - language: en
+          content: Ripple
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Adrian
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ripple
+        - language: en
+          content: Ripple
 version:
 - content: '04'
 language:
@@ -97,31 +104,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The crypto-conditions specification defines a set of encoding formats
-    and data structures for *conditions* and *fulfillments*. A condition uniquely
-    identifies a logical "boolean circuit" constructed from one or more logic gates,
-    evaluated by either validating a cryptographic signature or verifying the preimage
-    of a hash digest. A fulfillment is a data structure encoding one or more cryptographic
-    signatures and hash digest preimages that define the structure of the circuit
-    and provide inputs to the logic gates allowing for the result of the circuit to
-    be evaluated. A fulfillment is validated by evaluating that the circuit output
-    is TRUE but also that the provided fulfillment matches the circuit fingerprint,
-    the condition. Since evaluation of some of the logic gates in the circuit (those
-    that are signatures) also take a message as input the evaluation of the entire
-    fulfillment takes an optional input message which is passed to each logic gate
-    as required. As such the algorithm to validate a fulfillment against a condition
-    and a message matches that of other signature schemes and a crypto-condition can
-    serve as a sophisticated and flexible replacement for a simple signature where
-    the condition is used as the public key and the fulfillment as the signature.</p>
-  format: text/html
+  content: |-
+    <p>The crypto-conditions specification defines a set of encoding formats
+       and data structures for *conditions* and *fulfillments*.  A condition
+       uniquely identifies a logical "boolean circuit" constructed from one
+       or more logic gates, evaluated by either validating a cryptographic
+       signature or verifying the preimage of a hash digest.  A fulfillment
+       is a data structure encoding one or more cryptographic signatures and
+       hash digest preimages that define the structure of the circuit and
+       provide inputs to the logic gates allowing for the result of the
+       circuit to be evaluated.
+
+       A fulfillment is validated by evaluating that the circuit output is
+       TRUE but also that the provided fulfillment matches the circuit
+       fingerprint, the condition.
+
+       Since evaluation of some of the logic gates in the circuit (those
+       that are signatures) also take a message as input the evaluation of
+       the entire fulfillment takes an optional input message which is
+       passed to each logic gate as required.  As such the algorithm to
+       validate a fulfillment against a condition and a message matches that
+       of other signature schemes and a crypto-condition can serve as a
+       sophisticated and flexible replacement for a simple signature where
+       the condition is used as the public key and the fulfillment as the
+       signature.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-thomas-crypto-conditions-00
-      format: text/plain
+      content: draft-thomas-crypto-conditions-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thomas-crypto-conditions-03
     docidentifier:
-    - content: draft-thomas-crypto-conditions-00
+    - content: draft-thomas-crypto-conditions-03
       type: Internet-Draft
       primary: true
 series:
@@ -130,10 +146,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-thomas-crypto-conditions-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

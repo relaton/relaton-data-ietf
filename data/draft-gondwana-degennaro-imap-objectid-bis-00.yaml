@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IMAP Extension for Object Identifiers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gondwana-degennaro-imap-objectid-bis-00
 docidentifier:
+- content: draft-gondwana-degennaro-imap-objectid-bis
+  type: Internet-Draft
 - content: draft-gondwana-degennaro-imap-objectid-bis-00
   type: Internet-Draft
   primary: true
-- content: I-D.gondwana-degennaro-imap-objectid-bis
-  type: IETF
-  scope: anchor
 docnumber: I-D.gondwana-degennaro-imap-objectid-bis
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bron
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fastmail
+        - language: en
+          content: Fastmail
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mauro
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Stalwart Labs LLC
+        - language: en
+          content: Stalwart Labs LLC
 version:
 - content: '00'
 language:
@@ -75,28 +79,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document updates [RFC3501] (IMAP4rev1) with persistent identifiers
-    on mailboxes and messages to allow clients to more efficiently reuse cached data
-    when resources have changed location on the server. This document obsoletes [RFC8474]
-    by making all object identifier types optional, introducing the OBJECTIDBIS capability
-    with mandatory ENABLE negotiation, and extending the framework to include account-
-    level context through the ACCOUNTID identifier. The ENABLE requirement ensures
-    that servers can implement the extension without altering the IMAP grammar for
-    clients that do not understand the extension. The account identifier extension
-    enables IMAP servers to provide account-level context for mailboxes when multiple
-    accounts are accessible through a single IMAP connection, facilitating interoperability
-    with the JSON Meta Application Protocol (JMAP) in multi-account scenarios.</p>"
-  format: text/html
+  content: |-
+    <p>This document updates [RFC3501] (IMAP4rev1) with persistent
+       identifiers on mailboxes and messages to allow clients to more
+       efficiently reuse cached data when resources have changed location on
+       the server.
+
+       This document obsoletes [RFC8474] by making all object identifier
+       types optional, introducing the OBJECTIDBIS capability with mandatory
+       ENABLE negotiation, and extending the framework to include account-
+       level context through the ACCOUNTID identifier.  The ENABLE
+       requirement ensures that servers can implement the extension without
+       altering the IMAP grammar for clients that do not understand the
+       extension.  The account identifier extension enables IMAP servers to
+       provide account-level context for mailboxes when multiple accounts
+       are accessible through a single IMAP connection, facilitating
+       interoperability with the JSON Meta Application Protocol (JMAP) in
+       multi-account scenarios.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-gondwana-degennaro-imap-objectid-bis-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

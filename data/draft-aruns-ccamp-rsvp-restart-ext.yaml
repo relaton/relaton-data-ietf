@@ -1,11 +1,12 @@
 ---
 id: draftarunsccamprsvprestartext
 schema_version: v1.5.6
+formattedref:
+  content: draft-aruns-ccamp-rsvp-restart-ext
 title:
 - language: en
   script: Latn
   content: Extensions to GMPLS RSVP Graceful Restart
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-aruns-ccamp-rsvp-restart-ext-01
@@ -19,28 +20,34 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes extensions to the RSVP Graceful Restart mechanisms
-    defined in [RFC3473]. The extensions enable the recovery of RSVP signaling state
-    based on the Path message last sent by the node being restarted. Previously defined
-    Graceful Restart mechanisms, also called recovery from nodal faults, permit recovery
-    of signaling state from adjacent nodes when the data plane has retained the associated
-    forwarding state across a restart. These mechanisms do not fully support signaling
-    state recovery on ingress nodes or recovery of all RSVP objects. The presented
-    extensions use the RSVP Hello extensions defined in [RFC3209], and extensions
-    for state recovery on nodal faults defined in [RFC3473]. With the presented extensions
-    the restarting node can recover all previously transmitted Path state including
-    the ERO and the downstream (outgoing) interface identifiers. The extensions can
-    also be used to recover signaling state after the restart of an ingress node.
-    The extensions optionally support the use of Summary Refresh, defined in [RFC2961],
-    to reduce the number of messages exchanged during the Recovery Phase when the
-    restarting node has recovered signaling state locally for one or more LSP's.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes extensions to the RSVP Graceful Restart
+       mechanisms defined in [RFC3473].  The extensions enable the recovery
+       of RSVP signaling state based on the Path message last sent by the
+       node being restarted.  Previously defined Graceful Restart
+       mechanisms, also called recovery from nodal faults, permit recovery
+       of signaling state from adjacent nodes when the data plane has
+       retained the associated forwarding state across a restart.  These
+       mechanisms do not fully support signaling state recovery on ingress
+       nodes or recovery of all RSVP objects.  The presented extensions use
+       the RSVP Hello extensions defined in [RFC3209], and extensions for
+       state recovery on nodal faults defined in [RFC3473].  With the
+       presented extensions the restarting node can recover all previously
+       transmitted Path state including the ERO and the downstream
+       (outgoing) interface identifiers.  The extensions can also be used to
+       recover signaling state after the restart of an ingress node.  The
+       extensions optionally support the use of Summary Refresh, defined in
+       [RFC2961], to reduce the number of messages exchanged during the
+       Recovery Phase when the restarting node has recovered signaling state
+       locally for one or more LSP's.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-aruns-ccamp-rsvp-restart-ext-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-aruns-ccamp-rsvp-restart-ext-01
     docidentifier:
     - content: draft-aruns-ccamp-rsvp-restart-ext-01
       type: Internet-Draft
@@ -49,4 +56,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

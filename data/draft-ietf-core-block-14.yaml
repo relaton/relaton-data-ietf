@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Blockwise transfers in CoAP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-core-block-14
 docidentifier:
+- content: draft-ietf-core-block
+  type: Internet-Draft
 - content: draft-ietf-core-block-14
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-core-block
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-core-block
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Carsten
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zach
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -67,40 +69,52 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>CoAP is a RESTful transfer protocol for constrained nodes and networks.
-    Basic CoAP messages work well for the small payloads we expect from temperature
-    sensors, light switches, and similar building-automation devices. Occasionally,
-    however, applications will need to transfer larger payloads -- for instance, for
-    firmware updates. With HTTP, TCP does the grunt work of slicing large payloads
-    up into multiple packets and ensuring that they all arrive and are handled in
-    the right order. CoAP is based on datagram transports such as UDP or DTLS, which
-    limits the maximum size of resource representations that can be transferred without
-    too much fragmentation. Although UDP supports larger payloads through IP fragmentation,
-    it is limited to 64 KiB and, more importantly, doesn''t really work well for constrained
-    applications and networks. Instead of relying on IP fragmentation, this specification
-    extends basic CoAP with a pair of "Block" options, for transferring multiple blocks
-    of information from a resource representation in multiple request-response pairs.
-    In many important cases, the Block options enable a server to be truly stateless:
-    the server can handle each block transfer separately, with no need for a connection
-    setup or other server-side memory of previous block transfers. In summary, the
-    Block options provide a minimal way to transfer larger representations in a block-wise
-    fashion.</p>'
-  format: text/html
+  content: |-
+    <p>CoAP is a RESTful transfer protocol for constrained nodes and
+       networks.  Basic CoAP messages work well for the small payloads we
+       expect from temperature sensors, light switches, and similar
+       building-automation devices.  Occasionally, however, applications
+       will need to transfer larger payloads -- for instance, for
+       firmware updates.  With HTTP, TCP does the grunt work of slicing
+       large payloads up into multiple packets and ensuring that they all
+       arrive and are handled in the right order.
+
+       CoAP is based on datagram transports such as UDP or DTLS, which
+       limits the maximum size of resource representations that can be
+       transferred without too much fragmentation.  Although UDP supports
+       larger payloads through IP fragmentation, it is limited to 64 KiB
+       and, more importantly, doesn't really work well for constrained
+       applications and networks.
+
+       Instead of relying on IP fragmentation, this specification extends
+       basic CoAP with a pair of "Block" options, for transferring multiple
+       blocks of information from a resource representation in multiple
+       request-response pairs.  In many important cases, the Block options
+       enable a server to be truly stateless: the server can handle each
+       block transfer separately, with no need for a connection setup or
+       other server-side memory of previous block transfers.
+
+       In summary, the Block options provide a minimal way to transfer
+       larger representations in a block-wise fashion.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-core-block-11
-      format: text/plain
+      content: draft-ietf-core-block-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-core-block-13
     docidentifier:
-    - content: draft-ietf-core-block-11
+    - content: draft-ietf-core-block-13
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-core-block-15
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-core-block-15
     docidentifier:
     - content: draft-ietf-core-block-15
       type: Internet-Draft
@@ -111,10 +125,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-core-block-14
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

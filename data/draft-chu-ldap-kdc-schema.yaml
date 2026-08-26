@@ -1,11 +1,12 @@
 ---
 id: draftchuldapkdcschema
 schema_version: v1.5.6
+formattedref:
+  content: draft-chu-ldap-kdc-schema
 title:
 - language: en
   script: Latn
   content: An LDAP Schema for Kerberos KDC Information
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chu-ldap-kdc-schema-00
@@ -19,28 +20,36 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an LDAP [RFC4511] schema for implementing the
-    Kerberos 5 [RFC4120] KDC Information Model [I-D.ietf-krb-wg-kdc-model]. It also
-    defines additional elements which are not covered by the Information Model, but
-    are already in common use.1. Background and Motivation Both Kerberos and LDAP
-    are frequently used separately for distributed authentication. They can also be
-    used in combination, but typically their user databases remained separate. This
-    distinction in databases causes unnecessary duplication of data and administration
-    overhead. As such it is desirable for both systems to share a single database.
-    Since the LDAP data model is more general it is most appropriate to store the
-    Kerberos data in LDAP. A number of Kerberos implementations already have support
-    for using LDAP as their KDC backing store. However, each implementation uses its
-    own schema, and the multiple schemas are mutually incompatible. For the sake of
-    interoperability and administrative ease, it is important to define a single standard
-    schema that can be used uniformly by all Kerberos KDC implementations and interoperates
-    with existing LDAP specifications.2. General Issues</p>"
-  format: text/html
+  content: |-
+    <p>This document describes an LDAP [RFC4511] schema for implementing the
+    Kerberos 5 [RFC4120] KDC Information Model
+    [I-D.ietf-krb-wg-kdc-model].  It also defines additional elements
+    which are not covered by the Information Model, but are already in
+    common use.1.  Background and Motivation
+
+    Both Kerberos and LDAP are frequently used separately for distributed
+    authentication.  They can also be used in combination, but typically
+    their user databases remained separate.  This distinction in
+    databases causes unnecessary duplication of data and administration
+    overhead.  As such it is desirable for both systems to share a single
+    database.  Since the LDAP data model is more general it is most
+    appropriate to store the Kerberos data in LDAP.
+
+    A number of Kerberos implementations already have support for using
+    LDAP as their KDC backing store.  However, each implementation uses
+    its own schema, and the multiple schemas are mutually incompatible.
+    For the sake of interoperability and administrative ease, it is
+    important to define a single standard schema that can be used
+    uniformly by all Kerberos KDC implementations and interoperates with
+    existing LDAP specifications.2.  General Issues</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-chu-ldap-kdc-schema-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chu-ldap-kdc-schema-00
     docidentifier:
     - content: draft-chu-ldap-kdc-schema-00
       type: Internet-Draft
@@ -49,4 +58,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

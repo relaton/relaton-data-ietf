@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'ApertoID-Signature: HTTP Request Signing for AI Agent Identity'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ferro-httpbis-apertoid-sig-01
 docidentifier:
+- content: draft-ferro-httpbis-apertoid-sig
+  type: Internet-Draft
 - content: draft-ferro-httpbis-apertoid-sig-01
   type: Internet-Draft
   primary: true
-- content: I-D.ferro-httpbis-apertoid-sig
-  type: IETF
-  scope: anchor
 docnumber: I-D.ferro-httpbis-apertoid-sig
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrea
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ApertoID
+        - language: en
+          content: ApertoID
 version:
 - content: '01'
 language:
@@ -53,20 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the ApertoID-Signature HTTP header field, which
-    enables AI agents to cryptographically prove their identity on each HTTP request.
-    The agent signs the request method, target URL, body hash, and identity metadata
-    using an Ed25519 private key whose corresponding public key is published in DNS
-    via the ApertoID protocol [APERTOID-DNS]. The mechanism provides request-level
-    identity verification, action binding (the signature is tied to the specific method
-    and URL), and replay protection via timestamps and nonces.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the ApertoID-Signature HTTP header field, which
+       enables AI agents to cryptographically prove their identity on each
+       HTTP request.  The agent signs the request method, target URL, body
+       hash, and identity metadata using an Ed25519 private key whose
+       corresponding public key is published in DNS via the ApertoID
+       protocol [APERTOID-DNS].  The mechanism provides request-level
+       identity verification, action binding (the signature is tied to the
+       specific method and URL), and replay protection via timestamps and
+       nonces.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ferro-httpbis-apertoid-sig-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-httpbis-apertoid-sig-00
     docidentifier:
     - content: draft-ferro-httpbis-apertoid-sig-00
       type: Internet-Draft
@@ -75,7 +80,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ferro-httpbis-apertoid-sig-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ferro-httpbis-apertoid-sig-02
     docidentifier:
     - content: draft-ferro-httpbis-apertoid-sig-02
       type: Internet-Draft
@@ -86,10 +93,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ferro-httpbis-apertoid-sig-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

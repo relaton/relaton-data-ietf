@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Secure Element for TLS Version 1.3
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-urien-tls-se-02
 docidentifier:
+- content: draft-urien-tls-se
+  type: Internet-Draft
 - content: draft-urien-tls-se-02
   type: Internet-Draft
   primary: true
-- content: I-D.urien-tls-se
-  type: IETF
-  scope: anchor
 docnumber: I-D.urien-tls-se
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Pascal
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Telecom Paris
+        - language: en
+          content: Telecom Paris
 version:
 - content: '02'
 language:
@@ -53,37 +54,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft presents ISO7816 interface for TLS1.3 stack running in secure
-    element. It presents supported cipher suites and key exchange modes, and describes
-    embedded software architecture. TLS 1.3 is the de facto security stack for emerging
-    Internet of Things (IoT) devices. Some of them are constraint nodes, with limited
-    computing resources. Furthermore cheap System on Chip (SoC) components usually
-    provide tamper resistant features, so private or pre shared keys are exposed to
-    hacking. According to the technology state of art, some ISO7816 secure elements
-    are able to process TLS 1.3, but with a limited set of cipher suites. There are
-    two benefits for TLS-SE; first fully tamper resistant processing of TLS protocol,
-    which increases the security level insurance; second embedded software component
-    ready for use, which relieves the software of the burden of cryptographic libraries
-    and associated attacks. TLS-SE devices may also embed standalone applications,
-    which are accessed via internet node, using a routing procedure based on SNI extension.</p>"
-  format: text/html
+  content: |-
+    <p>This draft presents ISO7816 interface for TLS1.3 stack running in
+       secure element. It presents supported cipher suites and key exchange
+       modes, and describes embedded software architecture. TLS 1.3 is the
+       de facto security stack for emerging Internet of Things (IoT)
+       devices. Some of them are constraint nodes, with limited computing
+       resources. Furthermore cheap System on Chip (SoC) components usually
+       provide tamper resistant features, so private or pre shared keys are
+       exposed to hacking. According to the technology state of art, some
+       ISO7816 secure elements are able to process TLS 1.3, but with a
+       limited set of cipher suites. There are two benefits for TLS-SE;
+       first fully tamper resistant processing of TLS protocol, which
+       increases the security level insurance; second embedded software
+       component ready for use, which relieves the software of the burden
+       of cryptographic libraries and associated attacks. TLS-SE devices
+       may also embed standalone applications, which are accessed via
+       internet node, using a routing procedure based on SNI extension.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-urien-tls-se-00
-      format: text/plain
+      content: draft-urien-tls-se-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-urien-tls-se-01
     docidentifier:
-    - content: draft-urien-tls-se-00
+    - content: draft-urien-tls-se-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-urien-tls-se-06
-      format: text/plain
+      content: draft-urien-tls-se-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-urien-tls-se-03
     docidentifier:
-    - content: draft-urien-tls-se-06
+    - content: draft-urien-tls-se-03
       type: Internet-Draft
       primary: true
 series:
@@ -92,10 +100,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-urien-tls-se-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

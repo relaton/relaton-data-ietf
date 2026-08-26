@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Transport Considerations for Large-Scale Distributed Inference Networks
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-tsvwg-inference-transport-00
 docidentifier:
+- content: draft-li-tsvwg-inference-transport
+  type: Internet-Draft
 - content: draft-li-tsvwg-inference-transport-00
   type: Internet-Draft
   primary: true
-- content: I-D.li-tsvwg-inference-transport
-  type: IETF
-  scope: anchor
 docnumber: I-D.li-tsvwg-inference-transport
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zhiqiang
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zongpeng
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Junjie
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Centec
+        - language: en
+          content: Centec
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wei
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Centec
+        - language: en
+          content: Centec
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Guoying
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -131,15 +143,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Centec
+        - language: en
+          content: Centec
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xun
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -153,15 +168,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Inesa
+        - language: en
+          content: Inesa
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Chunhao
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -175,7 +193,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SAIA
+        - language: en
+          content: SAIA
 version:
 - content: '00'
 language:
@@ -185,28 +204,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Large-scale distributed inference systems generate traffic patterns
-    that differ from both traditional data center workloads and distributed training
-    workloads. Disaggregated prefill/decode serving transfers key-value cache state
-    between server pools, and expert- parallel architectures generate all-to-all traffic
-    among expert groups. These flows are typically carried over a small number of
-    RDMA connections, producing low-entropy traffic that is prone to uneven link utilization
-    under Equal-Cost Multipath (ECMP) forwarding. This document specifies transport
-    considerations for such networks, covering path load awareness, path steering
-    through ECMP entropy variation, ordering tolerance at the receiver, and differentiated
-    reliability for data with different loss sensitivity. The discussion builds on
-    existing IETF building blocks; this document does not define new protocol elements.</p>"
-  format: text/html
+  content: |-
+    <p>Large-scale distributed inference systems generate traffic patterns
+       that differ from both traditional data center workloads and
+       distributed training workloads.  Disaggregated prefill/decode serving
+       transfers key-value cache state between server pools, and expert-
+       parallel architectures generate all-to-all traffic among expert
+       groups.  These flows are typically carried over a small number of
+       RDMA connections, producing low-entropy traffic that is prone to
+       uneven link utilization under Equal-Cost Multipath (ECMP) forwarding.
+
+       This document specifies transport considerations for such networks,
+       covering path load awareness, path steering through ECMP entropy
+       variation, ordering tolerance at the receiver, and differentiated
+       reliability for data with different loss sensitivity.  The discussion
+       builds on existing IETF building blocks; this document does not
+       define new protocol elements.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-li-tsvwg-inference-transport-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

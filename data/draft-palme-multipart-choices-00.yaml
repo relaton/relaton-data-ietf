@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The multipart/choices Content-Type
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-palme-multipart-choices-00
 docidentifier:
+- content: draft-palme-multipart-choices
+  type: Internet-Draft
 - content: draft-palme-multipart-choices-00
   type: Internet-Draft
   primary: true
-- content: I-D.palme-multipart-choices
-  type: IETF
-  scope: anchor
 docnumber: I-D.palme-multipart-choices
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jacob
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Stockholm University/KTH
+        - language: en
+          content: Stockholm University/KTH
 version:
 - content: '00'
 language:
@@ -53,25 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo specifies that the existing MIME content-type 'multipart/alternative'
-    should be restricted to cases where the alternatives differ in their content-type.
-    When the alternatives differ in other properties than content-type, a new 'multipart/choices'
-    content-type is to be used instead. This is necessary, because the present specification
-    gives extremely bad downgrading for mailers not supporting use of 'multipart/alternative'
-    for other differences than content-type. This memo also specifies a mandatory
-    parameter to multipart/choices. This mandatory parameter will hopefully avoid
-    the same problem occuring again in the future.</p>"
-  format: text/html
+  content: |-
+    <p>This memo specifies that the existing MIME content-type
+    'multipart/alternative' should be restricted to cases where the
+    alternatives differ in their content-type. When the alternatives differ
+    in other properties than content-type, a new 'multipart/choices'
+    content-type is to be used instead. This is necessary, because the
+    present specification gives extremely bad downgrading for mailers not
+    supporting use of 'multipart/alternative' for other differences than
+    content-type. This memo also specifies a mandatory parameter to
+    multipart/choices. This mandatory parameter will hopefully avoid the
+    same problem occuring again in the future.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-palme-multipart-choices-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Trust Assertions for Certificate Keys
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-perrin-tls-tack-01
 docidentifier:
+- content: draft-perrin-tls-tack
+  type: Internet-Draft
 - content: draft-perrin-tls-tack-01
   type: Internet-Draft
   primary: true
-- content: I-D.perrin-tls-tack
-  type: IETF
-  scope: anchor
 docnumber: I-D.perrin-tls-tack
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Moxie
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -49,19 +49,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines TACK, a TLS Extension that enables a TLS server
-    to assert the authenticity of its public key. A "tack" contains a "TACK key" which
-    is used to sign the public key from the TLS server's certificate. Hostnames can
-    be "pinned" to a TACK key. TLS connections to a pinned hostname require the server
-    to present a tack containing the pinned key and a corresponding signature over
-    the TLS server's public key.</p>
-  format: text/html
+  content: |-
+    <p>This document defines TACK, a TLS Extension that enables a TLS server
+       to assert the authenticity of its public key.  A "tack" contains a
+       "TACK key" which is used to sign the public key from the TLS server's
+       certificate.  Hostnames can be "pinned" to a TACK key.  TLS
+       connections to a pinned hostname require the server to present a tack
+       containing the pinned key and a corresponding signature over the TLS
+       server's public key.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-perrin-tls-tack-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-perrin-tls-tack-00
     docidentifier:
     - content: draft-perrin-tls-tack-00
       type: Internet-Draft
@@ -70,7 +73,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-perrin-tls-tack-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-perrin-tls-tack-02
     docidentifier:
     - content: draft-perrin-tls-tack-02
       type: Internet-Draft
@@ -81,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-perrin-tls-tack-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

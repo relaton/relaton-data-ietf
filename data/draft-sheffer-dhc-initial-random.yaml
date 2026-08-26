@@ -1,11 +1,12 @@
 ---
 id: draftshefferdhcinitialrandom
 schema_version: v1.5.6
+formattedref:
+  content: draft-sheffer-dhc-initial-random
 title:
 - language: en
   script: Latn
   content: A DHCP Extension To Provide Initial Random Material
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sheffer-dhc-initial-random-00
@@ -19,22 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Some network devices get little or no entropy from their underlying
-    operating systems when they are first started. As a result, cryptographic applications
-    started before there is sufficient entropy in the operating system's pool can
-    be initialized into a state that can be exploited by an attacker. This document
-    defines a DHCP extension that can provide the operating system of a network device
-    with some initial randomness that can only be known by an attacker who is on the
-    same network segment as the device and its DHCP server. The operating system can
-    mix this random input into its random pool early in the boot procedure and thus
-    have more entropy available when cryptographic applications start.</p>"
-  format: text/html
+  content: |-
+    <p>Some network devices get little or no entropy from their underlying
+       operating systems when they are first started.  As a result,
+       cryptographic applications started before there is sufficient entropy
+       in the operating system's pool can be initialized into a state that
+       can be exploited by an attacker.  This document defines a DHCP
+       extension that can provide the operating system of a network device
+       with some initial randomness that can only be known by an attacker
+       who is on the same network segment as the device and its DHCP server.
+       The operating system can mix this random input into its random pool
+       early in the boot procedure and thus have more entropy available when
+       cryptographic applications start.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-sheffer-dhc-initial-random-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sheffer-dhc-initial-random-00
     docidentifier:
     - content: draft-sheffer-dhc-initial-random-00
       type: Internet-Draft
@@ -43,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

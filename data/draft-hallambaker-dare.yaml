@@ -1,11 +1,12 @@
 ---
 id: drafthallambakerdare
 schema_version: v1.5.6
+formattedref:
+  content: draft-hallambaker-dare
 title:
 - language: en
   script: Latn
   content: Data At Rest Envelope (DARE)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hallambaker-dare-00
@@ -19,24 +20,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the Data At Rest Envelope (DARE) Envelope and
-    Sequence. The DARE Envelope syntax is used to package plaintext or encrypted content
-    payload and metadata with JOSE decryption and signature data authenticating the
-    payload and metadata. The DARE Sequence format comprises a sequence of DARE Envelopes.
-    The binary encoding of DARE envelopes allows compact encoding of encrypted and
-    signed payloads of unknown length in a single pass with minimal overhead. The
-    binary encoding of DARE sequences is designed to support an append only write
-    mode and efficient reading in either the forwards or backwards directions. The
-    JSON encoding of DARE Envelopes and sequences allows envelopes and sequences to
-    be incorporated in other JSON objects. This document does not cover construction
-    of indexes or signatures over multiple entries in a sequence.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the Data At Rest Envelope (DARE) Envelope and
+       Sequence.  The DARE Envelope syntax is used to package plaintext or
+       encrypted content payload and metadata with JOSE decryption and
+       signature data authenticating the payload and metadata.  The DARE
+       Sequence format comprises a sequence of DARE Envelopes.
+
+       The binary encoding of DARE envelopes allows compact encoding of
+       encrypted and signed payloads of unknown length in a single pass with
+       minimal overhead.  The binary encoding of DARE sequences is designed
+       to support an append only write mode and efficient reading in either
+       the forwards or backwards directions.  The JSON encoding of DARE
+       Envelopes and sequences allows envelopes and sequences to be
+       incorporated in other JSON objects.
+
+       This document does not cover construction of indexes or signatures
+       over multiple entries in a sequence.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-hallambaker-dare-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hallambaker-dare-00
     docidentifier:
     - content: draft-hallambaker-dare-00
       type: Internet-Draft
@@ -45,4 +53,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftmzhangnfsv4sequenceidcalibration
 schema_version: v1.5.6
+formattedref:
+  content: draft-mzhang-nfsv4-sequence-id-calibration
 title:
 - language: en
   script: Latn
   content: Sequence ID calibration for mis-ordered requests
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-03
@@ -19,24 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document updates RFC7862, Network File System (NFS) version 4
-    minor version 2, by adding two operations to prevent the client from destroying
-    session when getting the reply of a mis-ordered request with NFS4ERR_SEQ_MISORDERED.
-    In NFSv4 minor version 1, sequence ID is used to ensure that the size of the needed
-    reply cache is tightly bounded. If the server gets a mis-ordered request, the
-    client will often break the session and establish a new session with the server.
-    This approach results in a significant burden on the client and the server. During
-    the process of session rebuilding, IO performance will be affected. This is especially
-    troublesome when network latency is substantial, as, for example when client and
-    server are in different locations. This document will propose extensions to NFSv4
-    that would allow client reconnection to be dispensed with.</p>"
-  format: text/html
+  content: |-
+    <p>This document updates RFC7862, Network File System (NFS) version 4
+       minor version 2, by adding two operations to prevent the client from
+       destroying session when getting the reply of a mis-ordered request
+       with NFS4ERR_SEQ_MISORDERED.
+
+       In NFSv4 minor version 1, sequence ID is used to ensure that the size
+       of the needed reply cache is tightly bounded.  If the server gets a
+       mis-ordered request, the client will often break the session and
+       establish a new session with the server.  This approach results in a
+       significant burden on the client and the server.  During the process
+       of session rebuilding, IO performance will be affected.  This is
+       especially troublesome when network latency is substantial, as, for
+       example when client and server are in different locations.  This
+       document will propose extensions to NFSv4 that would allow client
+       reconnection to be dispensed with.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mzhang-nfsv4-sequence-id-calibration-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-00
     docidentifier:
     - content: draft-mzhang-nfsv4-sequence-id-calibration-00
       type: Internet-Draft
@@ -45,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mzhang-nfsv4-sequence-id-calibration-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-01
     docidentifier:
     - content: draft-mzhang-nfsv4-sequence-id-calibration-01
       type: Internet-Draft
@@ -54,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mzhang-nfsv4-sequence-id-calibration-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-02
     docidentifier:
     - content: draft-mzhang-nfsv4-sequence-id-calibration-02
       type: Internet-Draft
@@ -63,7 +74,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mzhang-nfsv4-sequence-id-calibration-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mzhang-nfsv4-sequence-id-calibration-03
     docidentifier:
     - content: draft-mzhang-nfsv4-sequence-id-calibration-03
       type: Internet-Draft
@@ -72,4 +85,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

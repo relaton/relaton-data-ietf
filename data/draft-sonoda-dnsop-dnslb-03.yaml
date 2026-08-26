@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DNS load balancing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sonoda-dnsop-dnslb-03
 docidentifier:
+- content: draft-sonoda-dnsop-dnslb
+  type: Internet-Draft
 - content: draft-sonoda-dnsop-dnslb-03
   type: Internet-Draft
   primary: true
-- content: I-D.sonoda-dnsop-dnslb
-  type: IETF
-  scope: anchor
 docnumber: I-D.sonoda-dnsop-dnslb
 date:
 - type: published
@@ -28,6 +26,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -41,13 +40,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Internet Initiative Japan Inc.
+        - language: en
+          content: Internet Initiative Japan Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -61,7 +62,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Internet Initiative Japan Inc.
+        - language: en
+          content: Internet Initiative Japan Inc.
 version:
 - content: '03'
 language:
@@ -71,22 +73,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines a new DNS load balance function that is able to
-    transfer information in zone transfer and not need online signing. DNS base load
-    balance is popular technology. It provides weight base response and location base
-    response. It have become an indispensable part of traffic engineering. However,
-    DNS base load balance can't transfer load balance information in zone transfer
-    and need online singing because it is not standardized. This document defines
-    a new DNS resource record called "LB" and new EDNS option bit called "LS". LB
-    RR provides the balancing information weight, location and target domain name.
-    LS bit provides the change response mechanism in name servers.</p>
-  format: text/html
+  content: |-
+    <p>This document defines a new DNS load balance function that is able to
+       transfer information in zone transfer and not need online signing.
+       DNS base load balance is popular technology.  It provides weight base
+       response and location base response.  It have become an indispensable
+       part of traffic engineering.  However, DNS base load balance can't
+       transfer load balance information in zone transfer and need online
+       singing because it is not standardized.  This document defines a new
+       DNS resource record called "LB" and new EDNS option bit called "LS".
+       LB RR provides the balancing information weight, location and target
+       domain name.  LS bit provides the change response mechanism in name
+       servers.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-sonoda-dnsop-dnslb-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sonoda-dnsop-dnslb-02
     docidentifier:
     - content: draft-sonoda-dnsop-dnslb-02
       type: Internet-Draft
@@ -97,10 +103,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-sonoda-dnsop-dnslb-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

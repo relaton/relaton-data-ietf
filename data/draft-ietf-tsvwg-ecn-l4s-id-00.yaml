@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Identifying Modified Explicit Congestion Notification (ECN) Semantics for
     Ultra-Low Queuing Delay
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-ecn-l4s-id-00
 docidentifier:
+- content: draft-ietf-tsvwg-ecn-l4s-id
+  type: Internet-Draft
 - content: draft-ietf-tsvwg-ecn-l4s-id-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tsvwg-ecn-l4s-id
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tsvwg-ecn-l4s-id
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Koen
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -47,8 +47,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -68,33 +70,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines the identifier to be used on IP packets
-    for a new network service called low latency, low loss and scalable throughput
-    (L4S). It is similar to the original (or 'Classic') Explicit Congestion Notification
-    (ECN). 'Classic' ECN marking was required to be equivalent to a drop, both when
-    applied in the network and when responded to by a transport. Unlike 'Classic'
-    ECN marking, for packets carrying the L4S identifier, the network applies marking
-    more immediately and more aggressively than drop, and the transport response to
-    each mark is reduced and smoothed relative to that for drop. The two changes counterbalance
-    each other so that the throughput of an L4S flow will be roughly the same as a
-    'Classic' flow under the same conditions. However, the much more frequent control
-    signals and the finer responses to them result in ultra-low queuing delay without
-    compromising link utilization, even during high load. Examples of new active queue
-    management (AQM) marking algorithms and examples of new transports (whether TCP-like
-    or real- time) are specified separately. The new L4S identifier is the key piece
-    that enables them to interwork and distinguishes them from 'Classic' traffic.
-    It gives an incremental migration path so that existing 'Classic' TCP traffic
-    will be no worse off, but it can be prevented from degrading the ultra-low delay
-    and loss of the new scalable transports.</p>"
-  format: text/html
+  content: |-
+    <p>This specification defines the identifier to be used on IP packets
+       for a new network service called low latency, low loss and scalable
+       throughput (L4S).  It is similar to the original (or 'Classic')
+       Explicit Congestion Notification (ECN).  'Classic' ECN marking was
+       required to be equivalent to a drop, both when applied in the network
+       and when responded to by a transport.  Unlike 'Classic' ECN marking,
+       for packets carrying the L4S identifier, the network applies marking
+       more immediately and more aggressively than drop, and the transport
+       response to each mark is reduced and smoothed relative to that for
+       drop.  The two changes counterbalance each other so that the
+       throughput of an L4S flow will be roughly the same as a 'Classic'
+       flow under the same conditions.  However, the much more frequent
+       control signals and the finer responses to them result in ultra-low
+       queuing delay without compromising link utilization, even during high
+       load.  Examples of new active queue management (AQM) marking
+       algorithms and examples of new transports (whether TCP-like or real-
+       time) are specified separately.  The new L4S identifier is the key
+       piece that enables them to interwork and distinguishes them from
+       'Classic' traffic.  It gives an incremental migration path so that
+       existing 'Classic' TCP traffic will be no worse off, but it can be
+       prevented from degrading the ultra-low delay and loss of the new
+       scalable transports.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-ecn-l4s-id-17
-      format: text/plain
+      content: draft-ietf-tsvwg-ecn-l4s-id-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-ecn-l4s-id-01
     docidentifier:
-    - content: draft-ietf-tsvwg-ecn-l4s-id-17
+    - content: draft-ietf-tsvwg-ecn-l4s-id-01
       type: Internet-Draft
       primary: true
 series:
@@ -103,10 +111,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tsvwg-ecn-l4s-id-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

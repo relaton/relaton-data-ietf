@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The DNS Extended Server Diagnostics (ESD) Option
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hunt-dns-server-diagnostics-00
 docidentifier:
+- content: draft-hunt-dns-server-diagnostics
+  type: Internet-Draft
 - content: draft-hunt-dns-server-diagnostics-00
   type: Internet-Draft
   primary: true
-- content: I-D.hunt-dns-server-diagnostics
-  type: IETF
-  scope: anchor
 docnumber: I-D.hunt-dns-server-diagnostics
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Evan
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ISC
+        - language: en
+          content: ISC
 version:
 - content: '00'
 language:
@@ -53,24 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The widespread adoption of DNSSEC implies more frequent DNSSEC failures.
-    Unfortunately, DNSSEC's failure mode is largely opaque to the client: when validation
-    fails, the only signal that the clients of a validating resolver receive is an
-    empty response with a SERVFAIL response code. This note proposes a protocol extension
-    to allow SERVFAIL responses to include additional diagnostic information, giving
-    the client greater insight into what went wrong and a better chance of delivering
-    useful problem reports to DNS operators.</p>"
-  format: text/html
+  content: |-
+    <p>The widespread adoption of DNSSEC implies more frequent DNSSEC
+       failures.  Unfortunately, DNSSEC's failure mode is largely opaque to
+       the client: when validation fails, the only signal that the clients
+       of a validating resolver receive is an empty response with a SERVFAIL
+       response code.  This note proposes a protocol extension to allow
+       SERVFAIL responses to include additional diagnostic information,
+       giving the client greater insight into what went wrong and a better
+       chance of delivering useful problem reports to DNS operators.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hunt-dns-server-diagnostics-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

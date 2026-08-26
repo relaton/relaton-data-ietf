@@ -1,0 +1,67 @@
+---
+id: draftdogrucedulon
+schema_version: v1.5.6
+formattedref:
+  content: draft-dogru-cedulon
+title:
+- language: en
+  script: Latn
+  content: 'Cedulon: An Audit Layer for Agent-to-Agent Commerce'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-01
+docidentifier:
+- content: draft-dogru-cedulon
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-25'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Cedulon Protocol, an audit layer for agent-
+       to-agent commerce.  Payment rails such as HTTP 402 flows (x402) and
+       mandate protocols (AP2) already move value.  They do not, by
+       themselves, produce a fail-closed policy check and a signed spend
+       receipt that a verifier can reconcile against a rail extract.
+       Cedulon specifies a Trade Manifest (signed offer before payment), a
+       Policy Decision Point with default deny, a Spend Receipt (COSE/CWT
+       claim set after a gated payment), epoch checkpoints, and rail-extract
+       reconciliation.  The reconciliation shows that no settlement on the
+       extract lacks a receipt and no settled receipt is absent from the
+       extract.  That result is unconditional only when the verifier pins
+       the rail key out of band and states the period under audit; otherwise
+       the document requires it to be reported as conditional.  It also
+       defines a Dispute Evidence Bundle (evidence, not an award) and
+       optional SCITT anchoring.  Cedulon is not a competitor to x402 or
+       AP2; it sits above them.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dogru-cedulon-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-00
+    docidentifier:
+    - content: draft-dogru-cedulon-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dogru-cedulon-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-01
+    docidentifier:
+    - content: draft-dogru-cedulon-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

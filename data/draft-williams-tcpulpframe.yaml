@@ -1,11 +1,12 @@
 ---
 id: draftwilliamstcpulpframe
 schema_version: v1.5.6
+formattedref:
+  content: draft-williams-tcpulpframe
 title:
 - language: en
   script: Latn
   content: ULP Framing for TCP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-williams-tcpulpframe-01
@@ -19,22 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document proposes a framing protocol for TCP which is designed
-    to be fully compliant with applicable TCP RFC's and fully interoperable with existing
-    TCP implementations. The framing mechanism is designed to work as a 'shim' between
-    TCP and higher- level protocols, preserving the reliable, in-order delivery of
-    TCP while adding the preservation of higher-level protocol record boundaries if
-    the record is less than or equal to the path MTU. The shim is designed to enable
-    hardware acceleration of data movement operations (e.g. direct placement of receive
-    TCP segments into higher-level protocol buffers) for the protocols that use it,
-    even if TCP segments are delivered out-of-order.</p>"
-  format: text/html
+  content: |-
+    <p>This document proposes a framing protocol for TCP which is designed
+    to be fully compliant with applicable TCP RFC's and fully
+    interoperable with existing TCP implementations. The framing
+    mechanism is designed to work as a 'shim' between TCP and higher-
+    level protocols, preserving the reliable, in-order delivery of TCP
+    while adding the preservation of higher-level protocol record
+    boundaries if the record is less than or equal to the path MTU. The
+    shim is designed to enable hardware acceleration of data movement
+    operations (e.g. direct placement of receive TCP segments into
+    higher-level protocol buffers) for the protocols that use it, even
+    if TCP segments are delivered out-of-order.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-williams-tcpulpframe-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-williams-tcpulpframe-01
     docidentifier:
     - content: draft-williams-tcpulpframe-01
       type: Internet-Draft
@@ -43,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

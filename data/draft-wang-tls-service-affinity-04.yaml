@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Service Affinity Solution based on Transport Layer Security (TLS)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-04
 docidentifier:
+- content: draft-wang-tls-service-affinity
+  type: Internet-Draft
 - content: draft-wang-tls-service-affinity-04
   type: Internet-Draft
   primary: true
-- content: I-D.wang-tls-service-affinity
-  type: IETF
-  scope: anchor
 docnumber: I-D.wang-tls-service-affinity
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wei
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - language: en
+          content: China Telecom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Aijun
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - language: en
+          content: China Telecom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Beijing Infosec Technologies Co., LTD.
+        - language: en
+          content: Beijing Infosec Technologies Co., LTD.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mohit
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -107,15 +115,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Palo Alto Networks
+        - language: en
+          content: Palo Alto Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ketul
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -129,7 +140,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Palo Alto Networks
+        - language: en
+          content: Palo Alto Networks
 version:
 - content: '04'
 language:
@@ -139,27 +151,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft proposes a service affinity solution between client and
-    server based on Transport Layer Security (TLS). It defines a minimal extension
-    to TLS 1.3 by which a server instance can authorize a client to resume an established
-    session on a different instance of the same service (for example, another node
-    of a load-balanced cluster) and request, in band, that the client do so. The relocation
-    authorization is carried inside the server's own session ticket, so it inherits
-    the security properties of TLS 1.3 ticket-based resumption; the relocation target
-    is an opaque identifier resolved by the application or control plane rather than
-    an address carried in TLS. This document also introduces a Reliable Framing Layer
-    that operates above the TLS record layer to provide message framing, sequence
-    numbering, acknowledgment tracking, and automatic retransmission. The Framing
-    Layer ensures zero application data loss during TLS session migration by buffering
-    unacknowledged data frames and retransmitting them to the new server endpoint
-    after migration completes.</p>"
-  format: text/html
+  content: |-
+    <p>This draft proposes a service affinity solution between client and
+       server based on Transport Layer Security (TLS).  It defines a minimal
+       extension to TLS 1.3 by which a server instance can authorize a
+       client to resume an established session on a different instance of
+       the same service (for example, another node of a load-balanced
+       cluster) and request, in band, that the client do so.  The relocation
+       authorization is carried inside the server's own session ticket, so
+       it inherits the security properties of TLS 1.3 ticket-based
+       resumption; the relocation target is an opaque identifier resolved by
+       the application or control plane rather than an address carried in
+       TLS.
+
+       This document also introduces a Reliable Framing Layer that operates
+       above the TLS record layer to provide message framing, sequence
+       numbering, acknowledgment tracking, and automatic retransmission.
+       The Framing Layer ensures zero application data loss during TLS
+       session migration by buffering unacknowledged data frames and
+       retransmitting them to the new server endpoint after migration
+       completes.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-wang-tls-service-affinity-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-03
     docidentifier:
     - content: draft-wang-tls-service-affinity-03
       type: Internet-Draft
@@ -168,7 +187,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wang-tls-service-affinity-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-tls-service-affinity-05
     docidentifier:
     - content: draft-wang-tls-service-affinity-05
       type: Internet-Draft
@@ -179,10 +200,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wang-tls-service-affinity-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

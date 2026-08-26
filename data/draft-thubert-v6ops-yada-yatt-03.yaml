@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Yet Another Double Address and Translation Technique
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-thubert-v6ops-yada-yatt-03
 docidentifier:
+- content: draft-thubert-v6ops-yada-yatt
+  type: Internet-Draft
 - content: draft-thubert-v6ops-yada-yatt-03
   type: Internet-Draft
   primary: true
-- content: I-D.thubert-v6ops-yada-yatt
-  type: IETF
-  scope: anchor
 docnumber: I-D.thubert-v6ops-yada-yatt
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Pascal
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems, Inc
+        - language: en
+          content: Cisco Systems, Inc
 version:
 - content: '03'
 language:
@@ -53,38 +54,45 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides a stepwise migration between IPv4 and IPv6 with
-    baby steps from an IPv4-only stack/gateway/ISP to an IPv6-only version, that allows
-    portions of the nodes and of the networks to remain IPv4, and reduces the need
-    for dual stack and CG NATs between participating nodes. A first mechanism named
-    YADA to augment the capacity of the current IPv4 Internet by interconnecting IPv4
-    realms via a common footprint called the shaft. YADA extends RFC 1122 with the
-    support of an IP-in-IP format used to forward the packet between parallel IPv4
-    realms. This document also provides a stateless address and IP header translation
-    between YADA and IPv6 called YATT and extends RFC 4291 for the YATT format. The
-    YADA and YATT formats are interchangeable, and the stateless translation can take
-    place as a bump in the stack at either end, or within the network at any router.
-    This enables an IPv6-only stack to dialog with an IPv4-only stack across a network
-    that can be IPv6, IPv4, or mixed. YATT requires that the IPv6 stack owns a prefix
-    that derives from a YADA address and that the IPv4 stack in a different realm
-    is capable of YADA, so it does not replace a generic 4 to 6 translation mechanism
-    for any v6 to any v4.</p>"
-  format: text/html
+  content: |-
+    <p>This document provides a stepwise migration between IPv4 and IPv6
+       with baby steps from an IPv4-only stack/gateway/ISP to an IPv6-only
+       version, that allows portions of the nodes and of the networks to
+       remain IPv4, and reduces the need for dual stack and CG NATs between
+       participating nodes.  A first mechanism named YADA to augment the
+       capacity of the current IPv4 Internet by interconnecting IPv4 realms
+       via a common footprint called the shaft.  YADA extends RFC 1122 with
+       the support of an IP-in-IP format used to forward the packet between
+       parallel IPv4 realms.  This document also provides a stateless
+       address and IP header translation between YADA and IPv6 called YATT
+       and extends RFC 4291 for the YATT format.  The YADA and YATT formats
+       are interchangeable, and the stateless translation can take place as
+       a bump in the stack at either end, or within the network at any
+       router.  This enables an IPv6-only stack to dialog with an IPv4-only
+       stack across a network that can be IPv6, IPv4, or mixed.  YATT
+       requires that the IPv6 stack owns a prefix that derives from a YADA
+       address and that the IPv4 stack in a different realm is capable of
+       YADA, so it does not replace a generic 4 to 6 translation mechanism
+       for any v6 to any v4.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-thubert-v6ops-yada-yatt-01
-      format: text/plain
+      content: draft-thubert-v6ops-yada-yatt-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thubert-v6ops-yada-yatt-02
     docidentifier:
-    - content: draft-thubert-v6ops-yada-yatt-01
+    - content: draft-thubert-v6ops-yada-yatt-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-thubert-v6ops-yada-yatt-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-thubert-v6ops-yada-yatt-04
     docidentifier:
     - content: draft-thubert-v6ops-yada-yatt-04
       type: Internet-Draft
@@ -95,10 +103,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-thubert-v6ops-yada-yatt-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

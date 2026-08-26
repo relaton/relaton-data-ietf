@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Clarifications on CDS/CDNSKEY and CSYNC Consistency
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-cds-consistency-05
 docidentifier:
+- content: draft-ietf-dnsop-cds-consistency
+  type: Internet-Draft
 - content: draft-ietf-dnsop-cds-consistency-05
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-dnsop-cds-consistency
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-dnsop-cds-consistency
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Peter
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SSE - Secure Systems Engineering GmbH
+        - language: en
+          content: SSE - Secure Systems Engineering GmbH
 version:
 - content: '05'
 language:
@@ -53,35 +54,43 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Maintenance of DNS delegations requires occasional changes of the DS
-    and NS record sets on the parent side of the delegation. For the case of DS records,
-    RFC 7344 provides automation by allowing the child to publish CDS and/or CDNSKEY
-    records holding the prospective DS parameters which the parent can ingest. Similarly,
-    RFC 7477 specifies CSYNC records to indicate a desired update of the delegation's
-    NS (and glue) records. Parent-side entities (e.g. Registries, Registrars) can
-    query these records from the child and, after validation, use them to update the
-    parent-side RRsets of the delegation. This document specifies that when performing
-    such queries, parent- side entities MUST ensure that updates triggered via CDS/CDNSKEY
-    and CSYNC records are consistent across the child's authoritative nameservers,
-    before taking any action based on these records.</p>"
-  format: text/html
+  content: |-
+    <p>Maintenance of DNS delegations requires occasional changes of the DS
+       and NS record sets on the parent side of the delegation.  For the
+       case of DS records, RFC 7344 provides automation by allowing the
+       child to publish CDS and/or CDNSKEY records holding the prospective
+       DS parameters which the parent can ingest.  Similarly, RFC 7477
+       specifies CSYNC records to indicate a desired update of the
+       delegation's NS (and glue) records.  Parent-side entities (e.g.
+       Registries, Registrars) can query these records from the child and,
+       after validation, use them to update the parent-side RRsets of the
+       delegation.
+
+       This document specifies that when performing such queries, parent-
+       side entities MUST ensure that updates triggered via CDS/CDNSKEY and
+       CSYNC records are consistent across the child's authoritative
+       nameservers, before taking any action based on these records.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-dnsop-cds-consistency-02
-      format: text/plain
+      content: draft-ietf-dnsop-cds-consistency-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-cds-consistency-04
     docidentifier:
-    - content: draft-ietf-dnsop-cds-consistency-02
+    - content: draft-ietf-dnsop-cds-consistency-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-dnsop-cds-consistency-09
-      format: text/plain
+      content: draft-ietf-dnsop-cds-consistency-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-cds-consistency-06
     docidentifier:
-    - content: draft-ietf-dnsop-cds-consistency-09
+    - content: draft-ietf-dnsop-cds-consistency-06
       type: Internet-Draft
       primary: true
 series:
@@ -90,10 +99,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-dnsop-cds-consistency-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

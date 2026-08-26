@@ -1,11 +1,12 @@
 ---
 id: draftmoskowitzradiusclientkickstart
 schema_version: v1.5.6
+formattedref:
+  content: draft-moskowitz-radius-client-kickstart
 title:
 - language: en
   script: Latn
   content: RADIUS Client Kickstart
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-moskowitz-radius-client-kickstart-01
@@ -19,25 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RADIUS servers [2] require foreknowledge of the IP address of the RADIUS
-    clients, as the shared secret is bound to the address. This has been a manageable
-    situation when the RADIUS Clients were just NASs (Network Access Servers). With
-    the advent of IEEE 802.1x [3], there is a significant increase in RADIUS clients
-    in organizations not prepared to have the RADIUS Clients use fixed IP addresses
-    and manage the shared secret. To address the concerns of the IEEE 802.1 and 802.11
-    Task Groups a level of indirection is added; a Master secret bound to the name
-    of the RADIUS client. This Master secret is created by the Shared Secret Provisioning
-    Protocol [4]. For RADIUS Client Kickstart, SSPP is run over SNMP [5]. The Master
-    Secret is used in an initial RADIUS exchange to create a session secret that is
-    used as the normal RADIUS client shared secret. SSPP can be used to change the
-    Master Secret whenever required.</p>"
-  format: text/html
+  content: |-
+    <p>RADIUS servers [2] require foreknowledge of the IP address of the
+       RADIUS clients, as the shared secret is bound to the address.  This
+       has been a manageable situation when the RADIUS Clients were just
+       NASs (Network Access Servers).  With the advent of IEEE 802.1x [3],
+       there is a significant increase in RADIUS clients in organizations
+       not prepared to have the RADIUS Clients use fixed IP addresses and
+       manage the shared secret.  To address the concerns of the IEEE 802.1
+       and 802.11 Task Groups a level of indirection is added; a Master
+       secret bound to the name of the RADIUS client.  This Master secret
+       is created by the Shared Secret Provisioning Protocol [4].  For
+       RADIUS Client Kickstart, SSPP is run over SNMP [5].  The Master
+       Secret is used in an initial RADIUS exchange to create a session
+    secret that is used as the normal RADIUS client shared secret.  SSPP
+       can be used to change the Master Secret whenever required.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-moskowitz-radius-client-kickstart-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-moskowitz-radius-client-kickstart-01
     docidentifier:
     - content: draft-moskowitz-radius-client-kickstart-01
       type: Internet-Draft
@@ -46,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

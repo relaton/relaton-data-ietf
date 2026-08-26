@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: YANG Groupings for SSH Clients and SSH Servers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-ssh-client-server-39
 docidentifier:
+- content: draft-ietf-netconf-ssh-client-server
+  type: Internet-Draft
 - content: draft-ietf-netconf-ssh-client-server-39
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-netconf-ssh-client-server
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-netconf-ssh-client-server
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kent
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Watsen Networks
+        - language: en
+          content: Watsen Networks
 version:
 - content: '39'
 language:
@@ -53,59 +54,101 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document presents seven YANG 1.1 modules. Three IETF modules,
-    and four supporting IANA modules. The three IETF modules are: ietf-ssh-common,
-    ietf-ssh-client, and ietf-ssh-server. The "ietf-ssh-client" and "ietf-ssh-server"
-    modules are the primary productions of this work, supporting the configuration
-    and monitoring of SSH clients and servers. The four IANA modules are: iana-ssh-encryption-algs,
-    iana-ssh-key- exchange-algs, iana-ssh-mac-algs, and iana-ssh-public-key-algs.
-    These modules each define YANG enumerations providing support for an IANA-maintained
-    algorithm registry. Editorial Note (To be removed by RFC Editor) This draft contains
-    placeholder values that need to be replaced with finalized values at the time
-    of publication. This note summarizes all of the substitutions that are needed.
-    No other RFC Editor instructions are specified elsewhere in this document. Artwork
-    in this document contains shorthand references to drafts in progress. Please apply
-    the following replacements: * AAAA --&gt; the assigned RFC value for draft-ietf-netconf-crypto-
-    types * BBBB --&gt; the assigned RFC value for draft-ietf-netconf-trust- anchors
-    * CCCC --&gt; the assigned RFC value for draft-ietf-netconf-keystore * DDDD --&gt;
-    the assigned RFC value for draft-ietf-netconf-tcp-client- server * EEEE --&gt;
-    the assigned RFC value for this draft Artwork in this document contains placeholder
-    values for the date of publication of this draft. Please apply the following replacement:
-    * 2024-03-02 --&gt; the publication date of this draft The "Relation to other
-    RFCs" section Section 1.2 contains the text "one or more YANG modules" and, later,
-    "modules". This text is sourced from a file in a context where it is unknown how
-    many modules a draft defines. The text is not wrong as is, but it may be improved
-    by stating more directly how many modules are defined. The "Relation to other
-    RFCs" section Section 1.2 contains a self- reference to this draft, along with
-    a corresponding reference in the Appendix. Please replace the self-reference in
-    this section with "This RFC" (or similar) and remove the self-reference in the
-    "Normative/Informative References" section, whichever it is in. Tree-diagrams
-    in this draft may use the ''\'' line-folding mode defined in RFC 8792. However,
-    nicer-to-the-eye is when the ''\\'' line-folding mode is used. The AD suggested
-    suggested putting a request here for the RFC Editor to help convert "ugly" ''\''
-    folded examples to use the ''\\'' folding mode. "Help convert" may be interpreted
-    as, identify what looks ugly and ask the authors to make the adjustment. The following
-    Appendix sections are to be removed prior to publication: * Appendix A.1. Initial
-    Module for the "Encryption Algorithm Names" Registry * Appendix A.2. Initial Module
-    for the "MAC Algorithm Names" Registry * Appendix A.3. Initial Module for the
-    "Public Key Algorithm Names" Registry * Appendix A.4. Initial Module for the "Key
-    Exchange Method Names" Registry * Appendix B. Change Log</p>'
-  format: text/html
+  content: |-
+    <p>This document presents seven YANG 1.1 modules.  Three IETF modules,
+       and four supporting IANA modules.
+
+       The three IETF modules are: ietf-ssh-common, ietf-ssh-client, and
+       ietf-ssh-server.  The "ietf-ssh-client" and "ietf-ssh-server" modules
+       are the primary productions of this work, supporting the
+       configuration and monitoring of SSH clients and servers.
+
+       The four IANA modules are: iana-ssh-encryption-algs, iana-ssh-key-
+       exchange-algs, iana-ssh-mac-algs, and iana-ssh-public-key-algs.
+       These modules each define YANG enumerations providing support for an
+       IANA-maintained algorithm registry.
+
+    Editorial Note (To be removed by RFC Editor)
+
+       This draft contains placeholder values that need to be replaced with
+       finalized values at the time of publication.  This note summarizes
+       all of the substitutions that are needed.  No other RFC Editor
+       instructions are specified elsewhere in this document.
+
+       Artwork in this document contains shorthand references to drafts in
+       progress.  Please apply the following replacements:
+
+       *  AAAA --&gt; the assigned RFC value for draft-ietf-netconf-crypto-
+          types
+
+       *  BBBB --&gt; the assigned RFC value for draft-ietf-netconf-trust-
+          anchors
+
+       *  CCCC --&gt; the assigned RFC value for draft-ietf-netconf-keystore
+
+       *  DDDD --&gt; the assigned RFC value for draft-ietf-netconf-tcp-client-
+          server
+
+       *  EEEE --&gt; the assigned RFC value for this draft
+       Artwork in this document contains placeholder values for the date of
+       publication of this draft.  Please apply the following replacement:
+
+       *  2024-03-02 --&gt; the publication date of this draft
+
+       The "Relation to other RFCs" section Section 1.2 contains the text
+       "one or more YANG modules" and, later, "modules".  This text is
+       sourced from a file in a context where it is unknown how many modules
+       a draft defines.  The text is not wrong as is, but it may be improved
+       by stating more directly how many modules are defined.
+
+       The "Relation to other RFCs" section Section 1.2 contains a self-
+       reference to this draft, along with a corresponding reference in the
+       Appendix.  Please replace the self-reference in this section with
+       "This RFC" (or similar) and remove the self-reference in the
+       "Normative/Informative References" section, whichever it is in.
+
+       Tree-diagrams in this draft may use the '\' line-folding mode defined
+       in RFC 8792.  However, nicer-to-the-eye is when the '\\' line-folding
+       mode is used.  The AD suggested suggested putting a request here for
+       the RFC Editor to help convert "ugly" '\' folded examples to use the
+       '\\' folding mode.  "Help convert" may be interpreted as, identify
+       what looks ugly and ask the authors to make the adjustment.
+
+       The following Appendix sections are to be removed prior to
+       publication:
+
+       *  Appendix A.1.  Initial Module for the "Encryption Algorithm Names"
+          Registry
+
+       *  Appendix A.2.  Initial Module for the "MAC Algorithm Names"
+          Registry
+
+       *  Appendix A.3.  Initial Module for the "Public Key Algorithm Names"
+          Registry
+
+       *  Appendix A.4.  Initial Module for the "Key Exchange Method Names"
+          Registry
+
+       *  Appendix B.  Change Log</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-netconf-ssh-client-server-34
-      format: text/plain
+      content: draft-ietf-netconf-ssh-client-server-38
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-ssh-client-server-38
     docidentifier:
-    - content: draft-ietf-netconf-ssh-client-server-34
+    - content: draft-ietf-netconf-ssh-client-server-38
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-netconf-ssh-client-server-40
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-netconf-ssh-client-server-40
     docidentifier:
     - content: draft-ietf-netconf-ssh-client-server-40
       type: Internet-Draft
@@ -116,10 +159,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-netconf-ssh-client-server-39
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

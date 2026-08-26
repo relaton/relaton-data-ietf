@@ -1,11 +1,12 @@
 ---
 id: drafthawkinsscittattestedagentpayment
 schema_version: v1.5.6
+formattedref:
+  content: draft-hawkins-scitt-attested-agent-payment
 title:
 - language: en
   script: Latn
   content: Attested Payment Authorization for Autonomous Agents
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hawkins-scitt-attested-agent-payment-01
@@ -19,28 +20,35 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Autonomous software agents increasingly initiate payments on behalf
-    of principals. Existing agent-payment mechanisms authenticate the human principal,
-    the operator, or possession of a key; none of them establishes that the software
-    authorized to spend is the software that was reviewed. A key held by a compromised
-    or silently modified agent authenticates exactly as well as one held by an honest
-    agent. This document defines a payment authorization scope bound to a key whose
-    protection properties are attested by hardware, and registers the resulting authorization
-    as a Signed Statement on an SCITT Transparency Service. The binding reuses the
-    EAT confirmation and key-attributes claims without modification; the contribution
-    is the authorization scope, the verification procedure a payment executor performs
-    before settlement, the transparency record that makes the authorization artifact
-    and its registration auditable independently of the agent and of the executor,
-    and an execution-record mechanism that makes the executor's aggregate accounting
-    auditable on challenge. What is registered evidences the authorization; it does
-    not evidence that the verification procedure was performed for any given settlement.</p>"
-  format: text/html
+  content: |-
+    <p>Autonomous software agents increasingly initiate payments on behalf
+       of principals.  Existing agent-payment mechanisms authenticate the
+       human principal, the operator, or possession of a key; none of them
+       establishes that the software authorized to spend is the software
+       that was reviewed.  A key held by a compromised or silently modified
+       agent authenticates exactly as well as one held by an honest agent.
+
+       This document defines a payment authorization scope bound to a key
+       whose protection properties are attested by hardware, and registers
+       the resulting authorization as a Signed Statement on an SCITT
+       Transparency Service.  The binding reuses the EAT confirmation and
+       key-attributes claims without modification; the contribution is the
+       authorization scope, the verification procedure a payment executor
+       performs before settlement, the transparency record that makes the
+       authorization artifact and its registration auditable independently
+       of the agent and of the executor, and an execution-record mechanism
+       that makes the executor's aggregate accounting auditable on
+       challenge.  What is registered evidences the authorization; it does
+       not evidence that the verification procedure was performed for any
+       given settlement.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-hawkins-scitt-attested-agent-payment-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hawkins-scitt-attested-agent-payment-00
     docidentifier:
     - content: draft-hawkins-scitt-attested-agent-payment-00
       type: Internet-Draft
@@ -49,7 +57,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hawkins-scitt-attested-agent-payment-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hawkins-scitt-attested-agent-payment-01
     docidentifier:
     - content: draft-hawkins-scitt-attested-agent-payment-01
       type: Internet-Draft
@@ -58,4 +68,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftwangidrcpr
 schema_version: v1.5.6
+formattedref:
+  content: draft-wang-idr-cpr
 title:
 - language: en
   script: Latn
   content: BGP Colored Prefix Routing (CPR) for SRv6 based Services
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-idr-cpr-03
@@ -19,27 +20,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes a mechanism to advertise IPv6 prefixes in BGP
-    which are associated with Color Extended Communities to establish end-to-end intent-aware
-    paths for SRv6 services. Such IPv6 prefixes are called "Colored Prefixes", and
-    this mechanism is called Colored Prefix Routing (CPR). In SRv6 networks, the Colored
-    prefixes are the SRv6 locators associated with different intent. SRv6 services
-    (e.g. SRv6 VPN services) with specific intent could be assigned with SRv6 SIDs
-    under the corresponding SRv6 locators, which are advertised as Colored prefixes.
-    This allows the SRv6 service traffic to be steered into end-to-end intent-aware
-    paths simply based on the longest prefix matching of SRv6 Service SIDs to the
-    Colored prefixes. In data plane, dedicated transport label or SID for the inter-domain
-    path is not needed, thus the encapsulation efficiency could be optimized. The
-    existing IPv6 Address Family could be used for the advertisement of IPv6 Colored
-    prefixes, thus this mechanism is easy to interoperate and can be deployed incrementally
-    in multi-domain networks.</p>
-  format: text/html
+  content: |-
+    <p>This document describes a mechanism to advertise IPv6 prefixes in BGP
+       which are associated with Color Extended Communities to establish
+       end-to-end intent-aware paths for SRv6 services.  Such IPv6 prefixes
+       are called "Colored Prefixes", and this mechanism is called Colored
+       Prefix Routing (CPR).  In SRv6 networks, the Colored prefixes are the
+       SRv6 locators associated with different intent.  SRv6 services (e.g.
+       SRv6 VPN services) with specific intent could be assigned with SRv6
+       SIDs under the corresponding SRv6 locators, which are advertised as
+       Colored prefixes.  This allows the SRv6 service traffic to be steered
+       into end-to-end intent-aware paths simply based on the longest prefix
+       matching of SRv6 Service SIDs to the Colored prefixes.  In data
+       plane, dedicated transport label or SID for the inter-domain path is
+       not needed, thus the encapsulation efficiency could be optimized.
+       The existing IPv6 Address Family could be used for the advertisement
+       of IPv6 Colored prefixes, thus this mechanism is easy to interoperate
+       and can be deployed incrementally in multi-domain networks.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-wang-idr-cpr-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-cpr-00
     docidentifier:
     - content: draft-wang-idr-cpr-00
       type: Internet-Draft
@@ -48,7 +53,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wang-idr-cpr-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-cpr-01
     docidentifier:
     - content: draft-wang-idr-cpr-01
       type: Internet-Draft
@@ -57,7 +64,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wang-idr-cpr-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-cpr-02
     docidentifier:
     - content: draft-wang-idr-cpr-02
       type: Internet-Draft
@@ -66,7 +75,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wang-idr-cpr-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-cpr-03
     docidentifier:
     - content: draft-wang-idr-cpr-03
       type: Internet-Draft
@@ -75,4 +86,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

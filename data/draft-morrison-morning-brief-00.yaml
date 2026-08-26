@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'The Morning Brief: A Federated, Identity-Attested Situational-Awareness
     Payload'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-morrison-morning-brief-00
 docidentifier:
+- content: draft-morrison-morning-brief
+  type: Internet-Draft
 - content: draft-morrison-morning-brief-00
   type: Internet-Draft
   primary: true
-- content: I-D.morrison-morning-brief
-  type: IETF
-  scope: anchor
 docnumber: I-D.morrison-morning-brief
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Blake
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alter Meridian Pty Ltd
+        - language: en
+          content: Alter Meridian Pty Ltd
 version:
 - content: '00'
 language:
@@ -54,27 +55,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Morning Brief: a federated, identity- attested
-    situational-awareness payload exchanged between organisations, their agents, and
-    peer agents operating under an Identity Accord [ACCORD]. A Morning Brief carries
-    a signed, bounded- lifetime summary of signals, escalations, decisions, and optional
-    commerce quotes from one ~handle to another. Every signal entry carries a provenance_class
-    distinguishing active self-report, passive aggregate observation, and passive
-    individual observation; the last of these is forbidden on the wire and rejected
-    at the grammar level. Readers present a capability token scoped by (category,
-    provenance_class) that gates release BEFORE payload emission, not after. The payload
-    is envelope-signed with COSE_Sign1 [RFC8152] over a JCS-canonicalised [RFC8785]
-    representation, bound to the issuer's Sovereign-tier handle per [IDCOMMITS]. Briefs
-    carry a mandatory not_after (default 24h) and reference a revocation endpoint
-    discovered via DNS TXT per [MCPDNS]. The document defines the wire format only;
-    rendering, storage, and retention are out of scope.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the Morning Brief: a federated, identity-
+       attested situational-awareness payload exchanged between
+       organisations, their agents, and peer agents operating under an
+       Identity Accord [ACCORD].  A Morning Brief carries a signed, bounded-
+       lifetime summary of signals, escalations, decisions, and optional
+       commerce quotes from one ~handle to another.  Every signal entry
+       carries a provenance_class distinguishing active self-report, passive
+       aggregate observation, and passive individual observation; the last
+       of these is forbidden on the wire and rejected at the grammar level.
+       Readers present a capability token scoped by (category,
+       provenance_class) that gates release BEFORE payload emission, not
+       after.  The payload is envelope-signed with COSE_Sign1 [RFC8152] over
+       a JCS-canonicalised [RFC8785] representation, bound to the issuer's
+       Sovereign-tier handle per [IDCOMMITS].  Briefs carry a mandatory
+       not_after (default 24h) and reference a revocation endpoint
+       discovered via DNS TXT per [MCPDNS].  The document defines the wire
+       format only; rendering, storage, and retention are out of scope.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-morrison-morning-brief-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-morning-brief-01
     docidentifier:
     - content: draft-morrison-morning-brief-01
       type: Internet-Draft
@@ -85,10 +91,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-morrison-morning-brief-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Optimizing Notifications for Presence Network Agents
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rosen-simple-watcher-count-00
 docidentifier:
+- content: draft-rosen-simple-watcher-count
+  type: Internet-Draft
 - content: draft-rosen-simple-watcher-count-00
   type: Internet-Draft
   primary: true
-- content: I-D.rosen-simple-watcher-count
-  type: IETF
-  scope: anchor
 docnumber: I-D.rosen-simple-watcher-count
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NeuStar
+        - language: en
+          content: NeuStar
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Salvatore
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Krisztian
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 version:
 - content: '00'
 language:
@@ -97,33 +104,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In large presence systems deployed in multiservice networks, presence
-    information is often known by the network in addition to, or instead of the presentity's
-    devices (endpoints). Examples of such information include location and availability
-    for various kinds of session establishment. Even if devices know the information,
-    the network often has more bandwidth and better scale to keep the presence server
-    up to date. A Presence Network Agent (PNA) can publish presence information to
-    a Presence Server(PS). When done large scale, the basic publish operation can
-    be inefficient. When the network has millions of subscribers, only some of which
-    have watchers, blind Publish operations are unecessary. WINFO can be used to determine
-    watchers, but the efficiency of maintaining WINFO per subscriber, and the size
-    of the messages involved, make that solution unattractive. The PNA would prefer
-    to have the Presence Server simply tell it when there was at least one watcher.
-    This document describes an XML document stored on the PS by which the PNA maintains
-    a list of subscribers it can provide presence for as a SIP event package that
-    tells the PNA when the number of watchers for a presentity on the list (or a specific
-    presence element for a presentity) goes from 0 to at least 1 or from 1 to 0.</p>"
-  format: text/html
+  content: |-
+    <p>In large presence systems deployed in multiservice networks, presence
+    information is often known by the network in addition to, or instead
+    of the presentity's devices (endpoints).  Examples of such
+    information include location and availability for various kinds of
+    session establishment.  Even if devices know the information, the
+    network often has more bandwidth and better scale to keep the
+    presence server up to date.  A Presence Network Agent (PNA) can
+    publish presence information to a Presence Server(PS).  When done
+    large scale, the basic publish operation can be inefficient.  When
+    the network has millions of subscribers, only some of which have
+    watchers, blind Publish operations are unecessary.  WINFO can be used
+    to determine watchers, but the efficiency of maintaining WINFO per
+    subscriber, and the size of the messages involved, make that solution
+    unattractive.  The PNA would prefer to have the Presence Server
+    simply tell it when there was at least one watcher.
+
+    This document describes an XML document stored on the PS by which the
+    PNA maintains a list of subscribers it can provide presence for as a
+    SIP event package that tells the PNA when the number of watchers for
+    a presentity on the list (or a specific presence element for a
+    presentity) goes from 0 to at least 1 or from 1 to 0.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rosen-simple-watcher-count-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

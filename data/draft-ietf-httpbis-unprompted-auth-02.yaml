@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: HTTP Unprompted Authentication
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-unprompted-auth-02
 docidentifier:
+- content: draft-ietf-httpbis-unprompted-auth
+  type: Internet-Draft
 - content: draft-ietf-httpbis-unprompted-auth-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-httpbis-unprompted-auth
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-httpbis-unprompted-auth
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google LLC
+        - language: en
+          content: Google LLC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: David
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Guardian Project
+        - language: en
+          content: Guardian Project
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jonathan
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cloudflare Inc.
+        - language: en
+          content: Cloudflare Inc.
 version:
 - content: '02'
 language:
@@ -97,33 +104,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Existing HTTP authentication mechanisms are probeable in the sense
-    that it is possible for an unauthenticated client to probe whether an origin serves
-    resources that require authentication. It is possible for an origin to hide the
-    fact that it requires authentication by not generating Unauthorized status codes,
-    however that only works with non-cryptographic authentication schemes: cryptographic
-    schemes (such as signatures or message authentication codes) require a fresh nonce
-    to be signed, and there is no existing way for the origin to share such a nonce
-    without exposing the fact that it serves resources that require authentication.
-    This document proposes a new non-probeable cryptographic authentication scheme.</p>"
-  format: text/html
+  content: |-
+    <p>Existing HTTP authentication mechanisms are probeable in the sense
+       that it is possible for an unauthenticated client to probe whether an
+       origin serves resources that require authentication.  It is possible
+       for an origin to hide the fact that it requires authentication by not
+       generating Unauthorized status codes, however that only works with
+       non-cryptographic authentication schemes: cryptographic schemes (such
+       as signatures or message authentication codes) require a fresh nonce
+       to be signed, and there is no existing way for the origin to share
+       such a nonce without exposing the fact that it serves resources that
+       require authentication.  This document proposes a new non-probeable
+       cryptographic authentication scheme.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-httpbis-unprompted-auth-00
-      format: text/plain
+      content: draft-ietf-httpbis-unprompted-auth-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-unprompted-auth-01
     docidentifier:
-    - content: draft-ietf-httpbis-unprompted-auth-00
+    - content: draft-ietf-httpbis-unprompted-auth-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-httpbis-unprompted-auth-04
-      format: text/plain
+      content: draft-ietf-httpbis-unprompted-auth-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-unprompted-auth-03
     docidentifier:
-    - content: draft-ietf-httpbis-unprompted-auth-04
+    - content: draft-ietf-httpbis-unprompted-auth-03
       type: Internet-Draft
       primary: true
 series:
@@ -132,10 +145,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-httpbis-unprompted-auth-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

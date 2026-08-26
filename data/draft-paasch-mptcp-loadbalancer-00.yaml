@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Multipath TCP behind Layer-4 loadbalancers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-paasch-mptcp-loadbalancer-00
 docidentifier:
+- content: draft-paasch-mptcp-loadbalancer
+  type: Internet-Draft
 - content: draft-paasch-mptcp-loadbalancer-00
   type: Internet-Draft
   primary: true
-- content: I-D.paasch-mptcp-loadbalancer
-  type: IETF
-  scope: anchor
 docnumber: I-D.paasch-mptcp-loadbalancer
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Christoph
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Apple, Inc.
+        - language: en
+          content: Apple, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Apple, Inc.
+        - language: en
+          content: Apple, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alan
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Pexip
+        - language: en
+          content: Pexip
 version:
 - content: '00'
 language:
@@ -97,26 +104,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Large webserver farms consist of thousands of frontend proxies that
-    serve as endpoints for the TCP and TLS connection and relay traffic to the (sometimes
-    distant) backend servers. Load-balancing across those server is done by layer-4
-    loadbalancers that ensure that a TCP flow will always reach the same server. Multipath
-    TCP's use of multiple TCP subflows for the transmission of the data stream requires
-    those loadbalancers to be aware of MPTCP to ensure that all subflows belonging
-    to the same MPTCP connection reach the same frontend proxy. In this document we
-    analyze the challenges related to this and suggest a simple modification to the
-    generation of the MPTCP-token to overcome those challenges.</p>"
-  format: text/html
+  content: |-
+    <p>Large webserver farms consist of thousands of frontend proxies that
+       serve as endpoints for the TCP and TLS connection and relay traffic
+       to the (sometimes distant) backend servers.  Load-balancing across
+       those server is done by layer-4 loadbalancers that ensure that a TCP
+       flow will always reach the same server.
+
+       Multipath TCP's use of multiple TCP subflows for the transmission of
+       the data stream requires those loadbalancers to be aware of MPTCP to
+       ensure that all subflows belonging to the same MPTCP connection reach
+       the same frontend proxy.  In this document we analyze the challenges
+       related to this and suggest a simple modification to the generation
+       of the MPTCP-token to overcome those challenges.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-paasch-mptcp-loadbalancer-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

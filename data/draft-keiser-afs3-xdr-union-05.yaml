@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Extensible XDR Discriminated Union Primitive Type
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-keiser-afs3-xdr-union-05
 docidentifier:
+- content: draft-keiser-afs3-xdr-union
+  type: Internet-Draft
 - content: draft-keiser-afs3-xdr-union-05
   type: Internet-Draft
   primary: true
-- content: I-D.keiser-afs3-xdr-union
-  type: IETF
-  scope: anchor
 docnumber: I-D.keiser-afs3-xdr-union
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -49,21 +49,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>AFS-3 relies upon XDR to carry Rx RPC call payloads. XDR discriminated
-    unions are ill-suited to cases where the protocol needs to evolve without inventing
-    new RPCs, i.e., unknown discriminant values cause the entire XDR payload to fail
-    the decoding step. While this can be circumvented through the use of opaque payloads
-    (and recursive XDR invocations), such solutions are inelegant and difficult to
-    implement. This memo defines a new XDR primitive type, "ext-union", which is derived
-    from the XDR discriminated union primitive type, but with two key variations:
-    1) each leg contains a length field, and 2) no default leg is supported.</p>'
-  format: text/html
+  content: |-
+    <p>AFS-3 relies upon XDR to carry Rx RPC call payloads.  XDR
+       discriminated unions are ill-suited to cases where the protocol needs
+       to evolve without inventing new RPCs, i.e., unknown discriminant
+       values cause the entire XDR payload to fail the decoding step.  While
+       this can be circumvented through the use of opaque payloads (and
+       recursive XDR invocations), such solutions are inelegant and
+       difficult to implement.  This memo defines a new XDR primitive type,
+       "ext-union", which is derived from the XDR discriminated union
+       primitive type, but with two key variations: 1) each leg contains a
+       length field, and 2) no default leg is supported.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-keiser-afs3-xdr-union-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-keiser-afs3-xdr-union-06
     docidentifier:
     - content: draft-keiser-afs3-xdr-union-06
       type: Internet-Draft
@@ -74,10 +78,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-keiser-afs3-xdr-union-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Handling Unvalidated Data during DNSSEC Troubleshooting
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zhang-dnsop-dnssec-unvalidated-data-00
 docidentifier:
+- content: draft-zhang-dnsop-dnssec-unvalidated-data
+  type: Internet-Draft
 - content: draft-zhang-dnsop-dnssec-unvalidated-data-00
   type: Internet-Draft
   primary: true
-- content: I-D.zhang-dnsop-dnssec-unvalidated-data
-  type: IETF
-  scope: anchor
 docnumber: I-D.zhang-dnsop-dnssec-unvalidated-data
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shuhan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shuai
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dan
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -107,15 +115,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Baojun
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -129,7 +140,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 version:
 - content: '00'
 language:
@@ -139,30 +151,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Due to the prevalence of DNSSEC (Domain Name System Security Extensions)
-    misconfigurations, many domain administrators troubleshoot the records of DNSSEC-signed
-    domains via queries with CD (Checking Disabled) bit set. However, as DNS resolvers
-    are not forced to perform DNSSEC validation for CD=1 queries, the unvalidated
-    data introduced during troubleshooting could be mixed up with the routine ones
-    in the resolver cache. Recent research has revealed that the reuse of the cached
-    unvalidated data in subsequent resolutions could lead to the risk of Denial-of-Service
-    (DoS). This document clarifies the definition of unvalidated data in the context
-    of DNSSEC. Then, it demonstrates the DoS vulnerabilities of current DNS resolver
-    implementations due to the reuse of cached unvalidated data. Accordingly, it provides
-    several recommendations for DNSSEC- validating resolvers to handle the unvalidated
-    data and mitigate the risk of DoS, so as to improve the availability of DNSSEC-signed
-    domains.</p>"
-  format: text/html
+  content: |-
+    <p>Due to the prevalence of DNSSEC (Domain Name System Security
+       Extensions) misconfigurations, many domain administrators
+       troubleshoot the records of DNSSEC-signed domains via queries with CD
+       (Checking Disabled) bit set.  However, as DNS resolvers are not
+       forced to perform DNSSEC validation for CD=1 queries, the unvalidated
+       data introduced during troubleshooting could be mixed up with the
+       routine ones in the resolver cache.  Recent research has revealed
+       that the reuse of the cached unvalidated data in subsequent
+       resolutions could lead to the risk of Denial-of-Service (DoS).  This
+       document clarifies the definition of unvalidated data in the context
+       of DNSSEC.  Then, it demonstrates the DoS vulnerabilities of current
+       DNS resolver implementations due to the reuse of cached unvalidated
+       data.  Accordingly, it provides several recommendations for DNSSEC-
+       validating resolvers to handle the unvalidated data and mitigate the
+       risk of DoS, so as to improve the availability of DNSSEC-signed
+       domains.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-zhang-dnsop-dnssec-unvalidated-data-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

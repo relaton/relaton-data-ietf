@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Multicast VPN Upstream Designated Forwarder Selection
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-bess-mvpn-upstream-df-selection-00
 docidentifier:
+- content: draft-wang-bess-mvpn-upstream-df-selection
+  type: Internet-Draft
 - content: draft-wang-bess-mvpn-upstream-df-selection-00
   type: Internet-Draft
   primary: true
-- content: I-D.wang-bess-mvpn-upstream-df-selection
-  type: IETF
-  scope: anchor
 docnumber: I-D.wang-bess-mvpn-upstream-df-selection
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Heng
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Fanghong
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 version:
 - content: '00'
 language:
@@ -75,26 +79,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines Multicast Virtual Private Network (VPN) extensions
-    and procedures that allow fast failover for upstream failures by allowing upstream
-    Provider Edges (PEs) to determine a single forwarder for a VPN multicast flow,
-    without the downstream PEs' duplication prevention. The fast failover is accomplished
-    by using Virtual Router Redundancy Protocol (VRRP) [RFC5798] or similar technologies
-    for the upstream PEs to determine a single desinated fowarder. Also, this document
-    introduces a new BGP Extended Community called "Upstream Forwarder Selection",
-    carried by BGP VPN route so that the upstream PEs can inform downstream PEs the
-    election behavior. The downstream PEs, accordingly, send C-multicast routes to
-    both the primary and standby upstream PEs and forward the multicast flow comming
-    from both sides to the CEs.</p>
-  format: text/html
+  content: |-
+    <p>This document defines Multicast Virtual Private Network (VPN)
+       extensions and procedures that allow fast failover for upstream
+       failures by allowing upstream Provider Edges (PEs) to determine a
+       single forwarder for a VPN multicast flow, without the downstream
+       PEs' duplication prevention.  The fast failover is accomplished by
+       using Virtual Router Redundancy Protocol (VRRP) [RFC5798] or similar
+       technologies for the upstream PEs to determine a single desinated
+       fowarder.  Also, this document introduces a new BGP Extended
+       Community called "Upstream Forwarder Selection", carried by BGP VPN
+       route so that the upstream PEs can inform downstream PEs the election
+       behavior.  The downstream PEs, accordingly, send C-multicast routes
+       to both the primary and standby upstream PEs and forward the
+       multicast flow comming from both sides to the CEs.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-wang-bess-mvpn-upstream-df-selection-07
-      format: text/plain
+      content: draft-wang-bess-mvpn-upstream-df-selection-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-bess-mvpn-upstream-df-selection-01
     docidentifier:
-    - content: draft-wang-bess-mvpn-upstream-df-selection-07
+    - content: draft-wang-bess-mvpn-upstream-df-selection-01
       type: Internet-Draft
       primary: true
 series:
@@ -103,10 +111,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-wang-bess-mvpn-upstream-df-selection-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

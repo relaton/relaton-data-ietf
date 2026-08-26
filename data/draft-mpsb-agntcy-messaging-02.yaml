@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: An Overview of Messaging Systems and Their Applicability to Agentic AI
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mpsb-agntcy-messaging-02
 docidentifier:
+- content: draft-mpsb-agntcy-messaging
+  type: Internet-Draft
 - content: draft-mpsb-agntcy-messaging-02
   type: Internet-Draft
   primary: true
-- content: I-D.mpsb-agntcy-messaging
-  type: IETF
-  scope: anchor
 docnumber: I-D.mpsb-agntcy-messaging
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Luca
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michele
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mauro
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sam
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 version:
 - content: '02'
 language:
@@ -119,32 +129,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agentic AI systems require messaging infrastructure that supports real-time
-    collaboration, high-volume streaming, and dynamic group coordination across distributed
-    networks. Traditional protocols like AMQP [AMQP], MQTT [MQTT], and NATS [NATS]
-    address some requirements but fall short on security, particularly regarding post-compromise
-    protection and forward secrecy essential for autonomous agents handling sensitive
-    data. This document analyzes six messaging protocols—AMQP, MQTT, NATS, AMQP over
-    WebSockets, Kafka, and AGNTCY SLIM—across dimensions critical for GenAI agent
-    systems: streaming performance, delivery guarantees, security models, and operational
-    complexity. We examine how each protocol's design decisions impact agentic AI
-    deployments, from lightweight edge computing scenarios to large-scale multi- organizational
-    collaborations. AGNTCY SLIM emerges as a purpose-built solution, integrating Message
-    Layer Security (MLS) [RFC9420] with gRPC [gRPC] over HTTP/2 [RFC9113] to provide
-    end-to-end encryption with forward secrecy, efficient streaming, and OAuth-based
-    authentication [RFC6749]. Unlike transport-layer security approaches, SLIM's MLS
-    implementation ensures secure communication even through untrusted intermediaries
-    while supporting dynamic group membership changes essential for collaborative
-    AI agents.</p>"
-  format: text/html
+  content: |-
+    <p>Agentic AI systems require messaging infrastructure that supports
+       real-time collaboration, high-volume streaming, and dynamic group
+       coordination across distributed networks.  Traditional protocols like
+       AMQP [AMQP], MQTT [MQTT], and NATS [NATS] address some requirements
+       but fall short on security, particularly regarding post-compromise
+       protection and forward secrecy essential for autonomous agents
+       handling sensitive data.
+
+       This document analyzes six messaging protocols—AMQP, MQTT, NATS, AMQP
+       over WebSockets, Kafka, and AGNTCY SLIM—across dimensions critical
+       for GenAI agent systems: streaming performance, delivery guarantees,
+       security models, and operational complexity.  We examine how each
+       protocol's design decisions impact agentic AI deployments, from
+       lightweight edge computing scenarios to large-scale multi-
+       organizational collaborations.
+
+       AGNTCY SLIM emerges as a purpose-built solution, integrating Message
+       Layer Security (MLS) [RFC9420] with gRPC [gRPC] over HTTP/2 [RFC9113]
+       to provide end-to-end encryption with forward secrecy, efficient
+       streaming, and OAuth-based authentication [RFC6749].  Unlike
+       transport-layer security approaches, SLIM's MLS implementation
+       ensures secure communication even through untrusted intermediaries
+       while supporting dynamic group membership changes essential for
+       collaborative AI agents.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-mpsb-agntcy-messaging-00
-      format: text/plain
+      content: draft-mpsb-agntcy-messaging-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mpsb-agntcy-messaging-01
     docidentifier:
-    - content: draft-mpsb-agntcy-messaging-00
+    - content: draft-mpsb-agntcy-messaging-01
       type: Internet-Draft
       primary: true
 series:
@@ -153,10 +172,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mpsb-agntcy-messaging-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftirtfdtnrgbundleretransblock
 schema_version: v1.5.6
+formattedref:
+  content: draft-irtf-dtnrg-bundle-retrans-block
 title:
 - language: en
   script: Latn
   content: Delay-Tolerant Networking Retransmission Block
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-irtf-dtnrg-bundle-retrans-block-06
@@ -19,29 +20,34 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an optional extension block, called a Retransmission
-    Block (RB), that may be used with the Bundle Protocol [refs.DTNBP] within the
-    context of a Delay-Tolerant Network architecture [refs.DTNarch]. The Retransmission
-    Block (RB) is designed to be used within a DTN that, as a matter of policy, deletes
-    all replayed bundles from the network. It is designed to be used in a network
-    that permits duplicate bundles to be forwarded if those bundles have been retransmitted
-    by a custodian, that may (if possible) permit duplicate bundles to be forwarded
-    if those bundles are in intentional or unintentional routing loops (contingent
-    on the availability of mechanisms to distinguish looping bundles from other bundles),
-    but that will consider all other duplicate bundles to be maliciously replayed
-    bundles and delete them as such. The Retransmission Block is designed to be inserted
-    into a bundle by a custodian when the custodian is retransmitting that bundle.
-    The purpose of the RB is to mark the bundle as a custody-based retransmission
-    so that it can be distinguished from other types of duplicate bundles and thereby
-    be spared from deletion. This document defines the format and processing of this
-    new Retransmission Block.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines an optional extension block, called a
+    Retransmission Block (RB), that may be used with the Bundle Protocol
+    [refs.DTNBP] within the context of a Delay-Tolerant Network
+    architecture [refs.DTNarch].  The Retransmission Block (RB) is
+    designed to be used within a DTN that, as a matter of policy, deletes
+    all replayed bundles from the network.  It is designed to be used in
+    a network that permits duplicate bundles to be forwarded if those
+    bundles have been retransmitted by a custodian, that may (if
+    possible) permit duplicate bundles to be forwarded if those bundles
+    are in intentional or unintentional routing loops (contingent on the
+    availability of mechanisms to distinguish looping bundles from other
+    bundles), but that will consider all other duplicate bundles to be
+    maliciously replayed bundles and delete them as such.  The
+    Retransmission Block is designed to be inserted into a bundle by a
+    custodian when the custodian is retransmitting that bundle.  The
+    purpose of the RB is to mark the bundle as a custody-based
+    retransmission so that it can be distinguished from other types of
+    duplicate bundles and thereby be spared from deletion.  This document
+    defines the format and processing of this new Retransmission Block.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-irtf-dtnrg-bundle-retrans-block-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-irtf-dtnrg-bundle-retrans-block-06
     docidentifier:
     - content: draft-irtf-dtnrg-bundle-retrans-block-06
       type: Internet-Draft
@@ -50,4 +56,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

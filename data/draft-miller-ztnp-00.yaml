@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Zero-Trust Negotiation Protocol (ZTNP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-miller-ztnp-00
 docidentifier:
+- content: draft-miller-ztnp
+  type: Internet-Draft
 - content: draft-miller-ztnp-00
   type: Internet-Draft
   primary: true
-- content: I-D.miller-ztnp
-  type: IETF
-  scope: anchor
 docnumber: I-D.miller-ztnp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jake
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -49,44 +49,61 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The Zero-Trust Negotiation Protocol (ZTNP) specifies a session-scoped
-    trust negotiation protocol for software-layer security and governance posture.
-    ZTNP defines how a Relying Party challenges a counterparty for a signed posture
-    credential, evaluates local policy against it, and issues a short-lived, channel-bound,
-    scoped authorization artifact (a Permit) gating subsequent operations within the
-    session. ZTNP covers three phases: * *Enrollment*, in which a Prover obtains a
-    signed Posture Assertion from an Issuer that has assessed it against a publicly-identified
-    security framework. * *Negotiation*, in which the Requester issues a session challenge,
-    receives the Prover''s Posture Assertion bound to that challenge, evaluates local
-    policy against it, and either issues a Permit or returns a structured denial.
-    * *Validation*, in which subsequent operations within the session are gated against
-    the Permit, with mandatory channel binding when the transport is TLS. The protocol''s
-    central design choice is to anchor the meaning of trust claims to a publicly-identified
-    security framework (e.g., NIST AI RMF 1.0, ISO/IEC 42001) rather than to a specific
-    Issuer. A policy expressing "require tier 3 against framework X" is portable across
-    any Issuer that attests against framework X. ZTNP is independent of any particular
-    attestation pipeline. Posture Assertions MAY be derived from RATS Attestation
-    Results [RFC9334], from compliance audit programs, from automated governance scanners,
-    or from any other Issuer evaluation methodology that meets the format requirements
-    of Section 5. ZTNP is *not* a RATS consumption profile; Section 1.5 describes
-    how ZTNP composes with RATS-pipelined and non- RATS-pipelined deployments alike.
-    Multi-principal delegation, prompt-injection-resistant intent binding, and behavioral-claim
-    extensions are specified in a companion document, the Zero-Trust Intent Protocol
-    (ZTIP) [I-D.miller-ztip]. This draft is an individual submission. The author intends
-    to progress this work in a venue scoped to attestation-gated session authorization;
-    possibilities include OAuth, WIMSE, SAAG-routed new work, or an Independent Submission.
-    Community guidance on venue is welcome.</p>'
-  format: text/html
+  content: |-
+    <p>The Zero-Trust Negotiation Protocol (ZTNP) specifies a session-scoped
+       trust negotiation protocol for software-layer security and governance
+       posture.  ZTNP defines how a Relying Party challenges a counterparty
+       for a signed posture credential, evaluates local policy against it,
+       and issues a short-lived, channel-bound, scoped authorization
+       artifact (a Permit) gating subsequent operations within the session.
+
+       ZTNP covers three phases:
+
+       *  *Enrollment*, in which a Prover obtains a signed Posture Assertion
+          from an Issuer that has assessed it against a publicly-identified
+          security framework.
+
+       *  *Negotiation*, in which the Requester issues a session challenge,
+          receives the Prover's Posture Assertion bound to that challenge,
+          evaluates local policy against it, and either issues a Permit or
+          returns a structured denial.
+
+       *  *Validation*, in which subsequent operations within the session
+          are gated against the Permit, with mandatory channel binding when
+          the transport is TLS.
+
+       The protocol's central design choice is to anchor the meaning of
+       trust claims to a publicly-identified security framework (e.g., NIST
+       AI RMF 1.0, ISO/IEC 42001) rather than to a specific Issuer.  A
+       policy expressing "require tier 3 against framework X" is portable
+       across any Issuer that attests against framework X.
+
+       ZTNP is independent of any particular attestation pipeline.  Posture
+       Assertions MAY be derived from RATS Attestation Results [RFC9334],
+       from compliance audit programs, from automated governance scanners,
+       or from any other Issuer evaluation methodology that meets the format
+       requirements of Section 5.  ZTNP is *not* a RATS consumption profile;
+       Section 1.5 describes how ZTNP composes with RATS-pipelined and non-
+       RATS-pipelined deployments alike.
+
+       Multi-principal delegation, prompt-injection-resistant intent
+       binding, and behavioral-claim extensions are specified in a companion
+       document, the Zero-Trust Intent Protocol (ZTIP) [I-D.miller-ztip].
+
+       This draft is an individual submission.  The author intends to
+       progress this work in a venue scoped to attestation-gated session
+       authorization; possibilities include OAuth, WIMSE, SAAG-routed new
+       work, or an Independent Submission.  Community guidance on venue is
+       welcome.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-miller-ztnp-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

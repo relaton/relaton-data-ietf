@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Instant Congestion Assessment Network (iCAN) for Data Plane Traffic Engineering
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-liu-ican-00
 docidentifier:
+- content: draft-liu-ican
+  type: Internet-Draft
 - content: draft-liu-ican-00
   type: Internet-Draft
   primary: true
-- content: I-D.liu-ican
-  type: IETF
-  scope: anchor
 docnumber: I-D.liu-ican
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bing
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei Technologies
+        - language: en
+          content: Huawei Technologies
 version:
 - content: '00'
 language:
@@ -53,24 +54,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>iCAN (instant Congestion Assessment Network) is a set of mechanisms
-    running directly on network nodes: o To adjust the flows paths based on real-time
-    measurement of the candidate paths. o The measurement is to reflect the congestion
-    situation of each path, so that the ingress nodes could decide which flows need
-    to be switched from a path to another. This is something that current SDN and
-    TE technologies can hardly achieve: o SDN Controller is slow and far from the
-    data plane, it is neither able to assess the real-time congestion situation of
-    each path, nor able to assure the data plane always go as expected (especially
-    in SRv6 scenarios). However, iCAN can work with SDN perfectly: controller planning
-    multi-path transmission, and iCAN does the flow optimization automatically. o
-    Traditional TE is not able to adjust the flow paths in real-time.</p>"
-  format: text/html
+  content: |-
+    <p>iCAN (instant Congestion Assessment Network) is a set of mechanisms
+       running directly on network nodes:
+
+       o  To adjust the flows paths based on real-time measurement of the
+          candidate paths.
+
+       o  The measurement is to reflect the congestion situation of each
+          path, so that the ingress nodes could decide which flows need to
+          be switched from a path to another.
+
+       This is something that current SDN and TE technologies can hardly
+       achieve:
+
+       o  SDN Controller is slow and far from the data plane, it is neither
+          able to assess the real-time congestion situation of each path,
+          nor able to assure the data plane always go as expected
+          (especially in SRv6 scenarios).  However, iCAN can work with SDN
+          perfectly: controller planning multi-path transmission, and iCAN
+          does the flow optimization automatically.
+
+       o  Traditional TE is not able to adjust the flow paths in real-time.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-liu-ican-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-ican-01
     docidentifier:
     - content: draft-liu-ican-01
       type: Internet-Draft
@@ -81,10 +94,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-liu-ican-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

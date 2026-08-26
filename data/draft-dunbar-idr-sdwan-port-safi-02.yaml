@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Subsequent Address Family Indicator for SDWAN Ports
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dunbar-idr-sdwan-port-safi-02
 docidentifier:
+- content: draft-dunbar-idr-sdwan-port-safi
+  type: Internet-Draft
 - content: draft-dunbar-idr-sdwan-port-safi-02
   type: Internet-Draft
   primary: true
-- content: I-D.dunbar-idr-sdwan-port-safi
-  type: IETF
-  scope: anchor
 docnumber: I-D.dunbar-idr-sdwan-port-safi
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Linda
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Susan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hickory Hill Consulting
+        - language: en
+          content: Hickory Hill Consulting
 version:
 - content: '02'
 language:
@@ -75,25 +79,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The document specifies a new BGP NLRI and SAFI for advertising properties
-    of a SDWAN edge node WAN ports that face untrusted networks, such as the public
-    internet. Those WAN ports may get assigned IP addresses from the Internet Service
-    Providers (ISPs), may get assigned dynamic IP addresses via DHCP, or may have
-    private addresses (e.g. inside third party Cloud DCs). Packets sent over those
-    SDWAN WAN ports might need to be encrypted (depending on the user policies) or
-    need to go through NAT. SDWAN edge needs to propagate those WAN ports properties
-    to its SDWAN controller, which propagates to the authorized peers and manage the
-    IPsec SAs among those peers for encrypting traffic via the untrusted networks.
-    BGP Route Reflectors (RR) are proposed to propagate this information to the controlled
-    group of other edges in order to allow scaling of the WAN ports property propagation
-    in SDWAN Overlay.</p>"
-  format: text/html
+  content: |-
+    <p>The document specifies a new BGP NLRI and SAFI for advertising
+       properties of a SDWAN edge node WAN ports that face untrusted
+       networks, such as the public internet. Those WAN ports may get
+       assigned IP addresses from the Internet Service Providers (ISPs),
+       may get assigned dynamic IP addresses via DHCP, or may have private
+       addresses (e.g. inside third party Cloud DCs). Packets sent over
+       those SDWAN WAN ports might need to be encrypted (depending on the
+       user policies) or need to go through NAT. SDWAN edge needs to
+       propagate those WAN ports properties to its SDWAN controller, which
+       propagates to the authorized peers and manage the IPsec SAs among
+       those peers for encrypting traffic via the untrusted networks.
+
+       BGP Route Reflectors (RR) are proposed to propagate this information
+       to the controlled group of other edges in order to allow scaling of
+       the WAN ports property propagation in SDWAN Overlay.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-dunbar-idr-sdwan-port-safi-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dunbar-idr-sdwan-port-safi-01
     docidentifier:
     - content: draft-dunbar-idr-sdwan-port-safi-01
       type: Internet-Draft
@@ -101,10 +110,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-dunbar-idr-sdwan-port-safi-05
-      format: text/plain
+      content: draft-dunbar-idr-sdwan-port-safi-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dunbar-idr-sdwan-port-safi-03
     docidentifier:
-    - content: draft-dunbar-idr-sdwan-port-safi-05
+    - content: draft-dunbar-idr-sdwan-port-safi-03
       type: Internet-Draft
       primary: true
 series:
@@ -113,10 +124,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-dunbar-idr-sdwan-port-safi-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

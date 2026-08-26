@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'The WS resource record: dispersing trust in the DNSSEC root keys'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-fanf-dnsop-trust-anchor-witnesses-00
 docidentifier:
+- content: draft-fanf-dnsop-trust-anchor-witnesses
+  type: Internet-Draft
 - content: draft-fanf-dnsop-trust-anchor-witnesses-00
   type: Internet-Draft
   primary: true
-- content: I-D.fanf-dnsop-trust-anchor-witnesses
-  type: IETF
-  scope: anchor
 docnumber: I-D.fanf-dnsop-trust-anchor-witnesses
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tony
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Cambridge
+        - language: en
+          content: University of Cambridge
 version:
 - content: '00'
 language:
@@ -53,23 +54,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>At the moment the root DNSSEC key is a single point of trust and a
-    single point of failure for the whole system. This memo describes a mechanism
-    for dispersing trust in the root key. Witnesses vouch for the root trust anchor
-    by publishing WS records in the DNS. Validators only update their root trust anchors
-    if multiple witnesses agree. The root-witnesses.arpa zone enables a validator
-    to bootstrap trust when it has no working trust anchors other than its witnesses.</p>"
-  format: text/html
+  content: |-
+    <p>At the moment the root DNSSEC key is a single point of trust and a
+       single point of failure for the whole system.  This memo describes a
+       mechanism for dispersing trust in the root key.  Witnesses vouch for
+       the root trust anchor by publishing WS records in the DNS.
+       Validators only update their root trust anchors if multiple witnesses
+       agree.  The root-witnesses.arpa zone enables a validator to bootstrap
+       trust when it has no working trust anchors other than its witnesses.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-fanf-dnsop-trust-anchor-witnesses-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

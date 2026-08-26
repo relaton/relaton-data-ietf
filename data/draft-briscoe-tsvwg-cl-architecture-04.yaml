@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'An edge-to-edge Deployment Model for Pre-Congestion Notification: Admission
     Control over a DiffServ Region'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-briscoe-tsvwg-cl-architecture-04
 docidentifier:
+- content: draft-briscoe-tsvwg-cl-architecture
+  type: Internet-Draft
 - content: draft-briscoe-tsvwg-cl-architecture-04
   type: Internet-Draft
   primary: true
-- content: I-D.briscoe-tsvwg-cl-architecture
-  type: IETF
-  scope: anchor
 docnumber: I-D.briscoe-tsvwg-cl-architecture
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: BT
+        - language: en
+          content: BT
 version:
 - content: '04'
 language:
@@ -54,30 +55,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a deployment model for pre-congestion notification
-    (PCN) operating in a large DiffServ-based region of the Internet. PCN-based admission
-    control protects the quality of service of existing flows in normal circumstances,
-    whilst if necessary (eg after a large failure) pre-emption of some flows preserves
-    the quality of service of the remaining flows. Each link has a configured- admission-rate
-    and a configured-pre-emption-rate, and a router marks packets that exceed these
-    rates. Hence routers give an early warning of their own potential congestion,
-    before packets need to be dropped. Gateways around the edges of the PCN-region
-    convert measurements of packet rates and their markings into decisions about whether
-    to admit new flows, and (if necessary) into the rate of excess traffic that should
-    be pre-empted. Per-flow admission states are kept at the gateways only, while
-    the PCN markers that are required for all routers operate on the aggregate traffic
-    - hence there is no scalability impact on interior routers.</p>"
-  format: text/html
+  content: "<p>This document describes a deployment model for pre-congestion \nnotification
+    (PCN) operating in a large DiffServ-based region of the \nInternet. PCN-based
+    admission control protects the quality of service \nof existing flows in normal
+    circumstances, whilst if necessary (eg \nafter a large failure) pre-emption of
+    some flows preserves the quality \nof service of the remaining flows. Each link
+    has a configured-\nadmission-rate and a configured-pre-emption-rate, and a router
+    marks \npackets that exceed these rates. Hence routers give an early warning of
+    \ntheir own potential congestion, before packets need to be dropped. \nGateways
+    around the edges of the PCN-region convert measurements of \npacket rates and
+    their markings into decisions about whether to admit \nnew flows, and (if necessary)
+    into the rate of excess traffic that \nshould be pre-empted. Per-flow admission
+    states are kept at the \ngateways only, while the PCN markers that are required
+    for all routers \noperate on the aggregate traffic - hence there is no scalability
+    impact \non interior routers.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-briscoe-tsvwg-cl-architecture-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

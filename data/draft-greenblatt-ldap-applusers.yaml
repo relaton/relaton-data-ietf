@@ -1,11 +1,12 @@
 ---
 id: draftgreenblattldapapplusers
 schema_version: v1.5.6
+formattedref:
+  content: draft-greenblatt-ldap-applusers
 title:
 - language: en
   script: Latn
   content: LDAP Object Class for Application Users
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-greenblatt-ldap-applusers-00
@@ -21,23 +22,24 @@ abstract:
   script: Latn
   content: "<p>In working with various directory enabled applications and services,
     it has been noticed that several of them presume the existence of an auxiliary
-    object class with no attributes that is used to detect 'their' users. For example,
+    object class with no attributes that is used to detect 'their' users.  For example,
     the foo application service will use the fooUser object class, and attach this
     object class to all of its user objects in the directory in order that it may
     later on easily detect 'its' users, by virtue of the fact that those users are
-    members of the fooUser object class. This fooUser object class is a subclass of
-    top with no additional attributes. This specification intends to head off the
-    day when a user would get one of these applicationUser object class things attached
-    to its directory object for each application that it uses. This would mean that
-    that object's object class attribute would eventually have dozens of values, which
-    would in turn lessen the value of this attribute.</p>"
-  format: text/html
+    members of the fooUser object class.  This fooUser object class is a subclass
+    of top with no additional attributes.  This specification intends to head off
+    the day when a user would get one of these applicationUser object class things
+    attached to its directory object for each application that it uses.  This would
+    mean that that object's object class attribute would eventually have dozens of
+    values, which would in turn lessen the value of this attribute.</p>"
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-greenblatt-ldap-applusers-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-greenblatt-ldap-applusers-00
     docidentifier:
     - content: draft-greenblatt-ldap-applusers-00
       type: Internet-Draft
@@ -46,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

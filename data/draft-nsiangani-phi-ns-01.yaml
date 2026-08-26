@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Phi-Ns Cryptosystem
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-nsiangani-phi-ns-01
 docidentifier:
+- content: draft-nsiangani-phi-ns
+  type: Internet-Draft
 - content: draft-nsiangani-phi-ns-01
   type: Internet-Draft
   primary: true
-- content: I-D.nsiangani-phi-ns
-  type: IETF
-  scope: anchor
 docnumber: I-D.nsiangani-phi-ns
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Junior
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: draft-nsiangani-phi-ns-01
+        - language: en
+          content: draft-nsiangani-phi-ns-01
 version:
 - content: '01'
 language:
@@ -53,32 +54,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes Phi-Ns, a new asymmetric cryptographic primitive
-    based on the structured decomposition of the quadratic gap between two primes.
-    Phi-Ns defines a public key q and a private key p such that the difference q^2
-    - p^2 is expressed as a composite value T. The value T is then factored into small
-    controlled components noted a, b, and R, and the final secret structure abR is
-    encoded through a randomized serialization process. The security of Phi-Ns does
-    not rely on integer factorization, the discrete logarithm problem, or elliptic
-    curves. Instead, it depends on the difficulty of recovering p from q when the
-    attacker has no oracle, no structural anchor, and no method to determine whether
-    a candidate p is correct. Because T can be recursively decomposed and reassembled
-    into multiple unpredictable forms, the resulting search space grows combinatorially.
-    Phi-Ns further supports recursive expansion of the internal abR structure, allowing
-    the construction of high-entropy secret states even when p and q have relatively
-    small bit lengths. This enables compact public keys, efficient computation, and
-    strong post-quantum resistance based on a non-factorization hardness assumption.
-    This document specifies the algorithmic model of Phi-Ns, its parameter choices,
-    and the serialization rules used to encode the abR structure. It also outlines
-    two public-key variants, PK-p and PK-q, which expose either p or q as the public
-    value depending on deployment constraints.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes Phi-Ns, a new asymmetric cryptographic
+    primitive based on the structured decomposition of the quadratic gap
+    between two primes. Phi-Ns defines a public key q and a private key p
+    such that the difference q^2 - p^2 is expressed as a composite value T.
+    The value T is then factored into small controlled components noted a,
+    b, and R, and the final secret structure abR is encoded through a
+    randomized serialization process.
+
+    The security of Phi-Ns does not rely on integer factorization, the
+    discrete logarithm problem, or elliptic curves. Instead, it depends on
+    the difficulty of recovering p from q when the attacker has no oracle,
+    no structural anchor, and no method to determine whether a candidate p
+    is correct. Because T can be recursively decomposed and reassembled into
+    multiple unpredictable forms, the resulting search space grows
+    combinatorially.
+
+    Phi-Ns further supports recursive expansion of the internal abR
+    structure, allowing the construction of high-entropy secret states even
+    when p and q have relatively small bit lengths. This enables compact
+
+
+
+    public keys, efficient computation, and strong post-quantum resistance
+    based on a non-factorization hardness assumption.
+
+    This document specifies the algorithmic model of Phi-Ns, its parameter
+    choices, and the serialization rules used to encode the abR structure.
+    It also outlines two public-key variants, PK-p and PK-q, which expose
+    either p or q as the public value depending on deployment constraints.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-nsiangani-phi-ns-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nsiangani-phi-ns-00
     docidentifier:
     - content: draft-nsiangani-phi-ns-00
       type: Internet-Draft
@@ -89,10 +102,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-nsiangani-phi-ns-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

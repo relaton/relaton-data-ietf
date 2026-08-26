@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Switched ATM L2VPN
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-metz-switched-atm-l2vpn-00
 docidentifier:
+- content: draft-metz-switched-atm-l2vpn
+  type: Internet-Draft
 - content: draft-metz-switched-atm-l2vpn-00
   type: Internet-Draft
   primary: true
-- content: I-D.metz-switched-atm-l2vpn
-  type: IETF
-  scope: anchor
 docnumber: I-D.metz-switched-atm-l2vpn
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Christopher
       - language: en
+        script: Latn
         initial: C
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -52,41 +53,40 @@ abstract:
 - language: en
   script: Latn
   content: "<p>Many providers operate ATM networks that support a suite of network
-    services. These networks employ ATM signaling and routing protocols to expedite
-    connection setup and recovery. Over time these providers will migrate all or portions
-    of their ATM infrastructure and services to an IP/MPLS-based Packet Switched Network
-    (PSN) thus leading to the creation of ATM L2VPNs. This document describes a solution
-    that supports dynamic signaling and routing of point-to-point switched ATM connections
-    (i.e. VP or VC) across an IP/MPLS network. It is based on the L2VPN (VPWS) architecture
-    which employs an {attachment circuit, PE, pseudo-wire, PE, attachment circuit}
-    tuple to define a distinct point- to-point L2 connection between two end-points
-    within the VPN [PPVPN L2]. The presumption is that the L2 connection is a switched
-    ATM VC or VP and that one or both ACs and the PW are established in real-time
-    using routing and signaling protocol machinery native to the ATM and IP/MPLS networks.
-    We call this a switched ATM L2VPN. The key component of a switched ATM L2VPN is
-    a PWE3 native service processing (NSP) function on the PE that serves as an interworking
-    gateway between native ATM and IP/MPLS signaling and routing protocols. The NSP
-    learns of ATM prefixes reachable through the local attachment circuits. The ATM
-    prefixes are exchanged with a co-resident MP-BGP instance for automatic distribution
-    and discovery of ATM reachability to participating PEs and their directly-attached
-    ATM networks. The NSP is capable of processing the necessary native ATM signaling
-    messages for real-time connection management. The NSP interacts with the co- resident
-    PWE3 signaling machinery for concurrent PW connection management. Extensions to
-    the PWE3 signaling protocol are required to support dynamic single-sided provisioning
-    and to transport ATM signaling parameters between the NSPs for connection management
-    purposes. Extensions to the MP-BGP protocol are needed distribute ATM prefixes
-    and associated next hop information between PEs.</p>"
-  format: text/html
+    \nservices. These networks employ ATM signaling and routing protocols to \nexpedite
+    connection setup and recovery. Over time these providers will \nmigrate all or
+    portions of their ATM infrastructure and services to an \nIP/MPLS-based Packet
+    Switched Network (PSN) thus leading to the \ncreation of ATM L2VPNs. This document
+    describes a solution that \nsupports dynamic signaling and routing of point-to-point
+    switched ATM \nconnections (i.e. VP or VC) across an IP/MPLS network. It is based
+    on \nthe L2VPN (VPWS) architecture which employs an {attachment circuit, PE, \npseudo-wire,
+    PE, attachment circuit} tuple to define a distinct point-\nto-point L2 connection
+    between two end-points within the VPN [PPVPN \nL2]. The presumption is that the
+    L2 connection is a switched ATM VC or \nVP and that one or both ACs and the PW
+    are established in real-time \nusing routing and signaling protocol machinery
+    native to the ATM and \nIP/MPLS networks. We call this a switched ATM L2VPN. \nThe
+    key component of a switched ATM L2VPN is a PWE3 native service \nprocessing (NSP)
+    function on the PE that serves as an interworking \ngateway between native ATM
+    and IP/MPLS signaling and routing protocols. \nThe NSP learns of ATM prefixes
+    reachable through the local attachment \ncircuits. The ATM prefixes are exchanged
+    with a co-resident MP-BGP \ninstance for automatic distribution and discovery
+    of ATM reachability \nto participating PEs and their directly-attached ATM networks.
+    The NSP \nis capable of processing the necessary native ATM signaling messages
+    \nfor real-time connection management. The NSP interacts with the co-\nresident
+    PWE3 signaling machinery for concurrent PW connection \nmanagement. Extensions
+    to the PWE3 signaling protocol are required to \nsupport dynamic single-sided
+    provisioning and to transport ATM \nsignaling parameters between the NSPs for
+    connection management \npurposes. Extensions to the MP-BGP protocol are needed
+    distribute ATM \nprefixes and associated next hop information between PEs.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-metz-switched-atm-l2vpn-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

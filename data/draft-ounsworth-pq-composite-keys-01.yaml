@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Composite Public and Private Keys For Use In Internet PKI
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-keys-01
 docidentifier:
+- content: draft-ounsworth-pq-composite-keys
+  type: Internet-Draft
 - content: draft-ounsworth-pq-composite-keys-01
   type: Internet-Draft
   primary: true
-- content: I-D.ounsworth-pq-composite-keys
-  type: IETF
-  scope: anchor
 docnumber: I-D.ounsworth-pq-composite-keys
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Massimiliano
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 version:
 - content: '01'
 language:
@@ -75,27 +79,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>With the widespread adoption of post-quantum cryptography will come
-    the need for an entity to possess multiple public keys on different cryptographic
-    algorithms. Since the trustworthiness of individual post-quantum algorithms is
-    at question, a multi-key cryptographic operation will need to be performed in
-    such a way that breaking it requires breaking each of the component algorithms
-    individually. This requires defining new structures for holding composite keys,
-    for use with composite signature and encryption data. This document defines the
-    structures CompositePublicKey, CompositePrivateKey, which are sequences of the
-    respective structure for each component algorithm. This document makes no assumptions
-    about what the component algorithms are, provided that they have defined algorithm
-    identifiers. The only requirement imposed by this document is that all algorithms
-    be of the same key usage; i.e. all signature or all encryption. This document
-    is intended to be coupled with corresponding documents that define the structure
-    and semantics of composite signatures and encryption.</p>"
-  format: text/html
+  content: |-
+    <p>With the widespread adoption of post-quantum cryptography will come
+       the need for an entity to possess multiple public keys on different
+       cryptographic algorithms.  Since the trustworthiness of individual
+       post-quantum algorithms is at question, a multi-key cryptographic
+       operation will need to be performed in such a way that breaking it
+       requires breaking each of the component algorithms individually.
+       This requires defining new structures for holding composite keys, for
+       use with composite signature and encryption data.
+
+       This document defines the structures CompositePublicKey,
+       CompositePrivateKey, which are sequences of the respective structure
+       for each component algorithm.  This document makes no assumptions
+       about what the component algorithms are, provided that they have
+       defined algorithm identifiers.  The only requirement imposed by this
+       document is that all algorithms be of the same key usage; i.e. all
+       signature or all encryption.  This document is intended to be coupled
+       with corresponding documents that define the structure and semantics
+       of composite signatures and encryption.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ounsworth-pq-composite-keys-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-keys-00
     docidentifier:
     - content: draft-ounsworth-pq-composite-keys-00
       type: Internet-Draft
@@ -104,7 +114,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ounsworth-pq-composite-keys-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-keys-02
     docidentifier:
     - content: draft-ounsworth-pq-composite-keys-02
       type: Internet-Draft
@@ -115,10 +127,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ounsworth-pq-composite-keys-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

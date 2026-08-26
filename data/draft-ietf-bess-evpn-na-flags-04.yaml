@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Propagation of ARP/ND Flags in EVPN
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-na-flags-04
 docidentifier:
+- content: draft-ietf-bess-evpn-na-flags
+  type: Internet-Draft
 - content: draft-ietf-bess-evpn-na-flags-04
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-bess-evpn-na-flags
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-bess-evpn-na-flags
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jorge
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Senthil
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kiran
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wen
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 version:
 - content: '04'
 language:
@@ -119,38 +129,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>An EVPN MAC/IP Advertisement route can optionally carry an IPv4 or
-    IPv6 addresses associated with a MAC address. Remote PEs can use this information
-    to reply locally (act as proxy) to IPv4 ARP requests and IPv6 Neighbor Solicitation
-    messages and reduce/suppress the flooding produced by the Address Resolution procedure.
-    The information conveyed in the MAC/IP route may not be enough for the remote
-    PE to reply to local ARP or ND requests. For example, if a PE learns an IPv6-&gt;MAC
-    ND entry via EVPN, the PE would not know if that particular IPv6-&gt;MAC pair
-    belongs to a host, a router or a host with an anycast address, as this information
-    is not carried in the MAC/IP route advertisements. Similarly, other information
-    relevant to the IP-&gt;MAC ARP/ND entries may be needed. This document defines
-    an extended community that is advertised along with an EVPN MAC/IP Advertisement
-    route and carries information relevant to the ARP/ND resolution, so that an EVPN
-    PE implementing a proxy-ARP/ND function can reply to ARP Requests or Neighbor
-    Solicitations with the correct information.</p>"
-  format: text/html
+  content: |-
+    <p>An EVPN MAC/IP Advertisement route can optionally carry an IPv4 or
+       IPv6 addresses associated with a MAC address. Remote PEs can use this
+       information to reply locally (act as proxy) to IPv4 ARP requests and
+       IPv6 Neighbor Solicitation messages and reduce/suppress the flooding
+       produced by the Address Resolution procedure. The information
+       conveyed in the MAC/IP route may not be enough for the remote PE to
+       reply to local ARP or ND requests. For example, if a PE learns an
+       IPv6-&gt;MAC ND entry via EVPN, the PE would not know if that particular
+       IPv6-&gt;MAC pair belongs to a host, a router or a host with an anycast
+       address, as this information is not carried in the MAC/IP route
+       advertisements. Similarly, other information relevant to the IP-&gt;MAC
+       ARP/ND entries may be needed. This document defines an extended
+       community that is advertised along with an EVPN MAC/IP Advertisement
+       route and carries information relevant to the ARP/ND resolution, so
+       that an EVPN PE implementing a proxy-ARP/ND function can reply to ARP
+       Requests or Neighbor Solicitations with the correct information.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-bess-evpn-na-flags-01
-      format: text/plain
+      content: draft-ietf-bess-evpn-na-flags-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-na-flags-03
     docidentifier:
-    - content: draft-ietf-bess-evpn-na-flags-01
+    - content: draft-ietf-bess-evpn-na-flags-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-bess-evpn-na-flags-07
-      format: text/plain
+      content: draft-ietf-bess-evpn-na-flags-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-na-flags-05
     docidentifier:
-    - content: draft-ietf-bess-evpn-na-flags-07
+    - content: draft-ietf-bess-evpn-na-flags-05
       type: Internet-Draft
       primary: true
 series:
@@ -159,10 +175,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-bess-evpn-na-flags-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftkouvelaspimbidirnew
 schema_version: v1.5.6
+formattedref:
+  content: draft-kouvelas-pim-bidir-new
 title:
 - language: en
   script: Latn
   content: A New Proposal for Bi-directional PIM
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kouvelas-pim-bidir-new-00
@@ -19,25 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document discusses a new form of Bi-directional PIM, a variant
-    of PIM Sparse Mode [1] that builds bi-directional shared trees con- necting multicast
-    sources and receivers. The ideas presented in this document are similar to those
-    described in [2]. The main difference between the two proposals is in the method
-    used to forward packets traveling upstream from a source to the RP. In particular
-    [2] uses an IP option (UMP option) on data packets to assist with upstream forwarding.
-    The UMP option identifies the next hop router responsible for forwarding the packet
-    upstream. In contrast, this proposal does not alter data packets to embed con-
-    trol information. Instead the identification of the next hop upstream forwarder
-    is performed at RP discovery time using a fail-safe elec- tion mechanism. This
-    significantly simplifies forwarding procedures and eliminates forwarding loops
-    and packet duplication problems that exist in [2].</p>"
-  format: text/html
+  content: |-
+    <p>This document discusses a new form of Bi-directional PIM, a variant
+    of PIM Sparse Mode [1] that builds bi-directional shared trees con-
+    necting multicast sources and receivers.
+    The ideas presented in this document are similar to those described
+    in [2]. The main difference between the two proposals is in the
+    method used to forward packets traveling upstream from a source to
+    the RP. In particular [2] uses an IP option (UMP option) on data
+    packets to assist with upstream forwarding. The UMP option identifies
+    the next hop router responsible for forwarding the packet upstream.
+    In contrast, this proposal does not alter data packets to embed con-
+    trol information. Instead the identification of the next hop upstream
+    forwarder is performed at RP discovery time using a fail-safe elec-
+    tion mechanism. This significantly simplifies forwarding procedures
+    and eliminates forwarding loops and packet duplication problems that
+    exist in [2].</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-kouvelas-pim-bidir-new-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kouvelas-pim-bidir-new-00
     docidentifier:
     - content: draft-kouvelas-pim-bidir-new-00
       type: Internet-Draft
@@ -46,4 +52,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

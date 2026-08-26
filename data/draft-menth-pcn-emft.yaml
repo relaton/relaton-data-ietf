@@ -1,11 +1,12 @@
 ---
 id: draftmenthpcnemft
 schema_version: v1.5.6
+formattedref:
+  content: draft-menth-pcn-emft
 title:
 - language: en
   script: Latn
   content: Edge-Assisted Marked Flow Termination
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-menth-pcn-emft-00
@@ -19,23 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document presents edge-assisted marked flow termination (EMFT)
-    for PCN. It assumes packet-size independent excess marking, i.e. packets exceeding
-    the supportable rate (SR) of a link are marked as "excess-traffic" (ET). EMFT
-    terminates only flows with at least one ET-marked packet. The problem is to avoid
-    that all flows with ET- marked packets are terminated. This draft proposes two
-    solutions. Flow-based EMFT (F-EMFT) considers single flows separately and terminates
-    them when sufficiently many packets of them have been received by the PCN egress
-    node with an ET-mark. Aggregate-based EMFT (A-EMFT) considers ingress-egress-aggregates
-    and terminates flows thereof sufficiently many ET-marked packets have been received
-    for that aggregate.</p>
-  format: text/html
+  content: |-
+    <p>This document presents edge-assisted marked flow termination (EMFT)
+       for PCN.  It assumes packet-size independent excess marking, i.e.
+       packets exceeding the supportable rate (SR) of a link are marked as
+       "excess-traffic" (ET).  EMFT terminates only flows with at least one
+       ET-marked packet.  The problem is to avoid that all flows with ET-
+       marked packets are terminated.  This draft proposes two solutions.
+       Flow-based EMFT (F-EMFT) considers single flows separately and
+       terminates them when sufficiently many packets of them have been
+       received by the PCN egress node with an ET-mark.  Aggregate-based
+       EMFT (A-EMFT) considers ingress-egress-aggregates and terminates
+       flows thereof sufficiently many ET-marked packets have been received
+       for that aggregate.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-menth-pcn-emft-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-menth-pcn-emft-00
     docidentifier:
     - content: draft-menth-pcn-emft-00
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

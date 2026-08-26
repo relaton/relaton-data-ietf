@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Data At Rest Envelope (DARE)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hallambaker-dare-00
 docidentifier:
+- content: draft-hallambaker-dare
+  type: Internet-Draft
 - content: draft-hallambaker-dare-00
   type: Internet-Draft
   primary: true
-- content: I-D.hallambaker-dare
-  type: IETF
-  scope: anchor
 docnumber: I-D.hallambaker-dare
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Phillip
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ThresholdSecrets.com
+        - language: en
+          content: ThresholdSecrets.com
 version:
 - content: '00'
 language:
@@ -53,28 +54,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the Data At Rest Envelope (DARE) Envelope and
-    Sequence. The DARE Envelope syntax is used to package plaintext or encrypted content
-    payload and metadata with JOSE decryption and signature data authenticating the
-    payload and metadata. The DARE Sequence format comprises a sequence of DARE Envelopes.
-    The binary encoding of DARE envelopes allows compact encoding of encrypted and
-    signed payloads of unknown length in a single pass with minimal overhead. The
-    binary encoding of DARE sequences is designed to support an append only write
-    mode and efficient reading in either the forwards or backwards directions. The
-    JSON encoding of DARE Envelopes and sequences allows envelopes and sequences to
-    be incorporated in other JSON objects. This document does not cover construction
-    of indexes or signatures over multiple entries in a sequence.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the Data At Rest Envelope (DARE) Envelope and
+       Sequence.  The DARE Envelope syntax is used to package plaintext or
+       encrypted content payload and metadata with JOSE decryption and
+       signature data authenticating the payload and metadata.  The DARE
+       Sequence format comprises a sequence of DARE Envelopes.
+
+       The binary encoding of DARE envelopes allows compact encoding of
+       encrypted and signed payloads of unknown length in a single pass with
+       minimal overhead.  The binary encoding of DARE sequences is designed
+       to support an append only write mode and efficient reading in either
+       the forwards or backwards directions.  The JSON encoding of DARE
+       Envelopes and sequences allows envelopes and sequences to be
+       incorporated in other JSON objects.
+
+       This document does not cover construction of indexes or signatures
+       over multiple entries in a sequence.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hallambaker-dare-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

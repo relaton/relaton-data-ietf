@@ -1,0 +1,100 @@
+---
+id: draftweiaicjwt00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AI Agent Identity Certificate (AIC) JSON Web Token Profile
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wei-aic-jwt-00
+docidentifier:
+- content: draft-wei-aic-jwt
+  type: Internet-Draft
+- content: draft-wei-aic-jwt-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wei-aic-jwt
+date:
+- type: published
+  at: '2026-08-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jijie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wei
+      completename:
+        language: en
+        content: Jijie Wei
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Individual
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the JSON Web Token (JWT) profile of the AI
+       Agent Identity Certificate (AIC), a companion specification to draft-
+       wei-aic-identity-cert-00.  The AIC X.509 extension binds an AI
+       Agent's cryptographic identity to a responsible principal, carries a
+       structured capability container, authorization boundary constraints,
+       delegation mode, and principal-signed delegation evidence, and
+       enables fully offline authorization decisions at the TLS layer.
+
+       AIC-JWT encodes the same data model as an application-layer JWT so
+       that the same authorization semantics can be enforced by HTTP APIs,
+       web applications, and OAuth 2.0 ecosystems where transport-layer
+       certificate presentation is not available.  The specification
+       defines:
+
+       *  a nested JWS structure that preserves the two-layer signature
+          model of AIC -- a principal-signed DelegationAuthorization (DA)
+          JWT embedded in and covered by an issuer-signed outer JWT;
+
+       *  a namespaced aic claim carrying agent identity, principal binding,
+          structured capabilities, delegation mode, and authorization
+          constraints;
+
+       *  principal binding by SPKI hash or JWK thumbprint, with optional
+          credential bundle presentation in PKI deployments;
+
+       *  issuance flows for both PKI-based CAs and OAuth 2.0 authorization
+          servers, including RFC 7523 assertion exchange and RFC 8693 token
+          exchange;
+
+       *  validation rules, IANA registrations, and security considerations
+          aligned with the OAuth 2.0 and JOSE specifications.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wei-aic-jwt-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

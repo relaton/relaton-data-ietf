@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Group Co-operative Route Filtering capability for BGP-4
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-muley-hares-idr-orf-order-01
 docidentifier:
+- content: draft-muley-hares-idr-orf-order
+  type: Internet-Draft
 - content: draft-muley-hares-idr-orf-order-01
   type: Internet-Draft
   primary: true
-- content: I-D.muley-hares-idr-orf-order
-  type: IETF
-  scope: anchor
 docnumber: I-D.muley-hares-idr-orf-order
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Susan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Green Hills Software
+        - language: en
+          content: Green Hills Software
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Praveen
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Alcatel
+        - language: en
+          content: Alcatel
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Keyur
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Benson
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Saavis Communications
+        - language: en
+          content: Saavis Communications
 version:
 - content: '01'
 language:
@@ -119,26 +129,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Currently BGP-4 is capable of carrying multiple (Outbound Route Filters)
-    ORFs entries for a given "AFI/SAFI". Each ORF provides a filter that a route whose
-    NLRI matches AFI/SAFI, must pass through to be transmitted in the BGP Update message.
-    Efficient processing of ORF filters may require ordering of individual ORFs in
-    certain sequence and grouping of ORFs that should be applied together. The grouping
-    functionality also provides the support for logical OR operation between the grouped
-    ORFs. This group ORF provides an ORF type that specifies that ordering and grouping.
-    The route set that passes set of ORFs running in a "Group ORF" will pass the same
-    ORFs sent in normal ORFs.</p>
-  format: text/html
+  content: |-
+    <p>Currently BGP-4 is capable of carrying multiple (Outbound Route
+    Filters) ORFs entries for a given "AFI/SAFI".  Each ORF provides a
+    filter that a route whose NLRI matches AFI/SAFI, must pass through to
+    be transmitted in the BGP Update message.  Efficient processing of
+    ORF filters may require ordering of individual ORFs in certain
+    sequence and grouping of ORFs that should be applied together.  The
+    grouping functionality also provides the support for logical OR
+    operation between the grouped ORFs.
+
+    This group ORF provides an ORF type that specifies that ordering and
+    grouping.  The route set that passes set of ORFs running in a "Group
+    ORF" will pass the same ORFs sent in normal ORFs.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-muley-hares-idr-orf-order-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

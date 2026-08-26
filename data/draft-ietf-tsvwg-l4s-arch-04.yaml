@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Low Latency, Low Loss, Scalable Throughput (L4S) Internet Service: Architecture'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-l4s-arch-04
 docidentifier:
+- content: draft-ietf-tsvwg-l4s-arch
+  type: Internet-Draft
 - content: draft-ietf-tsvwg-l4s-arch-04
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tsvwg-l4s-arch
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tsvwg-l4s-arch
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Koen
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia Bell Labs
+        - language: en
+          content: Nokia Bell Labs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marcelo
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Universidad Carlos III de Madrid
+        - language: en
+          content: Universidad Carlos III de Madrid
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 version:
 - content: '04'
 language:
@@ -119,47 +129,58 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the L4S architecture for the provision of a
-    new Internet service that could eventually replace best efforts for all traffic:
-    Low Latency, Low Loss, Scalable throughput (L4S). It is becoming common for _all_
-    (or most) applications being run by a user at any one time to require low latency.
-    However, the only solution the IETF can offer for ultra-low queuing delay is Diffserv,
-    which only favours a minority of packets at the expense of others. In extensive
-    testing the new L4S service keeps average queuing delay under a millisecond for
-    _all_ applications even under very heavy load, without sacrificing utilization;
-    and it keeps congestion loss to zero. It is becoming widely recognized that adding
-    more access capacity gives diminishing returns, because latency is becoming the
-    critical problem. Even with a high capacity broadband access, the reduced latency
-    of L4S remarkably and consistently improves performance under load for applications
-    such as interactive video, conversational video, voice, Web, gaming, instant messaging,
-    remote desktop and cloud-based apps (even when all being used at once over the
-    same access link). The insight is that the root cause of queuing delay is in TCP,
-    not in the queue. By fixing the sending TCP (and other transports) queuing latency
-    becomes so much better than today that operators will want to deploy the network
-    part of L4S to enable new products and services. Further, the network part is
-    simple to deploy - incrementally with zero-config. Both parts, sender and network,
-    ensure coexistence with other legacy traffic. At the same time L4S solves the
-    long-recognized problem with the future scalability of TCP throughput. This document
-    describes the L4S architecture, briefly describing the different components and
-    how the work together to provide the aforementioned enhanced Internet service.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the L4S architecture for the provision of a
+       new Internet service that could eventually replace best efforts for
+       all traffic: Low Latency, Low Loss, Scalable throughput (L4S).  It is
+       becoming common for _all_ (or most) applications being run by a user
+       at any one time to require low latency.  However, the only solution
+       the IETF can offer for ultra-low queuing delay is Diffserv, which
+       only favours a minority of packets at the expense of others.  In
+       extensive testing the new L4S service keeps average queuing delay
+       under a millisecond for _all_ applications even under very heavy
+       load, without sacrificing utilization; and it keeps congestion loss
+       to zero.  It is becoming widely recognized that adding more access
+       capacity gives diminishing returns, because latency is becoming the
+       critical problem.  Even with a high capacity broadband access, the
+       reduced latency of L4S remarkably and consistently improves
+       performance under load for applications such as interactive video,
+       conversational video, voice, Web, gaming, instant messaging, remote
+       desktop and cloud-based apps (even when all being used at once over
+       the same access link).  The insight is that the root cause of queuing
+       delay is in TCP, not in the queue.  By fixing the sending TCP (and
+       other transports) queuing latency becomes so much better than today
+       that operators will want to deploy the network part of L4S to enable
+       new products and services.  Further, the network part is simple to
+       deploy - incrementally with zero-config.  Both parts, sender and
+       network, ensure coexistence with other legacy traffic.  At the same
+       time L4S solves the long-recognized problem with the future
+       scalability of TCP throughput.
+
+       This document describes the L4S architecture, briefly describing the
+       different components and how the work together to provide the
+       aforementioned enhanced Internet service.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-l4s-arch-01
-      format: text/plain
+      content: draft-ietf-tsvwg-l4s-arch-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-l4s-arch-03
     docidentifier:
-    - content: draft-ietf-tsvwg-l4s-arch-01
+    - content: draft-ietf-tsvwg-l4s-arch-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-l4s-arch-06
-      format: text/plain
+      content: draft-ietf-tsvwg-l4s-arch-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-l4s-arch-05
     docidentifier:
-    - content: draft-ietf-tsvwg-l4s-arch-06
+    - content: draft-ietf-tsvwg-l4s-arch-05
       type: Internet-Draft
       primary: true
 series:
@@ -168,10 +189,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tsvwg-l4s-arch-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

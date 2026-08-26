@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP SR Policy Extensions for Metric
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-metric-05
 docidentifier:
+- content: draft-ietf-idr-sr-policy-metric
+  type: Internet-Draft
 - content: draft-ietf-idr-sr-policy-metric-05
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-idr-sr-policy-metric
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-idr-sr-policy-metric
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zhenqiang
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
@@ -59,15 +60,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jie
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -81,15 +85,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ketan
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -103,15 +110,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rui
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -125,7 +135,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 version:
 - content: '05'
 language:
@@ -135,25 +146,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>An SR Policy consists of one or more Candidate Paths (CPs), each comprising
-    one or more segment lists. BGP can be used to propogate SR Policy CPs to the SR
-    Policy headend nodes in the network. After an SR Policy CP is installed on the
-    headend node, packets can be steered into the SR Policy. For a particular BGP
-    destination, if there are multiple BGP routes with different next-hops, BGP best
-    path selection is performed and the IGP metric to the next-hop node may be used
-    for tie-breaking to select the best path. When the path to the next-hop is resolved
-    over an SR Policy, the IGP metric of the SR policy is needed for BGP path selection.
-    This document defines the BGP extensions to carry the IGP metric of segment lists
-    when BGP is used to propagate SR Policy CPs.</p>"
-  format: text/html
+  content: |-
+    <p>An SR Policy consists of one or more Candidate Paths (CPs), each
+       comprising one or more segment lists.  BGP can be used to propogate
+       SR Policy CPs to the SR Policy headend nodes in the network.  After
+       an SR Policy CP is installed on the headend node, packets can be
+       steered into the SR Policy.
+
+       For a particular BGP destination, if there are multiple BGP routes
+       with different next-hops, BGP best path selection is performed and
+       the IGP metric to the next-hop node may be used for tie-breaking to
+       select the best path.  When the path to the next-hop is resolved over
+       an SR Policy, the IGP metric of the SR policy is needed for BGP path
+       selection.
+
+       This document defines the BGP extensions to carry the IGP metric of
+       segment lists when BGP is used to propagate SR Policy CPs.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-idr-sr-policy-metric-03
-      format: text/plain
+      content: draft-ietf-idr-sr-policy-metric-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-sr-policy-metric-04
     docidentifier:
-    - content: draft-ietf-idr-sr-policy-metric-03
+    - content: draft-ietf-idr-sr-policy-metric-04
       type: Internet-Draft
       primary: true
 series:
@@ -162,10 +180,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-idr-sr-policy-metric-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

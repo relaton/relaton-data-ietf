@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Using the TCP Echo Option for Spurious Retransmission Detection
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zimmermann-tcpm-spurious-rxmit-00
 docidentifier:
+- content: draft-zimmermann-tcpm-spurious-rxmit
+  type: Internet-Draft
 - content: draft-zimmermann-tcpm-spurious-rxmit-00
   type: Internet-Draft
   primary: true
-- content: I-D.zimmermann-tcpm-spurious-rxmit
-  type: IETF
-  scope: anchor
 docnumber: I-D.zimmermann-tcpm-spurious-rxmit
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NetApp, Inc.
+        - language: en
+          content: NetApp, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Richard
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NetApp, Inc.
+        - language: en
+          content: NetApp, Inc.
 version:
 - content: '00'
 language:
@@ -75,27 +79,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Spurious Retransmission Detection (SRD) algorithm allows a TCP
-    sender to always detect if it has entered loss recovery unnecessarily. It requires
-    that both the TCP Echo option defined in [I-D.zimmermann-tcpm-echo-option], and
-    the SACK option [RFC2018] be enabled for a connection. The SRD algorithm makes
-    use of the fact that the TCP Echo option, used in conjunction with the SACK feedback,
-    can be used to completely eliminate the retransmission ambiguity in TCP. Based
-    on the reflected data contained in the first acceptable ACK that arrives during
-    loss recovery, it decides whether loss recovery was entered unnecessarily. The
-    SRD mechanism further enables improvements in loss recovery. This includes a TCP
-    enhancement to detect and quickly resend lost retransmissions.</p>"
-  format: text/html
+  content: |-
+    <p>The Spurious Retransmission Detection (SRD) algorithm allows a TCP
+       sender to always detect if it has entered loss recovery
+       unnecessarily.  It requires that both the TCP Echo option defined in
+       [I-D.zimmermann-tcpm-echo-option], and the SACK option [RFC2018] be
+       enabled for a connection.  The SRD algorithm makes use of the fact
+       that the TCP Echo option, used in conjunction with the SACK feedback,
+       can be used to completely eliminate the retransmission ambiguity in
+       TCP.  Based on the reflected data contained in the first acceptable
+       ACK that arrives during loss recovery, it decides whether loss
+       recovery was entered unnecessarily.  The SRD mechanism further
+       enables improvements in loss recovery.  This includes a TCP
+       enhancement to detect and quickly resend lost retransmissions.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-zimmermann-tcpm-spurious-rxmit-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

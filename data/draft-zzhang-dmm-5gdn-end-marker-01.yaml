@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: End Marker in 5G Data Network
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zzhang-dmm-5gdn-end-marker-01
 docidentifier:
+- content: draft-zzhang-dmm-5gdn-end-marker
+  type: Internet-Draft
 - content: draft-zzhang-dmm-5gdn-end-marker-01
   type: Internet-Draft
   primary: true
-- content: I-D.zzhang-dmm-5gdn-end-marker
-  type: IETF
-  scope: anchor
 docnumber: I-D.zzhang-dmm-5gdn-end-marker
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zhaohui
       - language: en
+        script: Latn
         initial: Z
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -45,15 +46,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marco
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NEC Lab
+        - language: en
+          content: NEC Lab
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tianji
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -89,7 +96,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 version:
 - content: '01'
 language:
@@ -99,26 +107,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In a mobile network, when a mobile device (referred to as User Equipment
-    or UE) moves from one Access Node (source AN) to another (target AN), the anchoring
-    node that connects the UE to the Data Network sends an End Marker to the source
-    AN after it starts sending UE traffic towards the target AN. The target AN buffers
-    the data until it receives the End Marker forwarded by the source AN. This is
-    to preserve the order of packets during the handover between ANs. The anchoring
-    node is referred to as User Plane Function (UPF) in 5G and it is a Network Function
-    of the mobile network. The UPFs are traditionally centrally deployed but are more
-    and more distributed closer to the edge. With distributed UPFs, handover becomes
-    necessary among UPFs, and the End Marker mechanism may need to be extended to
-    Data Network devices that are not mobile network functions. This document discusses
-    the problem and proposes a solution based on ICMP messages if packet ordering
-    needs to be preserved during handover between UPFs.</p>"
-  format: text/html
+  content: |-
+    <p>In a mobile network, when a mobile device (referred to as User
+       Equipment or UE) moves from one Access Node (source AN) to another
+       (target AN), the anchoring node that connects the UE to the Data
+       Network sends an End Marker to the source AN after it starts sending
+       UE traffic towards the target AN.  The target AN buffers the data
+       until it receives the End Marker forwarded by the source AN.  This is
+       to preserve the order of packets during the handover between ANs.
+
+       The anchoring node is referred to as User Plane Function (UPF) in 5G
+       and it is a Network Function of the mobile network.  The UPFs are
+       traditionally centrally deployed but are more and more distributed
+       closer to the edge.  With distributed UPFs, handover becomes
+       necessary among UPFs, and the End Marker mechanism may need to be
+       extended to Data Network devices that are not mobile network
+       functions.  This document discusses the problem and proposes a
+       solution based on ICMP messages if packet ordering needs to be
+       preserved during handover between UPFs.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-zzhang-dmm-5gdn-end-marker-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zzhang-dmm-5gdn-end-marker-00
     docidentifier:
     - content: draft-zzhang-dmm-5gdn-end-marker-00
       type: Internet-Draft
@@ -129,10 +143,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-zzhang-dmm-5gdn-end-marker-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

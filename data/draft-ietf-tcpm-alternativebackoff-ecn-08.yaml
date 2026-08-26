@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TCP Alternative Backoff with ECN (ABE)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-alternativebackoff-ecn-08
 docidentifier:
+- content: draft-ietf-tcpm-alternativebackoff-ecn
+  type: Internet-Draft
 - content: draft-ietf-tcpm-alternativebackoff-ecn-08
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tcpm-alternativebackoff-ecn
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tcpm-alternativebackoff-ecn
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Naeem
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - language: en
+          content: University of Oslo
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,13 +68,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Oslo
+        - language: en
+          content: University of Oslo
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Netflix Inc.
+        - language: en
+          content: Netflix Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gorry
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -107,7 +115,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Aberdeen
+        - language: en
+          content: University of Aberdeen
 version:
 - content: '08'
 language:
@@ -117,35 +126,42 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Active Queue Management (AQM) mechanisms allow for burst tolerance
-    while enforcing short queues to minimise the time that packets spend enqueued
-    at a bottleneck. This can cause noticeable performance degradation for TCP connections
-    traversing such a bottleneck, especially if there are only a few flows or their
-    bandwidth-delay- product is large. The reception of a Congestion Experienced (CE)
-    ECN mark indicates that an AQM mechanism is used at the bottleneck, and therefore
-    the bottleneck network queue is likely to be short. Feedback of this signal allows
-    the TCP sender-side ECN reaction in congestion avoidance to reduce the Congestion
-    Window (cwnd) by a smaller amount than the congestion control algorithm's reaction
-    to inferred packet loss. This specification therefore defines an experimental
-    change to the TCP reaction specified in RFC3168, as permitted by RFC 8311.</p>"
-  format: text/html
+  content: |-
+    <p>Active Queue Management (AQM) mechanisms allow for burst tolerance
+       while enforcing short queues to minimise the time that packets spend
+       enqueued at a bottleneck.  This can cause noticeable performance
+       degradation for TCP connections traversing such a bottleneck,
+       especially if there are only a few flows or their bandwidth-delay-
+       product is large.  The reception of a Congestion Experienced (CE) ECN
+       mark indicates that an AQM mechanism is used at the bottleneck, and
+       therefore the bottleneck network queue is likely to be short.
+       Feedback of this signal allows the TCP sender-side ECN reaction in
+       congestion avoidance to reduce the Congestion Window (cwnd) by a
+       smaller amount than the congestion control algorithm's reaction to
+       inferred packet loss.  This specification therefore defines an
+       experimental change to the TCP reaction specified in RFC3168, as
+       permitted by RFC 8311.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-tcpm-alternativebackoff-ecn-06
-      format: text/plain
+      content: draft-ietf-tcpm-alternativebackoff-ecn-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-alternativebackoff-ecn-07
     docidentifier:
-    - content: draft-ietf-tcpm-alternativebackoff-ecn-06
+    - content: draft-ietf-tcpm-alternativebackoff-ecn-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tcpm-alternativebackoff-ecn-11
-      format: text/plain
+      content: draft-ietf-tcpm-alternativebackoff-ecn-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-alternativebackoff-ecn-09
     docidentifier:
-    - content: draft-ietf-tcpm-alternativebackoff-ecn-11
+    - content: draft-ietf-tcpm-alternativebackoff-ecn-09
       type: Internet-Draft
       primary: true
 series:
@@ -154,10 +170,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tcpm-alternativebackoff-ecn-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

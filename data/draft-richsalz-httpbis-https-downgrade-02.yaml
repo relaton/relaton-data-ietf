@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Best practices for TLS Downgrade
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-richsalz-httpbis-https-downgrade-02
 docidentifier:
+- content: draft-richsalz-httpbis-https-downgrade
+  type: Internet-Draft
 - content: draft-richsalz-httpbis-https-downgrade-02
   type: Internet-Draft
   primary: true
-- content: I-D.richsalz-httpbis-https-downgrade
-  type: IETF
-  scope: anchor
 docnumber: I-D.richsalz-httpbis-https-downgrade
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
+        - language: en
+          content: Akamai Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
+        - language: en
+          content: Akamai Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Erik
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
+        - language: en
+          content: Akamai Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rich
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
+        - language: en
+          content: Akamai Technologies
 version:
 - content: '02'
 language:
@@ -119,31 +129,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Content providers delivering content via CDNs will sometimes deliver
-    content over HTTPS (or both HTTPS and HTTP) but configure the CDN to pull from
-    the origin over cleartext and unauthenticated HTTP. From the perspective of a
-    client, it appears that their requests and associated responses are delivered
-    over HTTPS, while in reality their requests are being sent across the network
-    in-the-clear and responses are delivered unauthenticated. This exposes user request
-    data to pervasive monitoring [RFC7258]; it also means response data may be tampered
-    with by active adversaries. Terminating TLS connections on a load balancer and
-    contacting a backend over cleartext has long been common within data centers,
-    but doing this TLS termination and downgrade to HTTP at a CDN introduces additional
-    risk when the unprotected traffic is sent over the general Internet, sometimes
-    across national boundaries. While it would be nice to say "never do this," customer
-    demand, content provider use-cases, and market forces today make it impossible
-    for CDNs to not support downgrade. However, following a set of best practices
-    can provide visibility into when this is happening and can reduce some of the
-    risks.</p>
-  format: text/html
+  content: |-
+    <p>Content providers delivering content via CDNs will sometimes deliver
+       content over HTTPS (or both HTTPS and HTTP) but configure the CDN to
+       pull from the origin over cleartext and unauthenticated HTTP.  From
+       the perspective of a client, it appears that their requests and
+       associated responses are delivered over HTTPS, while in reality their
+       requests are being sent across the network in-the-clear and responses
+       are delivered unauthenticated.  This exposes user request data to
+       pervasive monitoring [RFC7258]; it also means response data may be
+       tampered with by active adversaries.  Terminating TLS connections on
+       a load balancer and contacting a backend over cleartext has long been
+       common within data centers, but doing this TLS termination and
+       downgrade to HTTP at a CDN introduces additional risk when the
+       unprotected traffic is sent over the general Internet, sometimes
+       across national boundaries.
+
+       While it would be nice to say "never do this," customer demand,
+       content provider use-cases, and market forces today make it
+       impossible for CDNs to not support downgrade.  However, following a
+       set of best practices can provide visibility into when this is
+       happening and can reduce some of the risks.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-richsalz-httpbis-https-downgrade-00
-      format: text/plain
+      content: draft-richsalz-httpbis-https-downgrade-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-richsalz-httpbis-https-downgrade-01
     docidentifier:
-    - content: draft-richsalz-httpbis-https-downgrade-00
+    - content: draft-richsalz-httpbis-https-downgrade-01
       type: Internet-Draft
       primary: true
 series:
@@ -152,10 +168,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-richsalz-httpbis-https-downgrade-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

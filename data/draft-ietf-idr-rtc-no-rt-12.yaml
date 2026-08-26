@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Route Target Constrained Distribution of Routes with no Route Targets
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-rtc-no-rt-12
 docidentifier:
+- content: draft-ietf-idr-rtc-no-rt
+  type: Internet-Draft
 - content: draft-ietf-idr-rtc-no-rt-12
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-idr-rtc-no-rt
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-idr-rtc-no-rt
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Eric
       - language: en
+        script: Latn
         initial: E
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -45,15 +46,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Unaffiliated
+        - language: en
+          content: Unaffiliated
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Keyur
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arccus
+        - language: en
+          content: Arccus
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeffrey
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -89,15 +96,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Robert
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -111,7 +121,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bloomberg LP
+        - language: en
+          content: Bloomberg LP
 version:
 - content: '12'
 language:
@@ -121,27 +132,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>There are a variety of BGP-enabled services in which the originator
-    of a BGP route may attach one or more "Route Targets" to the route. By means of
-    a procedure known as "RT Constrained Distribution" (RTC), a given BGP speaker
-    (call it "B") can announce the set of RTs in which it has interest. The implication
-    is that if a particular route (call it "R") carries any RTs at all, BGP speaker
-    B wants to receive route R if and only if B has announced interest in one of the
-    RTs carried by R. However, if route R does not carry any RTs at all, prior specifications
-    do not make it clear whether B's use of RTC implies that it does not want to receive
-    route R. This has caused interoperability problems in the field, as some implementations
-    of RTC do not allow B to receive R, but some services presuppose that B will receive
-    R. This document updates RFC 4684 by clarifying the effect of the RTC mechanism
-    on routes that do not have any RTs.</p>
-  format: text/html
+  content: |-
+    <p>There are a variety of BGP-enabled services in which the originator
+       of a BGP route may attach one or more "Route Targets" to the route.
+       By means of a procedure known as "RT Constrained Distribution" (RTC),
+       a given BGP speaker (call it "B") can announce the set of RTs in
+       which it has interest.  The implication is that if a particular route
+       (call it "R") carries any RTs at all, BGP speaker B wants to receive
+       route R if and only if B has announced interest in one of the RTs
+       carried by R.  However, if route R does not carry any RTs at all,
+       prior specifications do not make it clear whether B's use of RTC
+       implies that it does not want to receive route R.  This has caused
+       interoperability problems in the field, as some implementations of
+       RTC do not allow B to receive R, but some services presuppose that B
+       will receive R.  This document updates RFC 4684 by clarifying the
+       effect of the RTC mechanism on routes that do not have any RTs.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-idr-rtc-no-rt-03
-      format: text/plain
+      content: draft-ietf-idr-rtc-no-rt-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-rtc-no-rt-11
     docidentifier:
-    - content: draft-ietf-idr-rtc-no-rt-03
+    - content: draft-ietf-idr-rtc-no-rt-11
       type: Internet-Draft
       primary: true
 series:
@@ -150,10 +165,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-idr-rtc-no-rt-12
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

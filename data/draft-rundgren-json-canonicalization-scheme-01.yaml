@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: JSON Canonicalization Scheme (JCS)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rundgren-json-canonicalization-scheme-01
 docidentifier:
+- content: draft-rundgren-json-canonicalization-scheme
+  type: Internet-Draft
 - content: draft-rundgren-json-canonicalization-scheme-01
   type: Internet-Draft
   primary: true
-- content: I-D.rundgren-json-canonicalization-scheme
-  type: IETF
-  scope: anchor
 docnumber: I-D.rundgren-json-canonicalization-scheme
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Anders
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - language: en
+          content: Independent
 version:
 - content: '01'
 language:
@@ -53,21 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Cryptographic operations like hashing and signing depend on that the
-    target data does not change during serialization, transport, or parsing. By applying
-    the rules defined by JCS (JSON Canonicalization Scheme), data provided in the
-    JSON [RFC8259] format can be exchanged "as is", while still being subject to secure
-    cryptographic operations. JCS achieves this by combining the strict serialization
-    of JSON primitives defined in ECMAScript [ES6] with a platform independent sorting
-    scheme. The intended audiences of this document are JSON tool vendors, as well
-    as designers of JSON based cryptographic solutions.</p>
-  format: text/html
+  content: |-
+    <p>Cryptographic operations like hashing and signing depend on that the
+       target data does not change during serialization, transport, or
+       parsing.  By applying the rules defined by JCS (JSON Canonicalization
+       Scheme), data provided in the JSON [RFC8259] format can be exchanged
+       "as is", while still being subject to secure cryptographic
+       operations.  JCS achieves this by combining the strict serialization
+       of JSON primitives defined in ECMAScript [ES6] with a platform
+       independent sorting scheme.
+
+       The intended audiences of this document are JSON tool vendors, as
+       well as designers of JSON based cryptographic solutions.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-rundgren-json-canonicalization-scheme-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rundgren-json-canonicalization-scheme-00
     docidentifier:
     - content: draft-rundgren-json-canonicalization-scheme-00
       type: Internet-Draft
@@ -75,10 +81,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-rundgren-json-canonicalization-scheme-16
-      format: text/plain
+      content: draft-rundgren-json-canonicalization-scheme-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rundgren-json-canonicalization-scheme-02
     docidentifier:
-    - content: draft-rundgren-json-canonicalization-scheme-16
+    - content: draft-rundgren-json-canonicalization-scheme-02
       type: Internet-Draft
       primary: true
 series:
@@ -87,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rundgren-json-canonicalization-scheme-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

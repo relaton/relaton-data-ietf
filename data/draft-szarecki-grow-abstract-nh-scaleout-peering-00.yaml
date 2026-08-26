@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Use of Abstract NH in Scale-Out peering architecture
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-szarecki-grow-abstract-nh-scaleout-peering-00
 docidentifier:
+- content: draft-szarecki-grow-abstract-nh-scaleout-peering
+  type: Internet-Draft
 - content: draft-szarecki-grow-abstract-nh-scaleout-peering-00
   type: Internet-Draft
   primary: true
-- content: I-D.szarecki-grow-abstract-nh-scaleout-peering
-  type: IETF
-  scope: anchor
 docnumber: I-D.szarecki-grow-abstract-nh-scaleout-peering
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rafal
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -45,15 +46,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks Inc.
+        - language: en
+          content: Juniper Networks Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks Inc.
+        - language: en
+          content: Juniper Networks Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Natrajan
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -89,7 +96,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks Inc.
+        - language: en
+          content: Juniper Networks Inc.
 version:
 - content: '00'
 language:
@@ -99,31 +107,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Many large-scale service provider networks use some form of scale-out
-    architecture at peering sites. In such an architecture, each participating Autonomous
-    System (AS) deploys multiple independent Autonomous System Border Routers (ASBRs)
-    for peering, and Equal Cost Multi-Path (ECMP) load balancing is used between them.
-    There are numerous benefits to this architecture, including but not limited to
-    N+1 redundancy and the ability to flexibly increase capacity as needed. A cost
-    of this architecture is an increase in the amount of state in both the control
-    and data planes. This has negative consequences for network convergence time and
-    scale. In this document we describe how to mitigate these negative consequences
-    through configuration of the routing protocols, both BGP and IGP, to utilize what
-    we term the "Abstract Next-Hop" (ANH). Use of ANH allows us to both reduce the
-    number of BGP paths in the control plane and enable rapid path invalidation (hence,
-    network convergence and traffic restoration). We require no new protocol features
-    to achieve these benefits.</p>
-  format: text/html
+  content: |-
+    <p>Many large-scale service provider networks use some form of scale-out
+       architecture at peering sites.  In such an architecture, each
+       participating Autonomous System (AS) deploys multiple independent
+       Autonomous System Border Routers (ASBRs) for peering, and Equal Cost
+       Multi-Path (ECMP) load balancing is used between them.  There are
+       numerous benefits to this architecture, including but not limited to
+       N+1 redundancy and the ability to flexibly increase capacity as
+       needed.  A cost of this architecture is an increase in the amount of
+       state in both the control and data planes.  This has negative
+       consequences for network convergence time and scale.
+
+       In this document we describe how to mitigate these negative
+       consequences through configuration of the routing protocols, both BGP
+       and IGP, to utilize what we term the "Abstract Next-Hop" (ANH).  Use
+       of ANH allows us to both reduce the number of BGP paths in the
+       control plane and enable rapid path invalidation (hence, network
+       convergence and traffic restoration).  We require no new protocol
+       features to achieve these benefits.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-szarecki-grow-abstract-nh-scaleout-peering-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'Message Authentication Codes for the Network Time Protocol '
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-aanchal4-ntp-mac-02
 docidentifier:
+- content: draft-aanchal4-ntp-mac
+  type: Internet-Draft
 - content: draft-aanchal4-ntp-mac-02
   type: Internet-Draft
   primary: true
-- content: I-D.aanchal4-ntp-mac
-  type: IETF
-  scope: anchor
 docnumber: I-D.aanchal4-ntp-mac
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Aanchal
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sharon
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -67,21 +69,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Network Time Protocol (NTP) RFC 5905 [RFC5905] uses a message authentication
-    code (MAC) to cryptographically authenticate its UDP packets. Currently, NTP packets
-    are authenticated by appending a 128-bit key to the NTP data, and hashing the
-    result with MD5 to obtain a 128-bit tag. However, as discussed in [BCK] and [RFC6151],
-    this not a secure MAC. As such, this draft considers different secure MAC algorithms
-    for use with NTP, evaluates their performance, and recommends the use CMAC-AES
-    [RFC4493]. We also suggest deprecating the use of MD5 as defined in [RFC5905]
-    for authenticating NTP packets.</p>"
-  format: text/html
+  content: |-
+    <p>The Network Time Protocol (NTP) RFC 5905 [RFC5905] uses a message
+       authentication code (MAC) to cryptographically authenticate its UDP
+       packets.  Currently, NTP packets are authenticated by appending a
+       128-bit key to the NTP data, and hashing the result with MD5 to
+       obtain a 128-bit tag.  However, as discussed in [BCK] and [RFC6151],
+       this not a secure MAC.  As such, this draft considers different
+       secure MAC algorithms for use with NTP, evaluates their performance,
+       and recommends the use CMAC-AES [RFC4493].  We also suggest
+       deprecating the use of MD5 as defined in [RFC5905] for authenticating
+       NTP packets.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-aanchal4-ntp-mac-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-aanchal4-ntp-mac-01
     docidentifier:
     - content: draft-aanchal4-ntp-mac-01
       type: Internet-Draft
@@ -90,7 +96,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-aanchal4-ntp-mac-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-aanchal4-ntp-mac-03
     docidentifier:
     - content: draft-aanchal4-ntp-mac-03
       type: Internet-Draft
@@ -101,10 +109,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-aanchal4-ntp-mac-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

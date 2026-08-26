@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: AC-Influenced Designated Forwarder Election for EVPN
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-ac-df-02
 docidentifier:
+- content: draft-ietf-bess-evpn-ac-df
+  type: Internet-Draft
 - content: draft-ietf-bess-evpn-ac-df-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-bess-evpn-ac-df
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-bess-evpn-ac-df
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jorge
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kiran
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Senthil
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Vinod
       - language: en
+        script: Latn
         initial: V
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wim
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -131,15 +143,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Autumn
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -153,15 +168,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wen
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -175,7 +193,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 version:
 - content: '02'
 language:
@@ -185,32 +204,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The Designated Forwarder (DF) in EVPN networks is the PE responsible
-    for sending multicast, broadcast and unknown unicast traffic to a multi-homed
-    CE, on a given Ethernet Tag on a particular Ethernet Segment (ES). The DF is selected
-    based on the list of PEs that advertise the Ethernet Segment Identifier (ESI)
-    to the EVPN network. While PE node or link failures trigger the DF re-election
-    for a given &lt;ESI, EVI&gt;, individual Attachment Circuit (AC) or MAC-VRF failures
-    do not trigger such DF re-election and the traffic may therefore be permanently
-    impacted, even though there is an alternative path. This document improves the
-    DF election algorithm so that the AC status can influence the result of the election
-    and this type of "logical" failures can be protected too.</p>
-  format: text/html
+  content: |-
+    <p>The Designated Forwarder (DF) in EVPN networks is the PE responsible
+       for sending multicast, broadcast and unknown unicast traffic to a
+       multi-homed CE, on a given Ethernet Tag on a particular Ethernet
+       Segment (ES). The DF is selected based on the list of PEs that
+       advertise the Ethernet Segment Identifier (ESI) to the EVPN network.
+       While PE node or link failures trigger the DF re-election for a given
+       &lt;ESI, EVI&gt;, individual Attachment Circuit (AC) or MAC-VRF failures do
+       not trigger such DF re-election and the traffic may therefore be
+       permanently impacted, even though there is an alternative path. This
+       document improves the DF election algorithm so that the AC status can
+       influence the result of the election and this type of "logical"
+       failures can be protected too.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-bess-evpn-ac-df-00
-      format: text/plain
+      content: draft-ietf-bess-evpn-ac-df-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-ac-df-01
     docidentifier:
-    - content: draft-ietf-bess-evpn-ac-df-00
+    - content: draft-ietf-bess-evpn-ac-df-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-bess-evpn-ac-df-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-bess-evpn-ac-df-03
     docidentifier:
     - content: draft-ietf-bess-evpn-ac-df-03
       type: Internet-Draft
@@ -221,10 +246,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-bess-evpn-ac-df-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

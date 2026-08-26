@@ -1,11 +1,12 @@
 ---
 id: draftsullivanmlsattachments
 schema_version: v1.5.6
+formattedref:
+  content: draft-sullivan-mls-attachments
 title:
 - language: en
   script: Latn
   content: Encrypted Attachments for MLS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sullivan-mls-attachments-01
@@ -19,26 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines random-access authenticated encryption of large
-    write-once files for Messaging Layer Security (MLS) groups. A file is encrypted
-    so that a receiver can decrypt and authenticate any byte range without processing
-    the whole file. The encryption is SEAL- attachment, SEAL's named write-once attachment
-    scheme (raAE), parameterized by the AEAD and key derivation function of the group's
-    MLS cipher suite and keyed from the MLS exporter. The encrypted bytes are carried
-    by any means, and a recipient needs only a small reference (the object's identifier,
-    length, and snapshot value, and an optional locator) to fetch, key, and verify
-    the object. Carrying that reference in an MLS message attributes the object to
-    the member that sent the message. MLS application messages cannot carry large
-    files, and existing attachment encryption produces an opaque, immutable blob with
-    no partial access. This extension supplies the random-access layer those uses
-    need.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines random-access authenticated encryption of large
+       write-once files for Messaging Layer Security (MLS) groups.  A file
+       is encrypted so that a receiver can decrypt and authenticate any byte
+       range without processing the whole file.  The encryption is SEAL-
+       attachment, SEAL's named write-once attachment scheme (raAE),
+       parameterized by the AEAD and key derivation function of the group's
+       MLS cipher suite and keyed from the MLS exporter.  The encrypted
+       bytes are carried by any means, and a recipient needs only a small
+       reference (the object's identifier, length, and snapshot value, and
+       an optional locator) to fetch, key, and verify the object.  Carrying
+       that reference in an MLS message attributes the object to the member
+       that sent the message.  MLS application messages cannot carry large
+       files, and existing attachment encryption produces an opaque,
+       immutable blob with no partial access.  This extension supplies the
+       random-access layer those uses need.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-sullivan-mls-attachments-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-mls-attachments-00
     docidentifier:
     - content: draft-sullivan-mls-attachments-00
       type: Internet-Draft
@@ -47,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sullivan-mls-attachments-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sullivan-mls-attachments-01
     docidentifier:
     - content: draft-sullivan-mls-attachments-01
       type: Internet-Draft
@@ -56,4 +63,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

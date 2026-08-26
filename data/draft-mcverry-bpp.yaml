@@ -1,11 +1,12 @@
 ---
 id: draftmcverrybpp
 schema_version: v1.5.6
+formattedref:
+  content: draft-mcverry-bpp
 title:
 - language: en
   script: Latn
   content: BPP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mcverry-bpp-00
@@ -19,22 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines the Bitcoin Price Protocol (BPP), a lightweight,
-    peer-to-peer protocol for synchronising a high-confidence Bitcoin price across
-    untrusted networks. Modeled after the Network Time Protocol (NTP, RFC 5905), BPP
-    enables any Internet host to obtain a volume-weighted median USD/BTC price that
-    is accurate to within a few dollars and fresh to within a few seconds, without
-    trusting any single exchange, oracle, or API provider. BPP is deliberately off-chain,
-    runs over UDP/QUIC, and requires no blockchain interaction. It is suitable for
-    wallets, trading bots, payment processors, DeFi front-ends, and hardware devices
-    that need "NTP-grade" price agreement.</p>
-  format: text/html
+  content: |-
+    <p>This document defines the Bitcoin Price Protocol (BPP), a
+       lightweight, peer-to-peer protocol for synchronising a
+       high-confidence Bitcoin price across untrusted networks.  Modeled
+       after the Network Time Protocol (NTP, RFC 5905), BPP enables any
+       Internet host to obtain a volume-weighted median USD/BTC price that
+       is accurate to within a few dollars and fresh to within a few
+       seconds, without trusting any single exchange, oracle, or API
+       provider.
+
+       BPP is deliberately off-chain, runs over UDP/QUIC, and requires no
+       blockchain interaction.  It is suitable for wallets, trading bots,
+       payment processors, DeFi front-ends, and hardware devices that need
+       "NTP-grade" price agreement.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mcverry-bpp-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcverry-bpp-00
     docidentifier:
     - content: draft-mcverry-bpp-00
       type: Internet-Draft
@@ -43,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

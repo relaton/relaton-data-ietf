@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Remote checksum offload for encapsulation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-herbert-remotecsumoffload-00
 docidentifier:
+- content: draft-herbert-remotecsumoffload
+  type: Internet-Draft
 - content: draft-herbert-remotecsumoffload-00
   type: Internet-Draft
   primary: true
-- content: I-D.herbert-remotecsumoffload
-  type: IETF
-  scope: anchor
 docnumber: I-D.herbert-remotecsumoffload
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tom
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -49,22 +49,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification describes remote checksum offload for encapsulation,
-    which is a mechanism that provides checksum offload of encapsulated packets using
-    rudimentary offload capabilities found in most Network Interface Card (NIC) devices.
-    The outer header checksum (e.g. that in UDP or GRE) is enabled in packets and,
-    with some additional meta information, a receiver is able to deduce the checksum
-    to be set for an inner encapsulated packet. Effectively this offloads the computation
-    of the inner checksum. Enabling the outer checksum in encapsulation has the additional
-    advantage that it covers more of the packet than the inner checksum including
-    the encapsulation headers.</p>"
-  format: text/html
+  content: |-
+    <p>This specification describes remote checksum offload for
+       encapsulation, which is a mechanism that provides checksum offload of
+       encapsulated packets using rudimentary offload capabilities found in
+       most Network Interface Card (NIC) devices. The outer header checksum
+       (e.g. that in UDP or GRE) is enabled in packets and, with some
+       additional meta information, a receiver is able to deduce the
+       checksum to be set for an inner encapsulated packet. Effectively this
+       offloads the computation of the inner checksum. Enabling the outer
+       checksum in encapsulation has the additional advantage that it covers
+       more of the packet than the inner checksum including the
+       encapsulation headers.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-herbert-remotecsumoffload-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-herbert-remotecsumoffload-01
     docidentifier:
     - content: draft-herbert-remotecsumoffload-01
       type: Internet-Draft
@@ -75,10 +79,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-herbert-remotecsumoffload-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'Correctover Conformance Shape (CCS): A Receipt and Binding Specification
     for Agent Runtime Verification'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-01
 docidentifier:
+- content: draft-correctover-ccs
+  type: Internet-Draft
 - content: draft-correctover-ccs-01
   type: Internet-Draft
   primary: true
-- content: I-D.correctover-ccs
-  type: IETF
-  scope: anchor
 docnumber: I-D.correctover-ccs
 date:
 - type: published
@@ -38,7 +36,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Correctover
+        - language: en
+          content: Correctover
 version:
 - content: '01'
 language:
@@ -48,26 +47,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Correctover Conformance Shape (CCS) defines a tamper-evident receipt
-    schema and a set of cryptographic bindings that together constitute a verifiable
-    conformance record for an agent runtime's decision to permit, deny, or escalate
-    a tool invocation. CCS is designed as a one-receipt-per-invocation object that
-    can be consumed by an executor-side Action Evidence Boundary (AEB), providing
-    the request_hash, response_hash, runtime_context_hash, action binding, params_hash
-    binding, issuer, audience, nonce/sequence, freshness, and config_hash fields that
-    the AEB processing model requires as native inputs. This document specifies the
-    CCS Receipt Schema, the Canonical Configuration model, the nine binding mechanisms,
-    key management, transport requirements, verifier source classification, conformance
-    levels, and negative test cases. It is intended to enable a reader such as the
-    author of the Action Evidence Boundary specification to evaluate whether and how
-    a CCS receipt can be mapped into an Authorization Evidence Chain (AEC) component.</p>"
-  format: text/html
+  content: |-
+    <p>The Correctover Conformance Shape (CCS) defines a tamper-evident
+       receipt schema and a set of cryptographic bindings that together
+       constitute a verifiable conformance record for an agent runtime's
+       decision to permit, deny, or escalate a tool invocation.  CCS is
+       designed as a one-receipt-per-invocation object that can be consumed
+       by an executor-side Action Evidence Boundary (AEB), providing the
+       request_hash, response_hash, runtime_context_hash, action binding,
+       params_hash binding, issuer, audience, nonce/sequence, freshness, and
+       config_hash fields that the AEB processing model requires as native
+       inputs.
+
+       This document specifies the CCS Receipt Schema, the Canonical
+       Configuration model, the nine binding mechanisms, key management,
+       transport requirements, verifier source classification, conformance
+       levels, and negative test cases.  It is intended to enable a reader
+       such as the author of the Action Evidence Boundary specification to
+       evaluate whether and how a CCS receipt can be mapped into an
+       Authorization Evidence Chain (AEC) component.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-correctover-ccs-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-00
     docidentifier:
     - content: draft-correctover-ccs-00
       type: Internet-Draft
@@ -75,10 +81,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-correctover-ccs-03
-      format: text/plain
+      content: draft-correctover-ccs-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-02
     docidentifier:
-    - content: draft-correctover-ccs-03
+    - content: draft-correctover-ccs-02
       type: Internet-Draft
       primary: true
 series:
@@ -87,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-correctover-ccs-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: HTTP Signature Keys
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hardt-httpbis-signature-key-04
 docidentifier:
+- content: draft-hardt-httpbis-signature-key
+  type: Internet-Draft
 - content: draft-hardt-httpbis-signature-key-04
   type: Internet-Draft
   primary: true
-- content: I-D.hardt-httpbis-signature-key
-  type: IETF
-  scope: anchor
 docnumber: I-D.hardt-httpbis-signature-key
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dick
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hellō
+        - language: en
+          content: Hellō
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thibault
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cloudflare
+        - language: en
+          content: Cloudflare
 version:
 - content: '04'
 language:
@@ -75,36 +79,42 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines two HTTP header fields and one Accept-Signature
-    parameter for use with HTTP Message Signatures as defined in RFC 9421. The Signature-Key
-    request header distributes public keys used to verify signatures, with five initial
-    key distribution schemes: pseudonymous inline keys (hwk), self-issued key delegation
-    via JWK Thumbprint JWTs (jkt-jwt), identified signers with JWKS URI discovery
-    (jwks_uri), JWT-based delegation (jwt), and X.509 certificate chains (x509). The
-    sigkey parameter extends Accept-Signature (RFC 9421 Section 5) to indicate the
-    type of Signature-Key the server requires. The Signature-Error response header
-    provides structured error information when signature verification fails. Together,
-    these mechanisms enable flexible trust models ranging from privacy- preserving
-    pseudonymous verification to horizontally-scalable delegated authentication and
-    PKI-based identity chains.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines two HTTP header fields and one Accept-Signature
+       parameter for use with HTTP Message Signatures as defined in RFC
+       9421.  The Signature-Key request header distributes public keys used
+       to verify signatures, with five initial key distribution schemes:
+       pseudonymous inline keys (hwk), self-issued key delegation via JWK
+       Thumbprint JWTs (jkt-jwt), identified signers with JWKS URI discovery
+       (jwks_uri), JWT-based delegation (jwt), and X.509 certificate chains
+       (x509).  The sigkey parameter extends Accept-Signature (RFC 9421
+       Section 5) to indicate the type of Signature-Key the server requires.
+       The Signature-Error response header provides structured error
+       information when signature verification fails.  Together, these
+       mechanisms enable flexible trust models ranging from privacy-
+       preserving pseudonymous verification to horizontally-scalable
+       delegated authentication and PKI-based identity chains.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-hardt-httpbis-signature-key-02
-      format: text/plain
+      content: draft-hardt-httpbis-signature-key-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hardt-httpbis-signature-key-03
     docidentifier:
-    - content: draft-hardt-httpbis-signature-key-02
+    - content: draft-hardt-httpbis-signature-key-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-hardt-httpbis-signature-key-07
-      format: text/plain
+      content: draft-hardt-httpbis-signature-key-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hardt-httpbis-signature-key-05
     docidentifier:
-    - content: draft-hardt-httpbis-signature-key-07
+    - content: draft-hardt-httpbis-signature-key-05
       type: Internet-Draft
       primary: true
 series:
@@ -113,10 +123,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hardt-httpbis-signature-key-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

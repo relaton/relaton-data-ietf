@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Using QUIC Stream Resets with Partial Delivery in HTTP/3
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-seemann-httpbis-reset-stream-at-00
 docidentifier:
+- content: draft-seemann-httpbis-reset-stream-at
+  type: Internet-Draft
 - content: draft-seemann-httpbis-reset-stream-at-00
   type: Internet-Draft
   primary: true
-- content: I-D.seemann-httpbis-reset-stream-at
-  type: IETF
-  scope: anchor
 docnumber: I-D.seemann-httpbis-reset-stream-at
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marten
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -49,26 +49,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC stream resets do not guarantee delivery of stream data sent before
-    the reset. This is a problem for HTTP/3 when the correct protocol outcome is an
-    abrupt stream termination, but the sender still has a bounded prefix worth delivering,
-    such as response headers, a short diagnostic response body, or a partial response
-    received from an upstream host. RESET_STREAM_AT provides reliable delivery of
-    that prefix and is already used by WebTransport over HTTP/3 when resetting streams.
-    The same mechanism also fits HTTP/3 CONNECT tunnels, intermediary failures after
-    response commitment, malformed decoded HTTP messages, and requests rejected before
-    application processing.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC stream resets do not guarantee delivery of stream data sent
+       before the reset.  This is a problem for HTTP/3 when the correct
+       protocol outcome is an abrupt stream termination, but the sender
+       still has a bounded prefix worth delivering, such as response
+       headers, a short diagnostic response body, or a partial response
+       received from an upstream host.
+
+       RESET_STREAM_AT provides reliable delivery of that prefix and is
+       already used by WebTransport over HTTP/3 when resetting streams.  The
+       same mechanism also fits HTTP/3 CONNECT tunnels, intermediary
+       failures after response commitment, malformed decoded HTTP messages,
+       and requests rejected before application processing.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-seemann-httpbis-reset-stream-at-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

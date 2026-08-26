@@ -1,11 +1,12 @@
 ---
 id: draftzhangl3vpnlabelsharing
 schema_version: v1.5.6
+formattedref:
+  content: draft-zhang-l3vpn-label-sharing
 title:
 - language: en
   script: Latn
   content: Label Sharing for Fast PE Protection
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zhang-l3vpn-label-sharing-02
@@ -19,23 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes a method to be used by VPN Service Providers
-    to provide multi-homed CEs with fast protection of egress PEs. Egress PEs in a
-    redundant group always share the same label in distribution of VPN routes of a
-    VRF. A virtual Next Hop (vNH) in the IGP/MPLS backbone is created as the common
-    end of LSP tunnels which would otherwise terminate at each egress PE. Primary
-    and backup LSP tunnels ended at the vNH are set up by MPLS on basis of existing
-    IGP FRR mechanisms. If the primary egress PE fails, the backup egress PE can recognize
-    the "shared" VPN route label carried by the data packets. Therefore, the failure
-    affected data packets can be smoothly rerouted to the backup PE for delivery without
-    changing their VPN route label.</p>
-  format: text/html
+  content: |-
+    <p>This document describes a method to be used by VPN Service Providers
+       to provide multi-homed CEs with fast protection of egress PEs. Egress
+       PEs in a redundant group always share the same label in distribution
+       of VPN routes of a VRF. A virtual Next Hop (vNH) in the IGP/MPLS
+       backbone is created as the common end of LSP tunnels which would
+       otherwise terminate at each egress PE. Primary and backup LSP tunnels
+       ended at the vNH are set up by MPLS on basis of existing IGP FRR
+       mechanisms. If the primary egress PE fails, the backup egress PE can
+       recognize the "shared" VPN route label carried by the data packets.
+       Therefore, the failure affected data packets can be smoothly rerouted
+       to the backup PE for delivery without changing their VPN route label.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-zhang-l3vpn-label-sharing-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-l3vpn-label-sharing-00
     docidentifier:
     - content: draft-zhang-l3vpn-label-sharing-00
       type: Internet-Draft
@@ -44,7 +48,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhang-l3vpn-label-sharing-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-l3vpn-label-sharing-01
     docidentifier:
     - content: draft-zhang-l3vpn-label-sharing-01
       type: Internet-Draft
@@ -53,7 +59,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-zhang-l3vpn-label-sharing-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-l3vpn-label-sharing-02
     docidentifier:
     - content: draft-zhang-l3vpn-label-sharing-02
       type: Internet-Draft
@@ -62,4 +70,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

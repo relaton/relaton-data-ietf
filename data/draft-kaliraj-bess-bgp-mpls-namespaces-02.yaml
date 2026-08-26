@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Signaled MPLS Namespaces
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kaliraj-bess-bgp-mpls-namespaces-02
 docidentifier:
+- content: draft-kaliraj-bess-bgp-mpls-namespaces
+  type: Internet-Draft
 - content: draft-kaliraj-bess-bgp-mpls-namespaces-02
   type: Internet-Draft
   primary: true
-- content: I-D.kaliraj-bess-bgp-mpls-namespaces
-  type: IETF
-  scope: anchor
 docnumber: I-D.kaliraj-bess-bgp-mpls-namespaces
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Minto
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: HPE
+        - language: en
+          content: HPE
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Praveen
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: AT&T
+        - language: en
+          content: AT&T
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Israel
       - language: en
+        script: Latn
         initial: I
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: AT&T
+        - language: en
+          content: AT&T
 version:
 - content: '02'
 language:
@@ -119,24 +129,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The MPLS forwarding layer in a core network is a shared resource. The
-    MPLS FIB at nodes in this layer contains labels that are dynamically allocated
-    and locally significant at that node. These labels are scoped in context of the
-    global loopback address. Let us call this the global MPLS namespace. For some
-    usecases like upstream label allocation, it is useful to create private MPLS namespaces
-    (virtual MPLS FIB) over this shared MPLS forwarding layer. This allows installing
-    deterministic label values in the private FIBs created at nodes participating
-    in the private MPLS namespace, while preserving the "locally significant" nature
-    of the underlying shared global MPLS FIB. This document defines new address families
-    (AFI: 16399, SAFI: 128, or 1) and associated signaling mechanisms to create and
-    use MPLS forwarding contexts in a network. Some example use cases are also described.</p>'
-  format: text/html
+  content: |-
+    <p>The MPLS forwarding layer in a core network is a shared resource.
+       The MPLS FIB at nodes in this layer contains labels that are
+       dynamically allocated and locally significant at that node.  These
+       labels are scoped in context of the global loopback address.  Let us
+       call this the global MPLS namespace.
+
+       For some usecases like upstream label allocation, it is useful to
+       create private MPLS namespaces (virtual MPLS FIB) over this shared
+       MPLS forwarding layer.  This allows installing deterministic label
+       values in the private FIBs created at nodes participating in the
+       private MPLS namespace, while preserving the "locally significant"
+       nature of the underlying shared global MPLS FIB.
+
+       This document defines new address families (AFI: 16399, SAFI: 128, or
+       1) and associated signaling mechanisms to create and use MPLS
+       forwarding contexts in a network.  Some example use cases are also
+       described.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-kaliraj-bess-bgp-mpls-namespaces-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-bess-bgp-mpls-namespaces-01
     docidentifier:
     - content: draft-kaliraj-bess-bgp-mpls-namespaces-01
       type: Internet-Draft
@@ -147,10 +165,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kaliraj-bess-bgp-mpls-namespaces-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

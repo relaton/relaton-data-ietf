@@ -1,11 +1,12 @@
 ---
 id: draftietfhttpbiskey
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-httpbis-key
 title:
 - language: en
   script: Latn
   content: The Key HTTP Response Header Field
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-key-01
@@ -19,22 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The 'Key' header field for HTTP responses allows an origin server to
-    describe the secondary cache key (RFC 7234, Section 4.1) for a resource, by conveying
-    what is effectively a short algorithm that can be used upon later requests to
-    determine if a stored response is reusable for a given request. Key has the advantage
-    of avoiding an additional round trip for validation whenever a new request differs
-    slightly, but not significantly, from prior requests. Key also informs user agents
-    of the request characteristics that might result in different content, which can
-    be useful if the user agent is not sending request header fields in order to reduce
-    the risk of fingerprinting.</p>"
-  format: text/html
+  content: |-
+    <p>The 'Key' header field for HTTP responses allows an origin server to
+       describe the secondary cache key (RFC 7234, Section 4.1) for a
+       resource, by conveying what is effectively a short algorithm that can
+       be used upon later requests to determine if a stored response is
+       reusable for a given request.
+
+       Key has the advantage of avoiding an additional round trip for
+       validation whenever a new request differs slightly, but not
+       significantly, from prior requests.
+
+       Key also informs user agents of the request characteristics that
+       might result in different content, which can be useful if the user
+       agent is not sending request header fields in order to reduce the
+       risk of fingerprinting.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-httpbis-key-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-key-00
     docidentifier:
     - content: draft-ietf-httpbis-key-00
       type: Internet-Draft
@@ -43,7 +51,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-httpbis-key-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-key-01
     docidentifier:
     - content: draft-ietf-httpbis-key-01
       type: Internet-Draft
@@ -52,4 +62,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

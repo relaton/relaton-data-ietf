@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: HMTFTP - HMAC-based Trivial File Transfer Protocol (v0.1)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-00
 docidentifier:
+- content: draft-maurette-hmtftp
+  type: Internet-Draft
 - content: draft-maurette-hmtftp-00
   type: Internet-Draft
   primary: true
-- content: I-D.maurette-hmtftp
-  type: IETF
-  scope: anchor
 docnumber: I-D.maurette-hmtftp
 date:
 - type: published
@@ -37,7 +35,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IUT R&T Bethune
+        - language: en
+          content: IUT R&T Bethune
 version:
 - content: '00'
 language:
@@ -47,20 +46,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>HMTFTP ([RFC1350]) is a lightweight UDP file transfer protocol that
-    preserves TFTP-style simplicity (block-and-ACK) while adding an optional authenticated
-    encryption mode using AEAD AES-256-GCM with pre-shared keys derived via HKDF-SHA-256.
-    The protocol targets managed environments (e.g., CPEs, OpenWrt, embedded devices)
-    where provisioning and configuration have constrained requirements. This document
-    specifies v0.1, including message formats, negotiation, cryptographic processing,
-    timers, and security considerations.</p>"
-  format: text/html
+  content: |-
+    <p>HMTFTP ([RFC1350]) is a lightweight UDP file transfer protocol that
+       preserves TFTP-style simplicity (block-and-ACK) while adding an
+       optional authenticated encryption mode using AEAD AES-256-GCM with
+       pre-shared keys derived via HKDF-SHA-256.  The protocol targets
+       managed environments (e.g., CPEs, OpenWrt, embedded devices) where
+       provisioning and configuration have constrained requirements.  This
+       document specifies v0.1, including message formats, negotiation,
+       cryptographic processing, timers, and security considerations.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-maurette-hmtftp-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-01
     docidentifier:
     - content: draft-maurette-hmtftp-01
       type: Internet-Draft
@@ -71,10 +73,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-maurette-hmtftp-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Delegation Receipt Protocol for AI Agent Authorization
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-00
 docidentifier:
+- content: draft-nelson-agent-delegation-receipts
+  type: Internet-Draft
 - content: draft-nelson-agent-delegation-receipts-00
   type: Internet-Draft
   primary: true
-- content: I-D.nelson-agent-delegation-receipts
-  type: IETF
-  scope: anchor
 docnumber: I-D.nelson-agent-delegation-receipts
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ryan
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Authproof
+        - language: en
+          content: Authproof
 version:
 - content: '00'
 language:
@@ -53,22 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Delegation Receipt Protocol (DRP), a cryptographic
-    authorization primitive for AI agent deployments. Before any agent action executes,
-    the authorizing user signs an Authorization Object containing scope boundaries,
-    time window, operator instruction hash, and model state commitment. This signed
-    receipt is published to an append-only log before the agent runtime receives control.
-    The protocol removes the operator as a trusted third party by making the user's
-    private key the sole signing authority over the delegation record.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the Delegation Receipt Protocol (DRP), a
+       cryptographic authorization primitive for AI agent deployments.
+       Before any agent action executes, the authorizing user signs an
+       Authorization Object containing scope boundaries, time window,
+       operator instruction hash, and model state commitment.  This signed
+       receipt is published to an append-only log before the agent runtime
+       receives control.  The protocol removes the operator as a trusted
+       third party by making the user's private key the sole signing
+       authority over the delegation record.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-nelson-agent-delegation-receipts-09
-      format: text/plain
+      content: draft-nelson-agent-delegation-receipts-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-01
     docidentifier:
-    - content: draft-nelson-agent-delegation-receipts-09
+    - content: draft-nelson-agent-delegation-receipts-01
       type: Internet-Draft
       primary: true
 series:
@@ -77,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-nelson-agent-delegation-receipts-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

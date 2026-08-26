@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TCP Extended Acknowledgment Options
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-huang-tsvwg-tcp-eack-00
 docidentifier:
+- content: draft-huang-tsvwg-tcp-eack
+  type: Internet-Draft
 - content: draft-huang-tsvwg-tcp-eack-00
   type: Internet-Draft
   primary: true
-- content: I-D.huang-tsvwg-tcp-eack
-  type: IETF
-  scope: anchor
 docnumber: I-D.huang-tsvwg-tcp-eack
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Manqing
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Exar Corporation
+        - language: en
+          content: Exar Corporation
 version:
 - content: '00'
 language:
@@ -53,29 +54,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>TCP may experience asymmetric bi-directional performance and poor over
-    all performance when acknowledgments (ACKs) are sent by separate packets instead
-    of being piggybacked by data packets. Between two TCP end points, when two-way
-    traffic flows do not share the same TCP connection, the increase of traffic volume
-    in one direction consumes more bandwidth in the reverse direction by generating
-    more separate ACK packets, potentially causing more congestions in the reverse
-    direction. An Extended Acknowledgment (EACK) mechanism can help overcome these
-    limitations. The receiving TCP sends back EACK packets to the sender informing
-    the sender of data, including data of the current TCP connection and data of other
-    eligible connections, that have been received. EACK thus reduces the need for
-    separate ACK packets and improves the bi-directional symmetry and over all throughput.
-    This memo proposes an implementation of EACK and discusses its related issues.</p>"
-  format: text/html
+  content: "<p>TCP may experience asymmetric bi-directional performance and poor \nover
+    all performance when acknowledgments (ACKs) are sent by \nseparate packets instead
+    of being piggybacked by data packets.  \nBetween two TCP end points, when two-way
+    traffic flows do not share \nthe same TCP connection, the increase of traffic
+    volume in one \ndirection consumes more bandwidth in the reverse direction by
+    \ngenerating more separate ACK packets, potentially causing more \ncongestions
+    in the reverse direction.\n\nAn Extended Acknowledgment (EACK) mechanism can help
+    overcome these\nlimitations.  The receiving TCP sends back EACK packets to the
+    sender\ninforming the sender of data, including data of the current TCP \nconnection
+    and data of other eligible connections, that have been\nreceived.  EACK thus reduces
+    the need for separate ACK packets and\nimproves the bi-directional symmetry and
+    over all throughput.\n\nThis memo proposes an implementation of EACK and discusses
+    its \nrelated issues.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-huang-tsvwg-tcp-eack-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

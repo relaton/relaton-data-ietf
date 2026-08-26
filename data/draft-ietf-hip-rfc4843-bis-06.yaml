@@ -7,17 +7,15 @@ title:
   script: Latn
   content: An IPv6 Prefix for Overlay Routable Cryptographic Hash Identifiers Version
     2 (ORCHIDv2)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-hip-rfc4843-bis-06
 docidentifier:
+- content: draft-ietf-hip-rfc4843-bis
+  type: Internet-Draft
 - content: draft-ietf-hip-rfc4843-bis-06
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-hip-rfc4843-bis
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-hip-rfc4843-bis
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Julien
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -47,8 +47,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Francis
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -68,36 +70,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies an updated Overlay Routable Cryptographic Hash
-    Identifiers format that obsoletes RFC4843. These identifiers are intended to be
-    used as endpoint identifiers at applications and Application Programming Interfaces
-    (API) and not as identifiers for network location at the IP layer, i.e., locators.
-    They are designed to appear as application layer entities and at the existing
-    IPv6 APIs, but they should not appear in actual IPv6 headers. To make them more
-    like regular IPv6 addresses, they are expected to be routable at an overlay level.
-    Consequently, while they are considered non-routable addresses from the IPv6 layer
-    point-of-view, all existing IPv6 applications are expected to be able to use them
-    in a manner compatible with current IPv6 addresses. The Overlay Routable Cryptographic
-    Hash Identifiers originally defined in RFC4843 lacked a mechanism for cryptographic
-    algorithm agility. The updated ORCHID format specified in this document removes
-    this limitation by encoding in the identifier itself an index to the suite of
-    cryptographic algorithms in use.</p>"
-  format: text/html
+  content: |-
+    <p>This document specifies an updated Overlay Routable Cryptographic
+       Hash Identifiers format that obsoletes RFC4843.  These identifiers
+       are intended to be used as endpoint identifiers at applications and
+       Application Programming Interfaces (API) and not as identifiers for
+       network location at the IP layer, i.e., locators.  They are designed
+       to appear as application layer entities and at the existing IPv6
+       APIs, but they should not appear in actual IPv6 headers.  To make
+       them more like regular IPv6 addresses, they are expected to be
+       routable at an overlay level.  Consequently, while they are
+       considered non-routable addresses from the IPv6 layer point-of-view,
+       all existing IPv6 applications are expected to be able to use them in
+       a manner compatible with current IPv6 addresses.
+
+       The Overlay Routable Cryptographic Hash Identifiers originally
+       defined in RFC4843 lacked a mechanism for cryptographic algorithm
+       agility.  The updated ORCHID format specified in this document
+       removes this limitation by encoding in the identifier itself an index
+       to the suite of cryptographic algorithms in use.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-hip-rfc4843-bis-04
-      format: text/plain
+      content: draft-ietf-hip-rfc4843-bis-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-hip-rfc4843-bis-05
     docidentifier:
-    - content: draft-ietf-hip-rfc4843-bis-04
+    - content: draft-ietf-hip-rfc4843-bis-05
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-hip-rfc4843-bis-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-hip-rfc4843-bis-07
     docidentifier:
     - content: draft-ietf-hip-rfc4843-bis-07
       type: Internet-Draft
@@ -108,10 +118,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-hip-rfc4843-bis-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

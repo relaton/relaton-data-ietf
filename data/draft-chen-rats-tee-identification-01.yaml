@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Use TEE Identification in EAP-TLS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-rats-tee-identification-01
 docidentifier:
+- content: draft-chen-rats-tee-identification
+  type: Internet-Draft
 - content: draft-chen-rats-tee-identification-01
   type: Internet-Draft
   primary: true
-- content: I-D.chen-rats-tee-identification
-  type: IETF
-  scope: anchor
 docnumber: I-D.chen-rats-tee-identification
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Penglin
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
@@ -59,13 +60,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -79,7 +82,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 version:
 - content: '01'
 language:
@@ -89,23 +93,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In security considerations, identity of a device should be protected
-    and cannot be exposed in public in plaintext. The storage and execution of identity
-    in device also need to be protected during the lifecycle. Based on this purpose,
-    this document specifies the architecture of TEE identification based on EAP-TLS.
-    In this architecture, certificate protection and handshake keys generation which
-    are used for EAP-TLS authentication will be executed in TEE. Communication establishment
-    with EAP-TLS Server will be executed in REE. A middle layer is introduced to communicate
-    between TEE and REE to compose the original function of EAP-TLS Client. TEE identification
-    based on EAP-TLS could be used in different network layers to implement identity
-    authentication.</p>"
-  format: text/html
+  content: |-
+    <p>In security considerations, identity of a device should be protected
+       and cannot be exposed in public in plaintext.  The storage and
+       execution of identity in device also need to be protected during the
+       lifecycle.  Based on this purpose, this document specifies the
+       architecture of TEE identification based on EAP-TLS.  In this
+       architecture, certificate protection and handshake keys generation
+       which are used for EAP-TLS authentication will be executed in TEE.
+       Communication establishment with EAP-TLS Server will be executed in
+       REE.  A middle layer is introduced to communicate between TEE and REE
+       to compose the original function of EAP-TLS Client.
+
+       TEE identification based on EAP-TLS could be used in different
+       network layers to implement identity authentication.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-chen-rats-tee-identification-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-rats-tee-identification-00
     docidentifier:
     - content: draft-chen-rats-tee-identification-00
       type: Internet-Draft
@@ -114,7 +123,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-chen-rats-tee-identification-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-rats-tee-identification-02
     docidentifier:
     - content: draft-chen-rats-tee-identification-02
       type: Internet-Draft
@@ -125,10 +136,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chen-rats-tee-identification-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

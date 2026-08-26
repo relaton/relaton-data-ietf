@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: External Trace ID for Configuration Tracing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-quilbeuf-opsawg-configuration-tracing-02
 docidentifier:
+- content: draft-quilbeuf-opsawg-configuration-tracing
+  type: Internet-Draft
 - content: draft-quilbeuf-opsawg-configuration-tracing-02
   type: Internet-Draft
   primary: true
-- content: I-D.quilbeuf-opsawg-configuration-tracing
-  type: IETF
-  scope: anchor
 docnumber: I-D.quilbeuf-opsawg-configuration-tracing
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jean
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,13 +43,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -85,15 +90,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Swisscom
+        - language: en
+          content: Swisscom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Diego
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -107,15 +115,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Telefonica I+D
+        - language: en
+          content: Telefonica I+D
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sun
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -129,7 +140,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - language: en
+          content: China Telecom
 version:
 - content: '02'
 language:
@@ -139,29 +151,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Network equipment are often configured by a variety of network management
-    systems (NMS), protocols, and teams. If a network issue arises (e.g., because
-    of a wrong configuration change), it is important to quickly identify the root
-    cause and obtain the reason for pushing that modification. Another potential network
-    issue can stem from concurrent NMSes with overlapping intents, each having their
-    own tasks to perform. In such a case, it is important to map the respective modifications
-    to its originating NMS. This document specifies a NETCONF mechanism to automatically
-    map the configuration modifications to their source, up to a specific NMS change
-    request. Such a mechanism is required, in particular, for autonomous networks
-    to trace the source of a particular configuration change that led to an anomaly
-    detection. This mechanism facilitates the troubleshooting, the post mortem analysis,
-    and in the end the closed loop automation required for self-healing networks.
-    The specification also includes a YANG module that is meant to map a local configuration
-    change to the corresponding trace id, up to the controller or even the orchestrator.</p>"
-  format: text/html
+  content: |-
+    <p>Network equipment are often configured by a variety of network
+       management systems (NMS), protocols, and teams.  If a network issue
+       arises (e.g., because of a wrong configuration change), it is
+       important to quickly identify the root cause and obtain the reason
+       for pushing that modification.  Another potential network issue can
+       stem from concurrent NMSes with overlapping intents, each having
+       their own tasks to perform.  In such a case, it is important to map
+       the respective modifications to its originating NMS.
+
+       This document specifies a NETCONF mechanism to automatically map the
+       configuration modifications to their source, up to a specific NMS
+       change request.  Such a mechanism is required, in particular, for
+       autonomous networks to trace the source of a particular configuration
+       change that led to an anomaly detection.  This mechanism facilitates
+       the troubleshooting, the post mortem analysis, and in the end the
+       closed loop automation required for self-healing networks.  The
+       specification also includes a YANG module that is meant to map a
+       local configuration change to the corresponding trace id, up to the
+       controller or even the orchestrator.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-quilbeuf-opsawg-configuration-tracing-00
-      format: text/plain
+      content: draft-quilbeuf-opsawg-configuration-tracing-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-quilbeuf-opsawg-configuration-tracing-01
     docidentifier:
-    - content: draft-quilbeuf-opsawg-configuration-tracing-00
+    - content: draft-quilbeuf-opsawg-configuration-tracing-01
       type: Internet-Draft
       primary: true
 series:
@@ -170,10 +189,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-quilbeuf-opsawg-configuration-tracing-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

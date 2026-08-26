@@ -1,11 +1,12 @@
 ---
 id: draftchenvgovindanbierbgplsbierext
 schema_version: v1.5.6
+formattedref:
+  content: draft-chenvgovindan-bier-bgp-ls-bier-ext
 title:
 - language: en
   script: Latn
   content: BGP Link-State extensions for BIER
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chenvgovindan-bier-bgp-ls-bier-ext-01
@@ -19,25 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>Bit Index Explicit Replication (BIER) is an architecture that provides
-    optimal multicast forwarding through a "BIER domain" without requiring intermediate
-    routers to maintain any multicast related per- flow state. BIER also does not
-    require any explicit tree-building protocol for its operation. A multicast data
-    packet enters a BIER domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves
-    the BIER domain at one or more "Bit-Forwarding Egress Routers" (BFERs). The BFIR
-    router adds a BIER header to the packet. The BIER header contains a bitstring
-    in which each bit represents exactly one BFER to forward the packet to. The set
-    of BFERs to which the multicast packet needs to be forwarded is expressed by setting
-    the bits that correspond to those routers in the BIER header. This document specifies
-    extensions to the BGP Link-state address- family in order to advertising BIER
-    information.</p>
-  format: text/html
+  content: |-
+    <p>Bit Index Explicit Replication (BIER) is an architecture that
+       provides optimal multicast forwarding through a "BIER domain" without
+       requiring intermediate routers to maintain any multicast related per-
+       flow state.  BIER also does not require any explicit tree-building
+       protocol for its operation.  A multicast data packet enters a BIER
+       domain at a "Bit-Forwarding Ingress Router" (BFIR), and leaves the
+       BIER domain at one or more "Bit-Forwarding Egress Routers" (BFERs).
+       The BFIR router adds a BIER header to the packet.  The BIER header
+       contains a bitstring in which each bit represents exactly one BFER to
+       forward the packet to.  The set of BFERs to which the multicast
+       packet needs to be forwarded is expressed by setting the bits that
+       correspond to those routers in the BIER header.
+
+       This document specifies extensions to the BGP Link-state address-
+       family in order to advertising BIER information.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-chenvgovindan-bier-bgp-ls-bier-ext-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chenvgovindan-bier-bgp-ls-bier-ext-00
     docidentifier:
     - content: draft-chenvgovindan-bier-bgp-ls-bier-ext-00
       type: Internet-Draft
@@ -46,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-chenvgovindan-bier-bgp-ls-bier-ext-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chenvgovindan-bier-bgp-ls-bier-ext-01
     docidentifier:
     - content: draft-chenvgovindan-bier-bgp-ls-bier-ext-01
       type: Internet-Draft
@@ -55,4 +63,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

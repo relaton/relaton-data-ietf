@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IS-IS Extension for BGP FRR Protection against Edge Node Failure
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bashandy-isis-bgp-edge-node-frr-01
 docidentifier:
+- content: draft-bashandy-isis-bgp-edge-node-frr
+  type: Internet-Draft
 - content: draft-bashandy-isis-bgp-edge-node-frr-01
   type: Internet-Draft
   primary: true
-- content: I-D.bashandy-isis-bgp-edge-node-frr
-  type: IETF
-  scope: anchor
 docnumber: I-D.bashandy-isis-bgp-edge-node-frr
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ahmed
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 version:
 - content: '01'
 language:
@@ -53,28 +54,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>Consider a BGP free core scenario where traffic is tunneled between
-    edge routers. Suppose the edge BGP speakers PE1, PE2,..., PEn know about a prefix
-    P/m via the external routers CE1, CE2,..., CEm. If the edge router PEi crashes
-    or becomes totally disconnected from the core, it desirable for a core router
-    "P" that is carrying traffic to the failed edge router PEi to immediately restore
-    traffic by re- routing packets originally tunneled to PEi and destined to the
-    prefix P/m to one of the other edge routers that advertised P/m, say PEj, until
-    BGP re-converges. If the packets originally flowing to the failed edge router
-    PEi are labeled, then the repairing core router P router may need to swap, push,
-    or pop the label advertised by the failed edge router PEi with another label before
-    re-routing the packet through an LSP terminating PEj so that PEj can correctly
-    forward the packet. The document proposes an extension to IS-IS protocol to inform
-    core routers about the repair edge router PEj and, for labeled packets, the label
-    that needs to be pushed/swapped before sending the packet into the tunnel terminating
-    on PEj</p>
-  format: text/html
+  content: |-
+    <p>Consider a BGP free core scenario where traffic is tunneled between
+    edge routers. Suppose the edge BGP speakers PE1, PE2,..., PEn know
+    about a prefix P/m via the external routers CE1, CE2,..., CEm.  If
+    the edge router PEi crashes or becomes totally disconnected from the
+    core, it desirable for a core router "P" that is carrying traffic to
+    the failed edge router PEi to immediately restore traffic by re-
+    routing packets originally tunneled to PEi and destined to the prefix
+    P/m to one of the other edge routers that advertised P/m, say PEj,
+    until BGP re-converges. If the packets originally flowing to the
+    failed edge router PEi are labeled, then the repairing core router P
+    router may need to swap, push, or pop the label advertised by the
+    failed edge router PEi with another label before re-routing the
+    packet through an LSP terminating PEj so that PEj can correctly
+    forward the packet. The document proposes an extension to IS-IS
+    protocol to inform core routers about the repair edge router PEj and,
+    for labeled packets, the label that needs to be pushed/swapped before
+    sending the packet into the tunnel terminating on PEj</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-bashandy-isis-bgp-edge-node-frr-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bashandy-isis-bgp-edge-node-frr-00
     docidentifier:
     - content: draft-bashandy-isis-bgp-edge-node-frr-00
       type: Internet-Draft
@@ -85,10 +90,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bashandy-isis-bgp-edge-node-frr-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: OAuth 2.0 RAR Metadata and Error Signaling
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-rar-metadata-01
 docidentifier:
+- content: draft-zehavi-oauth-rar-metadata
+  type: Internet-Draft
 - content: draft-zehavi-oauth-rar-metadata-01
   type: Internet-Draft
   primary: true
-- content: I-D.zehavi-oauth-rar-metadata
-  type: IETF
-  scope: anchor
 docnumber: I-D.zehavi-oauth-rar-metadata
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yaron
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Raiffeisen Bank International
+        - language: en
+          content: Raiffeisen Bank International
 version:
 - content: '01'
 language:
@@ -53,27 +54,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>OAuth 2.0 Rich Authorization Requests (RAR), as defined in [RFC9396],
-    enables fine-grained authorization requests, using structured JSON objects. While
-    RAR [RFC9396] standardizes the exchange and handling of authorization details,
-    it does not define a mechanism for clients to discover how to construct valid
-    authorization details types. This document defines a machine-readable metadata
-    format for authorization servers to provide authorization details type documentation
-    and JSON Schema [JSON.Schema] definitions, as well as interoperable discovery
-    via OAuth Resource Server Metadata [RFC9728]. This document also defines a new
-    WWW-Authenticate normative OAuth error code, insufficient_authorization_details,
-    enabling resource servers to indicate inadequate authorization details as the
-    cause of failure. It also defines an OPTIONAL response body which MAY be returned
-    alongside the insufficient_authorization_details error, providing an informative
-    yet actionable authorization details object, which can be used directly in a subsequent
-    OAuth request.</p>"
-  format: text/html
+  content: |-
+    <p>OAuth 2.0 Rich Authorization Requests (RAR), as defined in [RFC9396],
+       enables fine-grained authorization requests, using structured JSON
+       objects.
+
+       While RAR [RFC9396] standardizes the exchange and handling of
+       authorization details, it does not define a mechanism for clients to
+       discover how to construct valid authorization details types.
+
+       This document defines a machine-readable metadata format for
+       authorization servers to provide authorization details type
+       documentation and JSON Schema [JSON.Schema] definitions, as well as
+       interoperable discovery via OAuth Resource Server Metadata [RFC9728].
+
+       This document also defines a new WWW-Authenticate normative OAuth
+       error code, insufficient_authorization_details, enabling resource
+       servers to indicate inadequate authorization details as the cause of
+       failure.
+
+       It also defines an OPTIONAL response body which MAY be returned
+       alongside the insufficient_authorization_details error, providing an
+       informative yet actionable authorization details object, which can be
+       used directly in a subsequent OAuth request.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-zehavi-oauth-rar-metadata-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-rar-metadata-00
     docidentifier:
     - content: draft-zehavi-oauth-rar-metadata-00
       type: Internet-Draft
@@ -81,10 +92,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-zehavi-oauth-rar-metadata-06
-      format: text/plain
+      content: draft-zehavi-oauth-rar-metadata-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zehavi-oauth-rar-metadata-02
     docidentifier:
-    - content: draft-zehavi-oauth-rar-metadata-06
+    - content: draft-zehavi-oauth-rar-metadata-02
       type: Internet-Draft
       primary: true
 series:
@@ -93,10 +106,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-zehavi-oauth-rar-metadata-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

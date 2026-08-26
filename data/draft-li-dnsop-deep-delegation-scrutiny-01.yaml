@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Best Practices for Handling Deeply Nested Domain Delegations in Recursive
     Resolvers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-deep-delegation-scrutiny-01
 docidentifier:
+- content: draft-li-dnsop-deep-delegation-scrutiny
+  type: Internet-Draft
 - content: draft-li-dnsop-deep-delegation-scrutiny-01
   type: Internet-Draft
   primary: true
-- content: I-D.li-dnsop-deep-delegation-scrutiny
-  type: IETF
-  scope: anchor
 docnumber: I-D.li-dnsop-deep-delegation-scrutiny
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xiang
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nankai University
+        - language: en
+          content: Nankai University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yuqi
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -66,15 +69,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nankai University
+        - language: en
+          content: Nankai University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mingming
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -88,7 +94,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Zhongguancun Laboratory
+        - language: en
+          content: Zhongguancun Laboratory
 version:
 - content: '01'
 language:
@@ -98,24 +105,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Domain Name System (DNS) relies on caching to ensure its scalability
-    and performance. However, certain behaviors in the DNS delegation and caching
-    mechanisms can be exploited to circumvent domain name revocation. A recently discovered
-    attack, named PHOENIX DOMAIN T2, allows a malicious domain that has been revoked
-    at its parent zone to remain resolvable for an extended period. This is achieved
-    by creating a chain of deeply nested subdomains, effectively keeping the delegation
-    information alive in recursive resolver caches. This document describes the PHOENIX
-    DOMAIN T2 attack mechanism and proposes a set of operational best practices for
-    DNS recursive resolver operators to mitigate this threat. The primary recommendation
-    is for resolvers to apply additional scrutiny to domain names with an excessive
-    number of labels, which is a key characteristic of this attack.</p>"
-  format: text/html
+  content: |-
+    <p>The Domain Name System (DNS) relies on caching to ensure its
+       scalability and performance.  However, certain behaviors in the DNS
+       delegation and caching mechanisms can be exploited to circumvent
+       domain name revocation.  A recently discovered attack, named PHOENIX
+       DOMAIN T2, allows a malicious domain that has been revoked at its
+       parent zone to remain resolvable for an extended period.  This is
+       achieved by creating a chain of deeply nested subdomains, effectively
+       keeping the delegation information alive in recursive resolver
+       caches.
+
+       This document describes the PHOENIX DOMAIN T2 attack mechanism and
+       proposes a set of operational best practices for DNS recursive
+       resolver operators to mitigate this threat.  The primary
+       recommendation is for resolvers to apply additional scrutiny to
+       domain names with an excessive number of labels, which is a key
+       characteristic of this attack.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-li-dnsop-deep-delegation-scrutiny-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-dnsop-deep-delegation-scrutiny-00
     docidentifier:
     - content: draft-li-dnsop-deep-delegation-scrutiny-00
       type: Internet-Draft
@@ -126,10 +140,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-li-dnsop-deep-delegation-scrutiny-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: First-Party Sets and SameSite Cookies
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-west-cookie-samesite-firstparty-01
 docidentifier:
+- content: draft-west-cookie-samesite-firstparty
+  type: Internet-Draft
 - content: draft-west-cookie-samesite-firstparty-01
   type: Internet-Draft
   primary: true
-- content: I-D.west-cookie-samesite-firstparty
-  type: IETF
-  scope: anchor
 docnumber: I-D.west-cookie-samesite-firstparty
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google
+        - language: en
+          content: Google
 version:
 - content: '01'
 language:
@@ -53,21 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document proposes the addition of two new values to the "SameSite"
-    cookie attribute defined in RFC6265bis [I-D.ietf-httpbis-rfc6265bis]: "FirstPartyLax"
-    and "FirstPartyStrict". These values are conceptually similar to the existing
-    "Lax" and "Strict" values, but base the delivery checks on the First-Party Sets
-    [first-party-set] of a request''s initiator and target, rather than on their respective
-    registrable domains. This widens the scope of a given cookie''s applicability,
-    enabling entities that have sharded themselves across multiple registrable domains
-    to maintain HTTP state without exposing themselves to the risks of "SameSite=None".</p>'
-  format: text/html
+  content: |-
+    <p>This document proposes the addition of two new values to the
+       "SameSite" cookie attribute defined in RFC6265bis
+       [I-D.ietf-httpbis-rfc6265bis]: "FirstPartyLax" and
+       "FirstPartyStrict".  These values are conceptually similar to the
+       existing "Lax" and "Strict" values, but base the delivery checks on
+       the First-Party Sets [first-party-set] of a request's initiator and
+       target, rather than on their respective registrable domains.  This
+       widens the scope of a given cookie's applicability, enabling entities
+       that have sharded themselves across multiple registrable domains to
+       maintain HTTP state without exposing themselves to the risks of
+       "SameSite=None".</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-west-cookie-samesite-firstparty-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-west-cookie-samesite-firstparty-00
     docidentifier:
     - content: draft-west-cookie-samesite-firstparty-00
       type: Internet-Draft
@@ -78,10 +84,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-west-cookie-samesite-firstparty-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IKEv2 support for per-queue Child SAs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pwouters-ipsecme-multi-sa-performance-04
 docidentifier:
+- content: draft-pwouters-ipsecme-multi-sa-performance
+  type: Internet-Draft
 - content: draft-pwouters-ipsecme-multi-sa-performance-04
   type: Internet-Draft
   primary: true
-- content: I-D.pwouters-ipsecme-multi-sa-performance
-  type: IETF
-  scope: anchor
 docnumber: I-D.pwouters-ipsecme-multi-sa-performance
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Antony
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: secunet Security Networks AG
+        - language: en
+          content: secunet Security Networks AG
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tobias
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: codelabs GmbH
+        - language: en
+          content: codelabs GmbH
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Steffen
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: secunet Security Networks AG
+        - language: en
+          content: secunet Security Networks AG
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aiven
+        - language: en
+          content: Aiven
 version:
 - content: '04'
 language:
@@ -119,23 +129,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines three Notify Message Type Payloads for the Internet
-    Key Exchange Protocol Version 2 (IKEv2) indicating support for the negotiation
-    of multiple identical Child SAs to optimize performance. The CPU_QUEUES notification
-    indicates support for multiple queues or CPUs. The CPU_QUEUE_INFO notification
-    is used to confirm and optionally convey information about the specific queue.
-    The TS_MAX_QUEUE notify conveys that the peer is unwilling to create more additional
-    Child SAs for this particular Traffic Selector set. Using multiple identical Child
-    SAs has the benefit that each stream has its own Sequence Number Counter, ensuring
-    that CPUs don't have to synchronize their crypto state or disable their packet
-    replay protection.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines three Notify Message Type Payloads for the
+       Internet Key Exchange Protocol Version 2 (IKEv2) indicating support
+       for the negotiation of multiple identical Child SAs to optimize
+       performance.
+
+       The CPU_QUEUES notification indicates support for multiple queues or
+       CPUs.  The CPU_QUEUE_INFO notification is used to confirm and
+       optionally convey information about the specific queue.  The
+       TS_MAX_QUEUE notify conveys that the peer is unwilling to create more
+       additional Child SAs for this particular Traffic Selector set.
+
+       Using multiple identical Child SAs has the benefit that each stream
+       has its own Sequence Number Counter, ensuring that CPUs don't have to
+       synchronize their crypto state or disable their packet replay
+       protection.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-pwouters-ipsecme-multi-sa-performance-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pwouters-ipsecme-multi-sa-performance-03
     docidentifier:
     - content: draft-pwouters-ipsecme-multi-sa-performance-03
       type: Internet-Draft
@@ -144,7 +161,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-pwouters-ipsecme-multi-sa-performance-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pwouters-ipsecme-multi-sa-performance-05
     docidentifier:
     - content: draft-pwouters-ipsecme-multi-sa-performance-05
       type: Internet-Draft
@@ -155,10 +174,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pwouters-ipsecme-multi-sa-performance-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftyakungoauthagentattestation
 schema_version: v1.5.6
+formattedref:
+  content: draft-yakung-oauth-agent-attestation
 title:
 - language: en
   script: Latn
   content: Agent Credential Attestation Protocol (ACAP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-yakung-oauth-agent-attestation-00
@@ -19,23 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Agent Credential Attestation Protocol (ACAP),
-    a cryptographic credentialing protocol for autonomous AI agent pipelines. An ACAP
-    credential is a short-lived JSON Web Token (JWT) signed with RS256 that carries
-    scope-limited permissions together with a SHA-256 hash of the original human instruction
-    that initiated the task. Credentials may be delegated to child agents; each delegation
-    narrows scope, cannot outlive its parent, increments a delegation depth counter,
-    and extends a tamper-evident chain of token identifiers. Every lifecycle event
-    is recorded in an append- only, hash-chained audit log. This document specifies
-    the credential format, issuance rules, delegation rules, verification algorithm,
-    revocation semantics, human-in-the-loop approval protocol, and audit log structure.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the Agent Credential Attestation Protocol
+       (ACAP), a cryptographic credentialing protocol for autonomous AI
+       agent pipelines.  An ACAP credential is a short-lived JSON Web Token
+       (JWT) signed with RS256 that carries scope-limited permissions
+       together with a SHA-256 hash of the original human instruction that
+       initiated the task.  Credentials may be delegated to child agents;
+       each delegation narrows scope, cannot outlive its parent, increments
+       a delegation depth counter, and extends a tamper-evident chain of
+       token identifiers.  Every lifecycle event is recorded in an append-
+       only, hash-chained audit log.
+
+       This document specifies the credential format, issuance rules,
+       delegation rules, verification algorithm, revocation semantics,
+       human-in-the-loop approval protocol, and audit log structure.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-yakung-oauth-agent-attestation-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yakung-oauth-agent-attestation-00
     docidentifier:
     - content: draft-yakung-oauth-agent-attestation-00
       type: Internet-Draft
@@ -44,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

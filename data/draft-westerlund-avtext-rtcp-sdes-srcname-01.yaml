@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: RTCP SDES Item SRCNAME to Label Individual Sources
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-westerlund-avtext-rtcp-sdes-srcname-01
 docidentifier:
+- content: draft-westerlund-avtext-rtcp-sdes-srcname
+  type: Internet-Draft
 - content: draft-westerlund-avtext-rtcp-sdes-srcname-01
   type: Internet-Draft
   primary: true
-- content: I-D.westerlund-avtext-rtcp-sdes-srcname
-  type: IETF
-  scope: anchor
 docnumber: I-D.westerlund-avtext-rtcp-sdes-srcname
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Magnus
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,6 +46,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -62,8 +63,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Patrik
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -83,22 +86,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines a new SDES item called SRCNAME which uniquely
-    identifies a single media source, like a camera or a microphone. That way anyone
-    receiving the SDES information from a set of interlinked RTP sessions can determine
-    which SSRCs are related to the same source. It can equally be used to label SSRC
-    multiplexed related streams, such as FEC or Retransmission streams related to
-    the original source stream in the same session. In addition the new SDES item
-    is also defined for usage with the SDP source specific media attribute ("a=ssrc")
-    enabling an end-point to declare and learn the source bindings ahead of receiving
-    RTP/RTCP packets through signalling.</p>
-  format: text/html
+  content: |-
+    <p>This document defines a new SDES item called SRCNAME which uniquely
+       identifies a single media source, like a camera or a microphone.
+       That way anyone receiving the SDES information from a set of
+       interlinked RTP sessions can determine which SSRCs are related to the
+       same source.  It can equally be used to label SSRC multiplexed
+       related streams, such as FEC or Retransmission streams related to the
+       original source stream in the same session.  In addition the new SDES
+       item is also defined for usage with the SDP source specific media
+       attribute ("a=ssrc") enabling an end-point to declare and learn the
+       source bindings ahead of receiving RTP/RTCP packets through
+       signalling.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-westerlund-avtext-rtcp-sdes-srcname-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-westerlund-avtext-rtcp-sdes-srcname-00
     docidentifier:
     - content: draft-westerlund-avtext-rtcp-sdes-srcname-00
       type: Internet-Draft
@@ -107,7 +114,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-westerlund-avtext-rtcp-sdes-srcname-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-westerlund-avtext-rtcp-sdes-srcname-02
     docidentifier:
     - content: draft-westerlund-avtext-rtcp-sdes-srcname-02
       type: Internet-Draft
@@ -118,10 +127,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-westerlund-avtext-rtcp-sdes-srcname-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

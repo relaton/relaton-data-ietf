@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The Key HTTP Response Header Field
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-key-00
 docidentifier:
+- content: draft-ietf-httpbis-key
+  type: Internet-Draft
 - content: draft-ietf-httpbis-key-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-httpbis-key
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-httpbis-key
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Roy
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -48,8 +49,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mark
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -69,22 +72,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The 'Key' header field for HTTP responses allows an origin server to
-    describe the secondary cache key ([RFC7234], section 4.1) for a resource, by conveying
-    what is effectively a short algorithm that can be used upon later requests to
-    determine if a stored response is reusable for a given request. Key has the advantage
-    of avoiding an additional round trip for validation whenever a new request differs
-    slightly, but not significantly, from prior requests. Key also informs user agents
-    of the request characteristics that might result in different content, which can
-    be useful if the user agent is not sending request header fields in order to reduce
-    the risk of fingerprinting.</p>"
-  format: text/html
+  content: |-
+    <p>The 'Key' header field for HTTP responses allows an origin server to
+       describe the secondary cache key ([RFC7234], section 4.1) for a
+       resource, by conveying what is effectively a short algorithm that can
+       be used upon later requests to determine if a stored response is
+       reusable for a given request.
+
+       Key has the advantage of avoiding an additional round trip for
+       validation whenever a new request differs slightly, but not
+       significantly, from prior requests.
+
+       Key also informs user agents of the request characteristics that
+       might result in different content, which can be useful if the user
+       agent is not sending request header fields in order to reduce the
+       risk of fingerprinting.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-httpbis-key-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-key-01
     docidentifier:
     - content: draft-ietf-httpbis-key-01
       type: Internet-Draft
@@ -95,10 +105,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-httpbis-key-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: PCEP Procedures for Hierarchical Label Switched Paths
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-margaria-pce-pcep-hlsp-extension-00
 docidentifier:
+- content: draft-margaria-pce-pcep-hlsp-extension
+  type: Internet-Draft
 - content: draft-margaria-pce-pcep-hlsp-extension-00
   type: Internet-Draft
   primary: true
-- content: I-D.margaria-pce-pcep-hlsp-extension
-  type: IETF
-  scope: anchor
 docnumber: I-D.margaria-pce-pcep-hlsp-extension
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Cyril
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Colby
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sudhir
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,17 +93,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ben
       - language: en
+        script: Latn
         initial: B
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -111,7 +121,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 version:
 - content: '00'
 language:
@@ -121,31 +132,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Label Switched Paths (LSPs) set up in Multiprotocol Label Switching
-    (MPLS) or Generalized MPLS (GMPLS) networks can be used to form links to carry
-    traffic in those networks or in other (client) networks. These LSPs can be referred
-    to as Hierarchical LSPs (H-LSP). H-LSPs allow to improve the scalability of MPLS/GMPLS
-    networks by creating hierarchies of TE-LSPs. Those hierarchies are an important
-    state for optimal TE-Computation, therefore a stateful PCE should be able to discover
-    and manage those H-LSPs. A PCE having a global view of the network, including
-    Forwarding Adjacencies LSP (FA-LSP) and non FA- LSPs, can create more optimal
-    hierachies and (re-)compute the TE-LSPs path to make use of the H-LSPs. In particular
-    a PCE can better leverage the Private H-LSP introduced by RFC6107 without influencing
-    the IGP, allowing a less disruptive use of Hierarchies. RFC6107 defined Protocol
-    mechanisms to facilitate the establishment of such LSPs and to bundle traffic
-    engineering (TE) links to reduce the load on routing protocols. This document
-    defines PCEP extensions to learn about and control those H-LSPs.</p>"
-  format: text/html
+  content: |-
+    <p>Label Switched Paths (LSPs) set up in Multiprotocol Label Switching
+       (MPLS) or Generalized MPLS (GMPLS) networks can be used to form links
+       to carry traffic in those networks or in other (client) networks.
+       These LSPs can be referred to as Hierarchical LSPs (H-LSP).  H-LSPs
+       allow to improve the scalability of MPLS/GMPLS networks by creating
+       hierarchies of TE-LSPs.  Those hierarchies are an important state for
+       optimal TE-Computation, therefore a stateful PCE should be able to
+       discover and manage those H-LSPs.  A PCE having a global view of the
+       network, including Forwarding Adjacencies LSP (FA-LSP) and non FA-
+       LSPs, can create more optimal hierachies and (re-)compute the TE-LSPs
+       path to make use of the H-LSPs.  In particular a PCE can better
+       leverage the Private H-LSP introduced by RFC6107 without influencing
+       the IGP, allowing a less disruptive use of Hierarchies.
+
+       RFC6107 defined Protocol mechanisms to facilitate the establishment
+       of such LSPs and to bundle traffic engineering (TE) links to reduce
+       the load on routing protocols.
+
+       This document defines PCEP extensions to learn about and control
+       those H-LSPs.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-margaria-pce-pcep-hlsp-extension-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

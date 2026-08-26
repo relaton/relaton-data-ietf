@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Legacy Resolver Compatibility for Delegation Signer
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-weiler-dnsext-dnssec-2535-compat-01
 docidentifier:
+- content: draft-weiler-dnsext-dnssec-2535-compat
+  type: Internet-Draft
 - content: draft-weiler-dnsext-dnssec-2535-compat-01
   type: Internet-Draft
   primary: true
-- content: I-D.weiler-dnsext-dnssec-2535-compat
-  type: IETF
-  scope: anchor
 docnumber: I-D.weiler-dnsext-dnssec-2535-compat
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Samuel
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -49,25 +49,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>As the DNS Security (DNSSEC) specifications have evolved, the syntax
-    and semantics of the DNSSEC resource records (RRs) have changed. Many deployed
-    nameservers understand variants of these semantics. Dangerous interactions can
-    occur when a resolver that understands an earlier version of these semantics queries
-    an authoritative server that understands the new delegation signer semantics,
-    including at least one failure scenario that will cause an unsecured zone to be
-    unresolvable. This document proposes that these interactions be avoided by changing
-    the type codes and mnemonics of the DNSSEC RRs (SIG, KEY, and NXT).</p>"
-  format: text/html
+  content: |-
+    <p>As the DNS Security (DNSSEC) specifications have evolved, the
+    syntax and semantics of the DNSSEC resource records (RRs) have
+    changed.  Many deployed nameservers understand variants of these
+    semantics.  Dangerous interactions can occur when a resolver that
+    understands an earlier version of these semantics queries an
+    authoritative server that understands the new delegation signer
+    semantics, including at least one failure scenario that will cause
+    an unsecured zone to be unresolvable.  This document proposes that
+    these interactions be avoided by changing the type codes and
+    mnemonics of the DNSSEC RRs (SIG, KEY, and NXT).</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-weiler-dnsext-dnssec-2535-compat-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

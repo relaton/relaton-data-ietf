@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Signaling AFI-SAFI scope for Constrained Route Distribution
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ray-idr-route-constrain-scope-00
 docidentifier:
+- content: draft-ray-idr-route-constrain-scope
+  type: Internet-Draft
 - content: draft-ray-idr-route-constrain-scope-00
   type: Internet-Draft
   primary: true
-- content: I-D.ray-idr-route-constrain-scope
-  type: IETF
-  scope: anchor
 docnumber: I-D.ray-idr-route-constrain-scope
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Saikat
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Arjun
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco Systems
+        - language: en
+          content: Cisco Systems
 version:
 - content: '00'
 language:
@@ -75,27 +79,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Route Constrain address family can be used by a BGP speaker to
-    signal a neighbor its interest in receiving only the routes with a matching route
-    target (RT) extended community. This signaling is afi-safi agnostic; the sender
-    of a route constrain NLRI with an RT expresses its interest in receiving routes
-    with that RT for all afi- safi. The ability to further scope a given RT to a list
-    of afi-safi would simplify network operations; then optimal route filtering would
-    no longer require that the set of RTs used for different afi-safi be disjoint.
-    This document proposes a simple extended community based backward compatible method
-    to associate the list of afi-safi of interest to a route constrain NLRI and discusses
-    the operational procedure.</p>"
-  format: text/html
+  content: |-
+    <p>The Route Constrain address family can be used by a BGP speaker to
+       signal a neighbor its interest in receiving only the routes with a
+       matching route target (RT) extended community.  This signaling is
+       afi-safi agnostic; the sender of a route constrain NLRI with an RT
+       expresses its interest in receiving routes with that RT for all afi-
+       safi.  The ability to further scope a given RT to a list of afi-safi
+       would simplify network operations; then optimal route filtering would
+       no longer require that the set of RTs used for different afi-safi be
+       disjoint.
+
+       This document proposes a simple extended community based backward
+       compatible method to associate the list of afi-safi of interest to a
+       route constrain NLRI and discusses the operational procedure.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ray-idr-route-constrain-scope-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

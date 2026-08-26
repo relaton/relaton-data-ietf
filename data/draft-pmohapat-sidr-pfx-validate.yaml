@@ -1,11 +1,12 @@
 ---
 id: draftpmohapatsidrpfxvalidate
 schema_version: v1.5.6
+formattedref:
+  content: draft-pmohapat-sidr-pfx-validate
 title:
 - language: en
   script: Latn
   content: BGP Prefix Origin Validation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pmohapat-sidr-pfx-validate-07
@@ -19,23 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A BGP route associates an address prefix with a set of autonomous systems
-    (AS) that identify the interdomain path the prefix has traversed in the form of
-    BGP announcements. This set is represented as the AS_PATH attribute in BGP and
-    starts with the AS that originated the prefix. To help reduce well-known threats
-    against BGP including prefix mis-announcing and monkey-in-the-middle attacks,
-    one of the security requirements is the ability to validate the origination AS
-    of BGP routes. More specifically, one needs to validate that the AS number claiming
-    to originate an address prefix (as derived from the AS_PATH attribute of the BGP
-    route) is in fact authorized by the prefix holder to do so. This document describes
-    a simple validation mechanism to partially satisfy this requirement.</p>"
-  format: text/html
+  content: |-
+    <p>A BGP route associates an address prefix with a set of autonomous
+    systems (AS) that identify the interdomain path the prefix has
+    traversed in the form of BGP announcements.  This set is represented
+    as the AS_PATH attribute in BGP and starts with the AS that
+    originated the prefix.  To help reduce well-known threats against BGP
+    including prefix mis-announcing and monkey-in-the-middle attacks, one
+    of the security requirements is the ability to validate the
+    origination AS of BGP routes.  More specifically, one needs to
+    validate that the AS number claiming to originate an address prefix
+    (as derived from the AS_PATH attribute of the BGP route) is in fact
+    authorized by the prefix holder to do so.  This document describes a
+    simple validation mechanism to partially satisfy this requirement.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-pmohapat-sidr-pfx-validate-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pmohapat-sidr-pfx-validate-07
     docidentifier:
     - content: draft-pmohapat-sidr-pfx-validate-07
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

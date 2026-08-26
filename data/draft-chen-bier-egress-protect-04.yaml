@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BIER Egress Protection
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-bier-egress-protect-04
 docidentifier:
+- content: draft-chen-bier-egress-protect
+  type: Internet-Draft
 - content: draft-chen-bier-egress-protect-04
   type: Internet-Draft
   primary: true
-- content: I-D.chen-bier-egress-protect
-  type: IETF
-  scope: anchor
 docnumber: I-D.chen-bier-egress-protect
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Huaimo
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei
+        - language: en
+          content: Futurewei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Aijun
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -87,17 +93,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Telecom
+        - language: en
+          content: China Telecom
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gyan
       - language: en
+        script: Latn
         initial: G
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -111,15 +121,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon Inc.
+        - language: en
+          content: Verizon Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yisong
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -133,15 +146,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: China Mobile
+        - language: en
+          content: China Mobile
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -155,15 +171,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: University of Tuebingen
+        - language: en
+          content: University of Tuebingen
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Boris
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -177,15 +196,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yandex LLC
+        - language: en
+          content: Yandex LLC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xuesong
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -199,15 +221,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yanhe
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -221,15 +246,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Casa Systems
+        - language: en
+          content: Casa Systems
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Lei
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -243,15 +271,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fujitsu
+        - language: en
+          content: Fujitsu
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xufeng
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -265,7 +296,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Volta Networks
+        - language: en
+          content: Volta Networks
 version:
 - content: '04'
 language:
@@ -275,34 +307,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes a mechanism for fast protection against the
-    failure of an egress node of a "Bit Index Explicit Replication" (BIER) domain.
-    It is called BIER egress protection. It does not require any per-flow state in
-    the core of the domain. With BIER egress protection the failure of a primary BFER
-    (Bit Forwarding Egress Router) is protected with a backup BFER such that traffic
-    destined to the primary BFER in the BIER domain is fast rerouted by a neighbor
-    BFR to the backup BFER on the BIER layer. The mechanism is applicable if all BIER
-    traffic sent to the primary BFER can reach its destination also via the backup
-    BFER. It is complementary to BIER- FRR which cannot protect against the failure
-    of a BFER.</p>
-  format: text/html
+  content: |-
+    <p>This document describes a mechanism for fast protection against the
+       failure of an egress node of a "Bit Index Explicit Replication"
+       (BIER) domain.  It is called BIER egress protection.  It does not
+       require any per-flow state in the core of the domain.  With BIER
+       egress protection the failure of a primary BFER (Bit Forwarding
+       Egress Router) is protected with a backup BFER such that traffic
+       destined to the primary BFER in the BIER domain is fast rerouted by a
+       neighbor BFR to the backup BFER on the BIER layer.  The mechanism is
+       applicable if all BIER traffic sent to the primary BFER can reach its
+       destination also via the backup BFER.  It is complementary to BIER-
+       FRR which cannot protect against the failure of a BFER.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-chen-bier-egress-protect-02
-      format: text/plain
+      content: draft-chen-bier-egress-protect-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-bier-egress-protect-03
     docidentifier:
-    - content: draft-chen-bier-egress-protect-02
+    - content: draft-chen-bier-egress-protect-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-chen-bier-egress-protect-06
-      format: text/plain
+      content: draft-chen-bier-egress-protect-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-bier-egress-protect-05
     docidentifier:
-    - content: draft-chen-bier-egress-protect-06
+    - content: draft-chen-bier-egress-protect-05
       type: Internet-Draft
       primary: true
 series:
@@ -311,10 +348,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chen-bier-egress-protect-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

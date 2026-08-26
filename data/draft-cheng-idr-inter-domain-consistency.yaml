@@ -1,11 +1,12 @@
 ---
 id: draftchengidrinterdomainconsistency
 schema_version: v1.5.6
+formattedref:
+  content: draft-cheng-idr-inter-domain-consistency
 title:
 - language: en
   script: Latn
   content: Maintain consistency of inter-domain routing and forwarding
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-cheng-idr-inter-domain-consistency-00
@@ -19,24 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The AS_PATH attribute of BGP UPDATE records the AS number that it has
-    passed through. Ideally, the traffic to the destination IP prefixes in NLRI of
-    BGP UPDATE should be reversely forwarded along the AS path recorded in the AS_PATH.
-    However, due to other factors such traffic redirection, traffic engineering, and
-    route aggregation, the actual forwarding AS path of the packet is usually different
-    from the propagation path of BGP UPDATE. In other words, inter-domain routing
-    and forwarding are usually inconsistent, which results in that inter- domain forwarding
-    has security risks such as traffic black hole, loop, detour and the malicious
-    AS, etc. Consistent inter-domain routing and forwarding greatly contributes to
-    enhanced inter-domain forwarding security and visibility, which facilitates the
-    long-term evolution of the Internet</p>"
-  format: text/html
+  content: |-
+    <p>The AS_PATH attribute of BGP UPDATE records the AS number that it has
+       passed through.  Ideally, the traffic to the destination IP prefixes
+       in NLRI of BGP UPDATE should be reversely forwarded along the AS path
+       recorded in the AS_PATH.  However, due to other factors such traffic
+       redirection, traffic engineering, and route aggregation, the actual
+       forwarding AS path of the packet is usually different from the
+       propagation path of BGP UPDATE.  In other words, inter-domain routing
+       and forwarding are usually inconsistent, which results in that inter-
+       domain forwarding has security risks such as traffic black hole,
+       loop, detour and the malicious AS, etc.  Consistent inter-domain
+       routing and forwarding greatly contributes to enhanced inter-domain
+       forwarding security and visibility, which facilitates the long-term
+       evolution of the Internet</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-cheng-idr-inter-domain-consistency-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cheng-idr-inter-domain-consistency-00
     docidentifier:
     - content: draft-cheng-idr-inter-domain-consistency-00
       type: Internet-Draft
@@ -45,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

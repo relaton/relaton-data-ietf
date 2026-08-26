@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Auto-discovery mechanism for ACME client configuration
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-vanbrouwershaven-acme-auto-discovery-02
 docidentifier:
+- content: draft-vanbrouwershaven-acme-auto-discovery
+  type: Internet-Draft
 - content: draft-vanbrouwershaven-acme-auto-discovery-02
   type: Internet-Draft
   primary: true
-- content: I-D.vanbrouwershaven-acme-auto-discovery
-  type: IETF
-  scope: anchor
 docnumber: I-D.vanbrouwershaven-acme-auto-discovery
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Paul
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 version:
 - content: '02'
 language:
@@ -75,36 +79,45 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>A significant impediment to the widespread adoption of the Automated
-    Certificate Management Environment (ACME) [RFC8555] is that ACME clients need
-    to be pre-configured with the URL of the ACME server to be used. This often leaves
-    domain owners at the mercy of their hosting provider as to which Certification
-    Authorities (CAs) can be used. This specification provides a mechanism to bootstrap
-    ACME client configuration from a domain''s DNS CAA Resource Record [RFC8659],
-    thus giving control of which CA(s) to use back to the domain owner. Specifically,
-    this document specifies two new extensions to the DNS CAA Resource Record: the
-    "discovery" and "priority" parameters. Additionally, it registers the URI "/.well-known/acme"
-    at which all compliant ACME servers will host their ACME directory object. By
-    retrieving instructions for the ACME client from the authorized CA(s), this mechanism
-    allows for the domain owner to configure multiple CAs in either load-balanced
-    or fallback prioritizations which improves user preferences and increases diversity
-    in certificate issuers.</p>'
-  format: text/html
+  content: |-
+    <p>A significant impediment to the widespread adoption of the Automated
+       Certificate Management Environment (ACME) [RFC8555] is that ACME
+       clients need to be pre-configured with the URL of the ACME server to
+       be used.  This often leaves domain owners at the mercy of their
+       hosting provider as to which Certification Authorities (CAs) can be
+       used.  This specification provides a mechanism to bootstrap ACME
+       client configuration from a domain's DNS CAA Resource Record
+       [RFC8659], thus giving control of which CA(s) to use back to the
+       domain owner.
+
+       Specifically, this document specifies two new extensions to the DNS
+       CAA Resource Record: the "discovery" and "priority" parameters.
+       Additionally, it registers the URI "/.well-known/acme" at which all
+       compliant ACME servers will host their ACME directory object.  By
+       retrieving instructions for the ACME client from the authorized
+       CA(s), this mechanism allows for the domain owner to configure
+       multiple CAs in either load-balanced or fallback prioritizations
+       which improves user preferences and increases diversity in
+       certificate issuers.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-vanbrouwershaven-acme-auto-discovery-00
-      format: text/plain
+      content: draft-vanbrouwershaven-acme-auto-discovery-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vanbrouwershaven-acme-auto-discovery-01
     docidentifier:
-    - content: draft-vanbrouwershaven-acme-auto-discovery-00
+    - content: draft-vanbrouwershaven-acme-auto-discovery-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-vanbrouwershaven-acme-auto-discovery-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vanbrouwershaven-acme-auto-discovery-03
     docidentifier:
     - content: draft-vanbrouwershaven-acme-auto-discovery-03
       type: Internet-Draft
@@ -115,10 +128,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-vanbrouwershaven-acme-auto-discovery-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

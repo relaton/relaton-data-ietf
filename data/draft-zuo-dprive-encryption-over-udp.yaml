@@ -1,11 +1,12 @@
 ---
 id: draftzuodpriveencryptionoverudp
 schema_version: v1.5.6
+formattedref:
+  content: draft-zuo-dprive-encryption-over-udp
 title:
 - language: en
   script: Latn
   content: Approach on encrypting DNS message over UDP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zuo-dprive-encryption-over-udp-00
@@ -19,23 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document offers an approach to encrypt DNS queries and responses
-    between the stub resolver and the recursive server over UDP to protect user privacy.
-    The public key of the recursive server is distributed to the stub resolver through
-    the Certificate Authority infrastructure, and the public key of the stub resolver
-    is sent to the recursive server together with the DNS query where the public key
-    is inserted to the additional section of the DNS query. Then the recursive server
-    encrypts the DNS responses sent to the stub resolver with the public key of that
-    stub resolver, and similarly the DNS query sent to the recursive server is encrypted
-    by the stub resolver with the public key of that recursive server and thus the
-    user privacy is protected.</p>"
-  format: text/html
+  content: |-
+    <p>This document offers an approach to encrypt DNS queries and responses
+       between the stub resolver and the recursive server over UDP to
+       protect user privacy.  The public key of the recursive server is
+       distributed to the stub resolver through the Certificate Authority
+       infrastructure, and the public key of the stub resolver is sent to
+       the recursive server together with the DNS query where the public key
+       is inserted to the additional section of the DNS query.  Then the
+       recursive server encrypts the DNS responses sent to the stub resolver
+       with the public key of that stub resolver, and similarly the DNS
+       query sent to the recursive server is encrypted by the stub resolver
+       with the public key of that recursive server and thus the user
+       privacy is protected.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-zuo-dprive-encryption-over-udp-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zuo-dprive-encryption-over-udp-00
     docidentifier:
     - content: draft-zuo-dprive-encryption-over-udp-00
       type: Internet-Draft
@@ -44,4 +49,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

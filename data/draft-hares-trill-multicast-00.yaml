@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Multicast Link State For Rbidges
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hares-trill-multicast-00
 docidentifier:
+- content: draft-hares-trill-multicast
+  type: Internet-Draft
 - content: draft-hares-trill-multicast-00
   type: Internet-Draft
   primary: true
-- content: I-D.hares-trill-multicast
-  type: IETF
-  scope: anchor
 docnumber: I-D.hares-trill-multicast
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Susan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NextHop Technologies
+        - language: en
+          content: NextHop Technologies
 version:
 - content: '00'
 language:
@@ -53,28 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Rbridges are transparent Layer 2 bridges that provide the ability to
-    have an entire campus, with multiple physical links look like a single subnet.
-    The Rbridge technology utilizes Rbridges to link together Layer 2 areas using
-    spanning trees to calculate paths. The Rbridges run a link state protocol to determine
-    the least cost paths Rbridges and exchange information about the location of MAC
-    addresses. The Rbridges will run a level 1 or a single area routing protocol.
-    To forward multicast packets, the Rbirdges may treat these as broadcast (sending
-    the packets to all Rbridges) or use methods to snoop the Multicast MAC addresses
-    (GARP, MAC learning) or IP/MAC address packets (IGMP/PIM snooping). Multicast
-    Link State Rbridge connections suggest a Hybrid Multicast Link state extensions
-    to ISIS and OSPF for Rbridges.</p>"
-  format: text/html
+  content: |-
+    <p>Rbridges are transparent Layer 2 bridges that provide the ability to
+       have an entire campus, with multiple physical links look like a
+       single subnet.  The Rbridge technology utilizes Rbridges to link
+       together Layer 2 areas using spanning trees to calculate paths.  The
+       Rbridges run a link state protocol to determine the least cost paths
+       Rbridges and exchange information about the location of MAC
+       addresses.  The Rbridges will run a level 1 or a single area routing
+       protocol.  To forward multicast packets, the Rbirdges may treat these
+       as broadcast (sending the packets to all Rbridges) or use methods to
+       snoop the Multicast MAC addresses (GARP, MAC learning) or IP/MAC
+       address packets (IGMP/PIM snooping).
+
+       Multicast Link State Rbridge connections suggest a Hybrid Multicast
+       Link state extensions to ISIS and OSPF for Rbridges.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hares-trill-multicast-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

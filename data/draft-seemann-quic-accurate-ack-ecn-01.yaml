@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: QUIC Accurate ECN Acknowledgements
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-accurate-ack-ecn-01
 docidentifier:
+- content: draft-seemann-quic-accurate-ack-ecn
+  type: Internet-Draft
 - content: draft-seemann-quic-accurate-ack-ecn-01
   type: Internet-Draft
   primary: true
-- content: I-D.seemann-quic-accurate-ack-ecn
-  type: IETF
-  scope: anchor
 docnumber: I-D.seemann-quic-accurate-ack-ecn
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Marten
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Vidhi
       - language: en
+        script: Latn
         initial: V
       formatted_initials:
         language: en
@@ -61,7 +63,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Apple Inc.
+        - language: en
+          content: Apple Inc.
 version:
 - content: '01'
 language:
@@ -71,20 +74,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC defines a variant of the ACK frame that carries cumulative count
-    for each of the three ECN codepoints (ECT(1), ECT(0) and CE). From this information,
-    the recipient of the ACK frame cannot deduce which ECN marking the individual
-    packets were received with. This document defines an alternative ACK frame that
-    encodes enough information to indicate which ECN mark each individual packet was
-    received with. This information is essential for accurately performing adjustments
-    to congestion window and sending rate of the sender.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC defines a variant of the ACK frame that carries cumulative count
+       for each of the three ECN codepoints (ECT(1), ECT(0) and CE).  From
+       this information, the recipient of the ACK frame cannot deduce which
+       ECN marking the individual packets were received with.
+
+       This document defines an alternative ACK frame that encodes enough
+       information to indicate which ECN mark each individual packet was
+       received with.  This information is essential for accurately
+       performing adjustments to congestion window and sending rate of the
+       sender.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-seemann-quic-accurate-ack-ecn-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-accurate-ack-ecn-00
     docidentifier:
     - content: draft-seemann-quic-accurate-ack-ecn-00
       type: Internet-Draft
@@ -95,10 +103,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-seemann-quic-accurate-ack-ecn-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Generalized Redirect Action in BGP Flow Specification Routes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-simpson-idr-flowspec-redirect-00
 docidentifier:
+- content: draft-simpson-idr-flowspec-redirect
+  type: Internet-Draft
 - content: draft-simpson-idr-flowspec-redirect-00
   type: Internet-Draft
   primary: true
-- content: I-D.simpson-idr-flowspec-redirect
-  type: IETF
-  scope: anchor
 docnumber: I-D.simpson-idr-flowspec-redirect
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wim
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Adam
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -67,31 +69,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Flowspec is an extension to BGP that allows for the dissemination of
-    traffic flow specifications. This has several applications, but one of key interest
-    to many network operators is network-wide distribution of traffic filtering rules
-    as part of a threat mitigation strategy. Every flowspec route is effectively a
-    rule, consisting of a matching part (encoded in the NLRI field) and an action
-    part. The current standards support common filter actions including discard, rate
-    limit, sample, etc. and all of these actions are encoded in BGP extended communities.
-    For policy-based forwarding the current standards also define a redirect-to-VRF
-    action (again encoded in a BGP extended community), but for some flowspec applications
-    this can be complex to implement, particularly in networks where L3 VPNs are not
-    prevalent. This draft proposes a generalized flowspec redirect action that allows
-    a more complete set of policy-based forwarding actions to be signaled with a flowspec
-    route. This generalized action is encoded in a BGP path attribute and uses a TLV-style
-    encoding for future extensibility. Two redirect action TLVs are defined in this
-    draft: one for redirecting matched packets towards a remote IPv4 destination and
-    the other for redirecting matched packets towards a remote IPv6 destination. Many
-    routers already support these filter actions in the datapath and so the proposed
-    flowspec extensions are simply filling a control plane gap.</p>"
-  format: text/html
+  content: |-
+    <p>Flowspec is an extension to BGP that allows for the dissemination of
+       traffic flow specifications. This has several applications, but one
+       of key interest to many network operators is network-wide
+       distribution of traffic filtering rules as part of a threat
+       mitigation strategy.
+
+       Every flowspec route is effectively a rule, consisting of a matching
+       part (encoded in the NLRI field) and an action part. The current
+       standards support common filter actions including discard, rate
+       limit, sample, etc. and all of these actions are encoded in BGP
+       extended communities. For policy-based forwarding the current
+       standards also define a redirect-to-VRF action (again encoded in a
+       BGP extended community), but for some flowspec applications this can
+       be complex to implement, particularly in networks where L3 VPNs are
+       not prevalent.
+
+       This draft proposes a generalized flowspec redirect action that
+       allows a more complete set of policy-based forwarding actions to be
+       signaled with a flowspec route. This generalized action is encoded in
+       a BGP path attribute and uses a TLV-style encoding for future
+       extensibility. Two redirect action TLVs are defined in this draft:
+       one for redirecting matched packets towards a remote IPv4 destination
+       and the other for redirecting matched packets towards a remote IPv6
+       destination. Many routers already support these filter actions in the
+       datapath and so the proposed flowspec extensions are simply filling a
+       control plane gap.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-simpson-idr-flowspec-redirect-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-simpson-idr-flowspec-redirect-01
     docidentifier:
     - content: draft-simpson-idr-flowspec-redirect-01
       type: Internet-Draft
@@ -102,10 +114,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-simpson-idr-flowspec-redirect-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

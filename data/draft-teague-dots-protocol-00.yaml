@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DDoS Open Threat Signaling Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-teague-dots-protocol-00
 docidentifier:
+- content: draft-teague-dots-protocol
+  type: Internet-Draft
 - content: draft-teague-dots-protocol-00
   type: Internet-Draft
   primary: true
-- content: I-D.teague-dots-protocol
-  type: IETF
-  scope: anchor
 docnumber: I-D.teague-dots-protocol
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nik
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrew
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -67,29 +69,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes Distributed-Denial-of-Service (DDoS) Open Threat
-    Signaling (DOTS), a signaling protocol for requesting and managing mitigation
-    of DDoS attacks. DOTS mitigation requests over the signal channel permit domains
-    to signal the need for help fending off DDoS attacks, setting the scope and duration
-    of the requested mitigation. Elements called DOTS servers field the signals for
-    help, and enable defensive countermeasures to defend against the attack reported
-    by the clients, reporting the status of the delegated defense to the requesting
-    clients. DOTS clients additionally may use the data channel to manage filters
-    and black- and white-lists to restrict or allow traffic to the clients' domains
-    arbitrarily. The DOTS signal channel may operate over UDP [RFC0768] and if necessary
-    TCP [RFC0793]. This revision discusses a transport- agnostic approach to this
-    channel, focusing on the message exchanges and delegating transport specifics
-    to other documents. The DOTS data channel operates over HTTPS or a transport with
-    similar reliability, interaction and security characteristics.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes Distributed-Denial-of-Service (DDoS) Open
+       Threat Signaling (DOTS), a signaling protocol for requesting and
+       managing mitigation of DDoS attacks.
+
+       DOTS mitigation requests over the signal channel permit domains to
+       signal the need for help fending off DDoS attacks, setting the scope
+       and duration of the requested mitigation.  Elements called DOTS
+       servers field the signals for help, and enable defensive
+       countermeasures to defend against the attack reported by the clients,
+       reporting the status of the delegated defense to the requesting
+       clients.  DOTS clients additionally may use the data channel to
+       manage filters and black- and white-lists to restrict or allow
+       traffic to the clients' domains arbitrarily.
+
+       The DOTS signal channel may operate over UDP [RFC0768] and if
+       necessary TCP [RFC0793].  This revision discusses a transport-
+       agnostic approach to this channel, focusing on the message exchanges
+       and delegating transport specifics to other documents.  The DOTS data
+       channel operates over HTTPS or a transport with similar reliability,
+       interaction and security characteristics.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-teague-dots-protocol-02
-      format: text/plain
+      content: draft-teague-dots-protocol-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-teague-dots-protocol-01
     docidentifier:
-    - content: draft-teague-dots-protocol-02
+    - content: draft-teague-dots-protocol-01
       type: Internet-Draft
       primary: true
 series:
@@ -98,10 +108,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-teague-dots-protocol-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

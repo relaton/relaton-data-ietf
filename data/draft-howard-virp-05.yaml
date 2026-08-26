@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'VIRP: Verified Infrastructure Response Protocol'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-howard-virp-05
 docidentifier:
+- content: draft-howard-virp
+  type: Internet-Draft
 - content: draft-howard-virp-05
   type: Internet-Draft
   primary: true
-- content: I-D.howard-virp
-  type: IETF
-  scope: anchor
 docnumber: I-D.howard-virp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nathan
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Third Level IT LLC
+        - language: en
+          content: Third Level IT LLC
 version:
 - content: '05'
 language:
@@ -53,47 +54,59 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Verified Infrastructure Response Protocol (VIRP) defines a cryptographic
-    trust framework for operators -- human or autonomous -- acting on live network
-    infrastructure. As operations increasingly shift toward agentic and automated
-    systems capable of autonomously configuring, auditing, and remediating production
-    environments, the absence of a verifiable chain of custody for observations and
-    actions introduces fundamental risks: fabricated telemetry, unauthorized state
-    changes, and the inability to distinguish legitimate operations from compromise.
-    VIRP addresses this through seven trust primitives that collectively enforce observation
-    integrity, two-channel separation, intent gating, outcome verification, baseline
-    memory, multi-vendor normalization, and trust federation. Observations are cryptographically
-    signed at collection time using a dual-signature scheme: HMAC-SHA256 for chain
-    integrity and Ed25519 for asymmetric proof of origin. A two-channel architecture
-    separates read-only Observation from write-intent Intent, with intent gating enforced
-    at the protocol layer. Trust tiers (GREEN/YELLOW/RED/BLACK) govern action authorization
-    with human-in-the-loop controls for elevated operations. This document presents
-    the protocol specification, a live multi- vendor implementation (IronClaw) exercised
-    against 35 Cisco IOS routers, a FortiGate 200G firewall, and Cisco 3850 switching
-    infrastructure, adversarial findings produced by the agent under test, and a containment
-    architecture derived from those findings. Phase 1 formal protocol analysis --
-    HMAC key secrecy and non- injective agreement under the Dolev-Yao adversary model
-    -- has been machine-verified in both ProVerif and Tamarin and is referenced in
-    Section 17.1. Results demonstrate that VIRP enables verifiable infrastructure
-    audit trails and that properly contained operator processes -- whether human-driven
-    or autonomous -- can be bounded by structural cryptographic separation rather
-    than policy alone.</p>"
-  format: text/html
+  content: |-
+    <p>The Verified Infrastructure Response Protocol (VIRP) defines a
+       cryptographic trust framework for operators -- human or autonomous --
+       acting on live network infrastructure.  As operations increasingly
+       shift toward agentic and automated systems capable of autonomously
+       configuring, auditing, and remediating production environments, the
+       absence of a verifiable chain of custody for observations and actions
+       introduces fundamental risks: fabricated telemetry, unauthorized
+       state changes, and the inability to distinguish legitimate operations
+       from compromise.
+
+       VIRP addresses this through seven trust primitives that collectively
+       enforce observation integrity, two-channel separation, intent gating,
+       outcome verification, baseline memory, multi-vendor normalization,
+       and trust federation.  Observations are cryptographically signed at
+       collection time using a dual-signature scheme: HMAC-SHA256 for chain
+       integrity and Ed25519 for asymmetric proof of origin.  A two-channel
+       architecture separates read-only Observation from write-intent
+       Intent, with intent gating enforced at the protocol layer.  Trust
+       tiers (GREEN/YELLOW/RED/BLACK) govern action authorization with
+       human-in-the-loop controls for elevated operations.
+
+       This document presents the protocol specification, a live multi-
+       vendor implementation (IronClaw) exercised against 35 Cisco IOS
+       routers, a FortiGate 200G firewall, and Cisco 3850 switching
+       infrastructure, adversarial findings produced by the agent under
+       test, and a containment architecture derived from those findings.
+       Phase 1 formal protocol analysis -- HMAC key secrecy and non-
+       injective agreement under the Dolev-Yao adversary model -- has been
+       machine-verified in both ProVerif and Tamarin and is referenced in
+       Section 17.1.  Results demonstrate that VIRP enables verifiable
+       infrastructure audit trails and that properly contained operator
+       processes -- whether human-driven or autonomous -- can be bounded by
+       structural cryptographic separation rather than policy alone.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-howard-virp-02
-      format: text/plain
+      content: draft-howard-virp-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-04
     docidentifier:
-    - content: draft-howard-virp-02
+    - content: draft-howard-virp-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-howard-virp-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-howard-virp-06
     docidentifier:
     - content: draft-howard-virp-06
       type: Internet-Draft
@@ -104,10 +117,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-howard-virp-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

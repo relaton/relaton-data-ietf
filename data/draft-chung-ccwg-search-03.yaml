@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: SEARCH -- a New Slow Start Algorithm for TCP and QUIC
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chung-ccwg-search-03
 docidentifier:
+- content: draft-chung-ccwg-search
+  type: Internet-Draft
 - content: draft-chung-ccwg-search-03
   type: Internet-Draft
   primary: true
-- content: I-D.chung-ccwg-search
-  type: IETF
-  scope: anchor
 docnumber: I-D.chung-ccwg-search
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jae
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -45,17 +46,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Viasat Inc
+        - language: en
+          content: Viasat Inc
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Maryam
       - language: en
+        script: Latn
         initial: M
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -69,15 +74,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Worcester Polytechnic Institute
+        - language: en
+          content: Worcester Polytechnic Institute
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Feng
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -91,15 +99,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Viasat Inc
+        - language: en
+          content: Viasat Inc
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mark
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -113,7 +124,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Worcester Polytechnic Institute
+        - language: en
+          content: Worcester Polytechnic Institute
 version:
 - content: '03'
 language:
@@ -123,38 +135,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>TCP slow start is designed to ramp up to the network congestion point
-    quickly, doubling the congestion window each round-trip time until the congestion
-    point is reached, whereupon TCP exits the slow start phase. Unfortunately, the
-    default Linux TCP slow start implementation -- TCP Cubic with HyStart -- can cause
-    premature exit from slow start, especially over wireless links, degrading link
-    utilization. However, without HyStart, TCP exits slow start too late, causing
-    unnecessary packet loss. To improve TCP slow start performance, this document
-    proposes using the Slow start Exit At Right CHokepoint (SEARCH) algorithm where
-    the TCP sender determines the congestion point based on acknowledged deliveries
-    -- specifically, the sender computes the delivered bytes compared to the expected
-    delivered bytes, smoothed to account for link latency variation and normalized
-    to accommodate link capacities, and exits slow start if the delivered bytes are
-    lower than expected. We implemented SEARCH as a Linux kernel v5.16 module and
-    evaluated it over WiFi, 4G/LTE, and low earth orbit (LEO) and geosynchronous (GEO)
-    satellite links. Analysis of the results show that the SEARCH reliably exits from
-    slow start after the congestion point is reached but before inducing packet loss.</p>"
-  format: text/html
+  content: |-
+    <p>TCP slow start is designed to ramp up to the network congestion point
+       quickly, doubling the congestion window each round-trip time until
+       the congestion point is reached, whereupon TCP exits the slow start
+       phase.  Unfortunately, the default Linux TCP slow start
+       implementation -- TCP Cubic with HyStart -- can cause premature exit
+       from slow start, especially over wireless links, degrading link
+       utilization.  However, without HyStart, TCP exits slow start too
+       late, causing unnecessary packet loss.  To improve TCP slow start
+       performance, this document proposes using the Slow start Exit At
+       Right CHokepoint (SEARCH) algorithm where the TCP sender determines
+       the congestion point based on acknowledged deliveries --
+       specifically, the sender computes the delivered bytes compared to the
+       expected delivered bytes, smoothed to account for link latency
+       variation and normalized to accommodate link capacities, and exits
+       slow start if the delivered bytes are lower than expected.  We
+       implemented SEARCH as a Linux kernel v5.16 module and evaluated it
+       over WiFi, 4G/LTE, and low earth orbit (LEO) and geosynchronous (GEO)
+       satellite links.  Analysis of the results show that the SEARCH
+       reliably exits from slow start after the congestion point is reached
+       but before inducing packet loss.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-chung-ccwg-search-01
-      format: text/plain
+      content: draft-chung-ccwg-search-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chung-ccwg-search-02
     docidentifier:
-    - content: draft-chung-ccwg-search-01
+    - content: draft-chung-ccwg-search-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-chung-ccwg-search-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chung-ccwg-search-04
     docidentifier:
     - content: draft-chung-ccwg-search-04
       type: Internet-Draft
@@ -165,10 +185,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chung-ccwg-search-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

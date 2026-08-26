@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: A New Forking Mechanism for Session Initiation Protocol (SIP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-worley-sipping-forking-03
 docidentifier:
+- content: draft-worley-sipping-forking
+  type: Internet-Draft
 - content: draft-worley-sipping-forking-03
   type: Internet-Draft
   primary: true
-- content: I-D.worley-sipping-forking
-  type: IETF
-  scope: anchor
 docnumber: I-D.worley-sipping-forking
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dale
       - language: en
+        script: Latn
         initial: D
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nortel Networks
+        - language: en
+          content: Nortel Networks
 version:
 - content: '03'
 language:
@@ -55,27 +57,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The rules for SIP proxies are organized so that when a UAC sends an
-    out-of-dialog request, even if the request is forked to a number of UASs, (usually)
-    only one UAS will accept the request, and only the final response from that UAS
-    will be returned to the UAC. This forking mechanism is optimal for an INVITE intended
-    to connect one human user with another human uses, but is poor for requests that
-    have a "one to many" nature, especially PUBLISH and SUBSCRIBE requests, but also
-    including some INVITEs. This document proposes an alternative forking mechanism
-    that better supports "one to many" requests, and that mechanism be the standardized
-    meaning of the (existing but weakly specified) "Request-Disposition: no-cancel,
-    parallel" header.</p>'
-  format: text/html
+  content: |-
+    <p>The rules for SIP proxies are organized so that when a UAC sends an
+    out-of-dialog request, even if the request is forked to a number of
+    UASs, (usually) only one UAS will accept the request, and only the
+    final response from that UAS will be returned to the UAC.  This
+    forking mechanism is optimal for an INVITE intended to connect one
+    human user with another human uses, but is poor for requests that
+    have a "one to many" nature, especially PUBLISH and SUBSCRIBE
+    requests, but also including some INVITEs.  This document proposes an
+    alternative forking mechanism that better supports "one to many"
+    requests, and that mechanism be the standardized meaning of the
+    (existing but weakly specified) "Request-Disposition: no-cancel,
+    parallel" header.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-worley-sipping-forking-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

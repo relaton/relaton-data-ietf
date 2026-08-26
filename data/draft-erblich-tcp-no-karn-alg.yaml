@@ -1,11 +1,12 @@
 ---
 id: drafterblichtcpnokarnalg
 schema_version: v1.5.6
+formattedref:
+  content: draft-erblich-tcp-no-karn-alg
 title:
 - language: en
   script: Latn
   content: Alteration of Karn's Algorithm for High Bandwidth / Delay Environments
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-erblich-tcp-no-karn-alg-00
@@ -19,23 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>Karn's algorithm specifies acknowledgements that are the result of segment
-    retransmits should be ignored, not timed, and should not contribute to the smoothed
-    round-trip-time (SRTT) because they are considered "ambiguous". It is also stated
-    in Karn's paper that "If an acknowledgement arrives after the RTO has expired,
-    it is highly likely to come very shortly after wards." In time, we have added
-    the "fast retransmit" functionality, so we are not solely dependent on RTO for
-    retransmits. Common sense dictates that if we receive an acknowledgement "very
-    shortly after wards", that those acknowledgments should not be considered "ambiguous".
-    These non-ambiguous acknowledgments should be added to the SRTT and trigger us
-    to return to our previous non-congestion behavior.</p>
-  format: text/html
+  content: |-
+    <p>Karn's algorithm specifies acknowledgements that are the
+    result of segment retransmits should be ignored, not timed,
+    and should not contribute to the smoothed round-trip-time
+    (SRTT) because they are considered "ambiguous".  It is also
+    stated in Karn's paper that "If an acknowledgement arrives
+    after the RTO has expired, it is highly likely to come very
+    shortly after wards." In time, we have added the "fast retransmit"
+    functionality, so we are not solely dependent on RTO for
+    retransmits.  Common sense dictates that if we receive an
+    acknowledgement "very shortly after wards", that those
+    acknowledgments should not be considered "ambiguous". These
+    non-ambiguous acknowledgments should be added to the SRTT and
+    trigger us to return to our previous non-congestion behavior.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-erblich-tcp-no-karn-alg-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-erblich-tcp-no-karn-alg-00
     docidentifier:
     - content: draft-erblich-tcp-no-karn-alg-00
       type: Internet-Draft
@@ -44,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

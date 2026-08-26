@@ -1,11 +1,12 @@
 ---
 id: draftgoenkaldapextjavacomplexsearch
 schema_version: v1.5.6
+formattedref:
+  content: draft-goenka-ldapext-java-complex-search
 title:
 - language: en
   script: Latn
   content: Complex Directory Lookup using Java Based LDAP Query Extension
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-goenka-ldapext-java-complex-search-01
@@ -19,27 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>LDAP provides some simple primitives to construct search filters. Complex
-    LDAP search queries such as those involving joins or functional evaluation of
-    simple query results require client side processing of the intermediate search
-    results. The network overhead of retrieving intermediate results can be substantial
-    for large databases. This document defines an LDAP extension for supporting server
-    side evaluation of complex search queries. Custom search logic can be sent across
-    to the server, encapsulated as a Java Object. The LDAP server supporting this
-    extension would instantiate the java object and invoke its well known interfaces
-    in a JVM. The java object running at the server end acts as the client-proxy,
-    and makes a local search query to the LDAP server. The directory entries are evaluated
-    using the custom logic embedded in the client-proxy, and those that satisfy the
-    evaluation function are returned as the search result to the LDAP server, which
-    passes it back to the originating client. Even non-Java LDAP clients can use this
-    method, provided the search query is written as a java object.</p>"
-  format: text/html
+  content: "<p>LDAP provides some simple primitives to construct search\nfilters.
+    Complex LDAP search queries such as those involving\njoins or functional evaluation
+    of simple query results require\nclient side processing of the intermediate search
+    results. The\nnetwork overhead of retrieving intermediate results can be\nsubstantial
+    for large databases. This document defines an LDAP\nextension for supporting server
+    side evaluation of complex\nsearch queries.\n \n     Custom search logic can be
+    sent across to the server,\n     encapsulated as a Java Object. The LDAP server
+    supporting this\n     extension would instantiate the java object and invoke its
+    well\n     known interfaces in a JVM. The java object running at the server\n
+    \    end acts as the client-proxy, and makes a local search query to\n     the
+    LDAP server. The directory entries are evaluated using the\n     custom logic
+    embedded in the client-proxy, and those that\n     satisfy the evaluation function
+    are returned as the search\n     result to the LDAP server, which passes it back
+    to the\n     originating client. Even non-Java LDAP clients can use this\n     method,
+    provided the search query is written as a java object.</p>"
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-goenka-ldapext-java-complex-search-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-goenka-ldapext-java-complex-search-01
     docidentifier:
     - content: draft-goenka-ldapext-java-complex-search-01
       type: Internet-Draft
@@ -48,4 +51,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

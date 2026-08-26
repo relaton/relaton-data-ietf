@@ -1,12 +1,13 @@
 ---
 id: draftgurbanisiplargeudpresponse
 schema_version: v1.5.6
+formattedref:
+  content: draft-gurbani-sip-large-udp-response
 title:
 - language: en
   script: Latn
   content: Handling Large User Datagram Protocol (UDP) Responses in the Session Initiation
     Protocol (SIP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gurbani-sip-large-udp-response-00
@@ -20,22 +21,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Session Initiation Protocol (SIP) mandates a maximum size for any
-    request transmitted over UDP. This maximum is set to the lesser of 1300 bytes
-    or the path maximum transmission unit (MTU) size minus 200 bytes. If the size
-    of the request exceeds this maximum, SIP requires implementations to switch the
-    downstream transport to be a congestion controlled transport. However, when sending
-    a response, a SIP implementation cannot choose the transport; it must use the
-    transport specified by the Via. This document discusses the problems large responses
-    can cause on UDP, and proposes an update to SIP to help diagnose and avoid those
-    problems.</p>"
-  format: text/html
+  content: |-
+    <p>The Session Initiation Protocol (SIP) mandates a maximum size for any
+       request transmitted over UDP.  This maximum is set to the lesser of
+       1300 bytes or the path maximum transmission unit (MTU) size minus 200
+       bytes.  If the size of the request exceeds this maximum, SIP requires
+       implementations to switch the downstream transport to be a congestion
+       controlled transport.  However, when sending a response, a SIP
+       implementation cannot choose the transport; it must use the transport
+       specified by the Via. This document discusses the problems large
+       responses can cause on UDP, and proposes an update to SIP to help
+       diagnose and avoid those problems.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-gurbani-sip-large-udp-response-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gurbani-sip-large-udp-response-00
     docidentifier:
     - content: draft-gurbani-sip-large-udp-response-00
       type: Internet-Draft
@@ -44,4 +48,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

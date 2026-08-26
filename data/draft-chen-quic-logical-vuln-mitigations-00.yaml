@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Mitigating Logical Vulnerabilities in QUIC Implementations
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-quic-logical-vuln-mitigations-00
 docidentifier:
+- content: draft-chen-quic-logical-vuln-mitigations
+  type: Internet-Draft
 - content: draft-chen-quic-logical-vuln-mitigations-00
   type: Internet-Draft
   primary: true
-- content: I-D.chen-quic-logical-vuln-mitigations
-  type: IETF
-  scope: anchor
 docnumber: I-D.chen-quic-logical-vuln-mitigations
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jianjun
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 version:
 - content: '00'
 language:
@@ -53,26 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes protocol and implementation practices for mitigating
-    logical vulnerabilities in QUIC implementations. It focuses on denial-of-service
-    and correctness failures caused by unbounded resource retention, unsafe state
-    transitions, and insufficiently defensive handling of adversarial but parseable
-    protocol inputs. The document provides actionable guidance for protocol designers,
-    implementers, and operators. It proposes concrete resource bounds, defensive validation
-    rules, queue-management practices, and state- machine invariants intended to reduce
-    exposure to memory exhaustion, CPU exhaustion, queue blow-up, connection starvation,
-    and crash- triggering state confusion in QUIC endpoints.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes protocol and implementation practices for
+       mitigating logical vulnerabilities in QUIC implementations.  It
+       focuses on denial-of-service and correctness failures caused by
+       unbounded resource retention, unsafe state transitions, and
+       insufficiently defensive handling of adversarial but parseable
+       protocol inputs.
+
+       The document provides actionable guidance for protocol designers,
+       implementers, and operators.  It proposes concrete resource bounds,
+       defensive validation rules, queue-management practices, and state-
+       machine invariants intended to reduce exposure to memory exhaustion,
+       CPU exhaustion, queue blow-up, connection starvation, and crash-
+       triggering state confusion in QUIC endpoints.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chen-quic-logical-vuln-mitigations-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

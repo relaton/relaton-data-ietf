@@ -1,11 +1,12 @@
 ---
 id: draftvicenteacmepqcagilityprofile
 schema_version: v1.5.6
+formattedref:
+  content: draft-vicente-acme-pqc-agility-profile
 title:
 - language: en
   script: Latn
   content: Post-Quantum Cryptographic Agility Profile for ACME
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-vicente-acme-pqc-agility-profile-02
@@ -19,28 +20,37 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an Automated Certificate Management Environment
-    (ACME) [RFC8555] profile extension that enables ACME servers and clients to express
-    per-account and per-order post-quantum cryptographic (PQC) posture. The extension
-    introduces a pqcAgility metadata object in the ACME directory, an optional pqcAgility
-    member in order objects, and a server-side adequacy scoring mechanism that determines
-    whether a given order satisfies an account's declared PQC readiness threshold.
-    The profile is designed for both public and private ACME deployments and does
-    not modify the core ACME state machine: it adds discoverable capability metadata
-    and per-order policy directives that servers MAY enforce. Multi-tenant ACME servers
-    MUST implement tenant-isolation controls that prevent cross-account PQC posture
-    leakage. This document is distinguished from draft-giron-acme-pqcnegotiation [I-D.giron-acme-pqcnegotiation],
-    which defines algorithm negotiation at the ACME protocol level. This profile operates
-    above the negotiation layer: it defines per-account posture scoring, adequacy
-    thresholds, hybrid policy bits, rotation epoch anchoring, and tenant- isolation
-    requirements that apply regardless of which negotiation mechanism is used.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines an Automated Certificate Management Environment
+       (ACME) [RFC8555] profile extension that enables ACME servers and
+       clients to express per-account and per-order post-quantum
+       cryptographic (PQC) posture.  The extension introduces a pqcAgility
+       metadata object in the ACME directory, an optional pqcAgility member
+       in order objects, and a server-side adequacy scoring mechanism that
+       determines whether a given order satisfies an account's declared PQC
+       readiness threshold.
+
+       The profile is designed for both public and private ACME deployments
+       and does not modify the core ACME state machine: it adds discoverable
+       capability metadata and per-order policy directives that servers MAY
+       enforce.  Multi-tenant ACME servers MUST implement tenant-isolation
+       controls that prevent cross-account PQC posture leakage.
+
+       This document is distinguished from draft-giron-acme-pqcnegotiation
+       [I-D.giron-acme-pqcnegotiation], which defines algorithm negotiation
+       at the ACME protocol level.  This profile operates above the
+       negotiation layer: it defines per-account posture scoring, adequacy
+       thresholds, hybrid policy bits, rotation epoch anchoring, and tenant-
+       isolation requirements that apply regardless of which negotiation
+       mechanism is used.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-vicente-acme-pqc-agility-profile-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vicente-acme-pqc-agility-profile-00
     docidentifier:
     - content: draft-vicente-acme-pqc-agility-profile-00
       type: Internet-Draft
@@ -49,7 +59,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-vicente-acme-pqc-agility-profile-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vicente-acme-pqc-agility-profile-01
     docidentifier:
     - content: draft-vicente-acme-pqc-agility-profile-01
       type: Internet-Draft
@@ -58,7 +70,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-vicente-acme-pqc-agility-profile-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vicente-acme-pqc-agility-profile-02
     docidentifier:
     - content: draft-vicente-acme-pqc-agility-profile-02
       type: Internet-Draft
@@ -67,4 +81,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

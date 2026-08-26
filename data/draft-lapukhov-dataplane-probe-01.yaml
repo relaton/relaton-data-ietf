@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Data-plane probe for in-band telemetry collection
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-lapukhov-dataplane-probe-01
 docidentifier:
+- content: draft-lapukhov-dataplane-probe
+  type: Internet-Draft
 - content: draft-lapukhov-dataplane-probe-01
   type: Internet-Draft
   primary: true
-- content: I-D.lapukhov-dataplane-probe
-  type: IETF
-  scope: anchor
 docnumber: I-D.lapukhov-dataplane-probe
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Petr
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Facebook
+        - language: en
+          content: Facebook
 - role:
   - type: author
   person:
@@ -59,7 +60,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Barefoot Networks
+        - language: en
+          content: Barefoot Networks
 version:
 - content: '01'
 language:
@@ -69,36 +71,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Detecting and isolating network faults in IP networks has traditionally
-    been done using tools like ping and traceroute (see [RFC7276]) or more complex
-    systems built on similar concepts of active probing and path tracing. While using
-    active synthetic probes is proven to be helpful in detecting data-plane faults,
-    isolating fault location is a much harder problem, especially in diverse networks
-    with multiple active forwarding planes (e.g. IP and MPLS). Moreover, existing
-    end-to-end tools do not generally support functionality beyond dealing with packet
-    loss - for example, they are hardly useful for detecting and reporting transient
-    (i.e. milli- or even micro-second) network congestion. Modern network forwarding
-    hardware can allow for more sophisticated data-plane functionality that provides
-    substantial improvement to the isolation and identification capabilities of network
-    elements. For example, it has become possible to encode a snapshot of a network
-    element's state within the packet payload as it transits the device. One example
-    of such state would be queue depth on the egress port taken by that specific packet.
-    When combined with a unique device identifier embedded in the same packet, this
-    could allow for precise time and topological identification of the the congested
-    location within the network. This document proposes a format for requesting and
-    embedding telemetry information in active probes, i.e. packet designated for actively
-    testing the network while not carrying application traffic. These active probes
-    could be conveyed over multiple protocols (ICMP, UDP, TCP, etc.) and the document
-    does not prescribe any particular transport. In addition, this document provides
-    recommendations on handling the active probes by devices that do not support the
-    required data-plane functionality.</p>"
-  format: text/html
+  content: |-
+    <p>Detecting and isolating network faults in IP networks has
+       traditionally been done using tools like ping and traceroute (see
+       [RFC7276]) or more complex systems built on similar concepts of
+       active probing and path tracing.  While using active synthetic probes
+       is proven to be helpful in detecting data-plane faults, isolating
+       fault location is a much harder problem, especially in diverse
+       networks with multiple active forwarding planes (e.g.  IP and MPLS).
+       Moreover, existing end-to-end tools do not generally support
+       functionality beyond dealing with packet loss - for example, they are
+       hardly useful for detecting and reporting transient (i.e. milli- or
+       even micro-second) network congestion.
+
+       Modern network forwarding hardware can allow for more sophisticated
+       data-plane functionality that provides substantial improvement to the
+       isolation and identification capabilities of network elements.  For
+       example, it has become possible to encode a snapshot of a network
+       element's state within the packet payload as it transits the device.
+       One example of such state would be queue depth on the egress port
+       taken by that specific packet.  When combined with a unique device
+       identifier embedded in the same packet, this could allow for precise
+       time and topological identification of the the congested location
+       within the network.
+
+       This document proposes a format for requesting and embedding
+       telemetry information in active probes, i.e. packet designated for
+       actively testing the network while not carrying application traffic.
+       These active probes could be conveyed over multiple protocols (ICMP,
+       UDP, TCP, etc.) and the document does not prescribe any particular
+       transport.  In addition, this document provides recommendations on
+       handling the active probes by devices that do not support the
+       required data-plane functionality.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-lapukhov-dataplane-probe-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lapukhov-dataplane-probe-00
     docidentifier:
     - content: draft-lapukhov-dataplane-probe-00
       type: Internet-Draft
@@ -109,10 +121,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-lapukhov-dataplane-probe-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

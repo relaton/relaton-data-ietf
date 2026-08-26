@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: ALTO Incremental Updates Using Server-Sent Events (SSE)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-incr-update-sse-18
 docidentifier:
+- content: draft-ietf-alto-incr-update-sse
+  type: Internet-Draft
 - content: draft-ietf-alto-incr-update-sse-18
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-alto-incr-update-sse
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-alto-incr-update-sse
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Wendy
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia Bell Labs (Retired)
+        - language: en
+          content: Nokia Bell Labs (Retired)
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "Y"
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Yale University
+        - language: en
+          content: Yale University
 version:
 - content: '18'
 language:
@@ -75,40 +79,50 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Application-Layer Traffic Optimization (ALTO) [RFC7285] protocol
-    provides network related information, called network information resources, to
-    client applications so that clients can make informed decisions in utilizing network
-    resources. For example, an ALTO server can provide network and cost maps so that
-    an ALTO client can use the maps to determine the costs between network endpoints
-    when choosing communicating endpoints. However, the ALTO protocol does not define
-    a mechanism to allow an ALTO client to obtain updates to the information resources,
-    other than by periodically re-fetching them. Because some information resources
-    (e.g., the aforementioned maps) may be large (potentially tens of megabytes),
-    and because only parts of the information resources may change frequently (e.g.,
-    only some entries in a cost map), complete re-fetching can be extremely inefficient.
-    This document presents a mechanism to allow an ALTO server to push updates to
-    ALTO clients, to achieve two benefits: (1) updates can be immediate, in that the
-    ALTO server can send updates as soon as they are available; and (2) updates can
-    be incremental, in that if only a small section of an information resource changes,
-    the ALTO server can send just the changes.</p>"
-  format: text/html
+  content: |-
+    <p>The Application-Layer Traffic Optimization (ALTO) [RFC7285] protocol
+       provides network related information, called network information
+       resources, to client applications so that clients can make informed
+       decisions in utilizing network resources.  For example, an ALTO
+       server can provide network and cost maps so that an ALTO client can
+       use the maps to determine the costs between network endpoints when
+       choosing communicating endpoints.
+
+       However, the ALTO protocol does not define a mechanism to allow an
+       ALTO client to obtain updates to the information resources, other
+       than by periodically re-fetching them.  Because some information
+       resources (e.g., the aforementioned maps) may be large (potentially
+       tens of megabytes), and because only parts of the information
+       resources may change frequently (e.g., only some entries in a cost
+       map), complete re-fetching can be extremely inefficient.
+
+       This document presents a mechanism to allow an ALTO server to push
+       updates to ALTO clients, to achieve two benefits: (1) updates can be
+       immediate, in that the ALTO server can send updates as soon as they
+       are available; and (2) updates can be incremental, in that if only a
+       small section of an information resource changes, the ALTO server can
+       send just the changes.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-alto-incr-update-sse-12
-      format: text/plain
+      content: draft-ietf-alto-incr-update-sse-17
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-incr-update-sse-17
     docidentifier:
-    - content: draft-ietf-alto-incr-update-sse-12
+    - content: draft-ietf-alto-incr-update-sse-17
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-alto-incr-update-sse-22
-      format: text/plain
+      content: draft-ietf-alto-incr-update-sse-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-alto-incr-update-sse-19
     docidentifier:
-    - content: draft-ietf-alto-incr-update-sse-22
+    - content: draft-ietf-alto-incr-update-sse-19
       type: Internet-Draft
       primary: true
 series:
@@ -117,10 +131,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-alto-incr-update-sse-18
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

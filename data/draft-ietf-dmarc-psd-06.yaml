@@ -7,17 +7,15 @@ title:
   script: Latn
   content: DMARC (Domain-based Message Authentication, Reporting, and Conformance)
     Extension For PSDs (Public Suffix Domains)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dmarc-psd-06
 docidentifier:
+- content: draft-ietf-dmarc-psd
+  type: Internet-Draft
 - content: draft-ietf-dmarc-psd-06
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-dmarc-psd
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-dmarc-psd
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Scott
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: fTLD Registry Services
+        - language: en
+          content: fTLD Registry Services
 version:
 - content: '06'
 language:
@@ -54,36 +55,47 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DMARC (Domain-based Message Authentication, Reporting, and Conformance)
-    is a scalable mechanism by which a mail-originating organization can express domain-level
-    policies and preferences for message validation, disposition, and reporting, that
-    a mail-receiving organization can use to improve mail handling. The design of
-    DMARC presumes that domain names represent either nodes in the tree below which
-    registrations occur, or nodes where registrations have occurred; it does not permit
-    a domain name to have both of these properties simultaneously. Since its deployment
-    in 2015, use of DMARC has shown a clear need for the ability to express policy
-    for these domains as well. Domains at which registrations can occur are referred
-    to as Public Suffix Domains (PSDs). This document describes an extension to DMARC
-    to enable DMARC functionality for PSDs. This document also seeks to address implementations
-    that consider a domain on a public Suffix list to be ineligible for DMARC enforcement.</p>"
-  format: text/html
+  content: |-
+    <p>DMARC (Domain-based Message Authentication, Reporting, and
+       Conformance) is a scalable mechanism by which a mail-originating
+       organization can express domain-level policies and preferences for
+       message validation, disposition, and reporting, that a mail-receiving
+       organization can use to improve mail handling.  The design of DMARC
+       presumes that domain names represent either nodes in the tree below
+       which registrations occur, or nodes where registrations have
+       occurred; it does not permit a domain name to have both of these
+       properties simultaneously.  Since its deployment in 2015, use of
+       DMARC has shown a clear need for the ability to express policy for
+       these domains as well.
+
+       Domains at which registrations can occur are referred to as Public
+       Suffix Domains (PSDs).  This document describes an extension to DMARC
+       to enable DMARC functionality for PSDs.
+
+       This document also seeks to address implementations that consider a
+       domain on a public Suffix list to be ineligible for DMARC
+       enforcement.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-dmarc-psd-04
-      format: text/plain
+      content: draft-ietf-dmarc-psd-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dmarc-psd-05
     docidentifier:
-    - content: draft-ietf-dmarc-psd-04
+    - content: draft-ietf-dmarc-psd-05
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-dmarc-psd-13
-      format: text/plain
+      content: draft-ietf-dmarc-psd-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dmarc-psd-07
     docidentifier:
-    - content: draft-ietf-dmarc-psd-13
+    - content: draft-ietf-dmarc-psd-07
       type: Internet-Draft
       primary: true
 series:
@@ -92,10 +104,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-dmarc-psd-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

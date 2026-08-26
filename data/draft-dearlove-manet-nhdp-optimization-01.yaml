@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: An Optimization for the MANET Neighborhood Discovery Protocol (NHDP)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dearlove-manet-nhdp-optimization-01
 docidentifier:
+- content: draft-dearlove-manet-nhdp-optimization
+  type: Internet-Draft
 - content: draft-dearlove-manet-nhdp-optimization-01
   type: Internet-Draft
   primary: true
-- content: I-D.dearlove-manet-nhdp-optimization
-  type: IETF
-  scope: anchor
 docnumber: I-D.dearlove-manet-nhdp-optimization
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Christopher
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,17 +43,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: BAE Systems ATC
+        - language: en
+          content: BAE Systems ATC
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -67,7 +71,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: LIX, Ecole Polytechnique
+        - language: en
+          content: LIX, Ecole Polytechnique
 version:
 - content: '01'
 language:
@@ -77,30 +82,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The link quality mechanism of the MANET Neighborhood Discovery Protocol
-    (NHDP) enables "ignoring" some 1-hop neighbors if the measured link quality from
-    that 1-hop neighbor is below an acceptable threshold, while still retaining the
-    corresponding link information as acquired from HELLO message exchange. This allows
-    immediate reinstatement of the 1-hop neighbor if the link quality later improves
-    sufficiently. NHDP also collects information about symmetric 2-hop neighbors.
-    However it specifies that if a link from a symmetric 1-hop neighbor ceases being
-    symmetric, including while "ignored" as described above, then corresponding symmetric
-    2-hop neighbors are removed. This may lead to symmetric 2-hop neighborhood information
-    being permanently removed (until further HELLO messages are received) if the link
-    quality of a symmetric 1-hop neighbor drops below the acceptable threshold, even
-    if only for a moment. This specification updates NHDP, and the Optimized Link
-    State Routing Protocol version 2 (OLSRv2) to permit retaining, but ignoring, symmetric
-    2-hop information when the link quality from the corresponding 1-hop neighbor
-    drops below the acceptable threshold. This allows immediate reinstatement of the
-    symmetric 2-hop neighbor if the link quality later improves sufficiently, thus
-    making the symmetric 2-hop neighborhood more "robust".</p>
-  format: text/html
+  content: |-
+    <p>The link quality mechanism of the MANET Neighborhood Discovery
+       Protocol (NHDP) enables "ignoring" some 1-hop neighbors if the
+       measured link quality from that 1-hop neighbor is below an acceptable
+       threshold, while still retaining the corresponding link information
+       as acquired from HELLO message exchange.  This allows immediate
+       reinstatement of the 1-hop neighbor if the link quality later
+       improves sufficiently.
+
+       NHDP also collects information about symmetric 2-hop neighbors.
+       However it specifies that if a link from a symmetric 1-hop neighbor
+       ceases being symmetric, including while "ignored" as described above,
+       then corresponding symmetric 2-hop neighbors are removed.  This may
+       lead to symmetric 2-hop neighborhood information being permanently
+       removed (until further HELLO messages are received) if the link
+       quality of a symmetric 1-hop neighbor drops below the acceptable
+       threshold, even if only for a moment.
+
+       This specification updates NHDP, and the Optimized Link State Routing
+       Protocol version 2 (OLSRv2) to permit retaining, but ignoring,
+       symmetric 2-hop information when the link quality from the
+       corresponding 1-hop neighbor drops below the acceptable threshold.
+       This allows immediate reinstatement of the symmetric 2-hop neighbor
+       if the link quality later improves sufficiently, thus making the
+       symmetric 2-hop neighborhood more "robust".</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-dearlove-manet-nhdp-optimization-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dearlove-manet-nhdp-optimization-00
     docidentifier:
     - content: draft-dearlove-manet-nhdp-optimization-00
       type: Internet-Draft
@@ -111,10 +125,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-dearlove-manet-nhdp-optimization-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

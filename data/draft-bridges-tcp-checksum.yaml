@@ -1,11 +1,12 @@
 ---
 id: draftbridgestcpchecksum
 schema_version: v1.5.6
+formattedref:
+  content: draft-bridges-tcp-checksum
 title:
 - language: en
   script: Latn
   content: TCP Embedded Trailer Checksum
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bridges-tcp-checksum-01
@@ -21,25 +22,26 @@ abstract:
   script: Latn
   content: "<p>This document describes the use of embedded trailer checksums in TCP,
     and proposes an extension to TCP to negotiate the use of embedded trailer checksums
-    for a TCP connection. Embedded trailer checksums reside in the last two octets
+    for a TCP connection.  Embedded trailer checksums reside in the last two octets
     of the segment's data field. The negotiation mechanism proposed in this document
     allows for new TCP implementations to exchange segments bearing embedded trailer
     checksums while still being able to inter-operate with TCP implementations that
-    do not support them. The performance gain achieved by assisting software's checksumming
-    of TCP segments with hardware has been clearly demonstrated in some existing TCP
-    implementations. The authors claim that the price and performance gains achieved
-    by providing hardware assists for Embedded Trailer Checksums are even greater.
-    These gains are particularly apparent when employed over segmenting links such
-    as Fibre Channel and Asynchronous Transfer Mode (ATM). TCP implementations that
-    do not use hardware checksum assists will not suffer any performance penalty by
-    supporting Embedded Trailer Checksums.</p>"
-  format: text/html
+    do not support them.      The performance gain achieved by assisting software's
+    checksumming of TCP segments with hardware has been clearly demonstrated in some
+    existing TCP  implementations.  The authors  claim that the price and performance
+    gains achieved by providing hardware assists for Embedded Trailer Checksums are
+    even greater.  These gains are particularly apparent when employed over segmenting
+    links such as Fibre Channel and Asynchronous Transfer Mode (ATM).           TCP
+    implementations that do not use hardware checksum assists will not suffer any
+    performance penalty by supporting Embedded Trailer Checksums.</p>"
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-bridges-tcp-checksum-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bridges-tcp-checksum-01
     docidentifier:
     - content: draft-bridges-tcp-checksum-01
       type: Internet-Draft
@@ -48,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

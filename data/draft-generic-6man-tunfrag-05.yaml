@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IPv6 Path MTU Updates
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-generic-6man-tunfrag-05
 docidentifier:
+- content: draft-generic-6man-tunfrag
+  type: Internet-Draft
 - content: draft-generic-6man-tunfrag-05
   type: Internet-Draft
   primary: true
-- content: I-D.generic-6man-tunfrag
-  type: IETF
-  scope: anchor
 docnumber: I-D.generic-6man-tunfrag
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Fred
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -49,35 +49,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>IPv6 intentionally deprecates fragmentation by routers in the network.
-    Instead, links with restricting MTUs must either drop each too-large packet and
-    return an ICMPv6 Packet Too Big (PTB) message or perform link-specific fragmentation
-    and reassembly (also known as "link adaptation") at a layer below IPv6. This latter
-    category of links is often performance-challenged to accommodate steady-state
-    link adaptation. A common case that exhibits these link characteristics is seen
-    for IPv6-within-IP tunnels. Additionally, IPv6 nodes can avoid path MTU discovery
-    issues even when no link adaptation is necessary by performing a small amount
-    of fragmentation and/or by probing the path as necessary. This document therefore
-    proposes an update to the base IPv6 specification to better accommodate path MTU
-    issues.</p>
-  format: text/html
+  content: |-
+    <p>IPv6 intentionally deprecates fragmentation by routers in the
+       network.  Instead, links with restricting MTUs must either drop each
+       too-large packet and return an ICMPv6 Packet Too Big (PTB) message or
+       perform link-specific fragmentation and reassembly (also known as
+       "link adaptation") at a layer below IPv6.  This latter category of
+       links is often performance-challenged to accommodate steady-state
+       link adaptation.  A common case that exhibits these link
+       characteristics is seen for IPv6-within-IP tunnels.  Additionally,
+       IPv6 nodes can avoid path MTU discovery issues even when no link
+       adaptation is necessary by performing a small amount of fragmentation
+       and/or by probing the path as necessary.  This document therefore
+       proposes an update to the base IPv6 specification to better
+       accommodate path MTU issues.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-generic-6man-tunfrag-02
-      format: text/plain
+      content: draft-generic-6man-tunfrag-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-generic-6man-tunfrag-04
     docidentifier:
-    - content: draft-generic-6man-tunfrag-02
+    - content: draft-generic-6man-tunfrag-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-generic-6man-tunfrag-08
-      format: text/plain
+      content: draft-generic-6man-tunfrag-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-generic-6man-tunfrag-06
     docidentifier:
-    - content: draft-generic-6man-tunfrag-08
+    - content: draft-generic-6man-tunfrag-06
       type: Internet-Draft
       primary: true
 series:
@@ -86,10 +92,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-generic-6man-tunfrag-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

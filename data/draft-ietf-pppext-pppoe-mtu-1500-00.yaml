@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Accommodating an MTU of 1500 in PPPoE
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-pppext-pppoe-mtu-1500-00
 docidentifier:
+- content: draft-ietf-pppext-pppoe-mtu-1500
+  type: Internet-Draft
 - content: draft-ietf-pppext-pppoe-mtu-1500-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-pppext-pppoe-mtu-1500
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-pppext-pppoe-mtu-1500
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -49,25 +49,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Point-to-Point Protocol Over Ethernet, (PPPoE), as described in RFC
-    2516, mandates a maximum negotiated MRU of 1492. This memo proposes relaxing that
-    restriction to allow a maximum negotiated MRU of 1500. This can be achieved by
-    treating the PPPoE Header and Protocol ID as part of the Ethernet Header, taking
-    advantage of the fact that most network devices have buffers for the Ethernet
-    Header and Payload that are at least 1522 octets in size. To aid backward compatability,
-    the proposal recommends testing the link with MRU-sized Echo-Request packets if
-    an MRU greater than 1492 has been assumed or negotiated.</p>"
-  format: text/html
+  content: |-
+    <p>Point-to-Point Protocol Over Ethernet, (PPPoE), as described in RFC
+       2516, mandates a maximum negotiated MRU of 1492. This memo proposes
+       relaxing that restriction to allow a maximum negotiated MRU of 1500.
+       This can be achieved by treating the PPPoE Header and Protocol ID as
+       part of the Ethernet Header, taking advantage of the fact that most
+       network devices have buffers for the Ethernet Header and Payload that
+       are at least 1522 octets in size. To aid backward compatability, the
+       proposal recommends testing the link with MRU-sized Echo-Request
+       packets if an MRU greater than 1492 has been assumed or negotiated.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-pppext-pppoe-mtu-1500-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

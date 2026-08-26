@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: BGP Classful Transport Planes
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kaliraj-idr-bgp-classful-transport-planes-14
 docidentifier:
+- content: draft-kaliraj-idr-bgp-classful-transport-planes
+  type: Internet-Draft
 - content: draft-kaliraj-idr-bgp-classful-transport-planes-14
   type: Internet-Draft
   primary: true
-- content: I-D.kaliraj-idr-bgp-classful-transport-planes
-  type: IETF
-  scope: anchor
 docnumber: I-D.kaliraj-idr-bgp-classful-transport-planes
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kaliraj
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Natrajan
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Balaji
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -87,17 +93,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks, Inc.
+        - language: en
+          content: Juniper Networks, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gyan
       - language: en
+        script: Latn
         initial: G
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -111,15 +121,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verizon Communications Inc.
+        - language: en
+          content: Verizon Communications Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mazen
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -133,15 +146,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cox Communications Inc.
+        - language: en
+          content: Cox Communications Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Xiaohu
       - language: en
+        script: Latn
         initial: X
       formatted_initials:
         language: en
@@ -155,17 +171,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Capitalonline.
+        - language: en
+          content: Capitalonline.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rafal
       - language: en
+        script: Latn
         initial: R
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -179,17 +199,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google.
+        - language: en
+          content: Google.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Deepak
       - language: en
+        script: Latn
         initial: D
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -203,15 +227,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Extreme Networks
+        - language: en
+          content: Extreme Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Chaitanya
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -225,7 +252,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: ATT
+        - language: en
+          content: ATT
 version:
 - content: '14'
 language:
@@ -235,42 +263,59 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document specifies a mechanism, referred to as "service mapping",
-    to express association of overlay routes with underlay routes satisfying a certain
-    SLA, using BGP. The document describes a framework for classifying underlay routes
-    into transport classes, and mapping service routes to specific transport class.
-    The "Transport class" construct maps to a desired SLA, and can be used to realize
-    the "Topology Slice" in 5G Network slicing architecture. This document specifies
-    BGP protocol procedures that enable dissemination of such service mapping information
-    that may span multiple co-operating administrative domains. These domains may
-    be administetered by the same provider or closely co-ordinating provider networks.
-    It makes it possible to advertise multiple tunnels to the same destination address,
-    thus avoiding need of multiple loopbacks on the egress node. A new BGP transport
-    layer address family (SAFI 76) is defined for this purpose that uses RFC-4364
-    technology and follows RFC-8277 NLRI encoding. This new address family is called
-    "BGP Classful Transport", aka BGP CT. It carries transport prefixes across tunnel
-    domain boundaries (e.g. in Inter-AS Option-C networks), parallel to BGP LU (SAFI
-    4). It disseminates "Transport class" information for the transport prefixes across
-    the participating domains, which is not possible with BGP LU. This makes the end-to-end
-    network a "Transport Class" aware tunneled network.</p>
-  format: text/html
+  content: |-
+    <p>This document specifies a mechanism, referred to as "service
+       mapping", to express association of overlay routes with underlay
+       routes satisfying a certain SLA, using BGP.  The document describes a
+       framework for classifying underlay routes into transport classes, and
+       mapping service routes to specific transport class.
+
+       The "Transport class" construct maps to a desired SLA, and can be
+       used to realize the "Topology Slice" in 5G Network slicing
+       architecture.
+
+       This document specifies BGP protocol procedures that enable
+       dissemination of such service mapping information that may span
+       multiple co-operating administrative domains.  These domains may be
+       administetered by the same provider or closely co-ordinating provider
+       networks.
+
+       It makes it possible to advertise multiple tunnels to the same
+       destination address, thus avoiding need of multiple loopbacks on the
+       egress node.
+
+       A new BGP transport layer address family (SAFI 76) is defined for
+       this purpose that uses RFC-4364 technology and follows RFC-8277 NLRI
+       encoding.  This new address family is called "BGP Classful
+       Transport", aka BGP CT.
+
+       It carries transport prefixes across tunnel domain boundaries (e.g.
+       in Inter-AS Option-C networks), parallel to BGP LU (SAFI 4) . It
+       disseminates "Transport class" information for the transport prefixes
+       across the participating domains, which is not possible with BGP LU.
+       This makes the end-to-end network a "Transport Class" aware tunneled
+       network.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-kaliraj-idr-bgp-classful-transport-planes-12
-      format: text/plain
+      content: draft-kaliraj-idr-bgp-classful-transport-planes-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-idr-bgp-classful-transport-planes-13
     docidentifier:
-    - content: draft-kaliraj-idr-bgp-classful-transport-planes-12
+    - content: draft-kaliraj-idr-bgp-classful-transport-planes-13
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-kaliraj-idr-bgp-classful-transport-planes-17
-      format: text/plain
+      content: draft-kaliraj-idr-bgp-classful-transport-planes-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kaliraj-idr-bgp-classful-transport-planes-15
     docidentifier:
-    - content: draft-kaliraj-idr-bgp-classful-transport-planes-17
+    - content: draft-kaliraj-idr-bgp-classful-transport-planes-15
       type: Internet-Draft
       primary: true
 series:
@@ -279,10 +324,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kaliraj-idr-bgp-classful-transport-planes-14
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

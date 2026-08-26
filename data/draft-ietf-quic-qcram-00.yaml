@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Header Compression for HTTP over QUIC
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-quic-qcram-00
 docidentifier:
+- content: draft-ietf-quic-qcram
+  type: Internet-Draft
 - content: draft-ietf-quic-qcram-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-quic-qcram
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-quic-qcram
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Charles
       - language: en
+        script: Latn
         initial: C
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -45,15 +46,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google, Inc
+        - language: en
+          content: Google, Inc
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,15 +71,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai Technologies
+        - language: en
+          content: Akamai Technologies
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alan
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -89,7 +96,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Facebook
+        - language: en
+          content: Facebook
 version:
 - content: '00'
 language:
@@ -99,25 +107,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The design of the core QUIC transport subsumes many HTTP/2 features,
-    prominent among them stream multiplexing. A key advantage of the QUIC transport
-    is stream multiplexing free of head-of-line (HoL) blocking between streams. In
-    HTTP/2, multiplexed streams can suffer HoL blocking due to TCP. If HTTP/2's HPACK
-    is used for header compression, HTTP/QUIC is still vulnerable to HoL blocking,
-    because of HPACK's assumption of in-order delivery. This draft defines QCRAM,
-    a variation of HPACK and mechanisms in the HTTP/QUIC mapping that allow the flexibility
-    to avoid header-compression-induced HoL blocking.</p>"
-  format: text/html
+  content: |-
+    <p>The design of the core QUIC transport subsumes many HTTP/2 features,
+       prominent among them stream multiplexing.  A key advantage of the
+       QUIC transport is stream multiplexing free of head-of-line (HoL)
+       blocking between streams.  In HTTP/2, multiplexed streams can suffer
+       HoL blocking due to TCP.
+
+       If HTTP/2's HPACK is used for header compression, HTTP/QUIC is still
+       vulnerable to HoL blocking, because of HPACK's assumption of in-order
+       delivery.  This draft defines QCRAM, a variation of HPACK and
+       mechanisms in the HTTP/QUIC mapping that allow the flexibility to
+       avoid header-compression-induced HoL blocking.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-quic-qcram-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

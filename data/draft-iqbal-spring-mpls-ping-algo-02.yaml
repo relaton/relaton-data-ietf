@@ -7,17 +7,15 @@ title:
   script: Latn
   content: LSP Ping/Traceroute for Prefix SID in Presence of Multi-Algorithm/Multi-
     Topology Networks
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-iqbal-spring-mpls-ping-algo-02
 docidentifier:
+- content: draft-iqbal-spring-mpls-ping-algo
+  type: Internet-Draft
 - content: draft-iqbal-spring-mpls-ping-algo-02
   type: Internet-Draft
   primary: true
-- content: I-D.iqbal-spring-mpls-ping-algo
-  type: IETF
-  scope: anchor
 docnumber: I-D.iqbal-spring-mpls-ping-algo
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Zafar
       - language: en
+        script: Latn
         initial: Z
       formatted_initials:
         language: en
@@ -44,15 +44,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Carlos
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -66,15 +69,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Faisal
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -88,7 +94,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arista Networks
+        - language: en
+          content: Arista Networks
 version:
 - content: '02'
 language:
@@ -98,26 +105,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>[RFC8287] defines the extensions to MPLS LSP Ping and Traceroute for
-    Segment Routing IGP-Prefix and IGP-Adjacency Segment Identifier (SIDs) with an
-    MPLS data plane. The machinery defined in [RFC8287] works well in single topology,
-    single algorithm deployments where each Prefix SID is only associated with a single
-    IP prefix. In multi-topology networks, or networks deploying multiple algorithms
-    for the same IP Prefix, MPLS echo request needs to carry additional information
-    in the Target FEC Stack sub-TLVs to properly validate IGP Prefix SID. This document
-    updates [RFC8287] by modifying IPv4 and IPv6 IGP-Prefix Segment ID FEC sub-TLVs
-    to also include algorithm identification while maintaining backwards compatibility.
-    This document also introduces new Target FEC Stack sub-TLVs for Prefix SID validation
-    in multi-topology networks.</p>"
-  format: text/html
+  content: |-
+    <p>[RFC8287] defines the extensions to MPLS LSP Ping and Traceroute for
+       Segment Routing IGP-Prefix and IGP-Adjacency Segment Identifier
+       (SIDs) with an MPLS data plane.  The machinery defined in [RFC8287]
+       works well in single topology, single algorithm deployments where
+       each Prefix SID is only associated with a single IP prefix.  In
+       multi-topology networks, or networks deploying multiple algorithms
+       for the same IP Prefix, MPLS echo request needs to carry additional
+       information in the Target FEC Stack sub-TLVs to properly validate IGP
+       Prefix SID.
+
+       This document updates [RFC8287] by modifying IPv4 and IPv6 IGP-Prefix
+       Segment ID FEC sub-TLVs to also include algorithm identification
+       while maintaining backwards compatibility.  This document also
+       introduces new Target FEC Stack sub-TLVs for Prefix SID validation in
+       multi-topology networks.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-iqbal-spring-mpls-ping-algo-00
-      format: text/plain
+      content: draft-iqbal-spring-mpls-ping-algo-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-iqbal-spring-mpls-ping-algo-01
     docidentifier:
-    - content: draft-iqbal-spring-mpls-ping-algo-00
+    - content: draft-iqbal-spring-mpls-ping-algo-01
       type: Internet-Draft
       primary: true
 series:
@@ -126,10 +139,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-iqbal-spring-mpls-ping-algo-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

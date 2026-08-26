@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'Attested Inference Receipt (AIR): A COSE/CWT Profile for Confidential
     AI Inference'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-tsyrulnikov-rats-attested-inference-receipt-00
 docidentifier:
+- content: draft-tsyrulnikov-rats-attested-inference-receipt
+  type: Internet-Draft
 - content: draft-tsyrulnikov-rats-attested-inference-receipt-00
   type: Internet-Draft
   primary: true
-- content: I-D.tsyrulnikov-rats-attested-inference-receipt
-  type: IETF
-  scope: anchor
 docnumber: I-D.tsyrulnikov-rats-attested-inference-receipt
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Borys
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cyntrisec
+        - language: en
+          content: Cyntrisec
 version:
 - content: '00'
 language:
@@ -54,25 +55,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Attested Inference Receipt (AIR), a COSE_Sign1
-    envelope carrying CWT claims profiled per the Entity Attestation Token (EAT) framework.
-    An AIR receipt binds model identity, input/output hashes, platform attestation
-    metadata, and operational telemetry into a single signed artifact suitable for
-    audit, compliance, and third-party verification of a confidential AI inference
-    event. AIR v1 targets single-inference receipts emitted by workloads running inside
-    hardware-isolated Trusted Execution Environments (TEEs). It supports AWS Nitro
-    Enclaves and Intel TDX measurement formats, with extension points for additional
-    platforms. Pipeline chaining and multi-inference receipts are out of scope for
-    this version.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the Attested Inference Receipt (AIR), a
+       COSE_Sign1 envelope carrying CWT claims profiled per the Entity
+       Attestation Token (EAT) framework.  An AIR receipt binds model
+       identity, input/output hashes, platform attestation metadata, and
+       operational telemetry into a single signed artifact suitable for
+       audit, compliance, and third-party verification of a confidential AI
+       inference event.
+
+       AIR v1 targets single-inference receipts emitted by workloads running
+       inside hardware-isolated Trusted Execution Environments (TEEs).  It
+       supports AWS Nitro Enclaves and Intel TDX measurement formats, with
+       extension points for additional platforms.  Pipeline chaining and
+       multi-inference receipts are out of scope for this version.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-tsyrulnikov-rats-attested-inference-receipt-02
-      format: text/plain
+      content: draft-tsyrulnikov-rats-attested-inference-receipt-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tsyrulnikov-rats-attested-inference-receipt-01
     docidentifier:
-    - content: draft-tsyrulnikov-rats-attested-inference-receipt-02
+    - content: draft-tsyrulnikov-rats-attested-inference-receipt-01
       type: Internet-Draft
       primary: true
 series:
@@ -81,10 +87,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-tsyrulnikov-rats-attested-inference-receipt-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

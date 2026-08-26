@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Simplemux. A generic multiplexing protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-04
 docidentifier:
+- content: draft-saldana-tsvwg-simplemux
+  type: Internet-Draft
 - content: draft-saldana-tsvwg-simplemux-04
   type: Internet-Draft
   primary: true
-- content: I-D.saldana-tsvwg-simplemux
-  type: IETF
-  scope: anchor
 docnumber: I-D.saldana-tsvwg-simplemux
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jose
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -49,38 +49,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>The low efficiency caused by the high amount of small packets present
-    in the network can be alleviated by means of packet aggregation. There are some
-    situations in which multiplexing a number of small packets into a bigger one is
-    desirable. For example, a number of small packets can be sent together between
-    a pair of machines if they share a common network path. Thus, the traffic profile
-    can be shifted from small to larger packets, reducing the network overhead and
-    the number of packets per second to be managed by intermediate routers. This document
-    describes Simplemux, a protocol able to encapsulate a number of packets belonging
-    to different protocols into a single packet. It includes the "Protocol" field
-    on each multiplexing header, thus allowing the inclusion of a number of packets
-    belonging to different protocols (multiplexed packets) on a packet of another
-    protocol (tunneling protocol). In order to reduce the overhead, the size of the
-    multiplexing headers is kept very low (it may be a single byte when multiplexing
-    small packets).</p>
-  format: text/html
+  content: |-
+    <p>The low efficiency caused by the high amount of small packets present
+       in the network can be alleviated by means of packet aggregation.
+       There are some situations in which multiplexing a number of small
+       packets into a bigger one is desirable.  For example, a number of
+       small packets can be sent together between a pair of machines if they
+       share a common network path.  Thus, the traffic profile can be
+       shifted from small to larger packets, reducing the network overhead
+       and the number of packets per second to be managed by intermediate
+       routers.
+
+       This document describes Simplemux, a protocol able to encapsulate a
+       number of packets belonging to different protocols into a single
+       packet.  It includes the "Protocol" field on each multiplexing
+       header, thus allowing the inclusion of a number of packets belonging
+       to different protocols (multiplexed packets) on a packet of another
+       protocol (tunneling protocol).
+
+       In order to reduce the overhead, the size of the multiplexing headers
+       is kept very low (it may be a single byte when multiplexing small
+       packets).</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-saldana-tsvwg-simplemux-01
-      format: text/plain
+      content: draft-saldana-tsvwg-simplemux-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-03
     docidentifier:
-    - content: draft-saldana-tsvwg-simplemux-01
+    - content: draft-saldana-tsvwg-simplemux-03
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-saldana-tsvwg-simplemux-09
-      format: text/plain
+      content: draft-saldana-tsvwg-simplemux-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saldana-tsvwg-simplemux-05
     docidentifier:
-    - content: draft-saldana-tsvwg-simplemux-09
+    - content: draft-saldana-tsvwg-simplemux-05
       type: Internet-Draft
       primary: true
 series:
@@ -89,10 +99,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-saldana-tsvwg-simplemux-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

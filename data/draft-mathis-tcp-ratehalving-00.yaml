@@ -8,17 +8,15 @@ title:
   content: 'The Rate-Halving Algorithm for TCP Congestion Control
 
     '
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mathis-tcp-ratehalving-00
 docidentifier:
+- content: draft-mathis-tcp-ratehalving
+  type: Internet-Draft
 - content: draft-mathis-tcp-ratehalving-00
   type: Internet-Draft
   primary: true
-- content: I-D.mathis-tcp-ratehalving
-  type: IETF
-  scope: anchor
 docnumber: I-D.mathis-tcp-ratehalving
 date:
 - type: published
@@ -30,8 +28,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matt
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -48,8 +48,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jamshid
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -63,15 +65,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Novell
+        - language: en
+          content: Novell
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jeff
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -91,26 +96,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft provides a detailed description of the Rate-Halving algorithm.
-    As specified by RFC2581, Fast Recovery adjusts the congestion window (cwnd) by
-    transmitting new data only during the second half of the recovery interval. The
-    Rate-Halving algorithm adjusts the congestion window by spacing transmissions
-    at the rate of one data segment per two segments acknowledged over the entire
-    recovery period, thereby sustaining the self-clocking of TCP and avoiding a burst.
-    Since it is largely independent of the details of the data retransmission strategy,
-    the Rate-Halving algorithm can be used with several standard and experimental
-    TCP implementations: NewReno, SACK, and ECN.</p>"
-  format: text/html
+  content: |-
+    <p>This draft provides a detailed description of the Rate-Halving
+    algorithm.  As specified by RFC2581, Fast Recovery adjusts the
+    congestion window (cwnd) by transmitting new data only during the
+    second half of the recovery interval.  The Rate-Halving algorithm
+    adjusts the congestion window by spacing transmissions at the rate of
+    one data segment per two segments acknowledged over the entire
+    recovery period, thereby sustaining the self-clocking of TCP and
+    avoiding a burst.  Since it is largely independent of the details of
+    the data retransmission strategy, the Rate-Halving algorithm can be
+    used with several standard and experimental TCP implementations:
+    NewReno, SACK, and ECN.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mathis-tcp-ratehalving-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

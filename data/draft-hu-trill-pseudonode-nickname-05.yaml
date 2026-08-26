@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'RBridge: Pseudo-Nickname'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hu-trill-pseudonode-nickname-05
 docidentifier:
+- content: draft-hu-trill-pseudonode-nickname
+  type: Internet-Draft
 - content: draft-hu-trill-pseudonode-nickname-05
   type: Internet-Draft
   primary: true
-- content: I-D.hu-trill-pseudonode-nickname
-  type: IETF
-  scope: anchor
 docnumber: I-D.hu-trill-pseudonode-nickname
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hongjun
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tissa
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Radia
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -82,10 +86,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Donald
       - language: en
+        script: Latn
         initial: D
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -102,8 +109,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mingui
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -120,8 +129,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: fangwei
       - language: en
+        script: Latn
         initial: F
       formatted_initials:
         language: en
@@ -141,40 +152,47 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RBridges provide provide end-station services to their attached end
-    stations. To avoid potential frame duplication and loops, the rule that only one
-    edge RBridge is allowed to be the frame forwarder of a VLAN on a shared LAN segment
-    is employed by base TRILL protocol, even though there are multiple RBridges attached
-    to that segment. However, in some application scenarios, for example an end station
-    is multi-homed to multiple RBridges, there is a need to improve the resiliency
-    and increase the available network bandwidth of the connection. This means all
-    those RBriges attached to the end station can act as the frame forwarders of a
-    specific VLAN. This kind of active-active connection violates the above rule.
-    The violation may bring some additional problems, such as the flip-flopping of
-    the nickname-MAC correspondences for such end stations in remote RBridges' forwarding
-    tables, frame dropping because of failure of Reverse Path Forwarding Check(RPF
-    Check) on RBridges, etc. The RPF Check problem has been addressed in [CMT]. This
-    document proposes the concept of Virtual RBridge, along with the pseudo-nickname
-    configuration for this Virtual RBridge, to address the above problems in accompany
-    with [CMT].</p>"
-  format: text/html
+  content: |-
+    <p>RBridges provide provide end-station services to their attached end
+       stations.  To avoid potential frame duplication and loops, the rule
+       that only one edge RBridge is allowed to be the frame forwarder of a
+       VLAN on a shared LAN segment is employed by base TRILL protocol, even
+       though there are multiple RBridges attached to that segment.
+       However, in some application scenarios, for example an end station is
+       multi-homed to multiple RBridges, there is a need to improve the
+       resiliency and increase the available network bandwidth of the
+       connection.  This means all those RBriges attached to the end station
+       can act as the frame forwarders of a specific VLAN.  This kind of
+       active-active connection violates the above rule.  The violation may
+       bring some additional problems, such as the flip-flopping of the
+       nickname-MAC correspondences for such end stations in remote
+       RBridges' forwarding tables, frame dropping because of failure of
+       Reverse Path Forwarding Check(RPF Check) on RBridges, etc.  The RPF
+       Check problem has been addressed in [CMT].  This document proposes
+       the concept of Virtual RBridge, along with the pseudo-nickname
+       configuration for this Virtual RBridge, to address the above problems
+       in accompany with [CMT].</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-hu-trill-pseudonode-nickname-02
-      format: text/plain
+      content: draft-hu-trill-pseudonode-nickname-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hu-trill-pseudonode-nickname-04
     docidentifier:
-    - content: draft-hu-trill-pseudonode-nickname-02
+    - content: draft-hu-trill-pseudonode-nickname-04
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-hu-trill-pseudonode-nickname-08
-      format: text/plain
+      content: draft-hu-trill-pseudonode-nickname-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hu-trill-pseudonode-nickname-06
     docidentifier:
-    - content: draft-hu-trill-pseudonode-nickname-08
+    - content: draft-hu-trill-pseudonode-nickname-06
       type: Internet-Draft
       primary: true
 series:
@@ -183,10 +201,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hu-trill-pseudonode-nickname-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

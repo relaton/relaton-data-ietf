@@ -1,11 +1,12 @@
 ---
 id: draftharesi2rspktecadatamodel
 schema_version: v1.5.6
+formattedref:
+  content: draft-hares-i2rs-pkt-eca-data-model
 title:
 - language: en
   script: Latn
   content: Filter-Based Packet Forwarding ECA Policy
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hares-i2rs-pkt-eca-data-model-02
@@ -19,30 +20,35 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the yang data model for packet forwarding policy
-    that filters received packets and forwards (or drops) the packets. Prior to forwarding
-    the packets out other interfaces, some of the fields in the packets may be modified.
-    If one considers the packet reception an event, this packet policy is a minimalistic
-    Event-Match Condition-Action policy. This policy controls forwarding of packets
-    received by a routing device on one or more interfaces on which this policy is
-    enabled. The policy is composed of an ordered list of policy rules. Each policy
-    policy rule contains a set of match conditions that filters for packets plus a
-    set of actions to modify the packet and forward packets. The match conditions
-    can match tuples in multiple layers (L1-L4, application), interface received on,
-    and and other conditions regarding the packet (size of packet, time of day). The
-    modify packet actions allow for setting things within the packet plus decapsulation
-    and encapsulation packet. The forwarding actions include forwarding via interfaces,
-    tunnels, or nexthops and dropping the packet. The policy model can be used with
-    the session ephemeral (BGP Flow Specifications), reboot ephemeral state (I2RS
-    ephemeral), and non-ephemeral routing/forwarding state (e.g. configuration state
-    ).</p>"
-  format: text/html
+  content: |-
+    <p>This document describes the yang data model for packet forwarding
+       policy that filters received packets and forwards (or drops) the
+       packets.  Prior to forwarding the packets out other interfaces, some
+       of the fields in the packets may be modified.  If one considers the
+       packet reception an event, this packet policy is a minimalistic
+       Event-Match Condition-Action policy.  This policy controls forwarding
+       of packets received by a routing device on one or more interfaces on
+       which this policy is enabled.  The policy is composed of an ordered
+       list of policy rules.  Each policy policy rule contains a set of
+       match conditions that filters for packets plus a set of actions to
+       modify the packet and forward packets.  The match conditions can
+       match tuples in multiple layers (L1-L4, application), interface
+       received on, and and other conditions regarding the packet (size of
+       packet, time of day).  The modify packet actions allow for setting
+       things within the packet plus decapsulation and encapsulation packet.
+       The forwarding actions include forwarding via interfaces, tunnels, or
+       nexthops and dropping the packet.  The policy model can be used with
+       the session ephemeral (BGP Flow Specifications), reboot ephemeral
+       state (I2RS ephemeral), and non-ephemeral routing/forwarding state
+       (e.g. configuration state ).</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-hares-i2rs-pkt-eca-data-model-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hares-i2rs-pkt-eca-data-model-00
     docidentifier:
     - content: draft-hares-i2rs-pkt-eca-data-model-00
       type: Internet-Draft
@@ -51,7 +57,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hares-i2rs-pkt-eca-data-model-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hares-i2rs-pkt-eca-data-model-01
     docidentifier:
     - content: draft-hares-i2rs-pkt-eca-data-model-01
       type: Internet-Draft
@@ -60,7 +68,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-hares-i2rs-pkt-eca-data-model-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hares-i2rs-pkt-eca-data-model-02
     docidentifier:
     - content: draft-hares-i2rs-pkt-eca-data-model-02
       type: Internet-Draft
@@ -69,4 +79,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

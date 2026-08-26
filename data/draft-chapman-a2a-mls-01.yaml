@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: End-to-End Encryption and Purpose-Bound Governance for Agent-to-Agent Messaging
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chapman-a2a-mls-01
 docidentifier:
+- content: draft-chapman-a2a-mls
+  type: Internet-Draft
 - content: draft-chapman-a2a-mls-01
   type: Internet-Draft
   primary: true
-- content: I-D.chapman-a2a-mls
-  type: IETF
-  scope: anchor
 docnumber: I-D.chapman-a2a-mls
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Luke
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Qwixl
+        - language: en
+          content: Qwixl
 version:
 - content: '01'
 language:
@@ -53,28 +54,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agent-to-agent protocols increasingly carry messages between autonomous
-    software agents acting on behalf of distinct principals, including across organisational
-    boundaries. Existing protocols in this space secure the transport hop and authenticate
-    the calling party, but do not provide message-level confidentiality, do not provide
-    non-repudiable evidence of what a counterparty asserted, and do not carry machine-enforceable
-    constraints on how a recipient may use the data conveyed. This document specifies
-    a profile that addresses those three gaps. It defines a Governed Object: a signed,
-    purpose-bound, expiring message envelope identified by a decentralised identifier.
-    It specifies how such objects are exchanged inside end-to-end encrypted sessions
-    established using the Messaging Layer Security (MLS) protocol [RFC9420], and how
-    the MLS credential is cryptographically bound to the sending agent's identity.
-    It defines the encapsulation of these constructs as an extension to an agent-to-agent
-    transport, using the Agent2Agent (A2A) protocol [A2A] as the reference binding,
-    and specifies mandatory receiver-side processing rules including replay rejection
-    and purpose enforcement.</p>"
-  format: text/html
+  content: |-
+    <p>Agent-to-agent protocols increasingly carry messages between
+       autonomous software agents acting on behalf of distinct principals,
+       including across organisational boundaries.  Existing protocols in
+       this space secure the transport hop and authenticate the calling
+       party, but do not provide message-level confidentiality, do not
+       provide non-repudiable evidence of what a counterparty asserted, and
+       do not carry machine-enforceable constraints on how a recipient may
+       use the data conveyed.
+
+       This document specifies a profile that addresses those three gaps.
+       It defines a Governed Object: a signed, purpose-bound, expiring
+       message envelope identified by a decentralised identifier.  It
+       specifies how such objects are exchanged inside end-to-end encrypted
+       sessions established using the Messaging Layer Security (MLS)
+       protocol [RFC9420], and how the MLS credential is cryptographically
+       bound to the sending agent's identity.  It defines the encapsulation
+       of these constructs as an extension to an agent-to-agent transport,
+       using the Agent2Agent (A2A) protocol [A2A] as the reference binding,
+       and specifies mandatory receiver-side processing rules including
+       replay rejection and purpose enforcement.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-chapman-a2a-mls-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chapman-a2a-mls-00
     docidentifier:
     - content: draft-chapman-a2a-mls-00
       type: Internet-Draft
@@ -83,7 +91,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-chapman-a2a-mls-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chapman-a2a-mls-02
     docidentifier:
     - content: draft-chapman-a2a-mls-02
       type: Internet-Draft
@@ -94,10 +104,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-chapman-a2a-mls-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

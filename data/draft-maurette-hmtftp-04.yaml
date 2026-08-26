@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'HMTFTP: HMAC-Derived TFTP with Optional AEAD Protection (v0.4)'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-04
 docidentifier:
+- content: draft-maurette-hmtftp
+  type: Internet-Draft
 - content: draft-maurette-hmtftp-04
   type: Internet-Draft
   primary: true
-- content: I-D.maurette-hmtftp
-  type: IETF
-  scope: anchor
 docnumber: I-D.maurette-hmtftp
 date:
 - type: published
@@ -37,7 +35,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IUT R&T Béthune
+        - language: en
+          content: IUT R&T Béthune
 version:
 - content: '04'
 language:
@@ -47,18 +46,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP
-    that adds TLV-based negotiation and an optional AEAD protection mode for DATA
-    payloads. This version (v0.4) requests IANA actions: a service name and UDP port
-    assignment (suggested: 6369/udp) and registries for TLV Types, OpCodes, and Ciphersuites.
-    Until IANA assigns a port, this document uses TBD1 as the default port value.</p>"
-  format: text/html
+  content: |-
+    <p>HMTFTP is a lightweight UDP file transfer protocol derived from TFTP
+       that adds TLV-based negotiation and an optional AEAD protection mode
+       for DATA payloads.  This version (v0.4) requests IANA actions: a
+       service name and UDP port assignment (suggested: 6369/udp) and
+       registries for TLV Types, OpCodes, and Ciphersuites.  Until IANA
+       assigns a port, this document uses TBD1 as the default port value.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-maurette-hmtftp-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-03
     docidentifier:
     - content: draft-maurette-hmtftp-03
       type: Internet-Draft
@@ -66,10 +68,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-maurette-hmtftp-06
-      format: text/plain
+      content: draft-maurette-hmtftp-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-05
     docidentifier:
-    - content: draft-maurette-hmtftp-06
+    - content: draft-maurette-hmtftp-05
       type: Internet-Draft
       primary: true
 series:
@@ -78,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-maurette-hmtftp-04
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Resource Orchestration for Multi-Domain Data Analytics
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-xiang-alto-exascale-network-optimization-03
 docidentifier:
+- content: draft-xiang-alto-exascale-network-optimization
+  type: Internet-Draft
 - content: draft-xiang-alto-exascale-network-optimization-03
   type: Internet-Draft
   primary: true
-- content: I-D.xiang-alto-exascale-network-optimization
-  type: IETF
-  scope: anchor
 docnumber: I-D.xiang-alto-exascale-network-optimization
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Qiao
       - language: en
+        script: Latn
         initial: Q
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tongji/Yale University
+        - language: en
+          content: Tongji/Yale University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Harvey
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,17 +68,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: California Institute of Technology
+        - language: en
+          content: California Institute of Technology
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Greg
       - language: en
+        script: Latn
         initial: G
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -89,15 +96,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Grotto Networking
+        - language: en
+          content: Grotto Networking
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Haizhou
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -111,15 +121,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tongji/Yale University
+        - language: en
+          content: Tongji/Yale University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Kai
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -133,15 +146,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tsinghua University
+        - language: en
+          content: Tsinghua University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Azher
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -155,15 +171,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: California Institute of Technology
+        - language: en
+          content: California Institute of Technology
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Justas
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -177,15 +196,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: California Institute of Technology
+        - language: en
+          content: California Institute of Technology
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jingxuan
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -199,15 +221,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tongji University
+        - language: en
+          content: Tongji University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: "Y"
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -221,7 +246,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Tongji/Yale University
+        - language: en
+          content: Tongji/Yale University
 version:
 - content: '03'
 language:
@@ -231,38 +257,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Data-intensive analytics is entering the era of multi-domain, geographically-distributed,
-    collaborative computing, where different organizations contribute various resources
-    to collaboratively collect, share and analyze extremely large amounts of data.
-    Examples of this paradigm include the Compact Muon Solenoid (CMS) and A Toroidal
-    LHC ApparatuS (ATLAS) experiments of the Large Hadron Collider (LHC) program.
-    Massive datasets continue to be acquired, simulated, processed and analyzed by
-    globally distributed science networks in these collaborations. Applications that
-    manage and analyze such massive data volumes can benefit substantially from the
-    information about networking, computing and storage resources from each member's
-    site, and more directly from network-resident services that optimize and load
-    balance resource usage among multiple data transfers and analytics requests, and
-    achieve a better utilization of multiple resources in clusters. The Application-Layer
-    Traffic Optimization (ALTO) protocol can provide via extensions the network information
-    about different clusters/sites, to both users and proactive network management
-    services where applicable, with the goal of improving both application performance
-    and network resource utilization. In this document, we propose that it is feasible
-    to use existing ALTO services to provides not only network information, but also
-    information about computation and storage resources in data analytics networks.
-    We introduce a uniform resource orchestration framework (Unicorn), which achieves
-    an efficient multi-resource allocation to support low-latency dataset transfer
-    and data intensive analytics for collaborative computing. It collects cluster
-    information from multiple ALTO services utilizing topology extensions and leverages
-    emerging SDN control capabilities to orchestrate the resource allocation for dataset
-    transfers and analytics tasks, leading to improved transfer and analytics latency
-    as well as more efficient utilization of multi-resources in sites.</p>"
-  format: text/html
+  content: |-
+    <p>Data-intensive analytics is entering the era of multi-domain,
+       geographically-distributed, collaborative computing, where different
+       organizations contribute various resources to collaboratively
+       collect, share and analyze extremely large amounts of data.  Examples
+       of this paradigm include the Compact Muon Solenoid (CMS) and A
+       Toroidal LHC ApparatuS (ATLAS) experiments of the Large Hadron
+       Collider (LHC) program.  Massive datasets continue to be acquired,
+       simulated, processed and analyzed by globally distributed science
+       networks in these collaborations.  Applications that manage and
+       analyze such massive data volumes can benefit substantially from the
+       information about networking, computing and storage resources from
+       each member's site, and more directly from network-resident services
+       that optimize and load balance resource usage among multiple data
+       transfers and analytics requests, and achieve a better utilization of
+       multiple resources in clusters.
+
+       The Application-Layer Traffic Optimization (ALTO) protocol can
+       provide via extensions the network information about different
+       clusters/sites, to both users and proactive network management
+       services where applicable, with the goal of improving both
+       application performance and network resource utilization.  In this
+       document, we propose that it is feasible to use existing ALTO
+       services to provides not only network information, but also
+       information about computation and storage resources in data analytics
+       networks.  We introduce a uniform resource orchestration framework
+       (Unicorn), which achieves an efficient multi-resource allocation to
+       support low-latency dataset transfer and data intensive analytics for
+       collaborative computing.  It collects cluster information from
+       multiple ALTO services utilizing topology extensions and leverages
+       emerging SDN control capabilities to orchestrate the resource
+       allocation for dataset transfers and analytics tasks, leading to
+       improved transfer and analytics latency as well as more efficient
+       utilization of multi-resources in sites.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-xiang-alto-exascale-network-optimization-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xiang-alto-exascale-network-optimization-02
     docidentifier:
     - content: draft-xiang-alto-exascale-network-optimization-02
       type: Internet-Draft
@@ -273,10 +309,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-xiang-alto-exascale-network-optimization-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

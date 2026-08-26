@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Let 'localhost' be localhost.
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-let-localhost-be-localhost-02
 docidentifier:
+- content: draft-ietf-dnsop-let-localhost-be-localhost
+  type: Internet-Draft
 - content: draft-ietf-dnsop-let-localhost-be-localhost-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-dnsop-let-localhost-be-localhost
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-dnsop-let-localhost-be-localhost
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google, Inc
+        - language: en
+          content: Google, Inc
 version:
 - content: '02'
 language:
@@ -53,25 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document updates the treatment of the special-use domain name "localhost"
-    as specified in RFC6761, Section 6.3, with the goal of ensuring that it can be
-    safely relied upon as a name for the local host's loopback interface. To that
-    end, stub resolvers are required to resolve localhost names to loopback addresses.
-    Recursive DNS servers are required to return "NXDOMAIN" when queried for localhost
-    names, making non-conformant stub resolvers more likely to fail and produce problem
-    reports that result in updates. Together, these requirements would allow applications
-    and specifications to join regular users in drawing the common-sense conclusions
-    that "localhost" means "localhost", and doesn't resolve to somewhere else on the
-    network.</p>
-  format: text/html
+  content: |-
+    <p>This document updates the treatment of the special-use domain name
+       "localhost" as specified in RFC6761, Section 6.3, with the goal of
+       ensuring that it can be safely relied upon as a name for the local
+       host's loopback interface.  To that end, stub resolvers are required
+       to resolve localhost names to loopback addresses.  Recursive DNS
+       servers are required to return "NXDOMAIN" when queried for localhost
+       names, making non-conformant stub resolvers more likely to fail and
+       produce problem reports that result in updates.
+
+       Together, these requirements would allow applications and
+       specifications to join regular users in drawing the common-sense
+       conclusions that "localhost" means "localhost", and doesn't resolve
+       to somewhere else on the network.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-dnsop-let-localhost-be-localhost-00
-      format: text/plain
+      content: draft-ietf-dnsop-let-localhost-be-localhost-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-let-localhost-be-localhost-01
     docidentifier:
-    - content: draft-ietf-dnsop-let-localhost-be-localhost-00
+    - content: draft-ietf-dnsop-let-localhost-be-localhost-01
       type: Internet-Draft
       primary: true
 series:
@@ -80,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-dnsop-let-localhost-be-localhost-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

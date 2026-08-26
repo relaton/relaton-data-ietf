@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Record Header Extensions for TLS and DTLS
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-fossati-tls-ext-header-00
 docidentifier:
+- content: draft-fossati-tls-ext-header
+  type: Internet-Draft
 - content: draft-fossati-tls-ext-header-00
   type: Internet-Draft
   primary: true
-- content: I-D.fossati-tls-ext-header
-  type: IETF
-  scope: anchor
 docnumber: I-D.fossati-tls-ext-header
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia
+        - language: en
+          content: Nokia
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Nikos
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: RedHat
+        - language: en
+          content: RedHat
 version:
 - content: '00'
 language:
@@ -75,21 +79,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document proposes a mechanism to extend the record header in TLS
-    and DTLS. To that aim, the (D)TLS header is modified as follows: the length field
-    is trimmed to 15 bits, and the length''s top bit is given the "record header extension
-    indicator" semantics, allowing a sender to signal that one or more record header
-    extensions have been added to this record. We define the generic format of a record
-    header extension and the general rules associated with its handling. Any details
-    regarding syntax, semantics and negotiation of a specific record header extension,
-    are left to future documents.</p>'
-  format: text/html
+  content: |-
+    <p>This document proposes a mechanism to extend the record header in TLS
+       and DTLS.  To that aim, the (D)TLS header is modified as follows: the
+       length field is trimmed to 15 bits, and the length's top bit is given
+       the "record header extension indicator" semantics, allowing a sender
+       to signal that one or more record header extensions have been added
+       to this record.  We define the generic format of a record header
+       extension and the general rules associated with its handling.  Any
+       details regarding syntax, semantics and negotiation of a specific
+       record header extension, are left to future documents.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-fossati-tls-ext-header-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-fossati-tls-ext-header-01
     docidentifier:
     - content: draft-fossati-tls-ext-header-01
       type: Internet-Draft
@@ -100,10 +107,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-fossati-tls-ext-header-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

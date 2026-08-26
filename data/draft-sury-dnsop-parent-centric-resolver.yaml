@@ -1,11 +1,12 @@
 ---
 id: draftsurydnsopparentcentricresolver
 schema_version: v1.5.6
+formattedref:
+  content: draft-sury-dnsop-parent-centric-resolver
 title:
 - language: en
   script: Latn
   content: Parent-Centric Delegation Handling in DNS Resolvers
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sury-dnsop-parent-centric-resolver-03
@@ -19,24 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document specifies an optional parent-centric behavioral model
-    for DNS recursive resolvers, in which delegation decisions are always based on
-    the NS RRset (or DELEG RRset) received from the parent side of a zone cut and
-    are never overwritten by child-side NS data. The parent-centric model eliminates
-    the "two sources of truth" problem inherent in the current DNS delegation design,
-    closes the Ghost Domain and Phoenix Domain attack vectors, provides deterministic
-    behavior in the presence of parent/child NS mismatches, and enables resolvers
-    to safely accept sibling (out-of-bailiwick) glue by scoping delegation information
-    to individual zone cuts. It also provides the behavioral foundation required for
-    deployment of the DELEG extensible delegation mechanism. This document updates
-    [RFC1034] and [RFC1035].</p>
-  format: text/html
+  content: |-
+    <p>This document specifies an optional parent-centric behavioral model
+       for DNS recursive resolvers, in which delegation decisions are always
+       based on the NS RRset (or DELEG RRset) received from the parent side
+       of a zone cut and are never overwritten by child-side NS data.
+
+       The parent-centric model eliminates the "two sources of truth"
+       problem inherent in the current DNS delegation design, closes the
+       Ghost Domain and Phoenix Domain attack vectors, provides
+       deterministic behavior in the presence of parent/child NS mismatches,
+       and enables resolvers to safely accept sibling (out-of-bailiwick)
+       glue by scoping delegation information to individual zone cuts.  It
+       also provides the behavioral foundation required for deployment of
+       the DELEG extensible delegation mechanism.
+
+       This document updates [RFC1034] and [RFC1035].</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-sury-dnsop-parent-centric-resolver-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sury-dnsop-parent-centric-resolver-00
     docidentifier:
     - content: draft-sury-dnsop-parent-centric-resolver-00
       type: Internet-Draft
@@ -45,7 +52,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sury-dnsop-parent-centric-resolver-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sury-dnsop-parent-centric-resolver-01
     docidentifier:
     - content: draft-sury-dnsop-parent-centric-resolver-01
       type: Internet-Draft
@@ -54,7 +63,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sury-dnsop-parent-centric-resolver-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sury-dnsop-parent-centric-resolver-02
     docidentifier:
     - content: draft-sury-dnsop-parent-centric-resolver-02
       type: Internet-Draft
@@ -63,7 +74,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-sury-dnsop-parent-centric-resolver-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sury-dnsop-parent-centric-resolver-03
     docidentifier:
     - content: draft-sury-dnsop-parent-centric-resolver-03
       type: Internet-Draft
@@ -72,4 +85,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

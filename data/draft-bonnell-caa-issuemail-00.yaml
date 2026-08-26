@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Certification Authority Authorization (CAA) Processing for Email Addresses
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bonnell-caa-issuemail-00
 docidentifier:
+- content: draft-bonnell-caa-issuemail
+  type: Internet-Draft
 - content: draft-bonnell-caa-issuemail-00
   type: Internet-Draft
   primary: true
-- content: I-D.bonnell-caa-issuemail
-  type: IETF
-  scope: anchor
 docnumber: I-D.bonnell-caa-issuemail
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Corey
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: DigiCert, Inc.
+        - language: en
+          content: DigiCert, Inc.
 version:
 - content: '00'
 language:
@@ -53,21 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Certificate Authority Authorization (CAA) DNS resource record type
-    provides a mechanism for domains to express the allowed set of Certificate Authorities
-    that may issue certificates for the domain. The core CAA specification ([RFC8659])
-    solely defines Property Tags that restrict the issuance of certificates that certify
-    domain names; it does not define a mechanism for domains to restrict the issuance
-    of certificates that include email addresses. This specification defines a Property
-    Tag that grants authorization to Certificate Authorities to issue certificates
-    which certify email addresses.</p>"
-  format: text/html
+  content: |-
+    <p>The Certificate Authority Authorization (CAA) DNS resource record
+       type provides a mechanism for domains to express the allowed set of
+       Certificate Authorities that may issue certificates for the domain.
+       The core CAA specification ([RFC8659]) solely defines Property Tags
+       that restrict the issuance of certificates that certify domain names;
+       it does not define a mechanism for domains to restrict the issuance
+       of certificates that include email addresses.  This specification
+       defines a Property Tag that grants authorization to Certificate
+       Authorities to issue certificates which certify email addresses.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bonnell-caa-issuemail-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bonnell-caa-issuemail-01
     docidentifier:
     - content: draft-bonnell-caa-issuemail-01
       type: Internet-Draft
@@ -78,10 +82,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bonnell-caa-issuemail-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: WIMSE Token Exchange and Translation Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-saxe-wimse-token-exchange-and-translation-00
 docidentifier:
+- content: draft-saxe-wimse-token-exchange-and-translation
+  type: Internet-Draft
 - content: draft-saxe-wimse-token-exchange-and-translation-00
   type: Internet-Draft
   primary: true
-- content: I-D.saxe-wimse-token-exchange-and-translation
-  type: IETF
-  scope: anchor
 docnumber: I-D.saxe-wimse-token-exchange-and-translation
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dean
       - language: en
+        script: Latn
         initial: D
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -48,8 +49,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: George
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -63,15 +66,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Capital One
+        - language: en
+          content: Capital One
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrii
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -91,30 +97,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The specification defines the processes of token exchange and token
-    translation for workloads. Token exchange is introduced in [RFC8693], allowing
-    the exchange of access tokens, OpenID Connect ID Tokens, and SAML assertions for
-    new OAuth access tokens. However, for workloads, there exist a broad array of
-    input and output token types which must be considered beyond the input types supported
-    by [RFC8693]. These token types include, but are not limited to, SPIFFE SVIDs,
-    x.509 certificates, Kerberos service tickets, Amazon sigv4A, macaroons, &lt;...&gt;.
-    Further, these tokens may be encoded in formats including JWT OAuth 2.0 Acesss
-    Tokens [RFC9068], CWT [RFC8392], and protocol buffers (protobufs). Given the variety
-    and complexity of input and output token types and encoding, a strict token exchange
-    that maintains all of the contextual information from the input token to the output
-    token may not be possible. We define these non-RFC8693 use cases with potentially
-    lossy conversions as "token translation" (e.g. information may be lost in translation).
-    In this document we describe a workload profile for token exchange, using the
-    mechanisms in [RFC8693], and a new set of translations between arbitrary token
-    types. Additionally, we define mechanisms to enrich tokens during translation
-    to support the use cases defined in (todo: add link to use cases doc).</p>'
-  format: text/html
+  content: |-
+    <p>The specification defines the processes of token exchange and token
+       translation for workloads.  Token exchange is introduced in
+       [RFC8693], allowing the exchange of access tokens, OpenID Connect ID
+       Tokens, and SAML assertions for new OAuth access tokens.  However,
+       for workloads, there exist a broad array of input and output token
+       types which must be considered beyond the input types supported by
+       [RFC8693].  These token types include, but are not limited to, SPIFFE
+       SVIDs, x.509 certificates, Kerberos service tickets, Amazon sigv4A,
+       macaroons, &lt;...&gt;.  Further, these tokens may be encoded in formats
+       including JWT OAuth 2.0 Acesss Tokens [RFC9068], CWT [RFC8392], and
+       protocol buffers (protobufs).  Given the variety and complexity of
+       input and output token types and encoding, a strict token exchange
+       that maintains all of the contextual information from the input token
+       to the output token may not be possible.  We define these non-RFC8693
+       use cases with potentially lossy conversions as "token translation"
+       (e.g. information may be lost in translation).  In this document we
+       describe a workload profile for token exchange, using the mechanisms
+       in [RFC8693], and a new set of translations between arbitrary token
+       types.  Additionally, we define mechanisms to enrich tokens during
+       translation to support the use cases defined in (todo: add link to
+       use cases doc).</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-saxe-wimse-token-exchange-and-translation-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saxe-wimse-token-exchange-and-translation-01
     docidentifier:
     - content: draft-saxe-wimse-token-exchange-and-translation-01
       type: Internet-Draft
@@ -125,10 +137,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-saxe-wimse-token-exchange-and-translation-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

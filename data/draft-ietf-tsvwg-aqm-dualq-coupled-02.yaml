@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: DualQ Coupled AQMs for Low Latency, Low Loss and Scalable Throughput (L4S)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-02
 docidentifier:
+- content: draft-ietf-tsvwg-aqm-dualq-coupled
+  type: Internet-Draft
 - content: draft-ietf-tsvwg-aqm-dualq-coupled-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-tsvwg-aqm-dualq-coupled
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-tsvwg-aqm-dualq-coupled
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Koen
       - language: en
+        script: Latn
         initial: K
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia Bell Labs
+        - language: en
+          content: Nokia Bell Labs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CableLabs
+        - language: en
+          content: CableLabs
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Olga
       - language: en
+        script: Latn
         initial: O
       formatted_initials:
         language: en
@@ -87,17 +93,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Simula Research Lab
+        - language: en
+          content: Simula Research Lab
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ing
       - language: en
+        script: Latn
         initial: I
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -111,7 +121,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Nokia Bell Labs
+        - language: en
+          content: Nokia Bell Labs
 version:
 - content: '02'
 language:
@@ -121,28 +132,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Data Centre TCP (DCTCP) was designed to provide predictably low queuing
-    latency, near-zero loss, and throughput scalability using explicit congestion
-    notification (ECN) and an extremely simple marking behaviour on switches. However,
-    DCTCP does not co-exist with existing TCP traffic---DCTCP is so aggressive that
-    existing TCP algorithms approach starvation. So, until now, DCTCP could only be
-    deployed where a clean-slate environment could be arranged, such as in private
-    data centres. This specification defines `DualQ Coupled Active Queue Management
-    (AQM)' to allow scalable congestion controls like DCTCP to safely co-exist with
-    classic Internet traffic. The Coupled AQM ensures that a flow runs at about the
-    same rate whether it uses DCTCP or TCP Reno/Cubic, but without inspecting transport
-    layer flow identifiers. When tested in a residential broadband setting, DCTCP
-    achieved sub-millisecond average queuing delay and zero congestion loss under
-    a wide range of mixes of DCTCP and `Classic' broadband Internet traffic, without
-    compromising the performance of the Classic traffic. The solution also reduces
-    network complexity and eliminates network configuration.</p>"
-  format: text/html
+  content: |-
+    <p>Data Centre TCP (DCTCP) was designed to provide predictably low
+       queuing latency, near-zero loss, and throughput scalability using
+       explicit congestion notification (ECN) and an extremely simple
+       marking behaviour on switches.  However, DCTCP does not co-exist with
+       existing TCP traffic---DCTCP is so aggressive that existing TCP
+       algorithms approach starvation.  So, until now, DCTCP could only be
+       deployed where a clean-slate environment could be arranged, such as
+       in private data centres.  This specification defines `DualQ Coupled
+       Active Queue Management (AQM)' to allow scalable congestion controls
+       like DCTCP to safely co-exist with classic Internet traffic.  The
+       Coupled AQM ensures that a flow runs at about the same rate whether
+       it uses DCTCP or TCP Reno/Cubic, but without inspecting transport
+       layer flow identifiers.  When tested in a residential broadband
+       setting, DCTCP achieved sub-millisecond average queuing delay and
+       zero congestion loss under a wide range of mixes of DCTCP and
+       `Classic' broadband Internet traffic, without compromising the
+       performance of the Classic traffic.  The solution also reduces
+       network complexity and eliminates network configuration.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-tsvwg-aqm-dualq-coupled-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-01
     docidentifier:
     - content: draft-ietf-tsvwg-aqm-dualq-coupled-01
       type: Internet-Draft
@@ -150,10 +166,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-tsvwg-aqm-dualq-coupled-07
-      format: text/plain
+      content: draft-ietf-tsvwg-aqm-dualq-coupled-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-aqm-dualq-coupled-03
     docidentifier:
-    - content: draft-ietf-tsvwg-aqm-dualq-coupled-07
+    - content: draft-ietf-tsvwg-aqm-dualq-coupled-03
       type: Internet-Draft
       primary: true
 series:
@@ -162,10 +180,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-tsvwg-aqm-dualq-coupled-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

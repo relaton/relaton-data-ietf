@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Plasma Service Cryptographic Message Syntax (CMS) Processing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-schaad-plasma-cms-02
 docidentifier:
+- content: draft-schaad-plasma-cms
+  type: Internet-Draft
 - content: draft-schaad-plasma-cms-02
   type: Internet-Draft
   primary: true
-- content: I-D.schaad-plasma-cms
-  type: IETF
-  scope: anchor
 docnumber: I-D.schaad-plasma-cms
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jim
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -49,38 +49,49 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Secure MIME (S/MIME) defined a method of placing security labels on
-    a Cryptographic Message Syntax (CMS) object. These labels are placed as part of
-    the data signed and validated by the parties. This means that the message content
-    is visible to the recipient prior to the label enforcement. A new model for enforcement
-    of policy using a third party is described in RFC TBD [I.D-draft-freeman-plasma-requirements].
-    This is the Policy Augmented S/MIME (PLASMA) system. This document provides the
-    details needed to implement the new Plasma model in the CMS infrastructure. An
-    additional benefit of using the Plasma module is that the server,based on policy,
-    manages who has access to the message and how the keys are protected. The document
-    details how the client encryption and decryption processes are performed, defines
-    how to construct the CMS recipient info structure, a new content to hold the data
-    required for the Plasma server to store the keys and policy information. The document
-    does not cover the protocol between the client and the Plasma policy enforcement
-    server. One example of the client/server protocol can be found in RFC TBD [plasma-token].</p>"
-  format: text/html
+  content: |-
+    <p>Secure MIME (S/MIME) defined a method of placing security labels on a
+       Cryptographic Message Syntax (CMS) object.  These labels are placed
+       as part of the data signed and validated by the parties.  This means
+       that the message content is visible to the recipient prior to the
+       label enforcement.  A new model for enforcement of policy using a
+       third party is described in RFC TBD
+       [I.D-draft-freeman-plasma-requirements].  This is the Policy
+       Augmented S/MIME (PLASMA) system.  This document provides the details
+       needed to implement the new Plasma model in the CMS infrastructure.
+
+       An additional benefit of using the Plasma module is that the
+       server,based on policy, manages who has access to the message and how
+       the keys are protected.
+
+       The document details how the client encryption and decryption
+       processes are performed, defines how to construct the CMS recipient
+       info structure, a new content to hold the data required for the
+       Plasma server to store the keys and policy information.  The document
+       does not cover the protocol between the client and the Plasma policy
+       enforcement server.  One example of the client/server protocol can be
+       found in RFC TBD [plasma-token].</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-schaad-plasma-cms-00
-      format: text/plain
+      content: draft-schaad-plasma-cms-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schaad-plasma-cms-01
     docidentifier:
-    - content: draft-schaad-plasma-cms-00
+    - content: draft-schaad-plasma-cms-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-schaad-plasma-cms-05
-      format: text/plain
+      content: draft-schaad-plasma-cms-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schaad-plasma-cms-03
     docidentifier:
-    - content: draft-schaad-plasma-cms-05
+    - content: draft-schaad-plasma-cms-03
       type: Internet-Draft
       primary: true
 series:
@@ -89,10 +100,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-schaad-plasma-cms-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

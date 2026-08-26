@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Laminar TCP and the case for refactoring TCP congestion control
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mathis-tcpm-tcp-laminar-00
 docidentifier:
+- content: draft-mathis-tcpm-tcp-laminar
+  type: Internet-Draft
 - content: draft-mathis-tcpm-tcp-laminar-00
   type: Internet-Draft
   primary: true
-- content: I-D.mathis-tcpm-tcp-laminar
-  type: IETF
-  scope: anchor
 docnumber: I-D.mathis-tcpm-tcp-laminar
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matt
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -49,28 +49,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The primary state variables used by all TCP congestion control algorithms,
-    cwnd and ssthresh are heavily overloaded, carrying different semantics in different
-    states. This leads to excess implementation complexity and poorly defined behaviors
-    under some combinations of events, such as loss recovery during cwnd validation.
-    We propose a new framework for TCP congestion control, and to recast current standard
-    algorithms to use new state variables. This new framework will not generally change
-    the behavior of any of the primary congestion control algorithms when invoked
-    in isolation but will to permit new algorithms with better behaviors in many corner
-    cases, such as when two distinct primary algorithms are invoked concurrently.
-    It will also foster the creation of new algorithms to address some events that
-    are poorly treated by today's standards. For the vast majority of traditional
-    algorithms the transformation to the new state variables is completely straightforward.
-    However, the resulting implementation will technically be in violation of all
-    existing TCP standards, even if it is fully compliant with their principles and
-    intent.</p>"
-  format: text/html
+  content: |-
+    <p>The primary state variables used by all TCP congestion control
+       algorithms, cwnd and ssthresh are heavily overloaded, carrying
+       different semantics in different states.  This leads to excess
+       implementation complexity and poorly defined behaviors under some
+       combinations of events, such as loss recovery during cwnd validation.
+       We propose a new framework for TCP congestion control, and to recast
+       current standard algorithms to use new state variables.  This new
+       framework will not generally change the behavior of any of the
+       primary congestion control algorithms when invoked in isolation but
+       will to permit new algorithms with better behaviors in many corner
+       cases, such as when two distinct primary algorithms are invoked
+       concurrently.  It will also foster the creation of new algorithms to
+       address some events that are poorly treated by today's standards.
+       For the vast majority of traditional algorithms the transformation to
+       the new state variables is completely straightforward.  However, the
+       resulting implementation will technically be in violation of all
+       existing TCP standards, even if it is fully compliant with their
+       principles and intent.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-mathis-tcpm-tcp-laminar-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mathis-tcpm-tcp-laminar-01
     docidentifier:
     - content: draft-mathis-tcpm-tcp-laminar-01
       type: Internet-Draft
@@ -81,10 +86,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mathis-tcpm-tcp-laminar-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

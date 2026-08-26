@@ -1,11 +1,12 @@
 ---
 id: draftmglt6loaesimplicitiv
 schema_version: v1.5.6
+formattedref:
+  content: draft-mglt-6lo-aes-implicit-iv
 title:
 - language: en
   script: Latn
   content: Implicit IV for AES-CBC, AES-CTR, AES-CCM and AES-GCM
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mglt-6lo-aes-implicit-iv-01
@@ -19,20 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IPsec ESP with AES-CBC, AES-CTR, AES-CCM or AES-GCM sends an IV in
-    each IP packet, which represents 8 or 16 additional bytes. In some context, such
-    as IoT, the cost of sending bytes over computing these bytes is generally in favor
-    of the computation. As a result, it would be better to compute the IV on each
-    party then to send it. The document describes how to the IV can be generated instead
-    of being sent. This document limits the IV generation for AES-CBC, AES- CTR, AES-CCM
-    and AES-GCM but can be used for additional cryptographic mode and suites.</p>"
-  format: text/html
+  content: |-
+    <p>IPsec ESP with AES-CBC, AES-CTR, AES-CCM or AES-GCM sends an IV in
+       each IP packet, which represents 8 or 16 additional bytes.
+
+       In some context, such as IoT, the cost of sending bytes over
+       computing these bytes is generally in favor of the computation.  As a
+       result, it would be better to compute the IV on each party then to
+       send it.
+
+       The document describes how to the IV can be generated instead of
+       being sent.  This document limits the IV generation for AES-CBC, AES-
+       CTR, AES-CCM and AES-GCM but can be used for additional cryptographic
+       mode and suites.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mglt-6lo-aes-implicit-iv-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mglt-6lo-aes-implicit-iv-00
     docidentifier:
     - content: draft-mglt-6lo-aes-implicit-iv-00
       type: Internet-Draft
@@ -41,7 +49,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mglt-6lo-aes-implicit-iv-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mglt-6lo-aes-implicit-iv-01
     docidentifier:
     - content: draft-mglt-6lo-aes-implicit-iv-01
       type: Internet-Draft
@@ -50,4 +60,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

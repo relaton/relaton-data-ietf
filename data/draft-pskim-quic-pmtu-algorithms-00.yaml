@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Path MTU Algorithms for QUIC
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-pskim-quic-pmtu-algorithms-00
 docidentifier:
+- content: draft-pskim-quic-pmtu-algorithms
+  type: Internet-Draft
 - content: draft-pskim-quic-pmtu-algorithms-00
   type: Internet-Draft
   primary: true
-- content: I-D.pskim-quic-pmtu-algorithms
-  type: IETF
-  scope: anchor
 docnumber: I-D.pskim-quic-pmtu-algorithms
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Pyung
       - language: en
+        script: Latn
         initial: P
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: TU Korea
+        - language: en
+          content: TU Korea
 version:
 - content: '00'
 language:
@@ -55,28 +57,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft consider a couple of algorithms for Path MTU (PMTU) in QUIC
-    to discovery optimal PMTU and resolve PMTU black hole problem. Fistly, a passive
-    probing approach is adopted to discover the PMTU. The process of discovering the
-    PMTU is not performed separately, but is performed simultaneously in the actual
-    application data communication. That is, the actual application data is allowed
-    to be carried in the process of discovering the PMTU. A probe packet is defined
-    newly using 1-RTT packet which includes actual application data as well as a short
-    packet header and a PING_EXT frame. Until the optimal PMTU is discovered, the
-    size of the probe packet is changed according to the size of the PMTU candidate.
-    Secondly, a PMTU black hole problem in secure and reliable transport protocol
-    is discussed and a possible solution can be suggested from existing researches.</p>"
-  format: text/html
+  content: |-
+    <p>This draft consider a couple of algorithms for Path MTU (PMTU) in
+       QUIC to discovery optimal PMTU and resolve PMTU black hole problem.
+       Fistly, a passive probing approach is adopted to discover the PMTU.
+       The process of discovering the PMTU is not performed separately, but
+       is performed simultaneously in the actual application data
+       communication. That is, the actual application data is allowed to be
+       carried in the process of discovering the PMTU. A probe packet is
+       defined newly using 1-RTT packet which includes actual application
+       data as well as a short packet header and a PING_EXT frame. Until the
+       optimal PMTU is discovered, the size of the probe packet is changed
+       according to the size of the PMTU candidate. Secondly, a PMTU black
+       hole problem in secure and reliable transport protocol is discussed
+       and a possible solution can be suggested from existing researches.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-pskim-quic-pmtu-algorithms-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

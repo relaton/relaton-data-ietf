@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IS-IS Optimal Distributed Flooding for Dense Topologies
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-distoptflood-02
 docidentifier:
+- content: draft-ietf-lsr-distoptflood
+  type: Internet-Draft
 - content: draft-ietf-lsr-distoptflood-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-lsr-distoptflood
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-lsr-distoptflood
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Russ
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Akamai
+        - language: en
+          content: Akamai
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shraddha
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tony
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper Networks
+        - language: en
+          content: Juniper Networks
 version:
 - content: '02'
 language:
@@ -97,38 +104,47 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>In dense topologies (such as data center fabrics based on the Clos and
-    butterfly topologies, though not limited to those exclusively), IGP flooding mechanisms
-    designed originally for sparse topologies can "overflood," or in other words generate
-    too many identical copies of topology and reachability information arriving at
-    a given node from other devices. This normally results in slower convergence times
-    and higher resource utilization to process and discard the superfluous copies.
-    The modifications to the flooding mechanism in the Intermediate System to Intermediate
-    System (IS-IS) link state protocol described in this document reduce resource
-    utilization significantly, while increaseing convergence performance in dense
-    topologies. Beside reducing the extraneous copies it uses the dense topologies
-    to "load-balance" flooding across different possible paths in the network to prevent
-    build up of flooding hot-spots. Note that a Clos fabric is used as the primary
-    example of a dense flooding topology throughout this document. However, the flooding
-    optimizations described in this document apply to any arbitrary topology.</p>
-  format: text/html
+  content: |-
+    <p>In dense topologies (such as data center fabrics based on the Clos
+       and butterfly topologies, though not limited to those exclusively),
+       IGP flooding mechanisms designed originally for sparse topologies can
+       "overflood," or in other words generate too many identical copies of
+       topology and reachability information arriving at a given node from
+       other devices.  This normally results in slower convergence times and
+       higher resource utilization to process and discard the superfluous
+       copies.  The modifications to the flooding mechanism in the
+       Intermediate System to Intermediate System (IS-IS) link state
+       protocol described in this document reduce resource utilization
+       significantly, while increaseing convergence performance in dense
+       topologies.  Beside reducing the extraneous copies it uses the dense
+       topologies to "load-balance" flooding across different possible paths
+       in the network to prevent build up of flooding hot-spots.
+
+       Note that a Clos fabric is used as the primary example of a dense
+       flooding topology throughout this document.  However, the flooding
+       optimizations described in this document apply to any arbitrary
+       topology.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-lsr-distoptflood-00
-      format: text/plain
+      content: draft-ietf-lsr-distoptflood-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-distoptflood-01
     docidentifier:
-    - content: draft-ietf-lsr-distoptflood-00
+    - content: draft-ietf-lsr-distoptflood-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-lsr-distoptflood-11
-      format: text/plain
+      content: draft-ietf-lsr-distoptflood-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lsr-distoptflood-03
     docidentifier:
-    - content: draft-ietf-lsr-distoptflood-11
+    - content: draft-ietf-lsr-distoptflood-03
       type: Internet-Draft
       primary: true
 series:
@@ -137,10 +153,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-lsr-distoptflood-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

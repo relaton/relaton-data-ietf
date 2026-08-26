@@ -1,11 +1,12 @@
 ---
 id: drafttavakolihydro
 schema_version: v1.5.6
+formattedref:
+  content: draft-tavakoli-hydro
 title:
 - language: en
   script: Latn
   content: 'HYDRO: A Hybrid Routing Protocol for Lossy and Low Power Networks'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-tavakoli-hydro-01
@@ -19,24 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>HYDRO is a hybrid routing protocol for Lossy and Low power Networks
-    (L2Ns) that embraces centralized and distributed routing mechanisms. Through the
-    use of standard ICMP Route Advertisements and Route Solicitations, Node Routers
-    build Default Routes to Border Routers. These routes, which maintain multiple
-    options per each Node Router when available, are maintained through data-driven
-    link estimation. Node Routers periodically report a high-quality subset of their
-    Default Route Table to Border Routers, which then form a global view of the topology.
-    When a Node Router attempts to route to another Node Router in the network, if
-    no matching entry exists in the Node Router's Flow Table, it forwards the packet
-    to a Border Router, which then installs the correct Flow Table Entries in the
-    network to enable more efficient subsequent routing.</p>"
-  format: text/html
+  content: |-
+    <p>HYDRO is a hybrid routing protocol for Lossy and Low power Networks
+    (L2Ns) that embraces centralized and distributed routing mechanisms.
+    Through the use of standard ICMP Route Advertisements and Route
+    Solicitations, Node Routers build Default Routes to Border Routers.
+    These routes, which maintain multiple options per each Node Router
+    when available, are maintained through data-driven link estimation.
+    Node Routers periodically report a high-quality subset of their
+    Default Route Table to Border Routers, which then form a global view
+    of the topology.  When a Node Router attempts to route to another
+    Node Router in the network, if no matching entry exists in the Node
+    Router's Flow Table, it forwards the packet to a Border Router, which
+    then installs the correct Flow Table Entries in the network to enable
+    more efficient subsequent routing.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-tavakoli-hydro-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tavakoli-hydro-01
     docidentifier:
     - content: draft-tavakoli-hydro-01
       type: Internet-Draft
@@ -45,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

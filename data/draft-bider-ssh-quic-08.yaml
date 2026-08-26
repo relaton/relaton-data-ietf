@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: QUIC-based UDP Transport for Secure Shell (SSH)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bider-ssh-quic-08
 docidentifier:
+- content: draft-bider-ssh-quic
+  type: Internet-Draft
 - content: draft-bider-ssh-quic-08
   type: Internet-Draft
   primary: true
-- content: I-D.bider-ssh-quic
-  type: IETF
-  scope: anchor
 docnumber: I-D.bider-ssh-quic
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: denis
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bitvise Limited
+        - language: en
+          content: Bitvise Limited
 version:
 - content: '08'
 language:
@@ -53,32 +54,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Secure Shell protocol (SSH) [RFC4251] is widely used for purposes
-    including secure remote administration, file transfer using SFTP and SCP, and
-    encrypted tunneling of TCP connections. Because it is based on TCP, SSH suffers
-    similar problems as motivate the HTTP protocol to transition to UDP-based QUIC
-    [QUIC]. These include: unauthenticated network intermediaries can trivially disconnect
-    SSH sessions; SSH connections are lost when mobile clients change IP addresses;
-    performance limitations in OS-based TCP stacks; many round-trips to establish
-    a connection; duplicate flow control on the level of the connection as well as
-    channels. This memo specifies SSH key exchange over UDP and leverages QUIC to
-    provide a UDP-based transport.</p>"
-  format: text/html
+  content: |-
+    <p>The Secure Shell protocol (SSH) [RFC4251] is widely used for purposes
+       including secure remote administration, file transfer using SFTP and
+       SCP, and encrypted tunneling of TCP connections.  Because it is based
+       on TCP, SSH suffers similar problems as motivate the HTTP protocol to
+       transition to UDP-based QUIC [QUIC].  These include: unauthenticated
+       network intermediaries can trivially disconnect SSH sessions; SSH
+       connections are lost when mobile clients change IP addresses;
+       performance limitations in OS-based TCP stacks; many round-trips to
+       establish a connection; duplicate flow control on the level of the
+       connection as well as channels.  This memo specifies SSH key exchange
+       over UDP and leverages QUIC to provide a UDP-based transport.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-bider-ssh-quic-02
-      format: text/plain
+      content: draft-bider-ssh-quic-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bider-ssh-quic-07
     docidentifier:
-    - content: draft-bider-ssh-quic-02
+    - content: draft-bider-ssh-quic-07
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-bider-ssh-quic-09
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bider-ssh-quic-09
     docidentifier:
     - content: draft-bider-ssh-quic-09
       type: Internet-Draft
@@ -89,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bider-ssh-quic-08
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

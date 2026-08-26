@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Crankback Routing Extensions for CR-LDP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-fujita-mpls-crldp-crankback-01
 docidentifier:
+- content: draft-fujita-mpls-crldp-crankback
+  type: Internet-Draft
 - content: draft-fujita-mpls-crldp-crankback-01
   type: Internet-Draft
   primary: true
-- content: I-D.fujita-mpls-crldp-crankback
-  type: IETF
-  scope: anchor
 docnumber: I-D.fujita-mpls-crldp-crankback
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Atsushi
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NEC Corporation
+        - language: en
+          content: NEC Corporation
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Norihito
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NEC Corporation
+        - language: en
+          content: NEC Corporation
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gerald
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: AT&T
+        - language: en
+          content: AT&T
 version:
 - content: '01'
 language:
@@ -97,30 +104,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft proposes crankback routing extensions for CR-LDP signaling.
-    Recently, several routing protocol extensions for advertising resource information
-    in addition to topology information have been proposed for use in distributed
-    constraint-based routing. In such a distributed routing environment, however,
-    the information used to compute a constraint-based path may be out of date. This
-    means that label requests may be blocked by links or nodes without sufficient
-    resources. This draft specifies crankback routing extensions for CR-LDP so that
-    the label request can be retried on an alternate path that detours around the
-    blocked link or node upon a setup failure. Furthermore, the proposed crankback
-    routing schemes can be also applied to end-to-end LSP restoration by indicating
-    the location of the failure link or node. This would significantly improve the
-    recovery ratio for failed LSPs, especially in situations where a large number
-    of setup requests are triggered at the same time.</p>"
-  format: text/html
+  content: |-
+    <p>This draft proposes crankback routing extensions for CR-LDP
+    signaling.  Recently, several routing protocol extensions for
+    advertising resource information in addition to topology information
+    have been proposed for use in distributed constraint-based routing.
+    In such a distributed routing environment, however, the information
+    used to compute a constraint-based path may be out of date. This
+    means that label requests may be blocked by links or nodes without
+    sufficient resources. This draft specifies crankback routing
+    extensions for CR-LDP so that the label request can be retried on an
+    alternate path that detours around the blocked link or node upon a
+    setup failure. Furthermore, the proposed crankback routing schemes
+    can be also applied to end-to-end LSP restoration by indicating the
+    location of the failure link or node. This would significantly
+    improve the recovery ratio for failed LSPs, especially in situations
+    where a large number of setup requests are triggered at the same
+    time.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-fujita-mpls-crldp-crankback-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

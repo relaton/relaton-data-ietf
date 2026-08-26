@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Congestion Exposure (ConEx) Concepts and Abstract Mechanism
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-conex-abstract-mech-06
 docidentifier:
+- content: draft-ietf-conex-abstract-mech
+  type: Internet-Draft
 - content: draft-ietf-conex-abstract-mech-06
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-conex-abstract-mech
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-conex-abstract-mech
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matt
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -67,24 +69,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes an abstract mechanism by which senders inform
-    the network about the congestion encountered by packets earlier in the same flow.
-    Today, network elements at any layer may signal congestion to the receiver by
-    dropping packets or by ECN markings, and the receiver passes this information
-    back to the sender in transport-layer feedback. The mechanism described here enables
-    the sender to also relay this congestion information back into the network in-band
-    at the IP layer, such that the total amount of congestion from all elements on
-    the path is revealed to all IP elements along the path, where it could, for example,
-    be used to provide input to traffic management. This mechanism is called congestion
-    exposure or ConEx. The companion document "ConEx Concepts and Use Cases" provides
-    the entry-point to the set of ConEx documentation.</p>
-  format: text/html
+  content: |-
+    <p>This document describes an abstract mechanism by which senders inform
+       the network about the congestion encountered by packets earlier in
+       the same flow.  Today, network elements at any layer may signal
+       congestion to the receiver by dropping packets or by ECN markings,
+       and the receiver passes this information back to the sender in
+       transport-layer feedback.  The mechanism described here enables the
+       sender to also relay this congestion information back into the
+       network in-band at the IP layer, such that the total amount of
+       congestion from all elements on the path is revealed to all IP
+       elements along the path, where it could, for example, be used to
+       provide input to traffic management.  This mechanism is called
+       congestion exposure or ConEx.  The companion document "ConEx Concepts
+       and Use Cases" provides the entry-point to the set of ConEx
+       documentation.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-conex-abstract-mech-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-conex-abstract-mech-05
     docidentifier:
     - content: draft-ietf-conex-abstract-mech-05
       type: Internet-Draft
@@ -92,10 +99,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-conex-abstract-mech-08
-      format: text/plain
+      content: draft-ietf-conex-abstract-mech-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-conex-abstract-mech-07
     docidentifier:
-    - content: draft-ietf-conex-abstract-mech-08
+    - content: draft-ietf-conex-abstract-mech-07
       type: Internet-Draft
       primary: true
 series:
@@ -104,10 +113,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-conex-abstract-mech-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

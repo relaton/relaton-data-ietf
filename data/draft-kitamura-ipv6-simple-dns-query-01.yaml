@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Simplified DNS Query under IPv4/IPv6 Mixed Environment
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kitamura-ipv6-simple-dns-query-01
 docidentifier:
+- content: draft-kitamura-ipv6-simple-dns-query
+  type: Internet-Draft
 - content: draft-kitamura-ipv6-simple-dns-query-01
   type: Internet-Draft
   primary: true
-- content: I-D.kitamura-ipv6-simple-dns-query
-  type: IETF
-  scope: anchor
 docnumber: I-D.kitamura-ipv6-simple-dns-query
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hiroshi
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: NEC Corporation
+        - language: en
+          content: NEC Corporation
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shingo
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Osaka City University
+        - language: en
+          content: Osaka City University
 version:
 - content: '01'
 language:
@@ -75,33 +79,43 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>This document discusses a simplified regular DNS query (resolving from
-    a domain name to IP address(es)) method under IPv4/IPv6 mixed environment. With
-    current DNS query method under IPv4/IPv6 mixed environment, it requires for a
-    client to issue Two pairs of DNS query/response messages (one for A(IPv4) record,
-    the other for AAAA(IPv6) record) to obtain all of IPv4 and IPv6 addresses of the
-    node with its One domain name argument. It is clear that the current method (that
-    requires to issue Two pairs of DNS query/response messages for One domain name
-    resolving) is not sophisticated and not optimized for current IPv4/IPv6 mixed
-    environment. The method was designed at the initial stage of IPv6 deployment (when
-    IPv6 was minority). At that time, it was a best practical solution. However, now
-    IPv6 is widely spreading. The current DNS query method is getting problematic
-    and will never last to the future IPv6 fully deployed environment. Goals of this
-    document are: 1. to clarify the problems of current regular DNS query method 2.
-    to propose a simplified regular DNS query method: ("One pair of DNS query/response
-    messages for One domain name resolving") that is suitable for current IPv4/IPv6
-    mixed environment.</p>'
-  format: text/html
+  content: |-
+    <p>This document discusses a simplified regular DNS query (resolving
+       from a domain name to IP address(es)) method under IPv4/IPv6 mixed
+       environment.
+
+       With current DNS query method under IPv4/IPv6 mixed environment, it
+       requires for a client to issue Two pairs of DNS query/response
+       messages (one for A(IPv4) record, the other for AAAA(IPv6) record)
+       to obtain all of IPv4 and IPv6 addresses of the node with its One
+       domain name argument.
+
+       It is clear that the current method (that requires to issue Two
+       pairs of DNS query/response messages for One domain name resolving)
+       is not sophisticated and not optimized for current IPv4/IPv6 mixed
+       environment.
+
+       The method was designed at the initial stage of IPv6 deployment
+       (when IPv6 was minority). At that time, it was a best practical
+       solution. However, now IPv6 is widely spreading. The current DNS
+       query method is getting problematic and will never last to the
+       future IPv6 fully deployed environment.
+
+       Goals of this document are:
+         1. to clarify the problems of current regular DNS query method
+         2. to propose a simplified regular DNS query method:
+           ("One pair of DNS query/response messages for One domain name
+          resolving")
+           that is suitable for current IPv4/IPv6 mixed environment.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kitamura-ipv6-simple-dns-query-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

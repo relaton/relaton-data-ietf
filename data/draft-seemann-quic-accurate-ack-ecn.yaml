@@ -1,11 +1,12 @@
 ---
 id: draftseemannquicaccurateackecn
 schema_version: v1.5.6
+formattedref:
+  content: draft-seemann-quic-accurate-ack-ecn
 title:
 - language: en
   script: Latn
   content: QUIC Accurate ECN Acknowledgements
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-accurate-ack-ecn-01
@@ -19,20 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>QUIC defines a variant of the ACK frame that carries cumulative count
-    for each of the three ECN codepoints (ECT(1), ECT(0) and CE). From this information,
-    the recipient of the ACK frame cannot deduce which ECN marking the individual
-    packets were received with. This document defines an alternative ACK frame that
-    encodes enough information to indicate which ECN mark each individual packet was
-    received with. This information is essential for accurately performing adjustments
-    to congestion window and sending rate of the sender.</p>"
-  format: text/html
+  content: |-
+    <p>QUIC defines a variant of the ACK frame that carries cumulative count
+       for each of the three ECN codepoints (ECT(1), ECT(0) and CE).  From
+       this information, the recipient of the ACK frame cannot deduce which
+       ECN marking the individual packets were received with.
+
+       This document defines an alternative ACK frame that encodes enough
+       information to indicate which ECN mark each individual packet was
+       received with.  This information is essential for accurately
+       performing adjustments to congestion window and sending rate of the
+       sender.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-seemann-quic-accurate-ack-ecn-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-accurate-ack-ecn-00
     docidentifier:
     - content: draft-seemann-quic-accurate-ack-ecn-00
       type: Internet-Draft
@@ -41,7 +47,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-seemann-quic-accurate-ack-ecn-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-seemann-quic-accurate-ack-ecn-01
     docidentifier:
     - content: draft-seemann-quic-accurate-ack-ecn-01
       type: Internet-Draft
@@ -50,4 +58,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

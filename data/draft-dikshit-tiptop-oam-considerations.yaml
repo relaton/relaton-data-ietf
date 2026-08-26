@@ -1,11 +1,12 @@
 ---
 id: draftdikshittiptopoamconsiderations
 schema_version: v1.5.6
+formattedref:
+  content: draft-dikshit-tiptop-oam-considerations
 title:
 - language: en
   script: Latn
   content: Network Management and OAM Considerations for IP in Deep Space
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dikshit-tiptop-oam-considerations-01
@@ -19,33 +20,42 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>[I-D.ietf-tiptop-usecase] and [I-D.ietf-tiptop-ip-architecture] describe
-    key characteristics, use cases, requirements, and an IP architecture for deep-space
-    (lunar, Mars, and beyond) surface and orbital-relay networking, characterized
-    by long, variable, asymmetric propagation delay (single-digit to tens of minutes
-    one-way), scheduled/intermittent connectivity windows, and severely constrained
-    link capacity. Section 8.2 of [I-D.ietf-tiptop-ip-architecture] addresses the
-    configuration- management plane for this environment (NETCONF, RESTCONF, and SNMP
-    transport selection and RTT-adjusted client timeouts), but neither document addresses
-    the fault and performance dimensions of Operations, Administration, and Maintenance
-    (OAM): fault detection, performance measurement, and reachability verification.
-    This document identifies why conventional terrestrial OAM techniques (active round-trip
-    probing such as ICMP Echo, BFD, or TWAMP; assumption of continuous connectivity)
-    do not transfer directly to this environment, and proposes candidate adapted approaches
-    -- passive, store-and-forward telemetry batched to contact windows; on-board local
-    health self-diagnosis with delayed reporting; and confidence-interval-based reachability
-    assessment in place of binary up/down status -- as a starting point for OAM discussion
-    within the TIPTOP working group. This document explicitly does not propose use
-    of the Bundle Protocol or DTN architecture, both of which are out of scope for
-    TIPTOP per its charter; where CCSDS space-data-system telemetry conventions are
-    mentioned, it is as informative background only.</p>"
-  format: text/html
+  content: |-
+    <p>[I-D.ietf-tiptop-usecase] and [I-D.ietf-tiptop-ip-architecture]
+       describe key characteristics, use cases, requirements, and an IP
+       architecture for deep-space (lunar, Mars, and beyond) surface and
+       orbital-relay networking, characterized by long, variable,
+       asymmetric propagation delay (single-digit to tens of minutes
+       one-way), scheduled/intermittent connectivity windows, and severely
+       constrained link capacity.  Section 8.2 of
+       [I-D.ietf-tiptop-ip-architecture] addresses the configuration-
+       management plane for this environment (NETCONF, RESTCONF, and SNMP
+       transport selection and RTT-adjusted client timeouts), but neither
+       document addresses the fault and performance dimensions of
+       Operations, Administration, and Maintenance (OAM): fault detection,
+       performance measurement, and reachability verification.
+
+       This document identifies why conventional terrestrial OAM
+       techniques (active round-trip probing such as ICMP Echo, BFD, or
+       TWAMP; assumption of continuous connectivity) do not transfer
+       directly to this environment, and proposes candidate adapted
+       approaches -- passive, store-and-forward telemetry batched to
+       contact windows; on-board local health self-diagnosis with delayed
+       reporting; and confidence-interval-based reachability assessment in
+       place of binary up/down status -- as a starting point for OAM
+       discussion within the TIPTOP working group.  This document
+       explicitly does not propose use of the Bundle Protocol or DTN
+       architecture, both of which are out of scope for TIPTOP per its
+       charter; where CCSDS space-data-system telemetry conventions are
+       mentioned, it is as informative background only.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-dikshit-tiptop-oam-considerations-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dikshit-tiptop-oam-considerations-00
     docidentifier:
     - content: draft-dikshit-tiptop-oam-considerations-00
       type: Internet-Draft
@@ -54,7 +64,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-dikshit-tiptop-oam-considerations-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dikshit-tiptop-oam-considerations-01
     docidentifier:
     - content: draft-dikshit-tiptop-oam-considerations-01
       type: Internet-Draft
@@ -63,4 +75,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

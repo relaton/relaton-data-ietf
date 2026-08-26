@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Salted Challenge Response (SCRAM) HTTP Authentication Mechanism
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-scram-auth-02
 docidentifier:
+- content: draft-ietf-httpauth-scram-auth
+  type: Internet-Draft
 - content: draft-ietf-httpauth-scram-auth-02
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-httpauth-scram-auth
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-httpauth-scram-auth
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexey
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -49,36 +49,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The secure authentication mechanism most widely deployed and used by
-    Internet application protocols is the transmission of clear-text passwords over
-    a channel protected by Transport Layer Security (TLS). There are some significant
-    security concerns with that mechanism, which could be addressed by the use of
-    a challenge response authentication mechanism protected by TLS. Unfortunately,
-    the HTTP Digest challenge response mechanism presently on the standards track
-    failed widespread deployment, and have had success only in limited use. This specification
-    describes a family of HTTP authentication mechanisms called the Salted Challenge
-    Response Authentication Mechanism (SCRAM), which addresses the security concerns
-    and meets the deployability requirements. When used in combination with TLS or
-    an equivalent security layer, a mechanism from this family could improve the status-quo
-    for application protocol authentication.</p>"
-  format: text/html
+  content: |-
+    <p>The secure authentication mechanism most widely deployed and used by
+       Internet application protocols is the transmission of clear-text
+       passwords over a channel protected by Transport Layer Security (TLS).
+       There are some significant security concerns with that mechanism,
+       which could be addressed by the use of a challenge response
+       authentication mechanism protected by TLS.  Unfortunately, the HTTP
+       Digest challenge response mechanism presently on the standards track
+       failed widespread deployment, and have had success only in limited
+       use.
+
+       This specification describes a family of HTTP authentication
+       mechanisms called the Salted Challenge Response Authentication
+       Mechanism (SCRAM), which addresses the security concerns and meets
+       the deployability requirements.  When used in combination with TLS or
+       an equivalent security layer, a mechanism from this family could
+       improve the status-quo for application protocol authentication.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-httpauth-scram-auth-00
-      format: text/plain
+      content: draft-ietf-httpauth-scram-auth-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-scram-auth-01
     docidentifier:
-    - content: draft-ietf-httpauth-scram-auth-00
+    - content: draft-ietf-httpauth-scram-auth-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-httpauth-scram-auth-08
-      format: text/plain
+      content: draft-ietf-httpauth-scram-auth-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-httpauth-scram-auth-03
     docidentifier:
-    - content: draft-ietf-httpauth-scram-auth-08
+    - content: draft-ietf-httpauth-scram-auth-03
       type: Internet-Draft
       primary: true
 series:
@@ -87,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-httpauth-scram-auth-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

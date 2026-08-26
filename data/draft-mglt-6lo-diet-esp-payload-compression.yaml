@@ -1,11 +1,12 @@
 ---
 id: draftmglt6lodietesppayloadcompression
 schema_version: v1.5.6
+formattedref:
+  content: draft-mglt-6lo-diet-esp-payload-compression
 title:
 - language: en
   script: Latn
   content: 'Diet-IPsec: ESP Payload Compression of IPv6 / UDP / TCP / UDP-Lite'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mglt-6lo-diet-esp-payload-compression-01
@@ -19,26 +20,36 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>ESP is a IPsec protocol that takes as input a Clear Text Data and outputs
-    an encrypted ESP packet according to IPsec rules and parameters stored in different
-    IPsec databases. Diet-ESP compresses the ESP fields. However, Diet-ESP does not
-    consider compression of the Clear Text Data. Instead, if compression of the Clear
-    Text Data is expected protocols like ROHCoverIPsec can be used. ROHCoverIPsec
-    remains complex to implement in IoT devices, as states, and negotiations are involved
-    between the compressors and decompressors of the two IoT devices. Most of this
-    complexity can be avoided by considering the parameters that have been negotiated
-    by IPsec. This document describes an extension of the Diet-ESP Context that enables
-    the compression of the Clear Text Data, without implementing the complex ROHCoverIPsec
-    framework. As opposed to ROHCoverIPsec the compression is not generic and as such
-    all communication will not benefit from this compression. However, we believe
-    this extension addresses most of IoT communications.</p>"
-  format: text/html
+  content: |-
+    <p>ESP is a IPsec protocol that takes as input a Clear Text Data and
+       outputs an encrypted ESP packet according to IPsec rules and
+       parameters stored in different IPsec databases.
+
+       Diet-ESP compresses the ESP fields.  However, Diet-ESP does not
+       consider compression of the Clear Text Data.  Instead, if compression
+       of the Clear Text Data is expected protocols like ROHCoverIPsec can
+       be used.
+
+       ROHCoverIPsec remains complex to implement in IoT devices, as states,
+       and negotiations are involved between the compressors and
+       decompressors of the two IoT devices.  Most of this complexity can be
+       avoided by considering the parameters that have been negotiated by
+       IPsec.
+
+       This document describes an extension of the Diet-ESP Context that
+       enables the compression of the Clear Text Data, without implementing
+       the complex ROHCoverIPsec framework.  As opposed to ROHCoverIPsec the
+       compression is not generic and as such all communication will not
+       benefit from this compression.  However, we believe this extension
+       addresses most of IoT communications.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-mglt-6lo-diet-esp-payload-compression-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mglt-6lo-diet-esp-payload-compression-00
     docidentifier:
     - content: draft-mglt-6lo-diet-esp-payload-compression-00
       type: Internet-Draft
@@ -47,7 +58,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mglt-6lo-diet-esp-payload-compression-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mglt-6lo-diet-esp-payload-compression-01
     docidentifier:
     - content: draft-mglt-6lo-diet-esp-payload-compression-01
       type: Internet-Draft
@@ -56,4 +69,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

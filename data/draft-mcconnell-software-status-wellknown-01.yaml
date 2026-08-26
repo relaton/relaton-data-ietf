@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: A Well-Known URI for Software Lifecycle Status
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mcconnell-software-status-wellknown-01
 docidentifier:
+- content: draft-mcconnell-software-status-wellknown
+  type: Internet-Draft
 - content: draft-mcconnell-software-status-wellknown-01
   type: Internet-Draft
   primary: true
-- content: I-D.mcconnell-software-status-wellknown
-  type: IETF
-  scope: anchor
 docnumber: I-D.mcconnell-software-status-wellknown
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: jim
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ask McConnell, LLC
+        - language: en
+          content: Ask McConnell, LLC
 version:
 - content: '01'
 language:
@@ -53,23 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a Well-Known URI [RFC8615] at which software
-    vendors and open-source maintainers may publish machine-readable lifecycle status
-    information for their products. A JSON resource retrieved from /.well-known/software-status.json
-    allows consumers — including security tools, software composition analysis (SCA)
-    platforms, vulnerability scanners, and system administrators — to programmatically
-    determine whether a specific version of a software product is actively supported,
-    in long-term support (LTS), under security-only maintenance, or at end-of-life
-    (EOL). This document also describes, in Appendix A (#appendix-a), a companion
-    convention for open-source projects hosted on version- control platforms to publish
-    equivalent information within the repository at.github/software-status.json.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines a Well-Known URI [RFC8615] at which software
+       vendors and open-source maintainers may publish machine-readable
+       lifecycle status information for their products.  A JSON resource
+       retrieved from /.well-known/software-status.json allows consumers —
+       including security tools, software composition analysis (SCA)
+       platforms, vulnerability scanners, and system administrators — to
+       programmatically determine whether a specific version of a software
+       product is actively supported, in long-term support (LTS), under
+       security-only maintenance, or at end-of-life (EOL).
+
+       This document also describes, in Appendix A (#appendix-a), a
+       companion convention for open-source projects hosted on version-
+       control platforms to publish equivalent information within the
+       repository at .github/software-status.json.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-mcconnell-software-status-wellknown-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcconnell-software-status-wellknown-00
     docidentifier:
     - content: draft-mcconnell-software-status-wellknown-00
       type: Internet-Draft
@@ -78,7 +85,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-mcconnell-software-status-wellknown-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcconnell-software-status-wellknown-02
     docidentifier:
     - content: draft-mcconnell-software-status-wellknown-02
       type: Internet-Draft
@@ -89,10 +98,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mcconnell-software-status-wellknown-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

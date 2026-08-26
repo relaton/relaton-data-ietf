@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Network Performance Isolation in Data Centres using Congestion Policing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-briscoe-conex-data-centre-01
 docidentifier:
+- content: draft-briscoe-conex-data-centre
+  type: Internet-Draft
 - content: draft-briscoe-conex-data-centre-01
   type: Internet-Draft
   primary: true
-- content: I-D.briscoe-conex-data-centre
-  type: IETF
-  scope: anchor
 docnumber: I-D.briscoe-conex-data-centre
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bob
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Murari
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,27 +69,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how a multi-tenant (or multi-department) data
-    centre operator can isolate tenants from network performance degradation due to
-    each other's usage, but without losing the multiplexing benefits of a LAN-style
-    network where anyone can use any amount of any resource. Zero per-tenant configuration
-    and no implementation change is required on network equipment. Instead the solution
-    is implemented with a simple change to the hypervisor (or container) beneath the
-    tenant's virtual machines on every physical server connected to the network. These
-    collectively enforce a very simple distributed contract - a single network allowance
-    that each tenant can allocate among their virtual machines, even if distributed
-    around the network. The solution uses layer-3 switches that support explicit congestion
-    notification (ECN). It is best if the sending operating system supports congestion
-    exposure (ConEx). Nonetheless, the operator can unilaterally deploy a complete
-    solution while operating systems are being incrementally upgraded to support ConEx
-    and ECN.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes how a multi-tenant (or multi-department) data
+       centre operator can isolate tenants from network performance
+       degradation due to each other's usage, but without losing the
+       multiplexing benefits of a LAN-style network where anyone can use any
+       amount of any resource.  Zero per-tenant configuration and no
+       implementation change is required on network equipment.  Instead the
+       solution is implemented with a simple change to the hypervisor (or
+       container) beneath the tenant's virtual machines on every physical
+       server connected to the network.  These collectively enforce a very
+       simple distributed contract - a single network allowance that each
+       tenant can allocate among their virtual machines, even if distributed
+       around the network.  The solution uses layer-3 switches that support
+       explicit congestion notification (ECN).  It is best if the sending
+       operating system supports congestion exposure (ConEx).  Nonetheless,
+       the operator can unilaterally deploy a complete solution while
+       operating systems are being incrementally upgraded to support ConEx
+       and ECN.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-briscoe-conex-data-centre-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-conex-data-centre-00
     docidentifier:
     - content: draft-briscoe-conex-data-centre-00
       type: Internet-Draft
@@ -96,7 +103,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-briscoe-conex-data-centre-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-briscoe-conex-data-centre-02
     docidentifier:
     - content: draft-briscoe-conex-data-centre-02
       type: Internet-Draft
@@ -107,10 +116,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-briscoe-conex-data-centre-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

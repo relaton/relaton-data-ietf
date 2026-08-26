@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Service Chaining using Virtual Networks with BGP VPNs
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-fm-bess-service-chaining-02
 docidentifier:
+- content: draft-fm-bess-service-chaining
+  type: Internet-Draft
 - content: draft-fm-bess-service-chaining-02
   type: Internet-Draft
   primary: true
-- content: I-D.fm-bess-service-chaining
-  type: IETF
-  scope: anchor
 docnumber: I-D.fm-bess-service-chaining
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Rex
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Stuart
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Dhananjaya
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Bruno
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Juniper
+        - language: en
+          content: Juniper
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Maria
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -131,15 +143,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: AT&T
+        - language: en
+          content: AT&T
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -153,7 +168,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Orange
+        - language: en
+          content: Orange
 version:
 - content: '02'
 language:
@@ -163,36 +179,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how service function chains (SFC) can be applied
-    to traffic flows using routing in a virtual (overlay) network to steer traffic
-    between service nodes. Chains can include services running in routers, on physical
-    appliances or in virtual machines. Service chains have applicability at the subscriber
-    edge, business edge and in multi-tenant datacenters. The routing function into
-    SFCs and between service functions within an SFC can be performed by physical
-    devices (routers), be virtualized inside hypervisors, or run as part of a host
-    OS. A BGP control plane for route distribution is used to create virtual networks
-    implemented using IP MPLS, VXLAN or other suitable encapsulation, where the routes
-    within the virtual networks cause traffic to flow through a sequence of service
-    nodes that apply packet processing functions to the flows. Two techniques are
-    described: in one the service chain is implemented as a sequence of distinct VPNs
-    between sets of service nodes that apply each service function; in the other,
-    the routes within a VPN are modified through the use of special route targets
-    and modified next-hop resolution to achieve the desired result. In both techniques,
-    service chains can be created by manual configuration of routes and route targets
-    in routing systems, or through the use of a controller which contains a topological
-    model of the desired service chains. This document also contains discussion of
-    load balancing between network functions, symmetric forward and reverse paths
-    when stateful services are involved, and use of classifiers to direct traffic
-    into a service chain.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes how service function chains (SFC) can be
+       applied to traffic flows using routing in a virtual (overlay)
+       network to steer traffic between service nodes. Chains can include
+       services running in routers, on physical appliances or in virtual
+       machines. Service chains have applicability at the subscriber edge,
+       business edge and in multi-tenant datacenters. The routing function
+       into SFCs and between service functions within an SFC can be
+       performed by physical devices (routers), be virtualized inside
+       hypervisors, or run as part of a host OS.
+
+       A BGP control plane for route distribution is used to create virtual
+       networks implemented using IP MPLS, VXLAN or other suitable
+       encapsulation, where the routes within the virtual networks cause
+       traffic to flow through a sequence of service nodes that apply
+       packet processing functions to the flows.
+
+       Two techniques are described: in one the service chain is
+       implemented as a sequence of distinct VPNs between sets of service
+       nodes that apply each service function; in the other, the routes
+       within a VPN are modified through the use of special route targets
+       and modified next-hop resolution to achieve the desired result.
+
+       In both techniques, service chains can be created by manual
+       configuration of routes and route targets in routing systems, or
+       through the use of a controller which contains a topological model
+       of the desired service chains.
+
+       This document also contains discussion of load balancing between
+       network functions, symmetric forward and reverse paths when stateful
+       services are involved, and use of classifiers to direct traffic into
+       a service chain.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-fm-bess-service-chaining-00
-      format: text/plain
+      content: draft-fm-bess-service-chaining-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-fm-bess-service-chaining-01
     docidentifier:
-    - content: draft-fm-bess-service-chaining-00
+    - content: draft-fm-bess-service-chaining-01
       type: Internet-Draft
       primary: true
 series:
@@ -201,10 +229,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-fm-bess-service-chaining-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

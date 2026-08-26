@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: AAuth - Agentic Authorization OAuth 2.1 Extension
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-rosenberg-oauth-aauth-01
 docidentifier:
+- content: draft-rosenberg-oauth-aauth
+  type: Internet-Draft
 - content: draft-rosenberg-oauth-aauth-01
   type: Internet-Draft
   primary: true
-- content: I-D.rosenberg-oauth-aauth
-  type: IETF
-  scope: anchor
 docnumber: I-D.rosenberg-oauth-aauth
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Jonathan
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Five9
+        - language: en
+          content: Five9
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Pat
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Bitwave
+        - language: en
+          content: Bitwave
 version:
 - content: '01'
 language:
@@ -75,23 +79,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Agent Authorization Grant, an OAuth 2.1 extension
-    allowing a class of Internet applications - called AI Agents - to obtain access
-    tokens in order to invoke web-based APIs on behalf of their users. In the use
-    cases envisaged here, users interact with AI Agents through communication channels
-    - the Public Switched Telephone Network (PSTN) or texting - which do not permit
-    traditional OAuth grant flows. Instead, AI agents collect Personally Identifying
-    Information (PII) through natural language conversation, and then use that collected
-    information to obtain an access token with appropriately constrained scopes. A
-    primary considering is ensuring that the Large Language Model (LLM) powering the
-    AI Agent cannot, through hallucination, result in impersonation attacks.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the Agent Authorization Grant, an OAuth 2.1
+       extension allowing a class of Internet applications - called AI
+       Agents - to obtain access tokens in order to invoke web-based APIs on
+       behalf of their users.  In the use cases envisaged here, users
+       interact with AI Agents through communication channels - the Public
+       Switched Telephone Network (PSTN) or texting - which do not permit
+       traditional OAuth grant flows.  Instead, AI agents collect Personally
+       Identifying Information (PII) through natural language conversation,
+       and then use that collected information to obtain an access token
+       with appropriately constrained scopes.  A primary considering is
+       ensuring that the Large Language Model (LLM) powering the AI Agent
+       cannot, through hallucination, result in impersonation attacks.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-rosenberg-oauth-aauth-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rosenberg-oauth-aauth-00
     docidentifier:
     - content: draft-rosenberg-oauth-aauth-00
       type: Internet-Draft
@@ -102,10 +110,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-rosenberg-oauth-aauth-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

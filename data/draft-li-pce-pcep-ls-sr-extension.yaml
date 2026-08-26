@@ -1,11 +1,12 @@
 ---
 id: draftlipcepceplssrextension
 schema_version: v1.5.6
+formattedref:
+  content: draft-li-pce-pcep-ls-sr-extension
 title:
 - language: en
   script: Latn
   content: PCEP Link-State extensions for Segment Routing
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-li-pce-pcep-ls-sr-extension-01
@@ -19,22 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Segment Routing leverages source routing. A node steers a packet through
-    a controlled set of instructions, called segments, by prepending the packet with
-    an SR header. A segment can represent any instruction, topological or service-based.
-    SR allows to enforce a flow through any topological path and service chain while
-    maintaining per-flow state only at the ingress node of the SR domain. IGP protocols
-    have been extended to advertise the segments. Because of IGP's propagation scope
-    limitation, it is not suited for IGP to signal paths that span across AS borders.
-    This document introduces extensions of PCEP-LS to solve the problem without the
-    similar limitation.</p>"
-  format: text/html
+  content: |-
+    <p>Segment Routing leverages source routing.  A node steers a packet
+       through a controlled set of instructions, called segments, by
+       prepending the packet with an SR header.  A segment can represent any
+       instruction, topological or service-based.  SR allows to enforce a
+       flow through any topological path and service chain while maintaining
+       per-flow state only at the ingress node of the SR domain.
+
+       IGP protocols have been extended to advertise the segments.  Because
+       of IGP's propagation scope limitation, it is not suited for IGP to
+       signal paths that span across AS borders.  This document introduces
+       extensions of PCEP-LS to solve the problem without the similar
+       limitation.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-li-pce-pcep-ls-sr-extension-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-pce-pcep-ls-sr-extension-00
     docidentifier:
     - content: draft-li-pce-pcep-ls-sr-extension-00
       type: Internet-Draft
@@ -43,7 +49,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-li-pce-pcep-ls-sr-extension-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-pce-pcep-ls-sr-extension-01
     docidentifier:
     - content: draft-li-pce-pcep-ls-sr-extension-01
       type: Internet-Draft
@@ -52,4 +60,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

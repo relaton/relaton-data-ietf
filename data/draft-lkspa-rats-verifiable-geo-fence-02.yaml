@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Verifiable Proof of Environment Attestation Profile
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-02
 docidentifier:
+- content: draft-lkspa-rats-verifiable-geo-fence
+  type: Internet-Draft
 - content: draft-lkspa-rats-verifiable-geo-fence-02
   type: Internet-Draft
   primary: true
-- content: I-D.lkspa-rats-verifiable-geo-fence
-  type: IETF
-  scope: anchor
 docnumber: I-D.lkspa-rats-verifiable-geo-fence
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ramki
       - language: en
+        script: Latn
         initial: R
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: JPMorgan Chase & Co.
+        - language: en
+          content: JPMorgan Chase & Co.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ned
       - language: en
+        script: Latn
         initial: "N"
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Intel
+        - language: en
+          content: Intel
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Diego
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -87,13 +93,15 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Telefonica
+        - language: en
+          content: Telefonica
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -107,15 +115,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Oracle
+        - language: en
+          content: Oracle
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Srinivasa
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -129,7 +140,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Aryaka
+        - language: en
+          content: Aryaka
 version:
 - content: '02'
 language:
@@ -139,46 +151,58 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Operators of regulated, sovereign, and high-assurance deployments require
-    hardware-rooted, machine-verifiable proof that a workload executes in its approved
-    environment. Current remote attestation mechanisms address two relevant properties
-    in isolation: platform integrity — that the hardware and software stack are in
-    an approved, untampered state — and physical residency — that the hardware resides
-    within an approved geographic boundary. Neither property alone is sufficient:
-    integrity without residency permits a valid platform to operate outside approved
-    boundaries; residency without integrity permits a compromised platform to claim
-    valid placement. This document defines the *Verifiable Proof of Environment Attestation
-    Profile (V-PEA)*, a profile of the RATS Architecture {{!RFC9334}} that fuses both
-    properties into a single TPM-sealed Evidence structure (lah-bundle). V-PEA defines
-    two Evidence dimensions: *WHAT* — hardware provenance (TPM Attestation Key registered
-    and manufacturer-endorsed), platform integrity (firmware and OS state matching
-    reference values), and workload agent software integrity (binary digest matching
-    an approved value); and *WHERE* — physical residency within an approved geographic
-    boundary. A TPM quote seal binds WHAT and WHERE into a single unforgeable statement:
-    neither dimension can be forged or transplanted without invalidating the other.
-    For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge Proofs (ZKPs),
-    enabling an Attester to prove geographic compliance without disclosing precise
-    coordinates. A positive V-PEA Attestation Result enables a Relying Party to issue
-    hardware-rooted credentials or authorize operations — combining verified execution
-    environment (WHAT) with verified physical placement (WHERE) — before releasing
-    sensitive assets or granting access. Integration with workload identity systems
-    is described in the WIMSE Integration appendix.</p>"
-  format: text/html
+  content: |-
+    <p>Operators of regulated, sovereign, and high-assurance deployments
+       require hardware-rooted, machine-verifiable proof that a workload
+       executes in its approved environment.  Current remote attestation
+       mechanisms address two relevant properties in isolation: platform
+       integrity — that the hardware and software stack are in an approved,
+       untampered state — and physical residency — that the hardware resides
+       within an approved geographic boundary.  Neither property alone is
+       sufficient: integrity without residency permits a valid platform to
+       operate outside approved boundaries; residency without integrity
+       permits a compromised platform to claim valid placement.
+
+       This document defines the *Verifiable Proof of Environment
+       Attestation Profile (V-PEA)*, a profile of the RATS Architecture
+       {{!RFC9334}} that fuses both properties into a single TPM-sealed
+       Evidence structure (lah-bundle).  V-PEA defines two Evidence
+       dimensions: *WHAT* — hardware provenance (TPM Attestation Key
+       registered and manufacturer-endorsed), platform integrity (firmware
+       and OS state matching reference values), and workload agent software
+       integrity (binary digest matching an approved value); and *WHERE* —
+       physical residency within an approved geographic boundary.  A TPM
+       quote seal binds WHAT and WHERE into a single unforgeable statement:
+       neither dimension can be forged or transplanted without invalidating
+       the other.
+
+       For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge
+       Proofs (ZKPs), enabling an Attester to prove geographic compliance
+       without disclosing precise coordinates.  A positive V-PEA Attestation
+       Result enables a Relying Party to issue hardware-rooted credentials
+       or authorize operations — combining verified execution environment
+       (WHAT) with verified physical placement (WHERE) — before releasing
+       sensitive assets or granting access.  Integration with workload
+       identity systems is described in the WIMSE Integration appendix.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-lkspa-rats-verifiable-geo-fence-00
-      format: text/plain
+      content: draft-lkspa-rats-verifiable-geo-fence-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-01
     docidentifier:
-    - content: draft-lkspa-rats-verifiable-geo-fence-00
+    - content: draft-lkspa-rats-verifiable-geo-fence-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-03
     docidentifier:
     - content: draft-lkspa-rats-verifiable-geo-fence-03
       type: Internet-Draft
@@ -189,10 +213,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-lkspa-rats-verifiable-geo-fence-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

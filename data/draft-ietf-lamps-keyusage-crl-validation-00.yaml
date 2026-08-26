@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Clarification to processing Key Usage values during CRL validation
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-keyusage-crl-validation-00
 docidentifier:
+- content: draft-ietf-lamps-keyusage-crl-validation
+  type: Internet-Draft
 - content: draft-ietf-lamps-keyusage-crl-validation-00
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-lamps-keyusage-crl-validation
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-lamps-keyusage-crl-validation
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Corey
       - language: en
+        script: Latn
         initial: C
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: DigiCert, Inc.
+        - language: en
+          content: DigiCert, Inc.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tadahiko
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: SECOM CO., LTD.
+        - language: en
+          content: SECOM CO., LTD.
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tomofumi
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Penguin Securities Pte. Ltd.
+        - language: en
+          content: Penguin Securities Pte. Ltd.
 version:
 - content: '00'
 language:
@@ -97,24 +104,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RFC 5280 defines the profile of X.509 certificates and certificate
-    revocation lists (CRLs) for use in the Internet. This profile requires that certificates
-    which certify keys for signing CRLs contain the key usage extension with the cRLSign
-    bit asserted. Additionally, RFC 5280 defines steps for the validation of CRLs.
-    While there is a requirement for CRL validators to verify that the cRLSign bit
-    is asserted in the keyUsage extension of the CRL issuer's certificate, this document
-    clarifies the requirement for relying parties to also verify the presence of the
-    keyUsage extension in the CRL issuer's certificate. This check remediates a potential
-    security issue that arises when relying parties accept a CRL which is signed by
-    a certificate with no keyUsage extension, and therefore does not explicitly have
-    the cRLSign bit asserted.</p>"
-  format: text/html
+  content: |-
+    <p>RFC 5280 defines the profile of X.509 certificates and certificate
+       revocation lists (CRLs) for use in the Internet.  This profile
+       requires that certificates which certify keys for signing CRLs
+       contain the key usage extension with the cRLSign bit asserted.
+       Additionally, RFC 5280 defines steps for the validation of CRLs.
+       While there is a requirement for CRL validators to verify that the
+       cRLSign bit is asserted in the keyUsage extension of the CRL issuer's
+       certificate, this document clarifies the requirement for relying
+       parties to also verify the presence of the keyUsage extension in the
+       CRL issuer's certificate.  This check remediates a potential security
+       issue that arises when relying parties accept a CRL which is signed
+       by a certificate with no keyUsage extension, and therefore does not
+       explicitly have the cRLSign bit asserted.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-lamps-keyusage-crl-validation-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-lamps-keyusage-crl-validation-01
     docidentifier:
     - content: draft-ietf-lamps-keyusage-crl-validation-01
       type: Internet-Draft
@@ -125,10 +136,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-lamps-keyusage-crl-validation-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: EAT Attestation Results
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-ear-03
 docidentifier:
+- content: draft-ietf-rats-ear
+  type: Internet-Draft
 - content: draft-ietf-rats-ear-03
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-rats-ear
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-rats-ear
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Linaro
+        - language: en
+          content: Linaro
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Eric
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sergei
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Arm Limited
+        - language: en
+          content: Arm Limited
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Henk
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -109,7 +118,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Fraunhofer SIT
+        - language: en
+          content: Fraunhofer SIT
 version:
 - content: '03'
 language:
@@ -119,25 +129,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document defines the EAT Attestation Result (EAR) message format.
-    EAR is used by a verifier to encode the result of the appraisal over an attester's
-    evidence. It embeds an AR4SI's "trustworthiness vector" to present a normalized
-    view of the evaluation results, thus easing the task of defining and computing
-    authorization policies by relying parties. Alongside the trustworthiness vector,
-    EAR provides contextual information bound to the appraisal process. This allows
-    a relying party (or an auditor) to reconstruct the frame of reference in which
-    the trustworthiness vector was originally computed. EAR supports simple devices
-    with one attester as well as composite devices that are made of multiple attesters,
-    allowing the state of each attester to be separately examined. EAR can also accommodate
-    registered and unregistered extensions. It can be serialized and protected using
-    either CWT or JWT.</p>
-  format: text/html
+  content: |-
+    <p>This document defines the EAT Attestation Result (EAR) message
+       format.
+
+       EAR is used by a verifier to encode the result of the appraisal over
+       an attester's evidence.  It embeds an AR4SI's "trustworthiness
+       vector" to present a normalized view of the evaluation results, thus
+       easing the task of defining and computing authorization policies by
+       relying parties.  Alongside the trustworthiness vector, EAR provides
+       contextual information bound to the appraisal process.  This allows a
+       relying party (or an auditor) to reconstruct the frame of reference
+       in which the trustworthiness vector was originally computed.  EAR
+       supports simple devices with one attester as well as composite
+       devices that are made of multiple attesters, allowing the state of
+       each attester to be separately examined.  EAR can also accommodate
+       registered and unregistered extensions.  It can be serialized and
+       protected using either CWT or JWT.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-ietf-rats-ear-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-ear-02
     docidentifier:
     - content: draft-ietf-rats-ear-02
       type: Internet-Draft
@@ -146,7 +162,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-ietf-rats-ear-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-rats-ear-04
     docidentifier:
     - content: draft-ietf-rats-ear-04
       type: Internet-Draft
@@ -157,10 +175,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-rats-ear-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

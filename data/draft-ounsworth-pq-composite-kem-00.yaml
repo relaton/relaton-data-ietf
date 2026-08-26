@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Composite KEM For Use In Internet PKI
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-kem-00
 docidentifier:
+- content: draft-ounsworth-pq-composite-kem
+  type: Internet-Draft
 - content: draft-ounsworth-pq-composite-kem-00
   type: Internet-Draft
   primary: true
-- content: I-D.ounsworth-pq-composite-kem
-  type: IETF
-  scope: anchor
 docnumber: I-D.ounsworth-pq-composite-kem
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Entrust Limited
+        - language: en
+          content: Entrust Limited
 version:
 - content: '00'
 language:
@@ -75,39 +79,53 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The migration to post-quantum cryptography is unique in the history
-    of modern digital cryptography in that neither the old outgoing nor the new incoming
-    algorithms are fully trusted to protect data for the required data lifetimes.
-    The outgoing algorithms, such as RSA and elliptic curve, may fall to quantum cryptanalysis,
-    while the incoming post-quantum algorithms face uncertainty about both the underlying
-    mathematics as well as hardware and software implementations that have not had
-    sufficient maturing time to rule out classical cryptanalytic attacks and implementation
-    bugs. Cautious Implementers may wish to layer cryptographic algorithms such that
-    an attacker would need to break all of them in order to compromise the data being
-    protected. For digital signatures, this is referred to as "dual", and for encryption
-    key establishment this as referred to as "hybrid". This document, and its companions,
-    defines a specific instantiation of the dual and hybrid paradigm called "composite"
-    where multiple cryptographic algorithms are combined to form a single key, signature,
-    or key encapsulation mechanism (KEM) such that they can be treated as a single
-    atomic object at the protocol level. EDNOTE: the terms "dual" and "hybrid" are
-    currently in flux. We anticipate an Informational draft to normalize terminology,
-    and will update this draft accordingly. This document defines a Composite key
-    encapsulation mechanism (KEM) procedure, for use with Composite keys which consist
-    of combinations of Encryption or KEM algorithms for each composite component algorithm.
-    This document also introduces the idea of assigning an Object Identifier (OID)
-    to a shared secret combiner so that stronger combiners can be implemented in the
-    future without needing to re- issue this specification. This document is intended
-    to be coupled with the composite keys structure define in [I-D.ounsworth-pq-composite-keys]
-    and the CMS KEM-TRANS mechanism in [I-D.perret-prat-lamps-cms-pq-kem].</p>'
-  format: text/html
+  content: |-
+    <p>The migration to post-quantum cryptography is unique in the history
+       of modern digital cryptography in that neither the old outgoing nor
+       the new incoming algorithms are fully trusted to protect data for the
+       required data lifetimes.  The outgoing algorithms, such as RSA and
+       elliptic curve, may fall to quantum cryptanalysis, while the incoming
+       post-quantum algorithms face uncertainty about both the underlying
+       mathematics as well as hardware and software implementations that
+       have not had sufficient maturing time to rule out classical
+       cryptanalytic attacks and implementation bugs.
+
+       Cautious Implementers may wish to layer cryptographic algorithms such
+       that an attacker would need to break all of them in order to
+       compromise the data being protected.  For digital signatures, this is
+       referred to as "dual", and for encryption key establishment this as
+       referred to as "hybrid".  This document, and its companions, defines
+       a specific instantiation of the dual and hybrid paradigm called
+       "composite" where multiple cryptographic algorithms are combined to
+       form a single key, signature, or key encapsulation mechanism (KEM)
+       such that they can be treated as a single atomic object at the
+       protocol level.
+
+       EDNOTE: the terms "dual" and "hybrid" are currently in flux.  We
+       anticipate an Informational draft to normalize terminology, and will
+       update this draft accordingly.
+
+       This document defines a Composite key encapsulation mechanism (KEM)
+       procedure, for use with Composite keys which consist of combinations
+       of Encryption or KEM algorithms for each composite component
+       algorithm.  This document also introduces the idea of assigning an
+       Object Identifier (OID) to a shared secret combiner so that stronger
+       combiners can be implemented in the future without needing to re-
+       issue this specification.
+
+       This document is intended to be coupled with the composite keys
+       structure define in [I-D.ounsworth-pq-composite-keys] and the CMS
+       KEM-TRANS mechanism in [I-D.perret-prat-lamps-cms-pq-kem].</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ounsworth-pq-composite-kem-02
-      format: text/plain
+      content: draft-ounsworth-pq-composite-kem-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ounsworth-pq-composite-kem-01
     docidentifier:
-    - content: draft-ounsworth-pq-composite-kem-02
+    - content: draft-ounsworth-pq-composite-kem-01
       type: Internet-Draft
       primary: true
 series:
@@ -116,10 +134,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ounsworth-pq-composite-kem-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

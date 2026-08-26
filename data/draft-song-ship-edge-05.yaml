@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Short Hierarchical IP Addresses for Edge Networks
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-song-ship-edge-05
 docidentifier:
+- content: draft-song-ship-edge
+  type: Internet-Draft
 - content: draft-song-ship-edge-05
   type: Internet-Draft
   primary: true
-- content: I-D.song-ship-edge
-  type: IETF
-  scope: anchor
 docnumber: I-D.song-ship-edge
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Haoyu
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Futurewei Technologies
+        - language: en
+          content: Futurewei Technologies
 version:
 - content: '05'
 language:
@@ -53,27 +54,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>To mitigate the IPv6 header overhead and improve the scalability and
-    performance in edge networks, this draft proposes to use short hierarchical IP
-    addresses excluding the network prefix within edge networks. An edge network can
-    be further organized into a hierarchical architecture containing one or more levels
-    of networks. While each end node only needs to keep a short address suffix as
-    its identifier, the border routers for each hierarchical level are responsible
-    for address augmenting and pruning when a packet leaves or enter a lower level
-    network. Specifically, the top-level border routers of an edge network convert
-    the internal IP header to and from the standard IPv6 header. This draft presents
-    an incrementally deployable scheme allowing packet header to be effectively compressed
-    in edge networks without affecting the network interoperability. Simplifying both
-    network data plane and control plane, the SHIP architecture is suitable for any
-    types of edge networks, especially when low latency, high performance, and high
-    bandwidth efficiency are required.</p>"
-  format: text/html
+  content: |-
+    <p>To mitigate the IPv6 header overhead and improve the scalability and
+       performance in edge networks, this draft proposes to use short
+       hierarchical IP addresses excluding the network prefix within edge
+       networks.  An edge network can be further organized into a
+       hierarchical architecture containing one or more levels of networks.
+       While each end node only needs to keep a short address suffix as its
+       identifier, the border routers for each hierarchical level are
+       responsible for address augmenting and pruning when a packet leaves
+       or enter a lower level network.  Specifically, the top-level border
+       routers of an edge network convert the internal IP header to and from
+       the standard IPv6 header.  This draft presents an incrementally
+       deployable scheme allowing packet header to be effectively compressed
+       in edge networks without affecting the network interoperability.
+       Simplifying both network data plane and control plane, the SHIP
+       architecture is suitable for any types of edge networks, especially
+       when low latency, high performance, and high bandwidth efficiency are
+       required.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-song-ship-edge-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-song-ship-edge-04
     docidentifier:
     - content: draft-song-ship-edge-04
       type: Internet-Draft
@@ -84,10 +90,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-song-ship-edge-05
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

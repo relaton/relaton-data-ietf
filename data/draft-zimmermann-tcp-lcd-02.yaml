@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Make TCP more Robust to Long Connectivity Disruptions
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zimmermann-tcp-lcd-02
 docidentifier:
+- content: draft-zimmermann-tcp-lcd
+  type: Internet-Draft
 - content: draft-zimmermann-tcp-lcd-02
   type: Internet-Draft
   primary: true
-- content: I-D.zimmermann-tcp-lcd
-  type: IETF
-  scope: anchor
 docnumber: I-D.zimmermann-tcp-lcd
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: RWTH Aachen University
+        - language: en
+          content: RWTH Aachen University
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Arnd
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: RWTH Aachen University
+        - language: en
+          content: RWTH Aachen University
 version:
 - content: '02'
 language:
@@ -75,30 +79,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Disruptions in end-to-end path connectivity which last longer than
-    one retransmission timeout cause suboptimal TCP performance. The reason for the
-    performance degradation is that TCP interprets segment loss induced by connectivity
-    disruptions as a sign of congestion, resulting in repeated backoffs of the retransmission
-    timer. This leads in turn to a deferred detection of the re-establishment of the
-    connection since TCP waits until the next retransmission timeout occurs before
-    attempting the retransmission. This document describes how standard ICMP messages
-    can be exploited to disambiguate true congestion loss from non-congestion loss
-    caused by long connectivity disruptions. Moreover, a revert strategy of the retransmission
-    timer is specified that enables a more prompt detection of whether the connectivity
-    to a previously disconnected peer node has been restored or not. The specified
-    algorithm is a TCP sender-only modification that effectively improves TCP performance
-    in presence of connectivity disruptions.</p>"
-  format: text/html
+  content: |-
+    <p>Disruptions in end-to-end path connectivity which last longer than
+    one retransmission timeout cause suboptimal TCP performance.  The
+    reason for the performance degradation is that TCP interprets segment
+    loss induced by connectivity disruptions as a sign of congestion,
+    resulting in repeated backoffs of the retransmission timer.  This
+    leads in turn to a deferred detection of the re-establishment of the
+    connection since TCP waits until the next retransmission timeout
+    occurs before attempting the retransmission.
+
+    This document describes how standard ICMP messages can be exploited
+    to disambiguate true congestion loss from non-congestion loss caused
+    by long connectivity disruptions.  Moreover, a revert strategy of the
+    retransmission timer is specified that enables a more prompt
+    detection of whether the connectivity to a previously disconnected
+    peer node has been restored or not.  The specified algorithm is a TCP
+    sender-only modification that effectively improves TCP performance in
+    presence of connectivity disruptions.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-zimmermann-tcp-lcd-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

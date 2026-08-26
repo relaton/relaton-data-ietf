@@ -1,14 +1,15 @@
 ---
 id: drafthomburgdelegincrementaldeleg
 schema_version: v1.5.6
+formattedref:
+  content: draft-homburg-deleg-incremental-deleg
 title:
 - language: en
   script: Latn
   content: Incrementally Deployable Extensible Delegation for DNS
-  format: text/plain
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-incremental-deleg-02
+  content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-incremental-deleg-03
 docidentifier:
 - content: draft-homburg-deleg-incremental-deleg
   type: Internet-Draft
@@ -19,25 +20,32 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document proposes a mechanism for extensible delegations in the
-    DNS. The mechanism realizes delegations with resource record sets placed below
-    a _deleg label in the apex of the delegating zone. This authoritative delegation
-    point can be aliased to other names using CNAME and DNAME. This document proposes
-    a new DNS resource record type, IDELEG, which is based on the SVCB and inherits
-    extensibility from it. Support in recursive resolvers suffices for the mechanism
-    to be fully functional. The number of subsequent interactions between the recursive
-    resolver and the authoritative name servers is comparable with those for DNS Query
-    Name Minimisation. Additionally, but not required, support in the authoritative
-    name servers enables optimized behavior with reduced (simultaneous) queries. None,
-    mixed or full deployment of the mechanism on authoritative name servers are all
-    fully functional, allowing for the mechanism to be incrementally deployed.</p>"
-  format: text/html
+  content: |-
+    <p>This document proposes a mechanism for extensible delegations in the
+       DNS.  The mechanism realizes delegations with resource record sets
+       placed below a _deleg label in the apex of the delegating zone.  This
+       authoritative delegation point can be aliased to other names using
+       CNAME and DNAME.  This document proposes a new DNS resource record
+       type, IDELEG, which is based on the SVCB and inherits extensibility
+       from it.
+
+       Support in recursive resolvers suffices for the mechanism to be fully
+       functional.  The number of subsequent interactions between the
+       recursive resolver and the authoritative name servers is comparable
+       with those for DNS Query Name Minimisation.  Additionally, but not
+       required, support in the authoritative name servers enables optimized
+       behavior with reduced (simultaneous) queries.  None, mixed or full
+       deployment of the mechanism on authoritative name servers are all
+       fully functional, allowing for the mechanism to be incrementally
+       deployed.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-homburg-deleg-incremental-deleg-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-incremental-deleg-00
     docidentifier:
     - content: draft-homburg-deleg-incremental-deleg-00
       type: Internet-Draft
@@ -46,7 +54,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-homburg-deleg-incremental-deleg-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-incremental-deleg-01
     docidentifier:
     - content: draft-homburg-deleg-incremental-deleg-01
       type: Internet-Draft
@@ -55,7 +65,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-homburg-deleg-incremental-deleg-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-incremental-deleg-02
     docidentifier:
     - content: draft-homburg-deleg-incremental-deleg-02
       type: Internet-Draft
@@ -64,7 +76,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-homburg-deleg-incremental-deleg-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-homburg-deleg-incremental-deleg-03
     docidentifier:
     - content: draft-homburg-deleg-incremental-deleg-03
       type: Internet-Draft
@@ -73,4 +87,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

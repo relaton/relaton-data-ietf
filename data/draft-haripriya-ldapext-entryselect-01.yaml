@@ -7,17 +7,15 @@ title:
   script: Latn
   content: EntrySelection control for LDAP modify and delete operations on multiple
     entries
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-haripriya-ldapext-entryselect-01
 docidentifier:
+- content: draft-haripriya-ldapext-entryselect
+  type: Internet-Draft
 - content: draft-haripriya-ldapext-entryselect-01
   type: Internet-Draft
   primary: true
-- content: I-D.haripriya-ldapext-entryselect
-  type: IETF
-  scope: anchor
 docnumber: I-D.haripriya-ldapext-entryselect
 date:
 - type: published
@@ -29,6 +27,7 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -48,31 +47,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an LDAPv3 control that can select multiple entries
-    in a subtree of a container entry for modification or deletion. This control extends
-    the scope of the LDAPv3 modify and delete operations as defined in [RFC 2251].
-    This control is useful for modifying or deleting multiple entries on the basis
-    of a single selection criterion. This may be useful for maintenance of an LDAP
-    directory having a large number of objects. Example of Usage - This control can
-    be used by client applications who have the need to modify or delete a large number
-    of entries in an LDAP directory based on a selection criterion. One example of
-    such a usage is when two departments in an organization merge. In this case the
-    'department' name or number given to a number of employees need to change, and
-    all the employees in a given department are to be assigned the new 'department'.
-    Here the EntrySelection control can be used to select the entries to be modified
-    based on the 'department' value, and the modify operation can change the 'department'
-    value for all the selected entries to the given value.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines an LDAPv3 control that can select multiple
+    entries in a subtree of a container entry for modification or
+    deletion.  This control extends the scope of the LDAPv3 modify and
+    delete operations as defined in [RFC 2251]. This control is useful
+    for modifying or deleting multiple entries on the basis of a
+    single selection criterion.  This may be useful for maintenance of
+    an LDAP directory having a large number of objects.
+    Example of Usage - This control can be used by client applications
+    who have the need to modify or delete a large number of entries in
+    an LDAP directory based on a selection criterion. One example of
+    such a usage is when two departments in an organization merge. In
+    this case the 'department' name or number given to a number of
+    employees need to change, and all the employees in a given
+    department are to be assigned the new 'department'. Here the
+    EntrySelection control can be used to select the entries to be
+    modified based on the 'department' value, and the modify operation
+    can change the 'department' value for all the selected entries to
+    the given value.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-haripriya-ldapext-entryselect-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

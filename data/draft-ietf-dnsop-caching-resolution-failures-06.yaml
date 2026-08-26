@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Negative Caching of DNS Resolution Failures
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-caching-resolution-failures-06
 docidentifier:
+- content: draft-ietf-dnsop-caching-resolution-failures
+  type: Internet-Draft
 - content: draft-ietf-dnsop-caching-resolution-failures-06
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-dnsop-caching-resolution-failures
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-dnsop-caching-resolution-failures
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Duane
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verisign
+        - language: en
+          content: Verisign
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: William
       - language: en
+        script: Latn
         initial: W
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verisign
+        - language: en
+          content: Verisign
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matthew
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -87,7 +93,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Verisign
+        - language: en
+          content: Verisign
 version:
 - content: '06'
 language:
@@ -97,38 +104,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In the DNS, resolvers employ caching to reduce both latency for end
-    users and load on authoritative name servers. The process of resolution may result
-    in one of three types of responses: (1) a response containing the requested data;
-    (2) a response indicating the requested data does not exist; or (3) a non-response
-    due to a resolution failure in which the resolver does not receive any useful
-    information regarding the data's existence. This document concerns itself only
-    with the third type. RFC 2308 specifies requirements for DNS negative caching.
-    There, caching of type (1) and (2) responses is mandatory and caching of type
-    (3) responses is optional. This document updates RFC 2308 to require negative
-    caching for DNS resolution failures. RFC 4035 allows DNSSEC validation failure
-    caching. This document updates RFC 4035 to require caching for DNSSEC validation
-    failures. RFC 4697 prohibits aggressive requerying for NS records at a failed
-    zone's parent zone. This document updates RFC 4697 to expand this requirement
-    to all query types and to all ancestor zones.</p>"
-  format: text/html
+  content: |-
+    <p>In the DNS, resolvers employ caching to reduce both latency for end
+       users and load on authoritative name servers.  The process of
+       resolution may result in one of three types of responses: (1) a
+       response containing the requested data; (2) a response indicating the
+       requested data does not exist; or (3) a non-response due to a
+       resolution failure in which the resolver does not receive any useful
+       information regarding the data's existence.  This document concerns
+       itself only with the third type.
+
+       RFC 2308 specifies requirements for DNS negative caching.  There,
+       caching of type (1) and (2) responses is mandatory and caching of
+       type (3) responses is optional.  This document updates RFC 2308 to
+       require negative caching for DNS resolution failures.
+
+       RFC 4035 allows DNSSEC validation failure caching.  This document
+       updates RFC 4035 to require caching for DNSSEC validation failures.
+
+       RFC 4697 prohibits aggressive requerying for NS records at a failed
+       zone's parent zone.  This document updates RFC 4697 to expand this
+       requirement to all query types and to all ancestor zones.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-dnsop-caching-resolution-failures-03
-      format: text/plain
+      content: draft-ietf-dnsop-caching-resolution-failures-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-caching-resolution-failures-05
     docidentifier:
-    - content: draft-ietf-dnsop-caching-resolution-failures-03
+    - content: draft-ietf-dnsop-caching-resolution-failures-05
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-ietf-dnsop-caching-resolution-failures-08
-      format: text/plain
+      content: draft-ietf-dnsop-caching-resolution-failures-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-caching-resolution-failures-07
     docidentifier:
-    - content: draft-ietf-dnsop-caching-resolution-failures-08
+    - content: draft-ietf-dnsop-caching-resolution-failures-07
       type: Internet-Draft
       primary: true
 series:
@@ -137,10 +154,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-dnsop-caching-resolution-failures-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

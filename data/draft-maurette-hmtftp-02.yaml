@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'HMTFTP: HMAC-Derived TFTP with Optional AEAD Protection (v0.2)'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-02
 docidentifier:
+- content: draft-maurette-hmtftp
+  type: Internet-Draft
 - content: draft-maurette-hmtftp-02
   type: Internet-Draft
   primary: true
-- content: I-D.maurette-hmtftp
-  type: IETF
-  scope: anchor
 docnumber: I-D.maurette-hmtftp
 date:
 - type: published
@@ -37,7 +35,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IUT R&T Béthune
+        - language: en
+          content: IUT R&T Béthune
 version:
 - content: '02'
 language:
@@ -47,30 +46,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>HMTFTP is a lightweight UDP file transfer protocol that preserves the
-    simplicity of TFTP (block-and-ACK) while adding a structured TLV extension mechanism
-    and an optional authenticated-encryption mode. When negotiated, DATA payloads
-    are protected with AEAD AES-256-GCM and keys are derived with HKDF-SHA-256 from
-    a pre-shared key (PSK). The default UDP port is TBD (requested: 6369) and implementations
-    MUST allow it to be configured.</p>"
-  format: text/html
+  content: |-
+    <p>HMTFTP is a lightweight UDP file transfer protocol that preserves the
+       simplicity of TFTP (block-and-ACK) while adding a structured TLV
+       extension mechanism and an optional authenticated-encryption mode.
+       When negotiated, DATA payloads are protected with AEAD AES-256-GCM
+       and keys are derived with HKDF-SHA-256 from a pre-shared key (PSK).
+       The default UDP port is TBD (requested: 6369) and implementations
+       MUST allow it to be configured.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-maurette-hmtftp-00
-      format: text/plain
+      content: draft-maurette-hmtftp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-01
     docidentifier:
-    - content: draft-maurette-hmtftp-00
+    - content: draft-maurette-hmtftp-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-maurette-hmtftp-06
-      format: text/plain
+      content: draft-maurette-hmtftp-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-maurette-hmtftp-03
     docidentifier:
-    - content: draft-maurette-hmtftp-06
+    - content: draft-maurette-hmtftp-03
       type: Internet-Draft
       primary: true
 series:
@@ -79,10 +83,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-maurette-hmtftp-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

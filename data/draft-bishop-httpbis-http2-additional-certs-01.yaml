@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Secondary Certificate Authentication in HTTP/2
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-bishop-httpbis-http2-additional-certs-01
 docidentifier:
+- content: draft-bishop-httpbis-http2-additional-certs
+  type: Internet-Draft
 - content: draft-bishop-httpbis-http2-additional-certs-01
   type: Internet-Draft
   primary: true
-- content: I-D.bishop-httpbis-http2-additional-certs
-  type: IETF
-  scope: anchor
 docnumber: I-D.bishop-httpbis-http2-additional-certs
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mike
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Martin
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -67,26 +69,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>TLS provides fundamental mutual authentication services for HTTP, supporting
-    up to one server certificate and up to one client certificate associated to the
-    session to prove client and server identities as necessary. This draft provides
-    mechanisms for providing additional such certificates at the HTTP layer when these
-    constraints are not sufficient. Many HTTP servers host content from several origins.
-    HTTP/2 [RFC7540] permits clients to reuse an existing HTTP connection to a server
-    provided that the secondary origin is also in the certificate provided during
-    the TLS [I-D.ietf-tls-tls13] handshake. In many cases, servers will wish to maintain
-    separate certificates for different origins but still desire the benefits of a
-    shared HTTP connection. Similarly, servers may require clients to present authentication,
-    but have different requirements based on the content the client is attempting
-    to access. This document describes a how such certificates can be provided at
-    the HTTP layer to support both scenarios.</p>"
-  format: text/html
+  content: |-
+    <p>TLS provides fundamental mutual authentication services for HTTP,
+       supporting up to one server certificate and up to one client
+       certificate associated to the session to prove client and server
+       identities as necessary.  This draft provides mechanisms for
+       providing additional such certificates at the HTTP layer when these
+       constraints are not sufficient.
+
+       Many HTTP servers host content from several origins.  HTTP/2
+       [RFC7540] permits clients to reuse an existing HTTP connection to a
+       server provided that the secondary origin is also in the certificate
+       provided during the TLS [I-D.ietf-tls-tls13] handshake.
+
+       In many cases, servers will wish to maintain separate certificates
+       for different origins but still desire the benefits of a shared HTTP
+       connection.  Similarly, servers may require clients to present
+       authentication, but have different requirements based on the content
+       the client is attempting to access.
+
+       This document describes a how such certificates can be provided at
+       the HTTP layer to support both scenarios.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-bishop-httpbis-http2-additional-certs-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bishop-httpbis-http2-additional-certs-00
     docidentifier:
     - content: draft-bishop-httpbis-http2-additional-certs-00
       type: Internet-Draft
@@ -94,10 +105,12 @@ relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-bishop-httpbis-http2-additional-certs-04
-      format: text/plain
+      content: draft-bishop-httpbis-http2-additional-certs-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bishop-httpbis-http2-additional-certs-02
     docidentifier:
-    - content: draft-bishop-httpbis-http2-additional-certs-04
+    - content: draft-bishop-httpbis-http2-additional-certs-02
       type: Internet-Draft
       primary: true
 series:
@@ -106,10 +119,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-bishop-httpbis-http2-additional-certs-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

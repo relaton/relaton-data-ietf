@@ -1,11 +1,12 @@
 ---
 id: draftwangidrdpf
 schema_version: v1.5.6
+formattedref:
+  content: draft-wang-idr-dpf
 title:
 - language: en
   script: Latn
   content: BGP Deterministic Path Forwarding (DPF)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wang-idr-dpf-01
@@ -19,27 +20,33 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Modern data center (DC) fabrics typically employ Clos topologies with
-    External BGP (EBGP) for plain IPv4/IPv6 routing. While hop-by-hop EBGP routing
-    is simple and scalable, it provides only a single best- effort forwarding service
-    for all types of traffic. This single best-effort service might be insufficient
-    for increasingly diverse traffic requirements in modern DC environments. For example,
-    loss and latency sensitive AI/ML flows may demand stronger Service Level Agreements
-    (SLA) than general purpose traffic. Duplication schemes which are standardized
-    through protocols such as Parallel Redundancy Protocol (PRP) require disjoint
-    forwarding paths to avoid single points of failure. Congestion avoidance may require
-    more deterministic forwarding behavior. This document introduces BGP Deterministic
-    Path Forwarding (DPF), a mechanism that partitions the physical fabric into multiple
-    logical fabrics. Flows can be mapped to different logical fabrics based on their
-    specific requirements, enabling deterministic forwarding behavior within the data
-    center.</p>"
-  format: text/html
+  content: |-
+    <p>Modern data center (DC) fabrics typically employ Clos topologies with
+       External BGP (EBGP) for plain IPv4/IPv6 routing.  While hop-by-hop
+       EBGP routing is simple and scalable, it provides only a single best-
+       effort forwarding service for all types of traffic.  This single
+       best-effort service might be insufficient for increasingly diverse
+       traffic requirements in modern DC environments.  For example, loss
+       and latency sensitive AI/ML flows may demand stronger Service Level
+       Agreements (SLA) than general purpose traffic.  Duplication schemes
+       which are standardized through protocols such as Parallel Redundancy
+       Protocol (PRP) require disjoint forwarding paths to avoid single
+       points of failure.  Congestion avoidance may require more
+       deterministic forwarding behavior.
+
+       This document introduces BGP Deterministic Path Forwarding (DPF), a
+       mechanism that partitions the physical fabric into multiple logical
+       fabrics.  Flows can be mapped to different logical fabrics based on
+       their specific requirements, enabling deterministic forwarding
+       behavior within the data center.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-wang-idr-dpf-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-dpf-00
     docidentifier:
     - content: draft-wang-idr-dpf-00
       type: Internet-Draft
@@ -48,7 +55,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wang-idr-dpf-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-idr-dpf-01
     docidentifier:
     - content: draft-wang-idr-dpf-01
       type: Internet-Draft
@@ -57,4 +66,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

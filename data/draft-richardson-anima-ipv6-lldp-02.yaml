@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: IPv6 over Link-Local Discovery Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-richardson-anima-ipv6-lldp-02
 docidentifier:
+- content: draft-richardson-anima-ipv6-lldp
+  type: Internet-Draft
 - content: draft-richardson-anima-ipv6-lldp-02
   type: Internet-Draft
   primary: true
-- content: I-D.richardson-anima-ipv6-lldp
-  type: IETF
-  scope: anchor
 docnumber: I-D.richardson-anima-ipv6-lldp
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Michael
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Sandelman Software Works
+        - language: en
+          content: Sandelman Software Works
 version:
 - content: '02'
 language:
@@ -53,29 +54,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a mechanism to encapsulate IPv6 packets over
-    the Link-Local Discovery Protocol (LLDP). The LLDP is a single layer-two protocol
-    and is never forwarded, which is a desireable property when building the IPv6-over-IPsec-over-IPv6-Link-Local
-    tunnels that make up the ANIMA Autonomic Control Plane (ACP). This unorthodox
-    encapsulation avoids unwanted interactions between the ACP packets and native
-    packet forwarding engines, as well as being safe for layer-2 switches which might
-    otherwise have no IPv6 capabilities.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a mechanism to encapsulate IPv6 packets over
+       the Link-Local Discovery Protocol (LLDP).  The LLDP is a single
+       layer-two protocol and is never forwarded, which is a desireable
+       property when building the IPv6-over-IPsec-over-IPv6-Link-Local
+       tunnels that make up the ANIMA Autonomic Control Plane (ACP).
+
+       This unorthodox encapsulation avoids unwanted interactions between
+       the ACP packets and native packet forwarding engines, as well as
+       being safe for layer-2 switches which might otherwise have no IPv6
+       capabilities.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-richardson-anima-ipv6-lldp-00
-      format: text/plain
+      content: draft-richardson-anima-ipv6-lldp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-richardson-anima-ipv6-lldp-01
     docidentifier:
-    - content: draft-richardson-anima-ipv6-lldp-00
+    - content: draft-richardson-anima-ipv6-lldp-01
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-richardson-anima-ipv6-lldp-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-richardson-anima-ipv6-lldp-03
     docidentifier:
     - content: draft-richardson-anima-ipv6-lldp-03
       type: Internet-Draft
@@ -86,10 +94,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-richardson-anima-ipv6-lldp-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

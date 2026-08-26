@@ -7,17 +7,15 @@ title:
   script: Latn
   content: 'The Agent Action Decision Protocol (AADP): Per-Action Authorization for
     AI Agents'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-saha-aadp-01
 docidentifier:
+- content: draft-saha-aadp
+  type: Internet-Draft
 - content: draft-saha-aadp-01
   type: Internet-Draft
   primary: true
-- content: I-D.saha-aadp
-  type: IETF
-  scope: anchor
 docnumber: I-D.saha-aadp
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shamik
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -44,7 +44,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Independent
+        - language: en
+          content: Independent
 version:
 - content: '01'
 language:
@@ -54,30 +55,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Agent Action Decision Protocol (AADP) separates per-action authorization
-    from an agent's identity and its standing capabilities, and gives that authorization
-    semantics that a stateless tool permission or access grant cannot express: whether
-    a specific proposed action, with specific argument values, may be performed now,
-    given mutable state such as cumulative budgets, live reservations, approval lifecycle,
-    and a kill switch. Existing agent-security work concentrates on identity -- who
-    an agent is, what credentials it holds, and which tools it may reach; AADP addresses
-    the complementary decision, and composes with that work rather than replacing
-    it. This document defines a two-phase wire contract between a Policy Decision
-    Point (PDP) that authorizes agent actions and the Policy Enforcement Points (PEPs)
-    that perform them: verdicts with machine-readable reasons, obligations that fail
-    closed, atomic budget reservation, an approval lifecycle, idempotency behavior,
-    evidence sufficient to re- derive every verdict, and a set of evaluation invariants
-    any conformant decision point must observe -- including the rule that an irreversible
-    action is never executed autonomously. The protocol is transport-agnostic and
-    is designed so that decision points and enforcement points can be implemented
-    independently, in different languages, by different parties.</p>"
-  format: text/html
+  content: |-
+    <p>The Agent Action Decision Protocol (AADP) separates per-action
+       authorization from an agent's identity and its standing capabilities,
+       and gives that authorization semantics that a stateless tool
+       permission or access grant cannot express: whether a specific
+       proposed action, with specific argument values, may be performed now,
+       given mutable state such as cumulative budgets, live reservations,
+       approval lifecycle, and a kill switch.  Existing agent-security work
+       concentrates on identity -- who an agent is, what credentials it
+       holds, and which tools it may reach; AADP addresses the complementary
+       decision, and composes with that work rather than replacing it.  This
+       document defines a two-phase wire contract between a Policy Decision
+       Point (PDP) that authorizes agent actions and the Policy Enforcement
+       Points (PEPs) that perform them: verdicts with machine-readable
+       reasons, obligations that fail closed, atomic budget reservation, an
+       approval lifecycle, idempotency behavior, evidence sufficient to re-
+       derive every verdict, and a set of evaluation invariants any
+       conformant decision point must observe -- including the rule that an
+       irreversible action is never executed autonomously.  The protocol is
+       transport-agnostic and is designed so that decision points and
+       enforcement points can be implemented independently, in different
+       languages, by different parties.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-saha-aadp-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saha-aadp-00
     docidentifier:
     - content: draft-saha-aadp-00
       type: Internet-Draft
@@ -88,10 +95,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-saha-aadp-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Centralized Replication for BUM traffic in active-active edge connection
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-hao-trill-centralized-replication-02
 docidentifier:
+- content: draft-hao-trill-centralized-replication
+  type: Internet-Draft
 - content: draft-hao-trill-centralized-replication-02
   type: Internet-Draft
   primary: true
-- content: I-D.hao-trill-centralized-replication
-  type: IETF
-  scope: anchor
 docnumber: I-D.hao-trill-centralized-replication
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hao
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yizhou
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -65,15 +68,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Tao
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -87,15 +93,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Huawei
+        - language: en
+          content: Huawei
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Susan
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -109,15 +118,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hickory Hill Consulting
+        - language: en
+          content: Hickory Hill Consulting
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Muhammad
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -131,15 +143,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Brocade
+        - language: en
+          content: Brocade
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Sujay
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -153,7 +168,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: IP Infusion
+        - language: en
+          content: IP Infusion
 version:
 - content: '02'
 language:
@@ -163,26 +179,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In TRILL active-active access scenario, RPF check failure issue may
-    occur when pseudo-nickname mechanism in [TRILLPN] is used. This draft describes
-    a solution to the RPF check failure issue through centralized replication for
-    BUM (Broadcast, Unknown unicast, Mutlicast) traffic. The solution has all ingress
-    RBs send BUM traffic to a centralized node via unicast TRILL encapsulation. When
-    the centralized node receives the BUM traffic, it decapsulates the traffic and
-    forwards the BUM traffic to all destination RBs using a distribution tree established
-    via the TRILL base protocol. To avoid RPF check failure on a RBridge sitting between
-    the ingress RBridge and the centralized replication node, some change of RPF calculation
-    algorithm is required. RPF calculation on each RBridge should use the centralized
-    node as ingress RB instead of the real ingress RBridge of RBv to perform the calculation.</p>"
-  format: text/html
+  content: |-
+    <p>In TRILL active-active access scenario, RPF check failure issue may
+       occur when pseudo-nickname mechanism in [TRILLPN] is used. This
+       draft describes a solution to the RPF check failure issue through
+       centralized replication for BUM (Broadcast, Unknown unicast,
+       Mutlicast) traffic. The solution has all ingress RBs send BUM
+       traffic to a centralized node via unicast TRILL encapsulation. When
+       the centralized node receives the BUM traffic, it decapsulates the
+       traffic and forwards the BUM traffic to all destination RBs using a
+       distribution tree established via the TRILL base protocol. To avoid
+       RPF check failure on a RBridge sitting between the ingress RBridge
+       and the centralized replication node, some change of RPF calculation
+       algorithm is required. RPF calculation on each RBridge should use
+       the centralized node as ingress RB instead of the real ingress
+       RBridge of RBv to perform the calculation.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-hao-trill-centralized-replication-00
-      format: text/plain
+      content: draft-hao-trill-centralized-replication-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hao-trill-centralized-replication-01
     docidentifier:
-    - content: draft-hao-trill-centralized-replication-00
+    - content: draft-hao-trill-centralized-replication-01
       type: Internet-Draft
       primary: true
 series:
@@ -191,10 +212,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-hao-trill-centralized-replication-02
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

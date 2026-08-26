@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Redundant Address Deletion when Encapsulating IPv6 in IPv6
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-deering-ipv6-encap-addr-deletion-00
 docidentifier:
+- content: draft-deering-ipv6-encap-addr-deletion
+  type: Internet-Draft
 - content: draft-deering-ipv6-encap-addr-deletion-00
   type: Internet-Draft
   primary: true
-- content: I-D.deering-ipv6-encap-addr-deletion
-  type: IETF
-  scope: anchor
 docnumber: I-D.deering-ipv6-encap-addr-deletion
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         initial: S
       - language: en
+        script: Latn
         initial: E
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Cisco
+        - language: en
+          content: Cisco
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Microsoft
+        - language: en
+          content: Microsoft
 version:
 - content: '00'
 language:
@@ -75,25 +79,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In some potentially common uses of IPv6-in-IPv6 encapsulation ('tunneling'),
-    a node that is performing an encapsulation or decapsulation will also be the source
-    or destination of the packet being encapsulated. That can result in the same IPv6
-    address appearing in both the outer (encapsulating) and inner (encapsulated) IPv6
-    headers. This document specifies a method for deleting such redundant addresses
-    from an inner header when performing an encapsulation, and restoring those addresses
-    when decapsulating, resulting in a 16-octet (128-bit) reduction in header overhead,
-    per address deleted.</p>"
-  format: text/html
+  content: "<p>In some potentially common uses of IPv6-in-IPv6 encapsulation \n('tunneling'),
+    a node that is performing an encapsulation or \ndecapsulation will also be the
+    source or destination of the packet \nbeing encapsulated.  That can result in
+    the same IPv6 address \nappearing in both the outer (encapsulating) and inner
+    (encapsulated) \nIPv6 headers.  This document specifies a method for deleting
+    such \nredundant addresses from an inner header when performing an \nencapsulation,
+    and restoring those addresses when decapsulating, \nresulting in a 16-octet (128-bit)
+    reduction in header overhead, \nper address deleted.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-deering-ipv6-encap-addr-deletion-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -1,11 +1,12 @@
 ---
 id: draftcowlesvolt
 schema_version: v1.5.6
+formattedref:
+  content: draft-cowles-volt
 title:
 - language: en
   script: Latn
   content: Verifiable Operations Ledger and Trace (VOLT) Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-cowles-volt-00
@@ -19,26 +20,32 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: '<p>The Verifiable Operations Ledger and Trace (VOLT) protocol defines
-    a minimal, interoperable format for producing tamper-evident execution traces
-    for agentic AI workflows. VOLT records are linked via SHA-256 hash chains and
-    packaged into portable Evidence Bundles that can be verified independently by
-    any conformant implementation. VOLT functions as a "flight recorder" for AI agent
-    operations: it captures the sequence of events -- messages received, policy decisions
-    evaluated, human approvals granted, tools invoked, and results returned -- with
-    cryptographic integrity guarantees that detect post-hoc modification, deletion,
-    or insertion of records. The protocol is privacy-first by design. Events carry
-    metadata and content-addressed references rather than raw secrets or sensitive
-    payloads. Evidence Bundles support explicit redaction, optional Ed25519 signatures
-    for non-repudiation, and both rolling and final snapshot modes for long-running
-    workflows.</p>'
-  format: text/html
+  content: |-
+    <p>The Verifiable Operations Ledger and Trace (VOLT) protocol defines a
+       minimal, interoperable format for producing tamper-evident execution
+       traces for agentic AI workflows.  VOLT records are linked via SHA-256
+       hash chains and packaged into portable Evidence Bundles that can be
+       verified independently by any conformant implementation.
+
+       VOLT functions as a "flight recorder" for AI agent operations: it
+       captures the sequence of events -- messages received, policy
+       decisions evaluated, human approvals granted, tools invoked, and
+       results returned -- with cryptographic integrity guarantees that
+       detect post-hoc modification, deletion, or insertion of records.
+
+       The protocol is privacy-first by design.  Events carry metadata and
+       content-addressed references rather than raw secrets or sensitive
+       payloads.  Evidence Bundles support explicit redaction, optional
+       Ed25519 signatures for non-repudiation, and both rolling and final
+       snapshot modes for long-running workflows.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-cowles-volt-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cowles-volt-00
     docidentifier:
     - content: draft-cowles-volt-00
       type: Internet-Draft
@@ -47,4 +54,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

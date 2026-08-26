@@ -1,11 +1,12 @@
 ---
 id: draftludwigtsvwgtcpfasttimeouts
 schema_version: v1.5.6
+formattedref:
+  content: draft-ludwig-tsvwg-tcp-fast-timeouts
 title:
 - language: en
   script: Latn
   content: Responding to Fast Timeouts in TCP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ludwig-tsvwg-tcp-fast-timeouts-00
@@ -19,20 +20,24 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A 'fast timeout' occurs if the retransmission timer expires, and afterwards
-    the TCP sender receives the duplicate ACK that would have triggered a fast retransmit
-    of the oldest outstanding segment. In this case, staying in slow start is an unnecessarily
-    drastic response to the congestion indication. Instead, we believe it is safe
-    to back out of the slow start phase but instead go into the fast recovery phase.
-    One benefit of this approach is that the potentially following duplicate ACKs
-    can be exploited for advanced loss recovery algorithms.</p>"
-  format: text/html
+  content: |-
+    <p>A 'fast timeout' occurs if the retransmission timer expires, and
+    afterwards the TCP sender receives the duplicate ACK that would have
+    triggered a fast retransmit of the oldest outstanding segment. In
+    this case, staying in slow start is an unnecessarily drastic response
+    to the congestion indication. Instead, we believe it is safe to back
+    out of the slow start phase but instead go into the fast recovery
+    phase. One benefit of this approach is that the potentially following
+    duplicate ACKs can be exploited for advanced loss recovery
+    algorithms.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ludwig-tsvwg-tcp-fast-timeouts-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ludwig-tsvwg-tcp-fast-timeouts-00
     docidentifier:
     - content: draft-ludwig-tsvwg-tcp-fast-timeouts-00
       type: Internet-Draft
@@ -41,4 +46,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

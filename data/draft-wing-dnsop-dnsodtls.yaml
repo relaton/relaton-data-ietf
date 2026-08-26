@@ -1,11 +1,12 @@
 ---
 id: draftwingdnsopdnsodtls
 schema_version: v1.5.6
+formattedref:
+  content: draft-wing-dnsop-dnsodtls
 title:
 - language: en
   script: Latn
   content: DNS over DTLS (DNSoD)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-wing-dnsop-dnsodtls-01
@@ -19,22 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DNS queries and responses are visible to network elements on the path
-    between the DNS client and its server. These queries and responses can contain
-    privacy-sensitive information which is valuable to protect. An active attacker
-    can send bogus responses causing misdirection of the subsequent connection. To
-    counter passive listening and active attacks, this document proposes the use of
-    Datagram Transport Layer Security (DTLS) for DNS, to protect against passive listeners
-    and certain active attacks. As DNS needs to remain fast, this proposal also discusses
-    mechanisms to reduce DTLS round trips and reduce DTLS handshake size. The proposed
-    mechanism runs over the default DNS port and can also run over an alternate port.</p>"
-  format: text/html
+  content: |-
+    <p>DNS queries and responses are visible to network elements on the path
+       between the DNS client and its server.  These queries and responses
+       can contain privacy-sensitive information which is valuable to
+       protect.  An active attacker can send bogus responses causing
+       misdirection of the subsequent connection.
+
+       To counter passive listening and active attacks, this document
+       proposes the use of Datagram Transport Layer Security (DTLS) for DNS,
+       to protect against passive listeners and certain active attacks.  As
+       DNS needs to remain fast, this proposal also discusses mechanisms to
+       reduce DTLS round trips and reduce DTLS handshake size.  The proposed
+       mechanism runs over the default DNS port and can also run over an
+       alternate port.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-wing-dnsop-dnsodtls-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wing-dnsop-dnsodtls-00
     docidentifier:
     - content: draft-wing-dnsop-dnsodtls-00
       type: Internet-Draft
@@ -43,7 +50,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-wing-dnsop-dnsodtls-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wing-dnsop-dnsodtls-01
     docidentifier:
     - content: draft-wing-dnsop-dnsodtls-01
       type: Internet-Draft
@@ -52,4 +61,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

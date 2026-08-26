@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Reporting of Errors via LAYOUTRETURN in NFSv4.2
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-layrec-03
 docidentifier:
+- content: draft-ietf-nfsv4-layrec
+  type: Internet-Draft
 - content: draft-ietf-nfsv4-layrec-03
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-nfsv4-layrec
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-nfsv4-layrec
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Thomas
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hammerspace
+        - language: en
+          content: Hammerspace
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Trond
       - language: en
+        script: Latn
         initial: T
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Hammerspace
+        - language: en
+          content: Hammerspace
 version:
 - content: '03'
 language:
@@ -75,32 +79,39 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Parallel Network File System (pNFS) allows for a file's metadata
-    (MDS) and data (DS) to be on different servers. When the metadata server is restarted,
-    the client can still modify the data file component. During the recovery phase
-    of startup, the metadata server and the data servers work together to recover
-    state (which files are open, last modification time, size, etc.). If the client
-    has not encountered errors with the data files, then the state can be recovered,
-    avoiding resilvering of the data files. With any errors, there is no means by
-    which the client can report errors to the metadata server. As such, the metadata
-    server has to assume that file needs resilvering. This document presents an extension
-    to RFC8435 to allow the client to update the metadata and avoid the resilvering.</p>"
-  format: text/html
+  content: |-
+    <p>The Parallel Network File System (pNFS) allows for a file's metadata
+       (MDS) and data (DS) to be on different servers.  When the metadata
+       server is restarted, the client can still modify the data file
+       component.  During the recovery phase of startup, the metadata server
+       and the data servers work together to recover state (which files are
+       open, last modification time, size, etc.).  If the client has not
+       encountered errors with the data files, then the state can be
+       recovered, avoiding resilvering of the data files.  With any errors,
+       there is no means by which the client can report errors to the
+       metadata server.  As such, the metadata server has to assume that
+       file needs resilvering.  This document presents an extension to
+       RFC8435 to allow the client to update the metadata and avoid the
+       resilvering.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-ietf-nfsv4-layrec-01
-      format: text/plain
+      content: draft-ietf-nfsv4-layrec-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-layrec-02
     docidentifier:
-    - content: draft-ietf-nfsv4-layrec-01
+    - content: draft-ietf-nfsv4-layrec-02
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-ietf-nfsv4-layrec-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-layrec-04
     docidentifier:
     - content: draft-ietf-nfsv4-layrec-04
       type: Internet-Draft
@@ -111,10 +122,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-nfsv4-layrec-03
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

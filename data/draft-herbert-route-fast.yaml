@@ -1,11 +1,12 @@
 ---
 id: draftherbertroutefast
 schema_version: v1.5.6
+formattedref:
+  content: draft-herbert-route-fast
 title:
 - language: en
   script: Latn
   content: Encoding Routing in Firewall and Service Tickets
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-herbert-route-fast-00
@@ -19,24 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a method to encode routing information in Firewall
-    and Service Tickets (FAST). Encoded routing information provides the local routing
-    for packets sent in either the forward or return paths of a flow. FAST ticket
-    reflection at peer hosts ensures that the routing information is attached to packets
-    being sent in the return path. When a packet with a FAST ticket containing routing
-    information enters the network in which the ticket was issued, the ticket is parsed
-    to extract the routing information and is forwarded per the information. Routing
-    in Firewall and Service Tickets has a number of use cases. It can be used as a
-    type of source routing, used with identifier-locator protocols to provide a locator
-    in the return path, and can be used to specify a backend instance in Layer 4 load
-    balancing for processing connections to a virtual IP address.</p>"
-  format: text/html
+  content: |-
+    <p>This document describes a method to encode routing information in
+       Firewall and Service Tickets (FAST). Encoded routing information
+       provides the local routing for packets sent in either the forward or
+       return paths of a flow. FAST ticket reflection at peer hosts ensures
+       that the routing information is attached to packets being sent in the
+       return path. When a packet with a FAST ticket containing routing
+       information enters the network in which the ticket was issued, the
+       ticket is parsed to extract the routing information and is forwarded
+       per the information. Routing in Firewall and Service Tickets has a
+       number of use cases. It can be used as a type of source routing, used
+       with identifier-locator protocols to provide a locator in the return
+       path, and can be used to specify a backend instance in Layer 4 load
+       balancing for processing connections to a virtual IP address.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-herbert-route-fast-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-herbert-route-fast-00
     docidentifier:
     - content: draft-herbert-route-fast-00
       type: Internet-Draft
@@ -45,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

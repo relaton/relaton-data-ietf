@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Galois Counter Mode with Secure Short Tags (GCM-SST)
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-mattsson-cfrg-aes-gcm-sst-11
 docidentifier:
+- content: draft-mattsson-cfrg-aes-gcm-sst
+  type: Internet-Draft
 - content: draft-mattsson-cfrg-aes-gcm-sst-11
   type: Internet-Draft
   primary: true
-- content: I-D.mattsson-cfrg-aes-gcm-sst
-  type: IETF
-  scope: anchor
 docnumber: I-D.mattsson-cfrg-aes-gcm-sst
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Matt
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Amazon Web Services
+        - language: en
+          content: Amazon Web Services
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Alexander
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,17 +68,21 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: John
       - language: en
+        script: Latn
         initial: J
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -89,7 +96,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 version:
 - content: '11'
 language:
@@ -99,35 +107,42 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Galois Counter Mode with Secure Short Tags
-    (GCM-SST) Authenticated Encryption with Associated Data (AEAD) algorithm. GCM-SST
-    can be used with any keystream generator, not just 128-bit block ciphers. The
-    main differences from GCM are the use of an additional subkey Q, the derivation
-    of fresh subkeys H and Q for each nonce, and the replacement of the GHASH function
-    with the POLYVAL function from AES-GCM-SIV. This enables truncated tags with near-ideal
-    forgery probabilities, even against multiple forgery attacks, which are significant
-    security improvements over GCM. GCM- SST is designed for unicast security protocols
-    with replay protection and addresses the strong industry demand for fast encryption
-    with less overhead and secure short tags. This document registers several instances
-    of GCM-SST using Advanced Encryption Standard (AES) and Rijndael-256-256.</p>"
-  format: text/html
+  content: |-
+    <p>This document defines the Galois Counter Mode with Secure Short Tags
+       (GCM-SST) Authenticated Encryption with Associated Data (AEAD)
+       algorithm.  GCM-SST can be used with any keystream generator, not
+       just 128-bit block ciphers.  The main differences from GCM are the
+       use of an additional subkey Q, the derivation of fresh subkeys H and
+       Q for each nonce, and the replacement of the GHASH function with the
+       POLYVAL function from AES-GCM-SIV.  This enables truncated tags with
+       near-ideal forgery probabilities, even against multiple forgery
+       attacks, which are significant security improvements over GCM.  GCM-
+       SST is designed for unicast security protocols with replay protection
+       and addresses the strong industry demand for fast encryption with
+       less overhead and secure short tags.  This document registers several
+       instances of GCM-SST using Advanced Encryption Standard (AES) and
+       Rijndael-256-256.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-mattsson-cfrg-aes-gcm-sst-03
-      format: text/plain
+      content: draft-mattsson-cfrg-aes-gcm-sst-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mattsson-cfrg-aes-gcm-sst-10
     docidentifier:
-    - content: draft-mattsson-cfrg-aes-gcm-sst-03
+    - content: draft-mattsson-cfrg-aes-gcm-sst-10
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-mattsson-cfrg-aes-gcm-sst-19
-      format: text/plain
+      content: draft-mattsson-cfrg-aes-gcm-sst-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mattsson-cfrg-aes-gcm-sst-12
     docidentifier:
-    - content: draft-mattsson-cfrg-aes-gcm-sst-19
+    - content: draft-mattsson-cfrg-aes-gcm-sst-12
       type: Internet-Draft
       primary: true
 series:
@@ -136,10 +151,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-mattsson-cfrg-aes-gcm-sst-11
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: '"Sharp Close": Elimination of TIME-WAIT state of TCP connections'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kitamura-tcp-sharp-close-00
 docidentifier:
+- content: draft-kitamura-tcp-sharp-close
+  type: Internet-Draft
 - content: draft-kitamura-tcp-sharp-close-00
   type: Internet-Draft
   primary: true
-- content: I-D.kitamura-tcp-sharp-close
-  type: IETF
-  scope: anchor
 docnumber: I-D.kitamura-tcp-sharp-close
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hiroshi
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -46,8 +46,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Shingo
       - language: en
+        script: Latn
         initial: S
       formatted_initials:
         language: en
@@ -64,8 +66,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Masayuki
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -85,27 +89,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes an idea "Sharp Close" that eliminates or minimizes
-    TIME-WAIT state of TCP connections. In the current TCP specification ([RFC0793]),
-    there are some inappropriate or not up to date functions. Here we focus and discuss
-    on TCP TIME-WAIT state function. TIME-WAIT is the last state of TCP connection
-    of Active Close side node. After TCP connections are effectively closed, they
-    move to TIME-WAIT state. After TIME-WAIT state is finished, resources of connections
-    are released. This means that even if connections are effectively finished, resources
-    of connections are NOT released. The TIME-WAIT state prevents from releasing them.
-    From the viewpoints of current high-speed and high-multiplicity communication
-    styles, it is thought that TIME-WAIT state is one of evil functions. In order
-    to provide efficient communication that matches current styles, an idea "Sharp
-    Close" that eliminates or minimizes TIME- WAIT state of TCP connections is proposed.</p>
-  format: text/html
+  content: |-
+    <p>This document describes an idea "Sharp Close" that eliminates or
+       minimizes TIME-WAIT state of TCP connections.
+
+       In the current TCP specification ([RFC0793]), there are some
+       inappropriate or not up to date functions. Here we focus and
+       discuss on TCP TIME-WAIT state function.
+
+       TIME-WAIT is the last state of TCP connection of Active Close side
+       node.  After TCP connections are effectively closed, they move to
+       TIME-WAIT state. After TIME-WAIT state is finished, resources of
+       connections are released. This means that even if connections are
+       effectively finished, resources of connections are NOT released.
+       The TIME-WAIT state prevents from releasing them.
+
+       From the viewpoints of current high-speed and high-multiplicity
+       communication styles, it is thought that TIME-WAIT state is one of
+       evil functions.
+
+       In order to provide efficient communication that matches current
+       styles, an idea "Sharp Close" that eliminates or minimizes TIME-
+       WAIT state of TCP connections is proposed.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-kitamura-tcp-sharp-close-02
-      format: text/plain
+      content: draft-kitamura-tcp-sharp-close-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kitamura-tcp-sharp-close-01
     docidentifier:
-    - content: draft-kitamura-tcp-sharp-close-02
+    - content: draft-kitamura-tcp-sharp-close-01
       type: Internet-Draft
       primary: true
 series:
@@ -114,10 +129,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kitamura-tcp-sharp-close-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

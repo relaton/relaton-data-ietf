@@ -7,17 +7,15 @@ title:
   script: Latn
   content: Recognized Transformations of Messages Bearing DomainKeys Identified Mail
     (DKIM) Signatures
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-kucherawy-dkim-transform-01
 docidentifier:
+- content: draft-kucherawy-dkim-transform
+  type: Internet-Draft
 - content: draft-kucherawy-dkim-transform-01
   type: Internet-Draft
   primary: true
-- content: I-D.kucherawy-dkim-transform
-  type: IETF
-  scope: anchor
 docnumber: I-D.kucherawy-dkim-transform
 date:
 - type: published
@@ -29,8 +27,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Murray
       - language: en
+        script: Latn
         initial: M
       formatted_initials:
         language: en
@@ -50,27 +50,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DomainKeys Identified Mail (DKIM) introduced a mechanism whereby a
-    mail operator can affix a signature to a message that validates at the level of
-    the signer's domain name. It specified two possible ways of converting the message
-    body to a canonical form, one intolerant of changes and the other tolerant of
-    simple changes to whitespace within the message body. The provided canonicalization
-    schemes do not tolerate changes in a message such as conversion between transfer
-    encodings or addition of new message content. It is useful to have these capabilities
-    to allow for transport through gateways, and also for transport through handlers
-    (such as mailing list services) that might add content that would invalidate a
-    signature generated using the existing canonicalization schemes. This document
-    presents a mechanism for declaring that a message underwent one of a handful of
-    well-defined transformations prior to being re-signed by a mediator, so that a
-    verifier might rewind such a modification and thereby confirm that the original
-    signature still verifies against the original content.</p>"
-  format: text/html
+  content: |-
+    <p>DomainKeys Identified Mail (DKIM) introduced a mechanism whereby a
+       mail operator can affix a signature to a message that validates at
+       the level of the signer's domain name.  It specified two possible
+       ways of converting the message body to a canonical form, one
+       intolerant of changes and the other tolerant of simple changes to
+       whitespace within the message body.
+
+       The provided canonicalization schemes do not tolerate changes in a
+       message such as conversion between transfer encodings or addition of
+       new message content.  It is useful to have these capabilities to
+       allow for transport through gateways, and also for transport through
+       handlers (such as mailing list services) that might add content that
+       would invalidate a signature generated using the existing
+       canonicalization schemes.
+
+       This document presents a mechanism for declaring that a message
+       underwent one of a handful of well-defined transformations prior to
+       being re-signed by a mediator, so that a verifier might rewind such a
+       modification and thereby confirm that the original signature still
+       verifies against the original content.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-kucherawy-dkim-transform-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kucherawy-dkim-transform-00
     docidentifier:
     - content: draft-kucherawy-dkim-transform-00
       type: Internet-Draft
@@ -79,7 +87,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-kucherawy-dkim-transform-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kucherawy-dkim-transform-02
     docidentifier:
     - content: draft-kucherawy-dkim-transform-02
       type: Internet-Draft
@@ -90,10 +100,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-kucherawy-dkim-transform-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

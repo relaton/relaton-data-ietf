@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: Forcing Fragmentation to Network MTU
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ipngwg-bsd-frag-01
 docidentifier:
+- content: draft-ietf-ipngwg-bsd-frag
+  type: Internet-Draft
 - content: draft-ietf-ipngwg-bsd-frag-01
   type: Internet-Draft
   primary: true
-- content: I-D.ietf-ipngwg-bsd-frag
-  type: IETF
-  scope: anchor
 docnumber: I-D.ietf-ipngwg-bsd-frag
 date:
 - type: published
@@ -28,10 +26,13 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Mark
       - language: en
+        script: Latn
         initial: M
       - language: en
+        script: Latn
         initial: P
       formatted_initials:
         language: en
@@ -45,7 +46,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: CSIRO
+        - language: en
+          content: CSIRO
 version:
 - content: '01'
 language:
@@ -55,28 +57,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>There exists a class of applications which cannot accept Path MTU discovery
-    [RFC-1981]. This is recommended to be turned on by default for IPv6 [IPV6-SPEC-V2,
-    4.5, 5]. This document describes an extension to the BSD API [RFC-2133] to inform
-    the kernel when it should be fragmenting at the network MTU rather than trying
-    to discover the path MTU. Path MTU discovery works well when there is a stream
-    of data. However for distributed servers sending small answers larger than the
-    network MTU to many clients the lack of fragmentation in intermediate nodes is
-    anathema. RFC-1981 Section 5.6 recommends that a system utility be provided to:
-    - Specify that Path MTU Discovery not be done on a given path. - Change the PMTU
-    value associated with a given path. This documents specifies how to do the same
-    at the application level to a individual socket.</p>"
-  format: text/html
+  content: "<p>There exists a class of applications which cannot accept Path\n           MTU
+    discovery [RFC-1981].  This is recommended to be turned on\n           by default
+    for IPv6 [IPV6-SPEC-V2, 4.5, 5].  This document\n           describes an extension
+    to the BSD API [RFC-2133] to inform the\n           kernel when it should be fragmenting
+    at the network MTU rather\n           than trying to discover the path MTU.\n
+    \n           Path MTU discovery works well when there is a stream of data.\n           However
+    for distributed servers sending small answers larger\n           than the network
+    MTU to many clients the lack of fragmentation\n           in intermediate nodes
+    is anathema.\n \n           RFC-1981 Section 5.6 recommends that a system utility
+    be\n           provided to:\n \n           - Specify that Path MTU Discovery not
+    be done on a given path.\n\n \n           - Change the PMTU value associated with
+    a given path.\n \n           This documents specifies how to do the same at the
+    application\n           level to a individual socket.</p>"
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ietf-ipngwg-bsd-frag-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

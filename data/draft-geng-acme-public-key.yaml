@@ -1,12 +1,13 @@
 ---
 id: draftgengacmepublickey
 schema_version: v1.5.6
+formattedref:
+  content: draft-geng-acme-public-key
 title:
 - language: en
   script: Latn
   content: Automated Certificate Management Environment (ACME) Extension for Public
     Key Challenges
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-07
@@ -20,23 +21,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: <p>The Automatic Certificate Management Environment (ACME) [RFC8555] requires
-    a PKCS#10 Certificate Signing Request (CSR) at the finalization stage. This document
-    defines a new ACME challenge type, "pk-01", that allows a client to prove possession
-    of a private key directly, without constructing a CSR. The primary motivation
-    is to support key types that cannot generate CSR self-signatures, notably post-quantum
-    Key Encapsulation Mechanism (KEM) keys. The client declares the public key via
-    a popKey field in the "newOrder" request; the server attaches the "pk-01" challenge
-    to existing identifier authorizations. When all required authorizations are satisfied,
-    the ACME server issues a certificate using the validated public key and the authorized
-    identifiers, eliminating the need for a CSR in the finalization stage.</p>
-  format: text/html
+  content: |-
+    <p>The Automatic Certificate Management Environment (ACME) [RFC8555]
+       requires a PKCS#10 Certificate Signing Request (CSR) at the
+       finalization stage.  This document defines a new ACME challenge type,
+       "pk-01", that allows a client to prove possession of a private key
+       directly, without constructing a CSR.  The primary motivation is to
+       support key types that cannot generate CSR self-signatures, notably
+       post-quantum Key Encapsulation Mechanism (KEM) keys.  The client
+       declares the public key via a popKey field in the "newOrder" request;
+       the server attaches the "pk-01" challenge to existing identifier
+       authorizations.  When all required authorizations are satisfied, the
+       ACME server issues a certificate using the validated public key and
+       the authorized identifiers, eliminating the need for a CSR in the
+       finalization stage.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-00
     docidentifier:
     - content: draft-geng-acme-public-key-00
       type: Internet-Draft
@@ -45,7 +51,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-01
     docidentifier:
     - content: draft-geng-acme-public-key-01
       type: Internet-Draft
@@ -54,7 +62,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-02
     docidentifier:
     - content: draft-geng-acme-public-key-02
       type: Internet-Draft
@@ -63,7 +73,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-03
     docidentifier:
     - content: draft-geng-acme-public-key-03
       type: Internet-Draft
@@ -72,7 +84,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-04
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-04
     docidentifier:
     - content: draft-geng-acme-public-key-04
       type: Internet-Draft
@@ -81,7 +95,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-05
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-05
     docidentifier:
     - content: draft-geng-acme-public-key-05
       type: Internet-Draft
@@ -90,7 +106,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-06
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-06
     docidentifier:
     - content: draft-geng-acme-public-key-06
       type: Internet-Draft
@@ -99,7 +117,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-geng-acme-public-key-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-07
     docidentifier:
     - content: draft-geng-acme-public-key-07
       type: Internet-Draft
@@ -108,4 +128,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

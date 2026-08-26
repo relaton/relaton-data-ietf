@@ -1,11 +1,12 @@
 ---
 id: draftietfipsrapic
 schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-ipsra-pic
 title:
 - language: en
   script: Latn
   content: PIC, A Pre-IKE Credential Provisioning Protocol
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsra-pic-07
@@ -19,24 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document presents a Pre-IKE Credential (PIC) provisioning protocol.
-    PIC is a method to bootstrap IPsec authentication via an 'Authentication Server'
-    (AS) and user authentication mechanisms such as RADIUS. PIC happens before IKE
-    (the Internet Key Exchange protocol). The client machine communicates with the
-    AS using a key exchange protocol where only the server is authenticated, and the
-    derived keys are used to protect the user authentication. Once the user is authenticated,
-    the client machine obtains credentials from the AS that can be later used to authenticate
-    the client in a standard IKE exchange, with no user intervention. The proposed
-    key exchange is based on ISAKMP (the Internet Security Association and Key Management
-    Protocol), similar to a simplified IKE exchange. Arbitrary user authentication
-    is supported via the use of EAP (the PPP Extensible Authentication Protocol).</p>"
-  format: text/html
+  content: |-
+    <p>This document presents a Pre-IKE Credential (PIC) provisioning protocol.
+    PIC is a method to bootstrap IPsec authentication via an 'Authentication
+    Server' (AS) and user authentication mechanisms such as RADIUS. PIC
+    happens before IKE (the Internet Key Exchange protocol).  The client
+    machine communicates with the AS using a key exchange protocol where
+    only the server is authenticated, and the derived keys are used to
+    protect the user authentication.  Once the user is authenticated, the
+    client machine obtains credentials from the AS that can be later used to
+    authenticate the client in a standard IKE exchange, with no user
+    intervention. The proposed key exchange is based on ISAKMP (the Internet
+    Security Association and Key Management Protocol), similar to a
+    simplified IKE exchange. Arbitrary user authentication is supported via
+    the use of EAP (the PPP Extensible Authentication Protocol).</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-ietf-ipsra-pic-07
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsra-pic-07
     docidentifier:
     - content: draft-ietf-ipsra-pic-07
       type: Internet-Draft
@@ -45,4 +50,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: 'OpenHTTPA: Hypertext Transfer Protocol with Attestation'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-openhttpa-protocol-00
 docidentifier:
+- content: draft-openhttpa-protocol
+  type: Internet-Draft
 - content: draft-openhttpa-protocol-00
   type: Internet-Draft
   primary: true
-- content: I-D.openhttpa-protocol
-  type: IETF
-  scope: anchor
 docnumber: I-D.openhttpa-protocol
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Gordon
       - language: en
+        script: Latn
         initial: G
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: The `OpenHTTPA` Foundation (openhttpa.org)
+        - language: en
+          content: The `OpenHTTPA` Foundation (openhttpa.org)
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Hans
       - language: en
+        script: Latn
         initial: H
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: The `OpenHTTPA` Foundation (openhttpa.org)
+        - language: en
+          content: The `OpenHTTPA` Foundation (openhttpa.org)
 version:
 - content: '00'
 language:
@@ -75,22 +79,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>OpenHTTPA (Hypertext Transfer Protocol with Attestation) defines a
-    protocol for establishing hardware-verified, end-to-end confidential and authenticated
-    communication between a client and a Trusted Execution Environment (TEE) over
-    standard HTTP/2, HTTP/3, and gRPC transports. Unlike traditional TLS which terminates
-    at the network edge, OpenHTTPA ensures that the cryptographic session terminates
-    inside the hardware-isolated enclave. The protocol is based on the SIGMA-I model
-    and incorporates post-quantum hybrid key exchange (ML- KEM), post-quantum digital
-    signatures (ML-DSA), transcript-bound hardware attestation, and semantic binding
-    of HTTP requests to the hardware-verified session state.</p>"
-  format: text/html
+  content: |-
+    <p>OpenHTTPA (Hypertext Transfer Protocol with Attestation) defines a
+       protocol for establishing hardware-verified, end-to-end confidential
+       and authenticated communication between a client and a Trusted
+       Execution Environment (TEE) over standard HTTP/2, HTTP/3, and gRPC
+       transports.  Unlike traditional TLS which terminates at the network
+       edge, OpenHTTPA ensures that the cryptographic session terminates
+       inside the hardware-isolated enclave.  The protocol is based on the
+       SIGMA-I model and incorporates post-quantum hybrid key exchange (ML-
+       KEM), post-quantum digital signatures (ML-DSA), transcript-bound
+       hardware attestation, and semantic binding of HTTP requests to the
+       hardware-verified session state.</p>
 relation:
 - type: updatedBy
   bibitem:
     formattedref:
       content: draft-openhttpa-protocol-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-openhttpa-protocol-01
     docidentifier:
     - content: draft-openhttpa-protocol-01
       type: Internet-Draft
@@ -101,10 +109,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-openhttpa-protocol-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: The Eifel Response Algorithm for TCP
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ludwig-tsvwg-tcp-eifel-response-00
 docidentifier:
+- content: draft-ludwig-tsvwg-tcp-eifel-response
+  type: Internet-Draft
 - content: draft-ludwig-tsvwg-tcp-eifel-response-00
   type: Internet-Draft
   primary: true
-- content: I-D.ludwig-tsvwg-tcp-eifel-response
-  type: IETF
-  scope: anchor
 docnumber: I-D.ludwig-tsvwg-tcp-eifel-response
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Ludwig
       - language: en
+        script: Latn
         initial: L
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson Research
+        - language: en
+          content: Ericsson Research
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Andrei
       - language: en
+        script: Latn
         initial: A
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Sonera Corporation
+        - language: en
+          content: Sonera Corporation
 version:
 - content: '00'
 language:
@@ -75,24 +79,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Eifel response algorithm uses the Eifel detection algorithm to
-    detect a posteriori whether the TCP sender has entered loss recovery unnecessarily.
-    In response to a spurious timeout it avoids the go-back-N retransmits that would
-    otherwise be sent, and reinitializes the RTT estimators to avoid further spurious
-    timeouts. Likewise, it adapts the duplicate acknowledgement threshold in response
-    to a spurious fast retransmit. In both cases, the Eifel response algorithm restores
-    the congestion control state in way that avoids packet bursts.</p>"
-  format: text/html
+  content: |-
+    <p>The Eifel response algorithm uses the Eifel detection algorithm to
+    detect a posteriori whether the TCP sender has entered loss recovery
+    unnecessarily. In response to a spurious timeout it avoids the
+    go-back-N retransmits that would otherwise be sent, and reinitializes
+    the RTT estimators to avoid further spurious timeouts. Likewise, it
+    adapts the duplicate acknowledgement threshold in response to a
+    spurious fast retransmit. In both cases, the Eifel response algorithm
+    restores the congestion control state in way that avoids packet
+    bursts.</p>
 series:
 - type: main
   title:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-ludwig-tsvwg-tcp-eifel-response-00
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

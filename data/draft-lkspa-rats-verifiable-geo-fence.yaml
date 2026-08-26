@@ -1,11 +1,12 @@
 ---
 id: draftlksparatsverifiablegeofence
 schema_version: v1.5.6
+formattedref:
+  content: draft-lkspa-rats-verifiable-geo-fence
 title:
 - language: en
   script: Latn
   content: Verifiable Proof of Environment Attestation Profile
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-03
@@ -19,37 +20,47 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Operators of regulated, sovereign, and high-assurance deployments require
-    hardware-rooted, machine-verifiable proof that a workload executes in its approved
-    environment. Current remote attestation mechanisms address two relevant properties
-    in isolation: platform integrity — that the hardware and software stack are in
-    an approved, untampered state — and physical residency — that the hardware resides
-    within an approved geographic boundary. Neither property alone is sufficient:
-    integrity without residency permits a valid platform to operate outside approved
-    boundaries; residency without integrity permits a compromised platform to claim
-    valid placement. This document defines the *Verifiable Proof of Environment Attestation
-    Profile (V-PEA)*, a profile of the RATS Architecture {{!RFC9334}} that fuses both
-    properties into a single TPM-sealed Evidence structure (lah-bundle). V-PEA defines
-    two Evidence dimensions: *WHAT* — hardware provenance (TPM Attestation Key registered
-    and manufacturer-endorsed), platform integrity (firmware and OS state matching
-    reference values), and workload agent software integrity (binary digest matching
-    an approved value); and *WHERE* — physical residency within an approved geographic
-    boundary. A TPM quote seal binds WHAT and WHERE into a single unforgeable statement:
-    neither dimension can be forged or transplanted without invalidating the other.
-    For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge Proofs (ZKPs),
-    enabling an Attester to prove geographic compliance without disclosing precise
-    coordinates. A positive V-PEA Attestation Result enables a Relying Party to issue
-    hardware-rooted credentials or authorize operations — combining verified execution
-    environment (WHAT) with verified physical placement (WHERE) — before releasing
-    sensitive assets or granting access. Integration with workload identity systems
-    is described in the WIMSE Integration appendix.</p>"
-  format: text/html
+  content: |-
+    <p>Operators of regulated, sovereign, and high-assurance deployments
+       require hardware-rooted, machine-verifiable proof that a workload
+       executes in its approved environment.  Current remote attestation
+       mechanisms address two relevant properties in isolation: platform
+       integrity — that the hardware and software stack are in an approved,
+       untampered state — and physical residency — that the hardware resides
+       within an approved geographic boundary.  Neither property alone is
+       sufficient: integrity without residency permits a valid platform to
+       operate outside approved boundaries; residency without integrity
+       permits a compromised platform to claim valid placement.
+
+       This document defines the *Verifiable Proof of Environment
+       Attestation Profile (V-PEA)*, a profile of the RATS Architecture
+       {{!RFC9334}} that fuses both properties into a single TPM-sealed
+       Evidence structure (lah-bundle).  V-PEA defines two Evidence
+       dimensions: *WHAT* — hardware provenance (TPM Attestation Key
+       registered and manufacturer-endorsed), platform integrity (firmware
+       and OS state matching reference values), and workload agent software
+       integrity (binary digest matching an approved value); and *WHERE* —
+       physical residency within an approved geographic boundary.  A TPM
+       quote seal binds WHAT and WHERE into a single unforgeable statement:
+       neither dimension can be forged or transplanted without invalidating
+       the other.
+
+       For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge
+       Proofs (ZKPs), enabling an Attester to prove geographic compliance
+       without disclosing precise coordinates.  A positive V-PEA Attestation
+       Result enables a Relying Party to issue hardware-rooted credentials
+       or authorize operations — combining verified execution environment
+       (WHAT) with verified physical placement (WHERE) — before releasing
+       sensitive assets or granting access.  Integration with workload
+       identity systems is described in the WIMSE Integration appendix.</p>
 relation:
 - type: includes
   bibitem:
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-00
     docidentifier:
     - content: draft-lkspa-rats-verifiable-geo-fence-00
       type: Internet-Draft
@@ -58,7 +69,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-01
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-01
     docidentifier:
     - content: draft-lkspa-rats-verifiable-geo-fence-01
       type: Internet-Draft
@@ -67,7 +80,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-02
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-02
     docidentifier:
     - content: draft-lkspa-rats-verifiable-geo-fence-02
       type: Internet-Draft
@@ -76,7 +91,9 @@ relation:
   bibitem:
     formattedref:
       content: draft-lkspa-rats-verifiable-geo-fence-03
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-03
     docidentifier:
     - content: draft-lkspa-rats-verifiable-geo-fence-03
       type: Internet-Draft
@@ -85,4 +102,4 @@ ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

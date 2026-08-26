@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: '443 is Enough: Guidance on Port Allocation for HTTP-based Services'
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-trammell-443-is-enough-01
 docidentifier:
+- content: draft-trammell-443-is-enough
+  type: Internet-Draft
 - content: draft-trammell-443-is-enough-01
   type: Internet-Draft
   primary: true
-- content: I-D.trammell-443-is-enough
-  type: IETF
-  scope: anchor
 docnumber: I-D.trammell-443-is-enough
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Brian
       - language: en
+        script: Latn
         initial: B
       formatted_initials:
         language: en
@@ -43,7 +43,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Google Switzerland GmbH
+        - language: en
+          content: Google Switzerland GmbH
 version:
 - content: '01'
 language:
@@ -53,22 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>[RFC7605] provides guidance on the use of port numbers and the criteria
-    for new port assignments, including a test for whether a proposed service is distinct
-    from an existing service. It gives the example that "an automated system that
-    happens to use HTTP framing -- but is not primarily accessed by a browser -- might
-    be a new service." It also might not. This document clarifies the application
-    of the distinct-protocol test in [RFC7605] Section 7.1 to services built on HTTP
-    as a substrate, in light of HTTP's evolution since its publication, and provides
-    guidance to applicants and reviewers on when an HTTP-based service qualifies for
-    a new port assignment and when it does not.</p>
-  format: text/html
+  content: |-
+    <p>[RFC7605] provides guidance on the use of port numbers and the
+       criteria for new port assignments, including a test for whether a
+       proposed service is distinct from an existing service.  It gives the
+       example that "an automated system that happens to use HTTP framing --
+       but is not primarily accessed by a browser -- might be a new
+       service."  It also might not.  This document clarifies the
+       application of the distinct-protocol test in [RFC7605] Section 7.1 to
+       services built on HTTP as a substrate, in light of HTTP's evolution
+       since its publication, and provides guidance to applicants and
+       reviewers on when an HTTP-based service qualifies for a new port
+       assignment and when it does not.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
       content: draft-trammell-443-is-enough-00
-      format: text/plain
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-trammell-443-is-enough-00
     docidentifier:
     - content: draft-trammell-443-is-enough-00
       type: Internet-Draft
@@ -79,10 +84,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-trammell-443-is-enough-01
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf

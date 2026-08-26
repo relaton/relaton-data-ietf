@@ -6,17 +6,15 @@ title:
 - language: en
   script: Latn
   content: TLS Server Identity Pinning with Tickets
-  format: text/plain
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pinning-ticket-06
 docidentifier:
+- content: draft-sheffer-tls-pinning-ticket
+  type: Internet-Draft
 - content: draft-sheffer-tls-pinning-ticket-06
   type: Internet-Draft
   primary: true
-- content: I-D.sheffer-tls-pinning-ticket
-  type: IETF
-  scope: anchor
 docnumber: I-D.sheffer-tls-pinning-ticket
 date:
 - type: published
@@ -28,8 +26,10 @@ contributor:
     name:
       forename:
       - language: en
+        script: Latn
         content: Yaron
       - language: en
+        script: Latn
         initial: "Y"
       formatted_initials:
         language: en
@@ -43,15 +43,18 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Intuit
+        - language: en
+          content: Intuit
 - role:
   - type: author
   person:
     name:
       forename:
       - language: en
+        script: Latn
         content: Daniel
       - language: en
+        script: Latn
         initial: D
       formatted_initials:
         language: en
@@ -65,7 +68,8 @@ contributor:
     affiliation:
     - organization:
         name:
-        - content: Ericsson
+        - language: en
+          content: Ericsson
 version:
 - content: '06'
 language:
@@ -75,36 +79,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Misissued public-key certificates can prevent TLS clients from appropriately
-    authenticating the TLS server. Several alternatives have been proposed to detect
-    this situation and prevent a client from establishing a TLS session with a TLS
-    end point authenticated with an illegitimate public-key certificate, but none
-    is currently in wide use. This document proposes to extend TLS with opaque pinning
-    tickets as a way to pin the server's identity. During an initial TLS session,
-    the server provides an original encrypted pinning ticket. In subsequent TLS session
-    establishment, upon receipt of the pinning ticket, the server proves its ability
-    to decrypt the pinning ticket and thus the ownership if the pinning protection
-    key. The client can now safely conclude that the TLS session is established with
-    the same TLS server as the original TLS session. One of the important properties
-    of this proposal is that no manual management actions are required.</p>"
-  format: text/html
+  content: |-
+    <p>Misissued public-key certificates can prevent TLS clients from
+       appropriately authenticating the TLS server.  Several alternatives
+       have been proposed to detect this situation and prevent a client from
+       establishing a TLS session with a TLS end point authenticated with an
+       illegitimate public-key certificate, but none is currently in wide
+       use.
+
+       This document proposes to extend TLS with opaque pinning tickets as a
+       way to pin the server's identity.  During an initial TLS session, the
+       server provides an original encrypted pinning ticket.  In subsequent
+       TLS session establishment, upon receipt of the pinning ticket, the
+       server proves its ability to decrypt the pinning ticket and thus the
+       ownership if the pinning protection key.  The client can now safely
+       conclude that the TLS session is established with the same TLS server
+       as the original TLS session.  One of the important properties of this
+       proposal is that no manual management actions are required.</p>
 relation:
 - type: updates
   bibitem:
     formattedref:
-      content: draft-sheffer-tls-pinning-ticket-02
-      format: text/plain
+      content: draft-sheffer-tls-pinning-ticket-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pinning-ticket-05
     docidentifier:
-    - content: draft-sheffer-tls-pinning-ticket-02
+    - content: draft-sheffer-tls-pinning-ticket-05
       type: Internet-Draft
       primary: true
 - type: updatedBy
   bibitem:
     formattedref:
-      content: draft-sheffer-tls-pinning-ticket-10
-      format: text/plain
+      content: draft-sheffer-tls-pinning-ticket-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sheffer-tls-pinning-ticket-07
     docidentifier:
-    - content: draft-sheffer-tls-pinning-ticket-10
+    - content: draft-sheffer-tls-pinning-ticket-07
       type: Internet-Draft
       primary: true
 series:
@@ -113,10 +125,9 @@ series:
   - language: en
     script: Latn
     content: Internet-Draft
-    format: text/plain
   number: draft-sheffer-tls-pinning-ticket-06
 ext:
   schema_version: v1.1.2
   doctype:
     content: internet-draft
-  flavor: internet-draft
+  flavor: ietf
