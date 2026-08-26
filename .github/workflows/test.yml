@@ -1,0 +1,26 @@
+# This repo's own suite. Not Cimas-managed: cimas.yml maps only check-index.yml,
+# deploy.yml, crawler.yml and keep-alive.yml, so a new file here is never
+# touched by a sync.
+#
+# Gemfile.lock is gitignored, so every run re-resolves relaton and pubid from
+# `main`. That is deliberate: it makes these specs the early warning for an
+# upstream change that would otherwise surface as a broken index hours later, in
+# a scheduled Crawler run on the default branch.
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  spec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+      - run: bundle exec rake
