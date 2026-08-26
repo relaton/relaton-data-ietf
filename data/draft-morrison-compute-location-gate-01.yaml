@@ -1,0 +1,102 @@
+---
+id: draftmorrisoncomputelocationgate01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The Compute-Location Gate: Provenance-Class Routing of Identity Inference
+    with Wire-Layer Refusal of Unconsented Provenance Classes'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-compute-location-gate-01
+docidentifier:
+- content: draft-morrison-compute-location-gate
+  type: Internet-Draft
+- content: draft-morrison-compute-location-gate-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-compute-location-gate
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd (~truealter)
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo specifies the compute-location gate: a mechanism by which a
+       client and an identity-inference server negotiate, at the wire layer
+       and before any inference is performed, the location at which an
+       identity inference will compute, as a deterministic function of the
+       provenance class of the input signal.  Three provenance classes are
+       distinguished.  Active inference, initiated by the inferred-about
+       principal, MAY compute server-side and produce a server-held identity
+       vector.  Passive aggregate observation over a cohort no smaller than
+       a declared minimum MAY compute server-side but yields only a
+       population-level observation that is not attributable to an
+       individual.  Passive individual observation is local-only: it is
+       computed and retained on the device that observed it and is never
+       transmitted to a server.  The gate is enforced by consent-class
+       matching and by a wire-layer refusal returned when a requested
+       provenance class is not consented; it is not enforced by any
+       cryptographic proof concerning data that was not used.  The memo is
+       Informational.  The wire surface composes with the discovery
+       mechanism of [MCPDNS], the handle namespace of [IDPRONOUNS], and the
+       organisational policy substrate of [POLICYPROV]; no new transport is
+       introduced.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-compute-location-gate-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-compute-location-gate-00
+    docidentifier:
+    - content: draft-morrison-compute-location-gate-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-compute-location-gate-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

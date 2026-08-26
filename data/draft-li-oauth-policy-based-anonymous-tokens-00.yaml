@@ -1,0 +1,169 @@
+---
+id: draftlioauthpolicybasedanonymoustokens00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: OAuth 2.0 Policy-Based Anonymous Access Tokens
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-oauth-policy-based-anonymous-tokens-00
+docidentifier:
+- content: draft-li-oauth-policy-based-anonymous-tokens
+  type: Internet-Draft
+- content: draft-li-oauth-policy-based-anonymous-tokens-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-oauth-policy-based-anonymous-tokens
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: David
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Kretzler
+      completename:
+        language: en
+        content: David Kretzler
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Heisenberg Research Center
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yong
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yong Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Heisenberg Research Center
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: JIAN
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Jian
+      completename:
+        language: en
+        content: JIAN WANG
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies Co., Ltd.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Antoine
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Fressancourt
+      completename:
+        language: en
+        content: Antoine Fressancourt
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies France S.A.S.U.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies an OAuth 2.0 access-token type that allows a
+       client, after one authorization-server issuance, to derive a policy-
+       bounded set of unlinkable, single-use access tokens locally.  Each
+       derived token is bound to one canonical tag, an intended resource
+       server, approved authorization details, a policy epoch, and a
+       validity interval.  Resource servers validate the token offline and
+       enforce both policy membership and replay prevention.
+
+       The protocol defines authorization request semantics, token-endpoint
+       issuance, canonical policy and metadata objects, token derivation and
+       HTTP presentation, resource-server validation, capability discovery,
+       error handling, and IANA registrations.  Version 1 requires public
+       verification and the counter-window policy profile.  It supports an
+       optional private metadata bit, while private-verification
+       ciphersuites remain optional.
+
+       Concrete cryptographic algorithms are supplied by separately
+       registered PBAT ciphersuites.  The initial mandatory-to-implement
+       ciphersuite is the publicly-verifiable equivalence-class-signature
+       construction over BLS12-381 specified by the companion PBAT
+       ciphersuite document.  This specification does not replace OAuth
+       grants, resource-owner consent, client authentication, or audience
+       restriction.
+
+       — middle</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-oauth-policy-based-anonymous-tokens-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

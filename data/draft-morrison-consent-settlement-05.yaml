@@ -1,0 +1,103 @@
+---
+id: draftmorrisonconsentsettlement05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Consent-Bound Identity Disclosure with Subject Settlement for HTTP-Native
+    Agent Payments
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-consent-settlement-05
+docidentifier:
+- content: draft-morrison-consent-settlement
+  type: Internet-Draft
+- content: draft-morrison-consent-settlement-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-consent-settlement
+date:
+- type: published
+  at: '2026-08-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo specifies an extension to HTTP-native agent payment
+       protocols by which the disclosure of an identity attribute about a
+       human subject is bound to that subject's recorded consent and
+       settled, in part, to that subject.  When an agent pays to read an
+       identity attribute about a person, the extension requires that the
+       read carry a reference to a scoped, revocable consent grant issued by
+       the subject, and it requires that the payment's settlement
+       instruction name the subject as a beneficiary of a share of the
+       read's price greater than the shares of all other parties combined.
+       The extension composes above an identity- attestation envelope (which
+       asserts who a credential is about) and above an HTTP-native payment
+       flow (which moves value for the read); it adds the two functions
+       neither layer provides: consent capture at disclosure time and
+       settlement to the data subject.  The wire additions are an
+       advertisement in the server's payment-required response, a consent-
+       grant reference echoed in the client's payment payload, and a
+       settlement instruction enumerating subject beneficiary roles.  The
+       extension is settlement-network-agnostic and attestation-format-
+       agnostic.  The memo is Informational; the underlying COSE and CBOR
+       formats are normative per [RFC9052] and [RFC8949], and the HTTP
+       semantics are normative per [RFC9110].</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-consent-settlement-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-consent-settlement-04
+    docidentifier:
+    - content: draft-morrison-consent-settlement-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-consent-settlement-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

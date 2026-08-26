@@ -1,0 +1,135 @@
+---
+id: draftfumemdnspivoting00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DNS for Automated Pivoting in Big Memory Systems
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-fu-memdns-pivoting-00
+docidentifier:
+- content: draft-fu-memdns-pivoting
+  type: Internet-Draft
+- content: draft-fu-memdns-pivoting-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.fu-memdns-pivoting
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: quanyong
+      - language: en
+        script: Latn
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: fu
+      completename:
+        language: en
+        content: quanyong fu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: PDL, College of Computer Science and Technology, NUDT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiquan
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Lai
+      completename:
+        language: en
+        content: Zhiquan Lai
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: PDL, College of Computer Science and Technology, NUDT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dongsheng
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Dongsheng Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: PDL, College of Computer Science and Technology, NUDT
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Heterogeneous memory networks (CXL pools, HBM/DDR/SRAM hierarchies,
+       processing-in-memory arrays) form a big memory system, which exposes
+       fragmented addressing to ML inference runtimes.  This document
+       describes Memory DNS (MemDNS), a semantic-addressing framework that
+       applies DNS principles -- domain names, hierarchical delegation,
+       caching, TTL, and authoritative records -- to tensor data placement
+       in Big Memory Systems (BMS), deployed as limited domains (RFC 8799).
+       The focus is "automated pivoting": the resolution and control
+       machinery that automatically switches data access paths (replica
+       selection), migrates data across media (placement pivoting), and
+       recovers from faults (failover pivoting), driven by closed-form
+       decision models (Appendix A; key logic pseudo-code in Appendix C)
+       instead of ad-hoc thresholds.  The document specifies record
+       semantics, resolution flow, cache/TTL behavior, delegation, pivot
+       decision models, and protocol considerations, together with a
+       reference implementation summary.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-fu-memdns-pivoting-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
