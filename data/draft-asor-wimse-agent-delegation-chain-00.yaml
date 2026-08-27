@@ -1,0 +1,87 @@
+---
+id: draftasorwimseagentdelegationchain00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Verifiable Attenuated Delegation for AI Agent Chains
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-asor-wimse-agent-delegation-chain-00
+docidentifier:
+- content: draft-asor-wimse-agent-delegation-chain
+  type: Internet-Draft
+- content: draft-asor-wimse-agent-delegation-chain-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.asor-wimse-agent-delegation-chain
+date:
+- type: published
+  at: '2026-08-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rafael
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Asor
+      completename:
+        language: en
+        content: Rafael Asor
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Attenu
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>AI agents increasingly delegate tasks to other agents.  Each
+       delegation should convey only a subset of the delegating party's
+       authority, that subset should be bounded in scope, magnitude, and
+       time, and any enforcement point should be able to verify -- offline,
+       with no call to an authorization server -- that a token presented at
+       hop N carries authority no greater than the token at hop N-1, back to
+       a trusted root.  OAuth 2.0 Token Exchange (RFC 8693) models two-party
+       delegation and records prior actors in a nested "act" claim, but that
+       claim is informational only and cannot enforce attenuation across a
+       chain of depth two or more.  This document defines the Agent
+       Delegation Chain: a profile of OAuth 2.0 JWT access tokens (RFC 9068)
+       that carries authority as Rich Authorization Requests (RFC 9396),
+       links each delegation to its parent by a cryptographic byte-
+       commitment, and specifies a deterministic offline verification
+       algorithm that enforces monotonic attenuation, bounded depth, and
+       monotonic expiry.  It reuses existing JOSE, proof-of-possession (RFC
+       9449), and status-list machinery (the OAuth Status List draft) and
+       introduces no new cryptography.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-asor-wimse-agent-delegation-chain-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

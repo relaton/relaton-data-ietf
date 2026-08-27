@@ -9,14 +9,14 @@ title:
   content: Verifiable Telemetry Ledgers
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-09
+  content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-10
 docidentifier:
 - content: draft-elkhatabi-verifiable-telemetry-ledgers
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-13'
+  at: '2026-08-26'
 abstract:
 - language: en
   script: Latn
@@ -28,17 +28,16 @@ abstract:
        numbered segments, deterministic commitment-tree calculation, an
        authoritative segment artifact encoded in Concise Binary Object
        Representation (CBOR), a producer manifest, three disclosure classes,
-       and binding of the authoritative segment artifact digest to external
-       timestamp channels.  Transport framing, decryption, anti-replay
-       processing, payload interpretation, and source-telemetry-to-record
-       mapping are outside this profile.  Segment closure uses a deployment-
-       configured elapsed-time interval and does not depend on calendar
-       dates from either the source or the ledger producer.  Every baseline
-       producer selects the RFC 3161 timestamp channel, as updated by RFC
-       5816 and profiled by this document, for every emitted segment.
-       OpenTimestamps (OTS) can be selected only as an additive, deployment-
-       specific timestamp profile; peer signatures are optional
-       attestations.
+       and binding of the authoritative segment artifact digest to timestamp
+       artifacts under the RFC 3161 profile.  Transport framing, decryption,
+       anti-replay processing, payload interpretation, and source-telemetry-
+       to-record mapping are outside this profile.  Segment closure uses a
+       deployment-configured elapsed-time interval and does not depend on
+       calendar dates from either the source or the ledger producer.  Every
+       baseline producer uses RFC 3161 timestamping, as updated by RFC 5816
+       and profiled by this document, for every emitted segment.
+       Alternative timestamping and attestation mechanisms are outside this
+       profile and require a separate specification.
 
        The profile enables independent recomputation and audit of disclosed
        evidence from the admitted canonical-record bytes onward.  It does
@@ -154,6 +153,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-09
     docidentifier:
     - content: draft-elkhatabi-verifiable-telemetry-ledgers-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-elkhatabi-verifiable-telemetry-ledgers-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-10
+    docidentifier:
+    - content: draft-elkhatabi-verifiable-telemetry-ledgers-10
       type: Internet-Draft
       primary: true
 ext:

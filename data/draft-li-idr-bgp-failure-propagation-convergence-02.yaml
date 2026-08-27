@@ -1,0 +1,204 @@
+---
+id: draftliidrbgpfailurepropagationconvergence02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Failure Propagation (BGP-FP) for Enhancing Control-Plane Convergence
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-idr-bgp-failure-propagation-convergence-02
+docidentifier:
+- content: draft-li-idr-bgp-failure-propagation-convergence
+  type: Internet-Draft
+- content: draft-li-idr-bgp-failure-propagation-convergence-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-idr-bgp-failure-propagation-convergence
+date:
+- type: published
+  at: '2026-08-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yuhang
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yuhang Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yahui
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Yahui Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xia
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Yin
+      completename:
+        language: en
+        content: Xia Yin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Han
+      completename:
+        language: en
+        content: Zhang Han
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xingang
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Shi
+      completename:
+        language: en
+        content: Xingang Shi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies BGP Failure Propagation (BGP-FP), an
+       infrastructure and protocol that improves inter-domain routing
+       convergence by accelerating the removal of stale (invalid) routes.
+       BGP-FP uses (1) an Agent deployed per Autonomous System (AS) to
+       detect inter-AS reachability changes and to configure local routers,
+       (2) a logically centralized Repository to store and selectively
+       forward AS reachability state, and (3) BGP Large Communities as a
+       "route freshness" marker.  Agents validate and apply Repository
+       updates to filter routes that traverse AS pairs whose reachability
+       has been lost or that violate the originating AS's forwarding intent,
+       reducing route-flap propagation in the control plane.
+
+       This document clarifies that "AS reachability" refers to the
+       reachability between two ASes, not to the state of individual
+       physical or logical links within an AS.  If multiple links exist
+       between two ASes, the failure of a single link that does not break
+       overall AS-to-AS reachability does not trigger the BGP-FP mechanism.
+
+       A new Repository deployment model is introduced, suggesting that the
+       Repository be operated by a newly established organization composed
+       of Tier-1 ASes and Regional Internet Registries (RIRs), using a
+       distributed deployment with Byzantine fault-tolerant consensus and
+       rotating leadership.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-li-idr-bgp-failure-propagation-convergence-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-idr-bgp-failure-propagation-convergence-01
+    docidentifier:
+    - content: draft-li-idr-bgp-failure-propagation-convergence-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-idr-bgp-failure-propagation-convergence-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

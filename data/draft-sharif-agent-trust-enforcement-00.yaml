@@ -1,0 +1,92 @@
+---
+id: draftsharifagenttrustenforcement00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Agent Trust Enforcement for Autonomous AI Systems
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-trust-enforcement-00
+docidentifier:
+- content: draft-sharif-agent-trust-enforcement
+  type: Internet-Draft
+- content: draft-sharif-agent-trust-enforcement-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sharif-agent-trust-enforcement
+date:
+- type: published
+  at: '2026-08-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raza
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Sharif
+      completename:
+        language: en
+        content: Raza Sharif
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CyberSecAI Ltd
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a trust enforcement architecture for
+       autonomous AI agents operating within container orchestration
+       environments such as Kubernetes.  It defines a sidecar injection
+       pattern using mutating admission webhooks, graduated trust
+       enforcement (L0-L4) on every outbound call from an agent
+       workload, credential isolation via secret management systems,
+       bilateral revocation propagation across clusters, and tamper-
+       evident evidence generation.
+
+       The architecture operates alongside existing workload identity
+       frameworks including SPIFFE/SPIRE without replacement, extends
+       X.509v3 certificates with agent-specific extensions under a
+       registered IANA Private Enterprise Number (PEN 66339), and
+       provides compliance evidence for EU AI Act Article 12,
+       FDA 21 CFR Part 11, IEC 62443, and NERC CIP.
+
+       Three enforcement gates -- LLM gate, Database gate, and API
+       gate -- intercept every outbound call from an agent container.
+       Each gate classifies the call against the agent's trust level,
+       records the decision in a hash-chained evidence ledger with
+       ECDSA P-256 signatures, and either permits or refuses the call.
+       The architecture defaults to deny: if no policy matches, the
+       call is refused.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sharif-agent-trust-enforcement-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

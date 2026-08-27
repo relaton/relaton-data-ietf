@@ -1,0 +1,153 @@
+---
+id: draftdikshitgrowbmprdscopedribstats01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Route-Distinguisher-Scoped BMP RIB Statistics
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-grow-bmp-rd-scoped-rib-stats-01
+docidentifier:
+- content: draft-dikshit-grow-bmp-rd-scoped-rib-stats
+  type: Internet-Draft
+- content: draft-dikshit-grow-bmp-rd-scoped-rib-stats-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dikshit-grow-bmp-rd-scoped-rib-stats
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Saumya
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dikshit
+      completename:
+        language: en
+        content: Saumya Dikshit
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aruba Networks
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mukul
+      - language: en
+        script: Latn
+        initial: M
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: M. K.
+      surname:
+        language: en
+        content: Srivastava
+      completename:
+        language: en
+        content: Mukul Kumar Srivastava
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Hewlett Packard Enterprise
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Changwang
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Lin
+      completename:
+        language: en
+        content: Changwang Lin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: New H3C Technologies
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>[RFC7854] defines the BGP Monitoring Protocol (BMP) and its
+       Statistics Report message.  [I-D.ietf-grow-bmp-bgp-rib-stats]
+       (published as [RFC9972]) extended that message with a set of
+       advanced, per-AFI/SAFI BGP RIB statistics types.  Several ongoing
+       individual contributions independently define additional per-
+       address-family, per-instance, or per-Route-Distinguisher (RD)
+       statistics on top of that base (for example, EVPN-specific RIB
+       statistics and VRF Loc-RIB monitoring enhancements), each proposing
+       its own ad hoc Stat Data encoding.
+
+       This document defines a single, address-family-agnostic Stat Data
+       container -- the "RD-Scoped Statistics" format -- for BMP
+       statistics that are naturally scoped below the per-AFI/SAFI level,
+       to a specific Route Distinguisher (VRF instance, EVPN Instance,
+       MVPN instance, or equivalent).  Address-family-specific documents,
+       such as EVPN-specific BMP RIB statistics, are expected to become
+       thin "profiles" of this container rather than defining their own
+       wire format, reducing duplication and Stat Type registry
+       fragmentation across the GROW working group's BMP statistics work.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
+    docidentifier:
+    - content: draft-dikshit-grow-bmp-rd-scoped-rib-stats-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dikshit-grow-bmp-rd-scoped-rib-stats-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

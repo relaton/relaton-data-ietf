@@ -1,0 +1,89 @@
+---
+id: draftdasagentictoolbinding00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'tool_use Is Not invoke(): Binding Execution-Finality to Claude, ChatGPT,
+    and MCP'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-agentic-tool-binding-00
+docidentifier:
+- content: draft-das-agentic-tool-binding
+  type: Internet-Draft
+- content: draft-das-agentic-tool-binding-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-agentic-tool-binding
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Frontier runtimes already standardized the dangerous moment.  Claude
+       emits a tool_use block.  ChatGPT emits tool_calls.  MCP emits tools/
+       call.  The host then invokes whatever name and arguments the model
+       printed.  Alignment, allowlists, and OAuth sit around that moment.
+       They do not sit on it.  If the block is treated as a capability,
+       prompt-injected mail, a poisoned retrieval, or a stolen enterprise
+       seat becomes an external act with a 200 from the tool.
+
+       This document does not invent another assistant API.  It binds the
+       Agent Candidate Act profile [I-D.das-agentic] onto the three
+       interfaces those labs and their customers already ship: Anthropic
+       tool_use / computer_use, OpenAI function calling and Responses tools,
+       and Model Context Protocol tools/call.  The model may emit the block.
+       The block remains non-effective.  A local enforcer builds the act,
+       binds the argument digest, and refuses invoke() until scoped
+       authority is verified and consumed at the dispatch sink.
+
+       The implementation target is a middleware function that a host loop
+       can call without changing the model vendor. tool_use is not invoke().</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-agentic-tool-binding-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

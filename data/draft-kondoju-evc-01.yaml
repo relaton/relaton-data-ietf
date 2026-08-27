@@ -1,0 +1,102 @@
+---
+id: draftkondojuevc01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An External Verifier Contract for Agent Authorization Decisions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kondoju-evc-01
+docidentifier:
+- content: draft-kondoju-evc
+  type: Internet-Draft
+- content: draft-kondoju-evc-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kondoju-evc
+date:
+- type: published
+  at: '2026-08-27'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Viswanadha
+      - language: en
+        script: Latn
+        initial: V
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: V. P.
+      surname:
+        language: en
+        content: Kondoju
+      completename:
+        language: en
+        content: Viswanadha Pratap Kondoju
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Bolyra
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the External Verifier Contract (EVC): a
+       small, testable, proof-system-agnostic boundary between a host (the
+       program about to take a privileged action on an agent's behalf) and
+       an external verifier (a subprocess that renders an allow/deny verdict
+       on an opaque proof bundle).  The contract governs only the transport
+       and verdict envelope: how the host hands a single JSON request to a
+       verifier subprocess over stdin, how the verifier answers with exactly
+       one JSON verdict on stdout, and how the host interprets exit codes,
+       timeouts, and malformed output under a fail-closed rule.  Three
+       properties make the boundary standardizable: (1) a single-shot
+       subprocess transport with a closed JSON verdict schema; (2) fail-
+       closed host semantics that are independently testable by a host-
+       conformance suite; and (3) proof-system agnosticism, so the same
+       envelope carries classical-signature, zero-knowledge, and third-party
+       verdicts, distinguished only by an OPTIONAL self-description field.
+       EVC is deliberately not a governance framework, not a delegation
+       model, and not a policy language.  It is the narrow decision boundary
+       those larger systems all require at the point of enforcement.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-kondoju-evc-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kondoju-evc-00
+    docidentifier:
+    - content: draft-kondoju-evc-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kondoju-evc-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,94 @@
+---
+id: draftdasotactuationfinality00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'A Setpoint Write Is Not Actuation: Finality for ICS, Grid, and Robot Command'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-ot-actuation-finality-00
+docidentifier:
+- content: draft-das-ot-actuation-finality
+  type: Internet-Draft
+- content: draft-das-ot-actuation-finality-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-ot-actuation-finality
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Industrial systems already know how to move a breaker, a valve, a
+       robot joint, or a turbine setpoint.  They do not know whether this
+       write — this tag, this value, this device, from this operator session
+       or this agent — is the write that was authorized to become motion.  A
+       signed OPC UA call, a valid DNP3 control, an IEC 61850 command, or an
+       MQTT publish onto the plant bus can all be protocol-correct while the
+       act is wrong.  The protocol authenticates a channel.  It does not
+       bind a Candidate Act at the actuation sink.
+
+       That gap is now an agent gap.  Copilots sit on historians and work-
+       order text.  They propose "explain this alarm" and then "set this
+       point."  If the gateway treats a well-formed write as authority,
+       reconstruction of plant state becomes physical consequence.  Past
+       incidents stole engineering workstations.  Present incidents steal
+       the jump host or the agent seat.  Future incidents let the model
+       format the command.
+
+       This document specifies an OT-side execution-finality profile.  A
+       write remains an Actuation Candidate Act. A Protected Enforcement
+       Domain binds principal, zone, device, tag, value envelope, mode
+       (local/remote, auto/manual), safety interlock state, policy epoch,
+       and intended actuation sink, then commits evidence before scoped non-
+       bearer authority is issued.  The sink that would actually drive I/O
+       verifies that authority against the live write and consumes it.  A
+       setpoint write is not actuation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-ot-actuation-finality-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,103 @@
+---
+id: draftdasagenticexecutionfinality01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Tool Selection Is Not Execution: Finality for Agentic Tool Dispatch'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-01
+docidentifier:
+- content: draft-das-agentic-execution-finality
+  type: Internet-Draft
+- content: draft-das-agentic-execution-finality-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-agentic-execution-finality
+date:
+- type: published
+  at: '2026-08-26'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An agentic model can emit a tool call that today's runtimes treat as
+       something to execute.  Allowlists, OAuth tokens, MCP server auth,
+       sandboxes, output filters, and human approval decide whether an agent
+       may reach a tool.  They do not decide whether this generated call,
+       with this argument digest, from this instruction chain, at this
+       delegation depth, may take effect now.
+
+       That gap is the incident surface.  Prompt-injected content, poisoned
+       retrieval, a malicious tool response, or a delegated sub-agent can
+       produce a call that looks like ordinary tool use.  If the dispatcher
+       executes whatever the model selected, policy that lived upstream
+       becomes advisory.
+
+       This document specifies a dispatch-time gate.  The model may compute
+       a call.  The call remains a Candidate Act. A Protected Enforcement
+       Domain binds agent, tool, arguments, purpose, destination,
+       provenance, and policy epochs, then issues scoped non-bearer
+       authority.  A Tool-Dispatch Finality Sink verifies that authority
+       against the actual invocation immediately before the tool runs, then
+       consumes it.  The same gate applies to support, coding, payments,
+       clinical, SOC, browser-use, and multi-agent MCP deployments.  Tool
+       selection is not execution authority.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-das-agentic-execution-finality-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-00
+    docidentifier:
+    - content: draft-das-agentic-execution-finality-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-agentic-execution-finality-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
