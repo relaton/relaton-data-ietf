@@ -10,28 +10,30 @@ title:
     Pseudowires in MPLS Networks
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-stamp-pw-10
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-stamp-pw-12
 docidentifier:
 - content: draft-ietf-mpls-stamp-pw
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-26'
+  at: '2026-08-28'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document describes the procedure for encapsulating the Simple
-       Two-Way Active Measurement Protocol (STAMP), defined in RFC 8762, and
-       its optional extensions defined in RFC 8972, in MPLS networks.  Label
-       Switched Paths (LSPs) and Pseudowires (PWs) are used in MPLS networks
-       for various services, including Layer 2 and Layer 3 data packets, and
-       may use the Control Word (CW).  The procedure for encapsulating STAMP
-       test packets with or without the CW and/or an IP/UDP header for LSPs
-       and PWs is also described.
+    <p>This document specifies encapsulations for the Simple Two-Way Active
+       Measurement Protocol (STAMP), defined in RFC 8762, and its optional
+       extensions, defined in RFC 8972, in MPLS networks.  It specifies the
+       encapsulation of STAMP test packets for point-to-point Label Switched
+       Paths (LSPs) and point-to-point single-segment Pseudowires (PWs),
+       with or without an IP/UDP header, so that the test packets experience
+       the same forwarding and Equal-Cost Multi-Path (ECMP) behavior as the
+       data traffic being measured.  In addition, two new MPLS Generic
+       Associated Channel (G-ACh) types are defined.
 
-       This document updates RFC 8972: STAMP Test Session Identifier.</p>
+       This document updates RFC 8972 by updating the STAMP Session
+       Identifier for LSPs and PWs.</p>
 relation:
 - type: includes
   bibitem:
@@ -152,6 +154,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-stamp-pw-10
     docidentifier:
     - content: draft-ietf-mpls-stamp-pw-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-stamp-pw-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-stamp-pw-11
+    docidentifier:
+    - content: draft-ietf-mpls-stamp-pw-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-mpls-stamp-pw-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-mpls-stamp-pw-12
+    docidentifier:
+    - content: draft-ietf-mpls-stamp-pw-12
       type: Internet-Draft
       primary: true
 ext:
