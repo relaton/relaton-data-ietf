@@ -9,28 +9,32 @@ title:
   content: Verification of Routes Using Region Authorization
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-region-verification-03
+  content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-region-verification-05
 docidentifier:
 - content: draft-shen-sidrops-region-verification
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-03-02'
+  at: '2026-08-29'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>BGP routing security is becoming a major issue that affects the
-       normal running of Internet services.  Currently, there are many
-       solutions, including ROA authentication and ASPA authentication, to
-       prevent route source hijacking, path hijacking, and route leaking.
-       However, on an actual network, large ISPs with multiple ASes can use
-       carefully constructed routes to bypass ROA and ASPA authentication to
-       attack the target network.
+    <p>BGP routing security is a critical issue affecting the stability and
+       reliability of Internet services.  Existing mechanisms, including
+       Route Origin Authorization (ROA) and Autonomous System Provider
+       Authorization (ASPA), effectively mitigate route origin hijacking,
+       path hijacking, and route leaks in general scenarios.  However, in
+       real-world deployments, large Internet Service Providers (ISPs)
+       managing multiple Autonomous Systems (ASes) remain vulnerable.
+       Attacking networks can exploit carefully crafted routes to bypass ROA
+       and ASPA validations, causing traffic hijacking within or between
+       large ISPs.
 
-       This document defines an region-based authentication method for large
-       ISPs with many ASes to prevent traffic hijacking within ISPs.</p>
+       This document defines a region-based authorization and verification
+       framework for multi-AS ISPs to prevent intra-ISP and inter-ISP
+       traffic hijacking.</p>
 relation:
 - type: includes
   bibitem:
@@ -74,6 +78,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-region-verification-03
     docidentifier:
     - content: draft-shen-sidrops-region-verification-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-shen-sidrops-region-verification-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-region-verification-04
+    docidentifier:
+    - content: draft-shen-sidrops-region-verification-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-shen-sidrops-region-verification-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-region-verification-05
+    docidentifier:
+    - content: draft-shen-sidrops-region-verification-05
       type: Internet-Draft
       primary: true
 ext:

@@ -6,30 +6,33 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: TCP Extended Options
+  content: An Upgraded TCP Session Type
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-bonica-tcpm-extended-options-04
+  content: https://datatracker.ietf.org/doc/html/draft-bonica-tcpm-extended-options-05
 docidentifier:
 - content: draft-bonica-tcpm-extended-options
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-26'
+  at: '2026-08-29'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>A TCP header accommodates only 40 octets of TCP options.  In the
-       future, applications may require more than 40 octets of TCP options.
-       For example, an application may require a TCP Authentication Option
-       (TCP-AO) with a 384-bit MAC.  This option requires 52 octets of
-       option space.
+    <p>Currently, TCP maintains ordinary sessions (SES-O) in which ordinary
+       segments (SEG-O) are exchanged.  Each SEG-O can accommodate up to 40
+       octets of options.
 
-       This document defines a TCP extension that accommodates up to 1,016
-       octets of TCP options while maintaining backward compatibility with
-       legacy implementations.</p>
+       In the future, applications may require more than 40 octets of
+       options.  For example, an application may use a 36-byte TCP
+       Authentication Option (TCP-AO), leaving insufficient space for other
+       required options.
+
+       Therefore, this document describes an experiment in which upgraded
+       sessions (SES-U) and upgraded segments (SEG-U) are introduced.  Each
+       SEG-U can accommodate up to 1,016 octets of Individual Options.</p>
 relation:
 - type: includes
   bibitem:
@@ -84,6 +87,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-bonica-tcpm-extended-options-04
     docidentifier:
     - content: draft-bonica-tcpm-extended-options-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bonica-tcpm-extended-options-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bonica-tcpm-extended-options-05
+    docidentifier:
+    - content: draft-bonica-tcpm-extended-options-05
       type: Internet-Draft
       primary: true
 ext:

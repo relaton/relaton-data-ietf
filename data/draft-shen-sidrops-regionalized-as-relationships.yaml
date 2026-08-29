@@ -9,20 +9,31 @@ title:
   content: ASPA Verification in the Presence of Regionalized AS-Relationships
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-regionalized-as-relationships-03
+  content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-regionalized-as-relationships-04
 docidentifier:
 - content: draft-shen-sidrops-regionalized-as-relationships
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-03-02'
+  at: '2026-08-29'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document proposes a method for ASPA verification in the Presence
-       of Regionalized AS-Relationships.</p>
+    <p>Autonomous System Provider Authorization (ASPA) defines an RPKI-based
+       methodology to validate the AS_PATH of BGP routes based on a global
+       Customer-to-Provider (C2P) relationship model.  However, in
+       commercial Internet routing, two Autonomous Systems (ASes) may
+       establish distinct business relationships across different
+       geographical regions or interconnection points (e.g., Customer-to-
+       Provider in one region, but Peer-to-Peer in another).  Such
+       regionalized or hybrid AS-relationships can lead to incorrect ASPA
+       validation results (e.g., false "Valid" attestation for a route
+       propagated over a P2P link).  This document analyzes the
+       vulnerabilities caused by regionalized AS-relationships and proposes
+       mechanisms to incorporate regional granularity into ASPA objects and
+       verification procedures.</p>
 relation:
 - type: includes
   bibitem:
@@ -66,6 +77,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-regionalized-as-relationships-03
     docidentifier:
     - content: draft-shen-sidrops-regionalized-as-relationships-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-shen-sidrops-regionalized-as-relationships-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-shen-sidrops-regionalized-as-relationships-04
+    docidentifier:
+    - content: draft-shen-sidrops-regionalized-as-relationships-04
       type: Internet-Draft
       primary: true
 ext:
