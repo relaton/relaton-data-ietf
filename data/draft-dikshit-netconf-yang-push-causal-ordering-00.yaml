@@ -1,0 +1,85 @@
+---
+id: draftdikshitnetconfyangpushcausalordering00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Comparable Sequence Numbers Across Publishers in YANG Datastore Telemetry
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-netconf-yang-push-causal-ordering-00
+docidentifier:
+- content: draft-dikshit-netconf-yang-push-causal-ordering
+  type: Internet-Draft
+- content: draft-dikshit-netconf-yang-push-causal-ordering-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dikshit-netconf-yang-push-causal-ordering
+date:
+- type: published
+  at: '2026-08-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Saumya
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dikshit
+      completename:
+        language: en
+        content: Saumya Dikshit
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aruba Networks
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>YANG Datastore Telemetry, YANG-Push version 2
+       [I-D.ietf-netconf-yang-push-2], assigns each publisher a
+       monotonically increasing sequence number so a receiver can detect
+       loss and reordering. The current design leaves two questions
+       unanswered: what happens when the counter wraps, and how a
+       receiver aggregating records from more than one publisher is to
+       compare sequence numbers that were never defined to be comparable
+       across publishers in the first place. Both questions have already
+       been studied, and largely settled, in the distributed systems
+       literature under the heading of logical and hybrid logical clocks,
+       and in deployed streaming systems under the heading of offset and
+       epoch numbering. This document evaluates three existing causal-
+       ordering primitives against YANG-Push's specific constraints and
+       proposes adopting a Hybrid Logical Clock so that the wraparound and
+       cross-publisher comparison problems are removed by construction
+       rather than patched with a wider counter.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dikshit-netconf-yang-push-causal-ordering-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

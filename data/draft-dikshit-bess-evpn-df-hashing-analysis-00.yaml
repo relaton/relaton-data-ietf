@@ -1,0 +1,85 @@
+---
+id: draftdikshitbessevpndfhashinganalysis00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Applicability of Consistent Hashing to Designated Forwarder Election Scope
+    Transitions in EVPN
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-bess-evpn-df-hashing-analysis-00
+docidentifier:
+- content: draft-dikshit-bess-evpn-df-hashing-analysis
+  type: Internet-Draft
+- content: draft-dikshit-bess-evpn-df-hashing-analysis-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dikshit-bess-evpn-df-hashing-analysis
+date:
+- type: published
+  at: '2026-08-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Saumya
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dikshit
+      completename:
+        language: en
+        content: Saumya Dikshit
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aruba Networks
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>[RFC8584] defines Highest Random Weight (HRW) as the algorithm for
+       Designated Forwarder election in EVPN, and, in Section 3.1, names
+       the Consistent Hashing family of algorithms as addressing the same
+       object-to-server mapping problem before explicitly declining to
+       evaluate them: "these will not be considered here."
+       [I-D.ietf-bess-evpn-per-mcast-flow-df-election] subsequently
+       introduces a scope transition, from per-(ES,VLAN) to per-
+       (ES,VLAN,S,G) election, that is precisely a key-space-resizing
+       event of the kind Consistent Hashing was designed to bound churn
+       for. This document proposes the applicability analysis RFC 8584
+       declined to make: it defines a DF-churn metric, states HRW's and
+       Consistent Hashing's known theoretical guarantees against it, and
+       sets out an evaluation methodology, using bounded-load Consistent
+       Hashing as the specific comparison point, given multicast group
+       popularity is known to be highly non-uniform in deployed networks.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dikshit-bess-evpn-df-hashing-analysis-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

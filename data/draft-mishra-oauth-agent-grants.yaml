@@ -6,39 +6,32 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Delegated Agent Authorization Protocol (DAAP)
+  content: OAuth Profile for Delegated AI Agent Authorization
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-mishra-oauth-agent-grants-01
+  content: https://datatracker.ietf.org/doc/html/draft-mishra-oauth-agent-grants-02
 docidentifier:
 - content: draft-mishra-oauth-agent-grants
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-03-02'
+  at: '2026-08-30'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>Artificial intelligence (AI) agents increasingly take autonomous
-       actions -- submitting forms, initiating payments, and sending
-       communications -- on behalf of human users across third-party
-       services.  This document defines the Delegated Agent Authorization
-       Protocol (DAAP), an open, model-neutral, framework-agnostic protocol
-       that specifies: cryptographic agent identity using Decentralized
-       Identifiers (DIDs); a human-consent-based grant authorization flow
-       modelled on OAuth 2.0; a signed JSON Web Token (JWT) grant token
-       format with agent-specific claims; a revocation model with online
-       verification; a hash-chained append-only audit trail; a policy engine
-       for automated authorization decisions; a multi-agent delegation model
-       with cascade revocation; budget controls for spending limits; real-
-       time event streaming; a credential vault for secure secret storage;
-       and external policy backend integration with OPA and Cedar.  DAAP
-       fills a gap unaddressed by existing OAuth 2.0 extensions: verifying
-       that a specific human authorized a specific AI agent to perform a
-       specific action, revoking that authorization in real time, and
-       producing a tamper-evident record of what the agent did.</p>
+    <p>AI agents increasingly invoke protected APIs on behalf of human
+       users.  This document defines an OAuth profile for identifying an
+       agent client instance, obtaining an authenticated user's consent,
+       issuing resource-bound and sender-constrained access tokens,
+       attenuating authority through OAuth Token Exchange, and rotating
+       refresh tokens safely.  The profile uses existing OAuth and JOSE
+       mechanisms wherever possible and defines no new JWT claims or OAuth
+       endpoints.  Operational facilities such as policy engines, audit
+       stores, budgets, event streams, and credential vaults are outside the
+       interoperable core.  Grantex is an incomplete reference
+       implementation and is not required for conformance.</p>
 relation:
 - type: includes
   bibitem:
@@ -60,6 +53,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-mishra-oauth-agent-grants-01
     docidentifier:
     - content: draft-mishra-oauth-agent-grants-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mishra-oauth-agent-grants-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mishra-oauth-agent-grants-02
+    docidentifier:
+    - content: draft-mishra-oauth-agent-grants-02
       type: Internet-Draft
       primary: true
 ext:

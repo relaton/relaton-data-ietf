@@ -1,0 +1,100 @@
+---
+id: draftpintoagentauthzcontestability00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Contestability Bindings for Authorized Agent Actions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pinto-agent-authz-contestability-00
+docidentifier:
+- content: draft-pinto-agent-authz-contestability
+  type: Internet-Draft
+- content: draft-pinto-agent-authz-contestability-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.pinto-agent-authz-contestability
+date:
+- type: published
+  at: '2026-08-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tiago
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Pinto
+      completename:
+        language: en
+        content: Tiago Pinto
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Researcher
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Authorization artifacts can provide signed evidence of a permission
+       under specified authorization rules.  Receipts can record a signed
+       claim or protocol event that the authorization was exercised, and
+       outcome evidence can describe what followed.  None of those artifacts
+       necessarily tells a person or organization affected by the action
+       where the authorization can be contested, which procedure applies,
+       whether a filing changes execution state, or who selected the
+       contestation forum.
+
+       This document defines a transport-independent Contestability Binding
+       for authorized agent actions.  The binding commits an authorization
+       to a versioned Contestation Parameters Object that identifies the
+       forum, submission mechanism, Standing Policy, procedure, time bounds,
+       declared effect policy, and selection evidence.  A forum can
+       acknowledge one exact authorization or publish a reusable acceptance
+       manifest for closed Authorization Binding Profile and Authorization
+       Trust Profile digest pairs.  A deterministic verifier validates the
+       binding, separately classifies evidence claiming pre-execution
+       verification by the executor, and reports forum-selection provenance
+       as unilateral, multiparty, externally selected, or indeterminate.
+       Where a filing is declared to affect execution state, the verifier
+       also separates the issuer's declared policy, the executor's signed
+       acceptance, the authenticated trigger, and the executor's claimed
+       application.
+
+       The mechanism makes the bound contestation parameters identifiable
+       and verifiable, supporting discoverability while resisting post-
+       action substitution.  It does not determine standing, prove forum
+       independence, resolve a dispute, select a remedy, establish legal
+       enforceability, or decide whether the original authorization was
+       legitimate.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-pinto-agent-authz-contestability-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

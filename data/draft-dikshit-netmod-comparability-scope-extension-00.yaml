@@ -1,0 +1,82 @@
+---
+id: draftdikshitnetmodcomparabilityscopeextension00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A YANG Extension for Declaring the Comparability Scope of Operational State
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-netmod-comparability-scope-extension-00
+docidentifier:
+- content: draft-dikshit-netmod-comparability-scope-extension
+  type: Internet-Draft
+- content: draft-dikshit-netmod-comparability-scope-extension-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dikshit-netmod-comparability-scope-extension
+date:
+- type: published
+  at: '2026-08-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Saumya
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Dikshit
+      completename:
+        language: en
+        content: Saumya Dikshit
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aruba Networks
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Several YANG modules currently in progress across multiple IETF
+       working groups define counters, gauges, and other measured values
+       that are exported from a network element and compared, summed, or
+       averaged by a remote collector, either against the same node's
+       history or against values from a different node. YANG (RFC 7950)
+       has no first-class, machine-checkable way to state the domain
+       within which two occurrences of such a value are comparable, so
+       this determination is currently made, inconsistently or not at
+       all, in prose. This document defines a YANG extension statement,
+       "csc:comparability-scope", a four-value scope lattice, and a
+       compatibility rule that lets a schema-aware tool statically detect
+       an illegal aggregation across incomparable scopes, without waiting
+       for it to happen at a collector.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dikshit-netmod-comparability-scope-extension-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
