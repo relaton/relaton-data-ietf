@@ -1,0 +1,87 @@
+---
+id: draftmihscittcheckpointedlocallog00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Checkpointed Local Log (CLL)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mih-scitt-checkpointed-local-log-00
+docidentifier:
+- content: draft-mih-scitt-checkpointed-local-log
+  type: Internet-Draft
+- content: draft-mih-scitt-checkpointed-local-log-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mih-scitt-checkpointed-local-log
+date:
+- type: published
+  at: '2026-08-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Steven
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Mih
+      completename:
+        language: en
+        content: Steven Mih
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Action State Group
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Many systems emit individually signed records — receipts,
+       attestations, statements — and store them locally.  Each record
+       verifies on its own, but the collection proves nothing: records can
+       be deleted, reordered, or created after the fact without detection.
+       This document specifies the Checkpointed Local Log (CLL): a producer-
+       operated append-only log, built on the Merkle Mountain Range
+       structure whose COSE proof formats are specified in
+       [I-D.bryce-cose-receipts-mmr-profile], together with a small signed
+       checkpoint that commits to the log's entire history.  Records of any
+       format are appended as they are produced; checkpoints are emitted on
+       a declared cadence and may be registered with one or more independent
+       Transparency Services or witnesses using existing SCITT registration.
+       A CLL upgrades a set of point receipts into a stream with provable
+       order, contemporaneity, and completeness — while defining precisely,
+       and narrowly, what such a log does and does not establish.  This
+       document defines the log discipline and the checkpoint structure; it
+       defines no new proof formats, no transparency service behavior, and
+       no payload semantics.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mih-scitt-checkpointed-local-log-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

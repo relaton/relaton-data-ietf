@@ -1,0 +1,122 @@
+---
+id: draftmarquesasqavcompliancereceipts08
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Compliance Profile of Signed Action Receipts for AI Agents
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-marques-asqav-compliance-receipts-08
+docidentifier:
+- content: draft-marques-asqav-compliance-receipts
+  type: Internet-Draft
+- content: draft-marques-asqav-compliance-receipts-08
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.marques-asqav-compliance-receipts
+date:
+- type: published
+  at: '2026-08-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: J. A. G.
+      surname:
+        language: en
+        content: Marques
+      completename:
+        language: en
+        content: João André Gomes Marques
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Asqav
+version:
+- content: '08'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a multi-jurisdiction compliance profile of the
+       signed action receipt format used by AI agents to record machine-
+       readable evidence of access-control decisions.  The profile binds
+       receipt fields to two regulatory surfaces: on the European Union
+       side, Articles 12 and 26 of the EU AI Act (Regulation (EU) 2024/1689)
+       and Article 17 of DORA (Regulation (EU) 2022/2554); on the United
+       States side, the NIST AI Risk Management Framework, the Colorado AI
+       Act, the Texas Responsible AI Governance Act, the New York Department
+       of Financial Services Cybersecurity Regulation (23 NYCRR Part 500),
+       the HIPAA Security Rule, SEC Rule 17a-4, and the Cyber Incident
+       Reporting for Critical Infrastructure Act of 2022 (CIRCIA).  Working
+       entirely within the existing wire format, canonicalization
+       transformation, and signing algorithms of the underlying receipt
+       format, the profile tightens a subset of the OPTIONAL fields to
+       REQUIRED, imposes a retention floor, and requires at least one
+       timestamping anchor (RFC 3161 or OpenTimestamps).  It registers
+       OPTIONAL extension fields for risk and incident classification,
+       cross-agent envelope binding, per-action validity-window and
+       integrity, build provenance, threat-framework taxonomy, server-built
+       enforcement-control records, producer-asserted risk acceptance, and
+       producer-asserted code authorship, each subject to false-attestation
+       guards where applicable, and registers receipt type namespaces for
+       passive-telemetry, result-bound observation, risk-acceptance, and
+       code-authorship receipts.  Revision -08 additionally defines an
+       attestation statement envelope (a Dead Simple Signing Envelope (DSSE)
+       Pre-Authentication Encoding wrapping an in-toto Statement v1 under an
+       asqav predicate namespace) with two tiers: a voluntary observation
+       attestation that signs a caller-supplied digest and is explicitly not
+       a capture, and an authoritative attestation whose subject digest the
+       issuing platform re-derives from independent evidence (for code, the
+       SHA-256 of the raw unified diff re-fetched from the source host);
+       revision -08 further defines the capture-layer integrity, independent
+       verification protocol, honest-tiering, and service-identity and
+       revocation rules that govern those attestation statements, and
+       documents the shipped keyed-digest wire tokens and the verifier
+       verdict vocabulary (verified, verified_keyed, unverified).  The full
+       field set and its normative requirements are defined in the body of
+       this document.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-marques-asqav-compliance-receipts-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-marques-asqav-compliance-receipts-07
+    docidentifier:
+    - content: draft-marques-asqav-compliance-receipts-07
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-marques-asqav-compliance-receipts-08
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

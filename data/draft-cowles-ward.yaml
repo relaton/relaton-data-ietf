@@ -1,0 +1,66 @@
+---
+id: draftcowlesward
+schema_version: v1.5.6
+formattedref:
+  content: draft-cowles-ward
+title:
+- language: en
+  script: Latn
+  content: 'Write-once Append-only Receipt Digests (WARD): A Content-Free Hash-Chain
+    Witnessing Protocol for Agentic AI Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-cowles-ward-00
+docidentifier:
+- content: draft-cowles-ward
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-31'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Write-once Append-only Receipt Digests (WARD) defines a minimal,
+       interoperable protocol for producing tamper-evident, content-free
+       hash-chain witnesses over events from agentic AI systems.  WARD
+       observes events from companion protocols (Agent Envelope Exchange
+       (AEE) messages, Agent Orchestration Control Layers (AOCL) decisions,
+       and Verifiable Operations Ledger and Trace (VOLT) evidence records)
+       and produces cryptographically linked receipts that prove specific
+       events existed at specific points in time, without storing any event
+       content.
+
+       WARD entries record only source identifiers and payload hashes, never
+       raw payloads, secrets, or personally identifiable information.
+       Entries are linked via SHA-256 hash chains anchored by deterministic
+       genesis hashes.  Periodic checkpoints called "tips" may be signed
+       with Ed25519 and published to external append-only stores (sinks) for
+       independent verification.  A meta-chain pattern allows witnessing
+       tips from multiple sub-chains, providing deployment-wide integrity
+       from a single verification point.
+
+       The protocol is designed as a passive observer: witnessing never
+       blocks, delays, or modifies the source event pipeline.  WARD failures
+       are logged but never disrupt AEE transport, AOCL decisions, or VOLT
+       recording.  This fire-and-forget integration model ensures that
+       witnessing adds tamper-evidence guarantees without introducing
+       operational risk.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-cowles-ward-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cowles-ward-00
+    docidentifier:
+    - content: draft-cowles-ward-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

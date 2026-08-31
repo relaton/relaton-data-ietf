@@ -1,0 +1,108 @@
+---
+id: draftscalonecfrsourceprivacy02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Customer-Facing Relay (CFR): Enhancing Source Privacy in Encrypted Transport
+    and CDN Scenarios'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-scalone-cfr-source-privacy-02
+docidentifier:
+- content: draft-scalone-cfr-source-privacy
+  type: Internet-Draft
+- content: draft-scalone-cfr-source-privacy-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.scalone-cfr-source-privacy
+date:
+- type: published
+  at: '2026-08-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gianpaolo
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Scalone
+      completename:
+        language: en
+        content: Gianpaolo Scalone
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Vodafone
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Encrypted ClientHello (ECH) protects sensitive TLS ClientHello
+       fields, including the Server Name Indication (SNI), from on-path
+       observers.  ECH does not, however, attempt to hide the client's
+       network-layer source identity from the ECH client-facing server
+       (CFS).  In split-mode deployments, the CFS decrypts the
+       ClientHelloInner in order to route the connection to the appropriate
+       backend while also receiving the connection from the client's visible
+       source address.
+
+       This creates a distinct source-privacy problem.  Where ECH service
+       and content front-door infrastructure are concentrated, a relatively
+       small number of providers can obtain a privileged vantage point from
+       which a stable source address can be correlated with many encrypted
+       destinations and with other service telemetry.  Measurements over a
+       corpus of approximately one million domains, together with an active-
+       ECH validation subset, show substantial front-door concentration and
+       motivate treating source privacy as a complement to destination
+       privacy.
+
+       This document describes the Customer-Facing Relay (CFR), a network-
+       layer, access-side source-aliasing function.  A CFR forwards
+       encrypted TCP or UDP traffic without terminating TLS or QUIC and
+       replaces the subscriber-visible source address with a shared or
+       short-lived source alias.  The document also examines the different
+       privacy properties of IPv4 NAT/CGN and IPv6 source addressing and
+       identifies requirements for privacy-preserving source mapping.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-scalone-cfr-source-privacy-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-scalone-cfr-source-privacy-01
+    docidentifier:
+    - content: draft-scalone-cfr-source-privacy-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-scalone-cfr-source-privacy-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

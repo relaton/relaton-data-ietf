@@ -1,0 +1,58 @@
+---
+id: draftmihscittcheckpointedlocallog
+schema_version: v1.5.6
+formattedref:
+  content: draft-mih-scitt-checkpointed-local-log
+title:
+- language: en
+  script: Latn
+  content: The Checkpointed Local Log (CLL)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mih-scitt-checkpointed-local-log-00
+docidentifier:
+- content: draft-mih-scitt-checkpointed-local-log
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-08-31'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Many systems emit individually signed records — receipts,
+       attestations, statements — and store them locally.  Each record
+       verifies on its own, but the collection proves nothing: records can
+       be deleted, reordered, or created after the fact without detection.
+       This document specifies the Checkpointed Local Log (CLL): a producer-
+       operated append-only log, built on the Merkle Mountain Range
+       structure whose COSE proof formats are specified in
+       [I-D.bryce-cose-receipts-mmr-profile], together with a small signed
+       checkpoint that commits to the log's entire history.  Records of any
+       format are appended as they are produced; checkpoints are emitted on
+       a declared cadence and may be registered with one or more independent
+       Transparency Services or witnesses using existing SCITT registration.
+       A CLL upgrades a set of point receipts into a stream with provable
+       order, contemporaneity, and completeness — while defining precisely,
+       and narrowly, what such a log does and does not establish.  This
+       document defines the log discipline and the checkpoint structure; it
+       defines no new proof formats, no transparency service behavior, and
+       no payload semantics.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mih-scitt-checkpointed-local-log-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mih-scitt-checkpointed-local-log-00
+    docidentifier:
+    - content: draft-mih-scitt-checkpointed-local-log-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

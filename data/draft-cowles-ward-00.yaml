@@ -1,0 +1,95 @@
+---
+id: draftcowlesward00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Write-once Append-only Receipt Digests (WARD): A Content-Free Hash-Chain
+    Witnessing Protocol for Agentic AI Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-cowles-ward-00
+docidentifier:
+- content: draft-cowles-ward
+  type: Internet-Draft
+- content: draft-cowles-ward-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.cowles-ward
+date:
+- type: published
+  at: '2026-08-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Adam
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Cowles
+      completename:
+        language: en
+        content: Adam Cowles
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Quox Ltd
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Write-once Append-only Receipt Digests (WARD) defines a minimal,
+       interoperable protocol for producing tamper-evident, content-free
+       hash-chain witnesses over events from agentic AI systems.  WARD
+       observes events from companion protocols (Agent Envelope Exchange
+       (AEE) messages, Agent Orchestration Control Layers (AOCL) decisions,
+       and Verifiable Operations Ledger and Trace (VOLT) evidence records)
+       and produces cryptographically linked receipts that prove specific
+       events existed at specific points in time, without storing any event
+       content.
+
+       WARD entries record only source identifiers and payload hashes, never
+       raw payloads, secrets, or personally identifiable information.
+       Entries are linked via SHA-256 hash chains anchored by deterministic
+       genesis hashes.  Periodic checkpoints called "tips" may be signed
+       with Ed25519 and published to external append-only stores (sinks) for
+       independent verification.  A meta-chain pattern allows witnessing
+       tips from multiple sub-chains, providing deployment-wide integrity
+       from a single verification point.
+
+       The protocol is designed as a passive observer: witnessing never
+       blocks, delays, or modifies the source event pipeline.  WARD failures
+       are logged but never disrupt AEE transport, AOCL decisions, or VOLT
+       recording.  This fire-and-forget integration model ensures that
+       witnessing adds tamper-evidence guarantees without introducing
+       operational risk.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-cowles-ward-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
