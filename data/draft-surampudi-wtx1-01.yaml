@@ -1,0 +1,109 @@
+---
+id: draftsurampudiwtx101
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'WTX-1: Cross-Domain Context Preservation Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-surampudi-wtx1-01
+docidentifier:
+- content: draft-surampudi-wtx1
+  type: Internet-Draft
+- content: draft-surampudi-wtx1-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.surampudi-wtx1
+date:
+- type: published
+  at: '2026-08-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ravi
+      - language: en
+        script: Latn
+        initial: R
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: R. T.
+      surname:
+        language: en
+        content: Surampudi
+      completename:
+        language: en
+        content: Ravi Teja Surampudi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nylo Project
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines WTX-1, a protocol for preserving pseudonymous
+       user context across web domains that are operated by, or on behalf
+       of, the same organization and that have mutually opted into the
+       exchange.  The protocol operates only after explicit user consent and
+       does not use third-party cookies, browser fingerprinting, or
+       collection of direct identifiers by default.  Identifiers are
+       pseudonymous, not anonymous: they can be linked to application-level
+       identities by the deploying organization and may constitute personal
+       data under applicable law.
+
+       WTX-1 transfers context using an encrypted, authenticated,
+       destination-bound, single-use token carried in the URL fragment.
+       Tokens are issued and verified server side, with atomic replay
+       consumption, DNS-based domain authorization, and short-lived server-
+       signed write grants that authorize browser write operations without
+       trusting caller-supplied tenant claims.
+
+       This revision (draft-02) replaces the signed-cleartext token format
+       of draft-01 with a sign-then-encrypt construction, specifies write
+       grants and replay-consumption ordering, defines the consent lifecycle
+       including withdrawal and asynchronous cancellation, adds storage
+       retention limits and user inspection, reset, and revocation controls,
+       and rescopes the document's security, privacy, and performance claims
+       to match the reviewed reference implementation.  A complete change
+       log appears in Appendix A.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-surampudi-wtx1-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-surampudi-wtx1-00
+    docidentifier:
+    - content: draft-surampudi-wtx1-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-surampudi-wtx1-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

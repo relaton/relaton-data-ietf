@@ -1,0 +1,130 @@
+---
+id: draftmorrisonotcommandauthority02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Consented and Attributable Agent Authority for Operational-Technology Control
+    Actions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-02
+docidentifier:
+- content: draft-morrison-ot-command-authority
+  type: Internet-Draft
+- content: draft-morrison-ot-command-authority-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-ot-command-authority
+date:
+- type: published
+  at: '2026-08-31'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christopher
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Whiteside
+      completename:
+        language: en
+        content: Christopher Whiteside
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo specifies a binding profile by which a control action
+       issued to an operational-technology (OT) or industrial control system
+       on the authority of a software agent is refused unless it carries a
+       verifiable statement of who the agent is, which human principal it
+       acts for, whether that principal authorised this specific action on
+       this specific asset, whether a named human signed off on the action
+       where its risk class requires it, and an append-only record
+       sufficient to attribute the action afterward.  The profile does not
+       invent new cryptography or a new identity mechanism.  It composes
+       primitives specified elsewhere, DNSSEC-rooted agent discovery, a
+       scoped and revocable authorisation grant, a named-human authorization
+       receipt bound into the record as human-authorization evidence, and an
+       append-only transparency record, into a single structure, the Command
+       Authority Envelope, that an enforcement point evaluates and, on any
+       missing or invalid binding, refuses.  The profile is availability-
+       first and fails closed on authority, never on safety: it MUST NOT be
+       placed in the trip path of a safety function.  The memo maps the
+       profile onto the identification, use-control, and audit requirements
+       that the IEC 62443 and NERC CIP frameworks state but do not give a
+       wire mechanism for.  A neighbouring proposal gates safety-critical
+       commands on an agent's trust level; this profile takes the opposite
+       position, and states why.  The methods by which a principal's
+       identity is inferred are out of scope by construction.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-ot-command-authority-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-01
+    docidentifier:
+    - content: draft-morrison-ot-command-authority-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-ot-command-authority-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

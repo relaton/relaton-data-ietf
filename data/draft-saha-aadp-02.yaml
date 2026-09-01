@@ -1,0 +1,103 @@
+---
+id: draftsahaaadp02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The Agent Action Decision Protocol (AADP): Per-Action Authorization for
+    AI Agents'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-saha-aadp-02
+docidentifier:
+- content: draft-saha-aadp
+  type: Internet-Draft
+- content: draft-saha-aadp-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.saha-aadp
+date:
+- type: published
+  at: '2026-09-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shamik
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Saha
+      completename:
+        language: en
+        content: Shamik Saha
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Agent Action Decision Protocol (AADP) separates per-action
+       authorization from an agent's identity and its standing capabilities,
+       and gives that authorization semantics that a stateless tool
+       permission or access grant cannot express: whether a specific
+       proposed action, with specific argument values, may be performed now,
+       given mutable state such as cumulative budgets, live reservations,
+       approval lifecycle, and a kill switch.  Existing agent-security work
+       concentrates on identity -- who an agent is, what credentials it
+       holds, and which tools it may reach; AADP addresses the complementary
+       decision, and composes with that work rather than replacing it.  This
+       document defines a two-phase wire contract between a Policy Decision
+       Point (PDP) that authorizes agent actions and the Policy Enforcement
+       Points (PEPs) that perform them: verdicts with machine-readable
+       reasons, obligations that fail closed, atomic budget reservation, an
+       approval lifecycle, idempotency behavior, evidence sufficient to re-
+       derive every verdict, and a set of evaluation invariants any
+       conformant decision point must observe -- including the rule that an
+       irreversible action is never executed autonomously.  The protocol is
+       transport-agnostic and is designed so that decision points and
+       enforcement points can be implemented independently, in different
+       languages, by different parties.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-saha-aadp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saha-aadp-01
+    docidentifier:
+    - content: draft-saha-aadp-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-saha-aadp-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

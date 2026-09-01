@@ -1,0 +1,58 @@
+---
+id: draftchuoauthsubjectkeybinding
+schema_version: v1.5.6
+formattedref:
+  content: draft-chu-oauth-subject-key-binding
+title:
+- language: en
+  script: Latn
+  content: OAuth Subject Signing Key Binding for Resource Servers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chu-oauth-subject-key-binding-00
+docidentifier:
+- content: draft-chu-oauth-subject-key-binding
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-01'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Resource servers in OAuth deployments sometimes receive application-
+       layer authorization evidence that is digitally signed by the subject
+       represented by an access token.  Verification of such evidence
+       requires the resource server to obtain a trusted public signing key
+       that is bound to that subject.
+
+       This specification defines the subject_keys parameter, by which an
+       OAuth authorization server conveys one or more subject public signing
+       keys to a resource server.  The parameter can be carried as a claim
+       in a JWT access token or as a member of a token introspection
+       response.  The resulting key binding is scoped to the authorization
+       server, token subject, resource server audience, and token validity
+       context.
+
+       This specification does not define a public-key enrollment protocol
+       or the syntax and semantics of the application-layer authorization
+       evidence.  It also does not use the OAuth cnf claim, which identifies
+       a proof-of-possession key held by the presenter of a token.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-chu-oauth-subject-key-binding-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chu-oauth-subject-key-binding-00
+    docidentifier:
+    - content: draft-chu-oauth-subject-key-binding-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
