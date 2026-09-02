@@ -9,14 +9,14 @@ title:
   content: 'Cedulon: An Audit Layer for Agent-to-Agent Commerce'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-06
+  content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-07
 docidentifier:
 - content: draft-dogru-cedulon
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-31'
+  at: '2026-09-02'
 abstract:
 - language: en
   script: Latn
@@ -43,20 +43,26 @@ abstract:
        witness holding a checkpoint the presented chain omits reports,
        brings equivocation within reach by comparing recorded copies against
        the presented chain, and states how checkpoint totals may be withheld
-       without withholding the fact that they were.  No signed object may be
-       verified against a key it carries itself, and a presented Trade
-       Manifest must be bound both to the receipts that name it and to the
-       terms those receipts claim.  The document also names a threat no
-       adversary causes, a settlement recorded on a rail with no receipt
-       behind it, and defines a Dispute Evidence Bundle (evidence, not an
-       award) and optional SCITT anchoring.  The encodings earlier revisions
-       called canonical are defined, and the exact input to every hash-
-       valued field is stated, so that an independent verifier can be
-       written from the text alone.  This revision adds the JSON counterpart
-       of the CBOR duplicate-key rule, names the refusal of a non-empty
-       unprotected header, and requests registration of the five media types
-       the profile carries in its protected headers.  Cedulon is not a
-       competitor to x402 or AP2; it sits above them.</p>
+       without withholding the fact that they were.  No signed object is
+       attested by a key it carries itself, and a presented Trade Manifest
+       must be bound both to the receipts that name it and to the terms
+       those receipts claim.  The document also names a threat no adversary
+       causes, a settlement recorded on a rail with no receipt behind it,
+       and defines a Dispute Evidence Bundle (evidence, not an award) and
+       optional SCITT anchoring.  The encodings earlier revisions called
+       canonical are defined, and the exact input to every hash-valued field
+       is stated, so that an independent verifier can be written from the
+       text alone.  This revision states one distinction in the seven places
+       that had kept its older absolute form: a key an object carries is
+       never the signer's identity and never a substitute for a key the
+       verifier did not obtain, while a signature checked against it where
+       no key is held establishes internal consistency and attests nothing.
+       It also brings the account and the rail under audit into the declared
+       scope on the terms the period already had, forbids reading a
+       settlement finding out of an extract the pinned rail key refused, and
+       states the wire form of the witness receipt, whose media type it
+       registers beside the other five.  Cedulon is not a competitor to x402
+       or AP2; it sits above them.</p>
 relation:
 - type: includes
   bibitem:
@@ -133,6 +139,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-06
     docidentifier:
     - content: draft-dogru-cedulon-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dogru-cedulon-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-07
+    docidentifier:
+    - content: draft-dogru-cedulon-07
       type: Internet-Draft
       primary: true
 ext:

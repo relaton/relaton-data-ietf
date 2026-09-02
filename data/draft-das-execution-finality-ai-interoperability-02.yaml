@@ -1,0 +1,129 @@
+---
+id: draftdasexecutionfinalityaiinteroperability02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Secure and Privacy-Preserving AI Interoperability under Article 6(7) of
+    the European Digital Markets Act: An Execution-Finality Architecture'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-02
+docidentifier:
+- content: draft-das-execution-finality-ai-interoperability
+  type: Internet-Draft
+- content: draft-das-execution-finality-ai-interoperability-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-execution-finality-ai-interoperability
+date:
+- type: published
+  at: '2026-09-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document presents a security- and privacy-preserving execution-
+       finality architecture for third-party AI interoperability under the
+       European Digital Markets Act (DMA).  It is designed to enable
+       meaningful participation by external AI assistants while keeping
+       consequential device actions under bounded, verifiable platform
+       control.
+
+       The architecture separates an AI-generated request from the authority
+       to make that request externally effective.  A requested operation
+       remains in a Non-Effective State until protected infrastructure
+       validates the requester, intended resource, destination, user
+       authorization or intent where required, purpose and scope, freshness,
+       revocation state, runtime conditions, and other applicable policy
+       predicates.
+
+       After successful validation, the system creates narrowly scoped, non-
+       bearer execution authority bound to the specific Candidate Act. At
+       the Finality Sink—the first boundary at which the operation can
+       become externally effective—the system independently verifies that
+       the actual operation still matches the validated act and that the
+       authority remains current and unused.
+
+       This design is intended to address major security risks associated
+       with AI interoperability, including prompt injection, compromised
+       assistant or cloud infrastructure, confused-deputy behavior, replay,
+       token theft or reuse, destination or parameter substitution, scope
+       escalation, stale authorization, alternate-path bypass, and
+       unauthorized consequential execution.
+
+       It also supports privacy protections by limiting access and
+       effectuation to the minimum act-specific scope, reducing dependence
+       on broad reusable permissions, preserving revocation and user-control
+       boundaries, and preventing data release or transmission when the
+       protected validation conditions are not satisfied.
+
+       The resulting model is open participation with bounded, verifiable
+       authority: third-party AI systems may interoperate with device
+       functions without receiving unrestricted final-effect authority,
+       while the platform retains protected enforcement over whether a
+       proposed action is permitted to become externally effective.
+
+       The length of this document is intentional.  It aims to work through
+       the major security- and privacy-related objections associated with
+       third-party AI interoperability at a technical level of detail
+       sufficient to show that they are addressed, rather than merely
+       asserted, and reviewers are welcome to engage with any section on its
+       own merits.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-das-execution-finality-ai-interoperability-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-01
+    docidentifier:
+    - content: draft-das-execution-finality-ai-interoperability-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-execution-finality-ai-interoperability-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

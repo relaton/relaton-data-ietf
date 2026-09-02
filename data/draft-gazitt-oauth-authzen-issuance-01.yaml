@@ -1,0 +1,99 @@
+---
+id: draftgazittoauthauthzenissuance01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: AuthZEN Profile for OAuth 2.0 Token Issuance
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gazitt-oauth-authzen-issuance-01
+docidentifier:
+- content: draft-gazitt-oauth-authzen-issuance
+  type: Internet-Draft
+- content: draft-gazitt-oauth-authzen-issuance-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gazitt-oauth-authzen-issuance
+date:
+- type: published
+  at: '2026-09-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Omri
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Gazitt
+      completename:
+        language: en
+        content: Omri Gazitt
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Numerous OAuth 2.0 specifications define a moment at which an
+       authorization server decides whether to issue a security token, and
+       each of them declares the decision itself to be a matter of local
+       policy that is out of scope.  The result is that a decision common to
+       every OAuth deployment has no interoperable expression.
+
+       This document defines a profile for using the OpenID AuthZEN
+       Authorization API to externalize that decision to a Policy Decision
+       Point.  It specifies how the inputs to a token issuance request map
+       onto AuthZEN's mandatory five-tuple, how a Policy Decision Point
+       response may shape the issued token, and how a Policy Decision Point
+       advertises support for the profile.
+
+       The mapping is complete for grants whose request names a single
+       party, including the authorization code and client credentials
+       grants.  Companion documents bind the grant families that add
+       structure this document does not model, the token exchange family
+       first among them.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gazitt-oauth-authzen-issuance-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gazitt-oauth-authzen-issuance-00
+    docidentifier:
+    - content: draft-gazitt-oauth-authzen-issuance-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gazitt-oauth-authzen-issuance-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

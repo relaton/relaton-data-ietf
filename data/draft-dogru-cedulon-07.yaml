@@ -1,0 +1,126 @@
+---
+id: draftdogrucedulon07
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Cedulon: An Audit Layer for Agent-to-Agent Commerce'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-07
+docidentifier:
+- content: draft-dogru-cedulon
+  type: Internet-Draft
+- content: draft-dogru-cedulon-07
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dogru-cedulon
+date:
+- type: published
+  at: '2026-09-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Emek
+      - language: en
+        script: Latn
+        initial: E
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: E. C.
+      surname:
+        language: en
+        content: Doğru
+      completename:
+        language: en
+        content: Emek Can Doğru
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: VERAX TEKNOLOJI LIMITED SIRKETI
+version:
+- content: '07'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Cedulon Protocol, an audit layer for agent-
+       to-agent commerce.  Payment rails such as HTTP 402 flows (x402) and
+       mandate protocols (AP2) already move value, and a mandate protocol
+       can already refuse a spend before it happens and return signed
+       receipts.  What they do not, by themselves, give a party that is
+       neither payer nor rail operator is a retrievable record of that
+       decision and a signed spend receipt that reconciles against an
+       authenticated extract of the rail.  Cedulon specifies a Trade
+       Manifest (signed offer before payment), a Policy Decision Point with
+       default deny, a Spend Receipt (COSE/CWT claim set after a gated
+       payment), epoch checkpoints, and rail-extract reconciliation.  The
+       reconciliation shows that no settlement on the extract lacks a
+       receipt and no settled receipt is absent from the extract.  That
+       result is unconditional only when the verifier pins the rail key out
+       of band and states the period under audit; otherwise the document
+       requires it to be reported as conditional.  Checkpoints carry the
+       suppression guarantee, so the document profiles the checkpoint as a
+       Signed Statement, gives the verification algorithm a step that
+       consumes the witness receipts returned for checkpoints, names what a
+       witness holding a checkpoint the presented chain omits reports,
+       brings equivocation within reach by comparing recorded copies against
+       the presented chain, and states how checkpoint totals may be withheld
+       without withholding the fact that they were.  No signed object is
+       attested by a key it carries itself, and a presented Trade Manifest
+       must be bound both to the receipts that name it and to the terms
+       those receipts claim.  The document also names a threat no adversary
+       causes, a settlement recorded on a rail with no receipt behind it,
+       and defines a Dispute Evidence Bundle (evidence, not an award) and
+       optional SCITT anchoring.  The encodings earlier revisions called
+       canonical are defined, and the exact input to every hash-valued field
+       is stated, so that an independent verifier can be written from the
+       text alone.  This revision states one distinction in the seven places
+       that had kept its older absolute form: a key an object carries is
+       never the signer's identity and never a substitute for a key the
+       verifier did not obtain, while a signature checked against it where
+       no key is held establishes internal consistency and attests nothing.
+       It also brings the account and the rail under audit into the declared
+       scope on the terms the period already had, forbids reading a
+       settlement finding out of an extract the pinned rail key refused, and
+       states the wire form of the witness receipt, whose media type it
+       registers beside the other five.  Cedulon is not a competitor to x402
+       or AP2; it sits above them.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-dogru-cedulon-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dogru-cedulon-06
+    docidentifier:
+    - content: draft-dogru-cedulon-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dogru-cedulon-07
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,86 @@
+---
+id: draftmitchellbotcentralcard00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The BotCentral Card: An Owner-Proven Consent Record for Automated Web
+    Clients'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mitchell-botcentral-card-00
+docidentifier:
+- content: draft-mitchell-botcentral-card
+  type: Internet-Draft
+- content: draft-mitchell-botcentral-card-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mitchell-botcentral-card
+date:
+- type: published
+  at: '2026-09-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rodney
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Mitchell
+      completename:
+        language: en
+        content: Rodney Mitchell
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: BotCentral
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Robots Exclusion Protocol (RFC 9309) lets a site say which
+       automated clients may fetch its content.  It cannot express purpose:
+       fetching a page to answer a person is not the same act as copying it
+       into a model training set or taking an action on the site.  It also
+       cannot prove who published the policy.
+
+       This document defines the BotCentral Card, a JSON record, one per
+       domain, that states which purposes the domain owner consents to
+       ("retrieve", "train", and "act" as separate answers), backed by a
+       proof of domain control placed either in a DNS TXT record or at the
+       well-known URI "/.well-known/botcentral.txt".  Cards are written to a
+       registry by authenticated publishers and read by any client over HTTP
+       or the Model Context Protocol.  Clients never write cards.  A card is
+       permission to be found; it is not a ranking and not a training grant.
+
+       This document also registers the "botcentral.txt" well-known URI.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mitchell-botcentral-card-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

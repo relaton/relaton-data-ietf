@@ -1,0 +1,175 @@
+---
+id: draftliindividualinip01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: In-Network Inference Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-individual-inip-01
+docidentifier:
+- content: draft-li-individual-inip
+  type: Internet-Draft
+- content: draft-li-individual-inip-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-individual-inip
+date:
+- type: published
+  at: '2026-09-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Qing
+      - language: en
+        script: Latn
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Qing Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guorui
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Xie
+      completename:
+        language: en
+        content: Guorui Xie
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yong
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Jiang
+      completename:
+        language: en
+        content: Yong Jiang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua Shenzhen International Graduate School
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mingwei
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Xu
+      completename:
+        language: en
+        content: Mingwei Xu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tsinghua University
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the In-Network Inference Protocol (INIP), a
+       lightweight protocol designed specifically for implementing high-
+       speed in-network inference in data center internal networks.  INIP
+       utilizes data plane devices (such as switches, DPUs, and SmartNICs)
+       to perform lightweight inference tasks while ensuring that core
+       network forwarding functions are not affected.  The protocol operates
+       based on the IPv4 protocol and adopts a fixed, lightweight packet
+       format.
+
+       INIP adopts a two-tier architecture of "centralized control plane
+       adaptation and scheduling, and minimal data plane execution".  The
+       control plane stores all inference models, deploys model rules to
+       data plane devices using a CDN-like scheduling method, and assumes
+       the responsibility of degraded fallback inference; the data plane
+       performs packet parsing and match action table-based inference.  This
+       document details INIP's core logic, packet format, data plane device
+       constraints, model expression specifications, control plane
+       responsibilities, CDN-like scheduling mechanism, dynamic model
+       popularity replacement, and overall execution process.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-li-individual-inip-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-individual-inip-00
+    docidentifier:
+    - content: draft-li-individual-inip-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-individual-inip-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
