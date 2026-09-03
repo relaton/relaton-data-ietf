@@ -1,0 +1,113 @@
+---
+id: draftsharifagentaudittrail02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-02
+docidentifier:
+- content: draft-sharif-agent-audit-trail
+  type: Internet-Draft
+- content: draft-sharif-agent-audit-trail-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sharif-agent-audit-trail
+date:
+- type: published
+  at: '2026-09-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raza
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Sharif
+      completename:
+        language: en
+        content: Raza Sharif
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CyberSecAI Ltd
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a standard logging format for autonomous
+       AI agent systems.  The Agent Audit Trail (AAT) defines a
+       JSON-based record structure with mandatory fields for agent
+       identity, action classification, outcome tracking, and trust
+       level reporting.  Records are linked via tamper-evident hash
+       chaining using SHA-256 per RFC 8785, with optional ECDSA
+       signatures for non-repudiation.
+
+       The format addresses requirements from the EU AI Act
+       (Regulation 2024/1689), which mandates automatic recording of
+       events for high-risk AI systems effective August 2026.  It also
+       maps to SOC 2 Trust Services Criteria, ISO/IEC 42001,
+       ISO/IEC 24970, prEN 18229-1, and PCI DSS v4.0.1 logging
+       requirements.
+
+       The design is transport-agnostic and supports export to JSONL,
+       Syslog (RFC 5424), and CSV while preserving chain integrity.
+       Privacy is addressed through input/output hashing, content
+       fingerprinting, and tombstone-based deletion compatible with
+       GDPR Article 17.
+
+       This revision (-01) adds pre-execution recording requirements,
+       recording independence, deny reason codes, replay protection,
+       external timestamp anchoring, and content fingerprinting based
+       on feedback from independent implementers.
+
+       This revision (-02) adds a Decision Reproducibility section
+       (Section 13) that distinguishes record reproducibility,
+       available for any model, from decision reproducibility,
+       available only for open-weight models executed at temperature
+       zero in an attested environment, and defines the associated
+       record fields.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sharif-agent-audit-trail-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-01
+    docidentifier:
+    - content: draft-sharif-agent-audit-trail-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sharif-agent-audit-trail-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

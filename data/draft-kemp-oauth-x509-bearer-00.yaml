@@ -1,0 +1,85 @@
+---
+id: draftkempoauthx509bearer00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: X.509 Certificate Bearer Profile for OAuth 2.0 Client Authentication and
+    Authorization Grants
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kemp-oauth-x509-bearer-00
+docidentifier:
+- content: draft-kemp-oauth-x509-bearer
+  type: Internet-Draft
+- content: draft-kemp-oauth-x509-bearer-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kemp-oauth-x509-bearer
+date:
+- type: published
+  at: '2026-09-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Kemp
+      completename:
+        language: en
+        content: John Kemp
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Your Organization Here
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification defines the use of an X.509 certificate, issued
+       under a Public Key Infrastructure (PKI), as a means for requesting an
+       OAuth 2.0 access token as well as for client authentication,
+       profiling the Assertion Framework for OAuth 2.0 Client Authentication
+       and Authorization Grants in a manner analogous to the JSON Web Token
+       (JWT) Bearer Token profile and the SAML 2.0 Bearer Assertion profile.
+       It is motivated primarily by workload identity systems, such as
+       SPIFFE/SPIRE and Athenz, that already issue software workloads short-
+       lived X.509 certificates for mutual TLS, and that benefit from using
+       those same certificates directly with OAuth 2.0.  Unlike a bare
+       bearer credential, this profile requires that possession of the
+       private key corresponding to the certificate's public key be
+       corroborated as part of every use, so that a copy of the certificate
+       alone -- which is not a secret -- is never sufficient to obtain a
+       grant or authenticate a client.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kemp-oauth-x509-bearer-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

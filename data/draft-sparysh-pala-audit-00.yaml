@@ -1,0 +1,123 @@
+---
+id: draftsparyshpalaaudit00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'PALA-1: A Tamper-Evident Audit Record Format for Constrained and Disconnected
+    Deployments'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sparysh-pala-audit-00
+docidentifier:
+- content: draft-sparysh-pala-audit
+  type: Internet-Draft
+- content: draft-sparysh-pala-audit-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sparysh-pala-audit
+date:
+- type: published
+  at: '2026-09-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrii
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Sparysh
+      completename:
+        language: en
+        content: Andrii Sparysh
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Assault Consulting
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Oleksandr
+      - language: en
+        script: Latn
+        initial: O
+      formatted_initials:
+        language: en
+        content: O.
+      surname:
+        language: en
+        content: Verteletskyi
+      completename:
+        language: en
+        content: Oleksandr Verteletskyi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Assault Consulting
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes PALA-1, a compact binary record format for
+       tamper-evident audit trails produced by AI inference runtimes and
+       robotic control systems.  It is designed for a class of deployment
+       defined by three constraints that hold together: the hardware is
+       computationally modest and its cycles are reserved for the workload
+       and the power budget rather than for the audit trail; no external
+       witness is reachable, whether because policy forbids outbound contact
+       or because the platform operates beyond connectivity, so a witness is
+       unavailable by rule or by physics rather than by circumstance; and
+       the right to verify the trail is separated from the right to read
+       what it records.
+
+       Records form an append-only hash chain.  Integrity verification
+       requires no key material of any kind, inspects no record bodies, and
+       costs one hash per record rather than one signature.  The format
+       distinguishes three separately answerable questions -- internal
+       consistency, completeness against an external anchor, and existence
+       at a point in time against an external witness -- and states which of
+       the three a given trail actually supports rather than implying all
+       three.
+
+       The format is frozen at version 1.0 and is described here as it is.
+       This document presents an existing wire format; it does not revise
+       one.  Where a deployment does permit an external witness, a chain
+       head may be published to a transparency service such as that of the
+       Supply Chain Integrity, Transparency, and Trust architecture (SCITT,
+       RFC 9943); that path is described but is not part of the hashing
+       contract.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sparysh-pala-audit-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

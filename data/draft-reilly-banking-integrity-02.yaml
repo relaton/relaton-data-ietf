@@ -1,0 +1,125 @@
+---
+id: draftreillybankingintegrity02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Reilly Banking Integrity Protocol (RBIP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-reilly-banking-integrity-02
+docidentifier:
+- content: draft-reilly-banking-integrity
+  type: Internet-Draft
+- content: draft-reilly-banking-integrity-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.reilly-banking-integrity
+date:
+- type: published
+  at: '2026-09-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lawrence
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: L. J.
+      surname:
+        language: en
+        content: Reilly
+      completename:
+        language: en
+        content: Lawrence John Reilly Jr.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines version 02 of the Reilly Banking Integrity
+       Protocol (RBIP), a compliance-grade architecture for generating
+       immutable, auditor- and regulator-verifiable evidence trails in
+       banking operations.  RBIP combines cryptographic anchoring (via a
+       public timestamping service) with archival deposit under a
+       persistent identifier to produce permanent, tamper-evident records
+       across three compliance domains: Proof-of-Reserves &amp; Liquidity
+       (PRL), Loan Origination &amp; Collateral Chain (LOC), and KYC/AML
+       Evidence Ledger (KAL), plus a system evidence domain (SYS) covering
+       RBIP's own access, key, disclosure, and continuity events.
+
+       This revision corrects defects in draft-reilly-banking-integrity-01
+       that would have prevented independent verification.  It replaces the
+       -01 Merkle construction with the construction of [RFC9162] and
+       prohibits leaf duplication; moves Merkle leaves from the payload
+       digest to a digest over the full signed Evidence Item; resolves
+       three conflicting definitions of prev_digest; separates the anchored
+       Bundle Core from the mutable anchor and archival metadata,
+       eliminating the -01 circularity in which the anchored digest could
+       not match the archived artifact; replaces unsalted identifier
+       hashes with salted field commitments; and resolves the -01 conflict
+       between its plaintext officer-name fields and its own prohibition on
+       plaintext personal data.
+
+       This revision also adds an Evidence Coverage Attestation, because
+       integrity of submitted evidence is not evidence of completeness;
+       mandatory heartbeat bundles, so that truncation of an evidence chain
+       is detectable; explicit pending and attested anchor states in place
+       of a fixed confirmation count; a Suspicious Activity Report
+       confidentiality section, because publicly archiving KAL bundle
+       metadata as described in -01 could disclose the existence of a
+       report; algorithm suite identifiers and bridging records for hash
+       and signature migration; a key discovery and revocation mechanism;
+       and a prohibition on automated remediation of integrity violations.
+
+       RBIP is intended to help financial institutions evidence compliance
+       with Basel III/IV, SOX, BSA/AML, DORA, MiCA, ISO/IEC 42001:2023, and
+       other applicable regimes while preserving privacy, accountability,
+       and auditability.
+
+       This document is published as a prior art record in the sense
+       described in [I-D.reilly-rem-protocol]: a public, timestamped
+       disclosure under 35 U.S.C. 102(a)(1) [USC-35-102].  Publication as
+       a prior art record is a record of disclosure and its date.  It is
+       not a determination of novelty, priority, or patentability, and no
+       such determination is claimed here.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-reilly-banking-integrity-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reilly-banking-integrity-01
+    docidentifier:
+    - content: draft-reilly-banking-integrity-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-reilly-banking-integrity-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

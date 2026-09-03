@@ -9,14 +9,14 @@ title:
   content: The Human Escalation Mechanism (HEM) for Agentic AI Systems
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-sato-soos-hem-05
+  content: https://datatracker.ietf.org/doc/html/draft-sato-soos-hem-06
 docidentifier:
 - content: draft-sato-soos-hem
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-30'
+  at: '2026-09-03'
 abstract:
 - language: en
   script: Latn
@@ -55,9 +55,14 @@ abstract:
        specifications, trigger conditions, GAR ALE registrations
        (ALE-030 through ALE-041), and five new Security Considerations
        addressing the HEM channel attack surface.  INV-HEM-01 (The
-       Surfacing Obligation) is added as a KernelSpec invariant.  Section
-       7 (Human Readiness Score) and Section 8 (Tier 0-A Integration) are
-       new normative sections.
+       Surfacing Obligation) is added as a KernelSpec invariant, along
+       with normative Human Readiness Score (HRS) and Tier 0-A
+       Integration sections.
+
+       Version -06 corrects an internal contradiction over whether HRS
+       data persists across sessions, reconstructs several sections whose
+       base content had gone missing from the -05 text, and extends
+       DoS rate-limiting guidance to the -05 interaction-class triggers.
 
        HEM is enforced by the GEC, not by the agent and not by the
        application layer.  An agent cannot opt out; an application cannot
@@ -129,6 +134,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-sato-soos-hem-05
     docidentifier:
     - content: draft-sato-soos-hem-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sato-soos-hem-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sato-soos-hem-06
+    docidentifier:
+    - content: draft-sato-soos-hem-06
       type: Internet-Draft
       primary: true
 ext:

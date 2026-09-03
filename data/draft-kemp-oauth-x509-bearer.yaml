@@ -1,0 +1,56 @@
+---
+id: draftkempoauthx509bearer
+schema_version: v1.5.6
+formattedref:
+  content: draft-kemp-oauth-x509-bearer
+title:
+- language: en
+  script: Latn
+  content: X.509 Certificate Bearer Profile for OAuth 2.0 Client Authentication and
+    Authorization Grants
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kemp-oauth-x509-bearer-00
+docidentifier:
+- content: draft-kemp-oauth-x509-bearer
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This specification defines the use of an X.509 certificate, issued
+       under a Public Key Infrastructure (PKI), as a means for requesting an
+       OAuth 2.0 access token as well as for client authentication,
+       profiling the Assertion Framework for OAuth 2.0 Client Authentication
+       and Authorization Grants in a manner analogous to the JSON Web Token
+       (JWT) Bearer Token profile and the SAML 2.0 Bearer Assertion profile.
+       It is motivated primarily by workload identity systems, such as
+       SPIFFE/SPIRE and Athenz, that already issue software workloads short-
+       lived X.509 certificates for mutual TLS, and that benefit from using
+       those same certificates directly with OAuth 2.0.  Unlike a bare
+       bearer credential, this profile requires that possession of the
+       private key corresponding to the certificate's public key be
+       corroborated as part of every use, so that a copy of the certificate
+       alone -- which is not a secret -- is never sufficient to obtain a
+       grant or authenticate a client.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kemp-oauth-x509-bearer-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kemp-oauth-x509-bearer-00
+    docidentifier:
+    - content: draft-kemp-oauth-x509-bearer-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
