@@ -1,0 +1,107 @@
+---
+id: draftlnehrulispsilenthostdetection00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: LISP Silent Host Discovery using the Mapping System
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-lnehru-lisp-silenthost-detection-00
+docidentifier:
+- content: draft-lnehru-lisp-silenthost-detection
+  type: Internet-Draft
+- content: draft-lnehru-lisp-silenthost-detection-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.lnehru-lisp-silenthost-detection
+date:
+- type: published
+  at: '2026-09-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Loganathan
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Nehru
+      completename:
+        language: en
+        content: Loganathan Nehru
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Marc
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Portoles-Comeras
+      completename:
+        language: en
+        content: Marc Portoles-Comeras
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The on-demand discovery model of the Locator/ID Separation Protocol
+       (LISP) is ineffective for "silent hosts", endpoints that do not
+       initiate traffic.  This is a common challenge in environments like
+       manufacturing and IoT environments, where low-power devices
+       frequently go silent to conserve energy.  This document proposes a
+       mechanism to discover these hosts by using the LISP mapping system
+       itself. xTRs that are able to probe a given EID prefix register that
+       capability with the Map-Server.  When a Map-Request for an unknown
+       destination arrives at the Map-Server, it is forwarded and replicated
+       to all xTRs that have registered the covering EID prefix, initiating
+       a controlled, on-demand discovery process for that specific host.
+       This approach provides a scalable alternative to network flooding for
+       locating silent endpoints.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-lnehru-lisp-silenthost-detection-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

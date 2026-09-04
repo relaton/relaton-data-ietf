@@ -1,0 +1,93 @@
+---
+id: draftfarleyactasignedreceipts03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Signed Decision Receipts for Machine-to-Machine Access Control
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-farley-acta-signed-receipts-03
+docidentifier:
+- content: draft-farley-acta-signed-receipts
+  type: Internet-Draft
+- content: draft-farley-acta-signed-receipts-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.farley-acta-signed-receipts
+date:
+- type: published
+  at: '2026-09-03'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tom
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Farley
+      completename:
+        language: en
+        content: Tom Farley
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ScopeBlind (Veritas Acta)
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a portable, cryptographically signed receipt
+       format for recording machine-to-machine access control decisions.
+       Each receipt captures the identity of the decision maker, the tool or
+       resource being accessed, the policy evaluation result, and a
+       timestamp.  All of these are signed with Ed25519 [RFC8032] and
+       serialized using deterministic JSON canonicalization [RFC8785].
+
+       The format is designed for environments where AI agents invoke tools
+       on behalf of human operators, particularly the Model Context Protocol
+       (MCP) ecosystem.  Receipts are independently verifiable without
+       contacting the issuer, enabling offline audit, regulatory compliance,
+       and cross-organizational trust federation.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-farley-acta-signed-receipts-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-farley-acta-signed-receipts-02
+    docidentifier:
+    - content: draft-farley-acta-signed-receipts-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-farley-acta-signed-receipts-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
