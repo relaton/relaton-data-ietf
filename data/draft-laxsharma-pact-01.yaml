@@ -1,0 +1,102 @@
+---
+id: draftlaxsharmapact01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'PACT: Liability and Settlement for Autonomous Agent Contracts'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-laxsharma-pact-01
+docidentifier:
+- content: draft-laxsharma-pact
+  type: Internet-Draft
+- content: draft-laxsharma-pact-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.laxsharma-pact
+date:
+- type: published
+  at: '2026-09-04'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Laxmikant
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Sharma
+      completename:
+        language: en
+        content: Laxmikant Sharma
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A growing family of specifications lets autonomous agents establish
+       identity, delegate authority, record what they did, and move money.
+       None of them makes one party financially answerable to another for a
+       result that was not delivered.  This document specifies PACT, which
+       adds liability as a required, co-signed member of an agent contract
+       and propagates it through a subcontract tree.
+
+       PACT defines the Verifiable Task Contract, a signed JSON object
+       binding parties, scope, price, verification profile, and an explicit
+       allocation of liability; the Delivery object that a contract is
+       judged against; an escrowed settlement procedure whose release is
+       conditioned on a stated assurance level rather than on elapsed time;
+       and a subcontract tree in which a parent's Work Attestation commits
+       to its children by Merkle root and liability cascades upward.
+
+       PACT does not define an identity format, an authorization model, an
+       audit architecture, a transparency service, a payment rail, or a
+       reputation system.  It composes existing work for all of these.  Its
+       settlement loop is an instance of optimistic fair exchange, and its
+       bond-sizing rule is the classical deterrence bound; both are cited
+       rather than reintroduced.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-laxsharma-pact-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-laxsharma-pact-00
+    docidentifier:
+    - content: draft-laxsharma-pact-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-laxsharma-pact-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

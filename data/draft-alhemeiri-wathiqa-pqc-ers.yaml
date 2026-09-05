@@ -1,0 +1,55 @@
+---
+id: draftalhemeiriwathiqapqcers
+schema_version: v1.5.6
+formattedref:
+  content: draft-alhemeiri-wathiqa-pqc-ers
+title:
+- language: en
+  script: Latn
+  content: Post-Quantum Evidence Records with Algorithm Agility (Wathiqa Profile)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-alhemeiri-wathiqa-pqc-ers-00
+docidentifier:
+- content: draft-alhemeiri-wathiqa-pqc-ers
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-05'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes an evidence-record format for the long-term,
+       verifiable preservation of digitally-signed data across the migration
+       to post-quantum cryptography.  It builds on the Evidence Record
+       Syntax (ERS) of RFC 4998 and adds an explicit *algorithm-agility*
+       extension: a record is a chain of signed attestations in which each
+       link re-witnesses the data under a fresh signature primitive and
+       commits to the prior link, so that the authenticity of the data
+       survives the cryptographic break of any single primitive.  It
+       specifies the canonical hashing that makes a record reproducibly
+       verifiable across independent implementations, the authenticated
+       temporal binding that places each link in time (an append-only
+       transparency log à la RFC 6962, whose signed inclusion receipt is
+       _not-after_ evidence), and the verification procedure.  A per-link
+       beacon anchor records _not-before_ metadata but is, in this profile,
+       carried unauthenticated — see Section 8.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-alhemeiri-wathiqa-pqc-ers-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-alhemeiri-wathiqa-pqc-ers-00
+    docidentifier:
+    - content: draft-alhemeiri-wathiqa-pqc-ers-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

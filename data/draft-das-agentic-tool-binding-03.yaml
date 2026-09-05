@@ -1,0 +1,131 @@
+---
+id: draftdasagentictoolbinding03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'tool_use Is Not invoke(): Binding Execution-Finality to Agentic Tool-Call
+    Interfaces and MCP'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-agentic-tool-binding-03
+docidentifier:
+- content: draft-das-agentic-tool-binding
+  type: Internet-Draft
+- content: draft-das-agentic-tool-binding-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-agentic-tool-binding
+date:
+- type: published
+  at: '2026-09-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Frontier runtimes already standardized the dangerous moment.  A model
+       emits a tool_use block, a tool_calls array, or an MCP tools/call
+       payload.  The host then invokes whatever name and arguments the model
+       printed.  Alignment, allowlists, and OAuth sit around that moment.
+       They do not sit on it.
+
+       The consequence of this gap is no longer confined to email or payment
+       demos.  In defense, energy, grid control, industrial process control,
+       and other critical-infrastructure deployments, the same tool_use
+       block already reaches actuation-class systems -- logistics and
+       targeting-adjacent decision support, SCADA and PLC interfaces,
+       medical devices, autonomous platforms.  In these environments,
+       detection after the fact is not mitigation; it is an incident report
+       written after the effect has already occurred.  An agent that can act
+       at machine speed but cannot be halted at machine speed is a system
+       running without brakes: the first uncontrolled invocation is not a
+       warning sign, it is the accident.  Command authority, human
+       oversight, and legal review all operate on human time.  An unbound
+       tool_use block operates on machine time.  When those two clocks
+       diverge, the gap belongs to whichever side reaches the effect first
+       -- and today, nothing structurally guarantees that side is
+       authorization.
+
+       This document does not invent another assistant API.  It binds the
+       Agent Candidate Act profile [I-D.das-agentic] onto the three
+       interface families those runtimes and their customers already ship:
+       tool_use / computer_use style interfaces, function-calling and
+       structured tool-response interfaces, and Model Context Protocol
+       tools/call.  The model may emit the block.  The block remains non-
+       effective.  A local enforcer builds the act, binds the argument
+       digest, and refuses invoke() until scoped authority is verified and
+       consumed at the dispatch sink.
+
+       For consequence classes above a defined threshold -- FINANCIAL,
+       PHYSICAL, NETWORK_CONTROL, and any act reaching defense or critical-
+       infrastructure actuation -- this binding treats fail-closed as the
+       only conforming behavior: absent successfully verified, current, act-
+       bound authority, the candidate act stays non-effective regardless of
+       model confidence, prior session trust, or upstream alignment signal.
+       Each enforcement decision, allow or deny, commits a Ledger-Anchored
+       Validation Receipt (LAVR) -- a signed, hash-chained enforcement
+       artifact bound to the specific candidate act and its argument digest
+       at the moment of decision.  An LAVR is not a log entry assembled
+       afterward for audit; it is the proof that the finality boundary
+       actually gated this act before any effect could occur, and its
+       absence is itself a fail-closed condition.
+
+       The implementation target is a middleware function that a host loop
+       can call without changing the model vendor. tool_use is not invoke().</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-das-agentic-tool-binding-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-agentic-tool-binding-02
+    docidentifier:
+    - content: draft-das-agentic-tool-binding-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-agentic-tool-binding-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

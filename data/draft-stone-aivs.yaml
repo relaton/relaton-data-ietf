@@ -9,32 +9,31 @@ title:
   content: 'AIVS: Agentic Integrity Verification Standard'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-stone-aivs-00
+  content: https://datatracker.ietf.org/doc/html/draft-stone-aivs-01
 docidentifier:
 - content: draft-stone-aivs
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-03-17'
+  at: '2026-09-04'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies the Agentic Integrity Verification Standard
-       (AIVS), a portable, self-verifiable archive format for cryptographic
-       proof of AI agent sessions.  An AIVS proof bundle is a gzip-
-       compressed tar archive containing a SHA-256 hash-chained audit log,
-       an Ed25519 digital signature over the chain, a machine-readable
-       manifest, and an embedded verification script that requires only the
-       Python 3 standard library to execute.  AIVS also defines AIVS-Micro:
-       a minimal six-field attestation (~200 bytes) for continuous
-       monitoring and API contexts where a full session bundle is not
-       required.  AIVS enables any party to independently verify that every
-       action in an agent session is accounted for and unmodified, that no
-       actions have been inserted, deleted, or reordered, and that the
-       session was produced by a specific cryptographic identity — entirely
-       offline, without installing any software beyond Python 3.</p>
+    <p>The Agentic Integrity Verification Standard (AIVS) defines a
+       portable, self-verifiable archive format for cryptographic proof of
+       AI agent sessions.  An AIVS bundle is a gzip-compressed tar archive
+       containing a SHA-256 hash-chained audit log, an Ed25519 digital
+       signature over the chain, a machine-readable manifest, and an
+       embedded verification script that requires only Python 3 standard
+       library to execute.
+
+       AIVS also defines *AIVS-Micro*: a minimal 6-field attestation (~200
+       bytes) for continuous monitoring, embedded widgets, and API responses
+       where a full session bundle is not required.
+
+       AIVS enables any party to independently verify that:</p>
 relation:
 - type: includes
   bibitem:
@@ -45,6 +44,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-stone-aivs-00
     docidentifier:
     - content: draft-stone-aivs-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-stone-aivs-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-stone-aivs-01
+    docidentifier:
+    - content: draft-stone-aivs-01
       type: Internet-Draft
       primary: true
 ext:

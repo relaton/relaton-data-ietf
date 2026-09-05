@@ -1,0 +1,123 @@
+---
+id: draftreillywebproof01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'WebProof: A Dual-Layer Web Provenance Protocol for Verifiable Digital
+    Truth on the Internet'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-reilly-webproof-01
+docidentifier:
+- content: draft-reilly-webproof
+  type: Internet-Draft
+- content: draft-reilly-webproof-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.reilly-webproof
+date:
+- type: published
+  at: '2026-09-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Lawrence
+      - language: en
+        script: Latn
+        initial: L
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: L. J. R.
+      surname:
+        language: en
+        content: Reilly
+      completename:
+        language: en
+        content: Lawrence John Reilly Jr
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines WebProof, a new protocol layer for the World
+       Wide Web that enables any web resource, document, dataset, media
+       artifact, or AI-generated output to be cryptographically proven to
+       exist in a specific form, at a specific time, under a specific
+       author's custody.
+
+       The web currently provides transport security (TLS), naming (DNS),
+       and resource identification (URI/URL), but no native mechanism for
+       verifiable provenance.  Any web resource can be silently modified,
+       backdated, or repudiated.  WebProof fills this gap by defining a
+       dual-anchored provenance layer that combines DOI-based archival
+       permanence with blockchain timestamping to produce a WebProof Record
+       (WPR): a machine-readable, independently verifiable proof of a
+       resource's existence, integrity, authorship, and timestamp.
+
+       WebProof introduces a well-known URI (/.well-known/webproof) for
+       resource-level proof publication, HTTP response header extensions
+       for inline provenance signaling, a canonical WebProof Record schema,
+       a generation and verification procedure, and a DNS TXT record
+       profile for domain-level WebProof registration.
+
+       WebProof is designed to compose with existing web infrastructure and
+       is intentionally non-disruptive: it does not require modifications
+       to HTTP, TLS, or DNS to function, operating as an opt-in provenance
+       layer that any web publisher can adopt independently.  The protocol
+       builds on the Dual-Layer Digital Permanence methodology introduced
+       by Lawrence John Reilly Jr. in the Reilly EternaMark (REM) Protocol
+       [I-D.draft-reilly-rem-protocol].
+
+       The term "WebProof" is coined by Lawrence John Reilly Jr. and first
+       formally defined in this document.
+
+       This revision adds material to draft-reilly-webproof-00 without
+       removing or altering any text carried forward from it.  The
+       additions are summarized in Section 18.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-reilly-webproof-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reilly-webproof-00
+    docidentifier:
+    - content: draft-reilly-webproof-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-reilly-webproof-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
