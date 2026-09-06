@@ -9,14 +9,14 @@ title:
   content: 'Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-02
+  content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-03
 docidentifier:
 - content: draft-sharif-agent-audit-trail
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-03'
+  at: '2026-09-05'
 abstract:
 - language: en
   script: Latn
@@ -52,7 +52,18 @@ abstract:
        available for any model, from decision reproducibility,
        available only for open-weight models executed at temperature
        zero in an attested environment, and defines the associated
-       record fields.</p>
+       record fields.
+
+       This revision (-03) adds the Attestation Closure requirement
+       (Section 13.6): the digests recorded for decision
+       reproducibility MUST cover the complete computational closure
+       of the inference function -- model weights, tokenizer, chat
+       template, inference engine build, decoding configuration, and
+       numeric environment -- together with new record fields
+       (tokenizer_digest, chat_template_digest, engine_build_digest)
+       and a minimal-change threat analysis (Section 13.7) showing
+       that any component left outside the attested set is a forgery
+       channel.</p>
 relation:
 - type: includes
   bibitem:
@@ -85,6 +96,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-02
     docidentifier:
     - content: draft-sharif-agent-audit-trail-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sharif-agent-audit-trail-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-03
+    docidentifier:
+    - content: draft-sharif-agent-audit-trail-03
       type: Internet-Draft
       primary: true
 ext:

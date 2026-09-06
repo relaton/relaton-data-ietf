@@ -9,14 +9,14 @@ title:
   content: Verifiable Telemetry Ledgers
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-10
+  content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-11
 docidentifier:
 - content: draft-elkhatabi-verifiable-telemetry-ledgers
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-26'
+  at: '2026-09-06'
 abstract:
 - language: en
   script: Latn
@@ -24,26 +24,20 @@ abstract:
     <p>This document profiles a verifiable-telemetry ledger.  Its
        interoperability boundary begins with exact canonical-record byte
        strings that an upstream system has already produced.  The profile
-       fixes admission and assignment of those byte strings to serial-
-       numbered segments, deterministic commitment-tree calculation, an
-       authoritative segment artifact encoded in Concise Binary Object
-       Representation (CBOR), a producer manifest, three disclosure classes,
-       and binding of the authoritative segment artifact digest to timestamp
-       artifacts under the RFC 3161 profile.  Transport framing, decryption,
-       anti-replay processing, payload interpretation, and source-telemetry-
-       to-record mapping are outside this profile.  Segment closure uses a
-       deployment-configured elapsed-time interval and does not depend on
-       calendar dates from either the source or the ledger producer.  Every
-       baseline producer uses RFC 3161 timestamping, as updated by RFC 5816
-       and profiled by this document, for every emitted segment.
-       Alternative timestamping and attestation mechanisms are outside this
-       profile and require a separate specification.
+       fixes their admission into serial-numbered segments, deterministic
+       commitment-tree calculation, an authoritative segment artifact
+       encoded in Concise Binary Object Representation (CBOR), a producer
+       manifest, three disclosure classes, and binding of the artifact
+       digest through a required external timestamp channel.  Segment
+       closure uses a deployment-configured elapsed-time interval and does
+       not depend on calendar dates.
 
        The profile enables independent recomputation and audit of disclosed
-       evidence from the admitted canonical-record bytes onward.  It does
-       not verify how source telemetry was authenticated, interpreted, or
-       mapped to those bytes, and it does not cover device onboarding, end-
-       to-end security of sensor values, or safety decisions.</p>
+       evidence from the admitted bytes onward.  Transport framing,
+       decryption, anti-replay processing, payload interpretation, and
+       source-telemetry-to-record mapping are outside it, as are device
+       onboarding, end-to-end security of sensor values, and safety
+       decisions.</p>
 relation:
 - type: includes
   bibitem:
@@ -164,6 +158,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-10
     docidentifier:
     - content: draft-elkhatabi-verifiable-telemetry-ledgers-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-elkhatabi-verifiable-telemetry-ledgers-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-elkhatabi-verifiable-telemetry-ledgers-11
+    docidentifier:
+    - content: draft-elkhatabi-verifiable-telemetry-ledgers-11
       type: Internet-Draft
       primary: true
 ext:

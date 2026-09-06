@@ -9,30 +9,30 @@ title:
   content: Adding an Uncacheable Dirent Metadata Attribute to NFSv4.2
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-directories-10
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-directories-11
 docidentifier:
 - content: draft-ietf-nfsv4-uncacheable-directories
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-24'
+  at: '2026-09-05'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>Network File System version 4.2 (NFSv4.2) clients may cache the file
-       attributes returned by READDIR alongside each directory entry.  This
-       caching is inherently best-effort: those attributes belong to the
-       underlying files and change when the files are written, which the
-       directory's change attribute does not track.  In some deployments the
-       rate of file writes by other clients makes such caching produce
-       incorrect size and timestamp values often enough to be a deployment
-       problem.  This document introduces an uncacheable dirent metadata
-       attribute for NFSv4.2 that allows a server to identify a directory
-       for which an honoring client is required to retrieve dirent metadata
-       from the server on each READDIR rather than serving the response from
-       a local cache.</p>
+       attributes returned by READDIR alongside each directory entry.  Such
+       a cache is not invalidated by the directory's change attribute, which
+       reflects changes to the directory and its entries but not writes to
+       the files those entries name, so it can become stale when another
+       client changes one of those files.  In some deployments this produces
+       incorrect size and timestamp values often enough to be a problem.
+       This document introduces an uncacheable dirent metadata attribute for
+       NFSv4.2 that allows a server to identify a directory for which an
+       honoring client goes to the server for each enumeration, and does not
+       report an entry's attributes from a value it held before that
+       READDIR.</p>
 relation:
 - type: includes
   bibitem:
@@ -153,6 +153,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-directories-10
     docidentifier:
     - content: draft-ietf-nfsv4-uncacheable-directories-10
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-nfsv4-uncacheable-directories-11
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-nfsv4-uncacheable-directories-11
+    docidentifier:
+    - content: draft-ietf-nfsv4-uncacheable-directories-11
       type: Internet-Draft
       primary: true
 ext:

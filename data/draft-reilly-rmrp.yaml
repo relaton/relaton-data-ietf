@@ -10,14 +10,14 @@ title:
     Auditable AI Model Routing'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-reilly-rmrp-00
+  content: https://datatracker.ietf.org/doc/html/draft-reilly-rmrp-01
 docidentifier:
 - content: draft-reilly-rmrp
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-04-28'
+  at: '2026-09-05'
 abstract:
 - language: en
   script: Latn
@@ -35,7 +35,17 @@ abstract:
        implementation, or transport layer. RMRP addresses the absence of a
        standardized protocol-layer specification governing how routing
        decisions are declared, transmitted, logged, and enforced across
-       AI model deployments at organizational scale.</p>
+       AI model deployments at organizational scale.
+
+       This revision is additive with respect to draft-reilly-rmrp-00.
+       Every structure, field, value, and requirement defined in -00 is
+       carried forward unchanged. This revision adds record
+       canonicalization, digest, and signature mechanisms; salted field
+       commitments and selective disclosure; complexity score attestation;
+       chain-level and window-level budget enforcement; audit inclusion
+       proofs, checkpoints, and completeness attestation; policy and key
+       revocation; a threat model; conformance levels; and IANA registries
+       for the extensible value sets that -00 defined without one.</p>
 relation:
 - type: includes
   bibitem:
@@ -46,6 +56,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-reilly-rmrp-00
     docidentifier:
     - content: draft-reilly-rmrp-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-reilly-rmrp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-reilly-rmrp-01
+    docidentifier:
+    - content: draft-reilly-rmrp-01
       type: Internet-Draft
       primary: true
 ext:

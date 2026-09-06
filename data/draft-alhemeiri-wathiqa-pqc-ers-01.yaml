@@ -1,0 +1,98 @@
+---
+id: draftalhemeiriwathiqapqcers01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Post-Quantum Evidence Records with Algorithm Agility (Wathiqa Profile)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-alhemeiri-wathiqa-pqc-ers-01
+docidentifier:
+- content: draft-alhemeiri-wathiqa-pqc-ers
+  type: Internet-Draft
+- content: draft-alhemeiri-wathiqa-pqc-ers-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.alhemeiri-wathiqa-pqc-ers
+date:
+- type: published
+  at: '2026-09-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mohamed
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Alhemeiri
+      completename:
+        language: en
+        content: Mohamed Alhemeiri
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Wathiqa
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes an evidence-record format for the long-term,
+       verifiable preservation of digitally-signed data across the migration
+       to post-quantum cryptography.  It builds on the Evidence Record
+       Syntax (ERS) of RFC 4998 and adds an explicit *algorithm-agility*
+       extension: a record is a chain of signed attestations in which each
+       link re-witnesses the data under a fresh signature primitive and
+       commits to the prior link, so that the authenticity of the data
+       survives the cryptographic break of any single primitive.  It
+       specifies the canonical hashing that makes a record reproducibly
+       verifiable across independent implementations, the authenticated
+       temporal binding that places each link in time (an append-only
+       transparency log à la RFC 6962, whose signed inclusion receipt is
+       _not-after_ evidence), and the verification procedure.  A per-link
+       beacon anchor records _not-before_ evidence: from wire version 3 it
+       is authenticated against the beacon's hash chain, with the beacon's
+       classical pulse signature as defence in depth; the Security
+       Considerations say which assumption each check rests on.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-alhemeiri-wathiqa-pqc-ers-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-alhemeiri-wathiqa-pqc-ers-00
+    docidentifier:
+    - content: draft-alhemeiri-wathiqa-pqc-ers-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-alhemeiri-wathiqa-pqc-ers-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

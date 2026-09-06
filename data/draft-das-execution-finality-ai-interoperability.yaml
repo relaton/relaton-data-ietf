@@ -10,14 +10,14 @@ title:
     the European Digital Markets Act: An Execution-Finality Architecture'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-02
+  content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-03
 docidentifier:
 - content: draft-das-execution-finality-ai-interoperability
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-02'
+  at: '2026-09-05'
 abstract:
 - language: en
   script: Latn
@@ -68,7 +68,31 @@ abstract:
        third-party AI interoperability at a technical level of detail
        sufficient to show that they are addressed, rather than merely
        asserted, and reviewers are welcome to engage with any section on its
-       own merits.</p>
+       own merits.
+
+       In June 2026, Apple announced that it would not ship its new Siri AI
+       on iOS 27 and iPadOS 27 in the European Union, stating that EU
+       regulators had not accepted its proposed interoperability safeguards
+       and that granting third-party assistants access equivalent to Siri's
+       created unacceptable security and privacy exposure.  The European
+       Commission responded that nothing in the DMA itself required Apple to
+       withhold the feature, describing Apple's decision as a voluntary
+       business choice rather than a legal necessity, and noting that Apple
+       had requested a blanket exemption rather than submitting a compliant
+       technical mechanism.  Both positions are correct within their own
+       frame: Apple's underlying security concern about undifferentiated
+       third-party system access is real, and the Commission is also correct
+       that the DMA does not itself compel a trade-off between
+       interoperability and security.  This document's execution-finality
+       architecture is offered as the middle solution by which both can be
+       satisfied simultaneously: third-party AI assistants gain the
+       interoperability the DMA requires, while the platform retains the
+       bounded, verifiable finality control that Apple's objection is
+       actually about.  To show this is not only a theoretical proposal, a
+       runnable reference implementation of this architecture has been
+       published, demonstrating how the design behaves end to end in a
+       virtual/test environment (note: behavior and measurements in an
+       actual production environment may differ).</p>
 relation:
 - type: includes
   bibitem:
@@ -101,6 +125,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-02
     docidentifier:
     - content: draft-das-execution-finality-ai-interoperability-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-execution-finality-ai-interoperability-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-03
+    docidentifier:
+    - content: draft-das-execution-finality-ai-interoperability-03
       type: Internet-Draft
       primary: true
 ext:
