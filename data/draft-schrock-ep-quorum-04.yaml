@@ -1,0 +1,99 @@
+---
+id: draftschrockepquorum04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Multi-Party Quorum Authorization for High-Risk Agent Actions (EP-QUORUM)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-quorum-04
+docidentifier:
+- content: draft-schrock-ep-quorum
+  type: Internet-Draft
+- content: draft-schrock-ep-quorum-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.schrock-ep-quorum
+date:
+- type: published
+  at: '2026-09-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Iman
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Schrock
+      completename:
+        language: en
+        content: Iman Schrock
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: EMILIA Protocol, Inc.
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a multi-party approval predicate over action-
+       bound human signoffs: valid signatures, admitted roles, distinct
+       approvers and keys, threshold, and an optional ordered trail.  The
+       relying party pins the governing policy and approver directory
+       independently.  Passing the predicate is approval evidence, not a
+       complete authorization decision, proof of execution, or proof of
+       unused authority.
+
+       This revision repairs the strong ordered profile.  A successor signs
+       a digest of the completed predecessor signoff, including its
+       signature, rather than a precomputable context.  The versioned
+       profile establishes causal dependence on a completed prior proof
+       under the cryptographic assumptions; it does not establish trusted
+       wall-clock time or human comprehension.  Legacy context-only chains
+       cannot satisfy it.  JavaScript, Python, and Go reference verifiers
+       share a corpus in one repository.  Agreement is a same-team
+       consistency check, not independent interoperability evidence or a
+       formal proof of the new construction.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-schrock-ep-quorum-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-quorum-03
+    docidentifier:
+    - content: draft-schrock-ep-quorum-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-schrock-ep-quorum-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

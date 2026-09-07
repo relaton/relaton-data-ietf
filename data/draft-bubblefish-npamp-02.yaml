@@ -1,0 +1,99 @@
+---
+id: draftbubblefishnpamp02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'N-PAMP: Native Post-Quantum Agent Messaging Protocol'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bubblefish-npamp-02
+docidentifier:
+- content: draft-bubblefish-npamp
+  type: Internet-Draft
+- content: draft-bubblefish-npamp-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.bubblefish-npamp
+date:
+- type: published
+  at: '2026-09-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shawn
+      - language: en
+        script: Latn
+        initial: S
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: S. E.
+      surname:
+        language: en
+        content: Sammartano
+      completename:
+        language: en
+        content: Shawn Edward Sammartano
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: BubbleFish Technologies, Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Native Post-Quantum Agent Messaging Protocol (N-PAMP) is a
+       binary, multi-channel, wire-level protocol for authenticated
+       communication between autonomous software agents.  N-PAMP operates
+       beneath application-layer agent protocols and provides a single
+       fixed-size frame format, a registry of multiplexed channels, and
+       three escalating security profiles (Standard, High, and Sovereign)
+       built on standard post-quantum and classical cryptography.  The
+       protocol uses a hybrid key-encapsulation mechanism combining X25519
+       with ML-KEM, authenticated encryption with associated data, and a
+       forward-secure key schedule.  N-PAMP runs over QUIC as its primary
+       transport and over TCP with TLS 1.3 as a fallback, negotiated via the
+       Application-Layer Protocol Negotiation (ALPN) identifier "n-pamp/3".
+       This document describes the wire format, channel architecture,
+       profile negotiation, and cryptographic suites of N-PAMP, and reserves
+       code-point ranges for extensions defined in companion specifications.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-bubblefish-npamp-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bubblefish-npamp-01
+    docidentifier:
+    - content: draft-bubblefish-npamp-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-bubblefish-npamp-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,121 @@
+---
+id: draftdasratsopenaianthropicextraction02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Beyond Attestation: An Execution-Finality Architecture for Controlling
+    Release and Limiting Unauthorized Extraction and Distillation of Sensitive OpenAI
+    and Anthropic Claude Model Information'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-rats-openai-anthropic-extraction-02
+docidentifier:
+- content: draft-das-rats-openai-anthropic-extraction
+  type: Internet-Draft
+- content: draft-das-rats-openai-anthropic-extraction-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-rats-openai-anthropic-extraction
+date:
+- type: published
+  at: '2026-09-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Frontier and proprietary AI deployments may contain or expose model-
+       related information substantially richer than ordinary final-answer
+       text.  Depending on the deployment and interface, such Sensitive
+       Model Information (SMI) can include detailed probability information,
+       embeddings, cached intermediate state, hidden representations,
+       intermediate activations, diagnostic information, model-related
+       metadata, or other high-information artifacts.  Repeated unauthorized
+       or excessive release of such information can increase the efficiency
+       of model reconstruction, imitation, extraction, or distillation.
+
+       Authentication establishes who is requesting an operation.
+       Confidential computing and remote attestation can establish
+       properties of the environment in which computation occurs.  Neither
+       property alone determines whether a particular pending release of
+       particular model information, to a particular destination, under the
+       current extraction state and security epoch, remains authorized to
+       become externally usable.
+
+       This document describes an execution-finality architecture for that
+       remaining problem.  Sensitive information may be computed while
+       remaining a non-effective Candidate Release.  External release occurs
+       only after release-specific protected validation, evaluation of
+       rollback-resistant extraction state where required, atomic
+       reservation or consumption of bounded authority, and verification at
+       a controlled Finality Sink.  Release authority is bound to the
+       applicable Candidate Release or bounded release class rather than
+       operating as a generic transferable bearer credential.
+
+       The architecture does not claim universal prevention of model
+       extraction or distillation and does not restrict legitimately exposed
+       ordinary model output.  Its narrower objective is to make
+       unauthorized, excessive, replayed, rolled-back, or bypassed release
+       of protected model information technically harder to complete through
+       governed release paths.  RATS can complement this mechanism by
+       allowing a Verifier or Relying Party to obtain machine-verifiable
+       information about whether the expected release-control mechanism,
+       protected state, security epoch, and Finality Sink are present and
+       operating with the required assurance properties.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-das-rats-openai-anthropic-extraction-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-rats-openai-anthropic-extraction-01
+    docidentifier:
+    - content: draft-das-rats-openai-anthropic-extraction-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-rats-openai-anthropic-extraction-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
