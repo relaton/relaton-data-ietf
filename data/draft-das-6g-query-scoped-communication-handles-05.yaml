@@ -1,0 +1,153 @@
+---
+id: draftdas6gqueryscopedcommunicationhandles05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Authorization-to-Reach for Communication Handles: Separating Identifier
+    Possession from Permission to Contact'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-6g-query-scoped-communication-handles-05
+docidentifier:
+- content: draft-das-6g-query-scoped-communication-handles
+  type: Internet-Draft
+- content: draft-das-6g-query-scoped-communication-handles-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-6g-query-scoped-communication-handles
+date:
+- type: published
+  at: '2026-09-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent Inventor
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Many Internet and telephone communication systems treat possession of
+       a routable identifier as sufficient to attempt contact.  A telephone
+       number, SIP URI, messaging handle, relay address, or marketplace
+       contact reference can therefore remain a reusable reachability path
+       after the purpose of disclosure has ended.
+
+       Existing IETF and industry mechanisms solve related but different
+       problems.  STIR and SHAKEN authenticate or attest originating
+       identity: they answer whether the calling party is who it claims to
+       be, not whether that authenticated party currently holds bounded,
+       purpose-scoped, revocable permission to reach a particular recipient.
+       Virtual or masked numbers hide a persistent endpoint but commonly
+       leave a substitute route active while the alias is valid.  OAuth can
+       express delegated API authorization.  Spam scoring and call screening
+       classify or reject an attempt after some path already exists.
+
+       This document describes an authorization-to-reach model.  A visible
+       communication handle is not, by itself, permission to create a
+       communication effect.  A request is held as a candidate until
+       current, purpose-scoped, revocable, and optionally consumable
+       authority is validated.  The document is informational.  It asks
+       whether the IETF Applications and Real-Time area should define
+       interoperable semantics or an encoding for that authority (for
+       example a PASSporT claim, a SIP header or pre-INVITE check, or a
+       reusable authorization object).
+
+       This work is not a 3GPP radio, core-network, or IMT-2030 architecture
+       proposal.  References to machine-scale or future-network traffic are
+       motivational only.  The intended protocol home, if any, is IETF work
+       on SIP, STIR, messaging, and Internet communication identifiers.  The
+       motivation is nonetheless sharpened by the trajectory of upcoming 6G
+       and IMT-2030 network infrastructure: as networks move toward AI-
+       native architectures in which software agents, network functions, and
+       third-party AI systems can originate signaling at machine speed, and
+       as vendors including Qualcomm and Huawei publish AI-native 6G radio-
+       and core-network research, an authorization-to-reach gap that is
+       tolerable at human-initiated call volumes becomes structurally more
+       significant at machine-originated volumes.  Global telecom operators
+       such as Deutsche Telekom, Orange, AT&amp;T, and Vodafone -- among the
+       carriers with the largest exposure to SIP, STIR/SHAKEN, and voice-
+       messaging signaling volumes -- are named here only as illustrative
+       examples of the operator community for whom an interoperable
+       authorization-to-reach answer would be most directly relevant.  This
+       document does not depend on any particular 6G, IMT-2030, Qualcomm,
+       Huawei, Deutsche Telekom, Orange, AT&amp;T, or Vodafone architecture,
+       deployment, or product, and does not assert that any of them has
+       adopted, evaluated, or endorsed this proposal; it identifies why
+       telecom infrastructure evolution makes the underlying Internet-
+       identifier-layer question more urgent for IETF to consider now rather
+       than after machine-scale traffic arrives.
+
+       Google Maps, Apple Maps, and social or commerce platforms with map-
+       adjacent or messaging-based business discovery features such as Meta
+       Business (including Facebook and Instagram business discovery and
+       messaging) are referenced elsewhere in this document family as
+       recognizable illustrative examples of where a visible communication
+       handle is exposed after discovery; no affiliation, endorsement,
+       implementation, adoption, or technical alignment by Google, Apple,
+       Meta, Qualcomm, Huawei, Deutsche Telekom, Orange, AT&amp;T, Vodafone, or
+       any other named provider is implied by this document.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-das-6g-query-scoped-communication-handles-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-6g-query-scoped-communication-handles-04
+    docidentifier:
+    - content: draft-das-6g-query-scoped-communication-handles-04
+      type: Internet-Draft
+      primary: true
+- type: updatedBy
+  bibitem:
+    formattedref:
+      content: draft-das-6g-query-scoped-communication-handles-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-6g-query-scoped-communication-handles-06
+    docidentifier:
+    - content: draft-das-6g-query-scoped-communication-handles-06
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-6g-query-scoped-communication-handles-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,88 @@
+---
+id: draftsahastagereceipts00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Stage Receipts: A Verifiable Record Format for Staged Pipelines'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-saha-stage-receipts-00
+docidentifier:
+- content: draft-saha-stage-receipts
+  type: Internet-Draft
+- content: draft-saha-stage-receipts-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.saha-stage-receipts
+date:
+- type: published
+  at: '2026-09-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shamik
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Saha
+      completename:
+        language: en
+        content: Shamik Saha
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A staged pipeline -- a document-ingestion flow, a retrieval-augmented
+       generation chain, an agent workflow, a benchmark -- produces results
+       that are hard to reproduce, hard to diff between two runs, and hard
+       to localize when they go wrong.  This document defines the stage
+       receipt: a small, canonically serialized JSON record that each stage
+       of such a pipeline emits, describing exactly what went in, what came
+       out, under which pinned instrument, with which outcome, and linked by
+       digest to the receipt before it.  A chain of stage receipts lets a
+       developer reproduce a run, diff two runs to the first stage that
+       differs, and localize a fault to the stage where it entered; the same
+       chain lets an independent party, later and offline, establish what
+       the records assert without trusting whoever produced them.  The
+       document specifies the record, its canonical form, the chain
+       manifest, the coverage and emission declarations that make a chain
+       honest about its own edges, the anchoring declaration that separates
+       consistency from originality, and the behaviour required of a
+       conforming verifier.  Golden conformance vectors -- records that must
+       be accepted and records that must be refused, each with its reason --
+       are part of the specification.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-saha-stage-receipts-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

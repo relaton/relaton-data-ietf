@@ -9,49 +9,55 @@ title:
   content: AI Agent Identity Certificate (AIC) JSON Web Token Profile
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-wei-aic-jwt-00
+  content: https://datatracker.ietf.org/doc/html/draft-wei-aic-jwt-01
 docidentifier:
 - content: draft-wei-aic-jwt
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-24'
+  at: '2026-09-08'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines the JSON Web Token (JWT) profile of the AI
-       Agent Identity Certificate (AIC), a companion specification to draft-
-       wei-aic-identity-cert-00.  The AIC X.509 extension binds an AI
-       Agent's cryptographic identity to a responsible principal, carries a
-       structured capability container, authorization boundary constraints,
-       delegation mode, and principal-signed delegation evidence, and
-       enables fully offline authorization decisions at the TLS layer.
+    <p>The AI Agent Identity Certificate (AIC) defines a data model in which
+       the cryptographic identity of an AI agent is bound to a responsible
+       principal, together with a structured capability container,
+       delegation mode, authorization constraints, and principal-signed
+       delegation evidence.  The normative definition of this model is
+       specified by the AIC specification, where it is encoded in ASN.1 and
+       carried in X.509 certificates, enabling authorization decisions at
+       the transport layer, including fully offline operation.
 
-       AIC-JWT encodes the same data model as an application-layer JWT so
-       that the same authorization semantics can be enforced by HTTP APIs,
-       web applications, and OAuth 2.0 ecosystems where transport-layer
-       certificate presentation is not available.  The specification
-       defines:
+       Many HTTP, web, and OAuth 2.0 (RFC 6749) deployments cannot present
+       X.509 certificates at the transport layer.  This document therefore
+       defines AIC-JWT as a JWT-based application-layer representation of
+       the AIC data model defined by the AIC specification.  AIC-JWT is a
+       companion representation, not a replacement for the X.509 form and
+       not a new authorization model.
 
-       *  a nested JWS structure that preserves the two-layer signature
-          model of AIC -- a principal-signed DelegationAuthorization (DA)
-          JWT embedded in and covered by an issuer-signed outer JWT;
+       AIC-JWT uses the standard JWT (RFC 7519) and JWS (RFC 7515)
+       mechanisms as its carrier and cryptographic envelope.  Its
+       authorization semantics are inherited from the AIC model rather than
+       defined by JWT or OAuth.  In particular, the outer AIC-JWT is issuer-
+       signed and carries the principal-signed DA JWT as the value of the
+       top-level da claim, preserving the two-layer signature model of AIC.
 
-       *  a namespaced aic claim carrying agent identity, principal binding,
-          structured capabilities, delegation mode, and authorization
-          constraints;
+       The normative content of this document is limited to:
 
-       *  principal binding by SPKI hash or JWK thumbprint, with optional
-          credential bundle presentation in PKI deployments;
+       *  a mapping from the X.509 AIC extension fields to JWT claims that
+          preserves the AIC data model and its two-layer signature model;
 
-       *  issuance flows for both PKI-based CAs and OAuth 2.0 authorization
-          servers, including RFC 7523 assertion exchange and RFC 8693 token
-          exchange;
+       *  representation and key-binding rules for the principal-signed
+          DelegationAuthorization;
 
-       *  validation rules, IANA registrations, and security considerations
-          aligned with the OAuth 2.0 and JOSE specifications.</p>
+       *  validation rules for AIC-JWT, including claim consistency,
+          audience, and key-binding checks; and
+       *  a thin OAuth 2.0 consumption profile defining presentation of the
+          DA at a token endpoint as an RFC 7523 JWT bearer authorization
+          grant and the projection of the AIC authorized and representative
+          delegation modes into OAuth roles.</p>
 relation:
 - type: includes
   bibitem:
@@ -62,6 +68,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-wei-aic-jwt-00
     docidentifier:
     - content: draft-wei-aic-jwt-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wei-aic-jwt-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wei-aic-jwt-01
+    docidentifier:
+    - content: draft-wei-aic-jwt-01
       type: Internet-Draft
       primary: true
 ext:

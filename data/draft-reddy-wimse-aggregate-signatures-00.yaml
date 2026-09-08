@@ -1,0 +1,105 @@
+---
+id: draftreddywimseaggregatesignatures00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Aggregate Signatures for WIMSE Delegation-Chain Integrity
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-reddy-wimse-aggregate-signatures-00
+docidentifier:
+- content: draft-reddy-wimse-aggregate-signatures
+  type: Internet-Draft
+- content: draft-reddy-wimse-aggregate-signatures-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.reddy-wimse-aggregate-signatures
+date:
+- type: published
+  at: '2026-09-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tirumaleswar
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Reddy.K
+      completename:
+        language: en
+        content: Tirumaleswar Reddy.K
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nokia
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hannes
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Tschofenig
+      completename:
+        language: en
+        content: Hannes Tschofenig
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: University of the Bundeswehr Munich
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document profiles the WIMSE HTTP Message Signatures mechanism
+       ([I-D.ietf-wimse-http-signature]) to protect a request that passes
+       through a chain of workloads.  In the base mechanism each workload
+       signs independently: an intermediary can remove a signature
+       undetected, and the signatures accumulate on every hop.  This
+       document combines the workloads' signatures into one aggregate
+       signature.  Removal of a signature becomes detectable, and the
+       signature material no longer grows with the length of the chain, a
+       significant saving for post-quantum signature algorithms, whose
+       signatures are large.  The mechanism works with any aggregate
+       signature scheme.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-reddy-wimse-aggregate-signatures-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
