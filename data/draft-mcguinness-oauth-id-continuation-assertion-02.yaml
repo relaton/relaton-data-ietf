@@ -1,0 +1,121 @@
+---
+id: draftmcguinnessoauthidcontinuationassertion02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Identity Continuation Assertion for OAuth 2.0 Token Exchange
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-id-continuation-assertion-02
+docidentifier:
+- content: draft-mcguinness-oauth-id-continuation-assertion
+  type: Internet-Draft
+- content: draft-mcguinness-oauth-id-continuation-assertion-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mcguinness-oauth-id-continuation-assertion
+date:
+- type: published
+  at: '2026-09-08'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Karl
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: McGuinness
+      completename:
+        language: en
+        content: Karl McGuinness
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Aaron
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Parecki
+      completename:
+        language: en
+        content: Aaron Parecki
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Okta
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Identity Continuation Assertion, a short-
+       lived, sender-constrained JSON Web Token (JWT) used as an OAuth 2.0
+       Token Exchange subject token.  It enables a workload acting on a
+       user's behalf to obtain an Identity Assertion JWT Authorization Grant
+       (ID-JAG) for another service when it lacks a suitable credential,
+       including when the user is no longer present.
+
+       A trusted issuer attests that a resource authorization server
+       accepted an earlier ID-JAG and that the resulting authorization
+       remains active and eligible for continuation.  The workload exchanges
+       this assertion at the identity provider, which evaluates the
+       requested access under the chain authorization and current policy
+       before issuing an onward ID-JAG.  The profile supports multi-hop
+       access across resource authorization servers that trust a common
+       identity provider.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-id-continuation-assertion-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-id-continuation-assertion-01
+    docidentifier:
+    - content: draft-mcguinness-oauth-id-continuation-assertion-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mcguinness-oauth-id-continuation-assertion-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -6,23 +6,27 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Technical Enforcement of the EU AI Act and Global AI Laws Without Relying
-    on Paper Policies
+  content: Technical Enforcement of the EU AI Act and Global AI Laws for High-Risk
+    AI Systems Without Relying on Paper Policies
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-eu-ai-act-execution-enforcement-00
+  content: https://datatracker.ietf.org/doc/html/draft-das-eu-ai-act-execution-enforcement-02
 docidentifier:
 - content: draft-das-eu-ai-act-execution-enforcement
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-05'
+  at: '2026-09-10'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>The European Union Artificial Intelligence Act establishes an
+    <p>This architecture is specifically designed for high-risk AI systems,
+       where standard engineering priorities shift from speed and latency
+       toward absolute determinism and safety.
+
+       The European Union Artificial Intelligence Act establishes an
        extensive paper-based governance regime for artificial intelligence:
        risk-management documentation, data-governance records, conformity
        assessments, human-oversight instructions, transparency notices,
@@ -119,7 +123,45 @@ abstract:
        matter of physical safety, national security, or irreversible loss,
        and in which liability and cost must be bounded by making the
        unauthorised act technically non-completable rather than merely
-       detectable afterward.</p>
+       detectable afterward.
+
+       Cross-regime use is treated as a profile-input problem rather than as
+       legal harmonisation.  An EU AI Act profile, a South Korean AI Basic
+       Act profile, a Japanese AI Act profile, or another national,
+       sectoral, or contractual profile can each supply machine-readable
+       constraints to the same Candidate Act / Protected Enforcement Domain
+       / Finality Sink mechanism.  Where profiles are compatible, the
+       effective authority is their intersection; where they conflict, the
+       act remains unauthorised by default pending an external legal or
+       organisational determination.  That is the maximum interoperability
+       claim this document makes: a shared enforcement substrate, not
+       equivalence of laws, not a conflict-of-law solver, and not a finding
+       that any listed regime is legally sufficient or interchangeable.
+
+       A primary public reference implementation accompanies this document
+       at https://github.com/sangmdas/Execution-Finality-Technical-
+       Enforcement-for-EU-AI-Act-and-AI-Governance-Constraints
+       (https://github.com/sangmdas/Execution-Finality-Technical-
+       Enforcement-for-EU-AI-Act-and-AI-Governance-Constraints).  It is a
+       runnable engineering reference for the substrate and selected AI-
+       governance predicates (human-approval binding, runtime evidence,
+       delegation bounds, bounded offline mode, policy-epoch revocation, and
+       profile intersection).  It is not a legal-compliance product, not a
+       certification, and not evidence that any deployment using it complies
+       with the EU AI Act or another law.
+
+       Reviewer questions that recur in this series -- cross-regime
+       generalisation, deterministic runtime bounds for dynamic agentic
+       plans, interaction with Article 14 human oversight, and audit
+       responsibility -- are collected as frequently asked questions in
+       Section 43.  Trust-boundary, insider-approval, sink-failure,
+       delegation, liability, and residual-limitation questions are treated
+       as a threat model and operational caveat set in Section 44 and
+       Section 38.  Those sections state what the architecture can and
+       cannot claim.  Independent technical and legal criticism is invited;
+       the author would rather have the limits of execution-finality found
+       in review than have them discovered after a protected effect has
+       already occurred.</p>
 relation:
 - type: includes
   bibitem:
@@ -130,6 +172,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-eu-ai-act-execution-enforcement-00
     docidentifier:
     - content: draft-das-eu-ai-act-execution-enforcement-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-eu-ai-act-execution-enforcement-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-eu-ai-act-execution-enforcement-01
+    docidentifier:
+    - content: draft-das-eu-ai-act-execution-enforcement-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-eu-ai-act-execution-enforcement-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-eu-ai-act-execution-enforcement-02
+    docidentifier:
+    - content: draft-das-eu-ai-act-execution-enforcement-02
       type: Internet-Draft
       primary: true
 ext:

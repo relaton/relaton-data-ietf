@@ -1,0 +1,60 @@
+---
+id: drafttravissevilbyte
+schema_version: v1.5.6
+formattedref:
+  content: draft-traviss-evil-byte
+title:
+- language: en
+  script: Latn
+  content: 'The Evil Byte: A Security Octet for the IPv4 and IPv6 Headers'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-traviss-evil-byte-00
+docidentifier:
+- content: draft-traviss-evil-byte
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-10'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Firewalls, intrusion detection systems, and similar devices continue
+       to have difficulty distinguishing packets that have malicious intent
+       from those that are merely unusual.  RFC 3514 addressed this problem
+       by defining a security flag in the IPv4 header, the "evil bit", to be
+       set by the sender of any packet with malicious intent.  Twenty-four
+       years of operational experience have shown that senders cannot be
+       relied upon to set it, and that a single bit cannot express the range
+       of Evil now observed on the Internet.
+
+       This document obsoletes RFC 3514, replacing the evil bit with the
+       Evil Byte: an eight-bit Evil Rating carried in every IPv4 and IPv6
+       packet, computed and set not by the sender but by a Morality-
+       Inspecting Trusted Middleman (MITM) on the path, from a weighted
+       product of the sender's Autonomous System, choice of protocols,
+       content, name, and the time of day.  Servers reject requests from
+       Evil clients; clients discard responses from Evil servers; and the
+       Evil of every Autonomous System is continuously re-estimated by an
+       Elo rating system operated by a central Evil Rating Authority.  The
+       document also specifies the carriage of the octet over avian
+       carriers.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-traviss-evil-byte-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-traviss-evil-byte-00
+    docidentifier:
+    - content: draft-traviss-evil-byte-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -6,22 +6,27 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Tool Selection Is Not Execution: Finality for Agentic Tool Dispatch'
+  content: 'Tool Selection Is Not Execution: Finality for Agentic Tool Dispatch in
+    High-Risk AI Systems'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-01
+  content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-02
 docidentifier:
 - content: draft-das-agentic-execution-finality
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-26'
+  at: '2026-09-10'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>An agentic model can emit a tool call that today's runtimes treat as
+    <p>This architecture is specifically designed for high-risk AI systems,
+       where standard engineering priorities shift from speed and latency
+       toward absolute determinism and safety.
+
+       An agentic model can emit a tool call that today's runtimes treat as
        something to execute.  Allowlists, OAuth tokens, MCP server auth,
        sandboxes, output filters, and human approval decide whether an agent
        may reach a tool.  They do not decide whether this generated call,
@@ -42,7 +47,13 @@ abstract:
        against the actual invocation immediately before the tool runs, then
        consumes it.  The same gate applies to support, coding, payments,
        clinical, SOC, browser-use, and multi-agent MCP deployments.  Tool
-       selection is not execution authority.</p>
+       selection is not execution authority.
+
+       A runnable reference implementation for this dispatch-time gate is
+       provided at tool_use Is Not invoke(): Binding Execution-Finality to
+       Agentic Tool-Call Interfaces and MCP (https://github.com/sangmdas/
+       tool_use-Is-Not-invoke-Binding-Execution-Finality-to-Agentic-Tool-
+       Call-Interfaces-and-MCP).</p>
 relation:
 - type: includes
   bibitem:
@@ -64,6 +75,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-01
     docidentifier:
     - content: draft-das-agentic-execution-finality-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-agentic-execution-finality-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-agentic-execution-finality-02
+    docidentifier:
+    - content: draft-das-agentic-execution-finality-02
       type: Internet-Draft
       primary: true
 ext:
