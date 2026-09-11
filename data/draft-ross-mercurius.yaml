@@ -9,30 +9,33 @@ title:
   content: Mercurius Window System (MWS)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ross-mercurius-05
+  content: https://datatracker.ietf.org/doc/html/draft-ross-mercurius-06
 docidentifier:
 - content: draft-ross-mercurius
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-17'
+  at: '2026-09-11'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>The Mercurius Window System (MWS) is a zero-trust network-native,
-       server-side rendering system that enables graphical sessions to
-       be accessed remotely with explicit semantics for Session, Window,
-       and rendering state. MWS allows a user to interact with a
-       workstation from untrusted or resource-constrained portal devices
-       (thin clients or laptops acting as Mercurius terminals) while
-       keeping authoritative application, GPU, and compositor state on
-       the workstation. The protocol defines a zero-trust portal model, a
-       structured Session and Window architecture, and a multi-stream SCTP
-       transport profile. It defines distinct protocol planes for control,
-       rendering, input, video, and audio. Some payload encodings remain
-       subject to refinement in later revisions of this Internet-Draft.</p>
+    <p>The Mercurius Window System (MWS) is a zero-trust, network-native
+       window system for contemporary desktops. It combines persistent,
+       detachable graphical Sessions with network transparency. MWS works
+       on a workstation without requiring network connectivity. The same
+       Session model allows users to start a new Session or resume a
+       detached Session, either at the workstation itself or from another
+       device across the network.
+
+       MWS complements local display systems such as Wayland. Applications
+       and their state remain on the workstation, while a Portal provides
+       the user's display and input facilities. Modern graphics APIs and
+       authenticated transport support this separation between where
+       applications execute and where a user interacts with them. This
+       document specifies the Session, Window, and communication behaviour
+       needed for independent implementations to interoperate.</p>
 relation:
 - type: includes
   bibitem:
@@ -98,6 +101,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ross-mercurius-05
     docidentifier:
     - content: draft-ross-mercurius-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ross-mercurius-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ross-mercurius-06
+    docidentifier:
+    - content: draft-ross-mercurius-06
       type: Internet-Draft
       primary: true
 ext:

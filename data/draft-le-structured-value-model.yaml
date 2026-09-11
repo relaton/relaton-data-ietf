@@ -9,31 +9,34 @@ title:
   content: A Structured Value Model for Derived Identifiers
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-le-structured-value-model-00
+  content: https://datatracker.ietf.org/doc/html/draft-le-structured-value-model-01
 docidentifier:
 - content: draft-le-structured-value-model
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-22'
+  at: '2026-09-10'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines a structured value model independent of
-       serialization for use by derived identifier constructions and
-       profiles.  A Value consists of exact context octets, exact content
-       octets, and a finite set of scoped opaque identifiers.  The model
-       defines structural admission, exact equivalence, placement of
-       distinctions that affect comparison, and rules for importing
-       identifiers from independently governed systems.
+    <p>Derived identifier constructions that combine local material with
+       identifiers from other systems need a defined comparison domain.
+       This document defines a structured value model for such constructions
+       and their profiles.  A Value contains exact context octets, exact
+       content octets, and a finite set of scoped opaque identifiers.
+       Structural admission and equivalence are independent of
+       serialization.  Equality includes context, content, and complete
+       identifier-set membership.
 
-       The model does not define a wire representation, canonicalization
-       procedure, cryptographic hash, identifier syntax, application
-       profile, resolver, registry, or trust model.  Source mappings and
-       concrete derived identifier profiles are defined by surrounding
-       specifications.</p>
+       The specification gives source mappings and profiles common
+       obligations for fixed inputs, imported comparison adaptation, and
+       preservation of participation distinctions.  Surrounding
+       specifications define concrete mappings, representations, identifier
+       derivations, and the shared interpretation needed for
+       interoperability.  The model defines no global semantic namespace,
+       wire format, cryptographic construction, or trust mechanism.</p>
 relation:
 - type: includes
   bibitem:
@@ -44,6 +47,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-le-structured-value-model-00
     docidentifier:
     - content: draft-le-structured-value-model-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-le-structured-value-model-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-le-structured-value-model-01
+    docidentifier:
+    - content: draft-le-structured-value-model-01
       type: Internet-Draft
       primary: true
 ext:
