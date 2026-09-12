@@ -1,0 +1,75 @@
+---
+id: draftnovakratstacra
+schema_version: v1.5.6
+formattedref:
+  content: draft-novak-rats-tacra
+title:
+- language: en
+  script: Latn
+  content: Trustworthy Acquisition of Credentials via Remote Attestation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-novak-rats-tacra-01
+docidentifier:
+- content: draft-novak-rats-tacra
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-11'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>There is a large class of "RATS-Unaware" Relying Parties (RUPs) that
+       Attesters nevertheless need to interoperate with.  Existing deployed
+       services, which precede the introduction of Remote Attestation, are
+       often difficult to change/update in significant ways due to, among
+       other reasons, organizational friction, technological inertia, and
+       regulatory policies.  There are significant advantages if workloads
+       can be incrementally updated in the trustworthiness of the platform,
+       without disrupting their clients and servers.
+
+       This document describes an architecture by which Remote Attestation
+       is utilized for providing Attesters with Identity Documents (keys or
+       credentials) to authenticate to RUPs.  This architecture is intended
+       to work with common credential acquisition protocols and mechanisms
+       such as EST, SPIFFE/SPIRE, ACMEv2, and many others.
+
+       Another important but separate goal is to encapsulate the Attester-
+       side complexity of Remote Attestation and credential acquisition
+       similar to how Envoy does it.  This allows Attesters to be
+       implemented in a way that abstracts away the details of credential
+       acquisition: both the protocols used and the Credential Acquisition
+       Mechanisms employed, whether minting new (Enrollment), or requesting
+       existing (Retrieval) credentials.  Likewise, the choice between RATS
+       Passport and Background Check models is made opaque to the Attester,
+       further simplifying its development.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-novak-rats-tacra-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-novak-rats-tacra-00
+    docidentifier:
+    - content: draft-novak-rats-tacra-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-novak-rats-tacra-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-novak-rats-tacra-01
+    docidentifier:
+    - content: draft-novak-rats-tacra-01
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
