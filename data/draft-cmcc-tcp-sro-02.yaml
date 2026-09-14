@@ -1,0 +1,120 @@
+---
+id: draftcmcctcpsro02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Session Recovery (SR) Option for TCP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-cmcc-tcp-sro-02
+docidentifier:
+- content: draft-cmcc-tcp-sro
+  type: Internet-Draft
+- content: draft-cmcc-tcp-sro-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.cmcc-tcp-sro
+date:
+- type: published
+  at: '2026-09-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhaoyu
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Luo
+      completename:
+        language: en
+        content: Zhaoyu Luo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CMCC
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Haishuang
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Yan
+      completename:
+        language: en
+        content: Haishuang Yan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CMCC
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Session Recovery (SR) option for TCP.  The
+       option lets the endpoints of a connection exchange identifiers:
+       during the handshake each endpoint carries its own identifier, and
+       designated segments afterwards carry the identifier of the peer.
+       This places the knowledge of which endpoint a connection belongs to
+       inside the TCP header, where network functions on the path - load
+       balancers, NAT gateways, firewalls - can read it without per-flow
+       state and without payload inspection.  The primary use is session
+       recovery in SNAT and load-balancing clusters; further uses include
+       reduced-state forwarding, connection-tracking recovery, and per-
+       backend telemetry.  The option is carried in the SYN, the SYN-ACK,
+       and retransmitted segments, or in every segment when so configured;
+       the default adds no overhead to normal data segments.  Endpoints that
+       do not support it behave as if the option did not exist.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-cmcc-tcp-sro-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cmcc-tcp-sro-01
+    docidentifier:
+    - content: draft-cmcc-tcp-sro-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-cmcc-tcp-sro-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
