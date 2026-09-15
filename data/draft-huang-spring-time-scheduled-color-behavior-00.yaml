@@ -1,0 +1,113 @@
+---
+id: drafthuangspringtimescheduledcolorbehavior00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Headend Behavior for Time-Scheduled Color based SR Policy Selection
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-huang-spring-time-scheduled-color-behavior-00
+docidentifier:
+- content: draft-huang-spring-time-scheduled-color-behavior
+  type: Internet-Draft
+- content: draft-huang-spring-time-scheduled-color-behavior-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.huang-spring-time-scheduled-color-behavior
+date:
+- type: published
+  at: '2026-09-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Cancan
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Huang
+      completename:
+        language: en
+        content: Cancan Huang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wenkuan
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Qu
+      completename:
+        language: en
+        content: Wenkuan Qu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Telecom
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the normative behavior of the ingress
+       Provider Edge (PE) router (headend) when selecting a Segment Routing
+       (SR) Policy for VPN traffic based on time-scheduled Color values.
+
+       In the time-scheduled Color mechanism, the egress PE advertises
+       multiple (Color, Schedule) groups for the same VPN routes.  The
+       headend evaluates the schedule associated with each Color based on
+       the current time, selects a currently valid Color, and steers the
+       traffic into the corresponding SR Policy.
+
+       This document defines the requirements for parsing the Color and
+       Schedule Extended Communities, evaluating schedule validity,
+       selecting among multiple valid Colors, performing schedule-boundary
+       timer-based re-evaluation, handling switchover with make-before-
+       break, and falling back when no Color is valid.
+
+       This document updates RFC 9256 by replacing the multiple-Color
+       selection rule specified in Section 8.4.1 with a Schedule-based
+       selection rule.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-huang-spring-time-scheduled-color-behavior-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

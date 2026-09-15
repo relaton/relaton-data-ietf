@@ -1,0 +1,59 @@
+---
+id: drafthuangspringtimescheduledcolorbehavior
+schema_version: v1.5.6
+formattedref:
+  content: draft-huang-spring-time-scheduled-color-behavior
+title:
+- language: en
+  script: Latn
+  content: Headend Behavior for Time-Scheduled Color based SR Policy Selection
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-huang-spring-time-scheduled-color-behavior-00
+docidentifier:
+- content: draft-huang-spring-time-scheduled-color-behavior
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-15'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the normative behavior of the ingress
+       Provider Edge (PE) router (headend) when selecting a Segment Routing
+       (SR) Policy for VPN traffic based on time-scheduled Color values.
+
+       In the time-scheduled Color mechanism, the egress PE advertises
+       multiple (Color, Schedule) groups for the same VPN routes.  The
+       headend evaluates the schedule associated with each Color based on
+       the current time, selects a currently valid Color, and steers the
+       traffic into the corresponding SR Policy.
+
+       This document defines the requirements for parsing the Color and
+       Schedule Extended Communities, evaluating schedule validity,
+       selecting among multiple valid Colors, performing schedule-boundary
+       timer-based re-evaluation, handling switchover with make-before-
+       break, and falling back when no Color is valid.
+
+       This document updates RFC 9256 by replacing the multiple-Color
+       selection rule specified in Section 8.4.1 with a Schedule-based
+       selection rule.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-huang-spring-time-scheduled-color-behavior-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-huang-spring-time-scheduled-color-behavior-00
+    docidentifier:
+    - content: draft-huang-spring-time-scheduled-color-behavior-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
