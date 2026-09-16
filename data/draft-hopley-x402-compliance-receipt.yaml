@@ -1,4 +1,3 @@
----
 id: drafthopleyx402compliancereceipt
 schema_version: v1.5.6
 formattedref:
@@ -20,35 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a categorical compliance screening receipt
-       format for agentic-payment flows.  The format is designed for use by
-       AI agents and agentic-payment gateways that perform regulatory
-       screening at admission time and must retain the screening decision
-       under framework-bound retention obligations (UK Money Laundering
-       Regulations 2017; Proceeds of Crime Act 2002 Section 330; EU Anti-
-       Money Laundering Directives 5 and 6; Markets in Crypto-Assets
-       Regulation Article 80; Anti-Money Laundering Regulation Article 56;
-       Digital Operational Resilience Act Article 14).
-
-       The receipt format uses a closed enumeration of categorical outcomes
-       (ALLOW, REFER, DENY) rather than a continuous score or tier
-       projection.  The categorical outcome is load-bearing for downstream
-       regulatory obligations: under UK POCA 2002 Section 330, a REFER
-       carries a mandatory Suspicious Activity Report obligation that a DENY
-       does not.  A score or tier projection collapses this distinction.
-
-       Receipts are canonicalised under RFC 8785 (JSON Canonicalization
-       Scheme) with an in-band canonicalisation rule pin (canon_version).
-       The pin enables year-five re-verification from retained bytes alone,
-       without dependence on an out-of-band rule registry that the operator
-       must continue to publish.
-
-       This document is complementary to draft-vauban-x402-stark-receipts:
-       that document covers cryptographic settlement-time payment-condition
-       proofs; this document covers admission-time compliance screening
-       receipts.  The two compose via the composite trust-query algorithm
-       specified in specs/composite-trust-query.md in x402-foundation/x402.</p>
+  content: "<p>This document specifies a categorical compliance screening receipt\n   format for agentic-payment flows.  The format is designed for use by\n   AI agents and agentic-payment gateways that perform regulatory\n   screening at admission time and must retain the screening decision\n   under framework-bound retention obligations (UK Money Laundering\n   Regulations 2017; Proceeds of Crime Act 2002 Section 330; EU Anti-\n   Money Laundering Directives 5 and 6; Markets in Crypto-Assets\n   Regulation Article 80; Anti-Money Laundering Regulation Article 56;\n   Digital Operational Resilience Act Article 14).\n\n   The receipt format uses a closed enumeration of categorical outcomes\n   (ALLOW, REFER, DENY) rather than a continuous score or tier\n   projection.  The categorical outcome is load-bearing for downstream\n   regulatory obligations: under UK POCA 2002 Section 330, a REFER\n   carries a mandatory Suspicious Activity Report obligation that a DENY\n   does not.  A score or tier projection collapses this distinction.\n\n   Receipts are canonicalised under RFC 8785 (JSON Canonicalization\n   Scheme) with an in-band canonicalisation rule pin (canon_version).\n   The pin enables year-five re-verification from retained bytes alone,\n   without dependence on an out-of-band rule registry that the operator\n   must continue to publish.\n\n   This document is complementary to draft-vauban-x402-stark-receipts:\n   that document covers cryptographic settlement-time payment-condition\n   proofs; this document covers admission-time compliance screening\n   receipts.  The two compose via the composite trust-query algorithm\n   specified in specs/composite-trust-query.md in x402-foundation/x402.</p>"
 relation:
 - type: includes
   bibitem:

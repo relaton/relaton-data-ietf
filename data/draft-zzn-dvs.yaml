@@ -1,4 +1,3 @@
----
 id: draftzzndvs
 schema_version: v1.5.6
 formattedref:
@@ -20,34 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines the Domain-Verified Skills (DVS) protocol, a
-       lightweight mechanism for AI Agents to discover, verify, and execute
-       skill definitions served over HTTPS.  A skill is a directory
-       containing a SKILL.md entry point and optional bundled resources that
-       instructs an AI Agent to perform a specific task or adopt a specific
-       behavior.
-
-       The central design principle of DVS is that a skill's identity and
-       trustworthiness are derived entirely from the HTTPS URL at which it
-       is served -- no centralized registry or third-party certification is
-       required.  The operator of the URL's origin is the authoritative
-       endorser of the skill.
-
-       This trust is formalized through the concept of a Trust Root: an
-       HTTPS URL prefix declared by the skill publisher that scopes the
-       trust boundary for their skills.  A skill is considered verified if
-       and only if its URL begins with the declared Trust Root.  For brands
-       with first-party domains, the Trust Root is the domain origin.  For
-       brands publishing on user-generated content platforms where the
-       platform operator does not vouch for individual publishers, the Trust
-       Root MUST be path-scoped to content the brand controls, ensuring that
-       trust does not extend to the entire platform.
-
-       The protocol leverages the existing trust infrastructure of the
-       Domain Name System (DNS) and Transport Layer Security (TLS) and is
-       backward compatible with skills already served over HTTPS, including
-       those hosted on GitHub or other platforms.</p>
+  content: "<p>This document defines the Domain-Verified Skills (DVS) protocol, a\n   lightweight mechanism for AI Agents to discover, verify, and execute\n   skill definitions served over HTTPS.  A skill is a directory\n   containing a SKILL.md entry point and optional bundled resources that\n   instructs an AI Agent to perform a specific task or adopt a specific\n   behavior.\n\n   The central design principle of DVS is that a skill's identity and\n   trustworthiness are derived entirely from the HTTPS URL at which it\n   is served -- no centralized registry or third-party certification is\n   required.  The operator of the URL's origin is the authoritative\n   endorser of the skill.\n\n   This trust is formalized through the concept of a Trust Root: an\n   HTTPS URL prefix declared by the skill publisher that scopes the\n   trust boundary for their skills.  A skill is considered verified if\n   and only if its URL begins with the declared Trust Root.  For brands\n   with first-party domains, the Trust Root is the domain origin.  For\n   brands publishing on user-generated content platforms where the\n   platform operator does not vouch for individual publishers, the Trust\n   Root MUST be path-scoped to content the brand controls, ensuring that\n   trust does not extend to the entire platform.\n\n   The protocol leverages the existing trust infrastructure of the\n   Domain Name System (DNS) and Transport Layer Security (TLS) and is\n   backward compatible with skills already served over HTTPS, including\n   those hosted on GitHub or other platforms.</p>"
 relation:
 - type: includes
   bibitem:

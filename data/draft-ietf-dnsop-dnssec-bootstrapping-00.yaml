@@ -1,12 +1,10 @@
----
 id: draftietfdnsopdnssecbootstrapping00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Automatic DNSSEC Bootstrapping using Authenticated Signals from the Zone's
-    Operator
+  content: Automatic DNSSEC Bootstrapping using Authenticated Signals from the Zone's Operator
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-dnssec-bootstrapping-00
@@ -80,31 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document introduces an in-band method for DNS operators to
-       publish arbitrary information about the zones they are authoritative
-       for, in an authenticated fashion and on a per-zone basis.  The
-       mechanism allows managed DNS operators to securely announce DNSSEC
-       key parameters for zones under their management, including for zones
-       that are not currently securely delegated.
-
-       Whenever DS records are absent for a zone's delegation, this signal
-       enables the parent's registry or registrar to cryptographically
-       validate the CDS/CDNSKEY records found at the child's apex.  The
-       parent can then provision DS records for the delegation without
-       resorting to out-of-band validation or weaker types of cross-checks
-       such as "Accept after Delay" ([RFC8078]).
-
-       This document updates [RFC8078] and replaces its Section 3 with
-       Section 3.2 of this document.
-
-       [ Ed note: Text inside square brackets ([]) is additional background
-       information, answers to frequently asked questions, general musings,
-       etc.  They will be removed before publication.  This document is
-       being collaborated on at https://github.com/desec-io/draft-thomassen-
-       dnsop-dnssec-bootstrapping/ (https://github.com/desec-io/draft-
-       thomassen-dnsop-dnssec-bootstrapping/).  The authors gratefully
-       accept pull requests. ]</p>
+  content: "<p>This document introduces an in-band method for DNS operators to\n   publish arbitrary information about the zones they are authoritative\n   for, in an authenticated fashion and on a per-zone basis.  The\n   mechanism allows managed DNS operators to securely announce DNSSEC\n   key parameters for zones under their management, including for zones\n   that are not currently securely delegated.\n\n   Whenever DS records are absent for a zone's delegation, this signal\n   enables the parent's registry or registrar to cryptographically\n   validate the CDS/CDNSKEY records found at the child's apex.  The\n   parent can then provision DS records for the delegation without\n   resorting to out-of-band validation or weaker types of cross-checks\n   such as \"Accept after Delay\" ([RFC8078]).\n\n   This document updates [RFC8078] and replaces its Section 3 with\n   Section 3.2 of this document.\n\n   [ Ed note: Text inside square brackets ([]) is additional background\n   information, answers to frequently asked questions, general musings,\n   etc.  They will be removed before publication.  This document is\n   being collaborated on at https://github.com/desec-io/draft-thomassen-\n   dnsop-dnssec-bootstrapping/ (https://github.com/desec-io/draft-\n   thomassen-dnsop-dnssec-bootstrapping/).  The authors gratefully\n   accept pull requests. ]</p>"
 relation:
 - type: updatedBy
   bibitem:

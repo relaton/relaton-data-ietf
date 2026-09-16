@@ -1,4 +1,3 @@
----
 id: drafthuangidrbgporiginattestation00
 schema_version: v1.5.6
 type: standard
@@ -122,31 +121,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Resource Public Key Infrastructure (RPKI) provides a framework
-       for Route Origin Validation (ROV), but its deployment faces two
-       critical challenges: 1) high false positive rates for "invalid"
-       states and the operational burden these create; 2) incremental
-       deployment has been hindered by limited immediate value when ROA
-       coverage is incomplete and ROV deployment remains sparse.
-
-       This document proposes a paradigm shift from reactive ROV validation
-       to proactive origin attestation.  We introduce two complementary
-       mechanisms: 1) "Pre-validation before propagation" where routers
-       validate self-originated routes against local RPKI Verified ROA
-       Payload (VRP) cache before advertisement, holding invalid routes for
-       operator intervention; and 2) A BGP extension that carries
-       cryptographically signed origin attestation in BGP UPDATE messages.
-
-       Unlike traditional ROV which only validates against outband RPKI-
-       based ROAs, this approach enables originating ASes to actively attest
-       to the legitimacy of their routes.  This provides immediate security
-       benefits even with partial deployment: each deploying AS gains
-       stronger protection for its own prefixes, and downstream ASes receive
-       clearer signals to distinguish legitimate routes from potential
-       hijacks.  The mechanisms dramatically reduce false positives while
-       creating a deployable path toward comprehensive route origin
-       security.</p>
+  content: "<p>The Resource Public Key Infrastructure (RPKI) provides a framework\n   for Route Origin Validation (ROV), but its deployment faces two\n   critical challenges: 1) high false positive rates for \"invalid\"\n   states and the operational burden these create; 2) incremental\n   deployment has been hindered by limited immediate value when ROA\n   coverage is incomplete and ROV deployment remains sparse.\n\n   This document proposes a paradigm shift from reactive ROV validation\n   to proactive origin attestation.  We introduce two complementary\n   mechanisms: 1) \"Pre-validation before propagation\" where routers\n   validate self-originated routes against local RPKI Verified ROA\n   Payload (VRP) cache before advertisement, holding invalid routes for\n   operator intervention; and 2) A BGP extension that carries\n   cryptographically signed origin attestation in BGP UPDATE messages.\n\n   Unlike traditional ROV which only validates against outband RPKI-\n   based ROAs, this approach enables originating ASes to actively attest\n   to the legitimacy of their routes.  This provides immediate security\n   benefits even with partial deployment: each deploying AS gains\n   stronger protection for its own prefixes, and downstream ASes receive\n   clearer signals to distinguish legitimate routes from potential\n   hijacks.  The mechanisms dramatically reduce false positives while\n   creating a deployable path toward comprehensive route origin\n   security.</p>"
 series:
 - type: main
   title:

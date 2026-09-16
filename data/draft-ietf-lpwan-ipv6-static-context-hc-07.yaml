@@ -1,12 +1,10 @@
----
 id: draftietflpwanipv6staticcontexthc07
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: LPWAN Static Context Header Compression (SCHC) and fragmentation for IPv6
-    and UDP
+  content: LPWAN Static Context Header Compression (SCHC) and fragmentation for IPv6 and UDP
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-lpwan-ipv6-static-context-hc-07
@@ -105,37 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes a header compression scheme and fragmentation
-       functionality for very low bandwidth networks.  These techniques are
-       specially tailored for LPWAN (Low Power Wide Area Network) networks.
-
-       The Static Context Header Compression (SCHC) offers a great level of
-       flexibility when processing the header fields.  SCHC compression is
-       based on a common static context stored in a LPWAN device and in the
-       network.  Static context means that the stored information does not
-       change during the packet transmission.  The context describes the
-       field values and keeps information that will not be transmitted
-       through the constrained network.
-
-       SCHC must be used for LPWAN networks because it avoids complex
-       resynchronization mechanisms, which are incompatible with LPWAN
-       characteristics.  And also because in most cases, IPv6/UDP headers
-       are reduced to a small identifier called Rule ID.  Eventhough
-       sometimes, a SCHC compressed packet will not fit in one L2 PDU, and
-       the SCHC fragmentation protocol will be used.  The SCHC fragmentation
-       and reassembly mechanism is used in two situations: for SCHC-
-       compressed packets that still exceed the L2 PDU size; and for the
-       case where the SCHC compression cannot be performed.
-
-       This document describes the SCHC compression/decompression framework
-       and applies it to IPv6/UDP headers.  This document also specifies a
-       fragmentation and reassembly mechanism that is used to support the
-       IPv6 MTU requirement over LPWAN technologies.  Fragmentation is
-       mandatory for IPv6 datagrams that, after SCHC compression or when it
-       has not been possible to apply such compression, still exceed the L2
-       maximum payload size.  Similar solutions for other protocols such as
-       CoAP will be described in separate documents.</p>
+  content: "<p>This document describes a header compression scheme and fragmentation\n   functionality for very low bandwidth networks.  These techniques are\n   specially tailored for LPWAN (Low Power Wide Area Network) networks.\n\n   The Static Context Header Compression (SCHC) offers a great level of\n   flexibility when processing the header fields.  SCHC compression is\n   based on a common static context stored in a LPWAN device and in the\n   network.  Static context means that the stored information does not\n   change during the packet transmission.  The context describes the\n   field values and keeps information that will not be transmitted\n   through the constrained network.\n\n   SCHC must be used for LPWAN networks because it avoids complex\n   resynchronization mechanisms, which are incompatible with LPWAN\n   characteristics.  And also because in most cases, IPv6/UDP headers\n   are reduced to a small identifier called Rule ID.  Eventhough\n   sometimes, a SCHC compressed packet will not fit in one L2 PDU, and\n   the SCHC fragmentation protocol will be used.  The SCHC fragmentation\n   and reassembly mechanism is used in two situations: for SCHC-\n   compressed packets that still exceed the L2 PDU size; and for the\n   case where the SCHC compression cannot be performed.\n\n   This document describes the SCHC compression/decompression framework\n   and applies it to IPv6/UDP headers.  This document also specifies a\n   fragmentation and reassembly mechanism that is used to support the\n   IPv6 MTU requirement over LPWAN technologies.  Fragmentation is\n   mandatory for IPv6 datagrams that, after SCHC compression or when it\n   has not been possible to apply such compression, still exceed the L2\n   maximum payload size.  Similar solutions for other protocols such as\n   CoAP will be described in separate documents.</p>"
 relation:
 - type: updates
   bibitem:

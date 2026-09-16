@@ -1,4 +1,3 @@
----
 id: draftxkumakichixaipreceipts03
 schema_version: v1.5.6
 type: standard
@@ -41,39 +40,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a wire format for signed execution receipts
-       produced by AI agents when they invoke tools, services, or other
-       agents.  A receipt records the minimum facts needed to make a trust
-       decision about a future call: who acted, who delegated, what tool was
-       used, whether the call succeeded, how long it took, and how the
-       call's inputs and outputs are identified (without disclosing their
-       contents).
-
-       A distinguishing property of the format is optional caller co-
-       signature over the same canonical per-call record.  When both
-       signatures validate, the receipt cryptographically binds the
-       identified Caller and Agent to the same canonical payload.  This does
-       not establish that either party independently observed every field,
-       that the recorded execution was correct, or that the parties did not
-       collude.  A receipt may carry the Agent signature alone, and
-       consumers may distinguish the two cases according to deployment
-       policy.
-
-       The format is intentionally tool-system-agnostic.  The same receipt
-       structure can be emitted by MCP (Model Context Protocol) servers,
-       LangChain.js callback handlers, OpenAI tool-calling loops, HTTP
-       clients, or proprietary agent runtimes.  Receipts use Ed25519
-       signatures over a JCS-canonicalized payload, and identities are W3C
-       Decentralized Identifiers (DIDs).
-
-       This revision introduces an explicit wire-format version
-       (formatVersion), pins the hash preimage profile, and ships executable
-       conformance test vectors.
-
-       Scoring policy, aggregation architecture, and reactive behavior in
-       response to receipts are explicitly out of scope and left to
-       deployments.</p>
+  content: "<p>This document defines a wire format for signed execution receipts\n   produced by AI agents when they invoke tools, services, or other\n   agents.  A receipt records the minimum facts needed to make a trust\n   decision about a future call: who acted, who delegated, what tool was\n   used, whether the call succeeded, how long it took, and how the\n   call's inputs and outputs are identified (without disclosing their\n   contents).\n\n   A distinguishing property of the format is optional caller co-\n   signature over the same canonical per-call record.  When both\n   signatures validate, the receipt cryptographically binds the\n   identified Caller and Agent to the same canonical payload.  This does\n   not establish that either party independently observed every field,\n   that the recorded execution was correct, or that the parties did not\n   collude.  A receipt may carry the Agent signature alone, and\n   consumers may distinguish the two cases according to deployment\n   policy.\n\n   The format is intentionally tool-system-agnostic.  The same receipt\n   structure can be emitted by MCP (Model Context Protocol) servers,\n   LangChain.js callback handlers, OpenAI tool-calling loops, HTTP\n   clients, or proprietary agent runtimes.  Receipts use Ed25519\n   signatures over a JCS-canonicalized payload, and identities are W3C\n   Decentralized Identifiers (DIDs).\n\n   This revision introduces an explicit wire-format version\n   (formatVersion), pins the hash preimage profile, and ships executable\n   conformance test vectors.\n\n   Scoring policy, aggregation architecture, and reactive behavior in\n   response to receipts are explicitly out of scope and left to\n   deployments.</p>"
 relation:
 - type: updates
   bibitem:

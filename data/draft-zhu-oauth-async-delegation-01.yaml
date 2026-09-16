@@ -1,4 +1,3 @@
----
 id: draftzhuoauthasyncdelegation01
 schema_version: v1.5.6
 type: standard
@@ -79,26 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a standardized continuation mechanism for
-       delegated OAuth 2.0 Token Exchange.  RFC 8693 permits an
-       authorization server to include an optional "refresh_token" in a
-       successful Token Exchange response, but does not specify issuance
-       policy, delegated authorization semantics, lifecycle, or security
-       properties for continuation credentials.  This specification fills
-       that gap for asynchronous and long-running delegated service
-       workflows by defining the Delegation Handle.
-
-       The Delegation Handle is a delegation-bound continuation credential
-       with a new token type identifier usable as the RFC 8693
-       "subject_token_type".  An acting service presents the handle as the
-       "subject_token" in a subsequent RFC 8693 Token Exchange request after
-       the original subject token is no longer available.  This
-       specification standardizes delegated continuation semantics,
-       preservation of subject and actor relationships, audience
-       confinement, scope monotonicity, actor binding, authorization re-
-       evaluation during continuation, token rotation, revocation, bounded
-       delegation lifetime, and interoperability between implementations.</p>
+  content: "<p>This document defines a standardized continuation mechanism for\n   delegated OAuth 2.0 Token Exchange.  RFC 8693 permits an\n   authorization server to include an optional \"refresh_token\" in a\n   successful Token Exchange response, but does not specify issuance\n   policy, delegated authorization semantics, lifecycle, or security\n   properties for continuation credentials.  This specification fills\n   that gap for asynchronous and long-running delegated service\n   workflows by defining the Delegation Handle.\n\n   The Delegation Handle is a delegation-bound continuation credential\n   with a new token type identifier usable as the RFC 8693\n   \"subject_token_type\".  An acting service presents the handle as the\n   \"subject_token\" in a subsequent RFC 8693 Token Exchange request after\n   the original subject token is no longer available.  This\n   specification standardizes delegated continuation semantics,\n   preservation of subject and actor relationships, audience\n   confinement, scope monotonicity, actor binding, authorization re-\n   evaluation during continuation, token rotation, revocation, bounded\n   delegation lifetime, and interoperability between implementations.</p>"
 relation:
 - type: updates
   bibitem:

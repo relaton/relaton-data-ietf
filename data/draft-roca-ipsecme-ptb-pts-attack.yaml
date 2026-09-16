@@ -1,4 +1,3 @@
----
 id: draftrocaipsecmeptbptsattack
 schema_version: v1.5.6
 formattedref:
@@ -20,23 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document introduces the "Packet Too Big"-"Packet Too Small"
-       Internet Control Message Protocol (ICMP) based attack against IPsec
-       gateways.  We explain how an attacker having eavesdropping and packet
-       injection capabilities, from the unsecure network where he only sees
-       encrypted packets, can force a gateway to reduce the Path Maximum
-       Transmission Unit (PMTU) of an IPsec tunnel to the minimum, which can
-       trigger severe issues for the hosts behind this gateway: with a Linux
-       host, depending on the PMTU discovery algorithm in use (i.e., PMTUd
-       versus PLPMTUd) and protocol (TCP versus UDP), the attack either
-       creates a Denial of Service or major performance penalties.  This
-       attack highlights two fundamental problems, namely: (1) the
-       impossibility to distinguish legitimate from illegitimate ICMP
-       packets coming from the untrusted network, and (2) the contradictions
-       in the way Path MTU is managed by some end hosts when this Path MTU
-       is below the minimum packet size any link should support because of
-       the IPsec encapsulation.</p>
+  content: "<p>This document introduces the \"Packet Too Big\"-\"Packet Too Small\"\n   Internet Control Message Protocol (ICMP) based attack against IPsec\n   gateways.  We explain how an attacker having eavesdropping and packet\n   injection capabilities, from the unsecure network where he only sees\n   encrypted packets, can force a gateway to reduce the Path Maximum\n   Transmission Unit (PMTU) of an IPsec tunnel to the minimum, which can\n   trigger severe issues for the hosts behind this gateway: with a Linux\n   host, depending on the PMTU discovery algorithm in use (i.e., PMTUd\n   versus PLPMTUd) and protocol (TCP versus UDP), the attack either\n   creates a Denial of Service or major performance penalties.  This\n   attack highlights two fundamental problems, namely: (1) the\n   impossibility to distinguish legitimate from illegitimate ICMP\n   packets coming from the untrusted network, and (2) the contradictions\n   in the way Path MTU is managed by some end hosts when this Path MTU\n   is below the minimum packet size any link should support because of\n   the IPsec encapsulation.</p>"
 relation:
 - type: includes
   bibitem:

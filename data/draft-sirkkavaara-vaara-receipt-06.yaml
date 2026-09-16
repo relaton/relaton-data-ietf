@@ -1,12 +1,10 @@
----
 id: draftsirkkavaaravaarareceipt06
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Autonomous
-    Actions'
+  content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Autonomous Actions'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-06
@@ -55,30 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies vaara.receipt/v1, a signed and independently
-       recomputable record that binds a decision about an autonomous action
-       to the evidence the decision was made on, and optionally to one or
-       more external timestamp anchors.  The format is canonicalized with
-       the JSON Canonicalization Scheme (JCS) so that any third party can
-       recompute its digests and verify its signature without access to the
-       issuer.  A decision and the execution receipt that answers it form
-       one recomputable pair through the envelope's back link.
-
-       The receipt's trust is root-agnostic: the same record is verifiable
-       with or without a hardware trusted execution environment and is re-
-       expressible as an IETF RATS Entity Attestation Result.  Downstream
-       specifications (a payment rail, a compliance regime, a framework
-       integration) define profiles that pin to a version of this document
-       and add only their own evidence schema; they do not redefine the
-       envelope.  The format described here is deployed, and its receipts
-       are independently recomputable from public conformance vectors that
-       ship with standalone checkers importing no issuer code.  The minimal
-       profile is a governance decision over a single autonomous action,
-       bound to the action's own intent with no external rail; it is the
-       floor of the format, and a reference library offers a matching
-       adoption floor at the API layer as a one-line decorator over the
-       governed function.</p>
+  content: "<p>This document specifies vaara.receipt/v1, a signed and independently\n   recomputable record that binds a decision about an autonomous action\n   to the evidence the decision was made on, and optionally to one or\n   more external timestamp anchors.  The format is canonicalized with\n   the JSON Canonicalization Scheme (JCS) so that any third party can\n   recompute its digests and verify its signature without access to the\n   issuer.  A decision and the execution receipt that answers it form\n   one recomputable pair through the envelope's back link.\n\n   The receipt's trust is root-agnostic: the same record is verifiable\n   with or without a hardware trusted execution environment and is re-\n   expressible as an IETF RATS Entity Attestation Result.  Downstream\n   specifications (a payment rail, a compliance regime, a framework\n   integration) define profiles that pin to a version of this document\n   and add only their own evidence schema; they do not redefine the\n   envelope.  The format described here is deployed, and its receipts\n   are independently recomputable from public conformance vectors that\n   ship with standalone checkers importing no issuer code.  The minimal\n   profile is a governance decision over a single autonomous action,\n   bound to the action's own intent with no external rail; it is the\n   floor of the format, and a reference library offers a matching\n   adoption floor at the API layer as a one-line decorator over the\n   governed function.</p>"
 relation:
 - type: updates
   bibitem:

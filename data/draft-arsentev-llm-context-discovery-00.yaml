@@ -1,12 +1,10 @@
----
 id: draftarsentevllmcontextdiscovery00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Discovery and Retrieval of Publisher-Curated Context Files for Large Language
-    Model Consumers
+  content: Discovery and Retrieval of Publisher-Curated Context Files for Large Language Model Consumers
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-arsentev-llm-context-discovery-00
@@ -55,35 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Publishers have begun to serve a curated, plain-text summary of a web
-       origin intended for consumption by large language models and by the
-       crawlers that feed them, most visibly under the de facto file name
-       "llms.txt".  The practice has no specification, no media type, and —
-       of direct operational consequence — no discovery mechanism: a
-       consumer that does not already guess the path cannot learn that such
-       a file exists.
-
-       This document specifies discovery and retrieval for publisher-curated
-       context files.  It defines the well-known URI "llm-context", the link
-       relation type "llm-context", and an extension record for the robots
-       exclusion protocol, so that a publisher may advertise a context file
-       by three independent paths and a consumer may find it without
-       guessing.  It specifies a two-tier arrangement of an index resource
-       and optional detail resources, states conditional-request and size
-       requirements that keep retrieval affordable for both parties, and
-       describes the relationship of this mechanism to the robots exclusion
-       protocol, to sitemaps, and to work in progress on expressing AI usage
-       preferences.
-
-       This document also reports measurements from an operational
-       deployment in which twenty crawlers operated by search and language-
-       model providers issued 44,005 requests to a host over fifteen days
-       without once retrieving the context file the host was serving, while
-       the same crawlers retrieved that host's robots.txt 577 times in the
-       three days after the context file was deployed.  The absence of a
-       discovery mechanism, rather than the absence of interest, is the
-       hypothesis this document acts upon.</p>
+  content: "<p>Publishers have begun to serve a curated, plain-text summary of a web\n   origin intended for consumption by large language models and by the\n   crawlers that feed them, most visibly under the de facto file name\n   \"llms.txt\".  The practice has no specification, no media type, and —\n   of direct operational consequence — no discovery mechanism: a\n   consumer that does not already guess the path cannot learn that such\n   a file exists.\n\n   This document specifies discovery and retrieval for publisher-curated\n   context files.  It defines the well-known URI \"llm-context\", the link\n   relation type \"llm-context\", and an extension record for the robots\n   exclusion protocol, so that a publisher may advertise a context file\n   by three independent paths and a consumer may find it without\n   guessing.  It specifies a two-tier arrangement of an index resource\n   and optional detail resources, states conditional-request and size\n   requirements that keep retrieval affordable for both parties, and\n   describes the relationship of this mechanism to the robots exclusion\n   protocol, to sitemaps, and to work in progress on expressing AI usage\n   preferences.\n\n   This document also reports measurements from an operational\n   deployment in which twenty crawlers operated by search and language-\n   model providers issued 44,005 requests to a host over fifteen days\n   without once retrieving the context file the host was serving, while\n   the same crawlers retrieved that host's robots.txt 577 times in the\n   three days after the context file was deployed.  The absence of a\n   discovery mechanism, rather than the absence of interest, is the\n   hypothesis this document acts upon.</p>"
 series:
 - type: main
   title:

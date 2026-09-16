@@ -1,0 +1,39 @@
+id: draftdasjurisdictionboundexecutionfinality
+schema_version: v1.5.6
+formattedref:
+  content: draft-das-jurisdiction-bound-execution-finality
+title:
+- language: en
+  script: Latn
+  content: 'Authorized Here, Not Authorized There: Jurisdiction-Bound Execution Finality for Cross-Border and Sovereign Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-jurisdiction-bound-execution-finality-00
+docidentifier:
+- content: draft-das-jurisdiction-bound-execution-finality
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-15'
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Modern cloud, AI, financial, telecom, and critical-infrastructure\n   systems increasingly operate across regions, sovereign clouds, multi-\n   cloud environments, and distributed workload chains.  A high-\n   consequence authorization failure can occur even when identity,\n   cryptography, policy evaluation, and platform attestation all\n   succeed: the same Candidate Act can become effective under a\n   jurisdictional or governance context different from the one under\n   which it was authorized.  Workload migration, disaster-recovery\n   failover, cross-region queues, service rerouting, remote\n   administration, control-plane changes, destination substitution, key-\n   control changes, or downstream processing can convert an\n   authorization that was valid under context J1 into an effect\n   occurring under context J2.  No token forgery or cryptographic break\n   is required.\n\n   Existing mechanisms already address important parts of this problem.\n   OAuth Rich Authorization Requests [RFC9396] can carry fine-grained\n   authorization details; OAuth Resource Indicators [RFC8707] bind\n   authorization requests to protected resources; JWT [RFC7519] can\n   carry signed application claims; WIMSE [WIMSE-ARCH] provides\n   workload-identity and security-context architecture for multi-system\n   environments; RATS [RFC9334] provides Evidence, Verifiers, and\n   Attestation Results; and SCITT [RFC9943] provides signed statements,\n   transparency, and receipts.  Industry systems also provide concrete\n   sovereignty and data-boundary controls: Microsoft documents its EU\n   Data Boundary [MS-EUDB], AWS operates the European Sovereign Cloud\n   [AWS-ESC], and Google Cloud provides Sovereign Controls by Partners\n   [GOOGLE-SOV].\n\n   The residual gap exists only where jurisdiction is treated as\n   descriptive metadata, inferred from weak location signals, enforced\n   only at deployment time, or checked at an upstream boundary while the\n   actual consequence can later move through another region, operator,\n   administrative path, processing service, destination, failover route,\n   or control domain.  A workload can be correctly authenticated and a\n   platform correctly attested while the current effectuation context no\n   longer satisfies the deployment's sovereignty rule.  Likewise,\n   storing data in one region does not by itself prove where it is\n   processed, remotely administered, decrypted, transmitted, or finally\n   disclosed.\n\n   This document proposes a jurisdiction-bound execution-finality\n   invariant.  A Candidate Act remains in a Non-Effective State until\n   the Finality Sink establishes a current, authoritative Jurisdiction\n   Execution Context (JEC) for the exact act and verifies that the\n   present effectuation environment satisfies the deployment-defined\n   Jurisdiction Policy.  The JEC can combine workload identity, compute\n   and processing domain, storage location, destination, operator/\n   control domain, key-control domain, remote-access state, attested\n   trust state, and policy generation.  JEC is an architectural role,\n   not a mandated token format.\n\n   Prevention is claimed only when the jurisdiction policy, evidence\n   sources, current effectuation context, exact-act binding, state\n   continuity, and consequence path are load-bearing and non-bypassable.\n   If the deployment relies only on GeoIP, region labels, advisory\n   metadata, best-effort routing, post-hoc audit, or incomplete path\n   coverage, the result is mitigation or evidence rather than the same\n   prevention guarantee.  The architecture enforces machine-readable\n   jurisdiction or compliance policy supplied by an authoritative\n   deployment source; it does not determine what law applies or provide\n   a legal conclusion.\n\n   Microsoft, AWS, Google Cloud, NVIDIA, and Arm are discussed only as\n   complementary industrial examples or potential integration points.\n   The document does not assert vulnerability, deficiency, non-\n   conformance, affiliation, or endorsement by any named organization.\n   A deployment that already makes its required jurisdictional\n   constraints current, non-bypassable, and mandatory at the actual\n   consequence boundary already satisfies the core property.  Criticism,\n   corrections, counterexamples, prior-art pointers, implementation\n   experience, and evidence of equivalent existing mechanisms are\n   explicitly invited.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-jurisdiction-bound-execution-finality-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-jurisdiction-bound-execution-finality-00
+    docidentifier:
+    - content: draft-das-jurisdiction-bound-execution-finality-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

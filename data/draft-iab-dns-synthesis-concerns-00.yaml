@@ -1,4 +1,3 @@
----
 id: draftiabdnssynthesisconcerns00
 schema_version: v1.5.6
 type: standard
@@ -54,37 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>There are many architectural assumptions regarding DNS behavior that
-       are not specified in the IETF standards documents describing DNS, but
-       which are deeply embedded in the behavior as expected by Internet
-       protocols and applications.  These assumptions are inherent parts of
-       the network architecture of which the DNS is one component.
-
-       It has long been known that it is possible to use DNS wildcards in
-       ways that violate these assumptions.  More recently there have been
-       deployments of middleboxes -- in most cases recursive nameservers or
-       DNS proxies at the ISP level -- that synthesize answers in ways that
-       not only violate these assumptions but also violate the DNS
-       architecture.
-
-       Experience with DNS synthesis in the DNS infrastructure have show
-       that the cost of violating these assumptions is significant.  In this
-       document we provide an explanation of how DNS wildcards function, and
-       many examples of how their injudicious use negatively impacts both
-       individual Internet applications and indeed the Internet architecture
-       itself.  We also explain that similar problems arise with the
-       synthesis of DNS responses by middleboxes.
-
-       We recommend that DNS wildcards should not be used in a zone unless
-       the zone operator has a clear understanding of the risks, and that
-       they should not be used without the informed consent of those
-       entities which have been delegated below the zone.
-
-       In addition we recommend that middleboxes do not perform DNS query
-       synthesis unless (1)there are informed consents of those that use the
-       forwarding name server, and (2)there exists an opt-out mechanism that
-       allows them to receive the original DNS answers.</p>
+  content: "<p>There are many architectural assumptions regarding DNS behavior that\n   are not specified in the IETF standards documents describing DNS, but\n   which are deeply embedded in the behavior as expected by Internet\n   protocols and applications.  These assumptions are inherent parts of\n   the network architecture of which the DNS is one component.\n\n   It has long been known that it is possible to use DNS wildcards in\n   ways that violate these assumptions.  More recently there have been\n   deployments of middleboxes -- in most cases recursive nameservers or\n   DNS proxies at the ISP level -- that synthesize answers in ways that\n   not only violate these assumptions but also violate the DNS\n   architecture.\n\n   Experience with DNS synthesis in the DNS infrastructure have show\n   that the cost of violating these assumptions is significant.  In this\n   document we provide an explanation of how DNS wildcards function, and\n   many examples of how their injudicious use negatively impacts both\n   individual Internet applications and indeed the Internet architecture\n   itself.  We also explain that similar problems arise with the\n   synthesis of DNS responses by middleboxes.\n\n   We recommend that DNS wildcards should not be used in a zone unless\n   the zone operator has a clear understanding of the risks, and that\n   they should not be used without the informed consent of those\n   entities which have been delegated below the zone.\n\n   In addition we recommend that middleboxes do not perform DNS query\n   synthesis unless (1)there are informed consents of those that use the\n   forwarding name server, and (2)there exists an opt-out mechanism that\n   allows them to receive the original DNS answers.</p>"
 series:
 - type: main
   title:

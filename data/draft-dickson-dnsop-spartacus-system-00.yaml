@@ -1,4 +1,3 @@
----
 id: draftdicksondnsopspartacussystem00
 schema_version: v1.5.6
 type: standard
@@ -49,28 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This is the SPARTACUS DNS gateway system.  It is designed to
-       facilitate the transport of DNS messages opaquely, across problematic
-       sections of the Internet.  It uses JSON encoding, and HTTP(S) as the
-       protocol for transport.
-
-       The main criteria of SPARTACUS is that it preserve DNS messages
-       verbatim, and that only properly formatted DNS messages are passed.
-
-       There are two modes (so far) defined: DNS forwarder (dns clients
-       point to a local gateway, which forwards to a remote gateway for
-       sending to a DNS resolver); and transparent proxy (DNS packets are
-       intercepted, passed to a local gateway, which sends them to the
-       remote gateway, with original destination IP address etc. encoded,
-       and used by the remote gateway as the destination).
-
-       DNS messages are NAT-friendly, so changes to IP or UDP headers do not
-       impact them.  Thus, SPARTACUS does not interfere with TSIG, SIG(0),
-       or Eastlake Cookies.
-
-       This document describes the system, the components, and behavior,
-       with examples.</p>
+  content: "<p>This is the SPARTACUS DNS gateway system.  It is designed to\n   facilitate the transport of DNS messages opaquely, across problematic\n   sections of the Internet.  It uses JSON encoding, and HTTP(S) as the\n   protocol for transport.\n\n   The main criteria of SPARTACUS is that it preserve DNS messages\n   verbatim, and that only properly formatted DNS messages are passed.\n\n   There are two modes (so far) defined: DNS forwarder (dns clients\n   point to a local gateway, which forwards to a remote gateway for\n   sending to a DNS resolver); and transparent proxy (DNS packets are\n   intercepted, passed to a local gateway, which sends them to the\n   remote gateway, with original destination IP address etc. encoded,\n   and used by the remote gateway as the destination).\n\n   DNS messages are NAT-friendly, so changes to IP or UDP headers do not\n   impact them.  Thus, SPARTACUS does not interfere with TSIG, SIG(0),\n   or Eastlake Cookies.\n\n   This document describes the system, the components, and behavior,\n   with examples.</p>"
 series:
 - type: main
   title:

@@ -1,4 +1,3 @@
----
 id: draftcallecdive
 schema_version: v1.5.6
 formattedref:
@@ -20,29 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Domain-based Integrity Verification Enforcement (DIVE) is an
-       application-layer protocol that provides cryptographic integrity and
-       authenticity verification of HTTP response bodies by leveraging the
-       Domain Name System Security Extensions (DNSSEC) as an out-of-band
-       distribution channel for public keys.
-
-       DIVE is designed for non-browser automated clients operating in
-       controlled infrastructure: software update agents, package managers,
-       and IoT device fleets.  It is specifically suited to the distribution
-       of static, pre-signable content (firmware images, packages, and
-       versioned binary artifacts), where signatures can be computed offline
-       and injected at deployment time.
-
-       DIVE has two independent components: (1) an object-security layer,
-       which uses HTTP Message Signatures (RFC 9421) to carry per-resource
-       signatures in HTTP response headers, and (2) a DNS key-distribution
-       layer, which publishes public keys and policy in DNSSEC-protected TXT
-       records.  A client implementing DIVE verifies each covered resource
-       against the corresponding DNS-published public key before accepting
-       it.  An attacker must therefore compromise both the DNS
-       infrastructure and the origin server simultaneously to deliver a
-       tampered resource to a DIVE-compliant client.</p>
+  content: "<p>Domain-based Integrity Verification Enforcement (DIVE) is an\n   application-layer protocol that provides cryptographic integrity and\n   authenticity verification of HTTP response bodies by leveraging the\n   Domain Name System Security Extensions (DNSSEC) as an out-of-band\n   distribution channel for public keys.\n\n   DIVE is designed for non-browser automated clients operating in\n   controlled infrastructure: software update agents, package managers,\n   and IoT device fleets.  It is specifically suited to the distribution\n   of static, pre-signable content (firmware images, packages, and\n   versioned binary artifacts), where signatures can be computed offline\n   and injected at deployment time.\n\n   DIVE has two independent components: (1) an object-security layer,\n   which uses HTTP Message Signatures (RFC 9421) to carry per-resource\n   signatures in HTTP response headers, and (2) a DNS key-distribution\n   layer, which publishes public keys and policy in DNSSEC-protected TXT\n   records.  A client implementing DIVE verifies each covered resource\n   against the corresponding DNS-published public key before accepting\n   it.  An attacker must therefore compromise both the DNS\n   infrastructure and the origin server simultaneously to deliver a\n   tampered resource to a DIVE-compliant client.</p>"
 relation:
 - type: includes
   bibitem:

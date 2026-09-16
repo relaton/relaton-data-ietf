@@ -1,4 +1,3 @@
----
 id: draftietfdnsopednstcpkeepalive02
 schema_version: v1.5.6
 type: standard
@@ -109,22 +108,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>DNS messages between clients and servers may be received over either
-       UDP or TCP.  UDP transport involves keeping less state on a busy
-       server, but can cause truncation and retries over TCP.  Additionally,
-       UDP can be exploited for reflection attacks.  Using TCP would reduce
-       retransmits and amplification.  However, clients commonly use TCP
-       only for fallback and servers typically use idle timeouts on the
-       order of seconds.
-
-       This document defines an EDNS0 option ("edns-tcp-keepalive") that
-       allows DNS servers to signal a variable idle timeout.  This
-       signalling facilitates a better balance of UDP and TCP transport
-       between individual clients and servers, reducing the impact of
-       problems associated with UDP transport and allowing the state
-       associated with TCP transport to be managed effectively with minimal
-       impact on the DNS transaction time.</p>
+  content: "<p>DNS messages between clients and servers may be received over either\n   UDP or TCP.  UDP transport involves keeping less state on a busy\n   server, but can cause truncation and retries over TCP.  Additionally,\n   UDP can be exploited for reflection attacks.  Using TCP would reduce\n   retransmits and amplification.  However, clients commonly use TCP\n   only for fallback and servers typically use idle timeouts on the\n   order of seconds.\n\n   This document defines an EDNS0 option (\"edns-tcp-keepalive\") that\n   allows DNS servers to signal a variable idle timeout.  This\n   signalling facilitates a better balance of UDP and TCP transport\n   between individual clients and servers, reducing the impact of\n   problems associated with UDP transport and allowing the state\n   associated with TCP transport to be managed effectively with minimal\n   impact on the DNS transaction time.</p>"
 relation:
 - type: updates
   bibitem:

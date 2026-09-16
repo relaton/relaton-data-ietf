@@ -1,4 +1,3 @@
----
 id: draftsatosoosmad01
 schema_version: v1.5.6
 type: standard
@@ -50,42 +49,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>When a consequential task requires multiple AI agents -- one to
-       coordinate, others to execute, each operating on different objects
-       in a shared workflow -- who is responsible for the outcome?  Which
-       agent caused which state change?  Under whose authority?  If the
-       coordinating agent's authorization is revoked, does the authority
-       of every sub-agent it delegated to immediately expire?  If one
-       agent in a parallel workflow exceeds its scope, can that excess
-       propagate to others?
-
-       Today, no protocol ensures the answers to these questions are
-       knowable.  Multi-agent AI systems can produce accountability black
-       holes: chains of delegation where the authority at each hop is
-       unclear, where revocation does not cascade reliably, and where
-       the audit record cannot reconstruct which agent caused which
-       outcome under which authorization.
-
-       This document defines the Multi-Agent Delegation (MAD) protocol:
-       a normative specification ensuring that authority in multi-agent
-       AI workflows is structured, verifiable, and reconstructable.  MAD
-       specifies three mechanisms.  The Narrowing Property (INV-4)
-       ensures that authority can only attenuate across a delegation hop
-       -- a sub-agent can never acquire capabilities its orchestrator
-       does not itself hold.  SO Instance Topology Types provide five
-       formally defined patterns for how governed objects relate at
-       runtime.  SO Cluster Coordination Primitives (L1-16) enable
-       parallel fan-out topologies in which multiple specialist agents
-       execute simultaneously, with aggregation rules that let the
-       orchestrator proceed as soon as a quorum of specialists complete.
-
-       For human principals, MAD provides a single recoverable property:
-       the accountability chain is always reconstructable from the GEC-
-       signed audit record alone.  Cascade revocation means one decision
-       stops the entire tree.  For AI agents, MAD provides machine-speed
-       delegation authority and the parallel execution efficiency that
-       sequential single-agent approaches cannot achieve.</p>
+  content: "<p>When a consequential task requires multiple AI agents -- one to\n   coordinate, others to execute, each operating on different objects\n   in a shared workflow -- who is responsible for the outcome?  Which\n   agent caused which state change?  Under whose authority?  If the\n   coordinating agent's authorization is revoked, does the authority\n   of every sub-agent it delegated to immediately expire?  If one\n   agent in a parallel workflow exceeds its scope, can that excess\n   propagate to others?\n\n   Today, no protocol ensures the answers to these questions are\n   knowable.  Multi-agent AI systems can produce accountability black\n   holes: chains of delegation where the authority at each hop is\n   unclear, where revocation does not cascade reliably, and where\n   the audit record cannot reconstruct which agent caused which\n   outcome under which authorization.\n\n   This document defines the Multi-Agent Delegation (MAD) protocol:\n   a normative specification ensuring that authority in multi-agent\n   AI workflows is structured, verifiable, and reconstructable.  MAD\n   specifies three mechanisms.  The Narrowing Property (INV-4)\n   ensures that authority can only attenuate across a delegation hop\n   -- a sub-agent can never acquire capabilities its orchestrator\n   does not itself hold.  SO Instance Topology Types provide five\n   formally defined patterns for how governed objects relate at\n   runtime.  SO Cluster Coordination Primitives (L1-16) enable\n   parallel fan-out topologies in which multiple specialist agents\n   execute simultaneously, with aggregation rules that let the\n   orchestrator proceed as soon as a quorum of specialists complete.\n\n   For human principals, MAD provides a single recoverable property:\n   the accountability chain is always reconstructable from the GEC-\n   signed audit record alone.  Cascade revocation means one decision\n   stops the entire tree.  For AI agents, MAD provides machine-speed\n   delegation authority and the parallel execution efficiency that\n   sequential single-agent approaches cannot achieve.</p>"
 relation:
 - type: updates
   bibitem:

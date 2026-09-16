@@ -1,0 +1,80 @@
+id: draftsharifagentaudittrail04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Agent Audit Trail: A Standard Logging Format for Autonomous AI Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-04
+docidentifier:
+- content: draft-sharif-agent-audit-trail
+  type: Internet-Draft
+- content: draft-sharif-agent-audit-trail-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sharif-agent-audit-trail
+date:
+- type: published
+  at: '2026-09-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raza
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Sharif
+      completename:
+        language: en
+        content: Raza Sharif
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CyberSecAI Ltd
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>This document specifies a standard logging format for autonomous\n   AI agent systems.  The Agent Audit Trail (AAT) defines a\n   JSON-based record structure with mandatory fields for agent\n   identity, action classification, outcome tracking, and trust\n   level reporting.  Records are linked via tamper-evident hash\n   chaining using SHA-256 per RFC 8785, with optional ECDSA\n   signatures for non-repudiation.\n\n   The format addresses requirements from the EU AI Act\n   (Regulation 2024/1689), which mandates automatic recording of\n   events for high-risk AI systems, whose application dates were\n   staged into 2027-2028 by Regulation (EU) 2026/1744.  It also\n   maps informatively to SOC 2 Trust Services Criteria,\n   ISO/IEC 42001, the draft ISO/IEC 24970 and prEN 18229-1 logging\n   standards, and PCI DSS v4.0.1 logging requirements.\n\n   The design is transport-agnostic and supports export to JSONL,\n   Syslog (RFC 5424), and CSV while preserving chain integrity.\n   Privacy is addressed through input/output hashing, content\n   fingerprinting, and tombstone-based deletion compatible with\n   GDPR Article 17.\n\n   The -01 revision added pre-execution recording requirements,\n   recording independence, deny reason codes, replay protection,\n   external timestamp anchoring, and content fingerprinting based\n   on feedback from independent implementers.\n\n   The -02 revision added a Decision Reproducibility section\n   (Section 13) that distinguishes record reproducibility,\n   available for any model, from decision reproducibility,\n   available only for open-weight models executed at temperature\n   zero in an attested environment, and defines the associated\n   record fields.\n\n   The -03 revision added the Attestation Closure requirement\n   (Section 13.6): the digests recorded for decision\n   reproducibility MUST cover the complete computational closure\n   of the inference function -- model weights, tokenizer, chat\n   template, inference engine build, decoding configuration, and\n   numeric environment -- together with new record fields\n   (tokenizer_digest, chat_template_digest, engine_build_digest)\n   and a minimal-change threat analysis (Section 13.7) showing\n   that any component left outside the attested set is a forgery\n   channel.\n\n   This revision (-04) adds algorithm agility for post-quantum\n   signatures (ML-DSA-65, FIPS 204) alongside ECDSA P-256; a key\n   identifier (signer_kid, RFC 7638) that resolves which principal\n   signed an independently recorded record; a trust-level assignment\n   integrity requirement (Section 5.3) so that downgrading a\n   consequential action is an attributable event rather than silent\n   suppression; and OPTIONAL Merkle batch anchoring (Section 6.4)\n   using the RFC 6962 construction for compact inclusion proofs at\n   high throughput.  All -04 additions are OPTIONAL to produce, and\n   -04 verifiers stay backward compatible with -03: a -04 verifier\n   accepts -03 records, and the new signing metadata is required\n   only in records that carry a signature.</p>"
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-sharif-agent-audit-trail-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sharif-agent-audit-trail-03
+    docidentifier:
+    - content: draft-sharif-agent-audit-trail-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sharif-agent-audit-trail-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

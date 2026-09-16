@@ -1,4 +1,3 @@
----
 id: draftveselyvhlo06
 schema_version: v1.5.6
 type: standard
@@ -49,42 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Verified Hello (VHLO) is an SMTP extension for managing authorization
-    by policy, as done for whitelisting messages.  The VHLO command verb
-    provides for weak authentication of SMTP clients and policy
-    negotiation.
-
-    Policies and reputation are being increasingly used to identify
-    messages worthiness.  However, they are currently enforced by
-    rejecting SMTP transactions, or discarding messages.  Feedback is
-    scarce, also because reply codes are difficult to interpret
-    automatically.  Negotiation is not provided for.  VHLO is designed so
-    that servers can provide feedback to their clients about which
-    vouching services or authentication methods they require.
-    Credentials can also be negotiated on the fly, in order to allow
-    clients to learn whether messages will be whitelisted by the
-    receiving server before actually transmitting them.  Negotiation and
-    feedback are intended to ease rapid diffusion of popular reputation
-    systems and authentication methods.  A IANA register is defined for
-    extending the set of available methods.
-
-    The VHLO command is similar to EHLO, but accepts a series of
-    parameters.  The sender communicates the mail domain name of the
-    organization on whose behalf it operates, along with any vouching
-    services (VBR) for its reputation.  On the other hand, the sending
-    host's affiliation with that mail domain is checked by DNS lookups
-    (MX, PTR, or SPF) or using DKIM.  DNSBLs and Greylisting are also
-    considered.
-
-    Weakly authenticated clients enjoy an intermediate level of trust:
-    they have no relying privileges, but may attempt to deliver mail to
-    local users, are whitelisted from some filters, and may receive DSNs
-    and feedback-loop abuse reports as needed.  However, failing to
-    succesfully negotiate VHLO authentication does not preclude a
-    client's ability to relay mail: It may relay as usual; that is to
-    say, without knowing whether the credentials it tries to provide have
-    any meaning for the receiving server.</p>
+  content: "<p>Verified Hello (VHLO) is an SMTP extension for managing authorization\nby policy, as done for whitelisting messages.  The VHLO command verb\nprovides for weak authentication of SMTP clients and policy\nnegotiation.\n\nPolicies and reputation are being increasingly used to identify\nmessages worthiness.  However, they are currently enforced by\nrejecting SMTP transactions, or discarding messages.  Feedback is\nscarce, also because reply codes are difficult to interpret\nautomatically.  Negotiation is not provided for.  VHLO is designed so\nthat servers can provide feedback to their clients about which\nvouching services or authentication methods they require.\nCredentials can also be negotiated on the fly, in order to allow\nclients to learn whether messages will be whitelisted by the\nreceiving server before actually transmitting them.  Negotiation and\nfeedback are intended to ease rapid diffusion of popular reputation\nsystems and authentication methods.  A IANA register is defined for\nextending the set of available methods.\n\nThe VHLO command is similar to EHLO, but accepts a series of\nparameters.  The sender communicates the mail domain name of the\norganization on whose behalf it operates, along with any vouching\nservices (VBR) for its reputation.  On the other hand, the sending\nhost's affiliation with that mail domain is checked by DNS lookups\n(MX, PTR, or SPF) or using DKIM.  DNSBLs and Greylisting are also\nconsidered.\n\nWeakly authenticated clients enjoy an intermediate level of trust:\nthey have no relying privileges, but may attempt to deliver mail to\nlocal users, are whitelisted from some filters, and may receive DSNs\nand feedback-loop abuse reports as needed.  However, failing to\nsuccesfully negotiate VHLO authentication does not preclude a\nclient's ability to relay mail: It may relay as usual; that is to\nsay, without knowing whether the credentials it tries to provide have\nany meaning for the receiving server.</p>"
 series:
 - type: main
   title:

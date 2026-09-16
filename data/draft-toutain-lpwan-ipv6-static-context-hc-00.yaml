@@ -1,4 +1,3 @@
----
 id: drafttoutainlpwanipv6staticcontexthc00
 schema_version: v1.5.6
 type: standard
@@ -74,33 +73,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes a header compression scheme for IPv6, IPv6/
-       UDP based on static contexts.  This technique is especially tailored
-       for LPWA networks and could be extended to other protocol stacks.
-
-       During the IETF history several compression mechanisms have been
-       proposed.  First mechanisms, such as RoHC, are using a context to
-       store header field values and send smaller incremental differences on
-       the link.  Values in the context evolve dynamically with information
-       contained in the compressed header.  The challenge is to maintain
-       sender's and receiver's contexts synchronized even with packet
-       losses.  Based on the fact that IPv6 contains only static fields,
-       6LoWPAN developed an efficient context-free compression mechanisms,
-       allowing better flexibility and performance.
-
-       The Static Context Header Compression (SCHC) combines the advantages
-       of RoHC context which offers a great level of flexibility in the
-       processing of fields, and 6LoWPAN behavior to elide fields that are
-       known from the other side.  Static context means that values in the
-       context field do not change during the transmission, avoiding complex
-       resynchronization mechanisms, incompatible with LPWA characteristics.
-       In most of the cases, IPv6/UDP headers are reduced to a small
-       identifier.
-
-       This document focuses on IPv6/UDP headers compression, but the
-       mechanism can be applied to other protocols such as CoAP.  It will be
-       described in a separate document.</p>
+  content: "<p>This document describes a header compression scheme for IPv6, IPv6/\n   UDP based on static contexts.  This technique is especially tailored\n   for LPWA networks and could be extended to other protocol stacks.\n\n   During the IETF history several compression mechanisms have been\n   proposed.  First mechanisms, such as RoHC, are using a context to\n   store header field values and send smaller incremental differences on\n   the link.  Values in the context evolve dynamically with information\n   contained in the compressed header.  The challenge is to maintain\n   sender's and receiver's contexts synchronized even with packet\n   losses.  Based on the fact that IPv6 contains only static fields,\n   6LoWPAN developed an efficient context-free compression mechanisms,\n   allowing better flexibility and performance.\n\n   The Static Context Header Compression (SCHC) combines the advantages\n   of RoHC context which offers a great level of flexibility in the\n   processing of fields, and 6LoWPAN behavior to elide fields that are\n   known from the other side.  Static context means that values in the\n   context field do not change during the transmission, avoiding complex\n   resynchronization mechanisms, incompatible with LPWA characteristics.\n   In most of the cases, IPv6/UDP headers are reduced to a small\n   identifier.\n\n   This document focuses on IPv6/UDP headers compression, but the\n   mechanism can be applied to other protocols such as CoAP.  It will be\n   described in a separate document.</p>"
 series:
 - type: main
   title:

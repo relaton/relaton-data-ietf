@@ -1,4 +1,3 @@
----
 id: drafthoodindependentagis01
 schema_version: v1.5.6
 type: standard
@@ -54,40 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines the Agentic Grammar and Interface Specification
-       (AGIS), a grammar-constrained interface definition language for
-       Agentive APIs designed for consumption by large language model (LLM)
-       based agents.  AGIS establishes structural and semantic rules
-       governing how API methods and endpoints must be expressed, without
-       mandating a fixed vocabulary of method names.  An implementation
-       conforming to AGIS uses intent-expressing imperative verbs as method
-       identifiers, enabling agents to infer operational meaning from method
-       names without requiring training on a predefined catalog.
-
-       AGIS is the native interface definition layer for the Agent Transfer
-       Protocol (AGTP) [AGTP], in the same way that HTML functions as the
-       native content language for the HTTP transport protocol.  AGIS does
-       not replace JSON Schema [JSON-SCHEMA] for data contracts; it governs
-       the structural grammar of method and endpoint design that wraps those
-       contracts.  AGIS-conformant methods are accepted at the AGTP
-       transport layer via the Method-Grammar header without requiring prior
-       IANA registration, enabling organizations to define domain-specific
-       Agentive API vocabularies while preserving interoperability through
-       shared grammatical constraints.
-
-       Empirical validation of the core AGIS design principle is provided in
-       [HOOD2026], which demonstrates a 10-29 percentage point accuracy
-       advantage for intent-expressing method names over generic HTTP verbs
-       across three frontier LLM families in 7,200 controlled trials.
-
-       This version also introduces: normative YAML and JSON serialization
-       formats; a Data Manifest block enabling services to declare available
-       data without pre-built endpoints; a negotiable signal enabling AGTP
-       dynamic endpoint instantiation; semantic declaration enhancements
-       including is_idempotent, impact_tier, parameter_hints, and
-       state_transition fields; vocabulary namespace disambiguation; and an
-       HTTP transitional binding for incremental adoption.</p>
+  content: "<p>This document defines the Agentic Grammar and Interface Specification\n   (AGIS), a grammar-constrained interface definition language for\n   Agentive APIs designed for consumption by large language model (LLM)\n   based agents.  AGIS establishes structural and semantic rules\n   governing how API methods and endpoints must be expressed, without\n   mandating a fixed vocabulary of method names.  An implementation\n   conforming to AGIS uses intent-expressing imperative verbs as method\n   identifiers, enabling agents to infer operational meaning from method\n   names without requiring training on a predefined catalog.\n\n   AGIS is the native interface definition layer for the Agent Transfer\n   Protocol (AGTP) [AGTP], in the same way that HTML functions as the\n   native content language for the HTTP transport protocol.  AGIS does\n   not replace JSON Schema [JSON-SCHEMA] for data contracts; it governs\n   the structural grammar of method and endpoint design that wraps those\n   contracts.  AGIS-conformant methods are accepted at the AGTP\n   transport layer via the Method-Grammar header without requiring prior\n   IANA registration, enabling organizations to define domain-specific\n   Agentive API vocabularies while preserving interoperability through\n   shared grammatical constraints.\n\n   Empirical validation of the core AGIS design principle is provided in\n   [HOOD2026], which demonstrates a 10-29 percentage point accuracy\n   advantage for intent-expressing method names over generic HTTP verbs\n   across three frontier LLM families in 7,200 controlled trials.\n\n   This version also introduces: normative YAML and JSON serialization\n   formats; a Data Manifest block enabling services to declare available\n   data without pre-built endpoints; a negotiable signal enabling AGTP\n   dynamic endpoint instantiation; semantic declaration enhancements\n   including is_idempotent, impact_tier, parameter_hints, and\n   state_transition fields; vocabulary namespace disambiguation; and an\n   HTTP transitional binding for incremental adoption.</p>"
 relation:
 - type: updates
   bibitem:

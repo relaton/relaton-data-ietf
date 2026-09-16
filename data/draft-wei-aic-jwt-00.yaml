@@ -1,4 +1,3 @@
----
 id: draftweiaicjwt00
 schema_version: v1.5.6
 type: standard
@@ -54,38 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines the JSON Web Token (JWT) profile of the AI
-       Agent Identity Certificate (AIC), a companion specification to draft-
-       wei-aic-identity-cert-00.  The AIC X.509 extension binds an AI
-       Agent's cryptographic identity to a responsible principal, carries a
-       structured capability container, authorization boundary constraints,
-       delegation mode, and principal-signed delegation evidence, and
-       enables fully offline authorization decisions at the TLS layer.
-
-       AIC-JWT encodes the same data model as an application-layer JWT so
-       that the same authorization semantics can be enforced by HTTP APIs,
-       web applications, and OAuth 2.0 ecosystems where transport-layer
-       certificate presentation is not available.  The specification
-       defines:
-
-       *  a nested JWS structure that preserves the two-layer signature
-          model of AIC -- a principal-signed DelegationAuthorization (DA)
-          JWT embedded in and covered by an issuer-signed outer JWT;
-
-       *  a namespaced aic claim carrying agent identity, principal binding,
-          structured capabilities, delegation mode, and authorization
-          constraints;
-
-       *  principal binding by SPKI hash or JWK thumbprint, with optional
-          credential bundle presentation in PKI deployments;
-
-       *  issuance flows for both PKI-based CAs and OAuth 2.0 authorization
-          servers, including RFC 7523 assertion exchange and RFC 8693 token
-          exchange;
-
-       *  validation rules, IANA registrations, and security considerations
-          aligned with the OAuth 2.0 and JOSE specifications.</p>
+  content: "<p>This document defines the JSON Web Token (JWT) profile of the AI\n   Agent Identity Certificate (AIC), a companion specification to draft-\n   wei-aic-identity-cert-00.  The AIC X.509 extension binds an AI\n   Agent's cryptographic identity to a responsible principal, carries a\n   structured capability container, authorization boundary constraints,\n   delegation mode, and principal-signed delegation evidence, and\n   enables fully offline authorization decisions at the TLS layer.\n\n   AIC-JWT encodes the same data model as an application-layer JWT so\n   that the same authorization semantics can be enforced by HTTP APIs,\n   web applications, and OAuth 2.0 ecosystems where transport-layer\n   certificate presentation is not available.  The specification\n   defines:\n\n   *  a nested JWS structure that preserves the two-layer signature\n      model of AIC -- a principal-signed DelegationAuthorization (DA)\n      JWT embedded in and covered by an issuer-signed outer JWT;\n\n   *  a namespaced aic claim carrying agent identity, principal binding,\n      structured capabilities, delegation mode, and authorization\n      constraints;\n\n   *  principal binding by SPKI hash or JWK thumbprint, with optional\n      credential bundle presentation in PKI deployments;\n\n   *  issuance flows for both PKI-based CAs and OAuth 2.0 authorization\n      servers, including RFC 7523 assertion exchange and RFC 8693 token\n      exchange;\n\n   *  validation rules, IANA registrations, and security considerations\n      aligned with the OAuth 2.0 and JOSE specifications.</p>"
 relation:
 - type: updatedBy
   bibitem:

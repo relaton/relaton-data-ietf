@@ -1,12 +1,10 @@
----
 id: draftzhuoauthasyncdelegation00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Sender-Constrained Delegation Handle for Asynchronous OAuth 2.0 Identity
-    Chaining
+  content: Sender-Constrained Delegation Handle for Asynchronous OAuth 2.0 Identity Chaining
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-zhu-oauth-async-delegation-00
@@ -80,23 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines an extension to OAuth 2.0 Token Exchange
-       [RFC8693] and the OAuth Identity Chaining draft
-       [I-D.ietf-oauth-identity-chaining] for delegated workflows that must
-       continue after the end user has gone offline.  When a chained access
-       token expires while the end user is unavailable to re-authenticate
-       (for example, to satisfy a multi-factor authentication or a
-       touch-to-engage gesture), the acting client today has no standards-
-       defined way to obtain a refreshed chained token without either
-       widening privileges, breaking the identity chain, or impersonating
-       the user as a service.  This specification introduces the
-       "Delegation Handle": a sender-constrained, audience-locked, scope-
-       frozen JSON Web Token issued by the authorization server alongside a
-       chained access token, that the original acting client MAY present
-       back to the authorization server to refresh the chained access token
-       within strict, server-side policy bounds and without re-prompting
-       the end user.</p>
+  content: "<p>This document defines an extension to OAuth 2.0 Token Exchange\n   [RFC8693] and the OAuth Identity Chaining draft\n   [I-D.ietf-oauth-identity-chaining] for delegated workflows that must\n   continue after the end user has gone offline.  When a chained access\n   token expires while the end user is unavailable to re-authenticate\n   (for example, to satisfy a multi-factor authentication or a\n   touch-to-engage gesture), the acting client today has no standards-\n   defined way to obtain a refreshed chained token without either\n   widening privileges, breaking the identity chain, or impersonating\n   the user as a service.  This specification introduces the\n   \"Delegation Handle\": a sender-constrained, audience-locked, scope-\n   frozen JSON Web Token issued by the authorization server alongside a\n   chained access token, that the original acting client MAY present\n   back to the authorization server to refresh the chained access token\n   within strict, server-side policy bounds and without re-prompting\n   the end user.</p>"
 relation:
 - type: updatedBy
   bibitem:

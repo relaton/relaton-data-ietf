@@ -1,4 +1,3 @@
----
 id: draftlibierscalabledataplane00
 schema_version: v1.5.6
 type: standard
@@ -154,26 +153,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes an optimized data plane forwarding
-       architecture for Bit Index Explicit Replication (BIER).  The standard
-       BIER forwarding procedures, as conceptually described in RFC 8279,
-       imply a per-bit evaluation of the BitString against the Bit Index
-       Forwarding Table (BIFT) on each Bit Forwarding Router (BFR).  When
-       the BitStringLength is large (e.g., 256 bits or more), this
-       conceptual model presents implementation challenges for high-speed
-       ASIC/NPU forwarding engines in terms of processing latency and
-       hardware table resources.
-
-       This document defines two conceptual data structures -- a Replication
-       Member Table and an Interface BitMask Table -- that decouple the
-       multicast replication decision from per-bit BitString parsing.  The
-       resulting forwarding pipeline operates in time proportional to the
-       number of egress interfaces rather than the BitString length,
-       enabling deterministic and scalable hardware processing.  This
-       mechanism is semantically equivalent to the forwarding procedures of
-       RFC 8279 and does not modify the BIER encapsulation or introduce new
-       protocol signaling.</p>
+  content: "<p>This document describes an optimized data plane forwarding\n   architecture for Bit Index Explicit Replication (BIER).  The standard\n   BIER forwarding procedures, as conceptually described in RFC 8279,\n   imply a per-bit evaluation of the BitString against the Bit Index\n   Forwarding Table (BIFT) on each Bit Forwarding Router (BFR).  When\n   the BitStringLength is large (e.g., 256 bits or more), this\n   conceptual model presents implementation challenges for high-speed\n   ASIC/NPU forwarding engines in terms of processing latency and\n   hardware table resources.\n\n   This document defines two conceptual data structures -- a Replication\n   Member Table and an Interface BitMask Table -- that decouple the\n   multicast replication decision from per-bit BitString parsing.  The\n   resulting forwarding pipeline operates in time proportional to the\n   number of egress interfaces rather than the BitString length,\n   enabling deterministic and scalable hardware processing.  This\n   mechanism is semantically equivalent to the forwarding procedures of\n   RFC 8279 and does not modify the BIER encapsulation or introduce new\n   protocol signaling.</p>"
 series:
 - type: main
   title:

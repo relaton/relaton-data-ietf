@@ -1,4 +1,3 @@
----
 id: draftsatosoosmjwt06
 schema_version: v1.5.6
 type: standard
@@ -50,69 +49,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>An AI agent that can act without a verifiable, human-traceable
-       authorization record is an agent without an owner.  Existing
-       authorization credentials tell you what an agent is permitted to do;
-       none of them tell you who authorized it, on which specific object,
-       under which mission, or how far that authority can be delegated
-       before it reaches this agent.
-
-       This document defines the Mandate JWT (MJWT): a WIMSE workload
-       credential profile that binds an AI agent's authority to a specific
-       Sovereign Object instance under a named human principal, with a
-       cryptographically enforced delegation ceiling and an
-       eight-dimensional Narrowing Property that prevents any sub-agent
-       from exceeding the authority of the human principal at the root of
-       the chain.  Version -02 adds a seventh narrowing dimension (consent
-       scope), the
-       consent_scope claim carrying data subject consent state for
-       APPI/GDPR compliance, the sub_agent_scope claim for consent
-       attenuation across delegation hops, a Purpose Code Registry, and
-       HEM_CONSENT_REQUIRED integration for fail-closed consent enforcement.
-       The MJWT is the authorization primitive referenced by the other
-       SOOS governance drafts.
-
-       Version -03 corrects an IANA registration issue: the two
-       registries requested there are renamed to drop the redundant word
-       "Registry" from the registry name itself, and each now includes
-       the Designated Expert Guidance that a Specification Required
-       registration policy requires.  No new claims, codes, or normative
-       behavior are introduced in -03; this is a registration-format
-       correction only.
-
-       Version -04 addresses four findings from a WIMSE security review
-       checklist dry-run against -02/-03 (DR-MJWT-KIA-CHECKLIST-01): the
-       parent-mandate check at Cedar-action verification time is
-       tightened from a disjunctive "retrieve or verify" to a mandatory
-       live re-verification of the parent's current signature and
-       revocation status, closing a parent-swap-class window; the
-       Revocation Registry is now stated explicitly to be the same
-       Revocation Registry the KIA draft defines, and the residual
-       cross-instance propagation-lag risk this implies is now named
-       explicitly, mirroring how that draft discloses its own XPID
-       revocation gap; and a new Security Considerations entry states
-       plainly that MJWT does not itself establish or verify a
-       human_principal_id's root authority.
-
-       Version -05 closes gaps surfaced by a WIMSE-style security review
-       pass against -04's own text: an eighth Narrowing Property
-       dimension, max_delegation_depth, closes an unbounded-delegation-
-       depth Denial of Service vector that -04's own text named but did
-       not bound; the consent_reference staleness defense is upgraded
-       from a SHOULD-level recommendation to a MUST, extending the same
-       live-re-verification discipline already applied to parent
-       mandates; and the Introduction's description of RFC 8693
-       inheritance is corrected to no longer claim use of the optional
-       may_act claim, which this document does not in fact use.  This
-       revision also carries minor idnits and citation-hygiene fixes.
-
-       Version -06 is an editorial revision with no normative content
-       changes: six sibling-draft citations (HEM, CAP, KIA, MAD, AEP,
-       IDP) had gone stale against those drafts' current live versions
-       and are updated to draft-sato-soos-hem-07, draft-sato-soos-cap-06,
-       draft-sato-soos-kia-06, draft-sato-soos-mad-04,
-       draft-sato-soos-aep-04, and draft-sato-soos-idp-06 respectively.</p>
+  content: "<p>An AI agent that can act without a verifiable, human-traceable\n   authorization record is an agent without an owner.  Existing\n   authorization credentials tell you what an agent is permitted to do;\n   none of them tell you who authorized it, on which specific object,\n   under which mission, or how far that authority can be delegated\n   before it reaches this agent.\n\n   This document defines the Mandate JWT (MJWT): a WIMSE workload\n   credential profile that binds an AI agent's authority to a specific\n   Sovereign Object instance under a named human principal, with a\n   cryptographically enforced delegation ceiling and an\n   eight-dimensional Narrowing Property that prevents any sub-agent\n   from exceeding the authority of the human principal at the root of\n   the chain.  Version -02 adds a seventh narrowing dimension (consent\n   scope), the\n   consent_scope claim carrying data subject consent state for\n   APPI/GDPR compliance, the sub_agent_scope claim for consent\n   attenuation across delegation hops, a Purpose Code Registry, and\n   HEM_CONSENT_REQUIRED integration for fail-closed consent enforcement.\n   The MJWT is the authorization primitive referenced by the other\n   SOOS governance drafts.\n\n   Version -03 corrects an IANA registration issue: the two\n   registries requested there are renamed to drop the redundant word\n   \"Registry\" from the registry name itself, and each now includes\n   the Designated Expert Guidance that a Specification Required\n   registration policy requires.  No new claims, codes, or normative\n   behavior are introduced in -03; this is a registration-format\n   correction only.\n\n   Version -04 addresses four findings from a WIMSE security review\n   checklist dry-run against -02/-03 (DR-MJWT-KIA-CHECKLIST-01): the\n   parent-mandate check at Cedar-action verification time is\n   tightened from a disjunctive \"retrieve or verify\" to a mandatory\n   live re-verification of the parent's current signature and\n   revocation status, closing a parent-swap-class window; the\n   Revocation Registry is now stated explicitly to be the same\n   Revocation Registry the KIA draft defines, and the residual\n   cross-instance propagation-lag risk this implies is now named\n   explicitly, mirroring how that draft discloses its own XPID\n   revocation gap; and a new Security Considerations entry states\n   plainly that MJWT does not itself establish or verify a\n   human_principal_id's root authority.\n\n   Version -05 closes gaps surfaced by a WIMSE-style security review\n   pass against -04's own text: an eighth Narrowing Property\n   dimension, max_delegation_depth, closes an unbounded-delegation-\n   depth Denial of Service vector that -04's own text named but did\n   not bound; the consent_reference staleness defense is upgraded\n   from a SHOULD-level recommendation to a MUST, extending the same\n   live-re-verification discipline already applied to parent\n   mandates; and the Introduction's description of RFC 8693\n   inheritance is corrected to no longer claim use of the optional\n   may_act claim, which this document does not in fact use.  This\n   revision also carries minor idnits and citation-hygiene fixes.\n\n   Version -06 is an editorial revision with no normative content\n   changes: six sibling-draft citations (HEM, CAP, KIA, MAD, AEP,\n   IDP) had gone stale against those drafts' current live versions\n   and are updated to draft-sato-soos-hem-07, draft-sato-soos-cap-06,\n   draft-sato-soos-kia-06, draft-sato-soos-mad-04,\n   draft-sato-soos-aep-04, and draft-sato-soos-idp-06 respectively.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftounsworthpqcompositesigs07
 schema_version: v1.5.6
 type: standard
@@ -79,48 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The migration to post-quantum cryptography is unique in the history
-       of modern digital cryptography in that neither the old outgoing nor
-       the new incoming algorithms are fully trusted to protect data for the
-       required data lifetimes.  The outgoing algorithms, such as RSA and
-       elliptic curve, may fall to quantum cryptanalysis, while the incoming
-       post-quantum algorithms face uncertainty about both the underlying
-       mathematics as well as hardware and software implementations that
-       have not had sufficient maturing time to rule out classical
-       cryptanalytic attacks and implementation bugs.
-
-       Cautious implementer may wish to layer cryptographic algorithms such
-       that an attacker would need to break all of them in order to
-       compromise the data being protected.  For digital signatures, this is
-       referred to as "dual", and for encryption key establishment this as
-       referred to as "hybrid".  This document, and its companions, defines
-       a specific instantiation of the dual and hybrid paradigm called
-       "composite" where multiple cryptographic algorithms are combined to
-       form a single key, signature, or key encapsulation mechanism (KEM)
-       such that they can be treated as a single atomic object at the
-       protocol level.
-
-       EDNOTE: the terms "dual" and "hybrid" are currently in flux.  We
-       anticipate an Informational draft to normalize terminology, and will
-       update this draft accordingly.
-
-       This document defines the structures CompositeSignatureValue, and
-       CompositeParams, which are sequences of the respective structure for
-       each component algorithm.  The generic composite variant is defined
-       which allows arbitrary combinations of signature algorithms to be
-       used in the CompositeSignatureValue and CompositeParams structures
-       without needing the combination to be pre-registered or pre-agreed.
-       The explicit variant is also defined which allows for a set of
-       signature algorithm identifier OIDs to be registered together as an
-       explicit composite signature algorithm and assigned an OID.
-
-       This document is intended to be coupled with corresponding documents
-       that define the structure and semantics of composite public and
-       private keys and encryption [I-D.draft-ounsworth-pq-composite-keys-
-       01], however may also be used with non-composite keys, such as when a
-       protocol combines multiple certificates into a single cryptographic
-       operation.</p>
+  content: "<p>The migration to post-quantum cryptography is unique in the history\n   of modern digital cryptography in that neither the old outgoing nor\n   the new incoming algorithms are fully trusted to protect data for the\n   required data lifetimes.  The outgoing algorithms, such as RSA and\n   elliptic curve, may fall to quantum cryptanalysis, while the incoming\n   post-quantum algorithms face uncertainty about both the underlying\n   mathematics as well as hardware and software implementations that\n   have not had sufficient maturing time to rule out classical\n   cryptanalytic attacks and implementation bugs.\n\n   Cautious implementer may wish to layer cryptographic algorithms such\n   that an attacker would need to break all of them in order to\n   compromise the data being protected.  For digital signatures, this is\n   referred to as \"dual\", and for encryption key establishment this as\n   referred to as \"hybrid\".  This document, and its companions, defines\n   a specific instantiation of the dual and hybrid paradigm called\n   \"composite\" where multiple cryptographic algorithms are combined to\n   form a single key, signature, or key encapsulation mechanism (KEM)\n   such that they can be treated as a single atomic object at the\n   protocol level.\n\n   EDNOTE: the terms \"dual\" and \"hybrid\" are currently in flux.  We\n   anticipate an Informational draft to normalize terminology, and will\n   update this draft accordingly.\n\n   This document defines the structures CompositeSignatureValue, and\n   CompositeParams, which are sequences of the respective structure for\n   each component algorithm.  The generic composite variant is defined\n   which allows arbitrary combinations of signature algorithms to be\n   used in the CompositeSignatureValue and CompositeParams structures\n   without needing the combination to be pre-registered or pre-agreed.\n   The explicit variant is also defined which allows for a set of\n   signature algorithm identifier OIDs to be registered together as an\n   explicit composite signature algorithm and assigned an OID.\n\n   This document is intended to be coupled with corresponding documents\n   that define the structure and semantics of composite public and\n   private keys and encryption [I-D.draft-ounsworth-pq-composite-keys-\n   01], however may also be used with non-composite keys, such as when a\n   protocol combines multiple certificates into a single cryptographic\n   operation.</p>"
 relation:
 - type: updates
   bibitem:

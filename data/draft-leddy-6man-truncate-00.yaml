@@ -1,12 +1,10 @@
----
 id: draftleddy6mantruncate00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Destination Originates Internet Control Message Protocol (ICMP) Packet
-    Too Big (PTB) Messages
+  content: Destination Originates Internet Control Message Protocol (ICMP) Packet Too Big (PTB) Messages
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-leddy-6man-truncate-00
@@ -80,26 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines procedures that enhance Path MTU Discovery
-       (PMTUD), so that it no longer relies on the network's ability to
-       deliver an ICMP Packet Too Big (PTB) message from a downstream router
-       to an IPv6 source node.  According to these procedures, selected
-       packets carry a new IPv6 Destination option.  When a downstream
-       router cannot forward one of these packets because of MTU issues, it
-       truncates the packet, marks it to indicate that it has been
-       truncated, and forwards it towards the destination node.
-
-       When the destination node receives a packet that has been truncated,
-       it sends an ICMP PTB message to the source node.  The source node
-       uses MTU information contained by the ICMP PTB message to update its
-       PMTU estimate.  The destination node does not deliver the truncated
-       packet to upper layer protocols unless specifically requested to do
-       so by the upper layer protocol.
-
-       The procedures described herein rely on the network's ability to
-       deliver an ICMP PTB message from the packet's destination to the
-       packet's source.</p>
+  content: "<p>This document defines procedures that enhance Path MTU Discovery\n   (PMTUD), so that it no longer relies on the network's ability to\n   deliver an ICMP Packet Too Big (PTB) message from a downstream router\n   to an IPv6 source node.  According to these procedures, selected\n   packets carry a new IPv6 Destination option.  When a downstream\n   router cannot forward one of these packets because of MTU issues, it\n   truncates the packet, marks it to indicate that it has been\n   truncated, and forwards it towards the destination node.\n\n   When the destination node receives a packet that has been truncated,\n   it sends an ICMP PTB message to the source node.  The source node\n   uses MTU information contained by the ICMP PTB message to update its\n   PMTU estimate.  The destination node does not deliver the truncated\n   packet to upper layer protocols unless specifically requested to do\n   so by the upper layer protocol.\n\n   The procedures described herein rely on the network's ability to\n   deliver an ICMP PTB message from the packet's destination to the\n   packet's source.</p>"
 relation:
 - type: updatedBy
   bibitem:

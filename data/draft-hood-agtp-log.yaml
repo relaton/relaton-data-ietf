@@ -1,4 +1,3 @@
----
 id: drafthoodagtplog
 schema_version: v1.5.6
 formattedref:
@@ -20,32 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the AGTP Transparency Log (AGTP-LOG): the
-       append-only audit log protocol that underpins the log-anchored Trust
-       Tier 1 verification path defined in [AGTP] and provides the post-hoc
-       audit infrastructure for AGTP-based agent operations.  AGTP-LOG
-       aligns with [RFC9162] (Certificate Transparency 2.0) as the
-       verifiable data structure and issues COSE_Sign1 receipts per
-       [RFC9943] (SCITT) for cross-ecosystem interoperability.  This
-       document also establishes the AGTP Agent Identity Taxonomy (Agent
-       Genesis, Canonical Agent-ID, Agent Certificate) that [AGTP] v07
-       normatively adopts.  The log protocol defined here covers entry
-       submission, receipt retrieval, inclusion-proof retrieval,
-       consistency-proof retrieval, and discovery via the log_uri field of
-       the Agent Genesis.  Per-platform logs are the default; the federation
-       model follows the SCITT cross-witnessing pattern.  Witness and
-       monitor role definitions, full federation procedures, and the formal
-       entry-acceptance threat model are deferred to a future revision.
-
-       The audit properties AGTP-LOG provides are structural rather than
-       retrofitted.  Statements are signed by the governance platform that
-       operates the log, not by the agent the statements concern; an agent
-       cannot forge its own audit trail because it does not control the log
-       operator's signing key.  This architectural separation distinguishes
-       AGTP-LOG audit infrastructure from approaches that layer audit data
-       models onto general-purpose substrates where the audited party
-       participates in writing the audit trail.</p>
+  content: "<p>This document specifies the AGTP Transparency Log (AGTP-LOG): the\n   append-only audit log protocol that underpins the log-anchored Trust\n   Tier 1 verification path defined in [AGTP] and provides the post-hoc\n   audit infrastructure for AGTP-based agent operations.  AGTP-LOG\n   aligns with [RFC9162] (Certificate Transparency 2.0) as the\n   verifiable data structure and issues COSE_Sign1 receipts per\n   [RFC9943] (SCITT) for cross-ecosystem interoperability.  This\n   document also establishes the AGTP Agent Identity Taxonomy (Agent\n   Genesis, Canonical Agent-ID, Agent Certificate) that [AGTP] v07\n   normatively adopts.  The log protocol defined here covers entry\n   submission, receipt retrieval, inclusion-proof retrieval,\n   consistency-proof retrieval, and discovery via the log_uri field of\n   the Agent Genesis.  Per-platform logs are the default; the federation\n   model follows the SCITT cross-witnessing pattern.  Witness and\n   monitor role definitions, full federation procedures, and the formal\n   entry-acceptance threat model are deferred to a future revision.\n\n   The audit properties AGTP-LOG provides are structural rather than\n   retrofitted.  Statements are signed by the governance platform that\n   operates the log, not by the agent the statements concern; an agent\n   cannot forge its own audit trail because it does not control the log\n   operator's signing key.  This architectural separation distinguishes\n   AGTP-LOG audit infrastructure from approaches that layer audit data\n   models onto general-purpose substrates where the audited party\n   participates in writing the audit trail.</p>"
 relation:
 - type: includes
   bibitem:

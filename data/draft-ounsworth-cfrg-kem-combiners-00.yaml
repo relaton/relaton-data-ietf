@@ -1,4 +1,3 @@
----
 id: draftounsworthcfrgkemcombiners00
 schema_version: v1.5.6
 type: standard
@@ -54,18 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The migration to post-quantum cryptography often calls for performing
-       multiple key encapsulations in parallel and then combining their
-       outputs to derive a single shared secret.
-
-       This document defines the KEM combiner KDF( H(ss1) || H(ss2) ) which
-       is considered to be a dual PRF in practice, even though not provably
-       secure.  This mechanism simplifies to KDF( ss1 || ss2 ) when used
-       with a KEM which internally uses a KDF to produce its shared secret.
-       RSA-KEM, ECDH, Edwards curve DH, and CRYSTALS-Kyber are shown to meet
-       this criteria and therefore be safe to use with the simplified KEM
-       combiner.</p>
+  content: "<p>The migration to post-quantum cryptography often calls for performing\n   multiple key encapsulations in parallel and then combining their\n   outputs to derive a single shared secret.\n\n   This document defines the KEM combiner KDF( H(ss1) || H(ss2) ) which\n   is considered to be a dual PRF in practice, even though not provably\n   secure.  This mechanism simplifies to KDF( ss1 || ss2 ) when used\n   with a KEM which internally uses a KDF to produce its shared secret.\n   RSA-KEM, ECDH, Edwards curve DH, and CRYSTALS-Kyber are shown to meet\n   this criteria and therefore be safe to use with the simplified KEM\n   combiner.</p>"
 relation:
 - type: updatedBy
   bibitem:

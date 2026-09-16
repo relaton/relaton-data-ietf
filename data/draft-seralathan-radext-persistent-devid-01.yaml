@@ -1,12 +1,10 @@
----
 id: draftseralathanradextpersistentdevid01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: RADIUS Chargeable-Device-Identity and Persistent Device Identification
-    in MAC-Randomized Environments
+  content: RADIUS Chargeable-Device-Identity and Persistent Device Identification in MAC-Randomized Environments
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-seralathan-radext-persistent-devid-01
@@ -162,29 +160,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a Chargeable-Device-Identity (CDI) -- a
-       privacy- preserving, rotating device correlator carried in existing
-       RADIUS Class attributes -- that enables Network Access Control (NAC)
-       systems to maintain device session correlation across Media Access
-       Control (MAC) address changes.  Modern operating systems randomize
-       MAC addresses by default, disrupting RADIUS-based authentication,
-       authorization, and accounting workflows that rely on the Calling-
-       Station-Id attribute as a persistent device identifier.
-
-       CDI is modeled after the Chargeable-User-Identity (CUI) defined in
-       RFC 4372, providing an analogous device-level correlator with
-       explicit privacy controls: epoch-based rotation limits long-term
-       tracking, HMAC construction prevents identifier reversal by
-       intermediate systems, and transport within the Class attribute
-       ensures immediate deployability on existing infrastructure.
-
-       This document additionally defines a new RADIUS attribute,
-       Persistent-Device-Id, for deployments that require explicit device
-       identity semantics beyond what the opaque Class attribute can
-       provide.  The Class-based CDI mechanism is the RECOMMENDED approach
-       for immediate deployment; the dedicated attribute provides a
-       migration path for future interoperability.</p>
+  content: "<p>This document defines a Chargeable-Device-Identity (CDI) -- a\n   privacy- preserving, rotating device correlator carried in existing\n   RADIUS Class attributes -- that enables Network Access Control (NAC)\n   systems to maintain device session correlation across Media Access\n   Control (MAC) address changes.  Modern operating systems randomize\n   MAC addresses by default, disrupting RADIUS-based authentication,\n   authorization, and accounting workflows that rely on the Calling-\n   Station-Id attribute as a persistent device identifier.\n\n   CDI is modeled after the Chargeable-User-Identity (CUI) defined in\n   RFC 4372, providing an analogous device-level correlator with\n   explicit privacy controls: epoch-based rotation limits long-term\n   tracking, HMAC construction prevents identifier reversal by\n   intermediate systems, and transport within the Class attribute\n   ensures immediate deployability on existing infrastructure.\n\n   This document additionally defines a new RADIUS attribute,\n   Persistent-Device-Id, for deployments that require explicit device\n   identity semantics beyond what the opaque Class attribute can\n   provide.  The Class-based CDI mechanism is the RECOMMENDED approach\n   for immediate deployment; the dedicated attribute provides a\n   migration path for future interoperability.</p>"
 relation:
 - type: updates
   bibitem:

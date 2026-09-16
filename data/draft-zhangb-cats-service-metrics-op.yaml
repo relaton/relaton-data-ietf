@@ -1,4 +1,3 @@
----
 id: draftzhangbcatsservicemetricsop
 schema_version: v1.5.6
 formattedref:
@@ -6,44 +5,21 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Computing Service Metric Definitions and Operation under CATS
+  content: Computing Service Metrics Operation and Joint Service Selection under CATS
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-service-metrics-op-04
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-service-metrics-op-05
 docidentifier:
 - content: draft-zhangb-cats-service-metrics-op
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-24'
+  at: '2026-09-16'
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding
-       by considering both computing and networking metrics.  While existing
-       framework and metric definition drafts provide theoretical models
-       (e.g., L1/L2 normalized metrics), they face significant challenges in
-       achieving direct operational execution in real-world deployments.
-       Normalization methods vary across providers, and aggregated unitless
-       scores often lose critical operational information, making it
-       difficult for routers to make precise traffic-steering decisions.
-
-       This document fills this gap by providing an executable operational
-       approach.  It defines a set of Computing Service Metrics and their
-       operations under the CATS framework.  Instead of transmitting low-
-       level raw hardware metrics, service sites dynamically evaluate and
-       report service-oriented metrics (e.g., Global Available Slots) to the
-       control plane.  The document clarifies how such service-oriented
-       metrics can be derived from basic resource information, service
-       reference information, and local policy.  It also specifies how the
-       CATS Path Selector (C-PS) combines the Computing Service
-       Table (derived from C-SMA reports) with the Network Service Table to
-       make joint traffic-steering decisions.  Finally, the document defines
-       update control mechanisms for large-scale deployments.  This enables
-       efficient and precise traffic-steering policies without negating the
-       value of existing normalized metrics.</p>
+  content: "<p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding\n   by considering both computing and networking metrics.  The CATS\n   framework and metric-definition documents provide valuable\n   theoretical models, yet they face challenges in achieving direct\n   operational execution in real-world deployments: normalization\n   methods vary across providers, and aggregated unitless scores often\n   lose the operational information that routers need for precise\n   steering decisions.\n\n   This document provides a self-contained, executable operational model\n   for a core class of CATS deployment scenarios: latency-sensitive,\n   compute-intensive services whose steering decisions are made in real\n   time at the forwarding node.  Instead of disseminating low-level raw\n   hardware metrics, service sites dynamically evaluate and report\n   service-oriented metrics (e.g., Global Available Slots and Computing\n   Time) to the control plane.  The document clarifies how these metrics\n   are derived from basic resource information, service reference\n   information, and local policy.  It also specifies how the CATS Path\n   Selector (C-PS) combines the Computing Service Table (populated from\n   C-SMA reports) with the Network Service Table to make joint traffic-\n   steering decisions, and defines update-control and fallback\n   mechanisms suitable for large-scale deployments.\n\n   Within the unified CATS architecture, the service-oriented\n   operational model defined in this document coexists with the general-\n   purpose L1/L2 normalized metric framework: a deployment MAY use\n   either model, or run both pipelines in parallel for different service\n   classes, without embedding metric fields across frameworks.  This\n   document does not negate the value of normalized metrics; it focuses\n   on the service-level abstractions and runtime operations required for\n   direct traffic steering.</p>"
 relation:
 - type: includes
   bibitem:
@@ -98,6 +74,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-service-metrics-op-04
     docidentifier:
     - content: draft-zhangb-cats-service-metrics-op-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-service-metrics-op-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-service-metrics-op-05
+    docidentifier:
+    - content: draft-zhangb-cats-service-metrics-op-05
       type: Internet-Draft
       primary: true
 ext:

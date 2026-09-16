@@ -1,4 +1,3 @@
----
 id: draftshenmplsegressprotectionframework05
 schema_version: v1.5.6
 type: standard
@@ -207,24 +206,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a fast reroute framework for protecting IP/
-       MPLS services and MPLS transport tunnels against egress node and
-       egress link failures.  In this framework, the penultimate-hop router
-       of an MPLS tunnel acts as the point of local repair (PLR) for egress
-       node failure, and the egress router of the MPLS tunnel acts as the
-       PLR for egress link failure.  Each of them pre-establishes a bypass
-       tunnel to a protector.  Upon an egress node or link failure, the
-       corresponding PLR performs local failure detection and local repair,
-       by rerouting packets over the corresponding bypass tunnel.  The
-       protector in turn performs context label switching or context IP
-       forwarding to send the packets to ultimate service destination(s).
-       This mechanism can be used to reduce traffic loss before global
-       repair reacts to the failure and control plane protocols converge on
-       the topology changes due to the failure.  The framework is applicable
-       to all types of IP/MPLS services and MPLS tunnels.  Under the
-       framework, service protocol extensions may be further specified to
-       support service label distribution to protector.</p>
+  content: "<p>This document specifies a fast reroute framework for protecting IP/\n   MPLS services and MPLS transport tunnels against egress node and\n   egress link failures.  In this framework, the penultimate-hop router\n   of an MPLS tunnel acts as the point of local repair (PLR) for egress\n   node failure, and the egress router of the MPLS tunnel acts as the\n   PLR for egress link failure.  Each of them pre-establishes a bypass\n   tunnel to a protector.  Upon an egress node or link failure, the\n   corresponding PLR performs local failure detection and local repair,\n   by rerouting packets over the corresponding bypass tunnel.  The\n   protector in turn performs context label switching or context IP\n   forwarding to send the packets to ultimate service destination(s).\n   This mechanism can be used to reduce traffic loss before global\n   repair reacts to the failure and control plane protocols converge on\n   the topology changes due to the failure.  The framework is applicable\n   to all types of IP/MPLS services and MPLS tunnels.  Under the\n   framework, service protocol extensions may be further specified to\n   support service label distribution to protector.</p>"
 relation:
 - type: updates
   bibitem:

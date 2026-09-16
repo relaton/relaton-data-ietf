@@ -1,12 +1,10 @@
----
 id: drafteckertbiercgm2rbs00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Carrier Grade Minimalist Multicast (CGM2) using Bit Index Explicit Replication
-    (BIER) with Recursive BitString Structure (RBS) Addresses
+  content: Carrier Grade Minimalist Multicast (CGM2) using Bit Index Explicit Replication (BIER) with Recursive BitString Structure (RBS) Addresses
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-eckert-bier-cgm2-rbs-00
@@ -58,36 +56,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This memo introduces the architecture of a multicast architecture
-       derived from BIER-TE, which this memo calls Carrier Grade Minimalist
-       Multicast (CGM2).  It reduces limitations and complexities of BIER-TE
-       by replacing the representation of the in-packet-header delivery tree
-       of packets through a "flat" BitString of adjacencies with a
-       hierarchical structure of BFR-local BitStrings called the Recursive
-       BitString Structure (RBS) Address.
-
-       Benefits of CGM2 with RBS addresses include smaller/fewer BIFT in
-       BFR, less complexity for the network architect and in the CGM2
-       controller (compared to a BIER-TE controller) and fewer packet copies
-       to reach a larger set of BFER.
-
-       The additional cost of forwarding with RBS addresses is a slightly
-       more complex processing of the RBS address in BFR compared to a flat
-       BitString and the novel per-hop rewrite of the RBS address as opposed
-       to bit-reset rewrite in BIER/BIER-TE.
-
-       CGM2 can support the traditional deployment model of BIER/BIER-TE
-       with the BIER/BIER-TE domain terminating at service provider PE
-       routers as BFIR/BFER, but it is also the intention of this document
-       to expand CGM2 domains all the way into hosts, and therefore
-       eliminating the need for an IP Multicast flow overlay, further
-       reducing the complexity of Multicast services using CGM2.  Note that
-       this is not fully detailed in this version of the document.
-
-       This document does not specify an encapsulation for CGM2/RBS
-       addresses.  It could use existing encapsulations such as [RFC8296],
-       but also other encapsulations such as IPv6 extension headers.</p>
+  content: "<p>This memo introduces the architecture of a multicast architecture\n   derived from BIER-TE, which this memo calls Carrier Grade Minimalist\n   Multicast (CGM2).  It reduces limitations and complexities of BIER-TE\n   by replacing the representation of the in-packet-header delivery tree\n   of packets through a \"flat\" BitString of adjacencies with a\n   hierarchical structure of BFR-local BitStrings called the Recursive\n   BitString Structure (RBS) Address.\n\n   Benefits of CGM2 with RBS addresses include smaller/fewer BIFT in\n   BFR, less complexity for the network architect and in the CGM2\n   controller (compared to a BIER-TE controller) and fewer packet copies\n   to reach a larger set of BFER.\n\n   The additional cost of forwarding with RBS addresses is a slightly\n   more complex processing of the RBS address in BFR compared to a flat\n   BitString and the novel per-hop rewrite of the RBS address as opposed\n   to bit-reset rewrite in BIER/BIER-TE.\n\n   CGM2 can support the traditional deployment model of BIER/BIER-TE\n   with the BIER/BIER-TE domain terminating at service provider PE\n   routers as BFIR/BFER, but it is also the intention of this document\n   to expand CGM2 domains all the way into hosts, and therefore\n   eliminating the need for an IP Multicast flow overlay, further\n   reducing the complexity of Multicast services using CGM2.  Note that\n   this is not fully detailed in this version of the document.\n\n   This document does not specify an encapsulation for CGM2/RBS\n   addresses.  It could use existing encapsulations such as [RFC8296],\n   but also other encapsulations such as IPv6 extension headers.</p>"
 relation:
 - type: updatedBy
   bibitem:

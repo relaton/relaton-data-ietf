@@ -1,0 +1,68 @@
+id: draftdasexecutionhandle00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Possession Is Not Authority: Execution Handle, Sink Verification, Atomic Consumption, and Finality Receipt'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-execution-handle-00
+docidentifier:
+- content: draft-das-execution-handle
+  type: Internet-Draft
+- content: draft-das-execution-handle-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-execution-handle
+date:
+- type: published
+  at: '2026-09-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Across agentic AI, payments, cloud control planes, industrial\n   actuation, and cross-border processing, a machine can prepare a\n   concrete operation long before that operation is allowed to become\n   externally effective.  Existing protocols already move identity,\n   authorization data, attestation results, and signed statements.  They\n   do not, by themselves, define the small set of interoperable objects\n   required at the effectuation boundary: a canonical Candidate Act\n   Descriptor, a scoped non-bearer Execution Handle bound to that exact\n   act and to a designated Finality Sink, a verify operation that\n   reconstructs the pending effect, an atomic consume that prevents\n   replay, and a Finality Receipt that records what was actually\n   permitted.\n\n   The residual failure is familiar and does not require token forgery.\n   An access token, capability, session cookie, SPIFFE SVID, WIMSE\n   credential, OAuth grant, attestation result, or signed mandate can\n   remain cryptographically valid while being presented for a different\n   tool call, a substituted beneficiary, a second sink, a replayed\n   payment, a migrated region, or an alternate administrative path.\n   Bearer possession then becomes mistaken for current, act-specific\n   authority to effectuate.\n\n   Existing mechanisms already address important adjacent problems.\n   OAuth 2.0 and OAuth Rich Authorization Requests can express fine-\n   grained authorization data [RFC6749] [RFC9396].  DPoP and\n   certificate-bound tokens constrain sender possession [RFC9449]\n   [RFC8705].  JWT and CWT carry signed claims [RFC7519] [RFC8392].\n   HTTP Message Signatures authenticate individual requests [RFC9421].\n   WIMSE addresses workload identity in multi-system environments\n   [WIMSE-ARCH].  RATS supplies Evidence and Attestation Results\n   [RFC9334].  SCITT supplies signed statements, transparency, and\n   receipts [RFC9943].  MCP and similar tool interfaces dispatch agent-\n   selected functions.  None of these objects is specified as a non-\n   bearer, exact-act, sink-bound, single-use-or-bounded effectuation\n   authority whose verification is serialized with protected commit.\n\n   This document specifies those wire objects and the verify/consume/\n   receipt exchange.  A Candidate Act remains in a Non-Effective State\n   until a Finality Sink reconstructs the security-relevant pending\n   operation, verifies that a current Execution Handle authorizes that\n   exact operation at that sink, consumes or reserves the handle\n   according to its reuse policy, and optionally emits a Finality\n   Receipt.  The Execution Handle is not a session token and is not\n   valid merely because the caller can present it.\n\n   Prevention is claimed only when exact-act binding, sink binding,\n   currentness, reuse policy, consequence-path coverage, and\n   verification-to-commit serialization are load-bearing.  If a\n   deployment uses ordinary bearer tokens, advisory act identifiers,\n   post-hoc logs, or a gateway that can be routed around, the result is\n   mitigation or evidence rather than the same prevention guarantee.\n   Encoding profiles are provided for JSON and COSE/CWT; the\n   architecture requires the semantics, not one exclusive encoding.\n\n   Three rejections are expected and are addressed in the body rather\n   than dismissed here.  First, a saga, 2PC, or workflow plus ordinary\n   tokens already coordinates steps; that coordinator is complementary,\n   and is enough only if each sink also reconstructs the live act and\n   consumes act-bound authority.  Second, atomic consume is not a\n   process-wide lock: SINGLE_USE is per handle, COUNTED and ENVELOPE\n   exist for high-QPS classes, and rails that already keep idempotency\n   keys already pay this cost.  Third, reconstruction is required only\n   at the component that would first make the effect real, over fields\n   that sink can observe — not at every mesh hop, and not as blind trust\n   in a caller digest.  Reviewers who hold any of those objections are\n   asked to read those sections and to supply a counterexample if the\n   residual gap is already closed.  Criticism, prior art, and a\n   recommendation to stop the work remain invited.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-execution-handle-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

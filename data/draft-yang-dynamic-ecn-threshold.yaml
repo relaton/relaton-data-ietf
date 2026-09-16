@@ -1,4 +1,3 @@
----
 id: draftyangdynamicecnthreshold
 schema_version: v1.5.6
 formattedref:
@@ -20,25 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Explicit Congestion Notification (ECN) marking thresholds are
-       typically configured statically.  In modern network devices that
-       employ dynamic buffer allocation -- where the maximum buffer
-       available to a queue fluctuates dynamically based on the number of
-       active queues and the remaining shared buffer pool -- a static ECN
-       threshold can frequently become misaligned with the actual
-       instantaneous buffering capacity.
-
-       This misalignment can lead to pathological behaviors: either
-       premature marking (which underutilizes available buffers and
-       throttles throughput) or late marking (which provides no advance
-       warning before tail drop occurs).  This document describes an
-       operational framework and a deterministic reference algorithm for
-       dynamically coupling the ECN marking threshold with the dynamic
-       buffer allocation limit.  By maintaining an adaptive relationship
-       through configurable parameters, this mechanism ensures robust
-       congestion signaling across varying load conditions without requiring
-       complex external machine-learning models or per-flow tracking.</p>
+  content: "<p>Explicit Congestion Notification (ECN) marking thresholds are\n   typically configured statically.  In modern network devices that\n   employ dynamic buffer allocation -- where the maximum buffer\n   available to a queue fluctuates dynamically based on the number of\n   active queues and the remaining shared buffer pool -- a static ECN\n   threshold can frequently become misaligned with the actual\n   instantaneous buffering capacity.\n\n   This misalignment can lead to pathological behaviors: either\n   premature marking (which underutilizes available buffers and\n   throttles throughput) or late marking (which provides no advance\n   warning before tail drop occurs).  This document describes an\n   operational framework and a deterministic reference algorithm for\n   dynamically coupling the ECN marking threshold with the dynamic\n   buffer allocation limit.  By maintaining an adaptive relationship\n   through configurable parameters, this mechanism ensures robust\n   congestion signaling across varying load conditions without requiring\n   complex external machine-learning models or per-flow tracking.</p>"
 relation:
 - type: includes
   bibitem:

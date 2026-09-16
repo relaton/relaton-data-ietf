@@ -1,4 +1,3 @@
----
 id: draftietftcpmtcpghostacks03
 schema_version: v1.5.6
 type: standard
@@ -54,20 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Historically, TCP as specified in RFC 793 was threatened by the blind
-       data injection attack because of the loose SEG.ACK value validation,
-       where the SEG.ACK value of a TCP segment is considered valid as long
-       as it does not acknowledge data ahead of what has been sent.  RFC
-       5961 improved the input validation by shrinking the range of
-       acceptable SEG.ACK values in a TCP segment.  Later, RFC 9293
-       incorporated the updates proposed by RFC 5961 as a TCP stack
-       implementation option.
-       However, an endpoint that follows the RFC 9293 specifications can
-       still accept a TCP segment containing an SEG.ACK value acknowledging
-       data that the endpoint has never sent.  This document specifies small
-       modifications to the way TCP verifies incoming TCP segments' SEG.ACK
-       value to prevent TCP from accepting such invalid SEG.ACK values.</p>
+  content: "<p>Historically, TCP as specified in RFC 793 was threatened by the blind\n   data injection attack because of the loose SEG.ACK value validation,\n   where the SEG.ACK value of a TCP segment is considered valid as long\n   as it does not acknowledge data ahead of what has been sent.  RFC\n   5961 improved the input validation by shrinking the range of\n   acceptable SEG.ACK values in a TCP segment.  Later, RFC 9293\n   incorporated the updates proposed by RFC 5961 as a TCP stack\n   implementation option.\n   However, an endpoint that follows the RFC 9293 specifications can\n   still accept a TCP segment containing an SEG.ACK value acknowledging\n   data that the endpoint has never sent.  This document specifies small\n   modifications to the way TCP verifies incoming TCP segments' SEG.ACK\n   value to prevent TCP from accepting such invalid SEG.ACK values.</p>"
 relation:
 - type: updates
   bibitem:

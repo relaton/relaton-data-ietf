@@ -1,4 +1,3 @@
----
 id: draftlencsebmwgmultipleipaddresses02
 schema_version: v1.5.6
 type: standard
@@ -76,26 +75,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>RFC 2544 has defined a benchmarking methodology for network
-       interconnect devices.  Its test frame format contained fixed IP
-       addresses and fixed port numbers.  RFC 4814 introduced pseudorandom
-       port numbers, but it kept the usage of a single source and
-       destination IP address pair when a single destination network is
-       used.  This limitation may cause an issue when the device under test
-       uses Receive-Side Scaling (RSS) mechanism in the packet processing
-       flow.  RSS has two types of implementations: the first one only
-       includes the IP addresses, whereas the second one also includes the
-       port numbers into the tuple used for hashing.  Benchmarking tests
-       that use a single IP address pair and RFC 4814 pseudorandom port
-       numbers are biased against the first type of RSS implementation,
-       because in this case, the traffic is not distributed among the
-       processing elements.  This document recommends the usage of
-       pseudorandom IP addresses in a similar manner as RFC 4814 did it with
-       the port numbers.
-
-       If accepted, this document updates all affected RFCs, including RFC
-       2544, RFC 4814, RFC 5180, RFC 8219.</p>
+  content: "<p>RFC 2544 has defined a benchmarking methodology for network\n   interconnect devices.  Its test frame format contained fixed IP\n   addresses and fixed port numbers.  RFC 4814 introduced pseudorandom\n   port numbers, but it kept the usage of a single source and\n   destination IP address pair when a single destination network is\n   used.  This limitation may cause an issue when the device under test\n   uses Receive-Side Scaling (RSS) mechanism in the packet processing\n   flow.  RSS has two types of implementations: the first one only\n   includes the IP addresses, whereas the second one also includes the\n   port numbers into the tuple used for hashing.  Benchmarking tests\n   that use a single IP address pair and RFC 4814 pseudorandom port\n   numbers are biased against the first type of RSS implementation,\n   because in this case, the traffic is not distributed among the\n   processing elements.  This document recommends the usage of\n   pseudorandom IP addresses in a similar manner as RFC 4814 did it with\n   the port numbers.\n\n   If accepted, this document updates all affected RFCs, including RFC\n   2544, RFC 4814, RFC 5180, RFC 8219.</p>"
 relation:
 - type: updates
   bibitem:

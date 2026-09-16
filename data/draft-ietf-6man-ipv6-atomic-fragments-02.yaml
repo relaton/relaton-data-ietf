@@ -1,4 +1,3 @@
----
 id: draftietf6manipv6atomicfragments02
 schema_version: v1.5.6
 type: standard
@@ -49,20 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The IPv6 specification allows packets to contain a Fragment Header
-       without the packet being actually fragmented into multiple pieces.
-       Such packets typically result from hosts that have received an ICMPv6
-       "Packet Too Big" error message that advertises a "Next-Hop MTU"
-       smaller than 1280 bytes, and are currently processed by some
-       implementations as "fragmented traffic".  Thus, by forging ICMPv6
-       "Packet Too Big" error messages an attacker can cause hosts to employ
-       "atomic fragments", and then launch any fragmentation-based attacks
-       against such traffic.  This document discusses the generation of the
-       aforementioned "atomic fragments", the corresponding security
-       implications, and formally updates RFC 2460 and RFC 5722 such that
-       fragmentation-based attack vectors against traffic employing "atomic
-       fragments" are completely eliminated.</p>
+  content: "<p>The IPv6 specification allows packets to contain a Fragment Header\n   without the packet being actually fragmented into multiple pieces.\n   Such packets typically result from hosts that have received an ICMPv6\n   \"Packet Too Big\" error message that advertises a \"Next-Hop MTU\"\n   smaller than 1280 bytes, and are currently processed by some\n   implementations as \"fragmented traffic\".  Thus, by forging ICMPv6\n   \"Packet Too Big\" error messages an attacker can cause hosts to employ\n   \"atomic fragments\", and then launch any fragmentation-based attacks\n   against such traffic.  This document discusses the generation of the\n   aforementioned \"atomic fragments\", the corresponding security\n   implications, and formally updates RFC 2460 and RFC 5722 such that\n   fragmentation-based attack vectors against traffic employing \"atomic\n   fragments\" are completely eliminated.</p>"
 relation:
 - type: updates
   bibitem:

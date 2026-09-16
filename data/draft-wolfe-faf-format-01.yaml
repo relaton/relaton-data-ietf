@@ -1,4 +1,3 @@
----
 id: draftwolfefafformat01
 schema_version: v1.5.6
 type: standard
@@ -57,37 +56,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the FAF Foundational AI-Context Layer for AI
-       agents — one architectural layer expressed through two YAML-based
-       media types with distinct lifecycles.  The layer answers what an AI
-       agent KNOWS about a project (static context) and what it REMEMBERS
-       across sessions (persistent memory).
-
-       The two formats that constitute the layer:
-
-       *  .faf (application/faf+yaml, IANA-registered October 2025) — static
-          project context: architecture, conventions, dependencies, goals.
-          Read once; trusted as canonical.
-
-       *  .fafm (application/fafm+yaml, IANA-registered May 2026) —
-          persistent agent memory: facts, preferences, accumulated
-          knowledge.  Mutates across sessions; multi-profile (voice and
-          knowledge); anti-fork by design.
-
-       Together the two formats provide a complete foundational layer.  They
-       share YAML 1.2 as base syntax, MIT-licensed open distribution, and
-       family branding.  They differ in lifecycle: .faf is static-read-once;
-       .fafm is mutating-persisted.  The formats interoperate by safe
-       degradation — a .faf-only consumer reads a .fafm document without
-       breaking; a .fafm-aware consumer transparently gains the memory
-       dimension.
-
-       This document seeks IETF standards-tree registration for both formats
-       (application/faf+yaml and application/fafm+yaml).  The vendor-tree
-       registrations remain valid for backward compatibility.
-
-       *Two formats.  One foundational layer.*</p>
+  content: "<p>This document specifies the FAF Foundational AI-Context Layer for AI\n   agents — one architectural layer expressed through two YAML-based\n   media types with distinct lifecycles.  The layer answers what an AI\n   agent KNOWS about a project (static context) and what it REMEMBERS\n   across sessions (persistent memory).\n\n   The two formats that constitute the layer:\n\n   *  .faf (application/faf+yaml, IANA-registered October 2025) — static\n      project context: architecture, conventions, dependencies, goals.\n      Read once; trusted as canonical.\n\n   *  .fafm (application/fafm+yaml, IANA-registered May 2026) —\n      persistent agent memory: facts, preferences, accumulated\n      knowledge.  Mutates across sessions; multi-profile (voice and\n      knowledge); anti-fork by design.\n\n   Together the two formats provide a complete foundational layer.  They\n   share YAML 1.2 as base syntax, MIT-licensed open distribution, and\n   family branding.  They differ in lifecycle: .faf is static-read-once;\n   .fafm is mutating-persisted.  The formats interoperate by safe\n   degradation — a .faf-only consumer reads a .fafm document without\n   breaking; a .fafm-aware consumer transparently gains the memory\n   dimension.\n\n   This document seeks IETF standards-tree registration for both formats\n   (application/faf+yaml and application/fafm+yaml).  The vendor-tree\n   registrations remain valid for backward compatibility.\n\n   *Two formats.  One foundational layer.*</p>"
 relation:
 - type: updates
   bibitem:

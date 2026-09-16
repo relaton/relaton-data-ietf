@@ -1,4 +1,3 @@
----
 id: draftsullivanmlsattachments01
 schema_version: v1.5.6
 type: standard
@@ -79,22 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines random-access authenticated encryption of large
-       write-once files for Messaging Layer Security (MLS) groups.  A file
-       is encrypted so that a receiver can decrypt and authenticate any byte
-       range without processing the whole file.  The encryption is SEAL-
-       attachment, SEAL's named write-once attachment scheme (raAE),
-       parameterized by the AEAD and key derivation function of the group's
-       MLS cipher suite and keyed from the MLS exporter.  The encrypted
-       bytes are carried by any means, and a recipient needs only a small
-       reference (the object's identifier, length, and snapshot value, and
-       an optional locator) to fetch, key, and verify the object.  Carrying
-       that reference in an MLS message attributes the object to the member
-       that sent the message.  MLS application messages cannot carry large
-       files, and existing attachment encryption produces an opaque,
-       immutable blob with no partial access.  This extension supplies the
-       random-access layer those uses need.</p>
+  content: "<p>This document defines random-access authenticated encryption of large\n   write-once files for Messaging Layer Security (MLS) groups.  A file\n   is encrypted so that a receiver can decrypt and authenticate any byte\n   range without processing the whole file.  The encryption is SEAL-\n   attachment, SEAL's named write-once attachment scheme (raAE),\n   parameterized by the AEAD and key derivation function of the group's\n   MLS cipher suite and keyed from the MLS exporter.  The encrypted\n   bytes are carried by any means, and a recipient needs only a small\n   reference (the object's identifier, length, and snapshot value, and\n   an optional locator) to fetch, key, and verify the object.  Carrying\n   that reference in an MLS message attributes the object to the member\n   that sent the message.  MLS application messages cannot carry large\n   files, and existing attachment encryption produces an opaque,\n   immutable blob with no partial access.  This extension supplies the\n   random-access layer those uses need.</p>"
 relation:
 - type: updates
   bibitem:

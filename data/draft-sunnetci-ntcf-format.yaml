@@ -1,4 +1,3 @@
----
 id: draftsunnetcintcfformat
 schema_version: v1.5.6
 formattedref:
@@ -20,25 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies NTCF (Network and Telemetry Compression
-       Format), a self-describing, columnar, append-friendly binary
-       container for cybersecurity and network telemetry such as flow
-       records, honeypot events, and web access logs.  Unlike general-
-       purpose byte compressors, NTCF models the semantics of telemetry --
-       IP addresses, autonomous system numbers, ports, country codes, event
-       types, and timestamps -- as typed columns and applies semantic
-       encodings (dictionary, delta, delta-of-delta, run-length, frame-of-
-       reference bit packing, and variable-length integers) before a
-       conventional entropy compression stage.
-
-       NTCF embeds per-column zone-map statistics and Bloom filters so that
-       point lookups and analytical predicates can be evaluated by reading
-       only the columns and segments that can possibly match, without
-       decompressing the entire file.  This document defines the on-disk
-       octet layout (format version 1), the encoding catalogue, the reading
-       and crash-recovery algorithms, a resource-limit model, security
-       considerations, and an IANA media-type registration.</p>
+  content: "<p>This document specifies NTCF (Network and Telemetry Compression\n   Format), a self-describing, columnar, append-friendly binary\n   container for cybersecurity and network telemetry such as flow\n   records, honeypot events, and web access logs.  Unlike general-\n   purpose byte compressors, NTCF models the semantics of telemetry --\n   IP addresses, autonomous system numbers, ports, country codes, event\n   types, and timestamps -- as typed columns and applies semantic\n   encodings (dictionary, delta, delta-of-delta, run-length, frame-of-\n   reference bit packing, and variable-length integers) before a\n   conventional entropy compression stage.\n\n   NTCF embeds per-column zone-map statistics and Bloom filters so that\n   point lookups and analytical predicates can be evaluated by reading\n   only the columns and segments that can possibly match, without\n   decompressing the entire file.  This document defines the on-disk\n   octet layout (format version 1), the encoding catalogue, the reading\n   and crash-recovery algorithms, a resource-limit model, security\n   considerations, and an IANA media-type registration.</p>"
 relation:
 - type: includes
   bibitem:

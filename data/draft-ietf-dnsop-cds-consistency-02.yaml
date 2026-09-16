@@ -1,4 +1,3 @@
----
 id: draftietfdnsopcdsconsistency02
 schema_version: v1.5.6
 type: standard
@@ -54,21 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Maintenance of DNS delegations requires occasional changes of the DS
-       and NS record sets on the parent side of the delegation.  RFC 7344
-       automates this for DS records by having the child publish CDS and/or
-       CDNSKEY records which hold the prospective DS parameters.  Similarly,
-       RFC 7477 specifies CSYNC records to indicate a desired update of the
-       delegation's NS (and glue) records.  Parent-side entities (e.g.
-       Registries, Registrars) typically discover these records by querying
-       them from the child, and then use them to update the delegation's DS
-       RRset accordingly.
-
-       This document specifies that when performing such queries, parent-
-       side entities MUST ensure that updates triggered via CDS/CDNSKEY and
-       CSYNC records are consistent across the child's authoritative
-       nameservers, before taking any action based on these records.</p>
+  content: "<p>Maintenance of DNS delegations requires occasional changes of the DS\n   and NS record sets on the parent side of the delegation.  RFC 7344\n   automates this for DS records by having the child publish CDS and/or\n   CDNSKEY records which hold the prospective DS parameters.  Similarly,\n   RFC 7477 specifies CSYNC records to indicate a desired update of the\n   delegation's NS (and glue) records.  Parent-side entities (e.g.\n   Registries, Registrars) typically discover these records by querying\n   them from the child, and then use them to update the delegation's DS\n   RRset accordingly.\n\n   This document specifies that when performing such queries, parent-\n   side entities MUST ensure that updates triggered via CDS/CDNSKEY and\n   CSYNC records are consistent across the child's authoritative\n   nameservers, before taking any action based on these records.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftsatosooshem07
 schema_version: v1.5.6
 type: standard
@@ -50,60 +49,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>An AI agent that has been authorized to act autonomously has no
-       inherent mechanism to stop itself.  If its mission requires a
-       decision that exceeds its authorization, if policy mandates human
-       judgment before proceeding, or if the agent itself reaches the
-       boundary of its reliable competence, what happens?  Without a
-       protocol specifying the answer, one of three failure modes occurs:
-       the agent proceeds beyond its authorization and executes actions
-       that no human approved; it stalls silently with no notification
-       to any principal; or it continues running under a mission that has
-       already entered a terminal state, producing actions with no
-       legitimate purpose.  In all three cases, the humans responsible
-       for the system find out too late.
-
-       This document defines the Human Escalation Mechanism (HEM): a
-       normative protocol specifying what a Governance Execution
-       Controller (GEC) does when an AI agent session requires human
-       judgment before execution may continue.  HEM replaces the three
-       failure modes above with a single governed path: the GEC places
-       the session into a formally defined HEM_PENDING state, routes a
-       structured escalation request to one or more designated human
-       principals along an ordered designation chain, enforces a
-       prohibition on all state transitions until a human decision is
-       received, and processes six defined human decision types.  HEM
-       also defines the Policy Rationale Declaration (PRD), which links
-       Cedar policies that route to HEM with machine-readable rationale,
-       and the Decision Rationale Record (DRR), which captures the human
-       principal's reasoning for audit and learning purposes.
-
-       Version -05 adds ten new HEM interaction classes (HEM-PRE-1,
-       HEM-PRE-2, HEM-DS-1, HEM-DS-2, HEM-LIM-1, HEM-DIV-1, HEM-HIGH-1,
-       HEM-FAT-1, HEM-EMO-1, and HEM-CONSENT) with full normative
-       specifications, trigger conditions, GAR ALE registrations
-       (ALE-030 through ALE-041), and five new Security Considerations
-       addressing the HEM channel attack surface.  INV-HEM-01 (The
-       Surfacing Obligation) is added as a KernelSpec invariant, along
-       with normative Human Readiness Score (HRS) and Tier 0-A
-       Integration sections.
-
-       Version -06 corrects an internal contradiction over whether HRS
-       data persists across sessions, reconstructs several sections whose
-       base content had gone missing from the -05 text, and extends
-       DoS rate-limiting guidance to the -05 interaction-class triggers.
-
-       Version -07 is an editorial revision with no normative content
-       changes: bracket-delimited array type notation ([string], [object])
-       and a state-diagram terminal-state label were reworded to resolve
-       idnits parser warnings that misread them as broken citations.
-
-       HEM is enforced by the GEC, not by the agent and not by the
-       application layer.  An agent cannot opt out; an application cannot
-       suppress it.  This non-bypassability is the source of HEM's
-       regulatory utility and provides the technical specification for
-       human oversight required by EU AI Act Article 14.</p>
+  content: "<p>An AI agent that has been authorized to act autonomously has no\n   inherent mechanism to stop itself.  If its mission requires a\n   decision that exceeds its authorization, if policy mandates human\n   judgment before proceeding, or if the agent itself reaches the\n   boundary of its reliable competence, what happens?  Without a\n   protocol specifying the answer, one of three failure modes occurs:\n   the agent proceeds beyond its authorization and executes actions\n   that no human approved; it stalls silently with no notification\n   to any principal; or it continues running under a mission that has\n   already entered a terminal state, producing actions with no\n   legitimate purpose.  In all three cases, the humans responsible\n   for the system find out too late.\n\n   This document defines the Human Escalation Mechanism (HEM): a\n   normative protocol specifying what a Governance Execution\n   Controller (GEC) does when an AI agent session requires human\n   judgment before execution may continue.  HEM replaces the three\n   failure modes above with a single governed path: the GEC places\n   the session into a formally defined HEM_PENDING state, routes a\n   structured escalation request to one or more designated human\n   principals along an ordered designation chain, enforces a\n   prohibition on all state transitions until a human decision is\n   received, and processes six defined human decision types.  HEM\n   also defines the Policy Rationale Declaration (PRD), which links\n   Cedar policies that route to HEM with machine-readable rationale,\n   and the Decision Rationale Record (DRR), which captures the human\n   principal's reasoning for audit and learning purposes.\n\n   Version -05 adds ten new HEM interaction classes (HEM-PRE-1,\n   HEM-PRE-2, HEM-DS-1, HEM-DS-2, HEM-LIM-1, HEM-DIV-1, HEM-HIGH-1,\n   HEM-FAT-1, HEM-EMO-1, and HEM-CONSENT) with full normative\n   specifications, trigger conditions, GAR ALE registrations\n   (ALE-030 through ALE-041), and five new Security Considerations\n   addressing the HEM channel attack surface.  INV-HEM-01 (The\n   Surfacing Obligation) is added as a KernelSpec invariant, along\n   with normative Human Readiness Score (HRS) and Tier 0-A\n   Integration sections.\n\n   Version -06 corrects an internal contradiction over whether HRS\n   data persists across sessions, reconstructs several sections whose\n   base content had gone missing from the -05 text, and extends\n   DoS rate-limiting guidance to the -05 interaction-class triggers.\n\n   Version -07 is an editorial revision with no normative content\n   changes: bracket-delimited array type notation ([string], [object])\n   and a state-diagram terminal-state label were reworded to resolve\n   idnits parser warnings that misread them as broken citations.\n\n   HEM is enforced by the GEC, not by the agent and not by the\n   application layer.  An agent cannot opt out; an application cannot\n   suppress it.  This non-bypassability is the source of HEM's\n   regulatory utility and provides the technical specification for\n   human oversight required by EU AI Act Article 14.</p>"
 relation:
 - type: updates
   bibitem:

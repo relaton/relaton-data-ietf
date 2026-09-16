@@ -1,4 +1,3 @@
----
 id: draftwhiteintareareordering00
 schema_version: v1.5.6
 type: standard
@@ -104,30 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Several link technology standards mandate that equipment guarantee
-       in-order delivery of layer 2 frames, apparently due to a belief that
-       this is required by higher layer protocols.  In addition, certain
-       link types can introduce out-of-order arrivals at the end of the
-       layer 2 link, which the receiving equipment is required to rectify by
-       delaying higher sequenced frames until all lower sequenced frames can
-       be delivered or are deemed lost.  The delaying of higher sequenced
-       frames is generally done without any knowledge of the higher layer
-       protocols in use, let alone any knowledge of higher layer protocol
-       contexts (e.g. TCP connections) in the case that the layer 2 link is
-       carrying a multiplex of such contexts.  It could, for example, be the
-       case that all of the higher sequenced frames being delayed are
-       carrying packets for different layer 4 contexts than a single lower-
-       sequenced frame that triggered the delay.  The result is that this
-       "re-sequencing" operation can introduce delays that result in
-       degradation of performance rather than improving it.  Moreover,
-       modern, performant TCP and QUIC implementations support features that
-       significantly improve their tolerance to out-of-order delivery.
-
-       This draft is intended to promote an analysis and discussion of the
-       sensitivity of modern protocols to out-of-order delivery, and to
-       potentially develop new guidance to layer 2 technology standards
-       regarding the need to assure in-order delivery.</p>
+  content: "<p>Several link technology standards mandate that equipment guarantee\n   in-order delivery of layer 2 frames, apparently due to a belief that\n   this is required by higher layer protocols.  In addition, certain\n   link types can introduce out-of-order arrivals at the end of the\n   layer 2 link, which the receiving equipment is required to rectify by\n   delaying higher sequenced frames until all lower sequenced frames can\n   be delivered or are deemed lost.  The delaying of higher sequenced\n   frames is generally done without any knowledge of the higher layer\n   protocols in use, let alone any knowledge of higher layer protocol\n   contexts (e.g. TCP connections) in the case that the layer 2 link is\n   carrying a multiplex of such contexts.  It could, for example, be the\n   case that all of the higher sequenced frames being delayed are\n   carrying packets for different layer 4 contexts than a single lower-\n   sequenced frame that triggered the delay.  The result is that this\n   \"re-sequencing\" operation can introduce delays that result in\n   degradation of performance rather than improving it.  Moreover,\n   modern, performant TCP and QUIC implementations support features that\n   significantly improve their tolerance to out-of-order delivery.\n\n   This draft is intended to promote an analysis and discussion of the\n   sensitivity of modern protocols to out-of-order delivery, and to\n   potentially develop new guidance to layer 2 technology standards\n   regarding the need to assure in-order delivery.</p>"
 relation:
 - type: updatedBy
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftsatosooskia04
 schema_version: v1.5.6
 type: standard
@@ -50,41 +49,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the Kernel Identity and Attestation (KIA)
-       protocol for the Sovereign Object OS (SOOS) governance architecture.
-       KIA defines the cryptographic identity of the GEC, the trust
-       chain anchoring kernel authority from hardware root through operator
-       root keypair to every signed Event Log entry, the GEC Manifest
-       schema for runtime state attestation, and the Revocation Registry
-       maintenance requirements.  KIA is the Layer 0 signing and
-       attestation component on which the audit trail guarantees of
-       draft-sato-soos-gar, the mandate enforcement guarantees of
-       draft-sato-soos-mjwt, and the multi-agent delegation chain of
-       draft-sato-soos-mad all depend.
-
-       Version -03 adds FROST threshold signing for high-availability GEC
-       keypair deployments, the Cross-Principal Identifier (XPID) for
-       cross-instance federation audit correlation, the XPID cross-
-       instance trust model, and four new Security Considerations
-       (Sections 14.8 through 14.11) addressing FROST nonce reuse, XPID
-       revocation gap, identity takeover via claimed identifier (CVE-2025-
-       13609 class), and attestation channel binding (CVE-2026-33697 class).
-
-       This document is the reference specification for the KIA RATS WG
-       presentation at IETF 126 Vienna.  The XPID primitive and the
-       CVE-2026-33697 attestation channel binding defense are the primary
-       novel contributions presented to the RATS WG.
-
-       Version -04 corrects a registry-format mismatch identified by IANA
-       early review (#1456067): the Section 16 request to register
-       XPID_DERIVED and XPID_VERIFICATION_FAILED into the GAR Authority
-       Lifecycle Event Types Registry [I-D.sato-soos-gar] now uses that
-       registry's actual column set (Event Type, Class, Reference) and
-       assigns both entries the newly-defined Class ID (Identity/
-       Federation event).  No new event types, fields, or normative
-       behavior are introduced in -04; this is a registration-format
-       correction only.</p>
+  content: "<p>This document specifies the Kernel Identity and Attestation (KIA)\n   protocol for the Sovereign Object OS (SOOS) governance architecture.\n   KIA defines the cryptographic identity of the GEC, the trust\n   chain anchoring kernel authority from hardware root through operator\n   root keypair to every signed Event Log entry, the GEC Manifest\n   schema for runtime state attestation, and the Revocation Registry\n   maintenance requirements.  KIA is the Layer 0 signing and\n   attestation component on which the audit trail guarantees of\n   draft-sato-soos-gar, the mandate enforcement guarantees of\n   draft-sato-soos-mjwt, and the multi-agent delegation chain of\n   draft-sato-soos-mad all depend.\n\n   Version -03 adds FROST threshold signing for high-availability GEC\n   keypair deployments, the Cross-Principal Identifier (XPID) for\n   cross-instance federation audit correlation, the XPID cross-\n   instance trust model, and four new Security Considerations\n   (Sections 14.8 through 14.11) addressing FROST nonce reuse, XPID\n   revocation gap, identity takeover via claimed identifier (CVE-2025-\n   13609 class), and attestation channel binding (CVE-2026-33697 class).\n\n   This document is the reference specification for the KIA RATS WG\n   presentation at IETF 126 Vienna.  The XPID primitive and the\n   CVE-2026-33697 attestation channel binding defense are the primary\n   novel contributions presented to the RATS WG.\n\n   Version -04 corrects a registry-format mismatch identified by IANA\n   early review (#1456067): the Section 16 request to register\n   XPID_DERIVED and XPID_VERIFICATION_FAILED into the GAR Authority\n   Lifecycle Event Types Registry [I-D.sato-soos-gar] now uses that\n   registry's actual column set (Event Type, Class, Reference) and\n   assigns both entries the newly-defined Class ID (Identity/\n   Federation event).  No new event types, fields, or normative\n   behavior are introduced in -04; this is a registration-format\n   correction only.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftsharifattpagenttrusttransport
 schema_version: v1.5.6
 formattedref:
@@ -20,36 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies ATTP (Agent Trust Transport Protocol),
-       a synchronous request-response protocol for communication
-       between autonomous AI agents and web API servers.  ATTP
-       operates as an application-layer protocol over HTTP, adding
-       mandatory cryptographic identity verification, per-message
-       signing, trust-gated access control, and tamper-evident audit
-       trail generation to every agent-server interaction.
-
-       ATTP defines five protocol-layer headers for requests
-       (X-Agent-Trust, X-Agent-Signature, X-Agent-Nonce,
-       X-Agent-Timestamp, X-ATTP-Version) and three for responses
-       (X-Server-Signature, X-Server-Nonce, X-Server-Timestamp)
-       that carry an Agent Passport (JWT-based identity credential),
-       ECDSA P-256 digital signatures, cryptographic nonces, and
-       timestamps.  Server middleware verifies all cryptographic
-       properties before application code executes.
-
-       ATTP has no insecure mode.  Every request MUST carry a valid
-       Agent Passport.  Every request body MUST be signed.  Every
-       response body MUST be signed.  Every interaction MUST be
-       recorded in a hash-chained audit trail.  The protocol defines
-       a URL scheme (attp://) and is fully backward-compatible with
-       existing HTTP infrastructure.
-
-       ATTP is the synchronous counterpart to the Agent Transport
-       Protocol (ATP).  ATP handles asynchronous store-and-forward
-       agent delivery; ATTP handles real-time request-response API
-       communication.  Both share the same identity model, trust
-       framework, and cryptographic primitives.</p>
+  content: "<p>This document specifies ATTP (Agent Trust Transport Protocol),\n   a synchronous request-response protocol for communication\n   between autonomous AI agents and web API servers.  ATTP\n   operates as an application-layer protocol over HTTP, adding\n   mandatory cryptographic identity verification, per-message\n   signing, trust-gated access control, and tamper-evident audit\n   trail generation to every agent-server interaction.\n\n   ATTP defines five protocol-layer headers for requests\n   (X-Agent-Trust, X-Agent-Signature, X-Agent-Nonce,\n   X-Agent-Timestamp, X-ATTP-Version) and three for responses\n   (X-Server-Signature, X-Server-Nonce, X-Server-Timestamp)\n   that carry an Agent Passport (JWT-based identity credential),\n   ECDSA P-256 digital signatures, cryptographic nonces, and\n   timestamps.  Server middleware verifies all cryptographic\n   properties before application code executes.\n\n   ATTP has no insecure mode.  Every request MUST carry a valid\n   Agent Passport.  Every request body MUST be signed.  Every\n   response body MUST be signed.  Every interaction MUST be\n   recorded in a hash-chained audit trail.  The protocol defines\n   a URL scheme (attp://) and is fully backward-compatible with\n   existing HTTP infrastructure.\n\n   ATTP is the synchronous counterpart to the Agent Transport\n   Protocol (ATP).  ATP handles asynchronous store-and-forward\n   agent delivery; ATTP handles real-time request-response API\n   communication.  Both share the same identity model, trust\n   framework, and cryptographic primitives.</p>"
 relation:
 - type: includes
   bibitem:

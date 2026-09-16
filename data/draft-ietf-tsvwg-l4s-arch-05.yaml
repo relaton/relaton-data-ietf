@@ -1,4 +1,3 @@
----
 id: draftietftsvwgl4sarch05
 schema_version: v1.5.6
 type: standard
@@ -129,55 +128,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes the L4S architecture, which enables Internet
-       applications to achieve Low Latency, Low Loss, and Scalable
-       throughput (L4S), while coexisting on shared network bottlenecks with
-       existing Internet applications that are not built to take advantage
-       of this new technology.
-
-       In traditional bottleneck links that utilize a single, shared egress
-       queue, a variety of application traffic flows can share the
-       bottleneck queue simultaneously.  As a result, each sender's behavior
-       and its response to the congestion signals (delay, packet drop, ECN
-       marking) provided by the queue can impact the performance of all
-       other applications that share the link.  Furthermore, it is
-       considered important that new protocols coexist in a reasonably fair
-       manner with existing protocols (most notably TCP and QUIC).  As a
-       result, senders tend to normalize on behaviors that are not
-       significantly different than those in use by the majority of the
-       existing senders.  For many years, the majority of traffic on the
-       Internet has used either the Reno AIMD congestion controller or the
-       Cubic algorithm, and as a result any newly proposed congestion
-       controller needs to demonstrate that it provides reasonable fairness
-       when sharing a bottleneck with flows that use Reno or Cubic.  This
-       has led to an ossification in congestion control, where improved
-       congestion controllers cannot easily be deployed on the Internet.
-
-       It is well known that the common existing congestion controllers
-       (e.g.  Reno and Cubic) increase their congestion window (the amount
-       of data in flight) until they induce congestion, and they respond to
-       the congestion signals of packet loss (or equivalently ECN marks) by
-       significantly reducing their congestion window.  This leads to a
-       large sawtooth of the congestion window that manifests itself as a
-       combination of queue delay and/or link underutilization.
-
-       Meanwhile, in closed network environments, such as data centres, new
-       congestion controllers (e.g.  DCTCP [RFC8257]) have been deployed
-       that significantly outperform Reno and Cubic in terms of queue delay
-       and link utilization across a much wider range of network conditions.
-
-       The L4S architecture provides an approach that allows for the
-       deployment of next generation congestion controllers while preserving
-       reasonably fair coexistence with Reno and Cubic.
-
-       The L4S architecture consists of three components: network support to
-       isolate L4S traffic from other traffic and to provide appropriate
-       congestion signaling to both types; protocol features that allow
-       network elements to identify L4S traffic and allow for communication
-       of congestion signaling; and host support for immediate congestion
-       signaling and an appropriate congestion response that enables
-       scalable performance.</p>
+  content: "<p>This document describes the L4S architecture, which enables Internet\n   applications to achieve Low Latency, Low Loss, and Scalable\n   throughput (L4S), while coexisting on shared network bottlenecks with\n   existing Internet applications that are not built to take advantage\n   of this new technology.\n\n   In traditional bottleneck links that utilize a single, shared egress\n   queue, a variety of application traffic flows can share the\n   bottleneck queue simultaneously.  As a result, each sender's behavior\n   and its response to the congestion signals (delay, packet drop, ECN\n   marking) provided by the queue can impact the performance of all\n   other applications that share the link.  Furthermore, it is\n   considered important that new protocols coexist in a reasonably fair\n   manner with existing protocols (most notably TCP and QUIC).  As a\n   result, senders tend to normalize on behaviors that are not\n   significantly different than those in use by the majority of the\n   existing senders.  For many years, the majority of traffic on the\n   Internet has used either the Reno AIMD congestion controller or the\n   Cubic algorithm, and as a result any newly proposed congestion\n   controller needs to demonstrate that it provides reasonable fairness\n   when sharing a bottleneck with flows that use Reno or Cubic.  This\n   has led to an ossification in congestion control, where improved\n   congestion controllers cannot easily be deployed on the Internet.\n\n   It is well known that the common existing congestion controllers\n   (e.g.  Reno and Cubic) increase their congestion window (the amount\n   of data in flight) until they induce congestion, and they respond to\n   the congestion signals of packet loss (or equivalently ECN marks) by\n   significantly reducing their congestion window.  This leads to a\n   large sawtooth of the congestion window that manifests itself as a\n   combination of queue delay and/or link underutilization.\n\n   Meanwhile, in closed network environments, such as data centres, new\n   congestion controllers (e.g.  DCTCP [RFC8257]) have been deployed\n   that significantly outperform Reno and Cubic in terms of queue delay\n   and link utilization across a much wider range of network conditions.\n\n   The L4S architecture provides an approach that allows for the\n   deployment of next generation congestion controllers while preserving\n   reasonably fair coexistence with Reno and Cubic.\n\n   The L4S architecture consists of three components: network support to\n   isolate L4S traffic from other traffic and to provide appropriate\n   congestion signaling to both types; protocol features that allow\n   network elements to identify L4S traffic and allow for communication\n   of congestion signaling; and host support for immediate congestion\n   signaling and an appropriate congestion response that enables\n   scalable performance.</p>"
 relation:
 - type: updates
   bibitem:

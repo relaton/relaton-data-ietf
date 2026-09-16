@@ -1,0 +1,68 @@
+id: draftdasactuationboundexecutionfinality00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Command Accepted Is Not Actuation Authorized: Execution Finality for Cyber-Physical and Industrial Control Systems'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-actuation-bound-execution-finality-00
+docidentifier:
+- content: draft-das-actuation-bound-execution-finality
+  type: Internet-Draft
+- content: draft-das-actuation-bound-execution-finality-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-actuation-bound-execution-finality
+date:
+- type: published
+  at: '2026-09-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Cyber-physical and industrial systems increasingly accept commands\n   from cloud services, AI agents, remote operators, enterprise\n   applications, and distributed control software.  A high-consequence\n   failure can occur even when identity, authorization, message\n   integrity, platform attestation, and functional-safety mechanisms are\n   individually correct: a digitally valid command can remain apparently\n   acceptable while the target actuator, command parameters, machine\n   mode, process state, safety/interlock state, authority state, or\n   effectuation path has changed.  The consequence is no longer merely\n   an incorrect API call.  It can be drive energization, robotic motion,\n   valve or pump actuation, material release, process transition, or\n   another physical effect.  No token forgery, cryptographic break, or\n   defeat of the safety protocol is necessarily required; the failure\n   can be a loss of continuity between earlier digital authority and the\n   exact physical act that becomes effective.\n\n   Existing industrial mechanisms already solve major parts of this\n   problem.  IEC 61508 and IEC 61511 define mature functional-safety\n   engineering and Safety Instrumented Systems; IEC 62443 defines\n   cybersecurity requirements for industrial automation and control\n   components; OPC UA provides industrial security mechanisms, while OPC\n   UA Safety defines a functional-safety communication layer; ACE-OAuth\n   [RFC9200] provides authorization for constrained IoT environments;\n   RATS [RFC9334] provides trusted platform Evidence and Attestation\n   Results; and existing safety PLCs/controllers from Siemens, Rockwell\n   Automation, Schneider Electric, ABB, and other vendors provide mature\n   safety logic and output control.  These are complementary precedents,\n   not examples of missing safety engineering.  Where an existing safety\n   controller or protected actuator boundary already makes exact command\n   authority, current safety/process state, and final output mediation\n   non-bypassable, that deployment already satisfies the core property\n   described here.\n\n   The residual gap exists only where one of those mechanisms stops at a\n   boundary upstream of the first physical effect or does not carry the\n   complete cyber-authority predicate required by the deployment.  IEC\n   functional-safety mechanisms can correctly enforce safety functions\n   without necessarily expressing the provenance and exact scope of an\n   AI-, cloud-, or enterprise-originated command.  IEC 62443 controls\n   can correctly protect identity, use, integrity, and information flow\n   without by themselves defining the final application's exact\n   actuation predicate.  OPC UA Safety can correctly deliver SafetyData\n   while the receiving safety application still determines whether a\n   cyber-originated act is applicable.  ACE can correctly authorize a\n   constrained resource while current machine/process/safety state may\n   be evaluated later.  RATS can correctly attest the controller while\n   platform trust is not authorization for a particular torque, motion,\n   valve transition, or output.  Current application-layer action-\n   evidence work [SOKOLOV-AEP] can strengthen accountability while\n   remaining distinct from pre-actuation non-completability.  If any\n   existing deployment already composes these properties at the true\n   output boundary, no residual gap remains for that deployment.\n\n   This document therefore proposes a narrower actuation-bound\n   execution-finality invariant.  A Candidate Act remains in a Non-\n   Effective State until a protected Actuation Finality Boundary (AFB)\n   verifies the exact pending command, current execution authority,\n   target actuator identity, freshness and replay state, required\n   current machine/process/safety predicates, and authorized\n   effectuation path immediately before or atomically with the physical\n   output becoming effective.  The AFB is an architectural role, not a\n   mandatory new appliance: an existing safety PLC, safety controller,\n   protected drive, robot controller, SIS function, secure I/O stage, or\n   device controller can already be the AFB when it enforces the\n   required invariant.\n\n   Prevention is claimed only where the protected physical effect cannot\n   occur without those checks and where existing functional-safety\n   controls remain authoritative rather than being bypassed or replaced.\n   Execution-finality logic MUST NOT convert an existing safety DENY\n   into ALLOW.  If enforcement is upstream-only, mutable context is\n   stale, path coverage is incomplete, or the mechanism merely records\n   what occurred, the result is mitigation, detection, or auditability\n   rather than the same prevention guarantee.  The architecture\n   complements functional safety; it does not replace hazard analysis,\n   define a safe state, certify an unsafe controller, or claim that an\n   IETF mechanism establishes SIL or PL.\n\n   The problem is industrially relevant to robotics and motion control,\n   process plants, manufacturing and warehouse automation, power and\n   critical infrastructure, and other systems where remote or AI-\n   generated commands can cross several cyber layers before becoming\n   physical.  Siemens Safety Integrated, Rockwell GuardLogix, Schneider\n   Electric Modicon M580 Safety, ABB AC500-S, and OPC UA Safety are\n   cited politely as mature safety precedents and potential integration\n   points.  No vulnerability, deficiency, non-conformance, affiliation,\n   or endorsement is asserted.  Criticism, corrections, counterexamples,\n   prior art, real-time implementation experience, and evidence that\n   existing safety or authorization mechanisms already provide the full\n   invariant are explicitly invited.</p>"
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-actuation-bound-execution-finality-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,4 +1,3 @@
----
 id: draftietfbessevpnnaflags05
 schema_version: v1.5.6
 type: standard
@@ -129,26 +128,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>An EVPN MAC/IP Advertisement route can optionally carry an IPv4 or
-       IPv6 addresses associated with a MAC address.  Remote PEs can use
-       this information to populate their ARP/ND tables on IRB interfaces or
-       their proxy-ARP/ND tables in Broadcast Domains (BD).  PEs can then
-       reply locally (act as an ARP/ND proxy) to IPv4 ARP requests and IPv6
-       Neighbor Solicitation messages and reduce/suppress the flooding
-       produced by the Address Resolution procedure.  However, the
-       information conveyed in the MAC/IP route may not be enough for the
-       remote PE to reply to local ARP or ND requests.  For example, if a PE
-       learns an IPv6-&gt;MAC ND entry via EVPN, the PE would not know if that
-       particular IPv6-&gt;MAC pair belongs to a host, a router or a host with
-       an anycast address, as this information is not carried in the EVPN
-       MAC/IP Advertisement routes.  Similarly, other information relevant
-       to the IP-&gt;MAC ARP/ND entries may be needed.  This document defines
-       an Extended Community that is advertised along with an EVPN MAC/IP
-       Advertisement route and carries information relevant to the ARP/ND
-       resolution, so that an EVPN PE implementing a proxy-ARP/ND function
-       can reply to ARP Requests or Neighbor Solicitations with the correct
-       information.</p>
+  content: "<p>An EVPN MAC/IP Advertisement route can optionally carry an IPv4 or\n   IPv6 addresses associated with a MAC address.  Remote PEs can use\n   this information to populate their ARP/ND tables on IRB interfaces or\n   their proxy-ARP/ND tables in Broadcast Domains (BD).  PEs can then\n   reply locally (act as an ARP/ND proxy) to IPv4 ARP requests and IPv6\n   Neighbor Solicitation messages and reduce/suppress the flooding\n   produced by the Address Resolution procedure.  However, the\n   information conveyed in the MAC/IP route may not be enough for the\n   remote PE to reply to local ARP or ND requests.  For example, if a PE\n   learns an IPv6-&gt;MAC ND entry via EVPN, the PE would not know if that\n   particular IPv6-&gt;MAC pair belongs to a host, a router or a host with\n   an anycast address, as this information is not carried in the EVPN\n   MAC/IP Advertisement routes.  Similarly, other information relevant\n   to the IP-&gt;MAC ARP/ND entries may be needed.  This document defines\n   an Extended Community that is advertised along with an EVPN MAC/IP\n   Advertisement route and carries information relevant to the ARP/ND\n   resolution, so that an EVPN PE implementing a proxy-ARP/ND function\n   can reply to ARP Requests or Neighbor Solicitations with the correct\n   information.</p>"
 relation:
 - type: updates
   bibitem:

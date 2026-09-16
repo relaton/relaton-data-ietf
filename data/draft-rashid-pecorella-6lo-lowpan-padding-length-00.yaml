@@ -1,4 +1,3 @@
----
 id: draftrashidpecorella6lolowpanpaddinglength00
 schema_version: v1.5.6
 type: standard
@@ -74,21 +73,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>6LoWPAN compression schemes, including HC1 [RFC4944], IPHC [RFC6282],
-       and GHC [RFC7400], elide the IPv6 Payload Length (PL) field from
-       compressed packets, relying on the Layer 2 (L2) PL to reconstruct it
-       at the receiver.  This assumption holds for IEEE 802.15.4 [IEEE Std
-       802.15.4], which delivers exactly the bytes transmitted.  However, L2
-       technologies that enforce a minimum frame size — most notably
-       Ethernet IEEE 802.3 [IEEE Std 802.3], which has a minimum payload of
-       46 bytes — silently pad short frames with zero bytes.  In such cases,
-       the receiver incorrectly reconstructs the IPv6 PL field, leading to
-       packet corruption and protocol failure.  This document describes the
-       problem, analyzes existing workarounds, and defines a solution based
-       on an Escape dispatch byte (ESC) or ESC Extension Type (EET) extended
-       dispatch mechanism that explicitly encodes the IPv6 PL when L2
-       padding may be present.</p>
+  content: "<p>6LoWPAN compression schemes, including HC1 [RFC4944], IPHC [RFC6282],\n   and GHC [RFC7400], elide the IPv6 Payload Length (PL) field from\n   compressed packets, relying on the Layer 2 (L2) PL to reconstruct it\n   at the receiver.  This assumption holds for IEEE 802.15.4 [IEEE Std\n   802.15.4], which delivers exactly the bytes transmitted.  However, L2\n   technologies that enforce a minimum frame size — most notably\n   Ethernet IEEE 802.3 [IEEE Std 802.3], which has a minimum payload of\n   46 bytes — silently pad short frames with zero bytes.  In such cases,\n   the receiver incorrectly reconstructs the IPv6 PL field, leading to\n   packet corruption and protocol failure.  This document describes the\n   problem, analyzes existing workarounds, and defines a solution based\n   on an Escape dispatch byte (ESC) or ESC Extension Type (EET) extended\n   dispatch mechanism that explicitly encodes the IPv6 PL when L2\n   padding may be present.</p>"
 series:
 - type: main
   title:

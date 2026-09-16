@@ -1,4 +1,3 @@
----
 id: draftgrothdnsencryption
 schema_version: v1.5.6
 formattedref:
@@ -20,19 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document requests IANA registration of a new DNS OpCode and
-    ErrorCode type in facilitating encryption of DNS requests and
-    replies and feed back to the client if plain text requests are not
-    acceptable. Once this OpCode is seen the DNS server attempts to
-    decrypt the request using its private OpenPGP key. Inside the
-    encrypted packet is the AES key which the client expects to be used
-    when the server encrypts a response. A server may advertise that it
-    is capable of DNS encryption by returning OpenPGP fingerprints in
-    TXT records using a similar format to Public Key Association (PKA).
-    The full pubic keys are returned from DNS servers by using a CERT
-    request against the host name(s) of the domain's NS records or via
-    OpenPGP key servers.</p>
+  content: "<p>This document requests IANA registration of a new DNS OpCode and\nErrorCode type in facilitating encryption of DNS requests and\nreplies and feed back to the client if plain text requests are not\nacceptable. Once this OpCode is seen the DNS server attempts to\ndecrypt the request using its private OpenPGP key. Inside the\nencrypted packet is the AES key which the client expects to be used\nwhen the server encrypts a response. A server may advertise that it\nis capable of DNS encryption by returning OpenPGP fingerprints in\nTXT records using a similar format to Public Key Association (PKA).\nThe full pubic keys are returned from DNS servers by using a CERT\nrequest against the host name(s) of the domain's NS records or via\nOpenPGP key servers.</p>"
 relation:
 - type: includes
   bibitem:

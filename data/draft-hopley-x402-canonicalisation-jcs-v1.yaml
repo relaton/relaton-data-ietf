@@ -1,4 +1,3 @@
----
 id: drafthopleyx402canonicalisationjcsv1
 schema_version: v1.5.6
 formattedref:
@@ -20,47 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a canonicalisation discipline for agentic-
-       payment receipt formats.  The discipline pins JSON Canonicalization
-       Scheme (JCS, RFC 8785) as the canonical preimage form, plus a small
-       set of schema-normalisation rules that must be applied before
-       canonicalisation to preserve byte-determinism across independent
-       implementations and across statutory retention periods.
-
-       The discipline is identified by the URN
-       urn:x402:canonicalisation:jcs-rfc8785-v1.  Receipt formats that
-       reference this discipline carry an in-band canon_version field
-       recording the version under which they were emitted, enabling year-N
-       re-verification of retained bytes without dependence on an out-of-
-       band rule registry.
-
-       The discipline is byte-for-byte cross-validated across eight
-       independent JCS implementations in eight programming languages:
-       Python (rfc8785), TypeScript (canonicalize), Go (gowebpki/jcs), Rust
-       (serde_jcs), Java (cyberphone/json-canonicalization, by the RFC 8785
-       editor), PHP (root23/php-json-canonicalization), C#/.NET
-       (Baqhub.Packages.JsonCanonicalization), and Ruby (json-
-       canonicalization).  The attestation record covering 192 byte-for-byte
-       agreements is published at the AlgoVoi conformance vectors
-       repository.
-
-       This document is normatively referenced by [draft-hopley-x402-
-       compliance-receipt], [draft-hopley-x402-refund-receipt], and
-       successor AlgoVoi-authored receipt-format Internet-Drafts.  It is
-       complementary to [draft-vauban-x402-stark-receipts], which uses a
-       compatible canonicalisation discipline for its cryptographic
-       settlement proofs.
-
-       This document is an Independent Submission filed per RFC 4846 and is
-       intended for publication as Informational.  It is not an IETF
-       Standards Track document, does not represent IETF community
-       consensus, and has not been subject to review by an IETF Working
-       Group.  Change control resides with the document author.  The
-       canonicalisation discipline specified is one approach among possible
-       alternatives; implementers may choose this approach, alternative
-       approaches, or hybrid approaches as appropriate to their
-       requirements.</p>
+  content: "<p>This document specifies a canonicalisation discipline for agentic-\n   payment receipt formats.  The discipline pins JSON Canonicalization\n   Scheme (JCS, RFC 8785) as the canonical preimage form, plus a small\n   set of schema-normalisation rules that must be applied before\n   canonicalisation to preserve byte-determinism across independent\n   implementations and across statutory retention periods.\n\n   The discipline is identified by the URN\n   urn:x402:canonicalisation:jcs-rfc8785-v1.  Receipt formats that\n   reference this discipline carry an in-band canon_version field\n   recording the version under which they were emitted, enabling year-N\n   re-verification of retained bytes without dependence on an out-of-\n   band rule registry.\n\n   The discipline is byte-for-byte cross-validated across eight\n   independent JCS implementations in eight programming languages:\n   Python (rfc8785), TypeScript (canonicalize), Go (gowebpki/jcs), Rust\n   (serde_jcs), Java (cyberphone/json-canonicalization, by the RFC 8785\n   editor), PHP (root23/php-json-canonicalization), C#/.NET\n   (Baqhub.Packages.JsonCanonicalization), and Ruby (json-\n   canonicalization).  The attestation record covering 192 byte-for-byte\n   agreements is published at the AlgoVoi conformance vectors\n   repository.\n\n   This document is normatively referenced by [draft-hopley-x402-\n   compliance-receipt], [draft-hopley-x402-refund-receipt], and\n   successor AlgoVoi-authored receipt-format Internet-Drafts.  It is\n   complementary to [draft-vauban-x402-stark-receipts], which uses a\n   compatible canonicalisation discipline for its cryptographic\n   settlement proofs.\n\n   This document is an Independent Submission filed per RFC 4846 and is\n   intended for publication as Informational.  It is not an IETF\n   Standards Track document, does not represent IETF community\n   consensus, and has not been subject to review by an IETF Working\n   Group.  Change control resides with the document author.  The\n   canonicalisation discipline specified is one approach among possible\n   alternatives; implementers may choose this approach, alternative\n   approaches, or hybrid approaches as appropriate to their\n   requirements.</p>"
 relation:
 - type: includes
   bibitem:

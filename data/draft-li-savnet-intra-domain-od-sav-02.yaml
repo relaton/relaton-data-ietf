@@ -1,4 +1,3 @@
----
 id: draftlisavnetintradomainodsav02
 schema_version: v1.5.6
 type: standard
@@ -79,27 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Source Address Validation (SAV) mechanisms, such as uRPF, ACLs, and
-       BM-SPF, are applied to prevent IP source address spoofing.  However,
-       these mechanisms are typically designed for static routing scenarios
-       and deployed at fixed network boundaries.
-
-       With the increasing adoption of dynamic forwarding technologies such
-       as SRv6 Policy and Fast Reroute (TI-FRR), the network's actual
-       forwarding path may change frequently due to policy-based traffic
-       steering or link failures.  In such cases, statically deployed SAV
-       rules may fail to validate traffic on newly activated or alternate
-       paths, creating validation blind spots or even leading to false
-       positives that block legitimate traffic.
-
-       This draft proposes an On-Demand Source Address Validation Activation
-       mechanism.  It enables routers to dynamically activate or update SAV
-       rules on specific interfaces only when the interface becomes part of
-       an active forwarding path due to policy or failover triggers.  This
-       approach enhances SAV coverage, avoids unnecessary resource
-       consumption, and ensures SAV correctness under dynamic path switching
-       scenarios driven by SRv6-policy and TI-FRR.</p>
+  content: "<p>Source Address Validation (SAV) mechanisms, such as uRPF, ACLs, and\n   BM-SPF, are applied to prevent IP source address spoofing.  However,\n   these mechanisms are typically designed for static routing scenarios\n   and deployed at fixed network boundaries.\n\n   With the increasing adoption of dynamic forwarding technologies such\n   as SRv6 Policy and Fast Reroute (TI-FRR), the network's actual\n   forwarding path may change frequently due to policy-based traffic\n   steering or link failures.  In such cases, statically deployed SAV\n   rules may fail to validate traffic on newly activated or alternate\n   paths, creating validation blind spots or even leading to false\n   positives that block legitimate traffic.\n\n   This draft proposes an On-Demand Source Address Validation Activation\n   mechanism.  It enables routers to dynamically activate or update SAV\n   rules on specific interfaces only when the interface becomes part of\n   an active forwarding path due to policy or failover triggers.  This\n   approach enhances SAV coverage, avoids unnecessary resource\n   consumption, and ensures SAV correctness under dynamic path switching\n   scenarios driven by SRv6-policy and TI-FRR.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: drafthopleyx402paymentevidenceframe00
 schema_version: v1.5.6
 type: standard
@@ -54,29 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a Payment Evidence Frame (PEF): a transport-
-       agnostic envelope that wraps any payment lifecycle receipt from the
-       x402 agentic-payment receipt stack under a named claim type, a
-       deterministic frame identifier, and an optional transport-layer
-       signature.
-
-       The frame introduces three properties that the inner receipt types do
-       not individually provide: (1) a stable cross-system identifier
-       (frame_id) derived deterministically from the receipt content by
-       SHA-256 over the JCS-canonical preimage, so the same payment evidence
-       can be referenced by identifier across HTTP headers, agent-to-agent
-       task artifacts, audit logs, and on-chain memo fields without re-
-       serialising the full receipt; (2) a taxonomy label (claim_type) that
-       tells a consumer what class of evidence a frame carries before the
-       inner receipt format is parsed; and (3) a receipt integrity hash
-       (receipt_hash) that allows any downstream party to confirm the inner
-       receipt is unaltered without deserialising its full structure.
-
-       The format uses the same JCS canonicalisation discipline (draft-
-       hopley-x402-canonicalisation-jcs) as the five inner receipt formats
-       it envelopes, so implementations require only one canonicalisation
-       primitive for the full receipt stack.</p>
+  content: "<p>This document specifies a Payment Evidence Frame (PEF): a transport-\n   agnostic envelope that wraps any payment lifecycle receipt from the\n   x402 agentic-payment receipt stack under a named claim type, a\n   deterministic frame identifier, and an optional transport-layer\n   signature.\n\n   The frame introduces three properties that the inner receipt types do\n   not individually provide: (1) a stable cross-system identifier\n   (frame_id) derived deterministically from the receipt content by\n   SHA-256 over the JCS-canonical preimage, so the same payment evidence\n   can be referenced by identifier across HTTP headers, agent-to-agent\n   task artifacts, audit logs, and on-chain memo fields without re-\n   serialising the full receipt; (2) a taxonomy label (claim_type) that\n   tells a consumer what class of evidence a frame carries before the\n   inner receipt format is parsed; and (3) a receipt integrity hash\n   (receipt_hash) that allows any downstream party to confirm the inner\n   receipt is unaltered without deserialising its full structure.\n\n   The format uses the same JCS canonicalisation discipline (draft-\n   hopley-x402-canonicalisation-jcs) as the five inner receipt formats\n   it envelopes, so implementations require only one canonicalisation\n   primitive for the full receipt stack.</p>"
 series:
 - type: main
   title:

@@ -1,0 +1,39 @@
+id: draftdasthirdpartydecisionbinding
+schema_version: v1.5.6
+formattedref:
+  content: draft-das-third-party-decision-binding
+title:
+- language: en
+  script: Latn
+  content: 'Trust Me, I Checked: Verifiable Third-Party Decision Binding at the Execution-Finality Boundary'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-third-party-decision-binding-00
+docidentifier:
+- content: draft-das-third-party-decision-binding
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-15'
+abstract:
+- language: en
+  script: Latn
+  content: "<p>High-consequence distributed systems frequently allow one component\n   to act based on a decision produced by another component, such as an\n   authorization server, policy engine, risk service, attestation\n   Verifier, compliance service, workload-identity authority, or safety\n   controller.  The vulnerability is not limited to forged credentials:\n   a compromised or incorrectly designed intermediary can claim that a\n   required third-party check succeeded, replay an earlier decision,\n   substitute evidence from a different act or context, suppress a\n   required DENY, or retain evidence only for audit while the protected\n   effect remains technically independent of that evidence.  The issue\n   deserves high attention where the downstream consequence is\n   financial, administrative, privacy-sensitive, safety-relevant,\n   infrastructure-changing, or otherwise difficult to reverse.\n\n   Existing mechanisms solve important parts of this problem.  OAuth\n   Token Introspection [RFC7662] lets a protected resource query token\n   state; HTTP Message Signatures [RFC9421] provide integrity and\n   authenticity for selected HTTP message components; RATS [RFC9334]\n   provides Evidence, Verifiers, and Attestation Results; Transaction\n   Tokens [TXN-TOKENS] propagate identity and authorization context\n   through trusted call chains; SCITT [RFC9943] provides signed\n   statements, transparency, and verifiable receipts; and current\n   authorization- evidence work [MUNOZ-EVIDENCE] [MUNOZ-SCITT] defines\n   signed pre-execution Permits bound to canonical request material.\n   Where one of these mechanisms is verified by the actual non-\n   bypassable effectuation boundary and already proves the required\n   decision for the exact act, current context, and authorized use, that\n   deployment can already satisfy the property described here.\n\n   The residual gap arises only where the consequential component\n   receives an upstream claim such as \"the external check passed\", where\n   authentic evidence is bound to the wrong act, authority, tenant,\n   purpose, generation, or sink, where valid evidence has become stale\n   or replayable, where only a subset of required authorities is\n   represented, or where evidence exists but is not a load-bearing\n   prerequisite of effectuation.  This document introduces an\n   architectural role called External Decision Evidence (EDE).  EDE is\n   not a new wire format: an existing Permit, SCITT statement or\n   receipt, Attestation Result, live authenticated decision response, or\n   other protected result can instantiate EDE when its semantics satisfy\n   the deployment profile.\n\n   The proposed invariant is that a Candidate Act remains non-effective\n   until the Finality Sink independently establishes that every required\n   external decision authority issued an applicable decision for the\n   concrete act, under the required decision basis and current state,\n   with freshness, audience or sink binding, and authorized-use\n   semantics appropriate to the deployment.  Prevention is claimed only\n   when the protected consequence cannot occur without successful\n   verification of the required evidence and alternate effectuation\n   paths cannot bypass that verification.  Otherwise the mechanism\n   provides auditability, accountability, detection, or mitigation\n   rather than the same prevention guarantee.\n\n   The model is intended to complement, not criticize or replace, OAuth,\n   WIMSE, SCITT, RATS, externalized policy systems such as Amazon\n   Verified Permissions/Cedar, continuous-access systems such as\n   Microsoft Entra Continuous Access Evaluation, Google Cloud IAM\n   controls, and protected-compute technologies such as NVIDIA\n   attestation and Arm CCA.  The proposed delta is not the invention of\n   signatures, authorization evidence, receipts, or attestation results;\n   it is the effectuation-time requirement that independently verifiable\n   required decisions become load-bearing for the exact protected act.\n   Criticism, corrections, counterexamples, implementation experience,\n   prior-art pointers, and evidence that existing mechanisms already\n   provide the full invariant are explicitly invited.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-third-party-decision-binding-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-third-party-decision-binding-00
+    docidentifier:
+    - content: draft-das-third-party-decision-binding-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

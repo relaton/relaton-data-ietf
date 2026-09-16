@@ -1,4 +1,3 @@
----
 id: draftfloydtcpslowstart02
 schema_version: v1.5.6
 type: standard
@@ -54,21 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This note describes an optional modification for TCP's slow-start for
-    use with TCP connections with large congestion windows.  For TCP
-    connections that are able to use congestion windows of thousands (or
-    tens of thousands) of MSS-sized segments (for MSS the sender's
-    MAXIMUM SEGMENT SIZE), the current slow-start procedure can result in
-    increasing the congestion window by thousands of segments in a single
-    round-trip time.  Such an increase can easily result in thousands of
-    packets being dropped in one round-trip time.  This is often counter-
-    productive for the TCP flow itself, and is also hard on the rest of
-    the traffic sharing the congested link.  This note describes Limited
-    Slow-Start as an optional mechanism for limiting the number of
-    segments by which the congestion window is increased for one window
-    of data during slow-start, in order to improve performance for TCP
-    connections with large congestion windows.</p>
+  content: "<p>This note describes an optional modification for TCP's slow-start for\nuse with TCP connections with large congestion windows.  For TCP\nconnections that are able to use congestion windows of thousands (or\ntens of thousands) of MSS-sized segments (for MSS the sender's\nMAXIMUM SEGMENT SIZE), the current slow-start procedure can result in\nincreasing the congestion window by thousands of segments in a single\nround-trip time.  Such an increase can easily result in thousands of\npackets being dropped in one round-trip time.  This is often counter-\nproductive for the TCP flow itself, and is also hard on the rest of\nthe traffic sharing the congested link.  This note describes Limited\nSlow-Start as an optional mechanism for limiting the number of\nsegments by which the congestion window is increased for one window\nof data during slow-start, in order to improve performance for TCP\nconnections with large congestion windows.</p>"
 series:
 - type: main
   title:

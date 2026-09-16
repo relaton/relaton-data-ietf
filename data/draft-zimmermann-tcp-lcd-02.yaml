@@ -1,4 +1,3 @@
----
 id: draftzimmermanntcplcd02
 schema_version: v1.5.6
 type: standard
@@ -79,24 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Disruptions in end-to-end path connectivity which last longer than
-    one retransmission timeout cause suboptimal TCP performance.  The
-    reason for the performance degradation is that TCP interprets segment
-    loss induced by connectivity disruptions as a sign of congestion,
-    resulting in repeated backoffs of the retransmission timer.  This
-    leads in turn to a deferred detection of the re-establishment of the
-    connection since TCP waits until the next retransmission timeout
-    occurs before attempting the retransmission.
-
-    This document describes how standard ICMP messages can be exploited
-    to disambiguate true congestion loss from non-congestion loss caused
-    by long connectivity disruptions.  Moreover, a revert strategy of the
-    retransmission timer is specified that enables a more prompt
-    detection of whether the connectivity to a previously disconnected
-    peer node has been restored or not.  The specified algorithm is a TCP
-    sender-only modification that effectively improves TCP performance in
-    presence of connectivity disruptions.</p>
+  content: "<p>Disruptions in end-to-end path connectivity which last longer than\none retransmission timeout cause suboptimal TCP performance.  The\nreason for the performance degradation is that TCP interprets segment\nloss induced by connectivity disruptions as a sign of congestion,\nresulting in repeated backoffs of the retransmission timer.  This\nleads in turn to a deferred detection of the re-establishment of the\nconnection since TCP waits until the next retransmission timeout\noccurs before attempting the retransmission.\n\nThis document describes how standard ICMP messages can be exploited\nto disambiguate true congestion loss from non-congestion loss caused\nby long connectivity disruptions.  Moreover, a revert strategy of the\nretransmission timer is specified that enables a more prompt\ndetection of whether the connectivity to a previously disconnected\npeer node has been restored or not.  The specified algorithm is a TCP\nsender-only modification that effectively improves TCP performance in\npresence of connectivity disruptions.</p>"
 series:
 - type: main
   title:

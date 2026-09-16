@@ -1,4 +1,3 @@
----
 id: draftkondojuevc00
 schema_version: v1.5.6
 type: standard
@@ -57,25 +56,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the External Verifier Contract (EVC): a
-       small, testable, proof-system-agnostic boundary between a host (the
-       program about to take a privileged action on an agent's behalf) and
-       an external verifier (a subprocess that renders an allow/deny verdict
-       on an opaque proof bundle).  The contract governs only the transport
-       and verdict envelope: how the host hands a single JSON request to a
-       verifier subprocess over stdin, how the verifier answers with exactly
-       one JSON verdict on stdout, and how the host interprets exit codes,
-       timeouts, and malformed output under a fail-closed rule.  Three
-       properties make the boundary standardizable: (1) a single-shot
-       subprocess transport with a closed JSON verdict schema; (2) fail-
-       closed host semantics that are independently testable by a host-
-       conformance suite; and (3) proof-system agnosticism, so the same
-       envelope carries classical-signature, zero-knowledge, and third-party
-       verdicts, distinguished only by an OPTIONAL self-description field.
-       EVC is deliberately not a governance framework, not a delegation
-       model, and not a policy language.  It is the narrow decision boundary
-       those larger systems all require at the point of enforcement.</p>
+  content: "<p>This document specifies the External Verifier Contract (EVC): a\n   small, testable, proof-system-agnostic boundary between a host (the\n   program about to take a privileged action on an agent's behalf) and\n   an external verifier (a subprocess that renders an allow/deny verdict\n   on an opaque proof bundle).  The contract governs only the transport\n   and verdict envelope: how the host hands a single JSON request to a\n   verifier subprocess over stdin, how the verifier answers with exactly\n   one JSON verdict on stdout, and how the host interprets exit codes,\n   timeouts, and malformed output under a fail-closed rule.  Three\n   properties make the boundary standardizable: (1) a single-shot\n   subprocess transport with a closed JSON verdict schema; (2) fail-\n   closed host semantics that are independently testable by a host-\n   conformance suite; and (3) proof-system agnosticism, so the same\n   envelope carries classical-signature, zero-knowledge, and third-party\n   verdicts, distinguished only by an OPTIONAL self-description field.\n   EVC is deliberately not a governance framework, not a delegation\n   model, and not a policy language.  It is the narrow decision boundary\n   those larger systems all require at the point of enforcement.</p>"
 relation:
 - type: updatedBy
   bibitem:

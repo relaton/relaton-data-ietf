@@ -1,4 +1,3 @@
----
 id: draftlitkowskipcestatesync04
 schema_version: v1.5.6
 type: standard
@@ -104,38 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Path Computation Element Communication Protocol (PCEP) provides
-       mechanisms for Path Computation Elements (PCEs) to perform path
-       computations in response to Path Computation Clients (PCCs) requests.
-       The stateful PCE extensions allow stateful control of Multi-Protocol
-       Label Switching (MPLS) Traffic Engineering Label Switched Paths (TE
-       LSPs) using PCEP.
-
-       A Path Computation Client (PCC) can synchronize an LSP state
-       information to a Stateful Path Computation Element (PCE).  The
-       stateful PCE extension allows a redundancy scenario where a PCC can
-       have redundant PCEP sessions towards multiple PCEs.  In such a case,
-       a PCC gives control on a LSP to only a single PCE, and only one PCE
-       is responsible for path computation for this delegated LSP.  The
-       document does not state the procedures related to an inter-PCE
-       stateful communication.
-
-       There are some use cases, where an inter-PCE stateful communication
-       can bring additional resiliency in the design, for instance when some
-       PCC-PCE sessions fails.  The inter-PCE stateful communication may
-       also provide a faster update of the LSP states when an event occurs.
-       Finally, when, in a redundant PCE scenario, there is a need to
-       compute a set of paths that are part of a group (so there is a
-       dependency between the paths), there may be some cases where the
-       computation of all paths in the group is not handled by the same PCE:
-       this situation is called a split-brain.  This split-brain scenario
-       may lead to computation loops between PCEs or suboptimal path
-       computation.
-
-       This document describes the procedures to allow a stateful
-       communication between PCEs for various use-cases and also the
-       procedures to prevent computations loops.</p>
+  content: "<p>The Path Computation Element Communication Protocol (PCEP) provides\n   mechanisms for Path Computation Elements (PCEs) to perform path\n   computations in response to Path Computation Clients (PCCs) requests.\n   The stateful PCE extensions allow stateful control of Multi-Protocol\n   Label Switching (MPLS) Traffic Engineering Label Switched Paths (TE\n   LSPs) using PCEP.\n\n   A Path Computation Client (PCC) can synchronize an LSP state\n   information to a Stateful Path Computation Element (PCE).  The\n   stateful PCE extension allows a redundancy scenario where a PCC can\n   have redundant PCEP sessions towards multiple PCEs.  In such a case,\n   a PCC gives control on a LSP to only a single PCE, and only one PCE\n   is responsible for path computation for this delegated LSP.  The\n   document does not state the procedures related to an inter-PCE\n   stateful communication.\n\n   There are some use cases, where an inter-PCE stateful communication\n   can bring additional resiliency in the design, for instance when some\n   PCC-PCE sessions fails.  The inter-PCE stateful communication may\n   also provide a faster update of the LSP states when an event occurs.\n   Finally, when, in a redundant PCE scenario, there is a need to\n   compute a set of paths that are part of a group (so there is a\n   dependency between the paths), there may be some cases where the\n   computation of all paths in the group is not handled by the same PCE:\n   this situation is called a split-brain.  This split-brain scenario\n   may lead to computation loops between PCEs or suboptimal path\n   computation.\n\n   This document describes the procedures to allow a stateful\n   communication between PCEs for various use-cases and also the\n   procedures to prevent computations loops.</p>"
 relation:
 - type: updates
   bibitem:

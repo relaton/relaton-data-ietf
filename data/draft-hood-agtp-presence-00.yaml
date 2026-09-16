@@ -1,4 +1,3 @@
----
 id: drafthoodagtppresence00
 schema_version: v1.5.6
 type: standard
@@ -54,30 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies AGTP Presence, an ambient discovery and
-       visibility layer for the Agent Transfer Protocol (AGTP).  Existing
-       agent discovery proposals are pull-based: an agent must know where to
-       look (a catalog URL, a registry endpoint, a DNS name) before
-       discovery can begin.  AGTP Presence inverts this model.  When an
-       agent joins the AGTP substrate, it becomes structurally addressable
-       and visible to the relevant scope of other agents immediately,
-       without requiring registration with a central directory.
-
-       The architecture combines three proven patterns: a Distributed Hash
-       Table (DHT) keyed by Canonical Agent-ID for content-addressable
-       routing, a gossip-based protocol for presence announcement and
-       convergence, and trust-tier-scoped overlay partitioning for
-       visibility control.  Per-agent visibility is cryptographically
-       declared in AGTP-CERT certificate extensions and enforced
-       structurally, with three orthogonal axes of control: presence
-       visibility, disclosure visibility, and audience scoping.
-
-       This document defines three new lifecycle methods (ANNOUNCE,
-       WITHDRAW, PROBE), specifies the DHT and gossip protocols, defines the
-       visibility model and its certificate extensions, addresses scaling
-       through hybrid participation modes and federation-of-scoped-overlays,
-       and provides a threat model with concrete mitigations.</p>
+  content: "<p>This document specifies AGTP Presence, an ambient discovery and\n   visibility layer for the Agent Transfer Protocol (AGTP).  Existing\n   agent discovery proposals are pull-based: an agent must know where to\n   look (a catalog URL, a registry endpoint, a DNS name) before\n   discovery can begin.  AGTP Presence inverts this model.  When an\n   agent joins the AGTP substrate, it becomes structurally addressable\n   and visible to the relevant scope of other agents immediately,\n   without requiring registration with a central directory.\n\n   The architecture combines three proven patterns: a Distributed Hash\n   Table (DHT) keyed by Canonical Agent-ID for content-addressable\n   routing, a gossip-based protocol for presence announcement and\n   convergence, and trust-tier-scoped overlay partitioning for\n   visibility control.  Per-agent visibility is cryptographically\n   declared in AGTP-CERT certificate extensions and enforced\n   structurally, with three orthogonal axes of control: presence\n   visibility, disclosure visibility, and audience scoping.\n\n   This document defines three new lifecycle methods (ANNOUNCE,\n   WITHDRAW, PROBE), specifies the DHT and gossip protocols, defines the\n   visibility model and its certificate extensions, addresses scaling\n   through hybrid participation modes and federation-of-scoped-overlays,\n   and provides a threat model with concrete mitigations.</p>"
 series:
 - type: main
   title:

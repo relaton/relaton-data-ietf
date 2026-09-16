@@ -1,4 +1,3 @@
----
 id: draftnatarajantsvwgsctpnrsack08
 schema_version: v1.5.6
 type: standard
@@ -155,33 +154,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Stream Control Transmission Protocol (SCTP) [RFC4960] specifies
-       Selective Acknowledgements (SACKs) to allow an SCTP data receiver to
-       acknowledge DATA chunks which arrive out-of-order.  In SCTP, SACK
-       information is advisory -- though SACKs notify a data sender about
-       the reception of specific out-of-order data, the SCTP data receiver
-       is permitted to later discard the data, a.k.a reneging.  Since
-       delivery of a SACKed out-of-order DATA chunk is not guaranteed, a
-       copy of this DATA chunk MUST be kept in the data sender's
-       retransmission queue until this DATA chunk is cumulatively acked.
-
-       By definition, data that has been delivered to the application is
-       non-renegable by the SCTP data receiver.  (Recall that, in SCTP, out-
-       of-order data can sometimes be delivered.)  Also, SCTP
-       implementations can be configured such that the SCTP data receiver is
-       not allowed to, and therefore, never reneges on out-of-order data.
-       With SCTP's current SACK mechanism, non-renegable out-of-order data
-       is selectively acked, and is (wrongly) deemed renegable by the SCTP
-       data sender.
-
-       This document specifies an extension to SCTP's acknowledgment
-       mechanism called Non-Renegable Selective Acknowledgements (NR-SACKs.)
-       NR-SACKs enable a data receiver to explicitly inform the data sender
-       of non-renegable out-of-order data.  As opposed to renegable data, a
-       data sender can consider non-renegable data as never requiring
-       retransmission, and therefore can remove non-renegable data from the
-       retransmission queue.</p>
+  content: "<p>Stream Control Transmission Protocol (SCTP) [RFC4960] specifies\n   Selective Acknowledgements (SACKs) to allow an SCTP data receiver to\n   acknowledge DATA chunks which arrive out-of-order.  In SCTP, SACK\n   information is advisory -- though SACKs notify a data sender about\n   the reception of specific out-of-order data, the SCTP data receiver\n   is permitted to later discard the data, a.k.a reneging.  Since\n   delivery of a SACKed out-of-order DATA chunk is not guaranteed, a\n   copy of this DATA chunk MUST be kept in the data sender's\n   retransmission queue until this DATA chunk is cumulatively acked.\n\n   By definition, data that has been delivered to the application is\n   non-renegable by the SCTP data receiver.  (Recall that, in SCTP, out-\n   of-order data can sometimes be delivered.)  Also, SCTP\n   implementations can be configured such that the SCTP data receiver is\n   not allowed to, and therefore, never reneges on out-of-order data.\n   With SCTP's current SACK mechanism, non-renegable out-of-order data\n   is selectively acked, and is (wrongly) deemed renegable by the SCTP\n   data sender.\n\n   This document specifies an extension to SCTP's acknowledgment\n   mechanism called Non-Renegable Selective Acknowledgements (NR-SACKs.)\n   NR-SACKs enable a data receiver to explicitly inform the data sender\n   of non-renegable out-of-order data.  As opposed to renegable data, a\n   data sender can consider non-renegable data as never requiring\n   retransmission, and therefore can remove non-renegable data from the\n   retransmission queue.</p>"
 series:
 - type: main
   title:

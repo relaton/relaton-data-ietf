@@ -1,4 +1,3 @@
----
 id: draftlcurleycompressedmp400
 schema_version: v1.5.6
 type: standard
@@ -49,19 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Fragmented MP4 (fMP4) is widely used for live streaming, but the ISO
-       Base Media File Format (ISOBMFF) box structure imposes significant
-       per-fragment overhead.  Each box header requires 8 bytes (4-byte size
-       + 4-byte type), and payload fields use fixed-width integers (u32/
-       u64).  For low-latency streaming with single-frame fragments, this
-       overhead can exceed the media payload itself.
-
-       This document defines a compression scheme for ISO BMFF that replaces
-       box headers with compact varint-encoded identifiers and sizes, and
-       defines compressed variants of commonly used boxes with varint
-       payload fields.  The scheme reduces per-fragment overhead from ~100
-       bytes to ~20 bytes while preserving the full box hierarchy.</p>
+  content: "<p>Fragmented MP4 (fMP4) is widely used for live streaming, but the ISO\n   Base Media File Format (ISOBMFF) box structure imposes significant\n   per-fragment overhead.  Each box header requires 8 bytes (4-byte size\n   + 4-byte type), and payload fields use fixed-width integers (u32/\n   u64).  For low-latency streaming with single-frame fragments, this\n   overhead can exceed the media payload itself.\n\n   This document defines a compression scheme for ISO BMFF that replaces\n   box headers with compact varint-encoded identifiers and sizes, and\n   defines compressed variants of commonly used boxes with varint\n   payload fields.  The scheme reduces per-fragment overhead from ~100\n   bytes to ~20 bytes while preserving the full box hierarchy.</p>"
 series:
 - type: main
   title:

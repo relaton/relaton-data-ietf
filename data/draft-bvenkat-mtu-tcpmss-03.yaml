@@ -1,4 +1,3 @@
----
 id: draftbvenkatmtutcpmss03
 schema_version: v1.5.6
 type: standard
@@ -49,33 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Path MTU discovery as it exists now finds the least MTU of a given
-       path. Traceroute through IP option [3] provides a method for finding
-       the MTU on each hop using an ICMP message as a reply from the target
-       host, with output link MTU in a portion of the message. The method
-       proposed in this document intends to find the outbound MTU on each
-       hop on an internet path, without using the ICMP message for
-       traceroute. This mechanism intends to acheive the same goal as the
-       traceroute through IP option, but through a different mechanism.
-
-       Discovery  of the MTU of each router on a internet path would serve
-       as a valuable network debugging tool. The way in which it is
-       proposed to be implemented, it has the advantage of being
-       automatically supported by all of the routers that support the TCP
-       layer. It has a couple of disadvantages that it generates quite a few
-       TCP packets and the amount of time it takes to run to discover each
-       MTU along the path is quite substantial.
-
-       This document specifies the MTU discovery mechanism with the
-       existing IP and TCP options and the ICMP message types that
-       exist on all routers that support TCP layer in the internet. This
-       method is suggested as an alternative to the Traceroute through
-       IP option [3]. The intention is not to obsolete RFC 1393.
-
-       This document also suggests that by default a reply SYN packet
-       from a target host should include a MSS value that is derived from
-       the MTU of the connected network of the outbound interface.</p>
+  content: "<p>Path MTU discovery as it exists now finds the least MTU of a given\n   path. Traceroute through IP option [3] provides a method for finding\n   the MTU on each hop using an ICMP message as a reply from the target\n   host, with output link MTU in a portion of the message. The method\n   proposed in this document intends to find the outbound MTU on each\n   hop on an internet path, without using the ICMP message for\n   traceroute. This mechanism intends to acheive the same goal as the\n   traceroute through IP option, but through a different mechanism.\n\n   Discovery  of the MTU of each router on a internet path would serve\n   as a valuable network debugging tool. The way in which it is\n   proposed to be implemented, it has the advantage of being\n   automatically supported by all of the routers that support the TCP\n   layer. It has a couple of disadvantages that it generates quite a few\n   TCP packets and the amount of time it takes to run to discover each\n   MTU along the path is quite substantial.\n\n   This document specifies the MTU discovery mechanism with the\n   existing IP and TCP options and the ICMP message types that\n   exist on all routers that support TCP layer in the internet. This\n   method is suggested as an alternative to the Traceroute through\n   IP option [3]. The intention is not to obsolete RFC 1393.\n\n   This document also suggests that by default a reply SYN packet\n   from a target host should include a MSS value that is derived from\n   the MTU of the connected network of the outbound interface.</p>"
 series:
 - type: main
   title:

@@ -1,4 +1,3 @@
----
 id: draftzhangtrillvlanextension
 schema_version: v1.5.6
 formattedref:
@@ -20,25 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>TRILL is originally designed for customer networks. When it is used
-       as a provider network to interconnect multiple separate users, the
-       space of current Inner VLAN becomes insufficient. As an easy way, a
-       new VLAN ID field is added to the Inner Ethernet frame. The new VLAN
-       ID can be use in conjunction with the previous defined Inner VLAN.
-       This mechanism is usually known as stacked VLANs(802.1ad, or QinQ).
-       The stacked VLANs mechanism is analyzed in this document. The method
-       to introduce a single longer VLAN field to current TRILL header is
-       also analyzed in this document.  In addition, a novel MAC address
-       rewriting mechanism is also brought forward to break the space
-       limitation of the Inner VLAN. The MAC addresses of the native frame
-       are not used for forwarding process in transit RBridges. When the
-       packet enters the TRILL network, the ingress RBridge (Appointed
-       Forwarder) uses a Virtual MAC (VMAC) address to replace the real MAC
-       and embedded the native VLAN ID into this virtual MAC address. When a
-       packet egresses from the TRILL network, the egress RBridge will use
-       the real MAC address to replace the virtual MAC address and deliver
-       it to the destination on the local link.</p>
+  content: "<p>TRILL is originally designed for customer networks. When it is used\n   as a provider network to interconnect multiple separate users, the\n   space of current Inner VLAN becomes insufficient. As an easy way, a\n   new VLAN ID field is added to the Inner Ethernet frame. The new VLAN\n   ID can be use in conjunction with the previous defined Inner VLAN.\n   This mechanism is usually known as stacked VLANs(802.1ad, or QinQ).\n   The stacked VLANs mechanism is analyzed in this document. The method\n   to introduce a single longer VLAN field to current TRILL header is\n   also analyzed in this document.  In addition, a novel MAC address\n   rewriting mechanism is also brought forward to break the space\n   limitation of the Inner VLAN. The MAC addresses of the native frame\n   are not used for forwarding process in transit RBridges. When the\n   packet enters the TRILL network, the ingress RBridge (Appointed\n   Forwarder) uses a Virtual MAC (VMAC) address to replace the real MAC\n   and embedded the native VLAN ID into this virtual MAC address. When a\n   packet egresses from the TRILL network, the egress RBridge will use\n   the real MAC address to replace the virtual MAC address and deliver\n   it to the destination on the local link.</p>"
 relation:
 - type: includes
   bibitem:

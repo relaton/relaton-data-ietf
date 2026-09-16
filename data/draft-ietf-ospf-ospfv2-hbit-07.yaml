@@ -1,4 +1,3 @@
----
 id: draftietfospfospfv2hbit07
 schema_version: v1.5.6
 type: standard
@@ -129,20 +128,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The OSPFv2 specifies an SPF algorithm that identifies transit
-       vertices based on their adjacencies.  Therefore, OSPFv2 does not have
-       a mechanism to prevent traffic transiting a participating node if it
-       is a transit vertex in the only existing or shortest path to the
-       destination.  The use of metrics to make the node undesirable can
-       only help to repel traffic if an alternative better route exists.
-       This document defines the Host-bit functionality to prevent other
-       OSPFv2 routers from using the router for transit traffic in OSPFv2
-       routing domains.  This document updates the [RFC2328] by assigning a
-       new bit (Host-bit) in the OSPF Router-LSA bit registry.  If the Host-
-       bit is set, the calculation of the shortest-path tree for an area, as
-       described in [RFC2328], is modified by including a new check to
-       verify that transit vertices have the Host-bit clear.</p>
+  content: "<p>The OSPFv2 specifies an SPF algorithm that identifies transit\n   vertices based on their adjacencies.  Therefore, OSPFv2 does not have\n   a mechanism to prevent traffic transiting a participating node if it\n   is a transit vertex in the only existing or shortest path to the\n   destination.  The use of metrics to make the node undesirable can\n   only help to repel traffic if an alternative better route exists.\n   This document defines the Host-bit functionality to prevent other\n   OSPFv2 routers from using the router for transit traffic in OSPFv2\n   routing domains.  This document updates the [RFC2328] by assigning a\n   new bit (Host-bit) in the OSPF Router-LSA bit registry.  If the Host-\n   bit is set, the calculation of the shortest-path tree for an area, as\n   described in [RFC2328], is modified by including a new check to\n   verify that transit vertices have the Host-bit clear.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,12 +1,10 @@
----
 id: draftjohanidnsopdnssecalgsplit00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Algorithm-Split DNSSEC: KSK/ZSK Algorithm Separation with Bounded ZSK
-    Cadence'
+  content: 'Algorithm-Split DNSSEC: KSK/ZSK Algorithm Separation with Bounded ZSK Cadence'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-johani-dnsop-dnssec-alg-split-00
@@ -55,28 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Post-quantum DNSSEC signature algorithms have much larger keys and/or
-       signatures than the elliptic-curve algorithms in common use today.
-       Signing an entire zone with such an algorithm inflates every
-       signature in the zone.  A natural transition strategy applies a large
-       algorithm only to the key-signing key (KSK), which signs only the
-       apex DNSKEY RRset, while the bulk of the zone continues to be signed
-       with a smaller zone-signing key (ZSK).
-
-       This document specifies the three changes that, taken together, make
-       this pattern safe and practical: (1) it relaxes the DNSSEC signing
-       rule that requires a zone to be signed with every algorithm present
-       in the apex DNSKEY RRset, so that an algorithm used only by a key-
-       signing key need not be applied to the rest of the zone; (2) it
-       imposes a bounded ZSK rotation cadence as the security parameter that
-       compensates for the asymmetric strength of the two algorithms; and
-       (3) it specifies how a resolver can use the algorithm number in the
-       parent's DS RRset to recognize a likely-oversized DNSKEY RRset and
-       select a transport suitable for large responses, avoiding the
-       truncate-then-retry round trip.  The three parts are interdependent
-       and constitute a single proposal.  This document updates RFC 4035 and
-       RFC 6840.</p>
+  content: "<p>Post-quantum DNSSEC signature algorithms have much larger keys and/or\n   signatures than the elliptic-curve algorithms in common use today.\n   Signing an entire zone with such an algorithm inflates every\n   signature in the zone.  A natural transition strategy applies a large\n   algorithm only to the key-signing key (KSK), which signs only the\n   apex DNSKEY RRset, while the bulk of the zone continues to be signed\n   with a smaller zone-signing key (ZSK).\n\n   This document specifies the three changes that, taken together, make\n   this pattern safe and practical: (1) it relaxes the DNSSEC signing\n   rule that requires a zone to be signed with every algorithm present\n   in the apex DNSKEY RRset, so that an algorithm used only by a key-\n   signing key need not be applied to the rest of the zone; (2) it\n   imposes a bounded ZSK rotation cadence as the security parameter that\n   compensates for the asymmetric strength of the two algorithms; and\n   (3) it specifies how a resolver can use the algorithm number in the\n   parent's DS RRset to recognize a likely-oversized DNSKEY RRset and\n   select a transport suitable for large responses, avoiding the\n   truncate-then-retry round trip.  The three parts are interdependent\n   and constitute a single proposal.  This document updates RFC 4035 and\n   RFC 6840.</p>"
 relation:
 - type: updatedBy
   bibitem:

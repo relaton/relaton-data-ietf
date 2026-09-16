@@ -1,4 +1,3 @@
----
 id: draftzehavioauthauthzreqdelchain
 schema_version: v1.5.6
 formattedref:
@@ -20,23 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Brokered OAuth redirect authorization requests involve intermediary
-       authorization servers between a downstream client and the upstream
-       authorization server that obtains user consent and issues tokens.
-       Such deployments have security risks because the upstream
-       authorization server sees only the immediate OAuth client and is
-       unaware of the downstream client or intermediary brokers obtaining
-       its response.
-
-       This document defines an OAuth 2.0 profile for carrying a verifiable,
-       signed authorization request delegation chain as a RAR
-       authorization_details object [RFC9396].  Each node in the chain is a
-       JSON object signed by an attesting authorization server using
-       detached JWS [RFC7515], attesting its validated client, hash-linked
-       to the previous node, allowing the upstream authorization server to
-       validate the integrity of the visible delegation path and apply
-       policy before issuing tokens.</p>
+  content: "<p>Brokered OAuth redirect authorization requests involve intermediary\n   authorization servers between a downstream client and the upstream\n   authorization server that obtains user consent and issues tokens.\n   Such deployments have security risks because the upstream\n   authorization server sees only the immediate OAuth client and is\n   unaware of the downstream client or intermediary brokers obtaining\n   its response.\n\n   This document defines an OAuth 2.0 profile for carrying a verifiable,\n   signed authorization request delegation chain as a RAR\n   authorization_details object [RFC9396].  Each node in the chain is a\n   JSON object signed by an attesting authorization server using\n   detached JWS [RFC7515], attesting its validated client, hash-linked\n   to the previous node, allowing the upstream authorization server to\n   validate the integrity of the visible delegation path and apply\n   policy before issuing tokens.</p>"
 relation:
 - type: includes
   bibitem:

@@ -1,12 +1,10 @@
----
 id: draftietfqresyncrfc5162bis03
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: IMAP Extensions for Conditional STORE Operation or Quick Flag Changes Resynchronization
-    (CONDSTORE) and Quick Mailbox Resynchronization (QRESYNC)
+  content: IMAP Extensions for Conditional STORE Operation or Quick Flag Changes Resynchronization (CONDSTORE) and Quick Mailbox Resynchronization (QRESYNC)
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-qresync-rfc5162bis-03
@@ -70,31 +68,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Often, multiple IMAP (RFC 3501) clients need to coordinate changes to
-       a common IMAP mailbox.  Examples include different clients working on
-       behalf of the same user, and multiple users accessing shared
-       mailboxes.  These clients need a mechanism to synchronize state
-       changes for messages within the mailbox.  They must be able to
-       guarantee that only one client can change message state (e.g.,
-       message flags) at any time.  An example of such an application is use
-       of an IMAP mailbox as a message queue with multiple dequeueing
-       clients.
-
-       The Conditional Store facility provides a protected update mechanism
-       for message state information that can detect and resolve conflicts
-       between multiple writing mail clients.
-
-       The Conditional Store facility also allows a client to quickly
-       resynchronize mailbox flag changes.
-
-       This document additionally defines another IMAP extension, which
-       gives an IMAP client the ability to quickly resynchronize any
-       previously opened mailbox as part of the SELECT command, without the
-       need for server-side state or additional client round-trips.  This
-       extension also introduces a new response that allows for a more
-       compact representation of a list of expunged messages (and always
-       includes the Unique Identifiers (UIDs) expunged).</p>
+  content: "<p>Often, multiple IMAP (RFC 3501) clients need to coordinate changes to\n   a common IMAP mailbox.  Examples include different clients working on\n   behalf of the same user, and multiple users accessing shared\n   mailboxes.  These clients need a mechanism to synchronize state\n   changes for messages within the mailbox.  They must be able to\n   guarantee that only one client can change message state (e.g.,\n   message flags) at any time.  An example of such an application is use\n   of an IMAP mailbox as a message queue with multiple dequeueing\n   clients.\n\n   The Conditional Store facility provides a protected update mechanism\n   for message state information that can detect and resolve conflicts\n   between multiple writing mail clients.\n\n   The Conditional Store facility also allows a client to quickly\n   resynchronize mailbox flag changes.\n\n   This document additionally defines another IMAP extension, which\n   gives an IMAP client the ability to quickly resynchronize any\n   previously opened mailbox as part of the SELECT command, without the\n   need for server-side state or additional client round-trips.  This\n   extension also introduces a new response that allows for a more\n   compact representation of a list of expunged messages (and always\n   includes the Unique Identifiers (UIDs) expunged).</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftackermantemporalintegritymetadata00
 schema_version: v1.5.6
 type: standard
@@ -57,28 +56,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Distributed computing systems generate timestamped events from
-       components whose clocks operate under fundamentally different
-       synchronization conditions.  Existing logging and observability
-       standards -- including RFC 3164, RFC 5424, SNMP, NETCONF, and
-       OpenTelemetry -- define message formats and telemetry schemas but
-       provide no standard mechanism for an event source to declare the
-       provenance, confidence, or synchronization state of its timestamps.
-       Every platform that must correlate events across components
-       independently invents a proprietary temporal reconciliation layer.
-       These systems fail silently, cannot be validated against a published
-       standard, and are not interoperable.
-
-       This document defines Temporal Integrity Metadata (TIM): a transport-
-       agnostic structure that any event-emitting system may attach to its
-       telemetry to declare how its timestamp was generated, the
-       synchronization state of its clock, a bounded uncertainty interval,
-       the temporal reference domain, and a monotonic sequence token for
-       ordering events when wall-clock time is unavailable.  TIM is
-       backward-compatible with existing protocols, implementable on
-       constrained embedded hardware, and applicable from internet-scale
-       distributed services to air-gapped and orbital deployments.</p>
+  content: "<p>Distributed computing systems generate timestamped events from\n   components whose clocks operate under fundamentally different\n   synchronization conditions.  Existing logging and observability\n   standards -- including RFC 3164, RFC 5424, SNMP, NETCONF, and\n   OpenTelemetry -- define message formats and telemetry schemas but\n   provide no standard mechanism for an event source to declare the\n   provenance, confidence, or synchronization state of its timestamps.\n   Every platform that must correlate events across components\n   independently invents a proprietary temporal reconciliation layer.\n   These systems fail silently, cannot be validated against a published\n   standard, and are not interoperable.\n\n   This document defines Temporal Integrity Metadata (TIM): a transport-\n   agnostic structure that any event-emitting system may attach to its\n   telemetry to declare how its timestamp was generated, the\n   synchronization state of its clock, a bounded uncertainty interval,\n   the temporal reference domain, and a monotonic sequence token for\n   ordering events when wall-clock time is unavailable.  TIM is\n   backward-compatible with existing protocols, implementable on\n   constrained embedded hardware, and applicable from internet-scale\n   distributed services to air-gapped and orbital deployments.</p>"
 relation:
 - type: updatedBy
   bibitem:

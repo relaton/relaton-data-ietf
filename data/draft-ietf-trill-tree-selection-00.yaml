@@ -1,4 +1,3 @@
----
 id: draftietftrilltreeselection00
 schema_version: v1.5.6
 type: standard
@@ -192,24 +191,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>TRILL uses distribution trees to deliver multi-destination frames.
-       Multiple trees can be used by an ingress RBridge for flows regardless
-       of the VLAN, Fine Grained Label (FGL), and/or multicast group of the
-       flow. Different ingress RBridges may choose different distribution
-       trees for TRILL Data packets in the same VLAN, FGL, and/or multicast
-       group. To avoid unnecessary link utilization, distribution trees
-       should be pruned based on VLAN and/or FGL and/or multicast
-       destination address. If any VLAN, FGL, or multicast group can be sent
-       on any tree, for typical fast path hardware, the amount of pruning
-       information is multiplied by the number of tree; however, there is a
-       limited capacity for such pruning information.
-
-       This document specifies an optional facility to restrict the TRILL
-       Data packets sent on particular distribution trees by VLAN, FGL,
-       and/or multicast group thus reducing the total amount of pruning
-       information so that it can more easily be accommodated by fast path
-       hardware.</p>
+  content: "<p>TRILL uses distribution trees to deliver multi-destination frames.\n   Multiple trees can be used by an ingress RBridge for flows regardless\n   of the VLAN, Fine Grained Label (FGL), and/or multicast group of the\n   flow. Different ingress RBridges may choose different distribution\n   trees for TRILL Data packets in the same VLAN, FGL, and/or multicast\n   group. To avoid unnecessary link utilization, distribution trees\n   should be pruned based on VLAN and/or FGL and/or multicast\n   destination address. If any VLAN, FGL, or multicast group can be sent\n   on any tree, for typical fast path hardware, the amount of pruning\n   information is multiplied by the number of tree; however, there is a\n   limited capacity for such pruning information.\n\n   This document specifies an optional facility to restrict the TRILL\n   Data packets sent on particular distribution trees by VLAN, FGL,\n   and/or multicast group thus reducing the total amount of pruning\n   information so that it can more easily be accommodated by fast path\n   hardware.</p>"
 relation:
 - type: updatedBy
   bibitem:

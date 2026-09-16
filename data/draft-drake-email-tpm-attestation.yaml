@@ -1,4 +1,3 @@
----
 id: draftdrakeemailtpmattestation
 schema_version: v1.5.6
 formattedref:
@@ -20,31 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a mechanism for email senders to include
-       hardware attestation evidence in message headers, enabling receiving
-       mail servers to cryptographically verify that an email was composed
-       on a machine containing a genuine Trusted Platform Module (TPM) from
-       a known manufacturer (Intel, AMD, Infineon, or similar).  The
-       verification chain runs from the email header directly to the TPM
-       manufacturer's root Certificate Authority, requiring no trust in any
-       intermediary identity service.
-
-       As a companion mechanism, this document also defines a privacy-
-       preserving alternative using SD-JWT (Selective Disclosure JWT, RFC
-       9901) where the sender can prove specific claims about their hardware
-       trust level without revealing their hardware identity.
-
-       Together, these mechanisms provide Sybil-resistant email
-       authentication: each sender requires a unique physical security chip,
-       making large-scale automated spam economically infeasible regardless
-       of advances in artificial intelligence.
-
-       While this document specifies these mechanisms for email message
-       headers, the attestation formats defined herein - both the CMS
-       attestation bundle and the SD-JWT trust proof - are self-contained,
-       transport-independent data structures applicable to HTTP headers,
-       agent-to-agent messaging, and other Internet protocols.</p>
+  content: "<p>This document defines a mechanism for email senders to include\n   hardware attestation evidence in message headers, enabling receiving\n   mail servers to cryptographically verify that an email was composed\n   on a machine containing a genuine Trusted Platform Module (TPM) from\n   a known manufacturer (Intel, AMD, Infineon, or similar).  The\n   verification chain runs from the email header directly to the TPM\n   manufacturer's root Certificate Authority, requiring no trust in any\n   intermediary identity service.\n\n   As a companion mechanism, this document also defines a privacy-\n   preserving alternative using SD-JWT (Selective Disclosure JWT, RFC\n   9901) where the sender can prove specific claims about their hardware\n   trust level without revealing their hardware identity.\n\n   Together, these mechanisms provide Sybil-resistant email\n   authentication: each sender requires a unique physical security chip,\n   making large-scale automated spam economically infeasible regardless\n   of advances in artificial intelligence.\n\n   While this document specifies these mechanisms for email message\n   headers, the attestation formats defined herein - both the CMS\n   attestation bundle and the SD-JWT trust proof - are self-contained,\n   transport-independent data structures applicable to HTTP headers,\n   agent-to-agent messaging, and other Internet protocols.</p>"
 relation:
 - type: includes
   bibitem:

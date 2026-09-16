@@ -1,4 +1,3 @@
----
 id: draftratnawathttpapiasyncproblemdetails
 schema_version: v1.5.6
 formattedref:
@@ -20,32 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>HTTP APIs that process work asynchronously need a standard way to
-       report job failures.  "Problem Details for HTTP APIs" (RFC 9457)
-       provides the envelope; this document defines extension members that
-       fill it with asynchronous-job-specific context.
-
-       Eight extension members are specified: "jobId", "jobStatus",
-       "submittedAt", "completedAt", "retryable", "retryAfter",
-       "processingStage", and "correlationId".  A ninth member, "results",
-       supports batch operations.  Together they let a server describe which
-       job failed, when, at what pipeline stage, and whether a retry is
-       advisable -- in a single, machine-readable JSON (RFC 8259) object
-       that works equally well in an HTTP response body, a message-broker
-       payload, or a webhook callback.
-
-       Although the primary motivation is structured error reporting for
-       failed jobs, the extension members are equally useful for
-       communicating successful job outcomes (e.g., a COMPLETED status with
-       timing information).
-
-       This document does NOT redefine how to submit, poll, or cancel
-       asynchronous jobs; those mechanics are already covered by "HTTP
-       Semantics" (RFC 9110) (202 Accepted), "Prefer Header for HTTP" (RFC
-       7240) (respond-async), and emerging IETF work on long-running
-       operations.  Instead, it focuses exclusively on the structured
-       reporting gap that remains after a job reaches a terminal state.</p>
+  content: "<p>HTTP APIs that process work asynchronously need a standard way to\n   report job failures.  \"Problem Details for HTTP APIs\" (RFC 9457)\n   provides the envelope; this document defines extension members that\n   fill it with asynchronous-job-specific context.\n\n   Eight extension members are specified: \"jobId\", \"jobStatus\",\n   \"submittedAt\", \"completedAt\", \"retryable\", \"retryAfter\",\n   \"processingStage\", and \"correlationId\".  A ninth member, \"results\",\n   supports batch operations.  Together they let a server describe which\n   job failed, when, at what pipeline stage, and whether a retry is\n   advisable -- in a single, machine-readable JSON (RFC 8259) object\n   that works equally well in an HTTP response body, a message-broker\n   payload, or a webhook callback.\n\n   Although the primary motivation is structured error reporting for\n   failed jobs, the extension members are equally useful for\n   communicating successful job outcomes (e.g., a COMPLETED status with\n   timing information).\n\n   This document does NOT redefine how to submit, poll, or cancel\n   asynchronous jobs; those mechanics are already covered by \"HTTP\n   Semantics\" (RFC 9110) (202 Accepted), \"Prefer Header for HTTP\" (RFC\n   7240) (respond-async), and emerging IETF work on long-running\n   operations.  Instead, it focuses exclusively on the structured\n   reporting gap that remains after a job reaches a terminal state.</p>"
 relation:
 - type: includes
   bibitem:

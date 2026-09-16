@@ -1,4 +1,3 @@
----
 id: draftsahastagereceipts00
 schema_version: v1.5.6
 type: standard
@@ -54,26 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>A staged pipeline -- a document-ingestion flow, a retrieval-augmented
-       generation chain, an agent workflow, a benchmark -- produces results
-       that are hard to reproduce, hard to diff between two runs, and hard
-       to localize when they go wrong.  This document defines the stage
-       receipt: a small, canonically serialized JSON record that each stage
-       of such a pipeline emits, describing exactly what went in, what came
-       out, under which pinned instrument, with which outcome, and linked by
-       digest to the receipt before it.  A chain of stage receipts lets a
-       developer reproduce a run, diff two runs to the first stage that
-       differs, and localize a fault to the stage where it entered; the same
-       chain lets an independent party, later and offline, establish what
-       the records assert without trusting whoever produced them.  The
-       document specifies the record, its canonical form, the chain
-       manifest, the coverage and emission declarations that make a chain
-       honest about its own edges, the anchoring declaration that separates
-       consistency from originality, and the behaviour required of a
-       conforming verifier.  Golden conformance vectors -- records that must
-       be accepted and records that must be refused, each with its reason --
-       are part of the specification.</p>
+  content: "<p>A staged pipeline -- a document-ingestion flow, a retrieval-augmented\n   generation chain, an agent workflow, a benchmark -- produces results\n   that are hard to reproduce, hard to diff between two runs, and hard\n   to localize when they go wrong.  This document defines the stage\n   receipt: a small, canonically serialized JSON record that each stage\n   of such a pipeline emits, describing exactly what went in, what came\n   out, under which pinned instrument, with which outcome, and linked by\n   digest to the receipt before it.  A chain of stage receipts lets a\n   developer reproduce a run, diff two runs to the first stage that\n   differs, and localize a fault to the stage where it entered; the same\n   chain lets an independent party, later and offline, establish what\n   the records assert without trusting whoever produced them.  The\n   document specifies the record, its canonical form, the chain\n   manifest, the coverage and emission declarations that make a chain\n   honest about its own edges, the anchoring declaration that separates\n   consistency from originality, and the behaviour required of a\n   conforming verifier.  Golden conformance vectors -- records that must\n   be accepted and records that must be refused, each with its reason --\n   are part of the specification.</p>"
 series:
 - type: main
   title:

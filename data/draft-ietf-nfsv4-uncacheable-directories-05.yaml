@@ -1,4 +1,3 @@
----
 id: draftietfnfsv4uncacheabledirectories05
 schema_version: v1.5.6
 type: standard
@@ -54,20 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Network File System version 4.2 (NFSv4.2) clients may cache
-       directory-entry (dirent) metadata returned by READDIR to improve
-       performance.  Such caching typically assumes that directory-entry
-       metadata and visibility are identical for all users of a client.  In
-       some deployments, however, servers may present directory entries or
-       associated metadata based on the identity of the requesting user.
-       Reuse of cached directory-entry metadata across users can therefore
-       result in clients presenting directory contents or attributes that do
-       not reflect the server's current access control decisions.  This
-       document introduces an uncacheable dirent metadata attribute for
-       NFSv4.2 that allows servers to advise clients that directory-entry
-       metadata returned by READDIR and related operations should not be
-       reused across users.</p>
+  content: "<p>Network File System version 4.2 (NFSv4.2) clients may cache\n   directory-entry (dirent) metadata returned by READDIR to improve\n   performance.  Such caching typically assumes that directory-entry\n   metadata and visibility are identical for all users of a client.  In\n   some deployments, however, servers may present directory entries or\n   associated metadata based on the identity of the requesting user.\n   Reuse of cached directory-entry metadata across users can therefore\n   result in clients presenting directory contents or attributes that do\n   not reflect the server's current access control decisions.  This\n   document introduces an uncacheable dirent metadata attribute for\n   NFSv4.2 that allows servers to advise clients that directory-entry\n   metadata returned by READDIR and related operations should not be\n   reused across users.</p>"
 relation:
 - type: updates
   bibitem:

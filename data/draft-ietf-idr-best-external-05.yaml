@@ -1,4 +1,3 @@
----
 id: draftietfidrbestexternal05
 schema_version: v1.5.6
 type: standard
@@ -149,24 +148,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The current BGP-4 protocol specification [RFC4271] states that the
-       selection process chooses the best path for a given route which is
-       added to the Loc-Rib and advertised to all peers.
-
-       Previous versions [RFC1771] of the specification defined a different
-       rule for Internal BGP Updates.  Given that Internal paths are not re-
-       advertised to Internal peers, it was specified that the best of the
-       external paths, as determined by the path selection tie breaking
-       algorithm, would be advertised to Internal peers.
-
-       This document extends that procedure to operate in environments where
-       Route Reflection [RFC4456] or Confederations [RFC5065] are used and
-       explains why advertising the additional routing information can
-       improve convergence time without causing routing loops.
-
-       Additional benefits include reduction of inter-domain churn and
-       avoidance of permanent route oscillation.</p>
+  content: "<p>The current BGP-4 protocol specification [RFC4271] states that the\n   selection process chooses the best path for a given route which is\n   added to the Loc-Rib and advertised to all peers.\n\n   Previous versions [RFC1771] of the specification defined a different\n   rule for Internal BGP Updates.  Given that Internal paths are not re-\n   advertised to Internal peers, it was specified that the best of the\n   external paths, as determined by the path selection tie breaking\n   algorithm, would be advertised to Internal peers.\n\n   This document extends that procedure to operate in environments where\n   Route Reflection [RFC4456] or Confederations [RFC5065] are used and\n   explains why advertising the additional routing information can\n   improve convergence time without causing routing loops.\n\n   Additional benefits include reduction of inter-domain churn and\n   avoidance of permanent route oscillation.</p>"
 series:
 - type: main
   title:

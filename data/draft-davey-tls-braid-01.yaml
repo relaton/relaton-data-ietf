@@ -1,12 +1,10 @@
----
 id: draftdaveytlsbraid01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Bound Routing, Authority, and Identity Data (BRAID): Independent Circuit
-    Breakers for Long-Lived TLS Certificates'
+  content: 'Bound Routing, Authority, and Identity Data (BRAID): Independent Circuit Breakers for Long-Lived TLS Certificates'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-davey-tls-braid-01
@@ -55,37 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines BRAID, a negotiated profile for publicly
-       trusted TLS server certificates that adds one or more independent
-       circuit breakers to a certificate.  Each circuit breaker is an
-       authorization held by a party the domain owner appoints; withdrawing
-       any required authorization causes the certificate to stop validating.
-       Because a certificate can be invalidated promptly and without the
-       participation of the issuing certification authority, its natural
-       validity period no longer has to be short in order to bound exposure.
-
-       The base mechanism is deliberately static.  The domain owner
-       publishes a DNSSEC-signed BRAID Anchor listing the public keys
-       authorized to authenticate the domain, and thereafter does nothing;
-       the certificate remains valid until the owner withdraws an entry.
-       Steady-state operation requires no periodic reissuance, no periodic
-       re-minting of credentials, and no online status service.  Short-
-       interval credential refresh is defined as an optional enhancement
-       that tightens revocation latency, not as a requirement.
-
-       Because the Anchor authorizes credential keys rather than the end-
-       entity key itself, impersonating a BRAID-protected domain requires
-       both the end-entity private key and the ability to publish in the
-       owner's DNSSEC-signed zone.  This document calls that the Two-Control
-       Property, and it is the principal security difference between BRAID
-       and publishing an end-entity certificate association directly in DNS.
-
-       BRAID support is negotiated in the handshake, so a BRAID certificate
-       is presented only to a client that offered to validate it; every
-       other client is served an ordinary certificate and is unaffected.
-       Optional strands bind a certificate to an authorized routing origin
-       and to an appointed third-party witness.</p>
+  content: "<p>This document defines BRAID, a negotiated profile for publicly\n   trusted TLS server certificates that adds one or more independent\n   circuit breakers to a certificate.  Each circuit breaker is an\n   authorization held by a party the domain owner appoints; withdrawing\n   any required authorization causes the certificate to stop validating.\n   Because a certificate can be invalidated promptly and without the\n   participation of the issuing certification authority, its natural\n   validity period no longer has to be short in order to bound exposure.\n\n   The base mechanism is deliberately static.  The domain owner\n   publishes a DNSSEC-signed BRAID Anchor listing the public keys\n   authorized to authenticate the domain, and thereafter does nothing;\n   the certificate remains valid until the owner withdraws an entry.\n   Steady-state operation requires no periodic reissuance, no periodic\n   re-minting of credentials, and no online status service.  Short-\n   interval credential refresh is defined as an optional enhancement\n   that tightens revocation latency, not as a requirement.\n\n   Because the Anchor authorizes credential keys rather than the end-\n   entity key itself, impersonating a BRAID-protected domain requires\n   both the end-entity private key and the ability to publish in the\n   owner's DNSSEC-signed zone.  This document calls that the Two-Control\n   Property, and it is the principal security difference between BRAID\n   and publishing an end-entity certificate association directly in DNS.\n\n   BRAID support is negotiated in the handshake, so a BRAID certificate\n   is presented only to a client that offered to validate it; every\n   other client is served an ordinary certificate and is unaffected.\n   Optional strands bind a certificate to an authorized routing origin\n   and to an appointed third-party witness.</p>"
 relation:
 - type: updates
   bibitem:

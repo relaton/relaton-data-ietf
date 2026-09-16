@@ -1,4 +1,3 @@
----
 id: draftietfrtgwgsrv6egressprotection23
 schema_version: v1.5.6
 type: standard
@@ -154,24 +153,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>TI-LFA specifies fast protections for transit nodes and links of an
-       SR path.  However, it does not present any fast protections for the
-       egress node of the SR path.  This document describes protocol
-       extensions for fast protecting the egress node and link of a Segment
-       Routing for IPv6 (SRv6) path.  The solution uses IGP extensions and a
-       Mirror SID (End.M) behavior to steer traffic to a protector egress
-       upon failure of the primary egress.
-
-       This document operates within a single link-state IGP area/level and
-       uses IS-IS/OSPFv3 to advertise a Mirror SID and the protected
-       locators for egress node/link protection.  While the mechanism can
-       protect traffic whose active segment at the egress is a Service SID
-       (e.g., VPN SID), it is not suitable for large-scale deployments with
-       a high cardinality of VPN/service instances or random multi-homing
-       patterns, because the amount of egress-protection information to be
-       flooded in the IGP increases and may impact convergence and control-
-       plane load.</p>
+  content: "<p>TI-LFA specifies fast protections for transit nodes and links of an\n   SR path.  However, it does not present any fast protections for the\n   egress node of the SR path.  This document describes protocol\n   extensions for fast protecting the egress node and link of a Segment\n   Routing for IPv6 (SRv6) path.  The solution uses IGP extensions and a\n   Mirror SID (End.M) behavior to steer traffic to a protector egress\n   upon failure of the primary egress.\n\n   This document operates within a single link-state IGP area/level and\n   uses IS-IS/OSPFv3 to advertise a Mirror SID and the protected\n   locators for egress node/link protection.  While the mechanism can\n   protect traffic whose active segment at the egress is a Service SID\n   (e.g., VPN SID), it is not suitable for large-scale deployments with\n   a high cardinality of VPN/service instances or random multi-homing\n   patterns, because the amount of egress-protection information to be\n   flooded in the IGP increases and may impact convergence and control-\n   plane load.</p>"
 relation:
 - type: updates
   bibitem:

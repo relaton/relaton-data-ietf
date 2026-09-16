@@ -1,4 +1,3 @@
----
 id: draftsharifagentaudittrail02
 schema_version: v1.5.6
 type: standard
@@ -54,39 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a standard logging format for autonomous
-       AI agent systems.  The Agent Audit Trail (AAT) defines a
-       JSON-based record structure with mandatory fields for agent
-       identity, action classification, outcome tracking, and trust
-       level reporting.  Records are linked via tamper-evident hash
-       chaining using SHA-256 per RFC 8785, with optional ECDSA
-       signatures for non-repudiation.
-
-       The format addresses requirements from the EU AI Act
-       (Regulation 2024/1689), which mandates automatic recording of
-       events for high-risk AI systems effective August 2026.  It also
-       maps to SOC 2 Trust Services Criteria, ISO/IEC 42001,
-       ISO/IEC 24970, prEN 18229-1, and PCI DSS v4.0.1 logging
-       requirements.
-
-       The design is transport-agnostic and supports export to JSONL,
-       Syslog (RFC 5424), and CSV while preserving chain integrity.
-       Privacy is addressed through input/output hashing, content
-       fingerprinting, and tombstone-based deletion compatible with
-       GDPR Article 17.
-
-       This revision (-01) adds pre-execution recording requirements,
-       recording independence, deny reason codes, replay protection,
-       external timestamp anchoring, and content fingerprinting based
-       on feedback from independent implementers.
-
-       This revision (-02) adds a Decision Reproducibility section
-       (Section 13) that distinguishes record reproducibility,
-       available for any model, from decision reproducibility,
-       available only for open-weight models executed at temperature
-       zero in an attested environment, and defines the associated
-       record fields.</p>
+  content: "<p>This document specifies a standard logging format for autonomous\n   AI agent systems.  The Agent Audit Trail (AAT) defines a\n   JSON-based record structure with mandatory fields for agent\n   identity, action classification, outcome tracking, and trust\n   level reporting.  Records are linked via tamper-evident hash\n   chaining using SHA-256 per RFC 8785, with optional ECDSA\n   signatures for non-repudiation.\n\n   The format addresses requirements from the EU AI Act\n   (Regulation 2024/1689), which mandates automatic recording of\n   events for high-risk AI systems effective August 2026.  It also\n   maps to SOC 2 Trust Services Criteria, ISO/IEC 42001,\n   ISO/IEC 24970, prEN 18229-1, and PCI DSS v4.0.1 logging\n   requirements.\n\n   The design is transport-agnostic and supports export to JSONL,\n   Syslog (RFC 5424), and CSV while preserving chain integrity.\n   Privacy is addressed through input/output hashing, content\n   fingerprinting, and tombstone-based deletion compatible with\n   GDPR Article 17.\n\n   This revision (-01) adds pre-execution recording requirements,\n   recording independence, deny reason codes, replay protection,\n   external timestamp anchoring, and content fingerprinting based\n   on feedback from independent implementers.\n\n   This revision (-02) adds a Decision Reproducibility section\n   (Section 13) that distinguishes record reproducibility,\n   available for any model, from decision reproducibility,\n   available only for open-weight models executed at temperature\n   zero in an attested environment, and defines the associated\n   record fields.</p>"
 relation:
 - type: updates
   bibitem:

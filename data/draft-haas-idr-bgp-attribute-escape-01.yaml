@@ -1,4 +1,3 @@
----
 id: drafthaasidrbgpattributeescape01
 schema_version: v1.5.6
 type: standard
@@ -54,27 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>BGP-4 [RFC 4271] has been very successful in being extended over the
-       years it has been deployed.  A significant part of that success is
-       due to its ability to incrementally add new features to its Path
-       Attributes when they are marked "optional transitive".
-       Implementations that are ignorant of a feature for an unknown Path
-       Attribute that are so marked will propagate BGP routes with such
-       attributes.
-
-       Unfortunately, this blind propagation of unknown Path Attributes may
-       happen for features that are intended to be used in a limited scope.
-       When such Path Attributes inadvertently are carried beyond that
-       scope, it can lead to things such as unintended disclosure of
-       sensitive information, or cause improper routing.  In their worst
-       cases, such propagation may be for malformed Path Attributes and lead
-       to BGP session resets or crashes.
-
-       This document calls such inadvertent propagation of BGP Path
-       Attributes, "attribute escape".  This document further describes some
-       of the scenarios that leads to this behavior and makes
-       recommendations on practices that may limit its impact.</p>
+  content: "<p>BGP-4 [RFC 4271] has been very successful in being extended over the\n   years it has been deployed.  A significant part of that success is\n   due to its ability to incrementally add new features to its Path\n   Attributes when they are marked \"optional transitive\".\n   Implementations that are ignorant of a feature for an unknown Path\n   Attribute that are so marked will propagate BGP routes with such\n   attributes.\n\n   Unfortunately, this blind propagation of unknown Path Attributes may\n   happen for features that are intended to be used in a limited scope.\n   When such Path Attributes inadvertently are carried beyond that\n   scope, it can lead to things such as unintended disclosure of\n   sensitive information, or cause improper routing.  In their worst\n   cases, such propagation may be for malformed Path Attributes and lead\n   to BGP session resets or crashes.\n\n   This document calls such inadvertent propagation of BGP Path\n   Attributes, \"attribute escape\".  This document further describes some\n   of the scenarios that leads to this behavior and makes\n   recommendations on practices that may limit its impact.</p>"
 relation:
 - type: updates
   bibitem:

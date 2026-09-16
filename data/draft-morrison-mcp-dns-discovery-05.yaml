@@ -1,4 +1,3 @@
----
 id: draftmorrisonmcpdnsdiscovery05
 schema_version: v1.5.6
 type: standard
@@ -54,38 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a DNS-based mechanism for discovering Model
-       Context Protocol (MCP) servers, the identity of the organisations
-       that operate them, and a cryptographic identity envelope bound to an
-       individual Sovereign-tier ~handle published under the same zone.
-
-       Three TXT records are defined.  _mcp.&lt;domain&gt; advertises an MCP
-       server's endpoint URL, agent protocol family, transport binding,
-       cryptographic identity, and capability profile. _org-alter.&lt;domain&gt;
-       advertises the operator's canonical organisational identity,
-       including its legal entity, registry identifier, regions of
-       operation, and any regulatory framework under which it must refuse
-       external automated access.  _alter.&lt;domain&gt; publishes an
-       Ed25519-signed envelope binding a ~handle to a public key, an
-       IdentityLog root reference, and a revocation commitment.  DNSSEC
-       validation is REQUIRED for the envelope record, and a DANE TLSA pin
-       on the MCP endpoint is REQUIRED where resolving an envelope and
-       opening an MCP session are one recognition transaction.
-
-       This revision (v05) corrects earlier ones and introduces no new
-       mechanism.  It withdraws several claims that v04 could not support,
-       marks publication of a per-individual envelope in DNS as NOT
-       RECOMMENDED on enumeration, size, and erasure grounds, and separates
-       the agent protocol family from the transport binding in the _mcp
-       record, aligning that vocabulary with neighbouring DNS agent-
-       discovery drafts.  All three record formats and all three procedures
-       are given here in full, so no earlier revision need be fetched.
-
-       The mechanism complements HTTPS-based discovery, and follows the
-       precedent set by DKIM, SPF, DMARC, and MTA-STS.  Provisional
-       registration of a companion alter: URI scheme is requested of IANA,
-       and is not yet granted.</p>
+  content: "<p>This document defines a DNS-based mechanism for discovering Model\n   Context Protocol (MCP) servers, the identity of the organisations\n   that operate them, and a cryptographic identity envelope bound to an\n   individual Sovereign-tier ~handle published under the same zone.\n\n   Three TXT records are defined.  _mcp.&lt;domain&gt; advertises an MCP\n   server's endpoint URL, agent protocol family, transport binding,\n   cryptographic identity, and capability profile. _org-alter.&lt;domain&gt;\n   advertises the operator's canonical organisational identity,\n   including its legal entity, registry identifier, regions of\n   operation, and any regulatory framework under which it must refuse\n   external automated access.  _alter.&lt;domain&gt; publishes an\n   Ed25519-signed envelope binding a ~handle to a public key, an\n   IdentityLog root reference, and a revocation commitment.  DNSSEC\n   validation is REQUIRED for the envelope record, and a DANE TLSA pin\n   on the MCP endpoint is REQUIRED where resolving an envelope and\n   opening an MCP session are one recognition transaction.\n\n   This revision (v05) corrects earlier ones and introduces no new\n   mechanism.  It withdraws several claims that v04 could not support,\n   marks publication of a per-individual envelope in DNS as NOT\n   RECOMMENDED on enumeration, size, and erasure grounds, and separates\n   the agent protocol family from the transport binding in the _mcp\n   record, aligning that vocabulary with neighbouring DNS agent-\n   discovery drafts.  All three record formats and all three procedures\n   are given here in full, so no earlier revision need be fetched.\n\n   The mechanism complements HTTPS-based discovery, and follows the\n   precedent set by DKIM, SPF, DMARC, and MTA-STS.  Provisional\n   registration of a companion alter: URI scheme is requested of IANA,\n   and is not yet granted.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftrichradextwlansecurityprofile
 schema_version: v1.5.6
 formattedref:
@@ -9,33 +8,18 @@ title:
   content: RADIUS Attribute for IEEE 802.11 WLAN Security Profiles
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-rich-radext-wlan-security-profile-00
+  content: https://datatracker.ietf.org/doc/html/draft-rich-radext-wlan-security-profile-01
 docidentifier:
 - content: draft-rich-radext-wlan-security-profile
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-06'
+  at: '2026-09-15'
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>RADIUS has attributes that let an IEEE 802.11 authenticator report
-       the AKM suite and pairwise cipher selected for an association.  That
-       is useful, but it is not enough anymore.  IEEE 802.11, as amended,
-       also defines security profiles.  A security profile is the complete
-       set of AKM, pairwise cipher, and related security capabilities
-       accepted for an association.
-
-       The problem is that the AKM and the pairwise cipher no longer maps to
-       a single security profile.  Using these two values, the RADIUS server
-       cannot tell which of the security profiles was accepted.
-
-       This document defines the WLAN-Security-Profile RADIUS attribute.
-       The attribute reports the IEEE 802.11 security profile accepted by
-       the responder for the association.  It complements the existing IEEE
-       802 network attributes.</p>
+  content: "<p>IEEE 802.11, as amended, defines security profiles, and several of\n   those profiles can share the same AKM suite and pairwise cipher, so\n   WLAN-AKM-Suite and WLAN-Pairwise-Cipher no longer tell a RADIUS\n   server which profile is in effect.\n\n   This document defines the WLAN-Security-Profile RADIUS attribute,\n   which reports the security profile the responder accepted.  A Network\n   Access Server includes it in the Access-Requests it generates for an\n   IEEE 802.1X authentication so the server can make policy decisions\n   based on the value.  The attribute complements the IEEE 802\n   attributes defined in RFC 7268.</p>"
 relation:
 - type: includes
   bibitem:
@@ -46,6 +30,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-rich-radext-wlan-security-profile-00
     docidentifier:
     - content: draft-rich-radext-wlan-security-profile-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rich-radext-wlan-security-profile-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rich-radext-wlan-security-profile-01
+    docidentifier:
+    - content: draft-rich-radext-wlan-security-profile-01
       type: Internet-Draft
       primary: true
 ext:

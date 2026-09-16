@@ -1,4 +1,3 @@
----
 id: draftperlmantrillrbridgemultilevel08
 schema_version: v1.5.6
 type: standard
@@ -112,26 +111,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Extending TRILL to multiple levels has one challenge that is not
-       addressed by the already-existing capability of IS-IS to have
-       multiple levels.  The issue is with TRILL switch nicknames. There
-       have been two proposed approaches.  One approach, which we refer to
-       as the "unique nickname" approach, gives unique nicknames to all the
-       TRILL switches in the multilevel campus, either by having the
-       level-1/level-2 border TRILL switches advertise which nicknames are
-       not available for assignment in the area, or by partitioning the
-       16-bit nickname into an "area" field and a "nickname inside the area"
-       field.  The other approach, which we refer to as the "aggregated
-       nickname" approach, involves assigning nicknames to the areas, and
-       allowing nicknames to be reused in different areas, by having the
-       border TRILL switches rewrite the nickname fields when entering or
-       leaving an area. Each of those approaches has advantages and
-       disadvantages. The design in this document allows a choice of
-       approach in each area, allowing the simplicity of the unique nickname
-       approach in installations in which there is no danger of running out
-       of nicknames, and allowing nickname rewriting to be phased into
-       larger installations on a per-area basis.</p>
+  content: "<p>Extending TRILL to multiple levels has one challenge that is not\n   addressed by the already-existing capability of IS-IS to have\n   multiple levels.  The issue is with TRILL switch nicknames. There\n   have been two proposed approaches.  One approach, which we refer to\n   as the \"unique nickname\" approach, gives unique nicknames to all the\n   TRILL switches in the multilevel campus, either by having the\n   level-1/level-2 border TRILL switches advertise which nicknames are\n   not available for assignment in the area, or by partitioning the\n   16-bit nickname into an \"area\" field and a \"nickname inside the area\"\n   field.  The other approach, which we refer to as the \"aggregated\n   nickname\" approach, involves assigning nicknames to the areas, and\n   allowing nicknames to be reused in different areas, by having the\n   border TRILL switches rewrite the nickname fields when entering or\n   leaving an area. Each of those approaches has advantages and\n   disadvantages. The design in this document allows a choice of\n   approach in each area, allowing the simplicity of the unique nickname\n   approach in installations in which there is no danger of running out\n   of nicknames, and allowing nickname rewriting to be phased into\n   larger installations on a per-area basis.</p>"
 relation:
 - type: updates
   bibitem:

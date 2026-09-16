@@ -1,4 +1,3 @@
----
 id: draftpelovschcrelfragmentationruleformat00
 schema_version: v1.5.6
 type: standard
@@ -54,30 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a new Rule Format for Reliability
-       Fragmentation within the SCHC framework.  Building on the
-       fragmentation mechanisms defined in RFC8724, this rule format is
-       tailored to ensure the reliable delivery of small messages that do
-       not trigger conventional fragmentation.  A key enhancement is the
-       inclusion of a size field, indicating the total byte-length of the
-       message, and modifications to the state machine to support a
-       persistent session with wrap-around windows.  Two operational modes
-       are defined:
-
-       *  *RelNoAck:* A mode derived from SCHC No-Ack fragmentation, where
-          fragments are transmitted continuously without expecting per-
-          fragment acknowledgments.  Losses are tolerated within a
-          configured threshold.
-
-       *  *RelAckOnErr:* A mode derived from SCHC Ack-On-Error
-          fragmentation, where the receiver actively monitors for missing
-          fragments and initiates recovery through explicit negative
-          acknowledgments.
-
-       These modes offer operators the flexibility to balance recovery
-       overhead against latency and reliability requirements in constrained
-       network environments.</p>
+  content: "<p>This document specifies a new Rule Format for Reliability\n   Fragmentation within the SCHC framework.  Building on the\n   fragmentation mechanisms defined in RFC8724, this rule format is\n   tailored to ensure the reliable delivery of small messages that do\n   not trigger conventional fragmentation.  A key enhancement is the\n   inclusion of a size field, indicating the total byte-length of the\n   message, and modifications to the state machine to support a\n   persistent session with wrap-around windows.  Two operational modes\n   are defined:\n\n   *  *RelNoAck:* A mode derived from SCHC No-Ack fragmentation, where\n      fragments are transmitted continuously without expecting per-\n      fragment acknowledgments.  Losses are tolerated within a\n      configured threshold.\n\n   *  *RelAckOnErr:* A mode derived from SCHC Ack-On-Error\n      fragmentation, where the receiver actively monitors for missing\n      fragments and initiates recovery through explicit negative\n      acknowledgments.\n\n   These modes offer operators the flexibility to balance recovery\n   overhead against latency and reliability requirements in constrained\n   network environments.</p>"
 relation:
 - type: updatedBy
   bibitem:

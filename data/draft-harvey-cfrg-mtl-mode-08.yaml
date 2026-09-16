@@ -1,4 +1,3 @@
----
 id: draftharveycfrgmtlmode08
 schema_version: v1.5.6
 type: standard
@@ -151,27 +150,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document provides an interoperable specification for Merkle tree
-       ladder (MTL) mode, a technique for using an underlying signature
-       scheme to authenticate an evolving series of messages.  MTL mode can
-       reduce the signature scheme's operational impact.  Rather than
-       signing messages individually, the MTL mode of operation signs
-       structures called "Merkle tree ladders" that are derived from the
-       messages to be authenticated.  Individual messages are then
-       authenticated relative to the ladder using a Merkle tree
-       authentication path and the ladder is authenticated using the public
-       key of the underlying signature scheme.  The size and computational
-       cost of the underlying signatures are thereby amortized across
-       multiple messages, reducing the scheme's operational impact.  The
-       reduction can be particularly beneficial when MTL mode is applied to
-       a post-quantum signature scheme that has a large signature size or
-       computational cost.  As an example, the document shows how to use MTL
-       mode with ML-DSA as defined in FIPS204 and SLH-DSA as defined in
-       FIPS205.  Like other Merkle tree techniques, MTL mode's security is
-       based only on cryptographic hash functions, so the mode is quantum-
-       safe based on the quantum-resistance of its cryptographic hash
-       functions.</p>
+  content: "<p>This document provides an interoperable specification for Merkle tree\n   ladder (MTL) mode, a technique for using an underlying signature\n   scheme to authenticate an evolving series of messages.  MTL mode can\n   reduce the signature scheme's operational impact.  Rather than\n   signing messages individually, the MTL mode of operation signs\n   structures called \"Merkle tree ladders\" that are derived from the\n   messages to be authenticated.  Individual messages are then\n   authenticated relative to the ladder using a Merkle tree\n   authentication path and the ladder is authenticated using the public\n   key of the underlying signature scheme.  The size and computational\n   cost of the underlying signatures are thereby amortized across\n   multiple messages, reducing the scheme's operational impact.  The\n   reduction can be particularly beneficial when MTL mode is applied to\n   a post-quantum signature scheme that has a large signature size or\n   computational cost.  As an example, the document shows how to use MTL\n   mode with ML-DSA as defined in FIPS204 and SLH-DSA as defined in\n   FIPS205.  Like other Merkle tree techniques, MTL mode's security is\n   based only on cryptographic hash functions, so the mode is quantum-\n   safe based on the quantum-resistance of its cryptographic hash\n   functions.</p>"
 relation:
 - type: updates
   bibitem:

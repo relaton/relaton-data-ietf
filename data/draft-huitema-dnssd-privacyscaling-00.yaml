@@ -1,4 +1,3 @@
----
 id: drafthuitemadnssdprivacyscaling00
 schema_version: v1.5.6
 type: standard
@@ -54,31 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>DNS-SD (DNS Service Discovery) normally discloses information about
-       both the devices offering services and the devices requesting
-       services.  This information includes host names, network parameters,
-       and possibly a further description of the corresponding service
-       instance.  Especially when mobile devices engage in DNS Service
-       Discovery over Multicast DNS at a public hotspot, a serious privacy
-       problem arises.
-
-       The draft currently progressing in the DNSSD Working Group assumes
-       peer-to-peer pairing between the service to be discovered and each of
-       its client.  This has good security properties, but create scaling
-       issues.  Each server needs to publish as many announcements as it has
-       paired clients.  Each client needs to process all announcements from
-       all servers present in the network.  This leads to large number of
-       operations when each server is paired with many clients.
-
-       Different designs are possible.  For example, if there was only one
-       server "discovery key" known by each authorized client, each server
-       would only have to announce a single record, and clients would only
-       have to process one response for each server that is present on the
-       network.  Yet, these designs will present different privacy profiles,
-       and pose different management challenges.  This draft analyses the
-       tradeoffs between privacy and scaling in a set of different designs,
-       using either shared secrets or public keys.</p>
+  content: "<p>DNS-SD (DNS Service Discovery) normally discloses information about\n   both the devices offering services and the devices requesting\n   services.  This information includes host names, network parameters,\n   and possibly a further description of the corresponding service\n   instance.  Especially when mobile devices engage in DNS Service\n   Discovery over Multicast DNS at a public hotspot, a serious privacy\n   problem arises.\n\n   The draft currently progressing in the DNSSD Working Group assumes\n   peer-to-peer pairing between the service to be discovered and each of\n   its client.  This has good security properties, but create scaling\n   issues.  Each server needs to publish as many announcements as it has\n   paired clients.  Each client needs to process all announcements from\n   all servers present in the network.  This leads to large number of\n   operations when each server is paired with many clients.\n\n   Different designs are possible.  For example, if there was only one\n   server \"discovery key\" known by each authorized client, each server\n   would only have to announce a single record, and clients would only\n   have to process one response for each server that is present on the\n   network.  Yet, these designs will present different privacy profiles,\n   and pose different management challenges.  This draft analyses the\n   tradeoffs between privacy and scaling in a set of different designs,\n   using either shared secrets or public keys.</p>"
 relation:
 - type: updatedBy
   bibitem:

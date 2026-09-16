@@ -1,4 +1,3 @@
----
 id: draftsrivastavawebsocketpmcestatereset
 schema_version: v1.5.6
 formattedref:
@@ -6,8 +5,7 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Compression Context State After Refused Messages in WebSocket Per-Message
-    Compression
+  content: Compression Context State After Refused Messages in WebSocket Per-Message Compression
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-srivastava-websocket-pmce-state-reset-00
@@ -21,26 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>RFC 7692 defines Per-Message Compression Extensions for the WebSocket
-       Protocol, including the "permessage-deflate" extension.  When context
-       takeover is in effect, the LZ77 sliding window is retained across
-       messages, so the decompression of one message can depend on the
-       plaintext of earlier messages.
-
-       RFC 7692 does not state what the sliding window contains after a
-       message has been successfully decompressed but subsequently refused
-       by a check applied to the decompressed plaintext, such as UTF-8
-       validation, a payload size limit, or an application-level policy.  An
-       implementation that retains the refused plaintext in the window
-       violates no stated requirement, yet the content of a refused message
-       can then influence the decompression of a later message that is
-       accepted.
-
-       This document describes the gap, contrasts it with the corresponding
-       situation in QPACK where RFC 9204 specifies the required behavior,
-       and recommends behavior for implementations.  It defines no new
-       protocol element and updates no existing specification.</p>
+  content: "<p>RFC 7692 defines Per-Message Compression Extensions for the WebSocket\n   Protocol, including the \"permessage-deflate\" extension.  When context\n   takeover is in effect, the LZ77 sliding window is retained across\n   messages, so the decompression of one message can depend on the\n   plaintext of earlier messages.\n\n   RFC 7692 does not state what the sliding window contains after a\n   message has been successfully decompressed but subsequently refused\n   by a check applied to the decompressed plaintext, such as UTF-8\n   validation, a payload size limit, or an application-level policy.  An\n   implementation that retains the refused plaintext in the window\n   violates no stated requirement, yet the content of a refused message\n   can then influence the decompression of a later message that is\n   accepted.\n\n   This document describes the gap, contrasts it with the corresponding\n   situation in QPACK where RFC 9204 specifies the required behavior,\n   and recommends behavior for implementations.  It defines no new\n   protocol element and updates no existing specification.</p>"
 relation:
 - type: includes
   bibitem:

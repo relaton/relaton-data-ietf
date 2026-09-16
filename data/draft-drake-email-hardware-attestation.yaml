@@ -1,4 +1,3 @@
----
 id: draftdrakeemailhardwareattestation
 schema_version: v1.5.6
 formattedref:
@@ -20,46 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a mechanism for automated email senders (AI
-       agents, bots, and autonomous systems) to include hardware attestation
-       evidence in message headers, enabling receiving mail servers to
-       cryptographically verify that the sending system has access to a
-       genuine hardware security component -- such as a Trusted Platform
-       Module (TPM), a PIV smart card (e.g., YubiKey), a virtual TPM, or a
-       software-managed key -- from a known manufacturer or issuer.  The
-       attestation proves hardware presence, not message composition locale.
-       The verification chain runs from the email header to a manufacturer's
-       root Certificate Authority (for hardware-backed attestation) or to an
-       issuer's verification key (for issuer-certified attestation).
-
-       Each automated sender is assigned a persistent agent identity,
-       expressed as a URN in the "aid" (Agent Identity) namespace
-       ([RFC8141]), enabling federated issuance by multiple independent
-       identity providers and persistent reputation tracking across
-       protocols and platforms.
-
-       As a companion mechanism, this document defines a privacy-preserving
-       alternative using SD-JWT (Selective Disclosure JWT, [RFC9901]) where
-       the sender can prove specific claims about their hardware trust level
-       without revealing their hardware identity.
-
-       Together, these mechanisms provide both Sybil-resistant
-       authentication and a foundation for reputation building: each
-       identity requires a unique hardware security component, making large-
-       scale automated abuse economically infeasible regardless of advances
-       in artificial intelligence, while the persistent hardware-anchored
-       identity enables receiving systems to accumulate trust signals over
-       time.  Software-only agents MAY participate at a lower trust tier,
-       building reputation from an initial baseline rather than from a
-       hardware-anchored starting point.
-
-       While this document specifies these mechanisms for email message
-       headers, the attestation formats defined herein -- both the CMS
-       attestation bundle and the SD-JWT trust proof -- are self-contained,
-       transport-independent data structures applicable to HTTP headers,
-       agent-to-agent messaging, payment authorisation, and other Internet
-       protocols.</p>
+  content: "<p>This document defines a mechanism for automated email senders (AI\n   agents, bots, and autonomous systems) to include hardware attestation\n   evidence in message headers, enabling receiving mail servers to\n   cryptographically verify that the sending system has access to a\n   genuine hardware security component -- such as a Trusted Platform\n   Module (TPM), a PIV smart card (e.g., YubiKey), a virtual TPM, or a\n   software-managed key -- from a known manufacturer or issuer.  The\n   attestation proves hardware presence, not message composition locale.\n   The verification chain runs from the email header to a manufacturer's\n   root Certificate Authority (for hardware-backed attestation) or to an\n   issuer's verification key (for issuer-certified attestation).\n\n   Each automated sender is assigned a persistent agent identity,\n   expressed as a URN in the \"aid\" (Agent Identity) namespace\n   ([RFC8141]), enabling federated issuance by multiple independent\n   identity providers and persistent reputation tracking across\n   protocols and platforms.\n\n   As a companion mechanism, this document defines a privacy-preserving\n   alternative using SD-JWT (Selective Disclosure JWT, [RFC9901]) where\n   the sender can prove specific claims about their hardware trust level\n   without revealing their hardware identity.\n\n   Together, these mechanisms provide both Sybil-resistant\n   authentication and a foundation for reputation building: each\n   identity requires a unique hardware security component, making large-\n   scale automated abuse economically infeasible regardless of advances\n   in artificial intelligence, while the persistent hardware-anchored\n   identity enables receiving systems to accumulate trust signals over\n   time.  Software-only agents MAY participate at a lower trust tier,\n   building reputation from an initial baseline rather than from a\n   hardware-anchored starting point.\n\n   While this document specifies these mechanisms for email message\n   headers, the attestation formats defined herein -- both the CMS\n   attestation bundle and the SD-JWT trust proof -- are self-contained,\n   transport-independent data structures applicable to HTTP headers,\n   agent-to-agent messaging, payment authorisation, and other Internet\n   protocols.</p>"
 relation:
 - type: includes
   bibitem:

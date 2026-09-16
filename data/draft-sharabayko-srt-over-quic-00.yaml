@@ -1,4 +1,3 @@
----
 id: draftsharabaykosrtoverquic00
 schema_version: v1.5.6
 type: standard
@@ -79,35 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document presents an approach to tunnelling SRT live streams
-       over QUIC datagrams.
-
-       QUIC [RFC9000] is a UDP-based transport protocol providing TLS
-       encryption, stream multiplexing, and connection migration.  It was
-       designed to become a faster alternative to the TCP protocol
-       [RFC7323].
-
-       An Unreliable Datagram Extension to QUIC [QUIC-DATAGRAM] adds support
-       for sending and receiving unreliable datagrams over a QUIC
-       connection, but transfers the responsibility for multiplexing
-       different kinds of datagrams, or flows of datagrams, to an
-       application protocol.
-
-       SRT [SRTRFC] is a UDP-based transport protocol.  Essentially, it can
-       operate over any unreliable datagram transport.  SRT provides loss
-       recovery and stream multiplexing mechanisms.  In its live streaming
-       configuration SRT provides an end-to-end latency-aware mechanism for
-       packet loss recovery.  If SRT fails to recover a packet loss within a
-       specified latency, then the packet is dropped to avoid blocking
-       playback of further packets.
-
-       The Datagram Extension to QUIC could be used as an underlying
-       transport instead of UDP.  This way QUIC would provide TLS-level
-       security, connection migration, and potentially multi-path support.
-       It would be easier for existing network facilities to process, route,
-       and load balance the unified QUIC traffic.  SRT on its side would
-       provide end-to-end latency tracking and latency-aware loss recovery.</p>
+  content: "<p>This document presents an approach to tunnelling SRT live streams\n   over QUIC datagrams.\n\n   QUIC [RFC9000] is a UDP-based transport protocol providing TLS\n   encryption, stream multiplexing, and connection migration.  It was\n   designed to become a faster alternative to the TCP protocol\n   [RFC7323].\n\n   An Unreliable Datagram Extension to QUIC [QUIC-DATAGRAM] adds support\n   for sending and receiving unreliable datagrams over a QUIC\n   connection, but transfers the responsibility for multiplexing\n   different kinds of datagrams, or flows of datagrams, to an\n   application protocol.\n\n   SRT [SRTRFC] is a UDP-based transport protocol.  Essentially, it can\n   operate over any unreliable datagram transport.  SRT provides loss\n   recovery and stream multiplexing mechanisms.  In its live streaming\n   configuration SRT provides an end-to-end latency-aware mechanism for\n   packet loss recovery.  If SRT fails to recover a packet loss within a\n   specified latency, then the packet is dropped to avoid blocking\n   playback of further packets.\n\n   The Datagram Extension to QUIC could be used as an underlying\n   transport instead of UDP.  This way QUIC would provide TLS-level\n   security, connection migration, and potentially multi-path support.\n   It would be easier for existing network facilities to process, route,\n   and load balance the unified QUIC traffic.  SRT on its side would\n   provide end-to-end latency tracking and latency-aware loss recovery.</p>"
 series:
 - type: main
   title:

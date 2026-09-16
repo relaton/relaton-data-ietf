@@ -1,4 +1,3 @@
----
 id: draftsharifagentaudittrail00
 schema_version: v1.5.6
 type: standard
@@ -54,25 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a standard logging format for autonomous
-       AI agent systems.  The Agent Audit Trail (AAT) defines a
-       JSON-based record structure with mandatory fields for agent
-       identity, action classification, outcome tracking, and trust
-       level reporting.  Records are linked via tamper-evident hash
-       chaining using SHA-256 per RFC 8785, with optional ECDSA
-       signatures for non-repudiation.
-
-       The format addresses requirements from the EU AI Act
-       (Regulation 2024/1689), which mandates automatic recording of
-       events for high-risk AI systems effective August 2026.  It also
-       maps to SOC 2 Trust Services Criteria, ISO/IEC 42001, and
-       PCI DSS v4.0.1 logging requirements.
-
-       The design is transport-agnostic and supports export to JSONL,
-       Syslog (RFC 5424), and CSV while preserving chain integrity.
-       Privacy is addressed through input/output hashing and tombstone-
-       based deletion compatible with GDPR Article 17.</p>
+  content: "<p>This document specifies a standard logging format for autonomous\n   AI agent systems.  The Agent Audit Trail (AAT) defines a\n   JSON-based record structure with mandatory fields for agent\n   identity, action classification, outcome tracking, and trust\n   level reporting.  Records are linked via tamper-evident hash\n   chaining using SHA-256 per RFC 8785, with optional ECDSA\n   signatures for non-repudiation.\n\n   The format addresses requirements from the EU AI Act\n   (Regulation 2024/1689), which mandates automatic recording of\n   events for high-risk AI systems effective August 2026.  It also\n   maps to SOC 2 Trust Services Criteria, ISO/IEC 42001, and\n   PCI DSS v4.0.1 logging requirements.\n\n   The design is transport-agnostic and supports export to JSONL,\n   Syslog (RFC 5424), and CSV while preserving chain integrity.\n   Privacy is addressed through input/output hashing and tombstone-\n   based deletion compatible with GDPR Article 17.</p>"
 relation:
 - type: updatedBy
   bibitem:

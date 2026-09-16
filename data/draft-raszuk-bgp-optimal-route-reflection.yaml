@@ -1,4 +1,3 @@
----
 id: draftraszukbgpoptimalroutereflection
 schema_version: v1.5.6
 formattedref:
@@ -20,36 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>[RFC4456] asserts that, because the Interior Gateway Protocol (IGP)
-    cost to a given point in the network will vary across routers, "the
-    route reflection approach may not yield the same route selection
-    result as that of the full IBGP mesh approach."  One practical
-    implication of this assertion is that the deployment of route
-    reflection may thwart the ability to achieve hot potato routing.  Hot
-    potato routing attempts to direct traffic to the closest AS egress
-    point in cases where no higher priority policy dictates otherwise.
-    As a consequence of the route reflection method, the choice of exit
-    point for a route reflector and its clients will be the egress point
-    closest to the route reflector - and not necessarily closest to the
-    RR clients.
-
-    Section 11 of [RFC4456] describes a deployment approach and a set of
-    constraints which, if satsified, would result in the deployment of
-    route reflection yielding the same results as the iBGP full mesh
-    approach.  Such a deployment approach would make route reflection
-    compatible with the application of hot potato routing policy.
-
-    As networks evolved to accommodate architectural requirements of new
-    services, tunneled (LSP/IP tunneling) networks with centralized route
-    reflectors became commonplace.  This is one type of common deployment
-    where it would be impractical to satisfy the constraints described in
-    Section 11 of [RFC4456].  Yet, in such an environment, hot potato
-    routing policy remains desirable.
-
-    This document proposes two new solutions which can be deployed to
-    facilitate the application of closest exit point policy centralized
-    route reflection deployments.</p>
+  content: "<p>[RFC4456] asserts that, because the Interior Gateway Protocol (IGP)\ncost to a given point in the network will vary across routers, \"the\nroute reflection approach may not yield the same route selection\nresult as that of the full IBGP mesh approach.\"  One practical\nimplication of this assertion is that the deployment of route\nreflection may thwart the ability to achieve hot potato routing.  Hot\npotato routing attempts to direct traffic to the closest AS egress\npoint in cases where no higher priority policy dictates otherwise.\nAs a consequence of the route reflection method, the choice of exit\npoint for a route reflector and its clients will be the egress point\nclosest to the route reflector - and not necessarily closest to the\nRR clients.\n\nSection 11 of [RFC4456] describes a deployment approach and a set of\nconstraints which, if satsified, would result in the deployment of\nroute reflection yielding the same results as the iBGP full mesh\napproach.  Such a deployment approach would make route reflection\ncompatible with the application of hot potato routing policy.\n\nAs networks evolved to accommodate architectural requirements of new\nservices, tunneled (LSP/IP tunneling) networks with centralized route\nreflectors became commonplace.  This is one type of common deployment\nwhere it would be impractical to satisfy the constraints described in\nSection 11 of [RFC4456].  Yet, in such an environment, hot potato\nrouting policy remains desirable.\n\nThis document proposes two new solutions which can be deployed to\nfacilitate the application of closest exit point policy centralized\nroute reflection deployments.</p>"
 relation:
 - type: includes
   bibitem:

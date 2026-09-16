@@ -1,4 +1,3 @@
----
 id: draftietflsrospflslinkinfinity12
 schema_version: v1.5.6
 type: standard
@@ -154,29 +153,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>In certain scenarios, it is necessary to advertise OSPF links that
-       are not applicable to the default SPF (Shortest Path First)
-       calculation for other purposes.  In order to advertise these links
-       and not use them in the base SPF calculation, the metric
-       LSLinkInfinity (0xffff) is used to specify that the link is
-       unreachable.
-
-       Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff)
-       to indicate a router-LSA link should not be used for transit IP
-       traffic.  When an OSPF router supports the Unreachable Link support
-       capability defined in this document, OSPF Stub Router links are
-       advertised as MaxReachableLinkMetric (0xfffe) rather than
-       MaxLinkMetric (0xffff).  This document updates RFC 6987 and RFC 8770
-       with respect to the advertisement of MaxReachableLinkMetric rather
-       than MaxLinkMetric.
-
-       Similarily, Label Distribution Protocol (LDP) IGP Synchronization
-       (RFC5443) specifies OSPF advertisement of MaxLinkMetric (0xffff) to
-       indicate that while the OSPF adjacency is in FULL state, LDP has not
-       been synchronized between the two neighbors and transit traffic is
-       discouraged.  This document updates RFC 5433 with respect to the
-       advertisement of MaxReachableLinkMetric rather than MaxLinkMetric.</p>
+  content: "<p>In certain scenarios, it is necessary to advertise OSPF links that\n   are not applicable to the default SPF (Shortest Path First)\n   calculation for other purposes.  In order to advertise these links\n   and not use them in the base SPF calculation, the metric\n   LSLinkInfinity (0xffff) is used to specify that the link is\n   unreachable.\n\n   Stub Router Advertisement (RFC 6987) defines MaxLinkMetric (0xffff)\n   to indicate a router-LSA link should not be used for transit IP\n   traffic.  When an OSPF router supports the Unreachable Link support\n   capability defined in this document, OSPF Stub Router links are\n   advertised as MaxReachableLinkMetric (0xfffe) rather than\n   MaxLinkMetric (0xffff).  This document updates RFC 6987 and RFC 8770\n   with respect to the advertisement of MaxReachableLinkMetric rather\n   than MaxLinkMetric.\n\n   Similarily, Label Distribution Protocol (LDP) IGP Synchronization\n   (RFC5443) specifies OSPF advertisement of MaxLinkMetric (0xffff) to\n   indicate that while the OSPF adjacency is in FULL state, LDP has not\n   been synchronized between the two neighbors and transit traffic is\n   discouraged.  This document updates RFC 5433 with respect to the\n   advertisement of MaxReachableLinkMetric rather than MaxLinkMetric.</p>"
 relation:
 - type: updates
   bibitem:

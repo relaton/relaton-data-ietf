@@ -1,4 +1,3 @@
----
 id: draftbormannintareaalfi02
 schema_version: v1.5.6
 type: standard
@@ -49,43 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>IPv6 defines a minimum MTU of 1280 bytes.  Many link layers are more
-       limited in the maximum size of packets they can communicate.  In
-       order to enable the transport of IP packets that are too large for
-       these link layers, typically their IP adaptation layers define a
-       segmentation or fragmentation scheme to transport an IP packet in a
-       sequence of multiple link layer packets.
-
-       Often, adaption layer fragmentation schemes reduce some performance
-       metric, such as the packet delivery probability.  Application or
-       transport protocols may be able to reduce the maximum size of packets
-       they send, e.g.  by transport layer segmentation or choice of
-       application layer data object size, which may have less of a
-       performance impact.  It would therefore be desirable for them to know
-       about any adaptation layer fragmentation that is going on, so they
-       can choose packet sizes that minimize adaptation layer fragmentation.
-
-       At the IP layer, fragmentation can be detected using a number of
-       mechanisms used in Packetization Layer Path MTU Discovery [RFC4821].
-       However, adaptation layer fragmentation schemes are often designed to
-       be "transparent", i.e.  there is no way at higher layers to find out
-       whether they had to be employed (except maybe by elaborate
-       measurement schemes targeting one of the impacted performance
-       metrics; this approach does not appear to be viable) [WEI].
-
-       The present specification defines a mechanism for IPv6 adaptation
-       layers to indicate the presence of adaptation layer fragmentation on
-       one or more hops on the path from an IP sender to an IP receiver, and
-       to provide an indication of preferred (smaller) packet sizes on these
-       hops.
-
-       The main objective of this version of the draft is to present a
-       complete design in order to be able to gauge the complexity of the
-       approach against the gains to be expected from implementing it.
-
-       Comments are appreciated and should go to the intarea@ietf.org
-       mailing list.</p>
+  content: "<p>IPv6 defines a minimum MTU of 1280 bytes.  Many link layers are more\n   limited in the maximum size of packets they can communicate.  In\n   order to enable the transport of IP packets that are too large for\n   these link layers, typically their IP adaptation layers define a\n   segmentation or fragmentation scheme to transport an IP packet in a\n   sequence of multiple link layer packets.\n\n   Often, adaption layer fragmentation schemes reduce some performance\n   metric, such as the packet delivery probability.  Application or\n   transport protocols may be able to reduce the maximum size of packets\n   they send, e.g.  by transport layer segmentation or choice of\n   application layer data object size, which may have less of a\n   performance impact.  It would therefore be desirable for them to know\n   about any adaptation layer fragmentation that is going on, so they\n   can choose packet sizes that minimize adaptation layer fragmentation.\n\n   At the IP layer, fragmentation can be detected using a number of\n   mechanisms used in Packetization Layer Path MTU Discovery [RFC4821].\n   However, adaptation layer fragmentation schemes are often designed to\n   be \"transparent\", i.e.  there is no way at higher layers to find out\n   whether they had to be employed (except maybe by elaborate\n   measurement schemes targeting one of the impacted performance\n   metrics; this approach does not appear to be viable) [WEI].\n\n   The present specification defines a mechanism for IPv6 adaptation\n   layers to indicate the presence of adaptation layer fragmentation on\n   one or more hops on the path from an IP sender to an IP receiver, and\n   to provide an indication of preferred (smaller) packet sizes on these\n   hops.\n\n   The main objective of this version of the draft is to present a\n   complete design in order to be able to gauge the complexity of the\n   approach against the gains to be expected from implementing it.\n\n   Comments are appreciated and should go to the intarea@ietf.org\n   mailing list.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: drafthuv6opsipv6flowlabelloadbalancingrdma00
 schema_version: v1.5.6
 type: standard
@@ -79,22 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document proposes a method for achieving flow-level load
-       balancing in RoCEv2 (RDMA over Converged Ethernet version 2)
-       networks.  Traditional per-flow load balancing based on the 5-tuple
-       cannot distinguish between different RDMA sessions that share the
-       same 5-tuple.  This causes "elephant flows" to be hashed to the same
-       path, leading to network congestion.  This method resolves this issue
-       by parsing the QP (Queue Pair) information from the IB BTH (Base
-       Transport Header) and IB DETH (Datagram Extended Transport Header)
-       headers of the RoCEv2 packet.  By combining this with portions of the
-       IPv6 source and destination addresses as an entropy source, a CRC32
-       hash algorithm generates a 20-bit value, which is then written into
-       the Flow Label field of the IPv6 header.  Network devices can
-       subsequently use the updated "5-tuple + Flow Label" for more granular
-       flow-level load balancing, thereby effectively improving transmission
-       efficiency in high-performance networks such as AI computing.</p>
+  content: "<p>This document proposes a method for achieving flow-level load\n   balancing in RoCEv2 (RDMA over Converged Ethernet version 2)\n   networks.  Traditional per-flow load balancing based on the 5-tuple\n   cannot distinguish between different RDMA sessions that share the\n   same 5-tuple.  This causes \"elephant flows\" to be hashed to the same\n   path, leading to network congestion.  This method resolves this issue\n   by parsing the QP (Queue Pair) information from the IB BTH (Base\n   Transport Header) and IB DETH (Datagram Extended Transport Header)\n   headers of the RoCEv2 packet.  By combining this with portions of the\n   IPv6 source and destination addresses as an entropy source, a CRC32\n   hash algorithm generates a 20-bit value, which is then written into\n   the Flow Label field of the IPv6 header.  Network devices can\n   subsequently use the updated \"5-tuple + Flow Label\" for more granular\n   flow-level load balancing, thereby effectively improving transmission\n   efficiency in high-performance networks such as AI computing.</p>"
 series:
 - type: main
   title:

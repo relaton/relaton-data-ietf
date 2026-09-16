@@ -1,4 +1,3 @@
----
 id: draftdogrucedulon
 schema_version: v1.5.6
 formattedref:
@@ -20,30 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines the Cedulon Protocol, an audit layer for agent-
-       to-agent commerce.  Payment rails such as HTTP 402 flows (x402) and
-       mandate protocols (AP2) already move value, and a mandate protocol
-       can already refuse a spend before it happens.  What they do not, by
-       themselves, give a party that is neither payer nor rail operator is a
-       retrievable record of that decision and a signed spend receipt that
-       reconciles against an authenticated extract of the rail.  Cedulon
-       specifies a Trade Manifest (a signed offer before payment), a Policy
-       Decision Point with default deny, a Spend Receipt (a COSE/CWT claim
-       set issued after a gated payment), epoch checkpoints, and rail-
-       extract reconciliation.
-
-       The reconciliation shows that no settlement on the extract lacks a
-       receipt and no settled receipt is absent from the extract.  That
-       result is unconditional only when the verifier pins the rail key out
-       of band and names the account, rail and window under audit; otherwise
-       it is reported as conditional.  Checkpoints are profiled as SCITT
-       Signed Statements, and a checkpoint the presented chain omits is
-       reported by a witness that holds it.  No signed object is attested by
-       a key it carries itself, and the exact input to every hash-valued
-       field is stated, so that an independent verifier can be written from
-       the text alone.  Cedulon is not a competitor to x402 or AP2; it sits
-       above them.</p>
+  content: "<p>This document defines the Cedulon Protocol, an audit layer for agent-\n   to-agent commerce.  Payment rails such as HTTP 402 flows (x402) and\n   mandate protocols (AP2) already move value, and a mandate protocol\n   can already refuse a spend before it happens.  What they do not, by\n   themselves, give a party that is neither payer nor rail operator is a\n   retrievable record of that decision and a signed spend receipt that\n   reconciles against an authenticated extract of the rail.  Cedulon\n   specifies a Trade Manifest (a signed offer before payment), a Policy\n   Decision Point with default deny, a Spend Receipt (a COSE/CWT claim\n   set issued after a gated payment), epoch checkpoints, and rail-\n   extract reconciliation.\n\n   The reconciliation shows that no settlement on the extract lacks a\n   receipt and no settled receipt is absent from the extract.  That\n   result is unconditional only when the verifier pins the rail key out\n   of band and names the account, rail and window under audit; otherwise\n   it is reported as conditional.  Checkpoints are profiled as SCITT\n   Signed Statements, and a checkpoint the presented chain omits is\n   reported by a witness that holds it.  No signed object is attested by\n   a key it carries itself, and the exact input to every hash-valued\n   field is stated, so that an independent verifier can be written from\n   the text alone.  Cedulon is not a competitor to x402 or AP2; it sits\n   above them.</p>"
 relation:
 - type: includes
   bibitem:

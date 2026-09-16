@@ -1,4 +1,3 @@
----
 id: draftvaubanx402starknetanchor
 schema_version: v1.5.6
 formattedref:
@@ -20,30 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The x402 receipt-format extension defined in [STARK-RECEIPTS] and the
-       lifecycle finite state machine defined in [LIFECYCLE-FSM] specify
-       cryptographic evidence for x402 V2 payment events as off-chain
-       verifiable artefacts.  Neither document specifies how a settlement
-       receipt is promoted to on-chain finality, nor how an independent
-       auditor verifies that promotion without contacting the originating
-       facilitator.
-
-       This document defines the Starknet on-chain anchor format for x402 V2
-       payment settlements.  The anchor consists of a Starknet event emitted
-       by a conforming Cairo contract, identified by a canonical tuple of
-       chain identifier, transaction hash, event index, and optional block
-       number.  A reference implementation, PaymentDemoEmitter, is deployed
-       on Starknet Sepolia at
-       0x044dd87a94a801cf775d4c5e4b6703102d4e97e1cd1d0a8879341219ae4f19ff
-       and is inspectable via the Voyager block explorer.  The document also
-       specifies an RPC endpoint convention, grounded in the Starknet JSON-
-       RPC specification, that any compliant node implementation satisfies;
-       the Vauban Pay reference endpoints are cited as one such
-       implementation.  This anchor specification is one instantiation of a
-       chain-agnostic anchoring pattern; the protocol contract is designed
-       to accommodate future per-chain adapter specifications that satisfy
-       the same structural requirements.</p>
+  content: "<p>The x402 receipt-format extension defined in [STARK-RECEIPTS] and the\n   lifecycle finite state machine defined in [LIFECYCLE-FSM] specify\n   cryptographic evidence for x402 V2 payment events as off-chain\n   verifiable artefacts.  Neither document specifies how a settlement\n   receipt is promoted to on-chain finality, nor how an independent\n   auditor verifies that promotion without contacting the originating\n   facilitator.\n\n   This document defines the Starknet on-chain anchor format for x402 V2\n   payment settlements.  The anchor consists of a Starknet event emitted\n   by a conforming Cairo contract, identified by a canonical tuple of\n   chain identifier, transaction hash, event index, and optional block\n   number.  A reference implementation, PaymentDemoEmitter, is deployed\n   on Starknet Sepolia at\n   0x044dd87a94a801cf775d4c5e4b6703102d4e97e1cd1d0a8879341219ae4f19ff\n   and is inspectable via the Voyager block explorer.  The document also\n   specifies an RPC endpoint convention, grounded in the Starknet JSON-\n   RPC specification, that any compliant node implementation satisfies;\n   the Vauban Pay reference endpoints are cited as one such\n   implementation.  This anchor specification is one instantiation of a\n   chain-agnostic anchoring pattern; the protocol contract is designed\n   to accommodate future per-chain adapter specifications that satisfy\n   the same structural requirements.</p>"
 relation:
 - type: includes
   bibitem:

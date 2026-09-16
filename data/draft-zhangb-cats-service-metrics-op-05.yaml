@@ -1,0 +1,180 @@
+id: draftzhangbcatsservicemetricsop05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Computing Service Metrics Operation and Joint Service Selection under CATS
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-service-metrics-op-05
+docidentifier:
+- content: draft-zhangb-cats-service-metrics-op
+  type: Internet-Draft
+- content: draft-zhangb-cats-service-metrics-op-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhangb-cats-service-metrics-op
+date:
+- type: published
+  at: '2026-09-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bin
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Bin Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yina
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Dai
+      completename:
+        language: en
+        content: Yina Dai
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sun Yat-sen University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guanming
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Zeng
+      completename:
+        language: en
+        content: Guanming Zeng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei Technologies
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chuanyang
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Miao
+      completename:
+        language: en
+        content: Chuanyang Miao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corporation
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: "<p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding\n   by considering both computing and networking metrics.  The CATS\n   framework and metric-definition documents provide valuable\n   theoretical models, yet they face challenges in achieving direct\n   operational execution in real-world deployments: normalization\n   methods vary across providers, and aggregated unitless scores often\n   lose the operational information that routers need for precise\n   steering decisions.\n\n   This document provides a self-contained, executable operational model\n   for a core class of CATS deployment scenarios: latency-sensitive,\n   compute-intensive services whose steering decisions are made in real\n   time at the forwarding node.  Instead of disseminating low-level raw\n   hardware metrics, service sites dynamically evaluate and report\n   service-oriented metrics (e.g., Global Available Slots and Computing\n   Time) to the control plane.  The document clarifies how these metrics\n   are derived from basic resource information, service reference\n   information, and local policy.  It also specifies how the CATS Path\n   Selector (C-PS) combines the Computing Service Table (populated from\n   C-SMA reports) with the Network Service Table to make joint traffic-\n   steering decisions, and defines update-control and fallback\n   mechanisms suitable for large-scale deployments.\n\n   Within the unified CATS architecture, the service-oriented\n   operational model defined in this document coexists with the general-\n   purpose L1/L2 normalized metric framework: a deployment MAY use\n   either model, or run both pipelines in parallel for different service\n   classes, without embedding metric fields across frameworks.  This\n   document does not negate the value of normalized metrics; it focuses\n   on the service-level abstractions and runtime operations required for\n   direct traffic steering.</p>"
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-service-metrics-op-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-service-metrics-op-04
+    docidentifier:
+    - content: draft-zhangb-cats-service-metrics-op-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhangb-cats-service-metrics-op-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

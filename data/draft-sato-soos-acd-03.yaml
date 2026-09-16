@@ -1,4 +1,3 @@
----
 id: draftsatosoosacd03
 schema_version: v1.5.6
 type: standard
@@ -50,60 +49,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>A regulated resource provider -- a bank, a government API, a
-       healthcare records system -- receives a request from an AI agent.
-       The agent claims to operate under a constitutional compliance policy
-       and a valid mandate.  The resource provider has no mechanism to
-       verify these claims.  Without a machine-verifiable compliance
-       disclosure, the resource provider cannot confirm the agent's
-       governing law, its active prohibition set, its audit trail
-       reference, or its principal hierarchy -- before granting access.
-
-       This document defines the Agent Compliance Disclosure (ACD)
-       Protocol: a machine-to-machine compliance handshake that must
-       complete before an AI agent is granted access to a regulated
-       resource class.  ACD defines the ACD Record schema (a three-layer
-       structured disclosure produced by the SOOS kernel, covering legal
-       identity, constitutional compliance, and principal hierarchy), the
-       ACD Presentation Protocol (the query/response exchange between a
-       resource provider and the SOOS kernel), the ACD Trust Hierarchy
-       (operator-declared trust levels and Audit Principal credentials),
-       the ACD-to-MJWT binding (ACD MUST reference the session MJWT jti),
-       and the GAR integration (ACD presentation events as Authority
-       Lifecycle Events).  ACD Records are produced exclusively by the
-       Governing Enforcement Component (GEC), signed by the kernel's KIA
-       private key, and logged in the Governance Audit Record (GAR).  LLM
-       self-report of compliance posture is architecturally insufficient
-       and MUST NOT be used as an ACD disclosure surface.
-
-       ACD is the inbound complement to the Resource Governance Protocol
-       (RGP): where RGP governs outbound capability discovery, ACD governs
-       inbound compliance verification.  Together they define the complete
-       resource access governance flow for SOOS-governed agents.
-
-       Version -02 added the aep_session_id Layer 3 field, distinct from
-       acd_session_id, to bind a cached ACD Record to the specific AEP
-       session it was produced within (Section 6.3); strengthened the
-       ACD Record Replay defense that checks this binding from a SHOULD
-       to a MUST (Section 12.4); added the confirmation_basis field
-       (NOTIFIED | INFERRED) to ALE-058 so an auditor can distinguish a
-       confirmed validation pass from one merely inferred from the
-       absence of a failure record (Section 10.1); added Compliance
-       Handshake Volumetric Abuse as a new security consideration
-       (Section 12.5); and migrated the KEE-1 citation from the versioned
-       [I-D.sato-soos-kee] form to the non-versioned [SOOS-KEE] form,
-       since KEE-1 is a permanent local-only specification that will
-       never be submitted to the IETF Datatracker.
-
-       Version -03 is an editorial revision with no normative content
-       changes: six sibling-draft citations in Section 15.1 had gone
-       stale against those drafts' current live versions and are updated
-       to draft-sato-soos-aep-04, draft-sato-soos-gar-08,
-       draft-sato-soos-kia-07, draft-sato-soos-mjwt-06,
-       draft-sato-soos-rgp-02, and draft-sato-soos-sov-04 respectively;
-       and the Table of Contents, which omitted Section 12.5 from -02's
-       submission, now lists it correctly.</p>
+  content: "<p>A regulated resource provider -- a bank, a government API, a\n   healthcare records system -- receives a request from an AI agent.\n   The agent claims to operate under a constitutional compliance policy\n   and a valid mandate.  The resource provider has no mechanism to\n   verify these claims.  Without a machine-verifiable compliance\n   disclosure, the resource provider cannot confirm the agent's\n   governing law, its active prohibition set, its audit trail\n   reference, or its principal hierarchy -- before granting access.\n\n   This document defines the Agent Compliance Disclosure (ACD)\n   Protocol: a machine-to-machine compliance handshake that must\n   complete before an AI agent is granted access to a regulated\n   resource class.  ACD defines the ACD Record schema (a three-layer\n   structured disclosure produced by the SOOS kernel, covering legal\n   identity, constitutional compliance, and principal hierarchy), the\n   ACD Presentation Protocol (the query/response exchange between a\n   resource provider and the SOOS kernel), the ACD Trust Hierarchy\n   (operator-declared trust levels and Audit Principal credentials),\n   the ACD-to-MJWT binding (ACD MUST reference the session MJWT jti),\n   and the GAR integration (ACD presentation events as Authority\n   Lifecycle Events).  ACD Records are produced exclusively by the\n   Governing Enforcement Component (GEC), signed by the kernel's KIA\n   private key, and logged in the Governance Audit Record (GAR).  LLM\n   self-report of compliance posture is architecturally insufficient\n   and MUST NOT be used as an ACD disclosure surface.\n\n   ACD is the inbound complement to the Resource Governance Protocol\n   (RGP): where RGP governs outbound capability discovery, ACD governs\n   inbound compliance verification.  Together they define the complete\n   resource access governance flow for SOOS-governed agents.\n\n   Version -02 added the aep_session_id Layer 3 field, distinct from\n   acd_session_id, to bind a cached ACD Record to the specific AEP\n   session it was produced within (Section 6.3); strengthened the\n   ACD Record Replay defense that checks this binding from a SHOULD\n   to a MUST (Section 12.4); added the confirmation_basis field\n   (NOTIFIED | INFERRED) to ALE-058 so an auditor can distinguish a\n   confirmed validation pass from one merely inferred from the\n   absence of a failure record (Section 10.1); added Compliance\n   Handshake Volumetric Abuse as a new security consideration\n   (Section 12.5); and migrated the KEE-1 citation from the versioned\n   [I-D.sato-soos-kee] form to the non-versioned [SOOS-KEE] form,\n   since KEE-1 is a permanent local-only specification that will\n   never be submitted to the IETF Datatracker.\n\n   Version -03 is an editorial revision with no normative content\n   changes: six sibling-draft citations in Section 15.1 had gone\n   stale against those drafts' current live versions and are updated\n   to draft-sato-soos-aep-04, draft-sato-soos-gar-08,\n   draft-sato-soos-kia-07, draft-sato-soos-mjwt-06,\n   draft-sato-soos-rgp-02, and draft-sato-soos-sov-04 respectively;\n   and the Table of Contents, which omitted Section 12.5 from -02's\n   submission, now lists it correctly.</p>"
 relation:
 - type: updates
   bibitem:

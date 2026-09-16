@@ -1,4 +1,3 @@
----
 id: drafthuangidrcolortimeschedule
 schema_version: v1.5.6
 formattedref:
@@ -20,31 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Segment Routing (SR) Policy is identified by a tuple of Color and
-       Endpoint.  In BGP/MPLS IP VPN and EVPN services, the egress PE
-       attaches a Color Extended Community to the advertised VPN route so
-       that the ingress PE can steer the traffic into a corresponding SR
-       Policy.
-
-       In many deployment scenarios, the same customer may require different
-       Service Level Agreements (SLAs) during different time periods of a
-       day.  For example, a customer may require a high- bandwidth SLA
-       during the off-peak hours (e.g., 02:00-06:00) and a low-cost SLA
-       during the daytime.  Such time-variant SLA requirements imply that
-       the ingress PE should select different SR Policies (i.e., different
-       Colors) for the same VPN route at different times.
-
-       This document defines a new BGP Extended Community, called the
-       Schedule Extended Community, to be used together with the Color
-       Extended Community.  Two sub-types of the Schedule Extended Community
-       are defined: a Daily Schedule sub-type for recurring time-of-day
-       periods, and a Day Schedule sub-type for specific dates.  The
-       Schedule Extended Community carries the time period during which the
-       associated Color is valid.  Based on the current time and the
-       received Schedule Extended Communities, the ingress PE can
-       dynamically select the appropriate SR Policy for a VPN route, thereby
-       realizing time-scheduled SLA switching.</p>
+  content: "<p>Segment Routing (SR) Policy is identified by a tuple of Color and\n   Endpoint.  In BGP/MPLS IP VPN and EVPN services, the egress PE\n   attaches a Color Extended Community to the advertised VPN route so\n   that the ingress PE can steer the traffic into a corresponding SR\n   Policy.\n\n   In many deployment scenarios, the same customer may require different\n   Service Level Agreements (SLAs) during different time periods of a\n   day.  For example, a customer may require a high- bandwidth SLA\n   during the off-peak hours (e.g., 02:00-06:00) and a low-cost SLA\n   during the daytime.  Such time-variant SLA requirements imply that\n   the ingress PE should select different SR Policies (i.e., different\n   Colors) for the same VPN route at different times.\n\n   This document defines a new BGP Extended Community, called the\n   Schedule Extended Community, to be used together with the Color\n   Extended Community.  Two sub-types of the Schedule Extended Community\n   are defined: a Daily Schedule sub-type for recurring time-of-day\n   periods, and a Day Schedule sub-type for specific dates.  The\n   Schedule Extended Community carries the time period during which the\n   associated Color is valid.  Based on the current time and the\n   received Schedule Extended Communities, the ingress PE can\n   dynamically select the appropriate SR Policy for a VPN route, thereby\n   realizing time-scheduled SLA switching.</p>"
 relation:
 - type: includes
   bibitem:

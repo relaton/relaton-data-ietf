@@ -1,4 +1,3 @@
----
 id: draftwangbessevpncmacoverloadreduction02
 schema_version: v1.5.6
 type: standard
@@ -79,30 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>When there are too many customer-MACs (C-MACs), the RRs and/or ASBRs
-       will be overloaded by the RT-2 routes for these MACs according to
-       [RFC7432].  This issue can be simply solved by making the remote
-       C-MAC entries learnt via data-plane MAC learning (like what PBB VPLS
-       have done since [RFC7041]) rather than received from RT-2 routes.
-       This simplified solution will works as well as PBB VPLS.  But this
-       simplified solution will lose many important features that based on
-       the ESI concept.  Because the ingress-ESI can't be learnt via data-
-       plane MAC learning at the egress PE.  So when the data packets is
-       forwarded following these MAC entries, they can't benefit from the
-       EAD/EVI routes as per RFC7432.  So the All-Active Redundancy mode for
-       ES can't be supported.  This make the simplified solution can't work
-       as well as PBB EVPN ([RFC7623]).
-
-       This document proposes some new extensions to [RFC7432] to achieve
-       all-active mode ES redundancy on TPEs and reduce the C-MAC loads for
-       RRs and ASBRs at the same time.  The new solution will work even more
-       better than PBB EVPN under the help of these extensions, especially
-       when there is no deployment of MPLS dataplane.
-
-       Furthermore, it naturally brings the benefits of high scalability,
-       faster network convergence, and reduced operational complexity, and
-       we call it light-weighted EVPNs because of these advantages.</p>
+  content: "<p>When there are too many customer-MACs (C-MACs), the RRs and/or ASBRs\n   will be overloaded by the RT-2 routes for these MACs according to\n   [RFC7432].  This issue can be simply solved by making the remote\n   C-MAC entries learnt via data-plane MAC learning (like what PBB VPLS\n   have done since [RFC7041]) rather than received from RT-2 routes.\n   This simplified solution will works as well as PBB VPLS.  But this\n   simplified solution will lose many important features that based on\n   the ESI concept.  Because the ingress-ESI can't be learnt via data-\n   plane MAC learning at the egress PE.  So when the data packets is\n   forwarded following these MAC entries, they can't benefit from the\n   EAD/EVI routes as per RFC7432.  So the All-Active Redundancy mode for\n   ES can't be supported.  This make the simplified solution can't work\n   as well as PBB EVPN ([RFC7623]).\n\n   This document proposes some new extensions to [RFC7432] to achieve\n   all-active mode ES redundancy on TPEs and reduce the C-MAC loads for\n   RRs and ASBRs at the same time.  The new solution will work even more\n   better than PBB EVPN under the help of these extensions, especially\n   when there is no deployment of MPLS dataplane.\n\n   Furthermore, it naturally brings the benefits of high scalability,\n   faster network convergence, and reduced operational complexity, and\n   we call it light-weighted EVPNs because of these advantages.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftguoidrbgpsecuritypolicycommunity
 schema_version: v1.5.6
 formattedref:
@@ -20,36 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a set of standardized BGP community to signal
-       inter-AS routing security policy intent.  The initial focus is on
-       RPKI-based Route Origin Validation (ROV) using ROAs [RFC6482]
-       [RFC6811] [RFC9582].  ROV produces validation outcomes such as
-       "Valid", "Invalid", and "NotFound", but the operational treatment of
-       "NotFound" and similar ambiguous cases is entirely a matter of local
-       policy and often differs across networks.
-
-       This document defines transitive community that allows an Origin AS
-       to explicitly express its security policy expectations regarding how
-       its own originated routes SHOULD be treated when downstream
-       Autonomous Systems (ASes) perform ROA-based origin validation.  A
-       typical example is an Origin AS indicating a preference for strict
-       handling of ambiguous validation outcomes (e.g., NotFound) for its
-       prefixes.
-
-       Unlike validation states, these community does not assert
-       correctness, authorization, or RPKI deployment status, which is
-       confront to [AVOID-RPKI-STATE-IN-BGP].  Instead, they communicate
-       origin-declared policy intent to all downstream ASes, enabling them
-       to correlate this intent with locally derived validation results.  By
-       enabling explicit signaling of security expectations without
-       exporting validation state, this mechanism allows downstream ASes to
-       make more informed policy decisions while reducing the risk of
-       accidental outages caused by misalignment between origin expectations
-       and downstream local policies.
-
-       The mechanism is orthogonal to existing routing security validation
-       technologies and does not alter their semantics or deployment models.</p>
+  content: "<p>This document specifies a set of standardized BGP community to signal\n   inter-AS routing security policy intent.  The initial focus is on\n   RPKI-based Route Origin Validation (ROV) using ROAs [RFC6482]\n   [RFC6811] [RFC9582].  ROV produces validation outcomes such as\n   \"Valid\", \"Invalid\", and \"NotFound\", but the operational treatment of\n   \"NotFound\" and similar ambiguous cases is entirely a matter of local\n   policy and often differs across networks.\n\n   This document defines transitive community that allows an Origin AS\n   to explicitly express its security policy expectations regarding how\n   its own originated routes SHOULD be treated when downstream\n   Autonomous Systems (ASes) perform ROA-based origin validation.  A\n   typical example is an Origin AS indicating a preference for strict\n   handling of ambiguous validation outcomes (e.g., NotFound) for its\n   prefixes.\n\n   Unlike validation states, these community does not assert\n   correctness, authorization, or RPKI deployment status, which is\n   confront to [AVOID-RPKI-STATE-IN-BGP].  Instead, they communicate\n   origin-declared policy intent to all downstream ASes, enabling them\n   to correlate this intent with locally derived validation results.  By\n   enabling explicit signaling of security expectations without\n   exporting validation state, this mechanism allows downstream ASes to\n   make more informed policy decisions while reducing the risk of\n   accidental outages caused by misalignment between origin expectations\n   and downstream local policies.\n\n   The mechanism is orthogonal to existing routing security validation\n   technologies and does not alter their semantics or deployment models.</p>"
 relation:
 - type: includes
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftguoprivacypasstokenbinding
 schema_version: v1.5.6
 formattedref:
@@ -20,24 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document provides a token binding extension for the Privacy Pass
-       protocol.  This extension allows a Client to cryptographically bind a
-       Privacy Pass token to its own generated one-time public key during
-       the issuance flow, without exposing the public key to the Issuer.
-       Later, when spending the token during the redemption flow, the Client
-       must use the corresponding private key to generate a binding proof
-       that the Origin needs to additionally verify except the token itself,
-       where the proof generation can optionally support channel binding.
-       This proof constrains the legitimate presenter of the token to be
-       only the Client who holds the private key and further constrains the
-       legitimate usage of the token to be only the Client's specific
-       channel when channel binding is used in the proof generation, and
-       thus can prevent token export and replay attacks.  In addition, the
-       token binding extension does not introduce additional cryptographic
-       primitives, and only uses the primitives currently utilized in the
-       issuance protocol to generate the one-time public-private keypair as
-       well as generate and verify the binding proof.</p>
+  content: "<p>This document provides a token binding extension for the Privacy Pass\n   protocol.  This extension allows a Client to cryptographically bind a\n   Privacy Pass token to its own generated one-time public key during\n   the issuance flow, without exposing the public key to the Issuer.\n   Later, when spending the token during the redemption flow, the Client\n   must use the corresponding private key to generate a binding proof\n   that the Origin needs to additionally verify except the token itself,\n   where the proof generation can optionally support channel binding.\n   This proof constrains the legitimate presenter of the token to be\n   only the Client who holds the private key and further constrains the\n   legitimate usage of the token to be only the Client's specific\n   channel when channel binding is used in the proof generation, and\n   thus can prevent token export and replay attacks.  In addition, the\n   token binding extension does not introduce additional cryptographic\n   primitives, and only uses the primitives currently utilized in the\n   issuance protocol to generate the one-time public-private keypair as\n   well as generate and verify the binding proof.</p>"
 relation:
 - type: includes
   bibitem:

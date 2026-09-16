@@ -1,4 +1,3 @@
----
 id: draftietfdetnetnscore01
 schema_version: v1.5.6
 type: standard
@@ -79,24 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the framework and operational procedure for
-       deterministic networking that guarantees maximum and minimum end-to-
-       end latency bounds to flows.  The solution has non-periodic,
-       asynchronous, flow-level, non-work conserving, on-time, and rate-
-       based functional characteristics, according to the taxonomy suggested
-       by [I-D.ietf-detnet-dataplane-taxonomy].
-
-       The packets are stored in the queue in ascending order of the ideal
-       service start time, called Eligible Time (ET), and the ideal service
-       completion time, called Finish Time (FT).  The queued packets were
-       forwarded after ET, in ascending ordering of FT, in a non-work
-       conserving manner.  The ET and FT are calculated at the entrance node
-       according to the packet size and rate of the flow.  All subsequent
-       core nodes are stateless and asynchronously update ET and FT based on
-       metadata received via packet headers.  This mechanism is called non-
-       work conserving stateless fair queuing (N-SCORE), which guarantees
-       both E2E latency upper and lower bounds, thus E2E jitter bound.</p>
+  content: "<p>This document specifies the framework and operational procedure for\n   deterministic networking that guarantees maximum and minimum end-to-\n   end latency bounds to flows.  The solution has non-periodic,\n   asynchronous, flow-level, non-work conserving, on-time, and rate-\n   based functional characteristics, according to the taxonomy suggested\n   by [I-D.ietf-detnet-dataplane-taxonomy].\n\n   The packets are stored in the queue in ascending order of the ideal\n   service start time, called Eligible Time (ET), and the ideal service\n   completion time, called Finish Time (FT).  The queued packets were\n   forwarded after ET, in ascending ordering of FT, in a non-work\n   conserving manner.  The ET and FT are calculated at the entrance node\n   according to the packet size and rate of the flow.  All subsequent\n   core nodes are stateless and asynchronously update ET and FT based on\n   metadata received via packet headers.  This mechanism is called non-\n   work conserving stateless fair queuing (N-SCORE), which guarantees\n   both E2E latency upper and lower bounds, thus E2E jitter bound.</p>"
 relation:
 - type: updates
   bibitem:

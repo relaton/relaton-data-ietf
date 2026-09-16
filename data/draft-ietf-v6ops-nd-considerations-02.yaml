@@ -1,12 +1,10 @@
----
 id: draftietfv6opsndconsiderations02
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Selectively Isolating Hosts to Prevent Potential Neighbor Discovery Issues
-    and Simplify IPv6 First-hops
+  content: Selectively Isolating Hosts to Prevent Potential Neighbor Discovery Issues and Simplify IPv6 First-hops
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-v6ops-nd-considerations-02
@@ -154,25 +152,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Neighbor Discovery (ND) is a key protocol of IPv6 first-hop. ND uses
-       multicast extensively and trusts all hosts. In some scenarios like
-       wireless networks, multicast can be inefficient. In other scenarios
-       like public access networks, hosts may not be trustable.
-       Consequently, ND has potential issues in various scenarios. The
-       issues and the solutions for them are documented in more than 30
-       RFCs. It is difficult to keep track of all these issues and
-       solutions. Therefore, an overview is useful.
-
-       This document firstly summarizes the known ND issues and
-       optimization solutions into a one-stop reference. Analyzing these
-       solutions reveals an insight: isolating hosts is effective in
-       preventing ND issues. Five isolation methods are proposed and their
-       applicability is discussed. Guidelines are described for selecting a
-       suitable isolation method based on the deployment scenario. When ND
-       issues are prevented with a proper isolation method, the solutions
-       for these issues are not needed. This simplifies the IPv6 first-
-       hops.</p>
+  content: "<p>Neighbor Discovery (ND) is a key protocol of IPv6 first-hop. ND uses\n   multicast extensively and trusts all hosts. In some scenarios like\n   wireless networks, multicast can be inefficient. In other scenarios\n   like public access networks, hosts may not be trustable.\n   Consequently, ND has potential issues in various scenarios. The\n   issues and the solutions for them are documented in more than 30\n   RFCs. It is difficult to keep track of all these issues and\n   solutions. Therefore, an overview is useful.\n\n   This document firstly summarizes the known ND issues and\n   optimization solutions into a one-stop reference. Analyzing these\n   solutions reveals an insight: isolating hosts is effective in\n   preventing ND issues. Five isolation methods are proposed and their\n   applicability is discussed. Guidelines are described for selecting a\n   suitable isolation method based on the deployment scenario. When ND\n   issues are prevented with a proper isolation method, the solutions\n   for these issues are not needed. This simplifies the IPv6 first-\n   hops.</p>"
 relation:
 - type: updates
   bibitem:

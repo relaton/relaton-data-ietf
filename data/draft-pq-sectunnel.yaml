@@ -1,4 +1,3 @@
----
 id: draftpqsectunnel
 schema_version: v1.5.6
 formattedref:
@@ -20,21 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the PQ-SecTunnel protocol, a UDP-based
-       quantum-resistant IP tunnel derived from the WireGuard architecture.
-       Session keys are established by a three-message Noise_IKpsk1kem
-       handshake that replaces Diffie-Hellman with dual Key Encapsulation
-       Mechanism (KEM) operations (static and ephemeral).  Authentication is
-       implicit: peers prove possession of long-term KEM private keys
-       through interlocking encapsulations rather than signing the
-       transcript.  The protocol is organized as a multi-suite framework.
-       Implementations MAY select ML-KEM-512 or ML-KEM-768 independently for
-       the static and ephemeral KEM roles.  This document RECOMMENDS the
-       profile static=ML-KEM-512, ephemeral=ML-KEM-768, AEAD=SM4-GCM,
-       Hash=SM3 (denoted mlkem512-mlkem768-sm4gcm-sm3).  Other ML-KEM
-       combinations with the same AEAD/Hash, and additional KEM families
-       such as Aigis-enc (integration ongoing), are optional profiles.</p>
+  content: "<p>This document specifies the PQ-SecTunnel protocol, a UDP-based\n   quantum-resistant IP tunnel derived from the WireGuard architecture.\n   Session keys are established by a three-message Noise_IKpsk1kem\n   handshake that replaces Diffie-Hellman with dual Key Encapsulation\n   Mechanism (KEM) operations (static and ephemeral).  Authentication is\n   implicit: peers prove possession of long-term KEM private keys\n   through interlocking encapsulations rather than signing the\n   transcript.  The protocol is organized as a multi-suite framework.\n   Implementations MAY select ML-KEM-512 or ML-KEM-768 independently for\n   the static and ephemeral KEM roles.  This document RECOMMENDS the\n   profile static=ML-KEM-512, ephemeral=ML-KEM-768, AEAD=SM4-GCM,\n   Hash=SM3 (denoted mlkem512-mlkem768-sm4gcm-sm3).  Other ML-KEM\n   combinations with the same AEAD/Hash, and additional KEM families\n   such as Aigis-enc (integration ongoing), are optional profiles.</p>"
 relation:
 - type: includes
   bibitem:

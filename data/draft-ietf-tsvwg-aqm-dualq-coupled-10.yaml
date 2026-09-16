@@ -1,4 +1,3 @@
----
 id: draftietftsvwgaqmdualqcoupled10
 schema_version: v1.5.6
 type: standard
@@ -104,34 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Low Latency Low Loss Scalable Throughput (L4S) architecture
-       allows data flows over the public Internet to achieve consistent
-       ultra-low queuing latency, generally zero congestion loss and scaling
-       of per-flow throughput without the scaling problems of traditional
-       TCP.  To achieve this, L4S data flows have to use one of the family
-       of 'Scalable' congestion controls (Data Centre TCP and TCP Prague are
-       examples) and a form of Explicit Congestion Notification (ECN) with
-       modified behaviour.  However, until now, Scalable congestion controls
-       did not co-exist with existing TCP Reno/Cubic traffic --- Scalable
-       controls are so aggressive that 'Classic' TCP algorithms drive
-       themselves to a small capacity share.  Therefore, until now, L4S
-       controls could only be deployed where a clean-slate environment could
-       be arranged, such as in private data centres (hence the name DCTCP).
-       This specification defines `DualQ Coupled Active Queue Management
-       (AQM)', which enables these Scalable congestion controls to safely
-       co-exist with Classic Internet traffic.
-
-       Analytical study and implementation testing of the Coupled AQM have
-       shown that Scalable and Classic flows competing under similar
-       conditions run at roughly the same rate.  It achieves this
-       indirectly, without having to inspect transport layer flow
-       identifiers.  When tested in a residential broadband setting, DCTCP
-       also achieves sub-millisecond average queuing delay and zero
-       congestion loss under a wide range of mixes of DCTCP and `Classic'
-       broadband Internet traffic, without compromising the performance of
-       the Classic traffic.  The solution also reduces network complexity
-       and requires no configuration for the public Internet.</p>
+  content: "<p>The Low Latency Low Loss Scalable Throughput (L4S) architecture\n   allows data flows over the public Internet to achieve consistent\n   ultra-low queuing latency, generally zero congestion loss and scaling\n   of per-flow throughput without the scaling problems of traditional\n   TCP.  To achieve this, L4S data flows have to use one of the family\n   of 'Scalable' congestion controls (Data Centre TCP and TCP Prague are\n   examples) and a form of Explicit Congestion Notification (ECN) with\n   modified behaviour.  However, until now, Scalable congestion controls\n   did not co-exist with existing TCP Reno/Cubic traffic --- Scalable\n   controls are so aggressive that 'Classic' TCP algorithms drive\n   themselves to a small capacity share.  Therefore, until now, L4S\n   controls could only be deployed where a clean-slate environment could\n   be arranged, such as in private data centres (hence the name DCTCP).\n   This specification defines `DualQ Coupled Active Queue Management\n   (AQM)', which enables these Scalable congestion controls to safely\n   co-exist with Classic Internet traffic.\n\n   Analytical study and implementation testing of the Coupled AQM have\n   shown that Scalable and Classic flows competing under similar\n   conditions run at roughly the same rate.  It achieves this\n   indirectly, without having to inspect transport layer flow\n   identifiers.  When tested in a residential broadband setting, DCTCP\n   also achieves sub-millisecond average queuing delay and zero\n   congestion loss under a wide range of mixes of DCTCP and `Classic'\n   broadband Internet traffic, without compromising the performance of\n   the Classic traffic.  The solution also reduces network complexity\n   and requires no configuration for the public Internet.</p>"
 relation:
 - type: updates
   bibitem:

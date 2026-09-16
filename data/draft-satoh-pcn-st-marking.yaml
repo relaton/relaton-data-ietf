@@ -1,4 +1,3 @@
----
 id: draftsatohpcnstmarking
 schema_version: v1.5.6
 formattedref:
@@ -6,8 +5,7 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Single PCN Threshold Marking by using PCN baseline encoding for both admission
-    and termination controls
+  content: Single PCN Threshold Marking by using PCN baseline encoding for both admission and termination controls
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-satoh-pcn-st-marking-02
@@ -21,43 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Pre-congestion notification (PCN) gives early warning of congestion
-    by metering and marking packets in order to protect the quality of
-    service of inelastic flows.  PCN traffic load is divide into three
-    pre-congestion states by two rates that [I-D.ietf.pcn.architecture]
-    defines per link: PCN-admissible- and PCN-supportable-rates.  PCN
-    admission control and flow termination mechanisms operate in
-    accordance with these three states.  [I-D.ietf.pcn.baseline.encoding]
-    defines two PCN encoding states.  This document proposes an algorithm
-    for marking and metering by using PCN baseline encoding for both flow
-    admission and flow termination.  The ratio of marked packets
-    determines the three link states: no packets marked, some packets
-    marked, and all packets marked.  To achieve this marking behaviour,
-    we use two token buckets.  One is not used for marking but for a
-    marking switch; the other is used for marking.  The token bucket for
-    marking has two thresholds.  One is TBthreshold.threshold, already
-    defined in [I-D.ietf-pcn-marking-behaviour], and the other is a new
-    threshold, which is set to be the number of bits of a metered-packet
-    smaller than the token bucket size.  Therefore, the new threshold is
-    larger than TBthreshold.threshold.  If the amount of tokens is less
-    than TBthreshold.threshold, all the packets are marked as defined in
-    [I-D.ietf-pcn-marking-behaviour].  If the amount of tokens is less
-    than the new threshold and greater than TBthreshold.threshold, one-
-    Nth packets are marked.  We evaluated the performance of admission
-    control and flow termination using a simulation.  For admission
-    control, the results show that the performance of the algorithm was
-    almost the same as, but slightly inferior to, that of CL
-    [draft-briscoe-tsvwg-cl-phb-03].  For flow termination, the
-    performance of the algorithm was almost the same as CL when the load
-    was 1.2 times the supportable rate, but it was superior to CL when
-    the load was high (two times the supportable rate).  Furthermore, in
-    the algorithm, over termination percentages of all the bottleneck
-    links are almost the same in the case of multi-bottleneck.  In CL,
-    the over termination percentages of all the bottleneck links are
-    different and those at upstream bottleneck links are higher than
-    those at downstream bottleneck links because of accumulation of
-    marked packets.</p>
+  content: "<p>Pre-congestion notification (PCN) gives early warning of congestion\nby metering and marking packets in order to protect the quality of\nservice of inelastic flows.  PCN traffic load is divide into three\npre-congestion states by two rates that [I-D.ietf.pcn.architecture]\ndefines per link: PCN-admissible- and PCN-supportable-rates.  PCN\nadmission control and flow termination mechanisms operate in\naccordance with these three states.  [I-D.ietf.pcn.baseline.encoding]\ndefines two PCN encoding states.  This document proposes an algorithm\nfor marking and metering by using PCN baseline encoding for both flow\nadmission and flow termination.  The ratio of marked packets\ndetermines the three link states: no packets marked, some packets\nmarked, and all packets marked.  To achieve this marking behaviour,\nwe use two token buckets.  One is not used for marking but for a\nmarking switch; the other is used for marking.  The token bucket for\nmarking has two thresholds.  One is TBthreshold.threshold, already\ndefined in [I-D.ietf-pcn-marking-behaviour], and the other is a new\nthreshold, which is set to be the number of bits of a metered-packet\nsmaller than the token bucket size.  Therefore, the new threshold is\nlarger than TBthreshold.threshold.  If the amount of tokens is less\nthan TBthreshold.threshold, all the packets are marked as defined in\n[I-D.ietf-pcn-marking-behaviour].  If the amount of tokens is less\nthan the new threshold and greater than TBthreshold.threshold, one-\nNth packets are marked.  We evaluated the performance of admission\ncontrol and flow termination using a simulation.  For admission\ncontrol, the results show that the performance of the algorithm was\nalmost the same as, but slightly inferior to, that of CL\n[draft-briscoe-tsvwg-cl-phb-03].  For flow termination, the\nperformance of the algorithm was almost the same as CL when the load\nwas 1.2 times the supportable rate, but it was superior to CL when\nthe load was high (two times the supportable rate).  Furthermore, in\nthe algorithm, over termination percentages of all the bottleneck\nlinks are almost the same in the case of multi-bottleneck.  In CL,\nthe over termination percentages of all the bottleneck links are\ndifferent and those at upstream bottleneck links are higher than\nthose at downstream bottleneck links because of accumulation of\nmarked packets.</p>"
 relation:
 - type: includes
   bibitem:

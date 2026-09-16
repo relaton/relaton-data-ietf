@@ -1,4 +1,3 @@
----
 id: draftliindividualinip01
 schema_version: v1.5.6
 type: standard
@@ -129,26 +128,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies the In-Network Inference Protocol (INIP), a
-       lightweight protocol designed specifically for implementing high-
-       speed in-network inference in data center internal networks.  INIP
-       utilizes data plane devices (such as switches, DPUs, and SmartNICs)
-       to perform lightweight inference tasks while ensuring that core
-       network forwarding functions are not affected.  The protocol operates
-       based on the IPv4 protocol and adopts a fixed, lightweight packet
-       format.
-
-       INIP adopts a two-tier architecture of "centralized control plane
-       adaptation and scheduling, and minimal data plane execution".  The
-       control plane stores all inference models, deploys model rules to
-       data plane devices using a CDN-like scheduling method, and assumes
-       the responsibility of degraded fallback inference; the data plane
-       performs packet parsing and match action table-based inference.  This
-       document details INIP's core logic, packet format, data plane device
-       constraints, model expression specifications, control plane
-       responsibilities, CDN-like scheduling mechanism, dynamic model
-       popularity replacement, and overall execution process.</p>
+  content: "<p>This document specifies the In-Network Inference Protocol (INIP), a\n   lightweight protocol designed specifically for implementing high-\n   speed in-network inference in data center internal networks.  INIP\n   utilizes data plane devices (such as switches, DPUs, and SmartNICs)\n   to perform lightweight inference tasks while ensuring that core\n   network forwarding functions are not affected.  The protocol operates\n   based on the IPv4 protocol and adopts a fixed, lightweight packet\n   format.\n\n   INIP adopts a two-tier architecture of \"centralized control plane\n   adaptation and scheduling, and minimal data plane execution\".  The\n   control plane stores all inference models, deploys model rules to\n   data plane devices using a CDN-like scheduling method, and assumes\n   the responsibility of degraded fallback inference; the data plane\n   performs packet parsing and match action table-based inference.  This\n   document details INIP's core logic, packet format, data plane device\n   constraints, model expression specifications, control plane\n   responsibilities, CDN-like scheduling mechanism, dynamic model\n   popularity replacement, and overall execution process.</p>"
 relation:
 - type: updates
   bibitem:

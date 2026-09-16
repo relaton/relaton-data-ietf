@@ -1,4 +1,3 @@
----
 id: draftnordinocmintegrationprotocol00
 schema_version: v1.5.6
 type: standard
@@ -107,40 +106,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Open Cloud Mesh Integration Protocol (OCM-IP) defines how an Open
-       Cloud Mesh (OCM) Server can integrate supporting servers, such as
-       SSH/SFTP servers, web application platforms, or stand-alone WebDAV
-       servers, to perform protocol-specific work on its behalf.
-
-       OCM-IP makes it possible for existing OCM Servers to offload protocol
-       specific interactions to stand-alone servers, or even implement OCM
-       as a lightweight server that handles only the OCM parts of a
-       deployment: discovery, share creation, token issuance and signing.
-       Anything protocol-specific, such as serving files over WebDAV,
-       providing SSH access, or running an interactive web application, can
-       be handed off to one or more Protocol Servers running elsewhere,
-       possibly operated with different software and on different
-       infrastructure.
-
-       OCM-IP defines three integration modes: a provisioned mode, in which
-       the OCM Server pushes Share information to the Protocol Server over a
-       signed back channel; a self-contained mode, in which the Share
-       information is embedded in the signed access token itself, so that
-       the Protocol Server needs no per-share state and no inbound API at
-       all; and an introspected mode, in which the Protocol Server validates
-       presented credentials through a token introspection endpoint,
-       restoring compatibility with Receiving Servers that do not support
-       token exchange.
-
-       OCM-IP is a protocol between the Sending OCM Server and its Protocol
-       Servers only.  The Receiving Server is not involved in, and does not
-       need to be aware of, this protocol: everything it observes is
-       indistinguishable from the Sending Server serving the access
-       protocols itself.  For this reason, an OCM Sending Server MAY adopt a
-       different strategy to interoperate with Protocol Servers, including
-       e.g. establishing trust via shared keys, without compromising
-       compliance with the OCM protocol.</p>
+  content: "<p>The Open Cloud Mesh Integration Protocol (OCM-IP) defines how an Open\n   Cloud Mesh (OCM) Server can integrate supporting servers, such as\n   SSH/SFTP servers, web application platforms, or stand-alone WebDAV\n   servers, to perform protocol-specific work on its behalf.\n\n   OCM-IP makes it possible for existing OCM Servers to offload protocol\n   specific interactions to stand-alone servers, or even implement OCM\n   as a lightweight server that handles only the OCM parts of a\n   deployment: discovery, share creation, token issuance and signing.\n   Anything protocol-specific, such as serving files over WebDAV,\n   providing SSH access, or running an interactive web application, can\n   be handed off to one or more Protocol Servers running elsewhere,\n   possibly operated with different software and on different\n   infrastructure.\n\n   OCM-IP defines three integration modes: a provisioned mode, in which\n   the OCM Server pushes Share information to the Protocol Server over a\n   signed back channel; a self-contained mode, in which the Share\n   information is embedded in the signed access token itself, so that\n   the Protocol Server needs no per-share state and no inbound API at\n   all; and an introspected mode, in which the Protocol Server validates\n   presented credentials through a token introspection endpoint,\n   restoring compatibility with Receiving Servers that do not support\n   token exchange.\n\n   OCM-IP is a protocol between the Sending OCM Server and its Protocol\n   Servers only.  The Receiving Server is not involved in, and does not\n   need to be aware of, this protocol: everything it observes is\n   indistinguishable from the Sending Server serving the access\n   protocols itself.  For this reason, an OCM Sending Server MAY adopt a\n   different strategy to interoperate with Protocol Servers, including\n   e.g. establishing trust via shared keys, without compromising\n   compliance with the OCM protocol.</p>"
 relation:
 - type: updatedBy
   bibitem:

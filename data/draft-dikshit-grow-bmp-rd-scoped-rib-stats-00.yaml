@@ -1,4 +1,3 @@
----
 id: draftdikshitgrowbmprdscopedribstats00
 schema_version: v1.5.6
 type: standard
@@ -107,26 +106,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>[RFC7854] defines the BGP Monitoring Protocol (BMP) and its
-       Statistics Report message.  [I-D.ietf-grow-bmp-bgp-rib-stats]
-       (published as [RFC9972]) extended that message with a set of
-       advanced, per-AFI/SAFI BGP RIB statistics types.  Several ongoing
-       individual contributions independently define additional per-
-       address-family, per-instance, or per-Route-Distinguisher (RD)
-       statistics on top of that base (for example, EVPN-specific RIB
-       statistics and VRF Loc-RIB monitoring enhancements), each proposing
-       its own ad hoc Stat Data encoding.
-
-       This document defines a single, address-family-agnostic Stat Data
-       container -- the "RD-Scoped Statistics" format -- for BMP
-       statistics that are naturally scoped below the per-AFI/SAFI level,
-       to a specific Route Distinguisher (VRF instance, EVPN Instance,
-       MVPN instance, or equivalent).  Address-family-specific documents,
-       such as EVPN-specific BMP RIB statistics, are expected to become
-       thin "profiles" of this container rather than defining their own
-       wire format, reducing duplication and Stat Type registry
-       fragmentation across the GROW working group's BMP statistics work.</p>
+  content: "<p>[RFC7854] defines the BGP Monitoring Protocol (BMP) and its\n   Statistics Report message.  [I-D.ietf-grow-bmp-bgp-rib-stats]\n   (published as [RFC9972]) extended that message with a set of\n   advanced, per-AFI/SAFI BGP RIB statistics types.  Several ongoing\n   individual contributions independently define additional per-\n   address-family, per-instance, or per-Route-Distinguisher (RD)\n   statistics on top of that base (for example, EVPN-specific RIB\n   statistics and VRF Loc-RIB monitoring enhancements), each proposing\n   its own ad hoc Stat Data encoding.\n\n   This document defines a single, address-family-agnostic Stat Data\n   container -- the \"RD-Scoped Statistics\" format -- for BMP\n   statistics that are naturally scoped below the per-AFI/SAFI level,\n   to a specific Route Distinguisher (VRF instance, EVPN Instance,\n   MVPN instance, or equivalent).  Address-family-specific documents,\n   such as EVPN-specific BMP RIB statistics, are expected to become\n   thin \"profiles\" of this container rather than defining their own\n   wire format, reducing duplication and Stat Type registry\n   fragmentation across the GROW working group's BMP statistics work.</p>"
 relation:
 - type: updatedBy
   bibitem:

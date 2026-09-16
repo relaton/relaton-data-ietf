@@ -1,4 +1,3 @@
----
 id: drafthuitemaquicmpathexplicit00
 schema_version: v1.5.6
 type: standard
@@ -54,26 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The work on QUIC multipath has almost converged, but we are still
-       debating how to identify paths.  The draft multipath version 06
-       identifies paths explicitly using the sequence number of the
-       Connection Identifier used for sending packets on the path.  The WG
-       is considering an alternate proposal in which the path ID is
-       explicit.  In order to compare the two solutions, we propose here an
-       extension to the multipath draft allowing endpoints to negotiate the
-       use of explicit sequence numbers.  When the extension is negotiated,
-       endpoints announce new connection identifiers using a new
-       MP_CONNECTION_ID frame, which carries the parameters of the
-       NEW_CONNECTION_ID plus a path ID.  This path ID is used instead of
-       the CID sequence number to identify packet number spaces, to create
-       encryption nonces, to identify paths in MP_ACK, MP_ABANDON,
-       MP_AVAILABLE and MP_STANBY frames, and to perform the logic
-       associated with path creation, path CID rotation, and NAT rebinding.
-       The draft analyzes the pros and cons of using this extension.  After
-       experimentation and analysis, we expect that this extension will be
-       either absorbed into a new version of the QUIc multipath draft, or
-       abandoned.</p>
+  content: "<p>The work on QUIC multipath has almost converged, but we are still\n   debating how to identify paths.  The draft multipath version 06\n   identifies paths explicitly using the sequence number of the\n   Connection Identifier used for sending packets on the path.  The WG\n   is considering an alternate proposal in which the path ID is\n   explicit.  In order to compare the two solutions, we propose here an\n   extension to the multipath draft allowing endpoints to negotiate the\n   use of explicit sequence numbers.  When the extension is negotiated,\n   endpoints announce new connection identifiers using a new\n   MP_CONNECTION_ID frame, which carries the parameters of the\n   NEW_CONNECTION_ID plus a path ID.  This path ID is used instead of\n   the CID sequence number to identify packet number spaces, to create\n   encryption nonces, to identify paths in MP_ACK, MP_ABANDON,\n   MP_AVAILABLE and MP_STANBY frames, and to perform the logic\n   associated with path creation, path CID rotation, and NAT rebinding.\n   The draft analyzes the pros and cons of using this extension.  After\n   experimentation and analysis, we expect that this extension will be\n   either absorbed into a new version of the QUIc multipath draft, or\n   abandoned.</p>"
 series:
 - type: main
   title:

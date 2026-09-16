@@ -1,4 +1,3 @@
----
 id: draftpowersdnsopexpire
 schema_version: v1.5.6
 formattedref:
@@ -20,21 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines a new DNS message opcode, EXPIRE, which enables
-       an authenticated authoritative operator to request immediate deletion
-       of a specific RRset from a resolver's cache.  EXPIRE messages may be
-       authenticated either through DNSSEC signatures or through resolver
-       control-channel authentication (for example TSIG, mutually
-       authenticated TLS, IPsec, or local trust policy).  EXPIRE applies
-       only to resolver cache and MUST NOT modify authoritative data.
-
-       Resolvers validate authority, apply mandatory replay protection using
-       SOA serials when available or equivalent replay-mitigation
-       mechanisms, and flush the targeted RRset upon successful validation.
-       EXPIRE provides a deterministic, authenticated mechanism for cache
-       rollback and correction across both signed (DNSSEC) and unsigned
-       (internal) DNS deployments.</p>
+  content: "<p>This document defines a new DNS message opcode, EXPIRE, which enables\n   an authenticated authoritative operator to request immediate deletion\n   of a specific RRset from a resolver's cache.  EXPIRE messages may be\n   authenticated either through DNSSEC signatures or through resolver\n   control-channel authentication (for example TSIG, mutually\n   authenticated TLS, IPsec, or local trust policy).  EXPIRE applies\n   only to resolver cache and MUST NOT modify authoritative data.\n\n   Resolvers validate authority, apply mandatory replay protection using\n   SOA serials when available or equivalent replay-mitigation\n   mechanisms, and flush the targeted RRset upon successful validation.\n   EXPIRE provides a deterministic, authenticated mechanism for cache\n   rollback and correction across both signed (DNSSEC) and unsigned\n   (internal) DNS deployments.</p>"
 relation:
 - type: includes
   bibitem:

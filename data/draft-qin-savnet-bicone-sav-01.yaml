@@ -1,4 +1,3 @@
----
 id: draftqinsavnetbiconesav01
 schema_version: v1.5.6
 type: standard
@@ -126,23 +125,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Source address validation (SAV) aims to detect source-spoofed traffic
-       while avoiding improper blocking of legitimate traffic.  Existing SAV
-       mechanisms commonly rely on ingress allowlist filters on interfaces
-       facing customer or lateral peer Autonomous Systems (ASes).  When such
-       an allowlist is incomplete, a source address not covered by the
-       allowlist cannot be conclusively identified as spoofed, because
-       legitimate source prefixes may be missing from the allowlist.  This
-       document describes Bicone SAV, which jointly uses an allowlist
-       derived from customer-cone information and a blocklist containing
-       prefixes that can be positively identified as inappropriate on the
-       corresponding ingress interface.  When the allowlist is incomplete,
-       packets matching the allowlist are permitted, packets matching the
-       blocklist are discarded, and packets matching neither list are
-       permitted with logging or other monitoring for subsequent analysis.
-       The blocklist can be constructed from provider-cone information and
-       augmented with denylist information derived from customer cones.</p>
+  content: "<p>Source address validation (SAV) aims to detect source-spoofed traffic\n   while avoiding improper blocking of legitimate traffic.  Existing SAV\n   mechanisms commonly rely on ingress allowlist filters on interfaces\n   facing customer or lateral peer Autonomous Systems (ASes).  When such\n   an allowlist is incomplete, a source address not covered by the\n   allowlist cannot be conclusively identified as spoofed, because\n   legitimate source prefixes may be missing from the allowlist.  This\n   document describes Bicone SAV, which jointly uses an allowlist\n   derived from customer-cone information and a blocklist containing\n   prefixes that can be positively identified as inappropriate on the\n   corresponding ingress interface.  When the allowlist is incomplete,\n   packets matching the allowlist are permitted, packets matching the\n   blocklist are discarded, and packets matching neither list are\n   permitted with logging or other monitoring for subsequent analysis.\n   The blocklist can be constructed from provider-cone information and\n   augmented with denylist information derived from customer cones.</p>"
 relation:
 - type: updates
   bibitem:

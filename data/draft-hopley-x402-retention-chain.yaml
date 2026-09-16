@@ -1,4 +1,3 @@
----
 id: drafthopleyx402retentionchain
 schema_version: v1.5.6
 formattedref:
@@ -20,45 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies eight cryptographic constructions for
-       self-verifiable agentic payment records.  The first, the Retention
-       Chain Reference (retention_chain_ref), enables tamper-evident audit
-       chains linking payment receipts without requiring external
-       infrastructure.  The second, the Payment Action Lifecycle, defines
-       a content-addressed model for the exactly-once execution of payment
-       actions, including an action reference primitive (action_ref) and a
-       per-state transition hash (transition_hash) with a provable SKIP-on-
-       retry idempotency guarantee.  The third, the Settlement-Action
-       Binding (binding_ref), binds a settled payment to the verified agent
-       action it paid for and to the retention chain entry recording it, so
-       that a settlement attestation proves not only that a payment occurred
-       but which verified action it corresponds to.  The fourth, the Policy
-       Binding (policy_bound_ref), binds a content-addressed snapshot of the
-       governing policy to an existing binding or chain reference, so that a
-       decision is verifiable against the exact policy version that admitted
-       it and a policy rotation is detectable by recomputation.  The fifth,
-       the Compliance Gate Binding (gate_ref), binds a categorical
-       ALLOW/REFER/DENY compliance verdict and a no-PII payer reference to a
-       policy or binding reference, so that a screening decision is provably
-       tied to the policy in force when it was made and carries no personal
-       data in the bound record.  The sixth, the Pre-Payment Decision
-       Chain (guardrail_ref), composes an agent identity reference, a spend
-       authority reference, and the policy in force into one recomputable
-       pre-payment ALLOW/DENY decision.  The seventh, Post-Decision
-       Execution Evidence (execution_ref), binds an executed action to the
-       exact decision that authorized it, so the recorded execution is
-       provably consistent with the decision and not merely correlated with
-       an agent identity.  The eighth, Cross-Party Authority Delegation
-       (delegation_ref), binds a delegation of authority from one party to
-       another and chains hand-offs, so a verifier can confirm that authority
-       did not widen across an organizational boundary.  All
-       constructions use only SHA-256 and the JSON Canonicalization Scheme
-       (JCS, RFC 8785),
-       and are verifiable by any party holding the relevant receipts without
-       contacting the issuer.  The constructions satisfy the transaction
-       recording and audit trail obligations of MiCA Article 80, DORA
-       Article 14, and AMLR Article 56.</p>
+  content: "<p>This document specifies eight cryptographic constructions for\n   self-verifiable agentic payment records.  The first, the Retention\n   Chain Reference (retention_chain_ref), enables tamper-evident audit\n   chains linking payment receipts without requiring external\n   infrastructure.  The second, the Payment Action Lifecycle, defines\n   a content-addressed model for the exactly-once execution of payment\n   actions, including an action reference primitive (action_ref) and a\n   per-state transition hash (transition_hash) with a provable SKIP-on-\n   retry idempotency guarantee.  The third, the Settlement-Action\n   Binding (binding_ref), binds a settled payment to the verified agent\n   action it paid for and to the retention chain entry recording it, so\n   that a settlement attestation proves not only that a payment occurred\n   but which verified action it corresponds to.  The fourth, the Policy\n   Binding (policy_bound_ref), binds a content-addressed snapshot of the\n   governing policy to an existing binding or chain reference, so that a\n   decision is verifiable against the exact policy version that admitted\n   it and a policy rotation is detectable by recomputation.  The fifth,\n   the Compliance Gate Binding (gate_ref), binds a categorical\n   ALLOW/REFER/DENY compliance verdict and a no-PII payer reference to a\n   policy or binding reference, so that a screening decision is provably\n   tied to the policy in force when it was made and carries no personal\n   data in the bound record.  The sixth, the Pre-Payment Decision\n   Chain (guardrail_ref), composes an agent identity reference, a spend\n   authority reference, and the policy in force into one recomputable\n   pre-payment ALLOW/DENY decision.  The seventh, Post-Decision\n   Execution Evidence (execution_ref), binds an executed action to the\n   exact decision that authorized it, so the recorded execution is\n   provably consistent with the decision and not merely correlated with\n   an agent identity.  The eighth, Cross-Party Authority Delegation\n   (delegation_ref), binds a delegation of authority from one party to\n   another and chains hand-offs, so a verifier can confirm that authority\n   did not widen across an organizational boundary.  All\n   constructions use only SHA-256 and the JSON Canonicalization Scheme\n   (JCS, RFC 8785),\n   and are verifiable by any party holding the relevant receipts without\n   contacting the issuer.  The constructions satisfy the transaction\n   recording and audit trail obligations of MiCA Article 80, DORA\n   Article 14, and AMLR Article 56.</p>"
 relation:
 - type: includes
   bibitem:

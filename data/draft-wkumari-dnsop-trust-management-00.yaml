@@ -1,4 +1,3 @@
----
 id: draftwkumaridnsoptrustmanagement00
 schema_version: v1.5.6
 type: standard
@@ -52,38 +51,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes a simple means for automated updating of
-       DNSSEC trust anchors.  This mechanism allows the trust anchor
-       maintainer to monitor the progress of the migration to the new trust
-       anchor, and so predict the effect before decommissioning the existing
-       trust anchor.
-
-       It is primarily aimed at the root DNSSEC trust anchor, but should be
-       applicable to trust anchors elsewhere in the DNS as well.
-
-       [ Ed note - informal summary: One of the big issues with rolling the
-       root key is that it is unclear who all is using RFC5011, who all has
-       successfully fetched and installed the new key, and, most
-       importantly, who all will die when the old key is revoked.  A
-       secondary problem is that the response sizes suddenly increase,
-       potentially blowing the MTU limit.  This document describes a method
-       that is basically CDS, but for the root key (or any other trust
-       anchor).  Unlike the CDS record though, this record lives at a
-       special name - by querying for this name, the recursive exposes its
-       list of TAs to the auth server (signalling upstream) . This allows
-       the TA maintainer to predict how many, and who all will break.  It
-       also allows the pre-publication of a key before using it, and so
-       avoids the need to double response sizes...]
-
-       [ Ed note: Text inside square brackets ([]) is additional background
-       information, answers to frequently asked questions, general musings,
-       etc.  They will be removed before publication.]
-
-       [ This document is being collaborated on in Github at:
-       https://github.com/wkumari/draft-wkumari-dnsop-trust-management.  The
-       most recent version of the document, open issues, etc should all be
-       available here.  The authors (gratefully) accept pull requests ]</p>
+  content: "<p>This document describes a simple means for automated updating of\n   DNSSEC trust anchors.  This mechanism allows the trust anchor\n   maintainer to monitor the progress of the migration to the new trust\n   anchor, and so predict the effect before decommissioning the existing\n   trust anchor.\n\n   It is primarily aimed at the root DNSSEC trust anchor, but should be\n   applicable to trust anchors elsewhere in the DNS as well.\n\n   [ Ed note - informal summary: One of the big issues with rolling the\n   root key is that it is unclear who all is using RFC5011, who all has\n   successfully fetched and installed the new key, and, most\n   importantly, who all will die when the old key is revoked.  A\n   secondary problem is that the response sizes suddenly increase,\n   potentially blowing the MTU limit.  This document describes a method\n   that is basically CDS, but for the root key (or any other trust\n   anchor).  Unlike the CDS record though, this record lives at a\n   special name - by querying for this name, the recursive exposes its\n   list of TAs to the auth server (signalling upstream) . This allows\n   the TA maintainer to predict how many, and who all will break.  It\n   also allows the pre-publication of a key before using it, and so\n   avoids the need to double response sizes...]\n\n   [ Ed note: Text inside square brackets ([]) is additional background\n   information, answers to frequently asked questions, general musings,\n   etc.  They will be removed before publication.]\n\n   [ This document is being collaborated on in Github at:\n   https://github.com/wkumari/draft-wkumari-dnsop-trust-management.  The\n   most recent version of the document, open issues, etc should all be\n   available here.  The authors (gratefully) accept pull requests ]</p>"
 relation:
 - type: updatedBy
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftferroapertomemory
 schema_version: v1.5.6
 formattedref:
@@ -20,26 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>AI assistants and agents accumulate long-term memory about their
-       users.  This memory is typically stored in proprietary, provider-held
-       silos: it cannot be moved between tools, its integrity cannot be
-       verified, and its confidentiality depends entirely on the provider.
-       This document specifies the ApertoMemory format: a canonical, signed,
-       client-side-encrypted representation of AI memory objects, together
-       with a portable single-file export container.  Memory objects are
-       encoded in deterministic CBOR, signed with COSE_Sign1, and encrypted
-       with COSE_Encrypt0 under keys derived from and controlled by the
-       user.  A storage or synchronisation server handling ApertoMemory
-       objects has zero access to their content, authorship, or semantic
-       timestamps.
-
-       This revision specifies format_version 2, which cryptographically
-       binds every signature to the author it claims and to the cleartext
-       envelope around it, and derives trust from which key verified an
-       object rather than from a declared field. format_version 1, described
-       by earlier revisions of this document, carries a known forgeable-
-       provenance defect and MUST NOT be implemented for new deployments.</p>
+  content: "<p>AI assistants and agents accumulate long-term memory about their\n   users.  This memory is typically stored in proprietary, provider-held\n   silos: it cannot be moved between tools, its integrity cannot be\n   verified, and its confidentiality depends entirely on the provider.\n   This document specifies the ApertoMemory format: a canonical, signed,\n   client-side-encrypted representation of AI memory objects, together\n   with a portable single-file export container.  Memory objects are\n   encoded in deterministic CBOR, signed with COSE_Sign1, and encrypted\n   with COSE_Encrypt0 under keys derived from and controlled by the\n   user.  A storage or synchronisation server handling ApertoMemory\n   objects has zero access to their content, authorship, or semantic\n   timestamps.\n\n   This revision specifies format_version 2, which cryptographically\n   binds every signature to the author it claims and to the cleartext\n   envelope around it, and derives trust from which key verified an\n   object rather than from a declared field. format_version 1, described\n   by earlier revisions of this document, carries a known forgeable-\n   provenance defect and MUST NOT be implemented for new deployments.</p>"
 relation:
 - type: includes
   bibitem:

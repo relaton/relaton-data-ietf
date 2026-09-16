@@ -1,4 +1,3 @@
----
 id: draftietfpimrefresh02
 schema_version: v1.5.6
 type: standard
@@ -104,22 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This proposal extends the PIM-DM [1] protocol specification by intro-
-    ducing the PIM State-Refresh control message.
-    When an (S,G) entry is created in a router for a directly connected
-    source, if the interface directly connected to the source is the
-    incoming interface for the entry, a new timer is started: the State-
-    Refresh-Timer [SRT(S,G)]. The State-Refresh-Timer controls periodic
-    transmission of the PIM State-Refresh message, which is propagated
-    hop-by-hop down the (S,G) RPF tree. When received by a router on the
-    RPF interface, the State-Refresh message causes existing prune state
-    to be refreshed.
-    Addition of this heartbeat message solves many of the current prob-
-    lems with PIM-DM. It prevents the periodic timeout of prune state in
-    routers, greatly reducing the re-flooding of multicast traffic down
-    the pruned branches that expire periodically. It also causes topology
-    changes to be realised quicker than the traditional 3 minute timeout.</p>
+  content: "<p>This proposal extends the PIM-DM [1] protocol specification by intro-\nducing the PIM State-Refresh control message.\nWhen an (S,G) entry is created in a router for a directly connected\nsource, if the interface directly connected to the source is the\nincoming interface for the entry, a new timer is started: the State-\nRefresh-Timer [SRT(S,G)]. The State-Refresh-Timer controls periodic\ntransmission of the PIM State-Refresh message, which is propagated\nhop-by-hop down the (S,G) RPF tree. When received by a router on the\nRPF interface, the State-Refresh message causes existing prune state\nto be refreshed.\nAddition of this heartbeat message solves many of the current prob-\nlems with PIM-DM. It prevents the periodic timeout of prune state in\nrouters, greatly reducing the re-flooding of multicast traffic down\nthe pruned branches that expire periodically. It also causes topology\nchanges to be realised quicker than the traditional 3 minute timeout.</p>"
 series:
 - type: main
   title:

@@ -1,4 +1,3 @@
----
 id: draftnsianganiphins01
 schema_version: v1.5.6
 type: standard
@@ -54,36 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes Phi-Ns, a new asymmetric cryptographic
-    primitive based on the structured decomposition of the quadratic gap
-    between two primes. Phi-Ns defines a public key q and a private key p
-    such that the difference q^2 - p^2 is expressed as a composite value T.
-    The value T is then factored into small controlled components noted a,
-    b, and R, and the final secret structure abR is encoded through a
-    randomized serialization process.
-
-    The security of Phi-Ns does not rely on integer factorization, the
-    discrete logarithm problem, or elliptic curves. Instead, it depends on
-    the difficulty of recovering p from q when the attacker has no oracle,
-    no structural anchor, and no method to determine whether a candidate p
-    is correct. Because T can be recursively decomposed and reassembled into
-    multiple unpredictable forms, the resulting search space grows
-    combinatorially.
-
-    Phi-Ns further supports recursive expansion of the internal abR
-    structure, allowing the construction of high-entropy secret states even
-    when p and q have relatively small bit lengths. This enables compact
-
-
-
-    public keys, efficient computation, and strong post-quantum resistance
-    based on a non-factorization hardness assumption.
-
-    This document specifies the algorithmic model of Phi-Ns, its parameter
-    choices, and the serialization rules used to encode the abR structure.
-    It also outlines two public-key variants, PK-p and PK-q, which expose
-    either p or q as the public value depending on deployment constraints.</p>
+  content: "<p>This document describes Phi-Ns, a new asymmetric cryptographic\nprimitive based on the structured decomposition of the quadratic gap\nbetween two primes. Phi-Ns defines a public key q and a private key p\nsuch that the difference q^2 - p^2 is expressed as a composite value T.\nThe value T is then factored into small controlled components noted a,\nb, and R, and the final secret structure abR is encoded through a\nrandomized serialization process.\n\nThe security of Phi-Ns does not rely on integer factorization, the\ndiscrete logarithm problem, or elliptic curves. Instead, it depends on\nthe difficulty of recovering p from q when the attacker has no oracle,\nno structural anchor, and no method to determine whether a candidate p\nis correct. Because T can be recursively decomposed and reassembled into\nmultiple unpredictable forms, the resulting search space grows\ncombinatorially.\n\nPhi-Ns further supports recursive expansion of the internal abR\nstructure, allowing the construction of high-entropy secret states even\nwhen p and q have relatively small bit lengths. This enables compact\n\n\n\npublic keys, efficient computation, and strong post-quantum resistance\nbased on a non-factorization hardness assumption.\n\nThis document specifies the algorithmic model of Phi-Ns, its parameter\nchoices, and the serialization rules used to encode the abR structure.\nIt also outlines two public-key variants, PK-p and PK-q, which expose\neither p or q as the public value depending on deployment constraints.</p>"
 relation:
 - type: updates
   bibitem:

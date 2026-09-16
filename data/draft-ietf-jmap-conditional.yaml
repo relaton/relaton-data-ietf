@@ -1,0 +1,39 @@
+id: draftietfjmapconditional
+schema_version: v1.5.6
+formattedref:
+  content: draft-ietf-jmap-conditional
+title:
+- language: en
+  script: Latn
+  content: JMAP Conditional Set
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-conditional-00
+docidentifier:
+- content: draft-ietf-jmap-conditional
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-15'
+abstract:
+- language: en
+  script: Latn
+  content: "<p>The JMAP base protocol ([JMAP-CORE]) provides the Foo/set method for\n   creating, updating, and destroying objects.  It offers a single\n   concurrency control, the \"ifInState\" argument, which guards an entire\n   object type: if any object of that type has changed, the whole method\n   is rejected.\n\n   This extension adds a finer, per-object conditional mechanism.  A\n   client may require that an individual update or destroy proceed only\n   if the target object still matches a set of expected property values,\n   expressed using the JMAP PatchObject already defined for updates.\n   This provides optimistic concurrency control scoped to a single\n   object — the equivalent of an HTTP \"If-Match\" precondition — for any\n   JMAP data type.\n\n   This extension also defines an optional \"atomic\" argument that\n   applies an entire Foo/set as a single unit: either every change it\n   requests takes effect, or none does.  Combined with the per-object\n   precondition, this lets a client express a multi-object change that\n   is safe only when applied together — such as an atomic rename that\n   exchanges two names.</p>"
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-jmap-conditional-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-conditional-00
+    docidentifier:
+    - content: draft-ietf-jmap-conditional-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

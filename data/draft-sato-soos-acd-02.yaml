@@ -1,4 +1,3 @@
----
 id: draftsatosoosacd02
 schema_version: v1.5.6
 type: standard
@@ -50,37 +49,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>A regulated resource provider -- a bank, a government API, a
-       healthcare records system -- receives a request from an AI agent.
-       The agent claims to operate under a constitutional compliance policy
-       and a valid mandate.  The resource provider has no mechanism to
-       verify these claims.  Without a machine-verifiable compliance
-       disclosure, the resource provider cannot confirm the agent's
-       governing law, its active prohibition set, its audit trail
-       reference, or its principal hierarchy -- before granting access.
-
-       This document defines the Agent Compliance Disclosure (ACD)
-       Protocol: a machine-to-machine compliance handshake that must
-       complete before an AI agent is granted access to a regulated
-       resource class.  ACD defines the ACD Record schema (a three-layer
-       structured disclosure produced by the SOOS kernel, covering legal
-       identity, constitutional compliance, and principal hierarchy), the
-       ACD Presentation Protocol (the query/response exchange between a
-       resource provider and the SOOS kernel), the ACD Trust Hierarchy
-       (operator-declared trust levels and Audit Principal credentials),
-       the ACD-to-MJWT binding (ACD MUST reference the session MJWT jti),
-       and the GAR integration (ACD presentation events as Authority
-       Lifecycle Events).  ACD Records are produced exclusively by the
-       Governing Enforcement Component (GEC), signed by the kernel's KIA
-       private key, and logged in the Governance Audit Record (GAR).  LLM
-       self-report of compliance posture is architecturally insufficient
-       and MUST NOT be used as an ACD disclosure surface.
-
-       ACD is the inbound complement to the Resource Governance Protocol
-       (RGP): where RGP governs outbound capability discovery, ACD governs
-       inbound compliance verification.  Together they define the complete
-       resource access governance flow for SOOS-governed agents.</p>
+  content: "<p>A regulated resource provider -- a bank, a government API, a\n   healthcare records system -- receives a request from an AI agent.\n   The agent claims to operate under a constitutional compliance policy\n   and a valid mandate.  The resource provider has no mechanism to\n   verify these claims.  Without a machine-verifiable compliance\n   disclosure, the resource provider cannot confirm the agent's\n   governing law, its active prohibition set, its audit trail\n   reference, or its principal hierarchy -- before granting access.\n\n   This document defines the Agent Compliance Disclosure (ACD)\n   Protocol: a machine-to-machine compliance handshake that must\n   complete before an AI agent is granted access to a regulated\n   resource class.  ACD defines the ACD Record schema (a three-layer\n   structured disclosure produced by the SOOS kernel, covering legal\n   identity, constitutional compliance, and principal hierarchy), the\n   ACD Presentation Protocol (the query/response exchange between a\n   resource provider and the SOOS kernel), the ACD Trust Hierarchy\n   (operator-declared trust levels and Audit Principal credentials),\n   the ACD-to-MJWT binding (ACD MUST reference the session MJWT jti),\n   and the GAR integration (ACD presentation events as Authority\n   Lifecycle Events).  ACD Records are produced exclusively by the\n   Governing Enforcement Component (GEC), signed by the kernel's KIA\n   private key, and logged in the Governance Audit Record (GAR).  LLM\n   self-report of compliance posture is architecturally insufficient\n   and MUST NOT be used as an ACD disclosure surface.\n\n   ACD is the inbound complement to the Resource Governance Protocol\n   (RGP): where RGP governs outbound capability discovery, ACD governs\n   inbound compliance verification.  Together they define the complete\n   resource access governance flow for SOOS-governed agents.</p>"
 relation:
 - type: updates
   bibitem:

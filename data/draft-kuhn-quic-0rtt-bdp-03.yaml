@@ -1,4 +1,3 @@
----
 id: draftkuhnquic0rttbdp03
 schema_version: v1.5.6
 type: standard
@@ -104,28 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The time-to-service duration depends on both peers and the peer
-       initiating the connection may not be the peer actually sending data.
-       Moreover, clients may be resource-limited, behind a low bandwidth or
-       a long-RTT network and may need adaptations to improve data
-       transmission or reception.  While each client and server can have its
-       dedicated solution to store path parameters, having a standard way of
-       exchanging this information helps in providing symmetrical control of
-       the optimisation and reducing protocol ossification.  QUIC may not be
-       limited to HTTP3: it can be used as a substrate for proxying and
-       tunneling.
-
-       This memo discusses a solution where the client is informed about
-       path parameters: both the client and the server can contribute to the
-       reduction of the time-to-service for subsequent connections.  This
-       would improve symmetrical transmission of data and reduce
-       ossification of the protocol.  To improve the time-to-service of
-       subsequent 0-RTT reconnection the server currently sets in the
-       early_data extension the maximum volume of egress data the client is
-       allowed to send when reconnecting.  This memo proposes BDP_metadata,
-       an additional extension, to also inform the client about path
-       parameters.</p>
+  content: "<p>The time-to-service duration depends on both peers and the peer\n   initiating the connection may not be the peer actually sending data.\n   Moreover, clients may be resource-limited, behind a low bandwidth or\n   a long-RTT network and may need adaptations to improve data\n   transmission or reception.  While each client and server can have its\n   dedicated solution to store path parameters, having a standard way of\n   exchanging this information helps in providing symmetrical control of\n   the optimisation and reducing protocol ossification.  QUIC may not be\n   limited to HTTP3: it can be used as a substrate for proxying and\n   tunneling.\n\n   This memo discusses a solution where the client is informed about\n   path parameters: both the client and the server can contribute to the\n   reduction of the time-to-service for subsequent connections.  This\n   would improve symmetrical transmission of data and reduce\n   ossification of the protocol.  To improve the time-to-service of\n   subsequent 0-RTT reconnection the server currently sets in the\n   early_data extension the maximum volume of egress data the client is\n   allowed to send when reconnecting.  This memo proposes BDP_metadata,\n   an additional extension, to also inform the client about path\n   parameters.</p>"
 relation:
 - type: updates
   bibitem:

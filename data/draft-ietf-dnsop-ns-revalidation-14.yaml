@@ -1,4 +1,3 @@
----
 id: draftietfdnsopnsrevalidation14
 schema_version: v1.5.6
 type: standard
@@ -107,21 +106,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document describes an optional algorithm for the processing of
-       Name Server (NS) resource record (RR) sets (RRsets) during iterative
-       resolution, and describes the benefits and considerations of using
-       this approach.  When following a referral response from an
-       authoritative server to a child zone, DNS resolvers should explicitly
-       query the authoritative NS RRset at the apex of the child zone and
-       cache this in preference to the NS RRset on the parent side of the
-       zone cut.  The (A and AAAA) address RRsets in the additional section
-       from referral responses and authoritative NS answers for the names of
-       the NS RRset, should similarly be re-queried and used to replace the
-       entries with the lower trustworthiness ranking in cache.  Resolvers
-       should also periodically revalidate the delegation by re-querying the
-       parent zone at the expiration of the shortest TTL among the parent NS
-       RRset, the DS RRset (if present), and the child NS RRset.</p>
+  content: "<p>This document describes an optional algorithm for the processing of\n   Name Server (NS) resource record (RR) sets (RRsets) during iterative\n   resolution, and describes the benefits and considerations of using\n   this approach.  When following a referral response from an\n   authoritative server to a child zone, DNS resolvers should explicitly\n   query the authoritative NS RRset at the apex of the child zone and\n   cache this in preference to the NS RRset on the parent side of the\n   zone cut.  The (A and AAAA) address RRsets in the additional section\n   from referral responses and authoritative NS answers for the names of\n   the NS RRset, should similarly be re-queried and used to replace the\n   entries with the lower trustworthiness ranking in cache.  Resolvers\n   should also periodically revalidate the delegation by re-querying the\n   parent zone at the expiration of the shortest TTL among the parent NS\n   RRset, the DS RRset (if present), and the child NS RRset.</p>"
 relation:
 - type: updates
   bibitem:

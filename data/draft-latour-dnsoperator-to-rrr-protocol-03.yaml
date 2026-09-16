@@ -1,4 +1,3 @@
----
 id: draftlatourdnsoperatortorrrprotocol03
 schema_version: v1.5.6
 type: standard
@@ -126,34 +125,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>There are several problems that arise in the standard
-       Registrant/Registrar/Registry model when the operator of a zone is
-       neither the Registrant nor the Registrar for the delegation.
-       Historically the issues have been minor, and limited to difficulty
-       guiding the Registrant through the initial changes to the NS records
-       for the delegation.  As this is usually a one time activity when the
-       operator first takes charge of the zone it has not been treated as a
-       serious issue.
-
-       When the domain on the other hand uses DNSSEC it necessary for the
-       Registrant in this situation to make regular (sometimes annual)
-       changes to the delegation in order to track KSK rollover, by updating
-       the delegation's DS record(s).  Under the current model this is prone
-       to Registrant error and significant delays.  Even when the Registrant
-       has outsourced the operation of DNS to a third party the registrant
-       still has to be in the loop to update the DS record.
-
-       There is a need for a simple protocol that allows a third party DNS
-       operator to update DS and NS records in a trusted manner for a
-       delegation without involving the registrant for each operation.
-
-       The protocol described in this draft is REST based, and when used
-       through an authenticated channel can be used to establish the DNSSEC
-       Initial Trust (to turn on DNSSEC or bootstrap DNSSEC).  Once DNSSEC
-       trust is established this channel can be used to trigger maintenance
-       of delegation records such as DS, NS, and glue records.  The protocol
-       is kept as simple as possible.</p>
+  content: "<p>There are several problems that arise in the standard\n   Registrant/Registrar/Registry model when the operator of a zone is\n   neither the Registrant nor the Registrar for the delegation.\n   Historically the issues have been minor, and limited to difficulty\n   guiding the Registrant through the initial changes to the NS records\n   for the delegation.  As this is usually a one time activity when the\n   operator first takes charge of the zone it has not been treated as a\n   serious issue.\n\n   When the domain on the other hand uses DNSSEC it necessary for the\n   Registrant in this situation to make regular (sometimes annual)\n   changes to the delegation in order to track KSK rollover, by updating\n   the delegation's DS record(s).  Under the current model this is prone\n   to Registrant error and significant delays.  Even when the Registrant\n   has outsourced the operation of DNS to a third party the registrant\n   still has to be in the loop to update the DS record.\n\n   There is a need for a simple protocol that allows a third party DNS\n   operator to update DS and NS records in a trusted manner for a\n   delegation without involving the registrant for each operation.\n\n   The protocol described in this draft is REST based, and when used\n   through an authenticated channel can be used to establish the DNSSEC\n   Initial Trust (to turn on DNSSEC or bootstrap DNSSEC).  Once DNSSEC\n   trust is established this channel can be used to trigger maintenance\n   of delegation records such as DS, NS, and glue records.  The protocol\n   is kept as simple as possible.</p>"
 relation:
 - type: updates
   bibitem:

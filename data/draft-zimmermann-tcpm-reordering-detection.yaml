@@ -1,4 +1,3 @@
----
 id: draftzimmermanntcpmreorderingdetection
 schema_version: v1.5.6
 formattedref:
@@ -20,26 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies an algorithm for the detection and
-       quantification of packet reordering for TCP.  In the absence of
-       explicit congestion notification from the network, TCP uses only
-       packet loss as an indication of congestion.  One of the signals TCP
-       uses to determine loss is the arrival of three duplicate
-       acknowledgments.  However, this heuristic is not always correct,
-       notably in the case when paths reorder packets.  This results in
-       degraded performance.
-
-       The algorithm for the detection and quantification of reordering in
-       this document uses information gathered from the TCP Timestamps
-       Option, the TCP SACK Option and its DSACK extension.  When a
-       reordering event is detected, the algorithm calculates a reordering
-       extent by determining the number of segments the reordered segment
-       was late with respect to its position in the sequence number space.
-       Additionally, the algorithm computes a second reordering extent that
-       is relative to the amount of outstanding data and thus provides a
-       better estimation of the reordering delay when other sender state
-       changes.</p>
+  content: "<p>This document specifies an algorithm for the detection and\n   quantification of packet reordering for TCP.  In the absence of\n   explicit congestion notification from the network, TCP uses only\n   packet loss as an indication of congestion.  One of the signals TCP\n   uses to determine loss is the arrival of three duplicate\n   acknowledgments.  However, this heuristic is not always correct,\n   notably in the case when paths reorder packets.  This results in\n   degraded performance.\n\n   The algorithm for the detection and quantification of reordering in\n   this document uses information gathered from the TCP Timestamps\n   Option, the TCP SACK Option and its DSACK extension.  When a\n   reordering event is detected, the algorithm calculates a reordering\n   extent by determining the number of segments the reordered segment\n   was late with respect to its position in the sequence number space.\n   Additionally, the algorithm computes a second reordering extent that\n   is relative to the amount of outstanding data and thus provides a\n   better estimation of the reordering delay when other sender state\n   changes.</p>"
 relation:
 - type: includes
   bibitem:

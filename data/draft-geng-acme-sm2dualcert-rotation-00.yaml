@@ -1,4 +1,3 @@
----
 id: draftgengacmesm2dualcertrotation00
 schema_version: v1.5.6
 type: standard
@@ -126,49 +125,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The SM2 dual-certificate system, specified in [GMT.0034-2014],
-       employs a dual-certificate architecture in which each entity holds
-       both a signature certificate and an encryption certificate.  The
-       encryption private key is generated and escrowed by the Key
-       Management Center (KMC).
-
-       This document defines an *ACME Profile* that adapts the core protocol
-       of [RFC8555] to the specific deployment scenario of SM2 dual-
-       certificate management in the ShangMi (SM) ecosystem.  Building upon
-       the dual-certificate foundation framework defined in [I-D.geng-acme-
-       sm2dualcert-extension], this document defines a STAR extension for
-       the ACME protocol that enables *synchronized short-term automatic
-       renewal* of SM2 dual certificates.  The signature certificate follows
-       [RFC8739] (ACME STAR) for automatic renewal with the same key pair;
-       the encryption certificate achieves automated key rotation with a
-       fresh key pair per epoch based on *Asynchronous Remote Key Generation
-       (ARKG)* [Frymann2020].
-
-       This extension establishes a *unified ARKG seed chain key derivation
-       system*: the KMC holds a seed seed_kmc and derives all encryption
-       certificate key pairs (pk_i, sk_i) for all epochs via the ARKG
-       algorithm, enabling stateless, lightweight KMC operations.  On this
-       basis, this extension provides *two private key delivery modes*:
-
-       *  *Mode A (ARKG Envelope Delivery)*: delivers sk_i to the client via
-          a digital envelope, fully inheriting the envelope mechanism of the
-          base framework.
-
-       *  *Mode B (ARKG Offline DH Derivation)*: the initial private key is
-          obtained via envelope delivery; subsequent private keys are
-          derived offline by the client, providing key insulation security
-          properties.
-
-       Both modes share the same ARKG cryptographic infrastructure,
-       differing only in the final delivery mechanism of the private key.
-       Deployers may choose according to their requirements, with full
-       compatibility and coexistence achieved through ACME directory object
-       negotiation.
-
-       *Document Positioning*: This document is intended for the *specific
-       SM ecosystem* as a practical guide and interoperability reference,
-       and does not seek to become a general Internet standard.</p>
+  content: "<p>The SM2 dual-certificate system, specified in [GMT.0034-2014],\n   employs a dual-certificate architecture in which each entity holds\n   both a signature certificate and an encryption certificate.  The\n   encryption private key is generated and escrowed by the Key\n   Management Center (KMC).\n\n   This document defines an *ACME Profile* that adapts the core protocol\n   of [RFC8555] to the specific deployment scenario of SM2 dual-\n   certificate management in the ShangMi (SM) ecosystem.  Building upon\n   the dual-certificate foundation framework defined in [I-D.geng-acme-\n   sm2dualcert-extension], this document defines a STAR extension for\n   the ACME protocol that enables *synchronized short-term automatic\n   renewal* of SM2 dual certificates.  The signature certificate follows\n   [RFC8739] (ACME STAR) for automatic renewal with the same key pair;\n   the encryption certificate achieves automated key rotation with a\n   fresh key pair per epoch based on *Asynchronous Remote Key Generation\n   (ARKG)* [Frymann2020].\n\n   This extension establishes a *unified ARKG seed chain key derivation\n   system*: the KMC holds a seed seed_kmc and derives all encryption\n   certificate key pairs (pk_i, sk_i) for all epochs via the ARKG\n   algorithm, enabling stateless, lightweight KMC operations.  On this\n   basis, this extension provides *two private key delivery modes*:\n\n   *  *Mode A (ARKG Envelope Delivery)*: delivers sk_i to the client via\n      a digital envelope, fully inheriting the envelope mechanism of the\n      base framework.\n\n   *  *Mode B (ARKG Offline DH Derivation)*: the initial private key is\n      obtained via envelope delivery; subsequent private keys are\n      derived offline by the client, providing key insulation security\n      properties.\n\n   Both modes share the same ARKG cryptographic infrastructure,\n   differing only in the final delivery mechanism of the private key.\n   Deployers may choose according to their requirements, with full\n   compatibility and coexistence achieved through ACME directory object\n   negotiation.\n\n   *Document Positioning*: This document is intended for the *specific\n   SM ecosystem* as a practical guide and interoperability reference,\n   and does not seek to become a general Internet standard.</p>"
 series:
 - type: main
   title:

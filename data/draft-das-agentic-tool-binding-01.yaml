@@ -1,12 +1,10 @@
----
 id: draftdasagentictoolbinding01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'tool_use Is Not invoke(): Binding Execution-Finality to Claude, ChatGPT,
-    and MCP'
+  content: 'tool_use Is Not invoke(): Binding Execution-Finality to Claude, ChatGPT, and MCP'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-agentic-tool-binding-01
@@ -55,26 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>Frontier runtimes already standardized the dangerous moment.  Claude
-       emits a tool_use block.  ChatGPT emits tool_calls.  MCP emits tools/
-       call.  The host then invokes whatever name and arguments the model
-       printed.  Alignment, allowlists, and OAuth sit around that moment.
-       They do not sit on it.  If the block is treated as a capability,
-       prompt-injected mail, a poisoned retrieval, or a stolen enterprise
-       seat becomes an external act with a 200 from the tool.
-
-       This document does not invent another assistant API.  It binds the
-       Agent Candidate Act profile [I-D.das-agentic] onto the three
-       interfaces those labs and their customers already ship: Anthropic
-       tool_use / computer_use, OpenAI function calling and Responses tools,
-       and Model Context Protocol tools/call.  The model may emit the block.
-       The block remains non-effective.  A local enforcer builds the act,
-       binds the argument digest, and refuses invoke() until scoped
-       authority is verified and consumed at the dispatch sink.
-
-       The implementation target is a middleware function that a host loop
-       can call without changing the model vendor. tool_use is not invoke().</p>
+  content: "<p>Frontier runtimes already standardized the dangerous moment.  Claude\n   emits a tool_use block.  ChatGPT emits tool_calls.  MCP emits tools/\n   call.  The host then invokes whatever name and arguments the model\n   printed.  Alignment, allowlists, and OAuth sit around that moment.\n   They do not sit on it.  If the block is treated as a capability,\n   prompt-injected mail, a poisoned retrieval, or a stolen enterprise\n   seat becomes an external act with a 200 from the tool.\n\n   This document does not invent another assistant API.  It binds the\n   Agent Candidate Act profile [I-D.das-agentic] onto the three\n   interfaces those labs and their customers already ship: Anthropic\n   tool_use / computer_use, OpenAI function calling and Responses tools,\n   and Model Context Protocol tools/call.  The model may emit the block.\n   The block remains non-effective.  A local enforcer builds the act,\n   binds the argument digest, and refuses invoke() until scoped\n   authority is verified and consumed at the dispatch sink.\n\n   The implementation target is a middleware function that a host loop\n   can call without changing the model vendor. tool_use is not invoke().</p>"
 relation:
 - type: updates
   bibitem:

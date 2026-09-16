@@ -1,4 +1,3 @@
----
 id: draftfreemanplasmarequirements09
 schema_version: v1.5.6
 type: standard
@@ -89,39 +88,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>S/MIME has a proven track record in delving confidentiality, integrity
-      and data origination authentication for email. However, there are many
-      situations where organizations want robust access control applied to
-      information in messages. The Enhanced Security Services (ESS) RFC5035
-      for S/MIME defines an access control mechanism for email, but the
-      access check happens after the data is decrypted by the recipient
-      which devalues the protection afforded by the cryptography and
-      provides very week guarantees of policy compliance. Another major
-      issues for S/MIME is its dependency on a single type of identity
-      credential, an X.509 certificate. Many users on the Internet today do
-      not have X.509 certificates and therefore cannot use S/MIME.
-      Furthermore, the requirement to discover the X.509 certificate for
-      every recipient of an encrypted message by the sender has proven to be
-      an unreliable process for a number of reasons.
-
-      This document presents requirements for an alternative model to ESS to
-      address the identified issues with access control to deliver more
-      robust compliance with S/MIME protected messages. This document
-      describes an access control model which uses cryptographic keys to
-      enforce access control policy decisions where the policy check is
-      performed prior to the decryption of the message contents. The model
-      also abstracts the specifics of the authentication technology thereby
-      removing the dependency on X.509 certificate making it possible for
-      other forms of credential to be used for S/MIME enabling much broader
-      adoption. This model can be instantiated in many areas using existing
-      standards, or with only minor updates to existing standards. This
-      model in not intended to be a one off just for email and can also be
-      applied to other data types. The model also removes the dependency on
-      the need to discover encryption certificates at send time.
-
-      The name Plasma was assigned to this effort as part of the IETF
-      process. It is derived from PoLicy enhAnced Secure eMAil.</p>
+  content: "<p>S/MIME has a proven track record in delving confidentiality, integrity\n  and data origination authentication for email. However, there are many\n  situations where organizations want robust access control applied to\n  information in messages. The Enhanced Security Services (ESS) RFC5035\n  for S/MIME defines an access control mechanism for email, but the\n  access check happens after the data is decrypted by the recipient\n  which devalues the protection afforded by the cryptography and\n  provides very week guarantees of policy compliance. Another major\n  issues for S/MIME is its dependency on a single type of identity\n  credential, an X.509 certificate. Many users on the Internet today do\n  not have X.509 certificates and therefore cannot use S/MIME.\n  Furthermore, the requirement to discover the X.509 certificate for\n  every recipient of an encrypted message by the sender has proven to be\n  an unreliable process for a number of reasons.\n\n  This document presents requirements for an alternative model to ESS to\n  address the identified issues with access control to deliver more\n  robust compliance with S/MIME protected messages. This document\n  describes an access control model which uses cryptographic keys to\n  enforce access control policy decisions where the policy check is\n  performed prior to the decryption of the message contents. The model\n  also abstracts the specifics of the authentication technology thereby\n  removing the dependency on X.509 certificate making it possible for\n  other forms of credential to be used for S/MIME enabling much broader\n  adoption. This model can be instantiated in many areas using existing\n  standards, or with only minor updates to existing standards. This\n  model in not intended to be a one off just for email and can also be\n  applied to other data types. The model also removes the dependency on\n  the need to discover encryption certificates at send time.\n\n  The name Plasma was assigned to this effort as part of the IETF\n  process. It is derived from PoLicy enhAnced Secure eMAil.</p>"
 relation:
 - type: updates
   bibitem:

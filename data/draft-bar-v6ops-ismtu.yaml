@@ -1,4 +1,3 @@
----
 id: draftbarv6opsismtu
 schema_version: v1.5.6
 formattedref:
@@ -20,18 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The ISATAP tunnel MTU is currently recommended to be set to 1480 or
-       less.  This is to avoid IPv4 fragmentation within the tunnel, but
-       requires the ISATAP tunnel ingress interface to drop any IPv6 packet
-       larger than 1480 bytes and return an ICMPv6 Packet Too Big (PTB)
-       message.  Concerns for operational issues with both IPv4 and IPv6
-       Path MTU Discovery point to the possibility of MTU-related black
-       holes when a packet is dropped due to an MTU restriction, so dropping
-       packets is considered highly undesirable.  Fortunately, the "Internet
-       cell size" is 1500 bytes, i.e., the minimum MTU configured by the
-       vast majority of links in the Internet.  This document therefore
-       presents a method to boost the ISATAP MTU to 1500 bytes.</p>
+  content: "<p>The ISATAP tunnel MTU is currently recommended to be set to 1480 or\n   less.  This is to avoid IPv4 fragmentation within the tunnel, but\n   requires the ISATAP tunnel ingress interface to drop any IPv6 packet\n   larger than 1480 bytes and return an ICMPv6 Packet Too Big (PTB)\n   message.  Concerns for operational issues with both IPv4 and IPv6\n   Path MTU Discovery point to the possibility of MTU-related black\n   holes when a packet is dropped due to an MTU restriction, so dropping\n   packets is considered highly undesirable.  Fortunately, the \"Internet\n   cell size\" is 1500 bytes, i.e., the minimum MTU configured by the\n   vast majority of links in the Internet.  This document therefore\n   presents a method to boost the ISATAP MTU to 1500 bytes.</p>"
 relation:
 - type: includes
   bibitem:

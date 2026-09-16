@@ -1,12 +1,10 @@
----
 id: draftschrockeppresentationbinding01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Binding Deterministic Rendering and Display Attestations to Human-Authorization
-    Receipts
+  content: Binding Deterministic Rendering and Display Attestations to Human-Authorization Receipts
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-schrock-ep-presentation-binding-01
@@ -55,27 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>A human-authorization receipt proves an enrolled key produced a user-
-       verified signature over a digest that commits to an exact action.  It
-       does not prove the signing surface DISPLAYED that action honestly.
-       If a signing interface shows a benign summary while committing a
-       different action, the resulting receipt is laundered authority:
-       cryptographically valid and semantically false, which is worse than
-       no receipt at all.  This is the presentation attack, and it is the
-       deepest unsolved problem in authorization evidence, because a
-       signature cannot attest to pixels.  This document narrows the gap
-       with two additive, offline-checkable pieces that touch no existing
-       receipt format: a DETERMINISTIC RENDERER, a pure function from the
-       canonical action to a byte-identical human-readable rendering, so a
-       verifier RE-DERIVES the rendering from the signed bytes and rejects a
-       claimed rendering that does not match; and a DISPLAY ATTESTATION, a
-       signed claim by the signing client binding the rendering it showed to
-       the action it committed.  Neither eliminates the presentation attack
-       (nothing purely digital can), but together they let a verifier check
-       the claimed rendering against the signed action under relying-party-
-       selected client trust inputs.  They make the residual risk explicit
-       rather than hidden.</p>
+  content: "<p>A human-authorization receipt proves an enrolled key produced a user-\n   verified signature over a digest that commits to an exact action.  It\n   does not prove the signing surface DISPLAYED that action honestly.\n   If a signing interface shows a benign summary while committing a\n   different action, the resulting receipt is laundered authority:\n   cryptographically valid and semantically false, which is worse than\n   no receipt at all.  This is the presentation attack, and it is the\n   deepest unsolved problem in authorization evidence, because a\n   signature cannot attest to pixels.  This document narrows the gap\n   with two additive, offline-checkable pieces that touch no existing\n   receipt format: a DETERMINISTIC RENDERER, a pure function from the\n   canonical action to a byte-identical human-readable rendering, so a\n   verifier RE-DERIVES the rendering from the signed bytes and rejects a\n   claimed rendering that does not match; and a DISPLAY ATTESTATION, a\n   signed claim by the signing client binding the rendering it showed to\n   the action it committed.  Neither eliminates the presentation attack\n   (nothing purely digital can), but together they let a verifier check\n   the claimed rendering against the signed action under relying-party-\n   selected client trust inputs.  They make the residual risk explicit\n   rather than hidden.</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,12 +1,10 @@
----
 id: draftambekaroauthepop03
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: JSON Web Token (JWT) Profile for OAuth 2.0 Enveloped Proof of Possession
-    (EPOP)
+  content: JSON Web Token (JWT) Profile for OAuth 2.0 Enveloped Proof of Possession (EPOP)
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ambekar-oauth-epop-03
@@ -55,27 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This specification defines a profile for OAuth 2.0 sender-constrained
-       credentials in which access tokens and refresh tokens are
-       cryptographically bound to the client's private key as a single
-       inseparable envelope.  Authorization code flows are also covered: the
-       client declares its public key binding via cnf.jkt in the EPOP token
-       presented at the token endpoint, ensuring the authorization code can
-       only be exchanged by the key-holding client; the code itself travels
-       as the standard code form parameter.  Unlike existing mechanisms,
-       EPOP provides proof-of-possession uniformly across both JWT and
-       opaque access tokens, and across HTTP and non-HTTP transports.  The
-       profile extends sender-constraining beyond HTTP to non-HTTP
-       transports including MQTT, Kafka, the Model Context Protocol (MCP),
-       gRPC, and SASL-based protocols such as those defined in [RFC7628].
-       It introduces atomic proof-of-possession key rotation, enabling
-       clients to rotate key pairs without disrupting active sessions, and
-       an offline-derived client nonce (cnonce) that eliminates the server-
-       issued nonce round-trip required by existing mechanisms — enabling
-       stateless proof validation critical for non-HTTP and high-throughput
-       deployments.  Authorization servers, resource servers, and clients
-       from different vendors can implement this profile interoperably.</p>
+  content: "<p>This specification defines a profile for OAuth 2.0 sender-constrained\n   credentials in which access tokens and refresh tokens are\n   cryptographically bound to the client's private key as a single\n   inseparable envelope.  Authorization code flows are also covered: the\n   client declares its public key binding via cnf.jkt in the EPOP token\n   presented at the token endpoint, ensuring the authorization code can\n   only be exchanged by the key-holding client; the code itself travels\n   as the standard code form parameter.  Unlike existing mechanisms,\n   EPOP provides proof-of-possession uniformly across both JWT and\n   opaque access tokens, and across HTTP and non-HTTP transports.  The\n   profile extends sender-constraining beyond HTTP to non-HTTP\n   transports including MQTT, Kafka, the Model Context Protocol (MCP),\n   gRPC, and SASL-based protocols such as those defined in [RFC7628].\n   It introduces atomic proof-of-possession key rotation, enabling\n   clients to rotate key pairs without disrupting active sessions, and\n   an offline-derived client nonce (cnonce) that eliminates the server-\n   issued nonce round-trip required by existing mechanisms — enabling\n   stateless proof validation critical for non-HTTP and high-throughput\n   deployments.  Authorization servers, resource servers, and clients\n   from different vendors can implement this profile interoperably.</p>"
 relation:
 - type: updates
   bibitem:

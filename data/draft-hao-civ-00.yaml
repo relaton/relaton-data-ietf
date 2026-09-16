@@ -1,4 +1,3 @@
----
 id: drafthaociv00
 schema_version: v1.5.6
 type: standard
@@ -132,26 +131,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines an extension to the INVITE header of the
-       Session Initiation Protocol (SIP) to support the Caller ID
-       Verification (CIV) protocol proposed by Wang et al. in ACM
-       Transactions on Privacy and Security (2023).  CIV authenticates the
-       caller ID of an incoming call through a challenge-and-response
-       process.  When receiving a call with a claimed phone number, the
-       called party holds the call and sends an INVITE request to that
-       number, carrying a short 4-digit challenge embedded as part of the
-       caller ID.  A genuine caller should receive the challenge and respond
-       by echoing the same digits, e.g., through DTMF (Dual-Tone Multi-
-       Frequency).  The proposed extension involves two changes to the
-       INVITE header.  First, it adds a new options tag, "civ", in the
-       Supported header field.  This tag indicates that the calling party
-       supports CIV.  Second, it adds a special value "civ-veri-call" for
-       the Purpose parameter of the Call-Info header field.  This value
-       indicates that the purpose of the INVITE request is to verify the
-       caller ID based on CIV.  Compared with STIR/SHAKEN, CIV authenticates
-       the caller ID (not the carrier), does not require trusted certificate
-       authorities and works with both IP and non-IP networks.</p>
+  content: "<p>This document defines an extension to the INVITE header of the\n   Session Initiation Protocol (SIP) to support the Caller ID\n   Verification (CIV) protocol proposed by Wang et al. in ACM\n   Transactions on Privacy and Security (2023).  CIV authenticates the\n   caller ID of an incoming call through a challenge-and-response\n   process.  When receiving a call with a claimed phone number, the\n   called party holds the call and sends an INVITE request to that\n   number, carrying a short 4-digit challenge embedded as part of the\n   caller ID.  A genuine caller should receive the challenge and respond\n   by echoing the same digits, e.g., through DTMF (Dual-Tone Multi-\n   Frequency).  The proposed extension involves two changes to the\n   INVITE header.  First, it adds a new options tag, \"civ\", in the\n   Supported header field.  This tag indicates that the calling party\n   supports CIV.  Second, it adds a special value \"civ-veri-call\" for\n   the Purpose parameter of the Call-Info header field.  This value\n   indicates that the purpose of the INVITE request is to verify the\n   caller ID based on CIV.  Compared with STIR/SHAKEN, CIV authenticates\n   the caller ID (not the carrier), does not require trusted certificate\n   authorities and works with both IP and non-IP networks.</p>"
 relation:
 - type: updatedBy
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftcodecagnosticrtppayloadformat
 schema_version: v1.5.6
 formattedref:
@@ -20,44 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>RTP Media Chains usually rely on piping encoder output directly to
-       packetizers.  Media packetization formats often support a specific
-       codec format and optimize RTP packets generation accordingly.
-
-       With the development of Selective Forward Unit (SFU) solutions, that
-       do not process media content server side, the need for media content
-       processing at the origin and at the destination has arised.
-
-       RTP Media Chains used e.g. in WebRTC solutions are increasingly
-       relying on application-specific transforms that sit in-between
-       encoder and packetizer on one end and in-between depacketizer and
-       decoder on the other end.  This use case has become so important,
-       that the W3C is standardizing the capacity to access encoded content
-       with the [WebRTCInsertableStreams] API proposal.  An extremely
-       popular use case is application level end-to-end encryption of media
-       content, using for instance [SFrame].
-
-       Whatever the modification applied to the media content, RTP
-       packetizers can no longer expect to use packetization formats that
-       mandate media content to be in a specific codec format.
-
-       In the extreme cases like encryption, where the RTP Payload is made
-       completely opaque to the SFUs, some extra mechanism must also be
-       added for them to be able to route the packets without depending on
-       RTP payload or payload headers.
-
-       The traditionnal process of creating a new RTP Payload specification
-       per content would not be practical as we would need to make a new one
-       for each codec-transform pair.
-
-       This document describes a solution, which provides the following
-       features in the case the encoded content has been modified before
-       reaching the packetizer: - a paylaod agnostic RTP packetization
-       format that can be used on any media content, - a signalling
-       mechanism for the above format and the inner payload, Both of the
-       above mechanism are backward compatible with most of (S)RTP/RTCP
-       mechanisms used for bandwidth estimation and congestion control in</p>
+  content: "<p>RTP Media Chains usually rely on piping encoder output directly to\n   packetizers.  Media packetization formats often support a specific\n   codec format and optimize RTP packets generation accordingly.\n\n   With the development of Selective Forward Unit (SFU) solutions, that\n   do not process media content server side, the need for media content\n   processing at the origin and at the destination has arised.\n\n   RTP Media Chains used e.g. in WebRTC solutions are increasingly\n   relying on application-specific transforms that sit in-between\n   encoder and packetizer on one end and in-between depacketizer and\n   decoder on the other end.  This use case has become so important,\n   that the W3C is standardizing the capacity to access encoded content\n   with the [WebRTCInsertableStreams] API proposal.  An extremely\n   popular use case is application level end-to-end encryption of media\n   content, using for instance [SFrame].\n\n   Whatever the modification applied to the media content, RTP\n   packetizers can no longer expect to use packetization formats that\n   mandate media content to be in a specific codec format.\n\n   In the extreme cases like encryption, where the RTP Payload is made\n   completely opaque to the SFUs, some extra mechanism must also be\n   added for them to be able to route the packets without depending on\n   RTP payload or payload headers.\n\n   The traditionnal process of creating a new RTP Payload specification\n   per content would not be practical as we would need to make a new one\n   for each codec-transform pair.\n\n   This document describes a solution, which provides the following\n   features in the case the encoded content has been modified before\n   reaching the packetizer: - a paylaod agnostic RTP packetization\n   format that can be used on any media content, - a signalling\n   mechanism for the above format and the inner payload, Both of the\n   above mechanism are backward compatible with most of (S)RTP/RTCP\n   mechanisms used for bandwidth estimation and congestion control in</p>"
 relation:
 - type: includes
   bibitem:

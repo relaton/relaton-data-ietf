@@ -1,4 +1,3 @@
----
 id: draftgeorgedhcrequestretransmission
 schema_version: v1.5.6
 formattedref:
@@ -20,19 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The DHCP client sends SOLICIT message to get IP address from the
-       server.  If the address pool is empty, all address in the pool have
-       allocated to the clients, the server will return error code.
-       NoAddrsAvail (server has no address available to assign in the IA).
-       Client retransmit the SOLICIT message (section 14 RFC 3315) and may
-       get the same response.
-
-       This draft defines a new suboption for the Dynamic Host Configuration
-       Protocol (DHCP) to identify the retry time to sent next SOLICIT
-       message.  Hence, avoid unnecessary retransmit of SOLICIT messages.
-       The suboption carries a value that identifies when an address will be
-       available in the address pool.</p>
+  content: "<p>The DHCP client sends SOLICIT message to get IP address from the\n   server.  If the address pool is empty, all address in the pool have\n   allocated to the clients, the server will return error code.\n   NoAddrsAvail (server has no address available to assign in the IA).\n   Client retransmit the SOLICIT message (section 14 RFC 3315) and may\n   get the same response.\n\n   This draft defines a new suboption for the Dynamic Host Configuration\n   Protocol (DHCP) to identify the retry time to sent next SOLICIT\n   message.  Hence, avoid unnecessary retransmit of SOLICIT messages.\n   The suboption carries a value that identifies when an address will be\n   available in the address pool.</p>"
 relation:
 - type: includes
   bibitem:

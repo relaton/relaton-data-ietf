@@ -1,4 +1,3 @@
----
 id: draftietfbiertearch03
 schema_version: v1.5.6
 type: standard
@@ -107,35 +106,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This memo introduces per-packet stateless strict and loose path
-       engineered replication and forwarding for Bit Index Explicit
-       Replication packets ([RFC8279]).  This is called BIER-TE.
-
-       BIER-TE leverages the BIER architecture ([RFC8279]) and extends it
-       with a new semantic for bits in the bitstring.  BIER-TE can leverage
-       BIER forwarding engines with little or no changes.
-
-       In BIER, the BitPositions (BP) of the packets bitstring indicate BIER
-       Forwarding Egress Routers (BFER), and hop-by-hop forwarding uses a
-       Routing Underlay such as an IGP.
-
-       In BIER-TE, BitPositions indicate adjacencies.  The BIFT of each BFR
-       are only populated with BPs that are adjacent to the BFR in the BIER-
-       TE topology.  The BIER-TE topology can consist of layer 2 or remote
-       (route) adjacencies.  The BFR then replicates and forwards BIER
-       packets to those adjacencies.  This results in the aforementioned
-       strict and loose path forwarding.
-
-       BIER-TE can co-exist with BIER forwarding in the same domain, for
-       example by using seperate sub-domains.  In the absence of routed
-       adjacencies, BIER-TE does not require a BIER routing underlay, and
-       can then be operated without requiring an IGP routing protocol.
-
-       BIER-TE operates without explicit in-network tree-building and
-       carries the multicast distribution tree in the packet header.  It can
-       therefore be a good fit to support multicast path steering in Segment
-       Routing (SR) networks.</p>
+  content: "<p>This memo introduces per-packet stateless strict and loose path\n   engineered replication and forwarding for Bit Index Explicit\n   Replication packets ([RFC8279]).  This is called BIER-TE.\n\n   BIER-TE leverages the BIER architecture ([RFC8279]) and extends it\n   with a new semantic for bits in the bitstring.  BIER-TE can leverage\n   BIER forwarding engines with little or no changes.\n\n   In BIER, the BitPositions (BP) of the packets bitstring indicate BIER\n   Forwarding Egress Routers (BFER), and hop-by-hop forwarding uses a\n   Routing Underlay such as an IGP.\n\n   In BIER-TE, BitPositions indicate adjacencies.  The BIFT of each BFR\n   are only populated with BPs that are adjacent to the BFR in the BIER-\n   TE topology.  The BIER-TE topology can consist of layer 2 or remote\n   (route) adjacencies.  The BFR then replicates and forwards BIER\n   packets to those adjacencies.  This results in the aforementioned\n   strict and loose path forwarding.\n\n   BIER-TE can co-exist with BIER forwarding in the same domain, for\n   example by using seperate sub-domains.  In the absence of routed\n   adjacencies, BIER-TE does not require a BIER routing underlay, and\n   can then be operated without requiring an IGP routing protocol.\n\n   BIER-TE operates without explicit in-network tree-building and\n   carries the multicast distribution tree in the packet header.  It can\n   therefore be a good fit to support multicast path steering in Segment\n   Routing (SR) networks.</p>"
 relation:
 - type: updates
   bibitem:

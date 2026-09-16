@@ -1,4 +1,3 @@
----
 id: draftpettersencookieorigin
 schema_version: v1.5.6
 formattedref:
@@ -20,30 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>HTTP Cookies, as originally defined by Netscape in [NETSC] and as
-    later updated by [RFC2109] , [RFC2965], and
-    [I-D.ietf-httpstate-cookie] did not address the issue of how to
-    restrict for which domains a server is allowed to set a cookie.  This
-    is particularly a problem for servers hosted in top-level domains
-    having subdomains that are controlled by registries and not by domain
-    owners, e.g., "co.uk" and "city.state.us" domains.  In such
-    situations, unless the client uses some kind of domain black-list, it
-    is possible for a malicious server to set cookies, so they are sent
-    to all servers in a domain the attacker does not control.  These
-    cookies may adveresly affect the function of servers receiving them.
-    The primary reason this is a problem is that the server receiving the
-    cookie has no way of telling which server originally set it;
-    therefore it is not able to distinguish reliably an invalid cookie
-    from a valid one.
-
-    This document proposes a new attribute, "$Origin", that is associated
-    with each cookie and sent in all client cookie headers in the
-    requests sent to the server.  Servers recognizing the attribute may
-    then check to see if the cookie was set by a server, which is allowed
-    to set cookies for the server and, if necessary, ignore the cookie.
-
-    This document updates RFC 2109 and RFC 2965.</p>
+  content: "<p>HTTP Cookies, as originally defined by Netscape in [NETSC] and as\nlater updated by [RFC2109] , [RFC2965], and\n[I-D.ietf-httpstate-cookie] did not address the issue of how to\nrestrict for which domains a server is allowed to set a cookie.  This\nis particularly a problem for servers hosted in top-level domains\nhaving subdomains that are controlled by registries and not by domain\nowners, e.g., \"co.uk\" and \"city.state.us\" domains.  In such\nsituations, unless the client uses some kind of domain black-list, it\nis possible for a malicious server to set cookies, so they are sent\nto all servers in a domain the attacker does not control.  These\ncookies may adveresly affect the function of servers receiving them.\nThe primary reason this is a problem is that the server receiving the\ncookie has no way of telling which server originally set it;\ntherefore it is not able to distinguish reliably an invalid cookie\nfrom a valid one.\n\nThis document proposes a new attribute, \"$Origin\", that is associated\nwith each cookie and sent in all client cookie headers in the\nrequests sent to the server.  Servers recognizing the attribute may\nthen check to see if the cookie was set by a server, which is allowed\nto set cookies for the server and, if necessary, ignore the cookie.\n\nThis document updates RFC 2109 and RFC 2965.</p>"
 relation:
 - type: includes
   bibitem:

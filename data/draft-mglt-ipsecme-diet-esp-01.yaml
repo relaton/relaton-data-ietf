@@ -1,4 +1,3 @@
----
 id: draftmgltipsecmedietesp01
 schema_version: v1.5.6
 type: standard
@@ -69,34 +68,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>IPsec/ESP secure every single IP packets exchanged between two nodes.
-       This makes security transparent to the applications, as opposed to
-       TLS or DTLS for example.
-
-       IPsec/ESP has not widely been used to secure application because
-       IPsec is implemented in the kernel space, and IPsec/ESP security
-       rules are defined on the device -- similarly to firewall.  In
-       addition, IPsec/ESP introduces network overhead on an IP packet
-       basis, as opposed as TLS/DTLS that introduces network overhead on an
-       UDP or TCP segment basis.  This mostly impacts devices that do not
-       perform IP fragmentation.
-
-       Such drawbacks are not anymore valid for IoT, and the IPsec/ESP may
-       even better fits IoT usage and security requirements.  IoT device are
-       usually hardware dedicated for a given task or a given application
-       which makes Kernel / user land split less significant.  IoT devices
-       send data that is most likely expected to fit in a single IP packet.
-       Eventually, configuring IPsec/ESP security rules provides the ability
-       to enforce the security of the device, as security is not handled on
-       a per-application basis.  Then the database structure of the IPsec/
-       ESP security policies perfectly match sleeping nodes.
-
-       This document defines Diet-ESP that adapts IPsec/ESP for IoT.  The
-       goal of Diet-ESP is to reduce the size of the IPsec/ESP packet sent
-       on the wire.  As a result Diet-ESP is expected to compress
-       traditional IPsec/ESP packet without impacting the security provided
-       by IPsec/ESP.</p>
+  content: "<p>IPsec/ESP secure every single IP packets exchanged between two nodes.\n   This makes security transparent to the applications, as opposed to\n   TLS or DTLS for example.\n\n   IPsec/ESP has not widely been used to secure application because\n   IPsec is implemented in the kernel space, and IPsec/ESP security\n   rules are defined on the device -- similarly to firewall.  In\n   addition, IPsec/ESP introduces network overhead on an IP packet\n   basis, as opposed as TLS/DTLS that introduces network overhead on an\n   UDP or TCP segment basis.  This mostly impacts devices that do not\n   perform IP fragmentation.\n\n   Such drawbacks are not anymore valid for IoT, and the IPsec/ESP may\n   even better fits IoT usage and security requirements.  IoT device are\n   usually hardware dedicated for a given task or a given application\n   which makes Kernel / user land split less significant.  IoT devices\n   send data that is most likely expected to fit in a single IP packet.\n   Eventually, configuring IPsec/ESP security rules provides the ability\n   to enforce the security of the device, as security is not handled on\n   a per-application basis.  Then the database structure of the IPsec/\n   ESP security policies perfectly match sleeping nodes.\n\n   This document defines Diet-ESP that adapts IPsec/ESP for IoT.  The\n   goal of Diet-ESP is to reduce the size of the IPsec/ESP packet sent\n   on the wire.  As a result Diet-ESP is expected to compress\n   traditional IPsec/ESP packet without impacting the security provided\n   by IPsec/ESP.</p>"
 relation:
 - type: updates
   bibitem:

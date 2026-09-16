@@ -1,12 +1,10 @@
----
 id: draftdrakeagentidentityregistry02
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Agent Identity Registry System: A Federated Architecture for Hardware-Anchored
-    Identity of Autonomous Entities'
+  content: 'Agent Identity Registry System: A Federated Architecture for Hardware-Anchored Identity of Autonomous Entities'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-drake-agent-identity-registry-02
@@ -55,51 +53,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Internet's identity infrastructure assumes human principals.  As
-       autonomous entities -- AI agents, robotic systems, and other non-
-       human actors -- increasingly participate in both Internet protocols
-       and physical society, no existing standard provides them with
-       persistent, verifiable, hardware-anchored identity.  The absence of
-       such identity enables Sybil attacks at scale, undermines trust
-       between autonomous entities and the services they interact with, and
-       leaves human bystanders unable to distinguish one machine from
-       another.
-
-       This document defines a federated registry architecture for issuing,
-       managing, and verifying persistent identities for autonomous
-       entities.  Each identity is expressed as a URN in the "aid" (Agent
-       Identity) namespace ([RFC8141]) and is anchored, where hardware is
-       available, to a physical security component (TPM, PIV smart card,
-       secure enclave, or virtual TPM) whose manufacturer-certified key
-       cannot be extracted, cloned, or transferred.  This hardware anchoring
-       provides Sybil resistance: creating N identities requires N distinct
-       physical devices, making large-scale identity fraud economically
-       infeasible.  Software-only entities may participate at a lower trust
-       tier, building reputation from a baseline rather than from a
-       hardware-anchored starting point.
-
-       The architecture separates concerns into three tiers, modeled on the
-       proven Internet domain name system: a Governance Authority that sets
-       policy and manages the global trust framework, Registry Operators
-       that maintain authoritative identity databases and enforce cross-
-       provider uniqueness, and Registrars that perform hardware attestation
-       verification, issue standard OpenID Connect ([OIDC-Core]) tokens, and
-       serve as the primary interface for autonomous entities.  The system
-       issues standard OIDC/OAuth2 tokens, enabling any Relying Party --
-       email services, API gateways, agent-to-agent platforms, reputation
-       services, certification bodies, or any service that needs to verify
-       agent identity -- to verify token signatures using existing OIDC
-       libraries.
-
-       A companion specification ([I-D.drake-email-hardware-attestation])
-       defines transport-level attestation headers for email and other
-       protocols; this document defines the identity infrastructure that
-       underpins those attestations.  The architecture anticipates a future
-       in which reliable, indelible identity for autonomous entities -- from
-       cloud software agents through embodied robots that interact
-       physically with humans -- is as fundamental to infrastructure as the
-       domain name system is today.</p>
+  content: "<p>The Internet's identity infrastructure assumes human principals.  As\n   autonomous entities -- AI agents, robotic systems, and other non-\n   human actors -- increasingly participate in both Internet protocols\n   and physical society, no existing standard provides them with\n   persistent, verifiable, hardware-anchored identity.  The absence of\n   such identity enables Sybil attacks at scale, undermines trust\n   between autonomous entities and the services they interact with, and\n   leaves human bystanders unable to distinguish one machine from\n   another.\n\n   This document defines a federated registry architecture for issuing,\n   managing, and verifying persistent identities for autonomous\n   entities.  Each identity is expressed as a URN in the \"aid\" (Agent\n   Identity) namespace ([RFC8141]) and is anchored, where hardware is\n   available, to a physical security component (TPM, PIV smart card,\n   secure enclave, or virtual TPM) whose manufacturer-certified key\n   cannot be extracted, cloned, or transferred.  This hardware anchoring\n   provides Sybil resistance: creating N identities requires N distinct\n   physical devices, making large-scale identity fraud economically\n   infeasible.  Software-only entities may participate at a lower trust\n   tier, building reputation from a baseline rather than from a\n   hardware-anchored starting point.\n\n   The architecture separates concerns into three tiers, modeled on the\n   proven Internet domain name system: a Governance Authority that sets\n   policy and manages the global trust framework, Registry Operators\n   that maintain authoritative identity databases and enforce cross-\n   provider uniqueness, and Registrars that perform hardware attestation\n   verification, issue standard OpenID Connect ([OIDC-Core]) tokens, and\n   serve as the primary interface for autonomous entities.  The system\n   issues standard OIDC/OAuth2 tokens, enabling any Relying Party --\n   email services, API gateways, agent-to-agent platforms, reputation\n   services, certification bodies, or any service that needs to verify\n   agent identity -- to verify token signatures using existing OIDC\n   libraries.\n\n   A companion specification ([I-D.drake-email-hardware-attestation])\n   defines transport-level attestation headers for email and other\n   protocols; this document defines the identity infrastructure that\n   underpins those attestations.  The architecture anticipates a future\n   in which reliable, indelible identity for autonomous entities -- from\n   cloud software agents through embodied robots that interact\n   physically with humans -- is as fundamental to infrastructure as the\n   domain name system is today.</p>"
 relation:
 - type: updates
   bibitem:

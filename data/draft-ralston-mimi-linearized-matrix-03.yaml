@@ -1,4 +1,3 @@
----
 id: draftralstonmimilinearizedmatrix03
 schema_version: v1.5.6
 type: standard
@@ -79,27 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies Linearized Matrix (LM).  LM is an extensible
-       protocol for interoperability between messaging providers, using
-       Matrix's (matrix.org (https://matrix.org)) decentralized room model.
-       LM simplifies the Directed Acyclic Graph (DAG) persistence of Matrix
-       while maintaining compatibility with non-linearized servers within a
-       room.  It does this by using a doubly-linked list of events/messages
-       per room with hub and spoke fanout.
-
-       LM's extensibility enables a wide range of transport protocol and
-       end-to-end encryption possibilities.  This document uses Matrix's
-       room access control semantics supported by Messaging Layer Security
-       (MLS), transported via HTTPS and JSON.  The details of which server-
-       to-server transport to use and what a is put over MLS are
-       replaceable.
-
-       The threat model of LM does not place trust in a central owning
-       server for each conversation.  Instead, it defines a hub server which
-       handles maintaining linearized room history for other servers in the
-       room.  This model permits transparent interconnection between LM
-       servers and Matrix servers, in the same room.</p>
+  content: "<p>This document specifies Linearized Matrix (LM).  LM is an extensible\n   protocol for interoperability between messaging providers, using\n   Matrix's (matrix.org (https://matrix.org)) decentralized room model.\n   LM simplifies the Directed Acyclic Graph (DAG) persistence of Matrix\n   while maintaining compatibility with non-linearized servers within a\n   room.  It does this by using a doubly-linked list of events/messages\n   per room with hub and spoke fanout.\n\n   LM's extensibility enables a wide range of transport protocol and\n   end-to-end encryption possibilities.  This document uses Matrix's\n   room access control semantics supported by Messaging Layer Security\n   (MLS), transported via HTTPS and JSON.  The details of which server-\n   to-server transport to use and what a is put over MLS are\n   replaceable.\n\n   The threat model of LM does not place trust in a central owning\n   server for each conversation.  Instead, it defines a hub server which\n   handles maintaining linearized room history for other servers in the\n   room.  This model permits transparent interconnection between LM\n   servers and Matrix servers, in the same room.</p>"
 relation:
 - type: updates
   bibitem:

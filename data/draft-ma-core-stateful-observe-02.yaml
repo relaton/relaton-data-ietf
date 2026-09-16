@@ -1,4 +1,3 @@
----
 id: draftmacorestatefulobserve02
 schema_version: v1.5.6
 type: standard
@@ -104,29 +103,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Observe Option allows a CoAP client to observe changes in the
-       state of resources and obtain a current representation of the last
-       resource state.  To be an observer of an origin server's resources,
-       the client is required to register its interest with the server.  A
-       successful registration will make the client added into the server's
-       observation list, while a failed one MAY drive the client to re-
-       register.
-
-       However, repeated and frequent re-registrations cannot guarantee the
-       client to eventually become an observer of the target server.  In the
-       case that the server is unable or unwilling to accept an observer,
-       the time-intensive re-registrations will just bring redundant
-       messages in the constrained network and considerable energy
-       consumption on both the client and the server.
-
-       This memo defines a new CoAP option, State, for providing stateful
-       observation on the resources of CoAP servers.  By observing the state
-       of the server in terms of the Observe Option, a client can explicitly
-       learn when the server will not actively reject an observation
-       registration, and then can wisely performs the re-registration.  This
-       avoids the potential registration flooding that causes considerable
-       network overhead and energy consumption on the constrained nodes.</p>
+  content: "<p>The Observe Option allows a CoAP client to observe changes in the\n   state of resources and obtain a current representation of the last\n   resource state.  To be an observer of an origin server's resources,\n   the client is required to register its interest with the server.  A\n   successful registration will make the client added into the server's\n   observation list, while a failed one MAY drive the client to re-\n   register.\n\n   However, repeated and frequent re-registrations cannot guarantee the\n   client to eventually become an observer of the target server.  In the\n   case that the server is unable or unwilling to accept an observer,\n   the time-intensive re-registrations will just bring redundant\n   messages in the constrained network and considerable energy\n   consumption on both the client and the server.\n\n   This memo defines a new CoAP option, State, for providing stateful\n   observation on the resources of CoAP servers.  By observing the state\n   of the server in terms of the Observe Option, a client can explicitly\n   learn when the server will not actively reject an observation\n   registration, and then can wisely performs the re-registration.  This\n   avoids the potential registration flooding that causes considerable\n   network overhead and energy consumption on the constrained nodes.</p>"
 relation:
 - type: updates
   bibitem:

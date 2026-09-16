@@ -1,4 +1,3 @@
----
 id: draftlidnsopecsaggregationfix01
 schema_version: v1.5.6
 type: standard
@@ -79,29 +78,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The DNS query aggregation mechanism is a critical defense against DNS
-       cache poisoning attacks that exploit the "Birthday Paradox".
-       However, recent research has revealed that flawed implementations of
-       the EDNS Client Subnet (ECS) option, as specified in RFC 7871, can be
-       exploited to bypass this defense.  This allows attackers to force a
-       resolver to issue multiple simultaneous queries for the same domain
-       name by crafting queries with different ECS options.  This
-       vulnerability revives the classic DNS Birthday Attack, posing a
-       significant threat to DNS resolvers and the clients they serve.
-
-       While Section 11.2 of RFC 7871 notes the general risk of Birthday
-       Attacks and suggests marking whether responding nameservers support
-       ECS, it stops short of providing a concrete normative state machine
-       or explicit mitigation process.  This document specifies a stricter
-       and more coherent processing model for the ECS option in DNS
-       resolvers to formalize that detection concept.  It introduces a
-       mechanism for resolvers to track the ECS support state of
-       authoritative nameservers ("no-ECS-support" state) and mandates
-       strict query aggregation for zones determined to not support ECS.
-       These changes are designed to close the identified vulnerability and
-       restore the effectiveness of query aggregation as a practical defense
-       mechanism.</p>
+  content: "<p>The DNS query aggregation mechanism is a critical defense against DNS\n   cache poisoning attacks that exploit the \"Birthday Paradox\".\n   However, recent research has revealed that flawed implementations of\n   the EDNS Client Subnet (ECS) option, as specified in RFC 7871, can be\n   exploited to bypass this defense.  This allows attackers to force a\n   resolver to issue multiple simultaneous queries for the same domain\n   name by crafting queries with different ECS options.  This\n   vulnerability revives the classic DNS Birthday Attack, posing a\n   significant threat to DNS resolvers and the clients they serve.\n\n   While Section 11.2 of RFC 7871 notes the general risk of Birthday\n   Attacks and suggests marking whether responding nameservers support\n   ECS, it stops short of providing a concrete normative state machine\n   or explicit mitigation process.  This document specifies a stricter\n   and more coherent processing model for the ECS option in DNS\n   resolvers to formalize that detection concept.  It introduces a\n   mechanism for resolvers to track the ECS support state of\n   authoritative nameservers (\"no-ECS-support\" state) and mandates\n   strict query aggregation for zones determined to not support ECS.\n   These changes are designed to close the identified vulnerability and\n   restore the effectiveness of query aggregation as a practical defense\n   mechanism.</p>"
 relation:
 - type: updates
   bibitem:

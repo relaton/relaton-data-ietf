@@ -1,4 +1,3 @@
----
 id: draftsurydnsopparentcentricresolver03
 schema_version: v1.5.6
 type: standard
@@ -101,22 +100,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies an optional parent-centric behavioral model
-       for DNS recursive resolvers, in which delegation decisions are always
-       based on the NS RRset (or DELEG RRset) received from the parent side
-       of a zone cut and are never overwritten by child-side NS data.
-
-       The parent-centric model eliminates the "two sources of truth"
-       problem inherent in the current DNS delegation design, closes the
-       Ghost Domain and Phoenix Domain attack vectors, provides
-       deterministic behavior in the presence of parent/child NS mismatches,
-       and enables resolvers to safely accept sibling (out-of-bailiwick)
-       glue by scoping delegation information to individual zone cuts.  It
-       also provides the behavioral foundation required for deployment of
-       the DELEG extensible delegation mechanism.
-
-       This document updates [RFC1034] and [RFC1035].</p>
+  content: "<p>This document specifies an optional parent-centric behavioral model\n   for DNS recursive resolvers, in which delegation decisions are always\n   based on the NS RRset (or DELEG RRset) received from the parent side\n   of a zone cut and are never overwritten by child-side NS data.\n\n   The parent-centric model eliminates the \"two sources of truth\"\n   problem inherent in the current DNS delegation design, closes the\n   Ghost Domain and Phoenix Domain attack vectors, provides\n   deterministic behavior in the presence of parent/child NS mismatches,\n   and enables resolvers to safely accept sibling (out-of-bailiwick)\n   glue by scoping delegation information to individual zone cuts.  It\n   also provides the behavioral foundation required for deployment of\n   the DELEG extensible delegation mechanism.\n\n   This document updates [RFC1034] and [RFC1035].</p>"
 relation:
 - type: updates
   bibitem:

@@ -1,4 +1,3 @@
----
 id: draftprojecttickmmcommcs00
 schema_version: v1.5.6
 type: standard
@@ -57,29 +56,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies two cooperating formats used by the MeshMC
-       launcher to discover, validate, and load third-party native code
-       modules at run time:
-
-       *  MMCO (MMCO Module Component Object), a host-native dynamic library
-          container with a fixed C ABI describing the module's metadata,
-          dependencies, lifecycle entry points, and runtime context.
-
-       *  MMCS (MMCO Module Composite Security), an OpenPGP-based detached
-          signature trailer appended to an MMCO file, together with the
-          license-driven verification policy that decides whether a given
-          module is permitted to load.
-
-       The two formats are layered: MMCS is defined strictly on top of MMCO
-       and never modifies the bytes that the host operating system parses as
-       a shared object.  A conforming MMCO implementation MAY ignore MMCS
-       and still load OSI-approved open-source modules; a conforming MMCS
-       implementation MUST refuse to load a module whose trailer is present
-       but does not verify against a trusted key.
-
-       This document is intended as a stable reference for independent
-       implementers of MMCO toolchains, plugin authors, and packagers.</p>
+  content: "<p>This document specifies two cooperating formats used by the MeshMC\n   launcher to discover, validate, and load third-party native code\n   modules at run time:\n\n   *  MMCO (MMCO Module Component Object), a host-native dynamic library\n      container with a fixed C ABI describing the module's metadata,\n      dependencies, lifecycle entry points, and runtime context.\n\n   *  MMCS (MMCO Module Composite Security), an OpenPGP-based detached\n      signature trailer appended to an MMCO file, together with the\n      license-driven verification policy that decides whether a given\n      module is permitted to load.\n\n   The two formats are layered: MMCS is defined strictly on top of MMCO\n   and never modifies the bytes that the host operating system parses as\n   a shared object.  A conforming MMCO implementation MAY ignore MMCS\n   and still load OSI-approved open-source modules; a conforming MMCS\n   implementation MUST refuse to load a module whose trailer is present\n   but does not verify against a trusted key.\n\n   This document is intended as a stable reference for independent\n   implementers of MMCO toolchains, plugin authors, and packagers.</p>"
 series:
 - type: main
   title:

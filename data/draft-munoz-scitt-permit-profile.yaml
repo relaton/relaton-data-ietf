@@ -1,4 +1,3 @@
----
 id: draftmunozscittpermitprofile
 schema_version: v1.5.6
 formattedref:
@@ -20,33 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies a SCITT (Supply Chain Integrity,
-       Transparency, and Trust) profile for pre-execution authorization
-       records of AI agent actions.  The profile defines a Signed Statement
-       type, the "Pre-Execution Authorization Record" (also called a
-       Permit), that records a policy-evaluated decision to allow, deny, or
-       challenge an AI agent action before that action is dispatched to a
-       model provider, tool, or service.  The profile cryptographically
-       binds the authorization decision to the canonical bytes of the
-       request that is authorized.  When the paired Closure Record carries a
-       dispatch digest, a Verifier can compare the authorized-request digest
-       against the recorded dispatched-request digest; on the managed
-       dispatch path the reference implementation additionally enforces this
-       equality before the request is sent.
-
-       This revision also introduces authorization-lineage vocabulary.  It
-       defines how a Verifier can determine whether the authority conveyed
-       by a child Permit is equal to or narrower than the authority conveyed
-       by its parent (attenuation), given a signed or chain-committed
-       Authority Representation and a declared Comparator Profile.  The
-       Permit remains an evidence artifact; this profile specifies the
-       evidence a Verifier needs to make that determination, not a
-       delegation or policy protocol.
-
-       The profile composes with adjacent profiles for human-authority
-       binding, post-execution material-action evidence, and content-refusal
-       events, referenced rather than replicated.</p>
+  content: "<p>This document specifies a SCITT (Supply Chain Integrity,\n   Transparency, and Trust) profile for pre-execution authorization\n   records of AI agent actions.  The profile defines a Signed Statement\n   type, the \"Pre-Execution Authorization Record\" (also called a\n   Permit), that records a policy-evaluated decision to allow, deny, or\n   challenge an AI agent action before that action is dispatched to a\n   model provider, tool, or service.  The profile cryptographically\n   binds the authorization decision to the canonical bytes of the\n   request that is authorized.  When the paired Closure Record carries a\n   dispatch digest, a Verifier can compare the authorized-request digest\n   against the recorded dispatched-request digest; on the managed\n   dispatch path the reference implementation additionally enforces this\n   equality before the request is sent.\n\n   This revision also introduces authorization-lineage vocabulary.  It\n   defines how a Verifier can determine whether the authority conveyed\n   by a child Permit is equal to or narrower than the authority conveyed\n   by its parent (attenuation), given a signed or chain-committed\n   Authority Representation and a declared Comparator Profile.  The\n   Permit remains an evidence artifact; this profile specifies the\n   evidence a Verifier needs to make that determination, not a\n   delegation or policy protocol.\n\n   The profile composes with adjacent profiles for human-authority\n   binding, post-execution material-action evidence, and content-refusal\n   events, referenced rather than replicated.</p>"
 relation:
 - type: includes
   bibitem:

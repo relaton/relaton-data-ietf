@@ -1,4 +1,3 @@
----
 id: draftxuintareachallengeicmpv401
 schema_version: v1.5.6
 type: standard
@@ -123,30 +122,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>The Internet Control Message Protocol (ICMP) plays a crucial role in
-       network diagnostics and error reporting.  However, it is a challenge
-       to verify the legitimacy of a received ICMP error message,
-       particularly when the ICMP error message is embedded with stateless
-       protocol data.  As a result, adversaries can forge ICMP error
-       messages, leading to potential exploitation and off-path attacks.
-
-       This document explores solutions to this problem by first presenting
-       a straightforward but flawed stateful challenge-response mechanism.
-       It explains how this "strawman" approach, while preventing simple
-       spoofing, introduces a severe vulnerability to state-exhaustion
-       Denial-of-Service (DoS) attacks.
-
-       Building on this analysis, the document then proposes a robust,
-       stateless challenge-response mechanism inspired by TCP SYN-Cookies.
-       This final proposal eliminates the need to store per-challenge state
-       by computationally generating challenges.  It limits state management
-       to minimal flags on existing sockets or a bounded probabilistic data
-       structure.  This approach effectively authenticates ICMP error
-       messages while inherently resisting both off-path spoofing and state-
-       exhaustion DoS attacks, thus significantly improving the robustness
-       of ICMP.  Additionally, it discusses security and deployment
-       considerations to ensure its practical implementation.</p>
+  content: "<p>The Internet Control Message Protocol (ICMP) plays a crucial role in\n   network diagnostics and error reporting.  However, it is a challenge\n   to verify the legitimacy of a received ICMP error message,\n   particularly when the ICMP error message is embedded with stateless\n   protocol data.  As a result, adversaries can forge ICMP error\n   messages, leading to potential exploitation and off-path attacks.\n\n   This document explores solutions to this problem by first presenting\n   a straightforward but flawed stateful challenge-response mechanism.\n   It explains how this \"strawman\" approach, while preventing simple\n   spoofing, introduces a severe vulnerability to state-exhaustion\n   Denial-of-Service (DoS) attacks.\n\n   Building on this analysis, the document then proposes a robust,\n   stateless challenge-response mechanism inspired by TCP SYN-Cookies.\n   This final proposal eliminates the need to store per-challenge state\n   by computationally generating challenges.  It limits state management\n   to minimal flags on existing sockets or a bounded probabilistic data\n   structure.  This approach effectively authenticates ICMP error\n   messages while inherently resisting both off-path spoofing and state-\n   exhaustion DoS attacks, thus significantly improving the robustness\n   of ICMP.  Additionally, it discusses security and deployment\n   considerations to ensure its practical implementation.</p>"
 relation:
 - type: updates
   bibitem:

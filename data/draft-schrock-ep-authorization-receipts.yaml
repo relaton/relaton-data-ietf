@@ -1,4 +1,3 @@
----
 id: draftschrockepauthorizationreceipts
 schema_version: v1.5.6
 formattedref:
@@ -20,46 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document defines the EMILIA Protocol (EP) authorization receipt,
-       an evidence artifact binding an enrolled approver key to one
-       canonical action before execution.  An approver-held key signs an
-       Authorization Context containing the action hash, policy reference,
-       shared authorization instance, per-signoff nonce, audience, and
-       validity window.  A Trust Receipt carries the signed contexts,
-       terminal consumption record, and Merkle inclusion material so a
-       relying party can verify the recorded event offline under
-       independently selected log, directory, policy, and approver trust
-       inputs.
-
-       The receipt establishes only the guarantees of the selected
-       verification profile.  The mapping from an enrolled approver
-       identifier to a natural person is asserted by the directory
-       authority.  Offline verification does not establish current
-       revocation status, global non-replay, comprehension, legality,
-       safety, or execution.  Replay prevention requires an online atomic
-       consumption store at the executor.  The state-machine invariants are
-       machine-checked under the assumptions stated in this document.
-
-       This revision defines the closed EP-AUTHORIZATION-BUNDLE-v1 pre-
-       execution profile and its verification algorithm.  The bundle carries
-       the Action Object, signed Authorization Contexts, signoffs, key
-       proofs, and presentation evidence; it deliberately carries no
-       terminal consumption or execution claim.  An optional, profile-
-       identified authorization binding can commit the human evidence to an
-       independently verified native authorization artifact without
-       replacing that artifact or making this receipt format depend on its
-       transport or trust model.
-
-       A receipt is evidence, not authorization.  This document does not
-       treat a local user interaction as an authorization decision.  It
-       defines one evidence artifact that an authorization architecture can
-       use in a human-confirmation flow: the signed Authorization Context is
-       action-bound confirmation evidence an authorization server MAY
-       validate and bind to the grant it issues.  The resulting Trust
-       Receipt records terminal consumption and remains evidence; neither
-       object makes the authorization decision.  That decision remains with
-       the authorization server.</p>
+  content: "<p>This document defines the EMILIA Protocol (EP) authorization receipt,\n   an evidence artifact binding an enrolled approver key to one\n   canonical action before execution.  An approver-held key signs an\n   Authorization Context containing the action hash, policy reference,\n   shared authorization instance, per-signoff nonce, audience, and\n   validity window.  A Trust Receipt carries the signed contexts,\n   terminal consumption record, and Merkle inclusion material so a\n   relying party can verify the recorded event offline under\n   independently selected log, directory, policy, and approver trust\n   inputs.\n\n   The receipt establishes only the guarantees of the selected\n   verification profile.  The mapping from an enrolled approver\n   identifier to a natural person is asserted by the directory\n   authority.  Offline verification does not establish current\n   revocation status, global non-replay, comprehension, legality,\n   safety, or execution.  Replay prevention requires an online atomic\n   consumption store at the executor.  The state-machine invariants are\n   machine-checked under the assumptions stated in this document.\n\n   This revision defines the closed EP-AUTHORIZATION-BUNDLE-v1 pre-\n   execution profile and its verification algorithm.  The bundle carries\n   the Action Object, signed Authorization Contexts, signoffs, key\n   proofs, and presentation evidence; it deliberately carries no\n   terminal consumption or execution claim.  An optional, profile-\n   identified authorization binding can commit the human evidence to an\n   independently verified native authorization artifact without\n   replacing that artifact or making this receipt format depend on its\n   transport or trust model.\n\n   A receipt is evidence, not authorization.  This document does not\n   treat a local user interaction as an authorization decision.  It\n   defines one evidence artifact that an authorization architecture can\n   use in a human-confirmation flow: the signed Authorization Context is\n   action-bound confirmation evidence an authorization server MAY\n   validate and bind to the grant it issues.  The resulting Trust\n   Receipt records terminal consumption and remains evidence; neither\n   object makes the authorization decision.  That decision remains with\n   the authorization server.</p>"
 relation:
 - type: includes
   bibitem:

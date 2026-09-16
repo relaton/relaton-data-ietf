@@ -1,4 +1,3 @@
----
 id: draftabhishekrefertoeventparameter00
 schema_version: v1.5.6
 type: standard
@@ -49,52 +48,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document extends the REFER method, defined in RFC 3515, to
-       convey feature parameters defined in RFC 3840.
-
-
-    Terminology
-
-       In this document, the key words "MUST", "MUST NOT", "REQUIRED",
-       "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY",
-       and "OPTIONAL" are to be interpreted as described in RFC 2119 [1].
-       To simplify discussions of the REFER method and its extensions, three
-       new terms are used throughout the document:
-
-        - REFER-Issuer: the UA issuing the REFER request
-        - REFER-Recipient: the UA receiving the REFER request
-        - REFER-Target: the UA designated in the Refer-To URI
-
-
-    Introduction
-
-       This document extends the SIP REFER method defined in RFC 3515
-       to be used with feature parameters defined in RFC 3840.
-
-       Feature tags are used by a UA to convey to another UA information
-       about capabilities and features. This information can be shared by a
-       UA using a number of mechanisms, including OPTIONS responses.
-
-       Feature tag information can be very useful to another UA. It is
-       especially useful prior to the establishment of a subscription,
-       triggered only through REFER method. This is valid only for the request
-       containing parameter "method=SUBSCRIBE" in Refer-To header. While
-       sending this request if there is no mechanism to indicate as to which
-       event is to be subscribed, the REFER-Recipient may send SUBSCRIBE with
-       an undesired event. For example, if a REFER-Issuer knows (through an
-       OPTIONS query, for example) that the remote REFER-Target supports
-       events like dialog the REFER-Recipient might subscribe with dialog
-       or any other event as specified.
-
-       This extension to the REFER method provides a mechanism by which the
-       REFER-Issuer can provide this useful information about the REFER-Target
-       capabilities and functionality to the REFER-Recipient by
-       including feature tags in the Refer-To header field in a REFER
-       request.
-
-
-    Examples</p>
+  content: "<p>This document extends the REFER method, defined in RFC 3515, to\n   convey feature parameters defined in RFC 3840.\n\n\nTerminology\n\n   In this document, the key words \"MUST\", \"MUST NOT\", \"REQUIRED\",\n   \"SHALL\", \"SHALL NOT\", \"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\",\n   and \"OPTIONAL\" are to be interpreted as described in RFC 2119 [1].\n   To simplify discussions of the REFER method and its extensions, three\n   new terms are used throughout the document:\n\n    - REFER-Issuer: the UA issuing the REFER request\n    - REFER-Recipient: the UA receiving the REFER request\n    - REFER-Target: the UA designated in the Refer-To URI\n\n\nIntroduction\n\n   This document extends the SIP REFER method defined in RFC 3515\n   to be used with feature parameters defined in RFC 3840.\n\n   Feature tags are used by a UA to convey to another UA information\n   about capabilities and features. This information can be shared by a\n   UA using a number of mechanisms, including OPTIONS responses.\n\n   Feature tag information can be very useful to another UA. It is\n   especially useful prior to the establishment of a subscription,\n   triggered only through REFER method. This is valid only for the request\n   containing parameter \"method=SUBSCRIBE\" in Refer-To header. While\n   sending this request if there is no mechanism to indicate as to which\n   event is to be subscribed, the REFER-Recipient may send SUBSCRIBE with\n   an undesired event. For example, if a REFER-Issuer knows (through an\n   OPTIONS query, for example) that the remote REFER-Target supports\n   events like dialog the REFER-Recipient might subscribe with dialog\n   or any other event as specified.\n\n   This extension to the REFER method provides a mechanism by which the\n   REFER-Issuer can provide this useful information about the REFER-Target\n   capabilities and functionality to the REFER-Recipient by\n   including feature tags in the Refer-To header field in a REFER\n   request.\n\n\nExamples</p>"
 relation:
 - type: updatedBy
   bibitem:

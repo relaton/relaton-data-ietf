@@ -1,4 +1,3 @@
----
 id: draftleondnsopsignalingzoneownerintent00
 schema_version: v1.5.6
 type: standard
@@ -129,43 +128,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document introduces a standardized mechanism for zone owners to
-       signal their intent regarding DNS provider responsibilities through
-       DNS itself.  It defines a new DNS RRtype, HSYNC (Horizontal
-       Synchronization), that enables zone owners to designate which
-       providers are authorized to serve and/or sign their zones, control
-       whether providers or the zone owner manages the NS RRset, and specify
-       zone transfer chain configurations.
-
-       The HSYNC record allows DNS providers to discover each other and
-       establish secure communication channels, either via DNS messages
-       secured by SIG(0) signatures or via a RESTful API secured by TLS.
-       This provider-to-provider communication via Agents enables automated
-       coordination for tasks such as NS RRset management, zone transfers,
-       and DNSSEC-related operations.  This specification covers the
-       provider discovery and communication establishment aspects.
-
-       The document defines two new roles to facilitate this
-       synchronization: the Agent responsible for provider-to-provider
-       communication and the Combiner which merges unsigned zone data from
-       the zone owner with managed data from providers.
-
-       While a distributed DNSSEC multi-signer architecture (similar to
-       "model 2" in RFC8901) is an important application of this framework,
-       the HSYNC mechanism supports broader provider synchronization needs.
-
-       The specific synchronization algorithms for multi-signer operation
-       are described in [I-D.draft-ietf-dnsop-dnssec-automation].
-       Specification for how to express these algorithms over provider-to-
-       provider communication is left for a follow-up document.
-
-       TO BE REMOVED: This document is being collaborated on in Github at:
-       https://github.com/johanix/draft-leon-dnsop-signaling-zone-owner-
-       intent (https://github.com/johanix/draft-leon-dnsop-signaling-zone-
-       owner-intent).  The most recent working version of the document, open
-       issues, etc, should all be available there.  The authors (gratefully)
-       accept pull requests.</p>
+  content: "<p>This document introduces a standardized mechanism for zone owners to\n   signal their intent regarding DNS provider responsibilities through\n   DNS itself.  It defines a new DNS RRtype, HSYNC (Horizontal\n   Synchronization), that enables zone owners to designate which\n   providers are authorized to serve and/or sign their zones, control\n   whether providers or the zone owner manages the NS RRset, and specify\n   zone transfer chain configurations.\n\n   The HSYNC record allows DNS providers to discover each other and\n   establish secure communication channels, either via DNS messages\n   secured by SIG(0) signatures or via a RESTful API secured by TLS.\n   This provider-to-provider communication via Agents enables automated\n   coordination for tasks such as NS RRset management, zone transfers,\n   and DNSSEC-related operations.  This specification covers the\n   provider discovery and communication establishment aspects.\n\n   The document defines two new roles to facilitate this\n   synchronization: the Agent responsible for provider-to-provider\n   communication and the Combiner which merges unsigned zone data from\n   the zone owner with managed data from providers.\n\n   While a distributed DNSSEC multi-signer architecture (similar to\n   \"model 2\" in RFC8901) is an important application of this framework,\n   the HSYNC mechanism supports broader provider synchronization needs.\n\n   The specific synchronization algorithms for multi-signer operation\n   are described in [I-D.draft-ietf-dnsop-dnssec-automation].\n   Specification for how to express these algorithms over provider-to-\n   provider communication is left for a follow-up document.\n\n   TO BE REMOVED: This document is being collaborated on in Github at:\n   https://github.com/johanix/draft-leon-dnsop-signaling-zone-owner-\n   intent (https://github.com/johanix/draft-leon-dnsop-signaling-zone-\n   owner-intent).  The most recent working version of the document, open\n   issues, etc, should all be available there.  The authors (gratefully)\n   accept pull requests.</p>"
 relation:
 - type: updatedBy
   bibitem:

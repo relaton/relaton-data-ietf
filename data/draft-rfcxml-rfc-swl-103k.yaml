@@ -1,4 +1,3 @@
----
 id: draftrfcxmlrfcswl103k
 schema_version: v1.5.6
 formattedref:
@@ -20,48 +19,7 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This specification defines a new protocol sw103k addresses challenges
-       in networks with limited bandwidth, latency constraints, and data
-       integrity concerns.  It provides compression and decompression to
-       optimize bandwidth utilization in environments such as Data centers,
-       internet exchange points, and mobile communications.  The protocol
-       operates at the data link layer with a custom frame format including
-       SW103K and HAVI headers.  Key features include:
-
-       - Batch processing of 103 packets with compression - Merkle tree-
-       based integrity verification (merklesw103k root hash) - QoS
-       mechanisms with 8-bit priority field - Security features including
-       AES-256-GCM encryption - Physical layer synchronization with +-1us
-       accuracy
-
-       Jutifying why sw103k is unique:
-
-       The sw103k protocol is a Layer-2 mechanism that applies stateful
-       compression to complete payloads using shared context between
-       communicating entities.
-
-       The protocol assumes that traffic in constrained networks is often
-       structured and repetitive and therefore allows endpoints to provision
-       payload templates,
-
-       dictionaries, and delta-encoding state prior to data exchange.
-
-       During operation, payloads may be represented by compact identifiers
-       together with fields that describe deviations from previously
-       established state.
-
-       For traffic patterns that conform to these assumptions,
-
-       this approach can substantially reduce the number of transmitted
-       octets and may achieve compression ratios on the order of 103:1
-       for selected telemetry and control messages.  By operating
-       independently of IP version, transport protocol, and application
-       encoding,
-
-       sw103k is intended to reduce airtime usage, energy consumption, and
-       the need for fragmentation in environments where link capacity and
-       device resources are limited.</p>
+  content: "<p>This specification defines a new protocol sw103k addresses challenges\n   in networks with limited bandwidth, latency constraints, and data\n   integrity concerns.  It provides compression and decompression to\n   optimize bandwidth utilization in environments such as Data centers,\n   internet exchange points, and mobile communications.  The protocol\n   operates at the data link layer with a custom frame format including\n   SW103K and HAVI headers.  Key features include:\n\n   - Batch processing of 103 packets with compression - Merkle tree-\n   based integrity verification (merklesw103k root hash) - QoS\n   mechanisms with 8-bit priority field - Security features including\n   AES-256-GCM encryption - Physical layer synchronization with +-1us\n   accuracy\n\n   Jutifying why sw103k is unique:\n\n   The sw103k protocol is a Layer-2 mechanism that applies stateful\n   compression to complete payloads using shared context between\n   communicating entities.\n\n   The protocol assumes that traffic in constrained networks is often\n   structured and repetitive and therefore allows endpoints to provision\n   payload templates,\n\n   dictionaries, and delta-encoding state prior to data exchange.\n\n   During operation, payloads may be represented by compact identifiers\n   together with fields that describe deviations from previously\n   established state.\n\n   For traffic patterns that conform to these assumptions,\n\n   this approach can substantially reduce the number of transmitted\n   octets and may achieve compression ratios on the order of 103:1\n   for selected telemetry and control messages.  By operating\n   independently of IP version, transport protocol, and application\n   encoding,\n\n   sw103k is intended to reduce airtime usage, energy consumption, and\n   the need for fragmentation in environments where link capacity and\n   device resources are limited.</p>"
 relation:
 - type: includes
   bibitem:

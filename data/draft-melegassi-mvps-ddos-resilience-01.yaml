@@ -1,12 +1,10 @@
----
 id: draftmelegassimvpsddosresilience01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Volume-Independent DDoS Detection via Coherence-BFD: The MVPS DDoS Resilience
-    Profile'
+  content: 'Volume-Independent DDoS Detection via Coherence-BFD: The MVPS DDoS Resilience Profile'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-melegassi-mvps-ddos-resilience-01
@@ -58,51 +56,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: |-
-    <p>This document specifies how the Multi-Vantage Path Synchrony
-       (MVPS) framework [I-D.melegassi-ippm-mvps-bundle] and its
-       sub-tick variant Coherence-BFD
-       [I-D.melegassi-coherence-bfd] detect volumetric and
-       distributed Denial-of-Service (DDoS) attacks in time bounded
-       by (M-1)*T_tick, INDEPENDENT of the attack rate in packets-
-       per-second or bits-per-second.
-
-       Three theorems are proved:
-
-          Theorem D1 (Volume-Independence).  Detection latency is a
-          function of the control-tick period T_tick and the
-          M-multiplier confirmation count alone; it does not grow
-          with attack volume.
-
-          Theorem D2 (Distributed-Attack Bound).  The framework
-          detects up to floor((k-1)/2) simultaneous regional
-          attacks under cell-aware minimax aggregation, where k is
-          the number of coherence cells.
-
-          Theorem D3 (Broker NIC Sizing).  Under the three
-          architectural invariants of Section 3, broker NIC sizing
-          is independent of attack volume; it is determined only
-          by the legitimate telemetry packets-per-second.
-
-       This revision (-01) adds three layers of validation:
-
-         (a) Canonical: formal proofs of D1-D3 with falsification
-             protocols, connection to GDDP geometric-precision
-             bounds, and Fisher Information limits.
-
-         (b) Empirical: SHA-256-anchored receipts for all 11
-             simulation scenarios plus real-data validation.
-
-         (c) Real data: 9 alarm-days across 5 anycast DNS
-             prefixes over 30 days of BGP data, ALL
-             correlated with independently documented
-             public Internet events (DENIC DNSSEC outage,
-             Seacom/EASSy submarine cable breaks, Google
-             Search global outage, Railway/GCP platform
-             suspension).  Plus 92 067 RIPE Atlas RTT
-             measurements confirming M-multiplier noise
-             elimination (4.2% single-tick FPR to 0% at
-             M=3).</p>
+  content: "<p>This document specifies how the Multi-Vantage Path Synchrony\n   (MVPS) framework [I-D.melegassi-ippm-mvps-bundle] and its\n   sub-tick variant Coherence-BFD\n   [I-D.melegassi-coherence-bfd] detect volumetric and\n   distributed Denial-of-Service (DDoS) attacks in time bounded\n   by (M-1)*T_tick, INDEPENDENT of the attack rate in packets-\n   per-second or bits-per-second.\n\n   Three theorems are proved:\n\n      Theorem D1 (Volume-Independence).  Detection latency is a\n      function of the control-tick period T_tick and the\n      M-multiplier confirmation count alone; it does not grow\n      with attack volume.\n\n      Theorem D2 (Distributed-Attack Bound).  The framework\n      detects up to floor((k-1)/2) simultaneous regional\n      attacks under cell-aware minimax aggregation, where k is\n      the number of coherence cells.\n\n      Theorem D3 (Broker NIC Sizing).  Under the three\n      architectural invariants of Section 3, broker NIC sizing\n      is independent of attack volume; it is determined only\n      by the legitimate telemetry packets-per-second.\n\n   This revision (-01) adds three layers of validation:\n\n     (a) Canonical: formal proofs of D1-D3 with falsification\n         protocols, connection to GDDP geometric-precision\n         bounds, and Fisher Information limits.\n\n     (b) Empirical: SHA-256-anchored receipts for all 11\n         simulation scenarios plus real-data validation.\n\n     (c) Real data: 9 alarm-days across 5 anycast DNS\n         prefixes over 30 days of BGP data, ALL\n         correlated with independently documented\n         public Internet events (DENIC DNSSEC outage,\n         Seacom/EASSy submarine cable breaks, Google\n         Search global outage, Railway/GCP platform\n         suspension).  Plus 92 067 RIPE Atlas RTT\n         measurements confirming M-multiplier noise\n         elimination (4.2% single-tick FPR to 0% at\n         M=3).</p>"
 relation:
 - type: updates
   bibitem:
