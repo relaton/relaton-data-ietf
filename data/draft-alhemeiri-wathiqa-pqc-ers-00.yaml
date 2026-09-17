@@ -1,3 +1,4 @@
+---
 id: draftalhemeiriwathiqapqcers00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an evidence-record format for the long-term,\n   verifiable preservation of digitally-signed data across the migration\n   to post-quantum cryptography.  It builds on the Evidence Record\n   Syntax (ERS) of RFC 4998 and adds an explicit *algorithm-agility*\n   extension: a record is a chain of signed attestations in which each\n   link re-witnesses the data under a fresh signature primitive and\n   commits to the prior link, so that the authenticity of the data\n   survives the cryptographic break of any single primitive.  It\n   specifies the canonical hashing that makes a record reproducibly\n   verifiable across independent implementations, the authenticated\n   temporal binding that places each link in time (an append-only\n   transparency log à la RFC 6962, whose signed inclusion receipt is\n   _not-after_ evidence), and the verification procedure.  A per-link\n   beacon anchor records _not-before_ metadata but is, in this profile,\n   carried unauthenticated — see Section 8.</p>"
+  content: |-
+    <p>This document describes an evidence-record format for the long-term,
+       verifiable preservation of digitally-signed data across the migration
+       to post-quantum cryptography.  It builds on the Evidence Record
+       Syntax (ERS) of RFC 4998 and adds an explicit *algorithm-agility*
+       extension: a record is a chain of signed attestations in which each
+       link re-witnesses the data under a fresh signature primitive and
+       commits to the prior link, so that the authenticity of the data
+       survives the cryptographic break of any single primitive.  It
+       specifies the canonical hashing that makes a record reproducibly
+       verifiable across independent implementations, the authenticated
+       temporal binding that places each link in time (an append-only
+       transparency log à la RFC 6962, whose signed inclusion receipt is
+       _not-after_ evidence), and the verification procedure.  A per-link
+       beacon anchor records _not-before_ metadata but is, in this profile,
+       carried unauthenticated — see Section 8.</p>
 relation:
 - type: updatedBy
   bibitem:

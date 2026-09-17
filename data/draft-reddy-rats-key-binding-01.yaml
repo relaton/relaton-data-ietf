@@ -1,3 +1,4 @@
+---
 id: draftreddyratskeybinding01
 schema_version: v1.5.6
 type: standard
@@ -125,7 +126,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an Entity Attestation Token (EAT) profile and a\n   new EAT claim that convey the subject public key and its protection\n   properties within attestation evidence.  Combined with protocol-level\n   proof of possession from the surrounding protocol, this establishes a\n   cryptographic binding between a private key and an attested execution\n   environment.\n\n   The subject public key is conveyed using the EAT cnf claim defined in\n   [RFC8747] and [RFC7800], and freshness uses the EAT eat_nonce claim\n   defined in [RFC9711].  The proof of possession of the subject key is\n   obtained from the surrounding protocol, such as TLS certificate-based\n   authentication or CSR signature verification.  Because the EAT is\n   signed by a hardware-backed Attestation Key (AK), successful\n   verification of the EAT signature together with protocol-level proof\n   of possession establishes a cryptographic binding between the private\n   key and the attested platform state.  This mechanism addresses key\n   substitution attacks that arise when attestation evidence and the\n   certificate private keys are validated independently.</p>"
+  content: |-
+    <p>This document defines an Entity Attestation Token (EAT) profile and a
+       new EAT claim that convey the subject public key and its protection
+       properties within attestation evidence.  Combined with protocol-level
+       proof of possession from the surrounding protocol, this establishes a
+       cryptographic binding between a private key and an attested execution
+       environment.
+
+       The subject public key is conveyed using the EAT cnf claim defined in
+       [RFC8747] and [RFC7800], and freshness uses the EAT eat_nonce claim
+       defined in [RFC9711].  The proof of possession of the subject key is
+       obtained from the surrounding protocol, such as TLS certificate-based
+       authentication or CSR signature verification.  Because the EAT is
+       signed by a hardware-backed Attestation Key (AK), successful
+       verification of the EAT signature together with protocol-level proof
+       of possession establishes a cryptographic binding between the private
+       key and the attested platform state.  This mechanism addresses key
+       substitution attacks that arise when attestation evidence and the
+       certificate private keys are validated independently.</p>
 relation:
 - type: updates
   bibitem:

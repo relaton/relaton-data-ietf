@@ -1,3 +1,4 @@
+---
 id: draftzhangl3vpnlabelsharing01
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,17 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a method to be used by Service Providers to\n   provide fast protection of VPN connections for a CE. Egress PEs in a\n   redundant group always assign the same label for VPN routes from a\n   VRF. These egress PEs create a BGP virtual Next Hop (vNH) in the\n   domain of the IP/MPLS backbone network as an agent of the CE router.\n   Primary and backup tunnels terminated at the vNH are set up by the\n   BGP/MPLS IP VPN based on IGP FRR. If the primary egress PE fails, the\n   backup egress PEs can recognize the \"shared\" VPN route label, so that\n   the failure affected traffic can be smoothly switched to the backup\n   PE for delivery without changing its VPN route label.</p>"
+  content: |-
+    <p>This document describes a method to be used by Service Providers to
+       provide fast protection of VPN connections for a CE. Egress PEs in a
+       redundant group always assign the same label for VPN routes from a
+       VRF. These egress PEs create a BGP virtual Next Hop (vNH) in the
+       domain of the IP/MPLS backbone network as an agent of the CE router.
+       Primary and backup tunnels terminated at the vNH are set up by the
+       BGP/MPLS IP VPN based on IGP FRR. If the primary egress PE fails, the
+       backup egress PEs can recognize the "shared" VPN route label, so that
+       the failure affected traffic can be smoothly switched to the backup
+       PE for delivery without changing its VPN route label.</p>
 relation:
 - type: updates
   bibitem:

@@ -1,10 +1,12 @@
+---
 id: draftkrickertpipestream03
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'PipeStream: A Recursive Entity Streaming Protocol for Distributed Processing over QUIC'
+  content: 'PipeStream: A Recursive Entity Streaming Protocol for Distributed Processing
+    over QUIC'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-krickert-pipestream-03
@@ -56,7 +58,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies PipeStream, a recursive scatter-gather\n   streaming protocol for hierarchical task decomposition and\n   distributed processing over QUIC transport.  PipeStream enables the\n   decomposition (scattering) of complex, arbitrary workloads into\n   constituent sub-tasks, their transmission across distributed\n   processing nodes, and subsequent rehydration (gathering) at\n   destination endpoints.\n\n   While application-layer protocols like gRPC provide stream\n   multiplexing, PipeStream embeds a hierarchical state machine directly\n   into the protocol.  It employs a dual-stream architecture consisting\n   of a data stream for payload transmission and a control stream for\n   tracking completion status and maintaining distributed consistency.\n\n   PipeStream defines a generic 2-bit Data Layer field for entity\n   representation, leaving the concrete payload semantics to application\n   profiles.  To ensure consistency across parallel processing\n   pipelines, the protocol implements checkpoint blocking, guaranteeing\n   that all constituent parts of a decomposed workload are successfully\n   processed before rehydration operations commence.</p>"
+  content: |-
+    <p>This document specifies PipeStream, a recursive scatter-gather
+       streaming protocol for hierarchical task decomposition and
+       distributed processing over QUIC transport.  PipeStream enables the
+       decomposition (scattering) of complex, arbitrary workloads into
+       constituent sub-tasks, their transmission across distributed
+       processing nodes, and subsequent rehydration (gathering) at
+       destination endpoints.
+
+       While application-layer protocols like gRPC provide stream
+       multiplexing, PipeStream embeds a hierarchical state machine directly
+       into the protocol.  It employs a dual-stream architecture consisting
+       of a data stream for payload transmission and a control stream for
+       tracking completion status and maintaining distributed consistency.
+
+       PipeStream defines a generic 2-bit Data Layer field for entity
+       representation, leaving the concrete payload semantics to application
+       profiles.  To ensure consistency across parallel processing
+       pipelines, the protocol implements checkpoint blocking, guaranteeing
+       that all constituent parts of a decomposed workload are successfully
+       processed before rehydration operations commence.</p>
 relation:
 - type: updates
   bibitem:

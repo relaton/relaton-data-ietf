@@ -1,3 +1,4 @@
+---
 id: draftietfbessservicechaining03
 schema_version: v1.5.6
 type: standard
@@ -178,7 +179,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how service function chains (SFC) can be\n   applied to traffic flows using routing in a virtual (overlay) network\n   to steer traffic between service nodes. Chains can include services\n   running in routers, on physical appliances or in virtual machines.\n   Service chains have applicability at the subscriber edge, business\n   edge and in multi-tenant datacenters. The routing function into SFCs\n   and between service functions within an SFC can be performed by\n   physical devices (routers), be virtualized inside hypervisors, or run\n   as part of a host OS.\n\n   A BGP control plane for route distribution is used to create virtual\n   networks implemented using IP MPLS, VXLAN or other suitable\n   encapsulation, where the routes within the virtual networks cause\n   traffic to flow through a sequence of service nodes that apply packet\n   processing functions to the flows.\n\n   Two techniques are described: in one the service chain is implemented\n   as a sequence of distinct VPNs between sets of service nodes that\n   apply each service function; in the other, the routes within a VPN\n   are modified through the use of special route targets and modified\n   next-hop resolution to achieve the desired result.\n\n   In both techniques, service chains can be created by manual\n   configuration of routes and route targets in routing systems, or\n   through the use of a controller which contains a topological model of\n   the desired service chains.\n\n   This document also contains discussion of load balancing between\n   network functions, symmetric forward and reverse paths when stateful\n   services are involved, and use of classifiers to direct traffic into\n   a service chain.</p>"
+  content: |-
+    <p>This document describes how service function chains (SFC) can be
+       applied to traffic flows using routing in a virtual (overlay) network
+       to steer traffic between service nodes. Chains can include services
+       running in routers, on physical appliances or in virtual machines.
+       Service chains have applicability at the subscriber edge, business
+       edge and in multi-tenant datacenters. The routing function into SFCs
+       and between service functions within an SFC can be performed by
+       physical devices (routers), be virtualized inside hypervisors, or run
+       as part of a host OS.
+
+       A BGP control plane for route distribution is used to create virtual
+       networks implemented using IP MPLS, VXLAN or other suitable
+       encapsulation, where the routes within the virtual networks cause
+       traffic to flow through a sequence of service nodes that apply packet
+       processing functions to the flows.
+
+       Two techniques are described: in one the service chain is implemented
+       as a sequence of distinct VPNs between sets of service nodes that
+       apply each service function; in the other, the routes within a VPN
+       are modified through the use of special route targets and modified
+       next-hop resolution to achieve the desired result.
+
+       In both techniques, service chains can be created by manual
+       configuration of routes and route targets in routing systems, or
+       through the use of a controller which contains a topological model of
+       the desired service chains.
+
+       This document also contains discussion of load balancing between
+       network functions, symmetric forward and reverse paths when stateful
+       services are involved, and use of classifiers to direct traffic into
+       a service chain.</p>
 relation:
 - type: updates
   bibitem:

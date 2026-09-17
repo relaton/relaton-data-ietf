@@ -1,10 +1,12 @@
+---
 id: draftvandemeentmuxstatusframe00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'MUX Status Frame: Two-Way Reachability Signalling without an Enumeration Oracle'
+  content: 'MUX Status Frame: Two-Way Reachability Signalling without an Enumeration
+    Oracle'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-vandemeent-mux-status-frame-00
@@ -78,7 +80,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the MUX Status Frame, a two-octet,\n   relationship-scoped signal that lets a multiplexing routing layer\n   tell a proven, related peer that a destination is unavailable -\n   offline, not in session, superseded, or permanently revoked\n   (tombstoned) - while disclosing nothing to the open network.  It\n   resolves the tension between two failure modes of a null-routing mux:\n   silently dropping traffic to a dead peer (a false positive - the\n   sender believes it landed) and answering honestly to everyone (an\n   enumeration oracle mapping who is alive, dead, or revoked).  Honest\n   status travels only on a relationship-scoped trusted path; to the\n   world, and to any merely authenticated but unrelated peer, the entire\n   frame is zero.  Status is derived from the canonical naming record\n   and session liveness, not from a separate blocklist.  The encoding is\n   deterministic so independent implementations agree byte-for-byte.\n   This protocol is transport-agnostic and complements JIS [JIS], AINS\n   [AINS], TIBET [TIBET], and RVP [RVP].</p>"
+  content: |-
+    <p>This document defines the MUX Status Frame, a two-octet,
+       relationship-scoped signal that lets a multiplexing routing layer
+       tell a proven, related peer that a destination is unavailable -
+       offline, not in session, superseded, or permanently revoked
+       (tombstoned) - while disclosing nothing to the open network.  It
+       resolves the tension between two failure modes of a null-routing mux:
+       silently dropping traffic to a dead peer (a false positive - the
+       sender believes it landed) and answering honestly to everyone (an
+       enumeration oracle mapping who is alive, dead, or revoked).  Honest
+       status travels only on a relationship-scoped trusted path; to the
+       world, and to any merely authenticated but unrelated peer, the entire
+       frame is zero.  Status is derived from the canonical naming record
+       and session liveness, not from a separate blocklist.  The encoding is
+       deterministic so independent implementations agree byte-for-byte.
+       This protocol is transport-agnostic and complements JIS [JIS], AINS
+       [AINS], TIBET [TIBET], and RVP [RVP].</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftelkhatabiverifiabletelemetryledgers08
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document profiles a verifiable-telemetry ledger for resource-\n   constrained deployments.  Its interoperability boundary begins with\n   exact canonical-record byte strings that an upstream system has\n   already produced.  The profile fixes admission and assignment of\n   those byte strings to serial-numbered segments, deterministic\n   commitment-tree calculation, a Concise Binary Object Representation\n   (CBOR) segment artifact, a verification manifest, three disclosure\n   classes, and binding of the segment-artifact digest to external\n   timestamp channels.  Transport framing, decryption, anti-replay\n   processing, payload interpretation, and source-telemetry-to-record\n   mapping are outside this profile.  Segment closure uses a deployment-\n   configured elapsed-time interval and does not depend on source or\n   gateway calendar dates.  RFC 3161 timestamp responses are the\n   mandatory-to-implement interoperable timestamp channel.\n   OpenTimestamps (OTS) and peer signatures are optional parallel\n   channels.\n\n   The profile enables independent recomputation and audit of disclosed\n   evidence from the admitted canonical-record bytes onward.  It does\n   not verify how source telemetry was authenticated, interpreted, or\n   mapped to those bytes, and it does not cover device onboarding, end-\n   to-end security of sensor values, or safety decisions.</p>"
+  content: |-
+    <p>This document profiles a verifiable-telemetry ledger for resource-
+       constrained deployments.  Its interoperability boundary begins with
+       exact canonical-record byte strings that an upstream system has
+       already produced.  The profile fixes admission and assignment of
+       those byte strings to serial-numbered segments, deterministic
+       commitment-tree calculation, a Concise Binary Object Representation
+       (CBOR) segment artifact, a verification manifest, three disclosure
+       classes, and binding of the segment-artifact digest to external
+       timestamp channels.  Transport framing, decryption, anti-replay
+       processing, payload interpretation, and source-telemetry-to-record
+       mapping are outside this profile.  Segment closure uses a deployment-
+       configured elapsed-time interval and does not depend on source or
+       gateway calendar dates.  RFC 3161 timestamp responses are the
+       mandatory-to-implement interoperable timestamp channel.
+       OpenTimestamps (OTS) and peer signatures are optional parallel
+       channels.
+
+       The profile enables independent recomputation and audit of disclosed
+       evidence from the admitted canonical-record bytes onward.  It does
+       not verify how source telemetry was authenticated, interpreted, or
+       mapped to those bytes, and it does not cover device onboarding, end-
+       to-end security of sensor values, or safety decisions.</p>
 relation:
 - type: updates
   bibitem:

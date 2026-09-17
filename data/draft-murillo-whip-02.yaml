@@ -1,3 +1,4 @@
+---
 id: draftmurillowhip02
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>While WebRTC has been very successful in a wide range of scenarios,\n   its adoption in the broadcasting/streaming industry is lagging\n   behind.  Currently there is no standard protocol (like SIP or RTSP)\n   designed for ingesting media in a streaming service, and content\n   providers still rely heavily on protocols like RTMP for it.\n\n   These protocols are much older than webrtc and lack by default some\n   important security and resilience features provided by webrtc with\n   minimal delay.\n\n   The media codecs used in older protocols do not always match those\n   being used in WebRTC, mandating transcoding on the ingest node,\n   introducing delay and degrading media quality.  This transcoding step\n   is always present in traditional streaming to support e.g.  ABR, and\n   comes at no cost.  However webrtc implements client-side ABR, also\n   called Network-Aware Encoding by e.g.  Huavision, by means of\n   simulcast and SVC codecs, which otherwise alleviate the need for\n   server-side transcoding.  Content protection and Privacy Enhancement\n   can be achieved with End-to-End Encryption, which preclude any\n   server-side media processing.\n\n   This document proposes a simple HTTP based protocol that will allow\n   WebRTC endpoints to ingest content into streaming services and/or\n   CDNs to fill this gap and facilitate deployment.</p>"
+  content: |-
+    <p>While WebRTC has been very successful in a wide range of scenarios,
+       its adoption in the broadcasting/streaming industry is lagging
+       behind.  Currently there is no standard protocol (like SIP or RTSP)
+       designed for ingesting media in a streaming service, and content
+       providers still rely heavily on protocols like RTMP for it.
+
+       These protocols are much older than webrtc and lack by default some
+       important security and resilience features provided by webrtc with
+       minimal delay.
+
+       The media codecs used in older protocols do not always match those
+       being used in WebRTC, mandating transcoding on the ingest node,
+       introducing delay and degrading media quality.  This transcoding step
+       is always present in traditional streaming to support e.g.  ABR, and
+       comes at no cost.  However webrtc implements client-side ABR, also
+       called Network-Aware Encoding by e.g.  Huavision, by means of
+       simulcast and SVC codecs, which otherwise alleviate the need for
+       server-side transcoding.  Content protection and Privacy Enhancement
+       can be achieved with End-to-End Encryption, which preclude any
+       server-side media processing.
+
+       This document proposes a simple HTTP based protocol that will allow
+       WebRTC endpoints to ingest content into streaming services and/or
+       CDNs to fill this gap and facilitate deployment.</p>
 relation:
 - type: updates
   bibitem:

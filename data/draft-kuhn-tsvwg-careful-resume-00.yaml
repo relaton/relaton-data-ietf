@@ -1,3 +1,4 @@
+---
 id: draftkuhntsvwgcarefulresume00
 schema_version: v1.5.6
 type: standard
@@ -128,7 +129,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document discusses careful convergence of Congestion Control\n   (CC) in QUIC, providing a cautious method that enables fast startup\n   in a wide range of connections : reconnections using previous\n   transport security credentials (0-RTT context), reconnections between\n   2 peers (prior knowledge of transport context), application-limited\n   traffic.\n\n   The method provides QUIC with transport services that resemble those\n   currently available in TCP, such as TCP Control Block (TCB) [RFC9040]\n   caching or updates to support application-limited traffic.\n\n   The method reuses a set of computed CC parameters that are based on\n   the previously observed path characteristics between the the same\n   pair of transport endpoints, such as the bottleneck bandwidth,\n   available capacity, or the RTT.  These parameters are stored,\n   allowing then to be later used to modify the CC behavior of a\n   subsequent connection.  The document also discusses assumptions and\n   defines requirements around how a sender utilizes these parameters to\n   provide opportunities for a new connection to more quickly get up to\n   speed (i.e. utilize the available capacity).  It discusses how these\n   changes impact the capacity at a shared network bottleneck and the\n   safe response that is needed after any indication that the new rate\n   is inappropriate.</p>"
+  content: |-
+    <p>This document discusses careful convergence of Congestion Control
+       (CC) in QUIC, providing a cautious method that enables fast startup
+       in a wide range of connections : reconnections using previous
+       transport security credentials (0-RTT context), reconnections between
+       2 peers (prior knowledge of transport context), application-limited
+       traffic.
+
+       The method provides QUIC with transport services that resemble those
+       currently available in TCP, such as TCP Control Block (TCB) [RFC9040]
+       caching or updates to support application-limited traffic.
+
+       The method reuses a set of computed CC parameters that are based on
+       the previously observed path characteristics between the the same
+       pair of transport endpoints, such as the bottleneck bandwidth,
+       available capacity, or the RTT.  These parameters are stored,
+       allowing then to be later used to modify the CC behavior of a
+       subsequent connection.  The document also discusses assumptions and
+       defines requirements around how a sender utilizes these parameters to
+       provide opportunities for a new connection to more quickly get up to
+       speed (i.e. utilize the available capacity).  It discusses how these
+       changes impact the capacity at a shared network bottleneck and the
+       safe response that is needed after any indication that the new rate
+       is inappropriate.</p>
 relation:
 - type: updatedBy
   bibitem:

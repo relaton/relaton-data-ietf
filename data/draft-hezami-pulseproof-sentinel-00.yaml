@@ -1,3 +1,4 @@
+---
 id: drafthezamipulseproofsentinel00
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the PulseProof Sentinel Protocol (PPS), an\n   experimental, technology-agnostic protocol for time-bound asymmetric\n   authentication proofs.  PPS is not a new cryptographic primitive; it\n   profiles established mechanisms -- Ed25519 signatures, SHA-256\n   hashing, HKDF key derivation, and deterministic CBOR encoding --\n   into a compact, interoperable verification model suited to offline,\n   embedded, and non-browser environments where a full WebAuthn\n   ceremony is unavailable.\n\n   A PPS authentication event produces a Pulse: a signed statement\n   bound to a relying-party identifier, time epoch, monotonic counter,\n   expiration, and optional nonce, context, policy, and transaction\n   data.  Because the verifier stores only public keys, PPS removes the\n   shared-secret exposure problem inherent in TOTP.\n\n   PulseProof Sentinel extends the basic Pulse model with several\n   optional but interoperable security extensions:</p>"
+  content: |-
+    <p>This document specifies the PulseProof Sentinel Protocol (PPS), an
+       experimental, technology-agnostic protocol for time-bound asymmetric
+       authentication proofs.  PPS is not a new cryptographic primitive; it
+       profiles established mechanisms -- Ed25519 signatures, SHA-256
+       hashing, HKDF key derivation, and deterministic CBOR encoding --
+       into a compact, interoperable verification model suited to offline,
+       embedded, and non-browser environments where a full WebAuthn
+       ceremony is unavailable.
+
+       A PPS authentication event produces a Pulse: a signed statement
+       bound to a relying-party identifier, time epoch, monotonic counter,
+       expiration, and optional nonce, context, policy, and transaction
+       data.  Because the verifier stores only public keys, PPS removes the
+       shared-secret exposure problem inherent in TOTP.
+
+       PulseProof Sentinel extends the basic Pulse model with several
+       optional but interoperable security extensions:</p>
 series:
 - type: main
   title:

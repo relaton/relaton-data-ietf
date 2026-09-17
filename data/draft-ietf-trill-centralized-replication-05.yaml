@@ -1,3 +1,4 @@
+---
 id: draftietftrillcentralizedreplication05
 schema_version: v1.5.6
 type: standard
@@ -148,7 +149,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In TRILL active-active access, an RPF check failure issue may occur\n   when using the pseudo-nickname mechanism specified in RFC 7781. This\n   draft describes a solution to resolve this RPF check failure issue\n   through centralized replication. All ingress RBridges send BUM\n   (Broadcast, Unknown unicast and Mutlicast) traffic to a centralized\n   node with unicast TRILL encapsulation. When the centralized node\n   receives the BUM traffic, it decapsulates the packets and forwards\n   them to all destination RBridges using a distribution tree\n   established as per TRILL base protocol RFC 6325. To avoid RPF check\n   failure on a RBridge sitting between the ingress RBridge and the\n   centralized replication node, some change in the RPF calculation\n   algorithm is required. RPF calculation on each RBridge should use\n   the centralized node as the ingress RBridge, instead of the real\n   ingress RBridge, which is denoted as RBv in RFC 7781, to perform the\n   calculation.</p>"
+  content: |-
+    <p>In TRILL active-active access, an RPF check failure issue may occur
+       when using the pseudo-nickname mechanism specified in RFC 7781. This
+       draft describes a solution to resolve this RPF check failure issue
+       through centralized replication. All ingress RBridges send BUM
+       (Broadcast, Unknown unicast and Mutlicast) traffic to a centralized
+       node with unicast TRILL encapsulation. When the centralized node
+       receives the BUM traffic, it decapsulates the packets and forwards
+       them to all destination RBridges using a distribution tree
+       established as per TRILL base protocol RFC 6325. To avoid RPF check
+       failure on a RBridge sitting between the ingress RBridge and the
+       centralized replication node, some change in the RPF calculation
+       algorithm is required. RPF calculation on each RBridge should use
+       the centralized node as the ingress RBridge, instead of the real
+       ingress RBridge, which is denoted as RBv in RFC 7781, to perform the
+       calculation.</p>
 relation:
 - type: updates
   bibitem:

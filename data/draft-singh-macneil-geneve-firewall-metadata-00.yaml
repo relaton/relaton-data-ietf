@@ -1,3 +1,4 @@
+---
 id: draftsinghmacneilgenevefirewallmetadata00
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a mechanism for embedding security-related\n   metadata within the Geneve header (RFC 8926).  It allows a security\n   Enforcement Point to attach a cryptographically signed, verifiable\n   attestation of how it handled a packet, so that downstream\n   Enforcement Points and tunnel endpoints can confirm that security\n   policy was actually executed on the data path -- detecting policy\n   bypasses and divergence between Enforcement Points that should agree\n   -- while each Enforcement Point continues to enforce its own policy\n   independently.  This validation of execution complements the\n   management plane's validation of intent.  The document presents two\n   operational models.  The primary model is the \"End-to-End Attestation\n   Model\", fully compliant with RFC 8926, where an ingress tunnel\n   endpoint adds and cryptographically signs metadata, and an egress\n   endpoint verifies it.  This enables downstream nodes to verify and\n   audit that policy was executed consistently, while still applying\n   their own policy independently.  The second part of this document\n   presents a proposal for a future extension to the Geneve standard.\n   This proposed extension would allow trusted transit devices to\n   participate in the metadata chain, enabling a hop-by-hop \"chain of\n   custody\" for enhanced, real-time security responsiveness within the\n   data center fabric.</p>"
+  content: |-
+    <p>This document specifies a mechanism for embedding security-related
+       metadata within the Geneve header (RFC 8926).  It allows a security
+       Enforcement Point to attach a cryptographically signed, verifiable
+       attestation of how it handled a packet, so that downstream
+       Enforcement Points and tunnel endpoints can confirm that security
+       policy was actually executed on the data path -- detecting policy
+       bypasses and divergence between Enforcement Points that should agree
+       -- while each Enforcement Point continues to enforce its own policy
+       independently.  This validation of execution complements the
+       management plane's validation of intent.  The document presents two
+       operational models.  The primary model is the "End-to-End Attestation
+       Model", fully compliant with RFC 8926, where an ingress tunnel
+       endpoint adds and cryptographically signs metadata, and an egress
+       endpoint verifies it.  This enables downstream nodes to verify and
+       audit that policy was executed consistently, while still applying
+       their own policy independently.  The second part of this document
+       presents a proposal for a future extension to the Geneve standard.
+       This proposed extension would allow trusted transit devices to
+       participate in the metadata chain, enabling a hop-by-hop "chain of
+       custody" for enhanced, real-time security responsiveness within the
+       data center fabric.</p>
 series:
 - type: main
   title:

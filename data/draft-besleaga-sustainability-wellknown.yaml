@@ -1,3 +1,4 @@
+---
 id: draftbesleagasustainabilitywellknown
 schema_version: v1.5.6
 formattedref:
@@ -8,18 +9,30 @@ title:
   content: The 'sustainability-data' Well-Known URI
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-besleaga-sustainability-wellknown-06
+  content: https://datatracker.ietf.org/doc/html/draft-besleaga-sustainability-wellknown-07
 docidentifier:
 - content: draft-besleaga-sustainability-wellknown
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-10'
+  at: '2026-09-17'
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the \"sustainability-data\" well-known URI.  This\n   URI provides a uniform, out-of-band convention for web servers and\n   digital services to publish aggregated environmental impact, energy\n   consumption, and carbon footprint metrics for a declared reporting\n   subject -- typically the publishing origin itself.\n\n   The convention publishes a single, cacheable JSON document per\n   origin, described by formal schemas and discoverable at a fixed\n   location without prior arrangement, so that environmental disclosures\n   can be located, validated, and ingested automatically.  Publication\n   is voluntary, and the metrics are self-asserted claims of the\n   publisher, linked to the publisher's methodology and supporting\n   evidence.</p>"
+  content: |-
+    <p>This document defines the "sustainability-data" well-known URI, at
+       which a web origin publishes a single JSON document declaring the
+       energy consumption, carbon footprint, and related environmental
+       metrics of a reporting subject, typically the origin itself.  The
+       declaration is described by formal schemas and located at a fixed
+       path, so that it can be retrieved, validated, and ingested
+       automatically.  It carries an optional embedded signature, may
+       reference the declarations of upstream providers from which its
+       figures derive, links to a methodology, and may link to third-party
+       attestations.  The metrics are self-asserted claims of the publisher.
+       This document registers the well-known URI and the media type
+       application/sustainability-data+json.</p>
 relation:
 - type: includes
   bibitem:
@@ -96,6 +109,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-besleaga-sustainability-wellknown-06
     docidentifier:
     - content: draft-besleaga-sustainability-wellknown-06
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-besleaga-sustainability-wellknown-07
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-besleaga-sustainability-wellknown-07
+    docidentifier:
+    - content: draft-besleaga-sustainability-wellknown-07
       type: Internet-Draft
       primary: true
 ext:

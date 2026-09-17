@@ -1,3 +1,4 @@
+---
 id: draftdogrucedulonreattestation
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,21 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Audit evidence is only useful for as long as it can be verified.\n   Cedulon produces COSE spend receipts and epoch checkpoints whose\n   signature algorithms will eventually be deprecated or broken; the\n   recent transition from polymorphic EdDSA to fully-specified Ed25519\n   algorithm identifiers shows that even identifiers change within a\n   decade.  This document proposes a re-attestation profile for Cedulon\n   evidence: a signed statement, produced while the original algorithm\n   is still trustworthy, that binds the original evidence bytes to a\n   successor algorithm and is registered in a SCITT transparency\n   service.  Chains of such statements allow a verifier decades later to\n   trust evidence whose original cipher has been retired.  Structures\n   are meant to outlive ciphers.  This is an extension proposal to the\n   Cedulon core document; its normative language is provisional and the\n   companion implementation does not implement it yet.</p>"
+  content: |-
+    <p>Audit evidence is only useful for as long as it can be verified.
+       Cedulon produces COSE spend receipts and epoch checkpoints whose
+       signature algorithms will eventually be deprecated or broken; the
+       recent transition from polymorphic EdDSA to fully-specified Ed25519
+       algorithm identifiers shows that even identifiers change within a
+       decade.  This document proposes a re-attestation profile for Cedulon
+       evidence: a signed statement, produced while the original algorithm
+       is still trustworthy, that binds the original evidence bytes to a
+       successor algorithm and is registered in a SCITT transparency
+       service.  Chains of such statements allow a verifier decades later to
+       trust evidence whose original cipher has been retired.  Structures
+       are meant to outlive ciphers.  This is an extension proposal to the
+       Cedulon core document; its normative language is provisional and the
+       companion implementation does not implement it yet.</p>
 relation:
 - type: includes
   bibitem:

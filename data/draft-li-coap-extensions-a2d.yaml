@@ -1,3 +1,4 @@
+---
 id: draftlicoapextensionsa2d
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Many CoAP deployments need to start operations that cannot be\n   completed within one request/response exchange.  Existing deployments\n   commonly model these operations with application-specific resources,\n   payload formats, and polling or notification conventions.  This makes\n   clients, gateways, and proxies unable to interoperate across\n   implementations that expose otherwise similar long-running\n   operations.\n\n   This document defines a CoAP task-resource pattern for asynchronous\n   operations.  It specifies a small set of CoAP Options and a CBOR\n   status representation that allow a server to create a temporary task\n   resource, allow a client to monitor, update, or cancel that task\n   using existing CoAP methods, and allow task-state and task-progress\n   observations to reuse the Conditional Query Parameters defined for\n   CoAP Observe [I-D.ietf-core-conditional-attributes].  Autonomous\n   control agents are one motivating use case, but the mechanisms are\n   intended to be generally usable for constrained applications that\n   need interoperable task orchestration.</p>"
+  content: |-
+    <p>Many CoAP deployments need to start operations that cannot be
+       completed within one request/response exchange.  Existing deployments
+       commonly model these operations with application-specific resources,
+       payload formats, and polling or notification conventions.  This makes
+       clients, gateways, and proxies unable to interoperate across
+       implementations that expose otherwise similar long-running
+       operations.
+
+       This document defines a CoAP task-resource pattern for asynchronous
+       operations.  It specifies a small set of CoAP Options and a CBOR
+       status representation that allow a server to create a temporary task
+       resource, allow a client to monitor, update, or cancel that task
+       using existing CoAP methods, and allow task-state and task-progress
+       observations to reuse the Conditional Query Parameters defined for
+       CoAP Observe [I-D.ietf-core-conditional-attributes].  Autonomous
+       control agents are one motivating use case, but the mechanisms are
+       intended to be generally usable for constrained applications that
+       need interoperable task orchestration.</p>
 relation:
 - type: includes
   bibitem:

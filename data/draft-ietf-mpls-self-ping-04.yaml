@@ -1,3 +1,4 @@
+---
 id: draftietfmplsselfping04
 schema_version: v1.5.6
 type: standard
@@ -128,7 +129,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When certain RSVP-TE optimizations are implemented, ingress LSRs can\n   receive RSVP RESV messages before forwarding state has been installed\n   on all downstream nodes.  According to the RSVP-TE specification, the\n   ingress LSR can forward traffic through an LSP as soon as it receives\n   a RESV message.  However, if the ingress LSR forwards traffic through\n   the LSP before forwarding state has been installed on all downstream\n   nodes, traffic can be lost.\n\n   This memo describes LSP Self-ping.  When an ingress LSR receives an\n   RESV message, it can invoke LSP Self-ping procedures to ensure that\n   forwarding state has been installed on all downstream nodes.\n\n   LSP Self-ping is an extremely light-weight mechanism.  It does not\n   consume control plane resources on transit or egress LSRs.</p>"
+  content: |-
+    <p>When certain RSVP-TE optimizations are implemented, ingress LSRs can
+       receive RSVP RESV messages before forwarding state has been installed
+       on all downstream nodes.  According to the RSVP-TE specification, the
+       ingress LSR can forward traffic through an LSP as soon as it receives
+       a RESV message.  However, if the ingress LSR forwards traffic through
+       the LSP before forwarding state has been installed on all downstream
+       nodes, traffic can be lost.
+
+       This memo describes LSP Self-ping.  When an ingress LSR receives an
+       RESV message, it can invoke LSP Self-ping procedures to ensure that
+       forwarding state has been installed on all downstream nodes.
+
+       LSP Self-ping is an extremely light-weight mechanism.  It does not
+       consume control plane resources on transit or egress LSRs.</p>
 relation:
 - type: updates
   bibitem:

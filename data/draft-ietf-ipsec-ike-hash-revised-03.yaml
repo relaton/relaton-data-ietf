@@ -1,3 +1,4 @@
+---
 id: draftietfipsecikehashrevised03
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,16 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines new method of calculating the authentication HASH\nof the IKE [RFC-2409] protocol. It fixes known problems with the IKE.\nThe way the HASH is currently defined in the [RFC-2409] does not authen-\nticate the ISAKMP [RFC-2408] packet header, nor does it authenticate any\nextra ISAKMP payloads inside phase 1 ISAKMP packets. This causes a secu-\nrity problem when using extra ISAKMP payloads as already defined in the\nIKE and DOI [RFC-2407] (vendor ID payload, INITIAL-CONTACT notification\netc).  There is also suggestion how to fix the Phase 2 authentication\nhashes so that they will also authenticate the ISAKMP packet header.</p>"
+  content: |-
+    <p>This document defines new method of calculating the authentication HASH
+    of the IKE [RFC-2409] protocol. It fixes known problems with the IKE.
+    The way the HASH is currently defined in the [RFC-2409] does not authen-
+    ticate the ISAKMP [RFC-2408] packet header, nor does it authenticate any
+    extra ISAKMP payloads inside phase 1 ISAKMP packets. This causes a secu-
+    rity problem when using extra ISAKMP payloads as already defined in the
+    IKE and DOI [RFC-2407] (vendor ID payload, INITIAL-CONTACT notification
+    etc).  There is also suggestion how to fix the Phase 2 authentication
+    hashes so that they will also authenticate the ISAKMP packet header.</p>
 series:
 - type: main
   title:

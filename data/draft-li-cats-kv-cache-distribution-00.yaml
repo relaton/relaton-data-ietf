@@ -1,3 +1,4 @@
+---
 id: draftlicatskvcachedistribution00
 schema_version: v1.5.6
 type: standard
@@ -203,7 +204,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In large language model (LLM) inference, the key-value (KV) cache\n   holds the attention state computed from previously processed tokens.\n   Reusing cached state across requests avoids repeated prefill\n   computation and reduces time-to-first-token.  In distributed\n   inference deployments, the KV cache becomes a network-distributed\n   resource: the effectiveness of steering a request to a service\n   instance depends not only on computing and network metrics but also\n   on whether reusable cached state is available at or near that\n   instance.\n\n   This document describes the KV cache distribution use case for\n   Computing-Aware Traffic Steering (CATS), identifies the gaps relative\n   to the existing CATS framework and metrics, and states requirements\n   for cache-state metric exposure and for the distribution and\n   synchronization of cached content across multiple cache tiers.</p>"
+  content: |-
+    <p>In large language model (LLM) inference, the key-value (KV) cache
+       holds the attention state computed from previously processed tokens.
+       Reusing cached state across requests avoids repeated prefill
+       computation and reduces time-to-first-token.  In distributed
+       inference deployments, the KV cache becomes a network-distributed
+       resource: the effectiveness of steering a request to a service
+       instance depends not only on computing and network metrics but also
+       on whether reusable cached state is available at or near that
+       instance.
+
+       This document describes the KV cache distribution use case for
+       Computing-Aware Traffic Steering (CATS), identifies the gaps relative
+       to the existing CATS framework and metrics, and states requirements
+       for cache-state metric exposure and for the distribution and
+       synchronization of cached content across multiple cache tiers.</p>
 series:
 - type: main
   title:

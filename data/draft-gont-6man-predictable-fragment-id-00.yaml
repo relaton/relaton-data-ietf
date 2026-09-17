@@ -1,3 +1,4 @@
+---
 id: draftgont6manpredictablefragmentid00
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IPv6 specifies the Fragment Header, which is employed for the\n   fragmentation and reassembly mechanisms.  The Fragment Header\n   contains an \"Identification\" field which, together with the IPv6\n   Source Address and the IPv6 Destination Address of the packet,\n   identifies fragments that correspond to the same original datagram,\n   such that they can be reassembled together at the receiving host.\n   The only requirement for setting the \"Identification\" value is that\n   it must be different than that of any other fragmented packet sent\n   recently with the same Source Address and Destination Address.  Some\n   implementations simply use a global counter for setting the Fragment\n   Identification field, thus leading to predictable values.  This\n   document analyzes the security implications of predictable\n   Identification values, and updates RFC 2460 specifying additional\n   requirements for setting the Fragment Identification, such that the\n   aforementioned security implications are mitigated.</p>"
+  content: |-
+    <p>IPv6 specifies the Fragment Header, which is employed for the
+       fragmentation and reassembly mechanisms.  The Fragment Header
+       contains an "Identification" field which, together with the IPv6
+       Source Address and the IPv6 Destination Address of the packet,
+       identifies fragments that correspond to the same original datagram,
+       such that they can be reassembled together at the receiving host.
+       The only requirement for setting the "Identification" value is that
+       it must be different than that of any other fragmented packet sent
+       recently with the same Source Address and Destination Address.  Some
+       implementations simply use a global counter for setting the Fragment
+       Identification field, thus leading to predictable values.  This
+       document analyzes the security implications of predictable
+       Identification values, and updates RFC 2460 specifying additional
+       requirements for setting the Fragment Identification, such that the
+       aforementioned security implications are mitigated.</p>
 relation:
 - type: updatedBy
   bibitem:

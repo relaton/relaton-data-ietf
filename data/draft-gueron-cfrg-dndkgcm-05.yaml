@@ -1,3 +1,4 @@
+---
 id: draftgueroncfrgdndkgcm05
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies an authenticated encryption algorithm called\n   Double Nonce Derive Key AES-GCM (DNDK-GCM). It operates with a 32-\n   byte root key and is designed to encrypt with a 24-byte random nonce\n   and optionally to provide for key commitment.\n\n   Encryption takes the root key and a 15-byte portion of the random\n   nonce, and derives a fresh 32-byte encryption key and (optionally) a\n   key commitment value. Then, it invokes AES-GCM with the derived key\n   and the remaining bytes of the nonce, and outputs the ciphertext,\n   authentication tag and the key commitment value.\n\n   Although this is not the primary use case, it is also possible to use\n   DNDK-GCM with a non-repeating but non-random nonce (i.e., a \"counter-\n   based nonce\").\n\n   The low collision probability in a collection of 24-byte random\n   nonces and the per-nonce derivation of an encryption key extend the\n   lifetime of the root key, and the scheme can support processing up to\n   2^64 bytes under a given root key.\n\n   DNDK-GCM introduces a relatively small overhead compared to using\n   AES-GCM directly, and its security relies only on the standard\n   assumption that AES acts as a pseudorandom permutation.</p>"
+  content: |-
+    <p>This document specifies an authenticated encryption algorithm called
+       Double Nonce Derive Key AES-GCM (DNDK-GCM). It operates with a 32-
+       byte root key and is designed to encrypt with a 24-byte random nonce
+       and optionally to provide for key commitment.
+
+       Encryption takes the root key and a 15-byte portion of the random
+       nonce, and derives a fresh 32-byte encryption key and (optionally) a
+       key commitment value. Then, it invokes AES-GCM with the derived key
+       and the remaining bytes of the nonce, and outputs the ciphertext,
+       authentication tag and the key commitment value.
+
+       Although this is not the primary use case, it is also possible to use
+       DNDK-GCM with a non-repeating but non-random nonce (i.e., a "counter-
+       based nonce").
+
+       The low collision probability in a collection of 24-byte random
+       nonces and the per-nonce derivation of an encryption key extend the
+       lifetime of the root key, and the scheme can support processing up to
+       2^64 bytes under a given root key.
+
+       DNDK-GCM introduces a relatively small overhead compared to using
+       AES-GCM directly, and its security relies only on the standard
+       assumption that AES acts as a pseudorandom permutation.</p>
 relation:
 - type: updates
   bibitem:

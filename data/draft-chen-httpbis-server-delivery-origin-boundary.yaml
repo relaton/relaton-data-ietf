@@ -1,3 +1,4 @@
+---
 id: draftchenhttpbisserverdeliveryoriginboundary
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes origin-binding considerations for HTTP\n   server-initiated delivery mechanisms that can cause a user agent to\n   associate a delivered representation with an origin other than the\n   origin that established the underlying transport connection.  The\n   motivation is a class of cross-origin attacks demonstrated against\n   HTTP/2 server push and Signed HTTP Exchange (SXG), in which a server\n   that is authorized by a shared TLS certificate for multiple Subject\n   Alternative Name (SAN) entries can cause content to be accepted under\n   the authority of a different origin.\n\n   This document provides security guidance for user agents, origin\n   servers, intermediaries, and deployment operators.  In particular, it\n   recommends that user agents reject server-initiated deliveries whose\n   asserted authority is not origin-consistent with the active request\n   context, and that implementations avoid using multi-domain shared\n   certificates as a basis for SXG attribution across unrelated origins.\n   It also outlines operational considerations for certificate lifecycle\n   management where shared certificates are unavoidable.</p>"
+  content: |-
+    <p>This document describes origin-binding considerations for HTTP
+       server-initiated delivery mechanisms that can cause a user agent to
+       associate a delivered representation with an origin other than the
+       origin that established the underlying transport connection.  The
+       motivation is a class of cross-origin attacks demonstrated against
+       HTTP/2 server push and Signed HTTP Exchange (SXG), in which a server
+       that is authorized by a shared TLS certificate for multiple Subject
+       Alternative Name (SAN) entries can cause content to be accepted under
+       the authority of a different origin.
+
+       This document provides security guidance for user agents, origin
+       servers, intermediaries, and deployment operators.  In particular, it
+       recommends that user agents reject server-initiated deliveries whose
+       asserted authority is not origin-consistent with the active request
+       context, and that implementations avoid using multi-domain shared
+       certificates as a basis for SXG attribution across unrelated origins.
+       It also outlines operational considerations for certificate lifecycle
+       management where shared certificates are unavoidable.</p>
 relation:
 - type: includes
   bibitem:

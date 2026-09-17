@@ -1,3 +1,4 @@
+---
 id: drafthaynesnfsv4recalldevice
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,20 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Parallel Network File System (pNFS) allows the metadata server to\n   recall a layout from a client by file id, by file system id, or\n   across all of a client's layouts.  It also lets the server delete a\n   deviceid via CB_NOTIFY_DEVICEID.  It does not provide a mechanism for\n   the metadata server to recall, in a single operation, all layouts\n   that reference a specific deviceid.  This document presents an\n   extension to RFC7862 that adds a deviceid-scoped layout recall: a\n   single CB_LAYOUTRECALL operation recalls every layout a client holds\n   that references a given deviceid, leaving unrelated layouts in place.\n   Without this capability, device unavailability can trigger large\n   volumes of failed WRITE and LAYOUTERROR traffic, and administrators\n   lack a surgical way to retire a deviceid without disturbing layouts\n   that reference healthy devices.</p>"
+  content: |-
+    <p>The Parallel Network File System (pNFS) allows the metadata server to
+       recall a layout from a client by file id, by file system id, or
+       across all of a client's layouts.  It also lets the server delete a
+       deviceid via CB_NOTIFY_DEVICEID.  It does not provide a mechanism for
+       the metadata server to recall, in a single operation, all layouts
+       that reference a specific deviceid.  This document presents an
+       extension to RFC7862 that adds a deviceid-scoped layout recall: a
+       single CB_LAYOUTRECALL operation recalls every layout a client holds
+       that references a given deviceid, leaving unrelated layouts in place.
+       Without this capability, device unavailability can trigger large
+       volumes of failed WRITE and LAYOUTERROR traffic, and administrators
+       lack a surgical way to retire a deviceid without disturbing layouts
+       that reference healthy devices.</p>
 relation:
 - type: includes
   bibitem:

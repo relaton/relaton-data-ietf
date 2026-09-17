@@ -1,3 +1,4 @@
+---
 id: draftxutsvwgadaptivequeuemgmt00
 schema_version: v1.5.6
 type: standard
@@ -228,7 +229,17 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Active Queue Management (AQM) manages queue depth by controlling\n   packet admission at the point of enqueue.  This document specifies a\n   complementary queue management behavior that operates on packets\n   already admitted to a queue: when the queue depth exceeds a\n   configurable threshold, the maximum time a packet may remain queued\n   before being dropped is reduced.  When congestion subsides, the\n   duration reverts to its base value.  This per-queue dropping behavior\n   helps manage queue depth during congestion by releasing resources\n   from queues where packets have been waiting longest, complementing\n   AQM without modifying its signaling semantics.</p>"
+  content: |-
+    <p>Active Queue Management (AQM) manages queue depth by controlling
+       packet admission at the point of enqueue.  This document specifies a
+       complementary queue management behavior that operates on packets
+       already admitted to a queue: when the queue depth exceeds a
+       configurable threshold, the maximum time a packet may remain queued
+       before being dropped is reduced.  When congestion subsides, the
+       duration reverts to its base value.  This per-queue dropping behavior
+       helps manage queue depth during congestion by releasing resources
+       from queues where packets have been waiting longest, complementing
+       AQM without modifying its signaling semantics.</p>
 series:
 - type: main
   title:

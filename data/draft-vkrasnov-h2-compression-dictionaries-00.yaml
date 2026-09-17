@@ -1,3 +1,4 @@
+---
 id: draftvkrasnovh2compressiondictionaries00
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The HTTP/2 [RFC7540] protocol encourages the use of many small assets\n   for CSS/JS/HTML, due to its multiplexed nature.  Prior to HTTP/2,\n   asset inlining was encouraged, resulting in fewer, larger assets per\n   website.\n\n   The nature of the compression algorithms, such as DEFLATE [RFC1951]\n   and Brotli [BROTLI], used with HTTP in practice, require a certain\n   \"window\" of data to perform backward matching.  Therefore, larger\n   files have much better compression ratio.  These algorithms also\n   allow the use of custom compression dictionaries which can be used as\n   the initial window for backward matches.\n\n   This document specifies a new HTTP/2 frame type and a new HTTP/2\n   setting value that would allow a compression algorithm to use\n   previously sent data as a compression dictionary, resulting in an\n   improved compression ratio.</p>"
+  content: |-
+    <p>The HTTP/2 [RFC7540] protocol encourages the use of many small assets
+       for CSS/JS/HTML, due to its multiplexed nature.  Prior to HTTP/2,
+       asset inlining was encouraged, resulting in fewer, larger assets per
+       website.
+
+       The nature of the compression algorithms, such as DEFLATE [RFC1951]
+       and Brotli [BROTLI], used with HTTP in practice, require a certain
+       "window" of data to perform backward matching.  Therefore, larger
+       files have much better compression ratio.  These algorithms also
+       allow the use of custom compression dictionaries which can be used as
+       the initial window for backward matches.
+
+       This document specifies a new HTTP/2 frame type and a new HTTP/2
+       setting value that would allow a compression algorithm to use
+       previously sent data as a compression dictionary, resulting in an
+       improved compression ratio.</p>
 relation:
 - type: updatedBy
   bibitem:

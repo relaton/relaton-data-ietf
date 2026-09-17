@@ -1,3 +1,4 @@
+---
 id: draftietfnetmodsystemconfig03
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how a management client and server handle\n   YANG-modeled configuration data that is defined by the server itself.\n   The system-defined configuration can be referenced (e.g. leafref) by\n   configuration explicitly created by a client.\n\n   The Network Management Datastore Architecture (NMDA) defined in RFC\n   8342 is updated with a read-only conventional configuration datastore\n   called \"system\" to hold system-defined configuration.  As an\n   alternative to clients explicitly copying referenced system-defined\n   configuration into the target configuration datastore (e.g.,\n   &lt;running&gt;) so that the datastore is valid, a \"resolve-system\"\n   parameter is defined to allow the server acting as a \"system client\"\n   to copy referenced system-defined nodes automatically.  This solution\n   enables clients manipulating the target configuration datastore\n   (e.g., &lt;running&gt;) to overlay (e.g., copy system configuration using\n   the same key value as in &lt;system&gt;) and reference nodes defined in\n   &lt;system&gt;, override values of configurations defined in &lt;system&gt;, and\n   configure descendant nodes of system-defined nodes.\n\n   This document updates RFC 8342, RFC 6241, RFC 8526 and RFC 8040.</p>"
+  content: |-
+    <p>This document describes how a management client and server handle
+       YANG-modeled configuration data that is defined by the server itself.
+       The system-defined configuration can be referenced (e.g. leafref) by
+       configuration explicitly created by a client.
+
+       The Network Management Datastore Architecture (NMDA) defined in RFC
+       8342 is updated with a read-only conventional configuration datastore
+       called "system" to hold system-defined configuration.  As an
+       alternative to clients explicitly copying referenced system-defined
+       configuration into the target configuration datastore (e.g.,
+       &lt;running&gt;) so that the datastore is valid, a "resolve-system"
+       parameter is defined to allow the server acting as a "system client"
+       to copy referenced system-defined nodes automatically.  This solution
+       enables clients manipulating the target configuration datastore
+       (e.g., &lt;running&gt;) to overlay (e.g., copy system configuration using
+       the same key value as in &lt;system&gt;) and reference nodes defined in
+       &lt;system&gt;, override values of configurations defined in &lt;system&gt;, and
+       configure descendant nodes of system-defined nodes.
+
+       This document updates RFC 8342, RFC 6241, RFC 8526 and RFC 8040.</p>
 relation:
 - type: updates
   bibitem:

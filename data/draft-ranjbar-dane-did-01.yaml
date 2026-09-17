@@ -1,3 +1,4 @@
+---
 id: draftranjbardanedid01
 schema_version: v1.5.6
 type: standard
@@ -81,7 +82,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Several Decentralized Identifier (DID) methods root trust in a DNS\n   name: did:web binds an identifier to a domain and today verifies its\n   keys over the Web PKI, did:dns serves DID data from DNS resource\n   records, and did:webvh retrieves its history from an HTTPS location\n   derived from a name.  Each either depends on the Web PKI, treats\n   DNSSEC as an optional recommendation, or does not bind the\n   verification-method key to the name at all.  This document defines a\n   single, normative DANE-EE key-binding profile that any DNS-anchored\n   DID method can point at rather than reinventing: a verification\n   method's public key is published as a TLSA record with certificate\n   usage DANE-EE(3), selector SubjectPublicKeyInfo(1), and matching type\n   SHA2-256(1) under a DNSSEC-signed name, so that a relying party can\n   confirm the key from the DNS root of trust with no certificate\n   authority and no fetch from the subject.  The profile binds a name to\n   a key and the key to the specific DID document it signs, and no\n   further; it states precisely what it does not cover, including\n   continuity of holding, and points to where those answers live.</p>"
+  content: |-
+    <p>Several Decentralized Identifier (DID) methods root trust in a DNS
+       name: did:web binds an identifier to a domain and today verifies its
+       keys over the Web PKI, did:dns serves DID data from DNS resource
+       records, and did:webvh retrieves its history from an HTTPS location
+       derived from a name.  Each either depends on the Web PKI, treats
+       DNSSEC as an optional recommendation, or does not bind the
+       verification-method key to the name at all.  This document defines a
+       single, normative DANE-EE key-binding profile that any DNS-anchored
+       DID method can point at rather than reinventing: a verification
+       method's public key is published as a TLSA record with certificate
+       usage DANE-EE(3), selector SubjectPublicKeyInfo(1), and matching type
+       SHA2-256(1) under a DNSSEC-signed name, so that a relying party can
+       confirm the key from the DNS root of trust with no certificate
+       authority and no fetch from the subject.  The profile binds a name to
+       a key and the key to the specific DID document it signs, and no
+       further; it states precisely what it does not cover, including
+       continuity of holding, and points to where those answers live.</p>
 relation:
 - type: updates
   bibitem:

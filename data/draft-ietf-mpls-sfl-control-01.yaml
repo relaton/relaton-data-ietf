@@ -1,3 +1,4 @@
+---
 id: draftietfmplssflcontrol01
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In RFC 8957 the concept of MPLS synonymos flow labels (SFL) was\n   introduced.  This document describes a simple control protocol that\n   runs over an associated control header to request, withdraw, and\n   extend the lifetime of such labels.  It is not the only control\n   protocol that might be used to support SFL, but it has the benefit of\n   being able to be used without modifying of the existing MPLS control\n   protocols.  The existence of this design is not intended to restrict\n   the ability to enhance an existing MPLS control protocol to add a\n   similar capability.\n\n   A Querier MUST wait a configured time (suggested wait of 60 seconds)\n   before re-attempting a Withdraw request.  No more than three Withdraw\n   requests SHOULD be made.  These restrictions are to prevent\n   overloading the control plane of the actioning router.</p>"
+  content: |-
+    <p>In RFC 8957 the concept of MPLS synonymos flow labels (SFL) was
+       introduced.  This document describes a simple control protocol that
+       runs over an associated control header to request, withdraw, and
+       extend the lifetime of such labels.  It is not the only control
+       protocol that might be used to support SFL, but it has the benefit of
+       being able to be used without modifying of the existing MPLS control
+       protocols.  The existence of this design is not intended to restrict
+       the ability to enhance an existing MPLS control protocol to add a
+       similar capability.
+
+       A Querier MUST wait a configured time (suggested wait of 60 seconds)
+       before re-attempting a Withdraw request.  No more than three Withdraw
+       requests SHOULD be made.  These restrictions are to prevent
+       overloading the control plane of the actioning router.</p>
 relation:
 - type: updates
   bibitem:

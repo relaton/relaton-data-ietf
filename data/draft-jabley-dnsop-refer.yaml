@@ -1,3 +1,4 @@
+---
 id: draftjableydnsoprefer
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,33 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Domain Name System (DNS) incorporates a namespace that is\n   comprised, in practice, of multiple so-called zones.  Each zone is,\n   in principal, a finite tree structure which can be administered\n   autonomously, and is connected to exactly one parent zone and zero or\n   more child zones.  These connection points are known as zone cuts; a\n   parent zone contains information that allows the servers responsible\n   for the child zone to be found.\n\n   The current DNS specification encodes that information about child\n   zones using an \"NS\" resource record set in the parent zone, and a\n   corresponding \"NS\" resource record set in the child zone.  These two\n   resource record sets have identical owner names, class, and resource\n   record type but can differ in other respects such as the time-to-live\n   (TTL) attribute, the resource record data associated with each set\n   and the availability of cryptographic signatures.  This property of\n   being similar, related but potentially different has led to\n   operational complexity.\n\n   This document proposes a change to how zone cuts are encoded in the\n   parent zone, allowing the resource records in the parent and the\n   child zone to be more clearly distinguished and protected separately\n   using cryptographic signatures.\n\n   It is not at all clear that this is a good idea.  To restate in\n   stronger terms, the goal of the experiment described in this document\n   is to determine just how bad an idea this is.</p>"
+  content: |-
+    <p>The Domain Name System (DNS) incorporates a namespace that is
+       comprised, in practice, of multiple so-called zones.  Each zone is,
+       in principal, a finite tree structure which can be administered
+       autonomously, and is connected to exactly one parent zone and zero or
+       more child zones.  These connection points are known as zone cuts; a
+       parent zone contains information that allows the servers responsible
+       for the child zone to be found.
+
+       The current DNS specification encodes that information about child
+       zones using an "NS" resource record set in the parent zone, and a
+       corresponding "NS" resource record set in the child zone.  These two
+       resource record sets have identical owner names, class, and resource
+       record type but can differ in other respects such as the time-to-live
+       (TTL) attribute, the resource record data associated with each set
+       and the availability of cryptographic signatures.  This property of
+       being similar, related but potentially different has led to
+       operational complexity.
+
+       This document proposes a change to how zone cuts are encoded in the
+       parent zone, allowing the resource records in the parent and the
+       child zone to be more clearly distinguished and protected separately
+       using cryptographic signatures.
+
+       It is not at all clear that this is a good idea.  To restate in
+       stronger terms, the goal of the experiment described in this document
+       is to determine just how bad an idea this is.</p>
 relation:
 - type: includes
   bibitem:

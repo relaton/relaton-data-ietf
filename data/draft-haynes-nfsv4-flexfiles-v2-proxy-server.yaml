@@ -1,3 +1,4 @@
+---
 id: drafthaynesnfsv4flexfilesv2proxyserver
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,21 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type\n   supports client-side erasure coding and per-chunk repair between\n   clients and data servers.  This document extends that architecture\n   with a proxy server role: a registered peer of the metadata server\n   that polls the metadata server for work assignments and carries them\n   out -- moving a file from one layout to another, reconstructing a\n   whole file from surviving shards, or translating between encodings\n   for clients that cannot participate in the file's native encoding\n   (including NFSv3 clients).  All proxy-server-to-metadata-server\n   coordination is fore-channel: the metadata server returns work\n   assignments inline in the response to a proxy-server-initiated\n   PROXY_PROGRESS poll, and the proxy server reports completion via a\n   fore-channel PROXY_DONE.  No callback operations are required for the\n   proxy server protocol.</p>"
+  content: |-
+    <p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type
+       supports client-side erasure coding and per-chunk repair between
+       clients and data servers.  This document extends that architecture
+       with a proxy server role: a registered peer of the metadata server
+       that polls the metadata server for work assignments and carries them
+       out -- moving a file from one layout to another, reconstructing a
+       whole file from surviving shards, or translating between encodings
+       for clients that cannot participate in the file's native encoding
+       (including NFSv3 clients).  All proxy-server-to-metadata-server
+       coordination is fore-channel: the metadata server returns work
+       assignments inline in the response to a proxy-server-initiated
+       PROXY_PROGRESS poll, and the proxy server reports completion via a
+       fore-channel PROXY_DONE.  No callback operations are required for the
+       proxy server protocol.</p>
 relation:
 - type: includes
   bibitem:

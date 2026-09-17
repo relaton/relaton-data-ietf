@@ -1,3 +1,4 @@
+---
 id: draftelistealthflowprotocol
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,19 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The StealthFlow Protocol (SFP) is a lightweight, hardware-aware proof-\nof-work (PoW) based admission control mechanism designed to mitigate\nDDoS attacks at the network edge.  This document specifies version 1.5\nof SFP, which introduces de-IP PoW design, 8-bit physical fingerprinting\nembedded in random padding, XDP-level three-lane (Green/Yellow/Black)\ntraffic steering, and a closed-loop multi-layer firewall integration\n(Edge → XDP → SSL/L7 → reverse XDP).  These enhancements eliminate IP-\nbased reuse attacks, provide coarse-grained real-device verification,\nachieve &lt;10% false-positive rate, and enable precise per-client\nisolation even under NAT environments.  SFP operates entirely at the\nXDP/eBPF layer with Fail-Silent behavior and requires no changes to\nexisting TLS/QUIC stacks.</p>"
+  content: |-
+    <p>The StealthFlow Protocol (SFP) is a lightweight, hardware-aware proof-
+    of-work (PoW) based admission control mechanism designed to mitigate
+    DDoS attacks at the network edge.  This document specifies version 1.5
+    of SFP, which introduces de-IP PoW design, 8-bit physical fingerprinting
+    embedded in random padding, XDP-level three-lane (Green/Yellow/Black)
+    traffic steering, and a closed-loop multi-layer firewall integration
+    (Edge → XDP → SSL/L7 → reverse XDP).  These enhancements eliminate IP-
+    based reuse attacks, provide coarse-grained real-device verification,
+    achieve &lt;10% false-positive rate, and enable precise per-client
+    isolation even under NAT environments.  SFP operates entirely at the
+    XDP/eBPF layer with Fail-Silent behavior and requires no changes to
+    existing TLS/QUIC stacks.</p>
 relation:
 - type: includes
   bibitem:

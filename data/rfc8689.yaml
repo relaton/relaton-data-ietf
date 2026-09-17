@@ -1,3 +1,4 @@
+---
 id: RFC8689
 schema_version: v1.5.6
 type: standard
@@ -74,7 +75,17 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The SMTP STARTTLS option, used in negotiating transport-level encryption of SMTP connections, is not as useful from a security standpoint as it might be because of its opportunistic nature; message delivery is, by default, prioritized over security.  This document describes an SMTP service extension, REQUIRETLS, and a message header field, TLS-Required.  If the REQUIRETLS option or TLS-Required message header field is used when sending a message, it asserts a request on the part of the message sender to override the default negotiation of TLS, either by requiring that TLS be negotiated when the message is relayed or by requesting that recipient-side policy mechanisms such as MTA-STS and DNS-Based Authentication of Named Entities (DANE) be ignored when relaying a message for which security is unimportant.</p>"
+  content: "<p>The SMTP STARTTLS option, used in negotiating transport-level encryption
+    of SMTP connections, is not as useful from a security standpoint as it might be
+    because of its opportunistic nature; message delivery is, by default, prioritized
+    over security.  This document describes an SMTP service extension, REQUIRETLS,
+    and a message header field, TLS-Required.  If the REQUIRETLS option or TLS-Required
+    message header field is used when sending a message, it asserts a request on the
+    part of the message sender to override the default negotiation of TLS, either
+    by requiring that TLS be negotiated when the message is relayed or by requesting
+    that recipient-side policy mechanisms such as MTA-STS and DNS-Based Authentication
+    of Named Entities (DANE) be ignored when relaying a message for which security
+    is unimportant.</p>"
 status:
   stage:
     content: PROPOSED STANDARD

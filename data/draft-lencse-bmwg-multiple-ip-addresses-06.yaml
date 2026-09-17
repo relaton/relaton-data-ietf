@@ -1,3 +1,4 @@
+---
 id: draftlencsebmwgmultipleipaddresses06
 schema_version: v1.5.6
 type: standard
@@ -100,7 +101,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RFC 2544 has defined a benchmarking methodology for network\n   interconnect devices.  Its test frame format contained fixed IP\n   addresses and fixed port numbers.  RFC 4814 introduced pseudorandom\n   port numbers but used a single source and destination IP address pair\n   when testing with a single destination network.  This limitation may\n   cause an issue when the device under test uses the Receive-Side\n   Scaling (RSS) mechanism in the packet processing flow.  RSS has two\n   implementations: the first only includes the IP addresses, whereas\n   the second also includes the port numbers in the tuple used for\n   hashing.  Benchmarking tests that use a single IP address pair and\n   RFC 4814 pseudorandom port numbers are biased against the first type\n   of RSS implementation because traffic is not distributed among the\n   processing elements.  This document recommends the usage of\n   pseudorandom IP addresses in a similar manner as RFC 4814 did with\n   the port numbers.\n\n   If accepted, this document updates all affected RFCs, including RFC\n   2544, RFC 4814, RFC 5180, RFC 8219.</p>"
+  content: |-
+    <p>RFC 2544 has defined a benchmarking methodology for network
+       interconnect devices.  Its test frame format contained fixed IP
+       addresses and fixed port numbers.  RFC 4814 introduced pseudorandom
+       port numbers but used a single source and destination IP address pair
+       when testing with a single destination network.  This limitation may
+       cause an issue when the device under test uses the Receive-Side
+       Scaling (RSS) mechanism in the packet processing flow.  RSS has two
+       implementations: the first only includes the IP addresses, whereas
+       the second also includes the port numbers in the tuple used for
+       hashing.  Benchmarking tests that use a single IP address pair and
+       RFC 4814 pseudorandom port numbers are biased against the first type
+       of RSS implementation because traffic is not distributed among the
+       processing elements.  This document recommends the usage of
+       pseudorandom IP addresses in a similar manner as RFC 4814 did with
+       the port numbers.
+
+       If accepted, this document updates all affected RFCs, including RFC
+       2544, RFC 4814, RFC 5180, RFC 8219.</p>
 relation:
 - type: updates
   bibitem:

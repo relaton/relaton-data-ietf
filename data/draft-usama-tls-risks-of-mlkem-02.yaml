@@ -1,3 +1,4 @@
+---
 id: draftusamatlsrisksofmlkem02
 schema_version: v1.5.6
 type: standard
@@ -56,7 +57,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>We attest that standalone ML-KEM in TLS 1.3 breaks the existing\n   formal proofs of TLS in state-of-the-art symbolic security analysis\n   tool, ProVerif.  We believe this requires a new symbolic proof in\n   ProVerif.  To help inform the analysis, we share our understanding of\n   *exactly* where the ProVerif proofs break, namely transition from\n   symmetric DHKE to asymmetric KEM.  More specifically, our\n   understanding is that the existing proofs of TLS in ProVerif are\n   based on commutativity property, whereas commutativity does not apply\n   to standalone ML-KEM in TLS.\n\n   In general, we see no reason to believe that hybrid key exchanges are\n   not _at least_ as strong as the stronger of the two components.  We\n   invite collaborations or independent analysis to extend the ProVerif\n   models to perform such analysis and offer a statement for security\n   considerations of [I-D.ietf-tls-mlkem].  In our understanding, a\n   couple of WG participants have already started formal analysis in\n   ProVerif.\n\n   We also attest that from a formal analysis perspective, this is a\n   much bigger change than RFC8773bis, which indeed went for FATT review\n   (cf. [TLS-FATT]).  We, therefore, formally request the chairs to\n   initiate the FATT review of standalone ML-KEM in TLS.\n\n   This draft also offers some preliminary discussion to help the\n   developers and policy makers make informed choices.  Finally, the\n   draft also aims to reduce the endless repitition of arguments from\n   both sides presented on several lists by documenting these arguments\n   so they can simply be referred to.  We sincerely believe this will\n   help to focus the discussion on technical matters, such as system\n   model, threat model, security properties, and deployments.\n\n   We acknowledge several IETF participants who have contributed to this\n   draft with their insights.  This draft captures what _we_ understand\n   them to be saying.</p>"
+  content: |-
+    <p>We attest that standalone ML-KEM in TLS 1.3 breaks the existing
+       formal proofs of TLS in state-of-the-art symbolic security analysis
+       tool, ProVerif.  We believe this requires a new symbolic proof in
+       ProVerif.  To help inform the analysis, we share our understanding of
+       *exactly* where the ProVerif proofs break, namely transition from
+       symmetric DHKE to asymmetric KEM.  More specifically, our
+       understanding is that the existing proofs of TLS in ProVerif are
+       based on commutativity property, whereas commutativity does not apply
+       to standalone ML-KEM in TLS.
+
+       In general, we see no reason to believe that hybrid key exchanges are
+       not _at least_ as strong as the stronger of the two components.  We
+       invite collaborations or independent analysis to extend the ProVerif
+       models to perform such analysis and offer a statement for security
+       considerations of [I-D.ietf-tls-mlkem].  In our understanding, a
+       couple of WG participants have already started formal analysis in
+       ProVerif.
+
+       We also attest that from a formal analysis perspective, this is a
+       much bigger change than RFC8773bis, which indeed went for FATT review
+       (cf. [TLS-FATT]).  We, therefore, formally request the chairs to
+       initiate the FATT review of standalone ML-KEM in TLS.
+
+       This draft also offers some preliminary discussion to help the
+       developers and policy makers make informed choices.  Finally, the
+       draft also aims to reduce the endless repitition of arguments from
+       both sides presented on several lists by documenting these arguments
+       so they can simply be referred to.  We sincerely believe this will
+       help to focus the discussion on technical matters, such as system
+       model, threat model, security properties, and deployments.
+
+       We acknowledge several IETF participants who have contributed to this
+       draft with their insights.  This draft captures what _we_ understand
+       them to be saying.</p>
 relation:
 - type: updates
   bibitem:

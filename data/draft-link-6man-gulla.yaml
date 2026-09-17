@@ -1,3 +1,4 @@
+---
 id: draftlink6mangulla
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,21 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When an IPv6 prefix assigned to a link changes, hosts may not be\n   explicitly notified about the change.  Similarly, in some scenario a\n   link attachement for the host may change without the host detecting\n   it.  In both cases the host does not receive any signals to trigger\n   the network stack configuration refresh, so it may continue to use\n   \"old\" addresses which are not valid for the link.  This leads to\n   packet loss and service disruption.  This document proposes a\n   mechanism to mitigate this issue.  Routers are advised to send Router\n   Advertisements containing distinct Prefix Information Options (PIOs)\n   from different link-local addresses.  This, in conjunction with\n   RFC6724 (Default Source Address Selection) Rule 5.5 and RFC8028\n   (first-hop selection requirements), enables hosts to detect prefix\n   changes more rapidly and select the correct source address, thereby\n   improving the robustness of SLAAC.</p>"
+  content: |-
+    <p>When an IPv6 prefix assigned to a link changes, hosts may not be
+       explicitly notified about the change.  Similarly, in some scenario a
+       link attachement for the host may change without the host detecting
+       it.  In both cases the host does not receive any signals to trigger
+       the network stack configuration refresh, so it may continue to use
+       "old" addresses which are not valid for the link.  This leads to
+       packet loss and service disruption.  This document proposes a
+       mechanism to mitigate this issue.  Routers are advised to send Router
+       Advertisements containing distinct Prefix Information Options (PIOs)
+       from different link-local addresses.  This, in conjunction with
+       RFC6724 (Default Source Address Selection) Rule 5.5 and RFC8028
+       (first-hop selection requirements), enables hosts to detect prefix
+       changes more rapidly and select the correct source address, thereby
+       improving the robustness of SLAAC.</p>
 relation:
 - type: includes
   bibitem:

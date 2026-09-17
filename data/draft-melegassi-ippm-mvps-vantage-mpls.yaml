@@ -1,3 +1,4 @@
+---
 id: draftmelegassiippmmvpsvantagempls
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,68 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IP geolocation databases are known to be unreliable for network-\n   path measurement purposes [Poese-2011].  Traceroute-based\n   localization -- the practical alternative -- is further corrupted\n   by invisible and opaque MPLS tunnels that suppress IP-TTL\n   propagation, hiding intermediate hops and creating false direct\n   links in the apparent network topology [Donnet-2012]\n   [Vanaubel-2017] [Luttringer-2020].\n\n   This document formalises the interaction between MPLS path\n   camouflage and the vantage-authentication problem of the Multi-\n   Vantage Path Snapshot (MVPS) framework\n   [I-D.melegassi-iab-mvps-architecture].  Three technical\n   contributions are introduced.\n\n   First, Lemma L-GEO-1 (RTT Localization Bound) establishes the\n   feasible location set for any MVPS vantage given RTT measurements\n   to three or more anchor points, under the assumption that all\n   traversed tunnels are explicit or implicit in the Donnet taxonomy\n   (TTL propagation active).\n\n   Second, Lemma L-MPLS-1 (MPLS Camouflage Vulnerability) quantifies\n   the correction term Delta_mpls that invisible and opaque tunnels\n   introduce into the L-GEO-1 bound.  For invisible tunnels this\n   correction is unbounded without prior tunnel revelation; for\n   opaque tunnels it is bounded by the hidden-hop count times the\n   minimum per-hop propagation delay.\n\n   Third, Theorem T-CAM-1 (MPLS-Aware Camouflage Detection) proves\n   that an MVPS bundle from three or more vantage-to-anchor paths,\n   combined with DPR/BRPR tunnel-revelation probing [Vanaubel-2017]\n   or its TNT implementation [Luttringer-2020], detects MPLS-\n   camouflaged vantage impersonation with probability at least\n   1 - epsilon under the existing MVPS chi-squared coherence test\n   (Theorem 2 of the v4.0 proof catalogue [v4-proof]).  Three\n   explicit caveats (T-CAM-1.A on the i.i.d. assumption of the\n   DKW bound, T-CAM-1.B on the empirical FAR Hypothesis H3 of\n   [v4-proof], and T-CAM-1.C on revelation soundness under\n   adversarial operators) qualify the bound in operational\n   deployment.\n\n   An auxiliary lemma L-GEO-1.1 (Anchor Geometry) characterises\n   the necessary and sufficient angular distribution of anchors\n   for L-GEO-1 to discriminate two candidate positions; this\n   gives a deployable guideline for anchor selection.\n\n   A new phase label MPLS_CAMOUFLAGE_SUSPECTED is introduced and\n   added to the MVPS phase taxonomy alongside LOCATION_CONSISTENT,\n   LOCATION_MARGINAL, CAMOUFLAGE_SUSPECTED, and SPOOFED_VANTAGE.\n\n   Limitations explicitly disclosed include: the symmetric \"RTT\n   inflation\" attack (Section 10.2), the PHP tunnel coverage gap\n   when the adversary controls the ingress LER (Section 10.3),\n   and the alignment between the geometric vantage minimum\n   (N &gt;= 3) and the Byzantine vantage minimum (N &gt;= 3f+1,\n   Section 10.4).\n\n   All results are proved by discharging MVPS axioms A1..A5 against\n   the structural assets of the Donnet MPLS taxonomy combined with\n   the RTT-ellipsoid localization method.  No new wire format is\n   defined; no new codepoints are required.  The document is\n   informational.</p>"
+  content: |-
+    <p>IP geolocation databases are known to be unreliable for network-
+       path measurement purposes [Poese-2011].  Traceroute-based
+       localization -- the practical alternative -- is further corrupted
+       by invisible and opaque MPLS tunnels that suppress IP-TTL
+       propagation, hiding intermediate hops and creating false direct
+       links in the apparent network topology [Donnet-2012]
+       [Vanaubel-2017] [Luttringer-2020].
+
+       This document formalises the interaction between MPLS path
+       camouflage and the vantage-authentication problem of the Multi-
+       Vantage Path Snapshot (MVPS) framework
+       [I-D.melegassi-iab-mvps-architecture].  Three technical
+       contributions are introduced.
+
+       First, Lemma L-GEO-1 (RTT Localization Bound) establishes the
+       feasible location set for any MVPS vantage given RTT measurements
+       to three or more anchor points, under the assumption that all
+       traversed tunnels are explicit or implicit in the Donnet taxonomy
+       (TTL propagation active).
+
+       Second, Lemma L-MPLS-1 (MPLS Camouflage Vulnerability) quantifies
+       the correction term Delta_mpls that invisible and opaque tunnels
+       introduce into the L-GEO-1 bound.  For invisible tunnels this
+       correction is unbounded without prior tunnel revelation; for
+       opaque tunnels it is bounded by the hidden-hop count times the
+       minimum per-hop propagation delay.
+
+       Third, Theorem T-CAM-1 (MPLS-Aware Camouflage Detection) proves
+       that an MVPS bundle from three or more vantage-to-anchor paths,
+       combined with DPR/BRPR tunnel-revelation probing [Vanaubel-2017]
+       or its TNT implementation [Luttringer-2020], detects MPLS-
+       camouflaged vantage impersonation with probability at least
+       1 - epsilon under the existing MVPS chi-squared coherence test
+       (Theorem 2 of the v4.0 proof catalogue [v4-proof]).  Three
+       explicit caveats (T-CAM-1.A on the i.i.d. assumption of the
+       DKW bound, T-CAM-1.B on the empirical FAR Hypothesis H3 of
+       [v4-proof], and T-CAM-1.C on revelation soundness under
+       adversarial operators) qualify the bound in operational
+       deployment.
+
+       An auxiliary lemma L-GEO-1.1 (Anchor Geometry) characterises
+       the necessary and sufficient angular distribution of anchors
+       for L-GEO-1 to discriminate two candidate positions; this
+       gives a deployable guideline for anchor selection.
+
+       A new phase label MPLS_CAMOUFLAGE_SUSPECTED is introduced and
+       added to the MVPS phase taxonomy alongside LOCATION_CONSISTENT,
+       LOCATION_MARGINAL, CAMOUFLAGE_SUSPECTED, and SPOOFED_VANTAGE.
+
+       Limitations explicitly disclosed include: the symmetric "RTT
+       inflation" attack (Section 10.2), the PHP tunnel coverage gap
+       when the adversary controls the ingress LER (Section 10.3),
+       and the alignment between the geometric vantage minimum
+       (N &gt;= 3) and the Byzantine vantage minimum (N &gt;= 3f+1,
+       Section 10.4).
+
+       All results are proved by discharging MVPS axioms A1..A5 against
+       the structural assets of the Donnet MPLS taxonomy combined with
+       the RTT-ellipsoid localization method.  No new wire format is
+       defined; no new codepoints are required.  The document is
+       informational.</p>
 relation:
 - type: includes
   bibitem:

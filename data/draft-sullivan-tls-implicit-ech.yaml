@@ -1,3 +1,4 @@
+---
 id: draftsullivantlsimplicitech
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,46 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document updates the TLS Encrypted ClientHello (ECH)\n   specification [ECH-DRAFT] to support an implicit mode in ECH signaled\n   by a new implicit_ech extension in ECHConfigContents.  Clients that\n   detect this extension override certain base ECH rules:\n\n   *  They MAY choose any outer SNI instead of public_name.\n\n   *  They MAY choose any value for the config_id without an application\n      profile or being externally configured.\n\n   *  They MAY use another value than ECHConfig.contents.public_name in\n      the \"server_name\" extension (rather than they SHOULD use it)\n\n   Client-facing servers that include implicit_ech in the ECHConfig MUST\n   accommodate flexible config_id usage as defined in Section 10.4. of\n   [ECH-DRAFT].  This approach enables the removal of stable identifiers\n   (fixed config ID and known public_name) that on-path adversaries can\n   use to fingerprint a connection.\n\n   This improves upon the \"Do Not Stick Out\" design goal from\n   Section 10.10.4 of [ECH-DRAFT] by allowing clients to choose\n   unpredictable identifiers on the wire in the scenario where the set\n   of ECH configurations the client encounters is small and therefore\n   popular public_name or config_id values \"stick out\".\n\n   Note that this increases CPU usage in multi-key deployments because\n   client-facing servers must perform uniform trial decryption to handle\n   arbitrary config_id values.\n\nDiscussion Venues\n\n   This note is to be removed before publishing as an RFC.\n\n   Discussion of this document takes place on the Transport Layer\n   Security mailing list (tls@ietf.org), which is archived at\n   https://mailarchive.ietf.org/arch/browse/tls/.\n\n   Source for this draft and an issue tracker can be found at\n   https://github.com/grittygrease/draft-sullivan-tls-implicit-ech.</p>"
+  content: |-
+    <p>This document updates the TLS Encrypted ClientHello (ECH)
+       specification [ECH-DRAFT] to support an implicit mode in ECH signaled
+       by a new implicit_ech extension in ECHConfigContents.  Clients that
+       detect this extension override certain base ECH rules:
+
+       *  They MAY choose any outer SNI instead of public_name.
+
+       *  They MAY choose any value for the config_id without an application
+          profile or being externally configured.
+
+       *  They MAY use another value than ECHConfig.contents.public_name in
+          the "server_name" extension (rather than they SHOULD use it)
+
+       Client-facing servers that include implicit_ech in the ECHConfig MUST
+       accommodate flexible config_id usage as defined in Section 10.4. of
+       [ECH-DRAFT].  This approach enables the removal of stable identifiers
+       (fixed config ID and known public_name) that on-path adversaries can
+       use to fingerprint a connection.
+
+       This improves upon the "Do Not Stick Out" design goal from
+       Section 10.10.4 of [ECH-DRAFT] by allowing clients to choose
+       unpredictable identifiers on the wire in the scenario where the set
+       of ECH configurations the client encounters is small and therefore
+       popular public_name or config_id values "stick out".
+
+       Note that this increases CPU usage in multi-key deployments because
+       client-facing servers must perform uniform trial decryption to handle
+       arbitrary config_id values.
+
+    Discussion Venues
+
+       This note is to be removed before publishing as an RFC.
+
+       Discussion of this document takes place on the Transport Layer
+       Security mailing list (tls@ietf.org), which is archived at
+       https://mailarchive.ietf.org/arch/browse/tls/.
+
+       Source for this draft and an issue tracker can be found at
+       https://github.com/grittygrease/draft-sullivan-tls-implicit-ech.</p>
 relation:
 - type: includes
   bibitem:

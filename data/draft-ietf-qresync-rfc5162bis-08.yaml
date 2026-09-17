@@ -1,10 +1,12 @@
+---
 id: draftietfqresyncrfc5162bis08
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: IMAP Extensions for Conditional STORE Operation or Quick Flag Changes Resynchronization (CONDSTORE) and Quick Mailbox Resynchronization (QRESYNC)
+  content: IMAP Extensions for Conditional STORE Operation or Quick Flag Changes Resynchronization
+    (CONDSTORE) and Quick Mailbox Resynchronization (QRESYNC)
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-qresync-rfc5162bis-08
@@ -68,7 +70,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Often, multiple IMAP (RFC 3501) clients need to coordinate changes to\n   a common IMAP mailbox.  Examples include different clients working on\n   behalf of the same user, and multiple users accessing shared\n   mailboxes.  These clients need a mechanism to efficiently synchronize\n   state changes for messages within the mailbox.\n\n   Initially defined in RFC 4551, The Conditional Store facility\n   provides a protected update mechanism for message state information\n   and a mechanism for requesting only changes to message state.  This\n   memo updates that mechanism and obsoletes RFC 4551, based on\n   operational experience.\n\n   This document additionally updates another IMAP extension, Quick\n   Resynchronization, which builds on the Conditional Store extension to\n   provide an IMAP client the ability to fully resynchronize a mailbox\n   as part of the SELECT/EXAMINE command, without the need for\n   additional server-side state or client round-trips.  Hence this memo\n   obsoletes RFC 5162.\n\n   Finally, when these extensions are used, other mechanisms are\n   updated.  In particular, the line length recommendation in RFC 2863\n   is modified, the UID EXPUNGE command from RFC 4315 is modified, and\n   the behavior of STORE/UID STORE/FETCH/UID FETCH/EXPUNGE commands from\n   RFC 3501 is modified.</p>"
+  content: |-
+    <p>Often, multiple IMAP (RFC 3501) clients need to coordinate changes to
+       a common IMAP mailbox.  Examples include different clients working on
+       behalf of the same user, and multiple users accessing shared
+       mailboxes.  These clients need a mechanism to efficiently synchronize
+       state changes for messages within the mailbox.
+
+       Initially defined in RFC 4551, The Conditional Store facility
+       provides a protected update mechanism for message state information
+       and a mechanism for requesting only changes to message state.  This
+       memo updates that mechanism and obsoletes RFC 4551, based on
+       operational experience.
+
+       This document additionally updates another IMAP extension, Quick
+       Resynchronization, which builds on the Conditional Store extension to
+       provide an IMAP client the ability to fully resynchronize a mailbox
+       as part of the SELECT/EXAMINE command, without the need for
+       additional server-side state or client round-trips.  Hence this memo
+       obsoletes RFC 5162.
+
+       Finally, when these extensions are used, other mechanisms are
+       updated.  In particular, the line length recommendation in RFC 2863
+       is modified, the UID EXPUNGE command from RFC 4315 is modified, and
+       the behavior of STORE/UID STORE/FETCH/UID FETCH/EXPUNGE commands from
+       RFC 3501 is modified.</p>
 relation:
 - type: updates
   bibitem:

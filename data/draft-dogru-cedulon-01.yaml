@@ -1,3 +1,4 @@
+---
 id: draftdogrucedulon01
 schema_version: v1.5.6
 type: standard
@@ -56,7 +57,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Cedulon Protocol, an audit layer for agent-\n   to-agent commerce.  Payment rails such as HTTP 402 flows (x402) and\n   mandate protocols (AP2) already move value.  They do not, by\n   themselves, produce a fail-closed policy check and a signed spend\n   receipt that a verifier can reconcile against a rail extract.\n   Cedulon specifies a Trade Manifest (signed offer before payment), a\n   Policy Decision Point with default deny, a Spend Receipt (COSE/CWT\n   claim set after a gated payment), epoch checkpoints, and rail-extract\n   reconciliation.  The reconciliation shows that no settlement on the\n   extract lacks a receipt and no settled receipt is absent from the\n   extract.  That result is unconditional only when the verifier pins\n   the rail key out of band and states the period under audit; otherwise\n   the document requires it to be reported as conditional.  It also\n   defines a Dispute Evidence Bundle (evidence, not an award) and\n   optional SCITT anchoring.  Cedulon is not a competitor to x402 or\n   AP2; it sits above them.</p>"
+  content: |-
+    <p>This document defines the Cedulon Protocol, an audit layer for agent-
+       to-agent commerce.  Payment rails such as HTTP 402 flows (x402) and
+       mandate protocols (AP2) already move value.  They do not, by
+       themselves, produce a fail-closed policy check and a signed spend
+       receipt that a verifier can reconcile against a rail extract.
+       Cedulon specifies a Trade Manifest (signed offer before payment), a
+       Policy Decision Point with default deny, a Spend Receipt (COSE/CWT
+       claim set after a gated payment), epoch checkpoints, and rail-extract
+       reconciliation.  The reconciliation shows that no settlement on the
+       extract lacks a receipt and no settled receipt is absent from the
+       extract.  That result is unconditional only when the verifier pins
+       the rail key out of band and states the period under audit; otherwise
+       the document requires it to be reported as conditional.  It also
+       defines a Dispute Evidence Bundle (evidence, not an award) and
+       optional SCITT anchoring.  Cedulon is not a competitor to x402 or
+       AP2; it sits above them.</p>
 relation:
 - type: updates
   bibitem:

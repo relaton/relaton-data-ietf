@@ -1,3 +1,4 @@
+---
 id: draftxuintareachallengeicmpv601
 schema_version: v1.5.6
 type: standard
@@ -97,7 +98,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Internet Control Message Protocol for IPv6 (ICMPv6) is essential\n   for network diagnostics but is vulnerable to off-path spoofing\n   attacks, especially when error messages relate to stateless transport\n   protocols like UDP.  An attacker can forge these messages to degrade\n   performance or enable Man-in-the-Middle attacks.\n\n   This document explores solutions to this problem by first presenting\n   a straightforward but flawed stateful challenge-response mechanism.\n   It explains how this \"strawman\" approach, while preventing simple\n   spoofing, introduces a severe vulnerability to state-exhaustion\n   Denial-of-Service (DoS) attacks.\n\n   Building on this analysis, the document then proposes a robust,\n   stateless challenge-response mechanism inspired by TCP SYN-Cookies.\n   This proposal eliminates the need to store per-challenge state by\n   computationally generating challenges.  It limits state management to\n   minimal flags on existing sockets or a bounded probabilistic data\n   structure.  This approach effectively authenticates ICMPv6 error\n   messages while inherently resisting both off-path spoofing and state-\n   exhaustion DoS attacks, thus improving the robustness of ICMPv6.</p>"
+  content: |-
+    <p>The Internet Control Message Protocol for IPv6 (ICMPv6) is essential
+       for network diagnostics but is vulnerable to off-path spoofing
+       attacks, especially when error messages relate to stateless transport
+       protocols like UDP.  An attacker can forge these messages to degrade
+       performance or enable Man-in-the-Middle attacks.
+
+       This document explores solutions to this problem by first presenting
+       a straightforward but flawed stateful challenge-response mechanism.
+       It explains how this "strawman" approach, while preventing simple
+       spoofing, introduces a severe vulnerability to state-exhaustion
+       Denial-of-Service (DoS) attacks.
+
+       Building on this analysis, the document then proposes a robust,
+       stateless challenge-response mechanism inspired by TCP SYN-Cookies.
+       This proposal eliminates the need to store per-challenge state by
+       computationally generating challenges.  It limits state management to
+       minimal flags on existing sockets or a bounded probabilistic data
+       structure.  This approach effectively authenticates ICMPv6 error
+       messages while inherently resisting both off-path spoofing and state-
+       exhaustion DoS attacks, thus improving the robustness of ICMPv6.</p>
 relation:
 - type: updates
   bibitem:

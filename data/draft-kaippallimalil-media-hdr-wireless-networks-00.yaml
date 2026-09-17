@@ -1,3 +1,4 @@
+---
 id: draftkaippallimalilmediahdrwirelessnetworks00
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,33 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Wireless networks like 5G cellular or Wi-Fi experience significant\n   variations in link capacity over short intervals due to wireless\n   channel conditions, interference, or the end-user's movement.  These\n   variations in capacity take place in the order of hundreds of\n   milliseconds and is much too fast for end-to-end congestion signaling\n   by itself to convey the changes.  Media applications on the other\n   hand demand both high throughput and low latency, and are able to\n   dynamically adjust the size and quality of a stream to match\n   available network bandwidth.  However, catering to such media flows\n   over a radio link where the capacity changes rapidly requires the\n   buffers to be managed carefully.  This draft proposes additional\n   information about the media transported in each packet to manage the\n   buffers and optimize the scheduling of radio resources.  The set of\n   information proposed here includes relative importance of the packet,\n   burst length and timestamp to be conveyed by the media application in\n   a header extension.  This can be used to provide the wireless network\n   the flexibility to prioritize packets that are essential when the\n   radio capacity is temporarily low, defer packets that can tolerate\n   some additional delay, or even drop packets selectively in more\n   extreme conditions.\n\n   Another aspect considered here is the means by which the media packet\n   information is transported.  Potential solutions include carrying\n   this information in Media over QUIC extension headers, UDP options,\n   or in a MASQUE encapsulation between the application server and\n   wireless network entity.</p>"
+  content: |-
+    <p>Wireless networks like 5G cellular or Wi-Fi experience significant
+       variations in link capacity over short intervals due to wireless
+       channel conditions, interference, or the end-user's movement.  These
+       variations in capacity take place in the order of hundreds of
+       milliseconds and is much too fast for end-to-end congestion signaling
+       by itself to convey the changes.  Media applications on the other
+       hand demand both high throughput and low latency, and are able to
+       dynamically adjust the size and quality of a stream to match
+       available network bandwidth.  However, catering to such media flows
+       over a radio link where the capacity changes rapidly requires the
+       buffers to be managed carefully.  This draft proposes additional
+       information about the media transported in each packet to manage the
+       buffers and optimize the scheduling of radio resources.  The set of
+       information proposed here includes relative importance of the packet,
+       burst length and timestamp to be conveyed by the media application in
+       a header extension.  This can be used to provide the wireless network
+       the flexibility to prioritize packets that are essential when the
+       radio capacity is temporarily low, defer packets that can tolerate
+       some additional delay, or even drop packets selectively in more
+       extreme conditions.
+
+       Another aspect considered here is the means by which the media packet
+       information is transported.  Potential solutions include carrying
+       this information in Media over QUIC extension headers, UDP options,
+       or in a MASQUE encapsulation between the application server and
+       wireless network entity.</p>
 series:
 - type: main
   title:

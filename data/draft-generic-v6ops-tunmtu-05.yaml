@@ -1,3 +1,4 @@
+---
 id: draftgenericv6opstunmtu05
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Maximum Transmission Unit (MTU) for popular IP-within-IP tunnels\n   is currently recommended to be set to 1500 (or less) minus the length\n   of the encapsulation headers when static MTU determination is used.\n   This requires the tunnel ingress to either fragment any IP packet\n   larger than the MTU or drop the packet and return an ICMP Packet Too\n   Big (PTB) message.  Concerns for operational issues with Path MTU\n   Discovery (PMTUD) point to the possibility of MTU-related black holes\n   when a packet is dropped due to an MTU restriction.  The current\n   \"Internet cell size\" is effectively 1500 bytes (i.e., the minimum MTU\n   configured by the vast majority of links in the Internet) and should\n   therefore also be the minimum MTU assigned to tunnels, but the\n   desired end state is full accommodation of MTU diversity.  This\n   document therefore presents a method to boost the tunnel MTU to\n   larger values.</p>"
+  content: |-
+    <p>The Maximum Transmission Unit (MTU) for popular IP-within-IP tunnels
+       is currently recommended to be set to 1500 (or less) minus the length
+       of the encapsulation headers when static MTU determination is used.
+       This requires the tunnel ingress to either fragment any IP packet
+       larger than the MTU or drop the packet and return an ICMP Packet Too
+       Big (PTB) message.  Concerns for operational issues with Path MTU
+       Discovery (PMTUD) point to the possibility of MTU-related black holes
+       when a packet is dropped due to an MTU restriction.  The current
+       "Internet cell size" is effectively 1500 bytes (i.e., the minimum MTU
+       configured by the vast majority of links in the Internet) and should
+       therefore also be the minimum MTU assigned to tunnels, but the
+       desired end state is full accommodation of MTU diversity.  This
+       document therefore presents a method to boost the tunnel MTU to
+       larger values.</p>
 relation:
 - type: updates
   bibitem:

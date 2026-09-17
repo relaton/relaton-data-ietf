@@ -1,3 +1,4 @@
+---
 id: draftosterweildaneipsec01
 schema_version: v1.5.6
 type: standard
@@ -108,7 +109,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The query/response transactions of the Domain Name System (DNS) can\n   disclose valuable meta-data about the online activities of DNS'\n   users.  The DNS Security Extensions (DNSSEC) provide object-level\n   security, but do not attempt to secure the DNS transaction itself.\n   For example, DNSSEC does not protect against information leakage, and\n   only protects DNS data until the last validating recursive resolver.\n   Stub resolvers are vulnerable to adversaries in the network between\n   themselves and their validating resolver (\"the last mile\").  This\n   document details a new DANE-like DNS Resource Record (RR) type called\n   IPSECA, and explains how to use it to bootstrap DNS transactions\n   through informing entries in IPsec Security Policy Databases (SPDs)\n   and to subsequently verifying Security Associations (SAs) for OE\n   IPsec tunnels.</p>"
+  content: |-
+    <p>The query/response transactions of the Domain Name System (DNS) can
+       disclose valuable meta-data about the online activities of DNS'
+       users.  The DNS Security Extensions (DNSSEC) provide object-level
+       security, but do not attempt to secure the DNS transaction itself.
+       For example, DNSSEC does not protect against information leakage, and
+       only protects DNS data until the last validating recursive resolver.
+       Stub resolvers are vulnerable to adversaries in the network between
+       themselves and their validating resolver ("the last mile").  This
+       document details a new DANE-like DNS Resource Record (RR) type called
+       IPSECA, and explains how to use it to bootstrap DNS transactions
+       through informing entries in IPsec Security Policy Databases (SPDs)
+       and to subsequently verifying Security Associations (SAs) for OE
+       IPsec tunnels.</p>
 relation:
 - type: updates
   bibitem:

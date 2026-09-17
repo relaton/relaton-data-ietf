@@ -1,10 +1,12 @@
+---
 id: draftwilliamstlsappsaslopt04
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: TLS Extension for Optimizing Application Protocols, Specifically SASL with GSS-API mechanisms
+  content: TLS Extension for Optimizing Application Protocols, Specifically SASL with
+    GSS-API mechanisms
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-williams-tls-app-sasl-opt-04
@@ -50,7 +52,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies Hello extensions to Transport Layer Security\n(TLS).  One extension is used for carrying application data which is\nsuitable for delayed integrity protection and does not require\nprivacy protection.  Another extension is used to negotiate an early\nstart to the application data protocol in the case of initial TLS\nconnections (i.e., which do not resume sessions).\n\nWe describe how to use these extensions to reduce the number of round\ntrips needed for application-layer authentication, by piggy-backing\nSimple Authentication (SASL) mechanism negotiation on the first leg\nof a TLS handshake and the first round of SASL authentication\nmessages on the second leg of the same TLS handshake.  Through SASL\nwe get support for Generic Security Services (GSS-API) mechanisms.\nChannel binding is used from SASL authentication to the TLS channel.\nThis results in a two round-trip optimization for applications that\nuse SASL on top of TLS.\n\nWe also provide generic framing for SASL authentication messages\nwhich, combined with the use of these extensions, will be referred to\nas \"TLS/SA\".  These extensions can also be used to optimize\napplication protocols separately from SASL.</p>"
+  content: |-
+    <p>This document specifies Hello extensions to Transport Layer Security
+    (TLS).  One extension is used for carrying application data which is
+    suitable for delayed integrity protection and does not require
+    privacy protection.  Another extension is used to negotiate an early
+    start to the application data protocol in the case of initial TLS
+    connections (i.e., which do not resume sessions).
+
+    We describe how to use these extensions to reduce the number of round
+    trips needed for application-layer authentication, by piggy-backing
+    Simple Authentication (SASL) mechanism negotiation on the first leg
+    of a TLS handshake and the first round of SASL authentication
+    messages on the second leg of the same TLS handshake.  Through SASL
+    we get support for Generic Security Services (GSS-API) mechanisms.
+    Channel binding is used from SASL authentication to the TLS channel.
+    This results in a two round-trip optimization for applications that
+    use SASL on top of TLS.
+
+    We also provide generic framing for SASL authentication messages
+    which, combined with the use of these extensions, will be referred to
+    as "TLS/SA".  These extensions can also be used to optimize
+    application protocols separately from SASL.</p>
 series:
 - type: main
   title:

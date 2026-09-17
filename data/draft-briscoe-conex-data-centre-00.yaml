@@ -1,10 +1,12 @@
+---
 id: draftbriscoeconexdatacentre00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Network Performance Isolation in Data Centres using Congestion Exposure (ConEx)
+  content: Network Performance Isolation in Data Centres using Congestion Exposure
+    (ConEx)
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-briscoe-conex-data-centre-00
@@ -68,7 +70,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how a multi-tenant data centre operator can\n   isolate tenants from network performance degradation due to each\n   other's usage, but without losing the multiplexing benefits of a LAN-\n   style network where anyone can use any amount of any resource.  Zero\n   per-tenant configuration and no implementation change is required on\n   network equipment.  Instead the solution is implemented with a simple\n   change to the hypervisor (or container) on each physical server,\n   beneath the tenant's virtual machines.  These collectively enforce a\n   very simple distributed contract - a single network allowance that\n   each tenant can allocate among their virtual machines.  The solution\n   is simplest and most efficient using layer-3 switches that support\n   explicit congestion notification (ECN) and if the sending operating\n   system supports congestion exposure (ConEx).  Nonetheless, an\n   arrangement is described so that the operator can unilaterally deploy\n   a complete solution while operating systems are being incrementally\n   upgraded to support ConEx.</p>"
+  content: |-
+    <p>This document describes how a multi-tenant data centre operator can
+       isolate tenants from network performance degradation due to each
+       other's usage, but without losing the multiplexing benefits of a LAN-
+       style network where anyone can use any amount of any resource.  Zero
+       per-tenant configuration and no implementation change is required on
+       network equipment.  Instead the solution is implemented with a simple
+       change to the hypervisor (or container) on each physical server,
+       beneath the tenant's virtual machines.  These collectively enforce a
+       very simple distributed contract - a single network allowance that
+       each tenant can allocate among their virtual machines.  The solution
+       is simplest and most efficient using layer-3 switches that support
+       explicit congestion notification (ECN) and if the sending operating
+       system supports congestion exposure (ConEx).  Nonetheless, an
+       arrangement is described so that the operator can unilaterally deploy
+       a complete solution while operating systems are being incrementally
+       upgraded to support ConEx.</p>
 relation:
 - type: updatedBy
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftietfbessevpnredundantmcastsource06
 schema_version: v1.5.6
 type: standard
@@ -184,7 +185,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Ethernet Virtual Private Network (EVPN) supports intra and inter-\n   subnet IP multicast forwarding.  However, EVPN (or conventional IP\n   multicast techniques for that matter) do not have a solution for the\n   case where the following two statements are true at the same time: a)\n   a given multicast group carries more than one flow (i.e., more than\n   one source), and b) it is desired that each receiver gets only one of\n   the several flows.  Existing multicast techniques assume there are no\n   redundant sources sending the same flow to the same IP multicast\n   group, and, in case there were redundant sources, the receiver's\n   application would deal with the received duplicated packets.  This\n   document extends the existing EVPN specifications and assumes that IP\n   Multicast source redundancy may exist.  It also assumes that, in case\n   two or more sources send the same IP Multicast flows into the tenant\n   domain, the EVPN PEs need to avoid that the receivers get packet\n   duplication by following the described procedures.</p>"
+  content: |-
+    <p>Ethernet Virtual Private Network (EVPN) supports intra and inter-
+       subnet IP multicast forwarding.  However, EVPN (or conventional IP
+       multicast techniques for that matter) do not have a solution for the
+       case where the following two statements are true at the same time: a)
+       a given multicast group carries more than one flow (i.e., more than
+       one source), and b) it is desired that each receiver gets only one of
+       the several flows.  Existing multicast techniques assume there are no
+       redundant sources sending the same flow to the same IP multicast
+       group, and, in case there were redundant sources, the receiver's
+       application would deal with the received duplicated packets.  This
+       document extends the existing EVPN specifications and assumes that IP
+       Multicast source redundancy may exist.  It also assumes that, in case
+       two or more sources send the same IP Multicast flows into the tenant
+       domain, the EVPN PEs need to avoid that the receivers get packet
+       duplication by following the described procedures.</p>
 relation:
 - type: updates
   bibitem:

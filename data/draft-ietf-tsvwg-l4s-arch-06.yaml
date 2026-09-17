@@ -1,3 +1,4 @@
+---
 id: draftietftsvwgl4sarch06
 schema_version: v1.5.6
 type: standard
@@ -128,7 +129,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the L4S architecture, which enables Internet\n   applications to achieve Low Latency, Low Loss, and Scalable\n   throughput (L4S).  The insight on which L4S is based is that the root\n   cause of queuing delay is in the congestion controllers of senders,\n   not in the queue itself.  The L4S architecture is intended to enable\n   *all* Internet applications to transition away from congestion\n   control algorithms that cause queuing delay, to a new class of\n   congestion controls that utilize explicit congestion signaling\n   provided by the network.  This new class of congestion control can\n   provide low latency for capacity-seeking flows, so applications can\n   achieve both high bandwidth and low latency.\n\n   The architecture primarily concerns incremental deployment.  It\n   defines mechanisms that allow both classes of congestion control to\n   coexist in a shared network.  These mechanisms aim to ensure that the\n   latency and throughput performance using an L4S-compliant congestion\n   controller is usually much better (and never worse) than the\n   performance would have been using a 'Classic' congestion controller,\n   and that competing flows continuing to use 'Classic' controllers are\n   typically not impacted by the presence of L4S.  These characteristics\n   are important to encourage adoption of L4S congestion control\n   algorithms and L4S compliant network elements.\n\n   The L4S architecture consists of three components: network support to\n   isolate L4S traffic from classic traffic and to provide appropriate\n   congestion signaling to both types; protocol features that allow\n   network elements to identify L4S traffic and allow for communication\n   of congestion signaling; and host support for immediate congestion\n   signaling with an appropriate congestion response that enables\n   scalable performance.</p>"
+  content: |-
+    <p>This document describes the L4S architecture, which enables Internet
+       applications to achieve Low Latency, Low Loss, and Scalable
+       throughput (L4S).  The insight on which L4S is based is that the root
+       cause of queuing delay is in the congestion controllers of senders,
+       not in the queue itself.  The L4S architecture is intended to enable
+       *all* Internet applications to transition away from congestion
+       control algorithms that cause queuing delay, to a new class of
+       congestion controls that utilize explicit congestion signaling
+       provided by the network.  This new class of congestion control can
+       provide low latency for capacity-seeking flows, so applications can
+       achieve both high bandwidth and low latency.
+
+       The architecture primarily concerns incremental deployment.  It
+       defines mechanisms that allow both classes of congestion control to
+       coexist in a shared network.  These mechanisms aim to ensure that the
+       latency and throughput performance using an L4S-compliant congestion
+       controller is usually much better (and never worse) than the
+       performance would have been using a 'Classic' congestion controller,
+       and that competing flows continuing to use 'Classic' controllers are
+       typically not impacted by the presence of L4S.  These characteristics
+       are important to encourage adoption of L4S congestion control
+       algorithms and L4S compliant network elements.
+
+       The L4S architecture consists of three components: network support to
+       isolate L4S traffic from classic traffic and to provide appropriate
+       congestion signaling to both types; protocol features that allow
+       network elements to identify L4S traffic and allow for communication
+       of congestion signaling; and host support for immediate congestion
+       signaling with an appropriate congestion response that enables
+       scalable performance.</p>
 relation:
 - type: updates
   bibitem:

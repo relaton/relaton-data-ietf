@@ -1,3 +1,4 @@
+---
 id: draftbellisunheadedpqcauthentication00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a post-quantum cryptographic (PQC)\n   authentication mechanism for the Unheaded Protocol Foundation.  It\n   defines a multi-algorithm, dual-layer, tiered authentication\n   architecture integrating three NIST PQC digital signature standards\n   -- FIPS 205 (SLH-DSA), FIPS 204 (ML-DSA), and FIPS 206 (FN-DSA) --\n   plus two NIST PQC key-encapsulation mechanisms -- FIPS 203 (ML-KEM)\n   and FIPS 207 (HQC) -- with the Monad wire format, Sophia BPF map\n   dictionaries, and Wotan per-flow memory model.\n\n   Layer 1 (Wire-Level, REQUIRED): Full PQC signatures are stored in\n   Sophia BPF maps via a \"signature-by-reference\" scheme.  The Monad\n   register carries compact 12-byte references (SigRef, KeyRef, SeqNum,\n   HashPfx).  Shield verifies signatures at the network perimeter and\n   strips Monad Hop-by-Hop headers at ingress -- internal kingdom\n   traffic never carries PQC wire overhead.\n\n   Layer 2 (Application-Level, OPTIONAL): User applications MAY define\n   verification requirements in Sophia application policy dictionaries.\n   After wire-level authentication succeeds, the application reads Wotan\n   per-flow PQC state and matches it against its own policy.\n\n   Four PQC compliance tiers -- NONE, STANDARD, ENHANCED, and SOVEREIGN\n   -- are signaled via Kingdom Mode bits in the Monad flags byte.</p>"
+  content: |-
+    <p>This document specifies a post-quantum cryptographic (PQC)
+       authentication mechanism for the Unheaded Protocol Foundation.  It
+       defines a multi-algorithm, dual-layer, tiered authentication
+       architecture integrating three NIST PQC digital signature standards
+       -- FIPS 205 (SLH-DSA), FIPS 204 (ML-DSA), and FIPS 206 (FN-DSA) --
+       plus two NIST PQC key-encapsulation mechanisms -- FIPS 203 (ML-KEM)
+       and FIPS 207 (HQC) -- with the Monad wire format, Sophia BPF map
+       dictionaries, and Wotan per-flow memory model.
+
+       Layer 1 (Wire-Level, REQUIRED): Full PQC signatures are stored in
+       Sophia BPF maps via a "signature-by-reference" scheme.  The Monad
+       register carries compact 12-byte references (SigRef, KeyRef, SeqNum,
+       HashPfx).  Shield verifies signatures at the network perimeter and
+       strips Monad Hop-by-Hop headers at ingress -- internal kingdom
+       traffic never carries PQC wire overhead.
+
+       Layer 2 (Application-Level, OPTIONAL): User applications MAY define
+       verification requirements in Sophia application policy dictionaries.
+       After wire-level authentication succeeds, the application reads Wotan
+       per-flow PQC state and matches it against its own policy.
+
+       Four PQC compliance tiers -- NONE, STANDARD, ENHANCED, and SOVEREIGN
+       -- are signaled via Kingdom Mode bits in the Monad flags byte.</p>
 series:
 - type: main
   title:

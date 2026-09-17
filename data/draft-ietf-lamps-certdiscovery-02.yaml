@@ -1,3 +1,4 @@
+---
 id: draftietflampscertdiscovery02
 schema_version: v1.5.6
 type: standard
@@ -153,7 +154,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a method to discover a secondary X.509\n   certificate associated with an X.509 certificate to enable efficient\n   multi-certificate handling in protocols.  The objective is threefold:\n   to enhance cryptographic agility, improve operational availability,\n   and accommodate multi-key/certificate usage.  The proposed method\n   aims to maximize compatibility with existing systems and is designed\n   to be legacy-friendly, making it suitable for environments with a mix\n   of legacy and new implementations.  It includes mechanisms to provide\n   information about the target certificate's signature algorithm,\n   public key algorithm and the location of the secondary X.509\n   certificate, empowering relying parties to make informed decisions on\n   whether to fetch the Secondary Certificate.\n\n   The primary motivation for this method is to address the limitations\n   of traditional certificate management approaches, which often lack\n   flexibility, scalability, and seamless update capabilities.  By\n   leveraging this mechanism, subscribers can achieve cryptographic\n   agility by facilitating the transition between different algorithms\n   or X.509 certificate types.  Operational redundancy is enhanced by\n   enabling the use of backup certificates and minimizing the impact of\n   Primary Certificate expiration or CA infrastructure failures.\n\n   The approach ensures backward compatibility with existing systems and\n   leverages established mechanisms, such as the subjectInfoAccess\n   extension, to enable seamless integration.</p>"
+  content: |-
+    <p>This document specifies a method to discover a secondary X.509
+       certificate associated with an X.509 certificate to enable efficient
+       multi-certificate handling in protocols.  The objective is threefold:
+       to enhance cryptographic agility, improve operational availability,
+       and accommodate multi-key/certificate usage.  The proposed method
+       aims to maximize compatibility with existing systems and is designed
+       to be legacy-friendly, making it suitable for environments with a mix
+       of legacy and new implementations.  It includes mechanisms to provide
+       information about the target certificate's signature algorithm,
+       public key algorithm and the location of the secondary X.509
+       certificate, empowering relying parties to make informed decisions on
+       whether to fetch the Secondary Certificate.
+
+       The primary motivation for this method is to address the limitations
+       of traditional certificate management approaches, which often lack
+       flexibility, scalability, and seamless update capabilities.  By
+       leveraging this mechanism, subscribers can achieve cryptographic
+       agility by facilitating the transition between different algorithms
+       or X.509 certificate types.  Operational redundancy is enhanced by
+       enabling the use of backup certificates and minimizing the impact of
+       Primary Certificate expiration or CA infrastructure failures.
+
+       The approach ensures backward compatibility with existing systems and
+       leverages established mechanisms, such as the subjectInfoAccess
+       extension, to enable seamless integration.</p>
 relation:
 - type: updates
   bibitem:

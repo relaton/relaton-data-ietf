@@ -1,3 +1,4 @@
+---
 id: draftzhuhttpbistaskcontext00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Task-Context HTTP field for propagating\n   task execution context from an authorized workflow worker to\n   downstream HTTP services.  The field carries a compact, base64url-\n   encoded JSON object that identifies the authorization mode, workflow\n   type, and either task-based requestor and approver context or role-\n   based execution context.\n\n   The field is not a bearer credential and does not replace HTTP client\n   authentication, service-to-service authorization, or resource-local\n   policy checks.  Its purpose is to let downstream services correlate\n   requests with workflow task context and make service-local\n   authorization and audit decisions using that context.</p>"
+  content: |-
+    <p>This document defines the Task-Context HTTP field for propagating
+       task execution context from an authorized workflow worker to
+       downstream HTTP services.  The field carries a compact, base64url-
+       encoded JSON object that identifies the authorization mode, workflow
+       type, and either task-based requestor and approver context or role-
+       based execution context.
+
+       The field is not a bearer credential and does not replace HTTP client
+       authentication, service-to-service authorization, or resource-local
+       policy checks.  Its purpose is to let downstream services correlate
+       requests with workflow task context and make service-local
+       authorization and audit decisions using that context.</p>
 series:
 - type: main
   title:

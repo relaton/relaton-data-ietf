@@ -1,10 +1,12 @@
+---
 id: draftdasratsattestationbndexecutionfinality02
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Attestation-Bound Execution Finality for GPU, AI Accelerator, DPU, SmartNIC, and Confidential-Computing Infrastructure
+  content: Attestation-Bound Execution Finality for GPU, AI Accelerator, DPU, SmartNIC,
+    and Confidential-Computing Infrastructure
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-rats-attestation-bnd-execution-finality-02
@@ -53,7 +55,75 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Remote attestation can establish evidence about the hardware,\n   firmware, software, configuration, and execution environment\n   associated with a workload.  In heterogeneous confidential-computing\n   environments, this trust assessment can extend across CPUs,\n   confidential virtual machines, GPUs, AI accelerators, DPUs,\n   SmartNICs, and other trusted execution components.  As AI training\n   and inference workloads scale onto large fleets of GPUs and other\n   accelerators, and as confidential-computing modes for those\n   accelerators reach production deployment, the boundary between \"the\n   environment is trustworthy\" and \"this specific operation may proceed\"\n   becomes an increasingly consequential, and increasingly load-bearing,\n   engineering question.\n\n   An increasingly important class of workloads, however, does not\n   merely compute data.  AI agents and autonomous workloads can generate\n   consequential operations such as API invocations, storage mutations,\n   network configuration changes, infrastructure-control commands,\n   financial instructions, device operations, and cross-workload\n   requests.  These operations are typically issued from, or on behalf\n   of, GPU- and accelerator-hosted workloads, so the architecture is\n   directly relevant to any infrastructure operator or hardware, DPU,\n   SmartNIC, or confidential-computing vendor whose platform\n   participates in generating, attesting, or effectuating such\n   operations.\n\n   This document is intended to be of particular interest to\n   organizations building or operating large-scale confidential AI\n   accelerator infrastructure, including GPU vendors, cloud and\n   hyperscale operators, DPU and SmartNIC vendors, and confidential-\n   computing platform providers, since the accompanying reference\n   implementation and FAQ discussion (Section 34.8, Appendix C)\n   illustrate the architecture using publicly documented attestation\n   stacks such as NVIDIA's Confidential Computing and Attestation Suite\n   (NRAS, RIM Service, and OCSP Service) alongside Intel Trust Domain\n   Extensions (TDX) plus confidential-GPU composite attestation.  These\n   vendors and products are cited only as concrete, checkable, publicly\n   documented examples of the class of infrastructure the architecture\n   addresses; this document is vendor-neutral, does not depend on any\n   specific vendor's hardware or software, and neither claims nor\n   implies review, adoption, endorsement, or affiliation by NVIDIA,\n   Intel, or any other named vendor.\n\n   An acceptable Attestation Result supplies trust information to a\n   Relying Party; it is not, without an application-defined\n   authorization step, a decision on the admissibility of each operation\n   later emitted by the attested workload.\n\n   This document describes an attestation-bound execution-finality\n   architecture in which a consequential operation first exists as a\n   Candidate Act in a non-effective state.  Before that act can acquire\n   external effect, its relevant parameters are cryptographically bound\n   to validation context that can include Attestation Results, workload\n   identity, execution context, policy, authorization scope, freshness\n   information, and other application-specific evidence.\n\n   A designated Finality Sink verifies the required binding at or before\n   the boundary at which the Candidate Act would first acquire external\n   effect.\n\n   The resulting separation is between appraisal of the execution\n   environment and authorization of a concrete operation at its\n   effectuation boundary.\n\n   The architecture is intended to complement, rather than replace,\n   Remote ATtestation procedureS (RATS), Entity Attestation Token (EAT)\n   [RFC9711], workload-identity systems, confidential computing, Trusted\n   Execution Environments (TEEs), accelerator attestation, and existing\n   authorization mechanisms.</p>"
+  content: |-
+    <p>Remote attestation can establish evidence about the hardware,
+       firmware, software, configuration, and execution environment
+       associated with a workload.  In heterogeneous confidential-computing
+       environments, this trust assessment can extend across CPUs,
+       confidential virtual machines, GPUs, AI accelerators, DPUs,
+       SmartNICs, and other trusted execution components.  As AI training
+       and inference workloads scale onto large fleets of GPUs and other
+       accelerators, and as confidential-computing modes for those
+       accelerators reach production deployment, the boundary between "the
+       environment is trustworthy" and "this specific operation may proceed"
+       becomes an increasingly consequential, and increasingly load-bearing,
+       engineering question.
+
+       An increasingly important class of workloads, however, does not
+       merely compute data.  AI agents and autonomous workloads can generate
+       consequential operations such as API invocations, storage mutations,
+       network configuration changes, infrastructure-control commands,
+       financial instructions, device operations, and cross-workload
+       requests.  These operations are typically issued from, or on behalf
+       of, GPU- and accelerator-hosted workloads, so the architecture is
+       directly relevant to any infrastructure operator or hardware, DPU,
+       SmartNIC, or confidential-computing vendor whose platform
+       participates in generating, attesting, or effectuating such
+       operations.
+
+       This document is intended to be of particular interest to
+       organizations building or operating large-scale confidential AI
+       accelerator infrastructure, including GPU vendors, cloud and
+       hyperscale operators, DPU and SmartNIC vendors, and confidential-
+       computing platform providers, since the accompanying reference
+       implementation and FAQ discussion (Section 34.8, Appendix C)
+       illustrate the architecture using publicly documented attestation
+       stacks such as NVIDIA's Confidential Computing and Attestation Suite
+       (NRAS, RIM Service, and OCSP Service) alongside Intel Trust Domain
+       Extensions (TDX) plus confidential-GPU composite attestation.  These
+       vendors and products are cited only as concrete, checkable, publicly
+       documented examples of the class of infrastructure the architecture
+       addresses; this document is vendor-neutral, does not depend on any
+       specific vendor's hardware or software, and neither claims nor
+       implies review, adoption, endorsement, or affiliation by NVIDIA,
+       Intel, or any other named vendor.
+
+       An acceptable Attestation Result supplies trust information to a
+       Relying Party; it is not, without an application-defined
+       authorization step, a decision on the admissibility of each operation
+       later emitted by the attested workload.
+
+       This document describes an attestation-bound execution-finality
+       architecture in which a consequential operation first exists as a
+       Candidate Act in a non-effective state.  Before that act can acquire
+       external effect, its relevant parameters are cryptographically bound
+       to validation context that can include Attestation Results, workload
+       identity, execution context, policy, authorization scope, freshness
+       information, and other application-specific evidence.
+
+       A designated Finality Sink verifies the required binding at or before
+       the boundary at which the Candidate Act would first acquire external
+       effect.
+
+       The resulting separation is between appraisal of the execution
+       environment and authorization of a concrete operation at its
+       effectuation boundary.
+
+       The architecture is intended to complement, rather than replace,
+       Remote ATtestation procedureS (RATS), Entity Attestation Token (EAT)
+       [RFC9711], workload-identity systems, confidential computing, Trusted
+       Execution Environments (TEEs), accelerator attestation, and existing
+       authorization mechanisms.</p>
 relation:
 - type: updates
   bibitem:

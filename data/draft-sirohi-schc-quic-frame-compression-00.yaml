@@ -1,3 +1,4 @@
+---
 id: draftsirohischcquicframecompression00
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document explores whether Static Context Header Compression\n   (SCHC) can be applied to the metadata carried in QUIC frames.  QUIC\n   already uses compact frame encodings and variable-length integers, so\n   any compressed representation has to recover enough bytes to pay for\n   its own integration overhead.  The document compares several possible\n   organizations for SCHC rules, discusses how frame compression could\n   be integrated, and analyzes representative STREAM and ACK frame\n   examples.\n\n   The analysis suggests that SCHC compression of QUIC frames is\n   technically possible, but that generic or base rules are likely to\n   provide only modest savings at best.  More substantial savings\n   require predictable traffic, pre-provisioned or negotiated rules,\n   bundling of several frames under one rule, or a negotiated QUIC\n   payload syntax with low per-packet overhead.  This document is\n   exploratory.  It does not define an interoperable QUIC extension,\n   SCHC profile, wire format, or IANA allocation.</p>"
+  content: |-
+    <p>This document explores whether Static Context Header Compression
+       (SCHC) can be applied to the metadata carried in QUIC frames.  QUIC
+       already uses compact frame encodings and variable-length integers, so
+       any compressed representation has to recover enough bytes to pay for
+       its own integration overhead.  The document compares several possible
+       organizations for SCHC rules, discusses how frame compression could
+       be integrated, and analyzes representative STREAM and ACK frame
+       examples.
+
+       The analysis suggests that SCHC compression of QUIC frames is
+       technically possible, but that generic or base rules are likely to
+       provide only modest savings at best.  More substantial savings
+       require predictable traffic, pre-provisioned or negotiated rules,
+       bundling of several frames under one rule, or a negotiated QUIC
+       payload syntax with low per-packet overhead.  This document is
+       exploratory.  It does not define an interoperable QUIC extension,
+       SCHC profile, wire format, or IANA allocation.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftietf6manpredictablefragmentid07
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IPv6 specifies the Fragment Header, which is employed for the\n   fragmentation and reassembly mechanisms.  The Fragment Header\n   contains an \"Identification\" field which, together with the IPv6\n   Source Address and the IPv6 Destination Address of a packet,\n   identifies fragments that correspond to the same original datagram,\n   such that they can be reassembled together by the receiving host.\n   The only requirement for setting the \"Identification\" field is that\n   the corresponding value must be different than that employed for any\n   other fragmented packet sent recently with the same Source Address\n   and Destination Address.  Some implementations use a simple global\n   counter for setting the Identification field, thus leading to\n   predictable Identification values.  This document analyzes the\n   security implications of predictable Identification values, and\n   provides implementation guidance for selecting the Identification\n   field of the Fragment Header, such that the aforementioned security\n   implications are mitigated.</p>"
+  content: |-
+    <p>IPv6 specifies the Fragment Header, which is employed for the
+       fragmentation and reassembly mechanisms.  The Fragment Header
+       contains an "Identification" field which, together with the IPv6
+       Source Address and the IPv6 Destination Address of a packet,
+       identifies fragments that correspond to the same original datagram,
+       such that they can be reassembled together by the receiving host.
+       The only requirement for setting the "Identification" field is that
+       the corresponding value must be different than that employed for any
+       other fragmented packet sent recently with the same Source Address
+       and Destination Address.  Some implementations use a simple global
+       counter for setting the Identification field, thus leading to
+       predictable Identification values.  This document analyzes the
+       security implications of predictable Identification values, and
+       provides implementation guidance for selecting the Identification
+       field of the Fragment Header, such that the aforementioned security
+       implications are mitigated.</p>
 relation:
 - type: updates
   bibitem:

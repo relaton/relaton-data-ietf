@@ -1,3 +1,4 @@
+---
 id: draftjoungdetnetstatelessfairqueuing09
 schema_version: v1.5.6
 type: standard
@@ -150,7 +151,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the implementation details for the framework\n   specified in ITU-T Y.3129 [Y.3129] and ITU-T Y.3148 [Y.3148].  The\n   framework guarantees end-to-end (E2E) latency bounds to flows.  The\n   schedulers in core nodes do not need to maintain flow states.\n   Instead, the entrance node of a flow marks an ideal service\n   completion time according to a fluid model, called Finish Time (FT),\n   of a packet in the packet header.  The subsequent core nodes update\n   the FT by adding a delay factor, which is a function of the flow and\n   the nodes.  The packets in the queue of the scheduler are served in\n   the ascending order of FT.  This mechanism is called the stateless\n   fair queuing.  The result is that flows are isolated from each other\n   almost perfectly.  The latency bound of a flow depends only on the\n   flow's intrinsic parameters such as the maximum burst size and the\n   service rate, except the link capacities and the maximum packet\n   length among other flows sharing each output link with the flow.\n   This document specifies the metadata, formats of metadata, the\n   admission control procedure, and an approximation of stateless fair\n   queuing implemented via a strict priority (SP) scheduler.</p>"
+  content: |-
+    <p>This document specifies the implementation details for the framework
+       specified in ITU-T Y.3129 [Y.3129] and ITU-T Y.3148 [Y.3148].  The
+       framework guarantees end-to-end (E2E) latency bounds to flows.  The
+       schedulers in core nodes do not need to maintain flow states.
+       Instead, the entrance node of a flow marks an ideal service
+       completion time according to a fluid model, called Finish Time (FT),
+       of a packet in the packet header.  The subsequent core nodes update
+       the FT by adding a delay factor, which is a function of the flow and
+       the nodes.  The packets in the queue of the scheduler are served in
+       the ascending order of FT.  This mechanism is called the stateless
+       fair queuing.  The result is that flows are isolated from each other
+       almost perfectly.  The latency bound of a flow depends only on the
+       flow's intrinsic parameters such as the maximum burst size and the
+       service rate, except the link capacities and the maximum packet
+       length among other flows sharing each output link with the flow.
+       This document specifies the metadata, formats of metadata, the
+       admission control procedure, and an approximation of stateless fair
+       queuing implemented via a strict priority (SP) scheduler.</p>
 relation:
 - type: updates
   bibitem:

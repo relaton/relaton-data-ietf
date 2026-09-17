@@ -1,3 +1,4 @@
+---
 id: draftbriscoeconexreecntcp04
 schema_version: v1.5.6
 type: standard
@@ -128,7 +129,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document introduces re-ECN (re-inserted explicit congestion\n   notification), which is intended to make a simple but far-reaching\n   change to the Internet architecture.  The sender uses the IP header\n   to reveal the congestion that it expects on the end-to-end path.  The\n   protocol works by arranging an extended ECN field in each packet so\n   that, as it crosses any interface in an internetwork, it will carry a\n   truthful prediction of congestion on the remainder of its path.  It\n   can be deployed incrementally around unmodified routers.  The purpose\n   of this document is to specify the re-ECN protocol at the IP layer\n   and to give guidelines on any consequent changes required to\n   transport protocols.  It includes the changes required to TCP both as\n   an example and as a specification.  It briefly gives examples of\n   mechanisms that can use the protocol to ensure data sources respond\n   sufficiently to congestion, but these are described more fully in a\n   companion document.\n\n   Note concerning Intended Status: If this draft were ever published as\n   an RFC it would probably have historic status.  There is limited\n   space in the IP header, so re-ECN had to compromise by requiring the\n   receiver to be ECN-enabled otherwise the sender could not use re-ECN.\n   Re-ECN was a precursor to chartering of the IETF's Congestion\n   Exposure (ConEx) working group, but during chartering there were\n   still too few ECN receivers enabled, therefore it was decided to\n   pursue other compromises in order to fit a similar capability into\n   the IP header.</p>"
+  content: |-
+    <p>This document introduces re-ECN (re-inserted explicit congestion
+       notification), which is intended to make a simple but far-reaching
+       change to the Internet architecture.  The sender uses the IP header
+       to reveal the congestion that it expects on the end-to-end path.  The
+       protocol works by arranging an extended ECN field in each packet so
+       that, as it crosses any interface in an internetwork, it will carry a
+       truthful prediction of congestion on the remainder of its path.  It
+       can be deployed incrementally around unmodified routers.  The purpose
+       of this document is to specify the re-ECN protocol at the IP layer
+       and to give guidelines on any consequent changes required to
+       transport protocols.  It includes the changes required to TCP both as
+       an example and as a specification.  It briefly gives examples of
+       mechanisms that can use the protocol to ensure data sources respond
+       sufficiently to congestion, but these are described more fully in a
+       companion document.
+
+       Note concerning Intended Status: If this draft were ever published as
+       an RFC it would probably have historic status.  There is limited
+       space in the IP header, so re-ECN had to compromise by requiring the
+       receiver to be ECN-enabled otherwise the sender could not use re-ECN.
+       Re-ECN was a precursor to chartering of the IETF's Congestion
+       Exposure (ConEx) working group, but during chartering there were
+       still too few ECN receivers enabled, therefore it was decided to
+       pursue other compromises in order to fit a similar capability into
+       the IP header.</p>
 relation:
 - type: updates
   bibitem:

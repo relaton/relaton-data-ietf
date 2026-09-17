@@ -1,3 +1,4 @@
+---
 id: draftzhangbcatsservicemetricsop05
 schema_version: v1.5.6
 type: standard
@@ -153,7 +154,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding\n   by considering both computing and networking metrics.  The CATS\n   framework and metric-definition documents provide valuable\n   theoretical models, yet they face challenges in achieving direct\n   operational execution in real-world deployments: normalization\n   methods vary across providers, and aggregated unitless scores often\n   lose the operational information that routers need for precise\n   steering decisions.\n\n   This document provides a self-contained, executable operational model\n   for a core class of CATS deployment scenarios: latency-sensitive,\n   compute-intensive services whose steering decisions are made in real\n   time at the forwarding node.  Instead of disseminating low-level raw\n   hardware metrics, service sites dynamically evaluate and report\n   service-oriented metrics (e.g., Global Available Slots and Computing\n   Time) to the control plane.  The document clarifies how these metrics\n   are derived from basic resource information, service reference\n   information, and local policy.  It also specifies how the CATS Path\n   Selector (C-PS) combines the Computing Service Table (populated from\n   C-SMA reports) with the Network Service Table to make joint traffic-\n   steering decisions, and defines update-control and fallback\n   mechanisms suitable for large-scale deployments.\n\n   Within the unified CATS architecture, the service-oriented\n   operational model defined in this document coexists with the general-\n   purpose L1/L2 normalized metric framework: a deployment MAY use\n   either model, or run both pipelines in parallel for different service\n   classes, without embedding metric fields across frameworks.  This\n   document does not negate the value of normalized metrics; it focuses\n   on the service-level abstractions and runtime operations required for\n   direct traffic steering.</p>"
+  content: |-
+    <p>Computing-Aware Traffic Steering (CATS) optimizes traffic forwarding
+       by considering both computing and networking metrics.  The CATS
+       framework and metric-definition documents provide valuable
+       theoretical models, yet they face challenges in achieving direct
+       operational execution in real-world deployments: normalization
+       methods vary across providers, and aggregated unitless scores often
+       lose the operational information that routers need for precise
+       steering decisions.
+
+       This document provides a self-contained, executable operational model
+       for a core class of CATS deployment scenarios: latency-sensitive,
+       compute-intensive services whose steering decisions are made in real
+       time at the forwarding node.  Instead of disseminating low-level raw
+       hardware metrics, service sites dynamically evaluate and report
+       service-oriented metrics (e.g., Global Available Slots and Computing
+       Time) to the control plane.  The document clarifies how these metrics
+       are derived from basic resource information, service reference
+       information, and local policy.  It also specifies how the CATS Path
+       Selector (C-PS) combines the Computing Service Table (populated from
+       C-SMA reports) with the Network Service Table to make joint traffic-
+       steering decisions, and defines update-control and fallback
+       mechanisms suitable for large-scale deployments.
+
+       Within the unified CATS architecture, the service-oriented
+       operational model defined in this document coexists with the general-
+       purpose L1/L2 normalized metric framework: a deployment MAY use
+       either model, or run both pipelines in parallel for different service
+       classes, without embedding metric fields across frameworks.  This
+       document does not negate the value of normalized metrics; it focuses
+       on the service-level abstractions and runtime operations required for
+       direct traffic steering.</p>
 relation:
 - type: updates
   bibitem:

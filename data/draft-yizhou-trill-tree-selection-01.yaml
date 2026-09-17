@@ -1,3 +1,4 @@
+---
 id: draftyizhoutrilltreeselection01
 schema_version: v1.5.6
 type: standard
@@ -128,7 +129,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>TRILL uses distribution trees for multi-destination traffic. Multiple\n   trees can be used by an ingress RBridge. Different ingress RBridges\n   may choose different distribution trees for the same VLAN and/or\n   multicast group traffic. Distribution trees are normally pruned based\n   on VLAN. For any RBridge RBn, if RBn has downstream receivers of VLAN\n   x in a distribution tree t, there will be an entry of (t, x, port\n   list) in the multicast forwarding table on RBn. If there are n trees\n   and m VLANs, the multicast forwarding table size on RBn is typically\n   n*m entries. The value of m is up to 4096 and n is the total number\n   of distribution trees in the campus. If finer granularity filtering\n   such as L2/L3 multicast address is used, then the multicast\n   forwarding table size further increases dramatically. TRILL multicast\n   forwarding table size is limited by hardware and L3 multicasting may\n   share the same table with it in hardware implementations. Therefore\n   multicast table entry is a precious resource. This document specifies\n   a VLAN based tree selection mechanism to reduce the TRILL multicast\n   forwarding table size. No data plane change is required.</p>"
+  content: |-
+    <p>TRILL uses distribution trees for multi-destination traffic. Multiple
+       trees can be used by an ingress RBridge. Different ingress RBridges
+       may choose different distribution trees for the same VLAN and/or
+       multicast group traffic. Distribution trees are normally pruned based
+       on VLAN. For any RBridge RBn, if RBn has downstream receivers of VLAN
+       x in a distribution tree t, there will be an entry of (t, x, port
+       list) in the multicast forwarding table on RBn. If there are n trees
+       and m VLANs, the multicast forwarding table size on RBn is typically
+       n*m entries. The value of m is up to 4096 and n is the total number
+       of distribution trees in the campus. If finer granularity filtering
+       such as L2/L3 multicast address is used, then the multicast
+       forwarding table size further increases dramatically. TRILL multicast
+       forwarding table size is limited by hardware and L3 multicasting may
+       share the same table with it in hardware implementations. Therefore
+       multicast table entry is a precious resource. This document specifies
+       a VLAN based tree selection mechanism to reduce the TRILL multicast
+       forwarding table size. No data plane change is required.</p>
 relation:
 - type: updates
   bibitem:

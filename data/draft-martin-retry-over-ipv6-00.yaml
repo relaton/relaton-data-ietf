@@ -1,3 +1,4 @@
+---
 id: draftmartinretryoveripv600
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>As operators transition services to IPv6-only, planned IPv4 outages\n   help identify remaining dependencies before permanent decommission.\n   Such outages must be measurable, reversible, and understandable to\n   end users.  This document defines the 566 (IPv4 Unavailable) HTTP\n   response status code and associated header fields that signal an\n   intentional, often time-bounded IPv4 outage, instruct aware clients\n   to retry over IPv6 after closing the IPv4 connection, and allow\n   clients to confirm successful IPv6 recovery via an optional\n   correlation token so operators can distinguish soft failures from\n   hard failures in centralized logs.  The mechanism supports\n   coordinated events (for example, 6/6 IPv6 Day drills), staged\n   enterprise rollouts, and permanent IPv6-only migration.  Legacy\n   clients that do not implement this specification treat an\n   unrecognized 566 status code as an internal server error and MAY use\n   the response body for human-readable guidance.</p>"
+  content: |-
+    <p>As operators transition services to IPv6-only, planned IPv4 outages
+       help identify remaining dependencies before permanent decommission.
+       Such outages must be measurable, reversible, and understandable to
+       end users.  This document defines the 566 (IPv4 Unavailable) HTTP
+       response status code and associated header fields that signal an
+       intentional, often time-bounded IPv4 outage, instruct aware clients
+       to retry over IPv6 after closing the IPv4 connection, and allow
+       clients to confirm successful IPv6 recovery via an optional
+       correlation token so operators can distinguish soft failures from
+       hard failures in centralized logs.  The mechanism supports
+       coordinated events (for example, 6/6 IPv6 Day drills), staged
+       enterprise rollouts, and permanent IPv6-only migration.  Legacy
+       clients that do not implement this specification treat an
+       unrecognized 566 status code as an internal server error and MAY use
+       the response body for human-readable guidance.</p>
 relation:
 - type: updatedBy
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftdasenterpriseaienforcementprofiles
 schema_version: v1.5.6
 formattedref:
@@ -5,7 +6,8 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Securing the Enterprise Future: Technical Non-Joinability for Enterprise AI'
+  content: 'Securing the Enterprise Future: Technical Non-Joinability for Enterprise
+    AI'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-enterprise-ai-enforcement-profiles-00
@@ -19,7 +21,94 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Enterprise artificial-intelligence systems are increasingly connected\n   to multiple organizational repositories, applications, tools, memory\n   systems, and workflow interfaces.  Representative industrial\n   deployment classes include OpenAI ChatGPT and ChatGPT Work, Anthropic\n   Claude, Google Gemini Enterprise, xAI Grok for Business, Microsoft\n   Copilot and Copilot Studio, Amazon Q Business, Salesforce Agentforce,\n   ServiceNow AI Agents, and comparable enterprise or privately deployed\n   AI systems.  These names are cited only as publicly described\n   examples of the broader deployment class.  Their inclusion does not\n   assert that any named product implements, lacks, requires, infringes,\n   endorses, or is vulnerable to the mechanisms described here, does not\n   characterize undisclosed internal architectures, and does not imply\n   that equivalent functionality is absent from an existing product or\n   specification.\n\n   The security problem considered here is not limited to theft of a\n   pre-existing database.  An enterprise-AI workload may be individually\n   authorized to retrieve information from customer, engineering,\n   financial, source-code, supplier, scheduling, communication, memory,\n   and operational systems while the combination of those sources\n   reveals a sensitive relationship or future enterprise state that no\n   single repository contains.  Conventional access control, encryption,\n   network segmentation, database separation, confidential computing,\n   and source-level authorization remain important, but storage\n   separation alone does not prevent such reconstruction where the same\n   effective authority can obtain the constituent values and freely\n   resolve the relationships among them.\n\n   The mechanism described here therefore separates not only protected\n   data but also the authority required to create protected semantic\n   relationships among that data.  Identity components, substantive\n   content, relationship-mapping information, reconstruction-enablement\n   state, and authorization state may be maintained under independently\n   controlled protection domains.  A processing request establishes a\n   bounded reconstruction authorization tied to the actual workload,\n   execution context, session, permitted fields, permitted\n   relationships, processing purpose, and output conditions.  Each\n   required protection domain independently determines whether its\n   component may participate.  Approved components may remain session\n   bound, cryptographically wrapped, capability restricted, opaque, or\n   accessible only through a mandatory mediated path.  Only the\n   specifically authorized relationships are resolved inside a protected\n   reconstruction environment, which constructs a temporary minimum-\n   necessary view without providing the AI workload with unrestricted\n   authority over the underlying stores.\n\n   This creates a technical distinction between authority to access\n   information and authority to associate information.  Access to an\n   identity component and access to a content component do not, by\n   themselves, authorize every relationship between them.  The same\n   distinction applies after computation: successful reconstruction,\n   inference, or generation does not automatically authorize disclosure,\n   persistence, transmission, tool invocation, database modification,\n   payment, downstream-model use, or another external consequence.  A\n   resulting output or proposed act can remain technically non-\n   releasable while current session, execution, association, provenance,\n   destination, recipient, policy, revocation, and disclosure conditions\n   are verified.  Protected evidence of successful verification is\n   committed before scoped release authority is created and checked at\n   the actual consequence boundary.\n\n   This document presents 79 Enforcement Profiles that apply the same\n   underlying architecture to different enterprise-AI enforcement\n   points, including multi-domain information separation, independent\n   association authority, session-bound reconstruction, protected\n   provenance, runtime behavioral verification, agentic tool invocation,\n   prompt and input mediation, streaming disclosure, lifecycle\n   restrictions, distributed policy enforcement, and multi-authority\n   consequence control.  Each profile is expressed in terms of the\n   problem being addressed, the technical enforcement mechanism, and its\n   relationship to existing technology so that the underlying\n   engineering concept can be evaluated independently of specialized\n   terminology.\n\n   This document is related to the earlier [DAS-ENTERPRISE-OUTPUT],\n   which introduced the broader enterprise-future-reconstruction threat,\n   protected reconstruction, and output-finality architecture.  The\n   principal new contribution here is the systematic decomposition of\n   that architecture into 79 concrete enforcement profiles, together\n   with a more explicit treatment of Technical Non-Joinability as a\n   separately enforceable property governing when independently\n   accessible enterprise information may be semantically associated.\n\n   The common engineering principle is that access to components is not\n   necessarily authority to join them, and completion of computation is\n   not necessarily authority to make the resulting consequence\n   externally effective.</p>"
+  content: |-
+    <p>Enterprise artificial-intelligence systems are increasingly connected
+       to multiple organizational repositories, applications, tools, memory
+       systems, and workflow interfaces.  Representative industrial
+       deployment classes include OpenAI ChatGPT and ChatGPT Work, Anthropic
+       Claude, Google Gemini Enterprise, xAI Grok for Business, Microsoft
+       Copilot and Copilot Studio, Amazon Q Business, Salesforce Agentforce,
+       ServiceNow AI Agents, and comparable enterprise or privately deployed
+       AI systems.  These names are cited only as publicly described
+       examples of the broader deployment class.  Their inclusion does not
+       assert that any named product implements, lacks, requires, infringes,
+       endorses, or is vulnerable to the mechanisms described here, does not
+       characterize undisclosed internal architectures, and does not imply
+       that equivalent functionality is absent from an existing product or
+       specification.
+
+       The security problem considered here is not limited to theft of a
+       pre-existing database.  An enterprise-AI workload may be individually
+       authorized to retrieve information from customer, engineering,
+       financial, source-code, supplier, scheduling, communication, memory,
+       and operational systems while the combination of those sources
+       reveals a sensitive relationship or future enterprise state that no
+       single repository contains.  Conventional access control, encryption,
+       network segmentation, database separation, confidential computing,
+       and source-level authorization remain important, but storage
+       separation alone does not prevent such reconstruction where the same
+       effective authority can obtain the constituent values and freely
+       resolve the relationships among them.
+
+       The mechanism described here therefore separates not only protected
+       data but also the authority required to create protected semantic
+       relationships among that data.  Identity components, substantive
+       content, relationship-mapping information, reconstruction-enablement
+       state, and authorization state may be maintained under independently
+       controlled protection domains.  A processing request establishes a
+       bounded reconstruction authorization tied to the actual workload,
+       execution context, session, permitted fields, permitted
+       relationships, processing purpose, and output conditions.  Each
+       required protection domain independently determines whether its
+       component may participate.  Approved components may remain session
+       bound, cryptographically wrapped, capability restricted, opaque, or
+       accessible only through a mandatory mediated path.  Only the
+       specifically authorized relationships are resolved inside a protected
+       reconstruction environment, which constructs a temporary minimum-
+       necessary view without providing the AI workload with unrestricted
+       authority over the underlying stores.
+
+       This creates a technical distinction between authority to access
+       information and authority to associate information.  Access to an
+       identity component and access to a content component do not, by
+       themselves, authorize every relationship between them.  The same
+       distinction applies after computation: successful reconstruction,
+       inference, or generation does not automatically authorize disclosure,
+       persistence, transmission, tool invocation, database modification,
+       payment, downstream-model use, or another external consequence.  A
+       resulting output or proposed act can remain technically non-
+       releasable while current session, execution, association, provenance,
+       destination, recipient, policy, revocation, and disclosure conditions
+       are verified.  Protected evidence of successful verification is
+       committed before scoped release authority is created and checked at
+       the actual consequence boundary.
+
+       This document presents 79 Enforcement Profiles that apply the same
+       underlying architecture to different enterprise-AI enforcement
+       points, including multi-domain information separation, independent
+       association authority, session-bound reconstruction, protected
+       provenance, runtime behavioral verification, agentic tool invocation,
+       prompt and input mediation, streaming disclosure, lifecycle
+       restrictions, distributed policy enforcement, and multi-authority
+       consequence control.  Each profile is expressed in terms of the
+       problem being addressed, the technical enforcement mechanism, and its
+       relationship to existing technology so that the underlying
+       engineering concept can be evaluated independently of specialized
+       terminology.
+
+       This document is related to the earlier [DAS-ENTERPRISE-OUTPUT],
+       which introduced the broader enterprise-future-reconstruction threat,
+       protected reconstruction, and output-finality architecture.  The
+       principal new contribution here is the systematic decomposition of
+       that architecture into 79 concrete enforcement profiles, together
+       with a more explicit treatment of Technical Non-Joinability as a
+       separately enforceable property governing when independently
+       accessible enterprise information may be semantically associated.
+
+       The common engineering principle is that access to components is not
+       necessarily authority to join them, and completion of computation is
+       not necessarily authority to make the resulting consequence
+       externally effective.</p>
 relation:
 - type: includes
   bibitem:

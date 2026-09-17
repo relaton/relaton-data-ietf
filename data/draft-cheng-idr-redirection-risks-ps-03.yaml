@@ -1,3 +1,4 @@
+---
 id: draftchengidrredirectionrisksps03
 schema_version: v1.5.6
 type: standard
@@ -171,7 +172,16 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>BGP Update includes the destination prefix and AS_PATH that records\n   the AS number through which it passes.  The traffic routing to the\n   destination prefix should be forwarded along the AS sequence in\n   AS_PATH.  However, due to traffic redirection, route aggregation and\n   etc., the AS path of forwarding and the AS_PATH of BGP Update often\n   do not match.  The inconsistency leads to security risks such as\n   black holes, loops in inter-domain forwarding, and the possibility of\n   forwarding through malicious AS that source/upstream AS does not want\n   to pass through.</p>"
+  content: |-
+    <p>BGP Update includes the destination prefix and AS_PATH that records
+       the AS number through which it passes.  The traffic routing to the
+       destination prefix should be forwarded along the AS sequence in
+       AS_PATH.  However, due to traffic redirection, route aggregation and
+       etc., the AS path of forwarding and the AS_PATH of BGP Update often
+       do not match.  The inconsistency leads to security risks such as
+       black holes, loops in inter-domain forwarding, and the possibility of
+       forwarding through malicious AS that source/upstream AS does not want
+       to pass through.</p>
 relation:
 - type: updates
   bibitem:

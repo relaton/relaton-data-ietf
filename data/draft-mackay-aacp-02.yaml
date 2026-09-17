@@ -1,3 +1,4 @@
+---
 id: draftmackayaacp02
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,43 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Agent Action Compression Protocol (AACP), a\n   typed coordination format for agent-to-agent communication in multi-\n   agent large language model (LLM) systems.  AACP transforms natural\n   language coordination instructions into deterministic, machine-\n   parseable packets that can be validated before transmission, logged\n   as structured audit records, and replayed consistently across\n   workflow runs.\n\n   AACP addresses a coordination content layer that existing agent\n   protocols do not cover.  The Model Context Protocol (MCP) and Agent-\n   to-Agent Protocol (A2A) operate at the tool access and routing layers\n   respectively.  Neither specifies what agents say to each other inside\n   coordination messages.  AACP fills this gap with a shared, typed\n   vocabulary for agent coordination intent.\n\n   For known workflow types, a rule-based encoder produces AACP packets\n   deterministically at zero LLM cost.  A four-tier fallback extends\n   this to novel instructions: community registry lookup at zero cost;\n   local cache lookup at zero cost; pattern matching at zero cost; LLM\n   encoding for genuinely novel instructions, logged to registry for\n   permanent reuse.  An amortisation benchmark across 240 encoding\n   operations demonstrated 91.6 percent cost saving versus per-call LLM\n   encoding, with 6 LLM calls required across the full run.\n\n   As a secondary benefit, AACP reduces coordination token usage by\n   approximately 23 percent versus equivalent natural language\n   instructions.  Framework integration benchmarks demonstrate 18\n   percent total workflow cost reduction in LangChain (59 coordination\n   hops) and 30 percent in CrewAI (59 coordination hops), with all\n   coordination LLM calls eliminated in both cases.\n\n   This document updates draft-mackay-aacp-01 with: an expanded encoder\n   library (8 workflow encoders across 6 domains); a community rule\n   library (241 validated rules at registry.aacp.dev); framework\n   integration results for LangChain and CrewAI; amortisation benchmark\n   data; and a five-workflow multi-model department day validation.</p>"
+  content: |-
+    <p>This document defines the Agent Action Compression Protocol (AACP), a
+       typed coordination format for agent-to-agent communication in multi-
+       agent large language model (LLM) systems.  AACP transforms natural
+       language coordination instructions into deterministic, machine-
+       parseable packets that can be validated before transmission, logged
+       as structured audit records, and replayed consistently across
+       workflow runs.
+
+       AACP addresses a coordination content layer that existing agent
+       protocols do not cover.  The Model Context Protocol (MCP) and Agent-
+       to-Agent Protocol (A2A) operate at the tool access and routing layers
+       respectively.  Neither specifies what agents say to each other inside
+       coordination messages.  AACP fills this gap with a shared, typed
+       vocabulary for agent coordination intent.
+
+       For known workflow types, a rule-based encoder produces AACP packets
+       deterministically at zero LLM cost.  A four-tier fallback extends
+       this to novel instructions: community registry lookup at zero cost;
+       local cache lookup at zero cost; pattern matching at zero cost; LLM
+       encoding for genuinely novel instructions, logged to registry for
+       permanent reuse.  An amortisation benchmark across 240 encoding
+       operations demonstrated 91.6 percent cost saving versus per-call LLM
+       encoding, with 6 LLM calls required across the full run.
+
+       As a secondary benefit, AACP reduces coordination token usage by
+       approximately 23 percent versus equivalent natural language
+       instructions.  Framework integration benchmarks demonstrate 18
+       percent total workflow cost reduction in LangChain (59 coordination
+       hops) and 30 percent in CrewAI (59 coordination hops), with all
+       coordination LLM calls eliminated in both cases.
+
+       This document updates draft-mackay-aacp-01 with: an expanded encoder
+       library (8 workflow encoders across 6 domains); a community rule
+       library (241 validated rules at registry.aacp.dev); framework
+       integration results for LangChain and CrewAI; amortisation benchmark
+       data; and a five-workflow multi-model department day validation.</p>
 relation:
 - type: updates
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: drafthopleyx402compliancereceipt00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a categorical compliance screening receipt\n   format for agentic-payment flows.  The format is designed for use by\n   AI agents and agentic-payment gateways that perform regulatory\n   screening at admission time and must retain the screening decision\n   under framework-bound retention obligations.\n\n   The receipt format uses a closed enumeration of categorical outcomes\n   (ALLOW, REFER, DENY) rather than a continuous score or tier\n   projection.  The categorical outcome is load-bearing for downstream\n   regulatory obligations: in jurisdictions with mandatory disclosure\n   obligations triggered by specific screening outcomes, a REFER outcome\n   can carry a mandatory reporting obligation that a DENY does not, and\n   a score or tier projection collapses this distinction.\n\n   Receipts are canonicalised under JSON Canonicalization Scheme with an\n   in-band canonicalisation rule pin.  The pin enables long-term re-\n   verification from retained bytes alone, without dependence on an out-\n   of-band rule registry that the operator must continue to publish.\n\n   This document is Informational.  It documents an admission-time\n   compliance screening receipt format used in production and proposes\n   it for wider adoption; it does not create mandatory implementation\n   obligations on third-party systems.</p>"
+  content: |-
+    <p>This document specifies a categorical compliance screening receipt
+       format for agentic-payment flows.  The format is designed for use by
+       AI agents and agentic-payment gateways that perform regulatory
+       screening at admission time and must retain the screening decision
+       under framework-bound retention obligations.
+
+       The receipt format uses a closed enumeration of categorical outcomes
+       (ALLOW, REFER, DENY) rather than a continuous score or tier
+       projection.  The categorical outcome is load-bearing for downstream
+       regulatory obligations: in jurisdictions with mandatory disclosure
+       obligations triggered by specific screening outcomes, a REFER outcome
+       can carry a mandatory reporting obligation that a DENY does not, and
+       a score or tier projection collapses this distinction.
+
+       Receipts are canonicalised under JSON Canonicalization Scheme with an
+       in-band canonicalisation rule pin.  The pin enables long-term re-
+       verification from retained bytes alone, without dependence on an out-
+       of-band rule registry that the operator must continue to publish.
+
+       This document is Informational.  It documents an admission-time
+       compliance screening receipt format used in production and proposes
+       it for wider adoption; it does not create mandatory implementation
+       obligations on third-party systems.</p>
 relation:
 - type: updatedBy
   bibitem:

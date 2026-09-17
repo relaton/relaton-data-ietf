@@ -1,3 +1,4 @@
+---
 id: draftlibessevpneadmultipath
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,16 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In EVPN multi-homing deployments, multiple PE devices attached to the\n   same Ethernet Segment each originate Ethernet Auto-Discovery (EAD)\n   routes.  Standard BGP best-path selection retains only one route per\n   NLRI key, which can suppress reachability information needed for EVPN\n   aliasing, fast convergence, and split-horizon filtering.\n\n   This document specifies that BGP speakers MUST treat EAD routes as\n   multipath and MUST advertise and install all valid EAD routes for a\n   given Ethernet Segment, rather than selecting a single best path.</p>"
+  content: |-
+    <p>In EVPN multi-homing deployments, multiple PE devices attached to the
+       same Ethernet Segment each originate Ethernet Auto-Discovery (EAD)
+       routes.  Standard BGP best-path selection retains only one route per
+       NLRI key, which can suppress reachability information needed for EVPN
+       aliasing, fast convergence, and split-horizon filtering.
+
+       This document specifies that BGP speakers MUST treat EAD routes as
+       multipath and MUST advertise and install all valid EAD routes for a
+       given Ethernet Segment, rather than selecting a single best path.</p>
 relation:
 - type: includes
   bibitem:

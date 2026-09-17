@@ -1,3 +1,4 @@
+---
 id: draftzollnerscimgroupmembers01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document extends the System for Cross-domain Identity Management\n   (SCIM) 2.0 standard by defining a new \"GroupMember\" top-level\n   resource.  Under the existing model defined in [RFC7643], group\n   memberships are represented as values in a multi-valued attribute\n   within a Group resource.  This architecture lacks native support for\n   server-side pagination, filtering, or sorting of individual members.\n   In deployments managing large-scale groups (e.g., 100,000 to\n   1,000,000 members or more), retrieving a Group resource results in\n   massive HTTP response payloads that can exceed 100MB in size.  This\n   can lead to service timeouts, memory exhaustion, and network\n   instability, and has led to many major SCIM implementations choosing\n   to not support returning the value of the \"members\" attribute for\n   Group resources.  This extension introduces a flattened resource\n   model that enables group memberships to benefit from pagination and\n   other SCIM protocol features, ensuring interoperability and\n   performance at scale.</p>"
+  content: |-
+    <p>This document extends the System for Cross-domain Identity Management
+       (SCIM) 2.0 standard by defining a new "GroupMember" top-level
+       resource.  Under the existing model defined in [RFC7643], group
+       memberships are represented as values in a multi-valued attribute
+       within a Group resource.  This architecture lacks native support for
+       server-side pagination, filtering, or sorting of individual members.
+       In deployments managing large-scale groups (e.g., 100,000 to
+       1,000,000 members or more), retrieving a Group resource results in
+       massive HTTP response payloads that can exceed 100MB in size.  This
+       can lead to service timeouts, memory exhaustion, and network
+       instability, and has led to many major SCIM implementations choosing
+       to not support returning the value of the "members" attribute for
+       Group resources.  This extension introduces a flattened resource
+       model that enables group memberships to benefit from pagination and
+       other SCIM protocol features, ensuring interoperability and
+       performance at scale.</p>
 relation:
 - type: updates
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftraviippmcsig
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,36 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document presents Congestion Signaling (CSIG), an in-band\n   network telemetry protocol that allows end-hosts to obtain visibility\n   into fine-grained network signals for congestion control, traffic\n   management, and network debuggability in the network.  CSIG provides\n   a simple, low-overhead, and extensible packet header mechanism to\n   obtain fixed-length summaries from bottleneck devices along a packet\n   path.  This summarized information is collected over L2 CSIG-tags in\n   a compare-and-replace manner across network devices along the path.\n   Receivers can reflect this information back to senders via L4+ CSIG\n   reflection headers.\n\n   CSIG builds upon the successful aspects of prior work such as switch\n   in-band network telemetry (INT) that incorporates multibit signals in\n   live data packets.  At the same time, CSIG's end-to-end mechanism for\n   carrying the signals via fixed size header is simple, practical and\n   deployable akin to Explicit Congestion Notification (ECN).\n\n   In addition to a detailed description of the end-to-end protocol,\n   this document also motivates the use cases for CSIG and the rationale\n   for design choices made in CSIG.  It describes a set of signals of\n   interest to applications (minimum available bandwidth, maximum link\n   utilization, and maximum hop delay), methods to compute these signals\n   in network devices, and how these signals can be leveraged in\n   applications.  Additionally, it describes how attributes about the\n   bottleneck's location can be carried and made useful to applications.\n   It also provides the framework to incorporate future signals.\n   Finally, this document addresses incremental deployment, backward\n   compatibility and nuances of CSIG's applicability in a range of\n   scenarios.</p>"
+  content: |-
+    <p>This document presents Congestion Signaling (CSIG), an in-band
+       network telemetry protocol that allows end-hosts to obtain visibility
+       into fine-grained network signals for congestion control, traffic
+       management, and network debuggability in the network.  CSIG provides
+       a simple, low-overhead, and extensible packet header mechanism to
+       obtain fixed-length summaries from bottleneck devices along a packet
+       path.  This summarized information is collected over L2 CSIG-tags in
+       a compare-and-replace manner across network devices along the path.
+       Receivers can reflect this information back to senders via L4+ CSIG
+       reflection headers.
+
+       CSIG builds upon the successful aspects of prior work such as switch
+       in-band network telemetry (INT) that incorporates multibit signals in
+       live data packets.  At the same time, CSIG's end-to-end mechanism for
+       carrying the signals via fixed size header is simple, practical and
+       deployable akin to Explicit Congestion Notification (ECN).
+
+       In addition to a detailed description of the end-to-end protocol,
+       this document also motivates the use cases for CSIG and the rationale
+       for design choices made in CSIG.  It describes a set of signals of
+       interest to applications (minimum available bandwidth, maximum link
+       utilization, and maximum hop delay), methods to compute these signals
+       in network devices, and how these signals can be leveraged in
+       applications.  Additionally, it describes how attributes about the
+       bottleneck's location can be carried and made useful to applications.
+       It also provides the framework to incorporate future signals.
+       Finally, this document addresses incremental deployment, backward
+       compatibility and nuances of CSIG's applicability in a range of
+       scenarios.</p>
 relation:
 - type: includes
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftmcgrawhttpapiagentbudget04
 schema_version: v1.5.6
 type: standard
@@ -56,7 +57,46 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Delegated software requesters increasingly make HTTP requests that\n   spend, consume, disclose, mutate, invoke, or actuate on behalf of\n   human or organizational principals.  Existing HTTP authentication\n   mechanisms indicate whether a requester holds a credential.\n   RateLimit fields communicate server-advertised quota and current\n   service-limit information.  HTTP Message Signatures can protect\n   selected components of an HTTP message.  None of these mechanisms\n   directly defines a common origin-server challenge for a requester to\n   present verifiable, bounded authority from its principal before the\n   server performs protected processing.\n\n   This document defines the \"Delegation\" HTTP authentication scheme,\n   response semantics for delegated-authority challenges using existing\n   HTTP status codes and Problem Details, the Delegation-Proof HTTP\n   field, and a COSE/CBOR proof carriage model for request-bound\n   delegated authority.  The initial authority profile is the Budget\n   profile, which uses a CBOR/COSE Budget-Attestation envelope to prove\n   bounded authority to spend, consume metered service units, or commit\n   bounded resources.  The mechanism is algorithm-agile; the initial\n   cose-ml-dsa proof profile uses existing JOSE and COSE serializations\n   for ML-DSA, with ML-DSA-65 as the baseline algorithm and ML-DSA-87\n   available as a high-assurance deployment policy option.  A dedicated\n   4NN Delegated Authority Required status code remains an open design\n   question for HTTP Working Group review; this revision does not depend\n   on that status code and does not define payment semantics.  This\n   revision also defines a mandatory-to-implement preflight flow for\n   large proof profiles so that GET and HEAD requests do not depend on\n   request content, and so that requests with application\n   representations do not need to multiplex the application body and the\n   proof body in a single content stream.\n\n   For implementation experience, this individual draft also includes\n   the initial Budget authority profile.  The HTTP authentication\n   scheme, status-code semantics, Problem Details members, and field-\n   carriage rules are intentionally separable from the COSE/CBOR Budget\n   profile.  If a Working Group chooses to progress the HTTP mechanism\n   independently, the Budget authority profile can be moved to a\n   companion profile document without changing the Delegation challenge\n   semantics defined here.</p>"
+  content: |-
+    <p>Delegated software requesters increasingly make HTTP requests that
+       spend, consume, disclose, mutate, invoke, or actuate on behalf of
+       human or organizational principals.  Existing HTTP authentication
+       mechanisms indicate whether a requester holds a credential.
+       RateLimit fields communicate server-advertised quota and current
+       service-limit information.  HTTP Message Signatures can protect
+       selected components of an HTTP message.  None of these mechanisms
+       directly defines a common origin-server challenge for a requester to
+       present verifiable, bounded authority from its principal before the
+       server performs protected processing.
+
+       This document defines the "Delegation" HTTP authentication scheme,
+       response semantics for delegated-authority challenges using existing
+       HTTP status codes and Problem Details, the Delegation-Proof HTTP
+       field, and a COSE/CBOR proof carriage model for request-bound
+       delegated authority.  The initial authority profile is the Budget
+       profile, which uses a CBOR/COSE Budget-Attestation envelope to prove
+       bounded authority to spend, consume metered service units, or commit
+       bounded resources.  The mechanism is algorithm-agile; the initial
+       cose-ml-dsa proof profile uses existing JOSE and COSE serializations
+       for ML-DSA, with ML-DSA-65 as the baseline algorithm and ML-DSA-87
+       available as a high-assurance deployment policy option.  A dedicated
+       4NN Delegated Authority Required status code remains an open design
+       question for HTTP Working Group review; this revision does not depend
+       on that status code and does not define payment semantics.  This
+       revision also defines a mandatory-to-implement preflight flow for
+       large proof profiles so that GET and HEAD requests do not depend on
+       request content, and so that requests with application
+       representations do not need to multiplex the application body and the
+       proof body in a single content stream.
+
+       For implementation experience, this individual draft also includes
+       the initial Budget authority profile.  The HTTP authentication
+       scheme, status-code semantics, Problem Details members, and field-
+       carriage rules are intentionally separable from the COSE/CBOR Budget
+       profile.  If a Working Group chooses to progress the HTTP mechanism
+       independently, the Budget authority profile can be moved to a
+       companion profile document without changing the Delegation challenge
+       semantics defined here.</p>
 relation:
 - type: updates
   bibitem:

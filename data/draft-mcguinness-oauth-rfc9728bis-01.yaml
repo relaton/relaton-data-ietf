@@ -1,3 +1,4 @@
+---
 id: draftmcguinnessoauthrfc9728bis01
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RFC 9728 defines OAuth 2.0 Protected Resource Metadata, enabling\n   clients to dynamically discover the authorization requirements of\n   protected resources.  Section 3.3 of RFC 9728 requires that when\n   protected resource metadata is obtained via a WWW-Authenticate\n   challenge, the resource value in the metadata MUST exactly match the\n   URL the client used to access the protected resource, limiting the\n   applicability of the specification.\n\n   This document updates the resource validation rule in Section 3.3 of\n   RFC 9728 to permit the resource value to be any URI that shares the\n   same TLS origin (scheme, host, and port) as the requested URL and\n   whose path is a prefix of the request URL path.  This enables a wider\n   range of use cases for the WWW-Authenticate response.  All other\n   aspects of RFC 9728 remain unchanged.</p>"
+  content: |-
+    <p>RFC 9728 defines OAuth 2.0 Protected Resource Metadata, enabling
+       clients to dynamically discover the authorization requirements of
+       protected resources.  Section 3.3 of RFC 9728 requires that when
+       protected resource metadata is obtained via a WWW-Authenticate
+       challenge, the resource value in the metadata MUST exactly match the
+       URL the client used to access the protected resource, limiting the
+       applicability of the specification.
+
+       This document updates the resource validation rule in Section 3.3 of
+       RFC 9728 to permit the resource value to be any URI that shares the
+       same TLS origin (scheme, host, and port) as the requested URL and
+       whose path is a prefix of the request URL path.  This enables a wider
+       range of use cases for the WWW-Authenticate response.  All other
+       aspects of RFC 9728 remain unchanged.</p>
 relation:
 - type: updates
   bibitem:

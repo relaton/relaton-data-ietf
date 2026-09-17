@@ -1,3 +1,4 @@
+---
 id: draftkalirajidrmultinexthopattribute04
 schema_version: v1.5.6
 type: standard
@@ -109,7 +110,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in\n   an Update.  This nexthop can be encoded in either the BGP-Nexthop\n   attribute (code 3), or inside the MP_REACH_NLRI attribute (code 14).\n\n   For cases where multiple nexthops need to be advertised, BGP-Addpath\n   is used.  Though Addpath allows basic ability to advertise multiple-\n   nexthops, it does not allow the sender to specify desired\n   relationship between the multiple nexthops being advertised e.g.,\n   relative-preference, type of load-balancing.  These are local\n   decisions at the receiving speaker based on local configuration and\n   path-selection between the various additional-paths, which may tie-\n   break on some arbitrary step like Router-Id or BGP nexthop address.\n\n   Some scenarios with a BGP-free core may benefit from having a\n   mechanism, where egress-node can signal multiple-nexthops along with\n   their relationship, in one BGP route, to ingress nodes.  This\n   document defines a new BGP attribute \"MultiNexthop (MNH)\" that can be\n   used for this purpose.\n\n   This attribute can be used for both labeled and unlabled BGP\n   families.  The MNH can be used to advertise MPLS label along with\n   nexthop for unlabeled families (e.g.  Inet Unicast, Inet6 Unicast).\n   Such that, mechanisms at the transport layer can work uniformly on\n   labeled and unlabled BGP families.  Service route scale can be\n   confined closer to the service edge nodes, making the transport layer\n   nodes light and nimble.  They dont have any service route state, only\n   have service end-point state.\n\n   The MNH plays different role in \"downstream allocation\" scenario than\n   \"upstream allocation\" scenario.  E.g. for [RFC8277] families that\n   advertise downstream allocated labels, the MNH can play the \"Label\n   Descriptor\" role, describing the forwarding semantics of the label\n   being advertised.  This can be useful in network visualization and\n   controller based traffic engineering (e.g.  EPE).</p>"
+  content: |-
+    <p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in
+       an Update.  This nexthop can be encoded in either the BGP-Nexthop
+       attribute (code 3), or inside the MP_REACH_NLRI attribute (code 14).
+
+       For cases where multiple nexthops need to be advertised, BGP-Addpath
+       is used.  Though Addpath allows basic ability to advertise multiple-
+       nexthops, it does not allow the sender to specify desired
+       relationship between the multiple nexthops being advertised e.g.,
+       relative-preference, type of load-balancing.  These are local
+       decisions at the receiving speaker based on local configuration and
+       path-selection between the various additional-paths, which may tie-
+       break on some arbitrary step like Router-Id or BGP nexthop address.
+
+       Some scenarios with a BGP-free core may benefit from having a
+       mechanism, where egress-node can signal multiple-nexthops along with
+       their relationship, in one BGP route, to ingress nodes.  This
+       document defines a new BGP attribute "MultiNexthop (MNH)" that can be
+       used for this purpose.
+
+       This attribute can be used for both labeled and unlabled BGP
+       families.  The MNH can be used to advertise MPLS label along with
+       nexthop for unlabeled families (e.g.  Inet Unicast, Inet6 Unicast).
+       Such that, mechanisms at the transport layer can work uniformly on
+       labeled and unlabled BGP families.  Service route scale can be
+       confined closer to the service edge nodes, making the transport layer
+       nodes light and nimble.  They dont have any service route state, only
+       have service end-point state.
+
+       The MNH plays different role in "downstream allocation" scenario than
+       "upstream allocation" scenario.  E.g. for [RFC8277] families that
+       advertise downstream allocated labels, the MNH can play the "Label
+       Descriptor" role, describing the forwarding semantics of the label
+       being advertised.  This can be useful in network visualization and
+       controller based traffic engineering (e.g.  EPE).</p>
 relation:
 - type: updates
   bibitem:

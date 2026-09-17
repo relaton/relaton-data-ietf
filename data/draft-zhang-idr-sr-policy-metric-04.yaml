@@ -1,3 +1,4 @@
+---
 id: draftzhangidrsrpolicymetric04
 schema_version: v1.5.6
 type: standard
@@ -95,7 +96,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>SR Policy candidate paths can be represented in BGP UPDATE messages.\n   BGP can then be used to propagate the SR Policy candidate paths to\n   the headend nodes in the network.  After SR Policy is installed on\n   the ingress node, the packets can be steered into SR Policy through\n   route selection.  Therefore, route selection may be performed on the\n   ingress node of the SR Policy.  If there are multiple routes to the\n   same destination, the route selection node can select routes based on\n   the local policy.  The local policy may use the IGP metric of the\n   selected path, which is the IGP Metric of the SR Policy.  Thus the\n   BGP UPDATE message need carry the metric of each segment list of the\n   SR Policy Candidate Path, which can be used in path selection of\n   routing.</p>"
+  content: |-
+    <p>SR Policy candidate paths can be represented in BGP UPDATE messages.
+       BGP can then be used to propagate the SR Policy candidate paths to
+       the headend nodes in the network.  After SR Policy is installed on
+       the ingress node, the packets can be steered into SR Policy through
+       route selection.  Therefore, route selection may be performed on the
+       ingress node of the SR Policy.  If there are multiple routes to the
+       same destination, the route selection node can select routes based on
+       the local policy.  The local policy may use the IGP metric of the
+       selected path, which is the IGP Metric of the SR Policy.  Thus the
+       BGP UPDATE message need carry the metric of each segment list of the
+       SR Policy Candidate Path, which can be used in path selection of
+       routing.</p>
 relation:
 - type: updates
   bibitem:

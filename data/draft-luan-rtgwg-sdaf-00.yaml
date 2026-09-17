@@ -1,10 +1,12 @@
+---
 id: draftluanrtgwgsdaf00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Symmetry-Driven Asynchronous Forwarding with Fast Reroute for LEO Satellite Networks (SDAF)
+  content: Symmetry-Driven Asynchronous Forwarding with Fast Reroute for LEO Satellite
+    Networks (SDAF)
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-luan-rtgwg-sdaf-00
@@ -153,7 +155,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Interior Gateway Protocols (IGPs) such as OSPF are commonly employed\n   in satellite networks to address topology awareness and autonomous\n   routing in response to link interruptions, link/node failures, and\n   subsequent repairs.  However, IGP-based approaches suffer from\n   inherent limitations.  Synchronization delays between the control\n   plane and the forwarding plane can cause routing black holes, while\n   asynchronous convergence across nodes may induce micro-loops (as\n   described in prior work), leading to packet loss and congestion.\n   These issues are particularly exacerbated in satellite networks\n   characterized by highly dynamic topologies, long inter-satellite\n   propagation delays, and constrained on-board computing resources.\n\n   This document describes the Symmetry-Driven Asynchronous Forwarding\n   (SDAF) mechanism, which leverages the intrinsic symmetry of toroidal\n   topologies in satellite networks.  Low Earth Orbit (LEO) satellite\n   constellations are typically composed of multiple circular orbital\n   planes, forming a toroidal topology by inter-satellite links.  SDAF\n   autonomously triggers and processes reverse flows based solely on\n   local link-state information, without requiring control-plane\n   convergence, protocol extensions, or packet header modifications.\n\n   SDAF is fully compatible with existing protocols and technologies\n   such as OSPFv3, IS-IS, and MPLS, and is specifically tailored to the\n   resource-constrained nature of satellite systems.  It achieves\n   microsecond-scale convergence and low packet loss under failure\n   conditions.\n\n   Simulation results and tests conducted on actual satellite routers\n   demonstrate that the SDAF mechanism significantly suppresses packet\n   loss caused by routing black holes and micro-loops, while also\n   alleviating link congestion and packet reordering issues.</p>"
+  content: |-
+    <p>Interior Gateway Protocols (IGPs) such as OSPF are commonly employed
+       in satellite networks to address topology awareness and autonomous
+       routing in response to link interruptions, link/node failures, and
+       subsequent repairs.  However, IGP-based approaches suffer from
+       inherent limitations.  Synchronization delays between the control
+       plane and the forwarding plane can cause routing black holes, while
+       asynchronous convergence across nodes may induce micro-loops (as
+       described in prior work), leading to packet loss and congestion.
+       These issues are particularly exacerbated in satellite networks
+       characterized by highly dynamic topologies, long inter-satellite
+       propagation delays, and constrained on-board computing resources.
+
+       This document describes the Symmetry-Driven Asynchronous Forwarding
+       (SDAF) mechanism, which leverages the intrinsic symmetry of toroidal
+       topologies in satellite networks.  Low Earth Orbit (LEO) satellite
+       constellations are typically composed of multiple circular orbital
+       planes, forming a toroidal topology by inter-satellite links.  SDAF
+       autonomously triggers and processes reverse flows based solely on
+       local link-state information, without requiring control-plane
+       convergence, protocol extensions, or packet header modifications.
+
+       SDAF is fully compatible with existing protocols and technologies
+       such as OSPFv3, IS-IS, and MPLS, and is specifically tailored to the
+       resource-constrained nature of satellite systems.  It achieves
+       microsecond-scale convergence and low packet loss under failure
+       conditions.
+
+       Simulation results and tests conducted on actual satellite routers
+       demonstrate that the SDAF mechanism significantly suppresses packet
+       loss caused by routing black holes and micro-loops, while also
+       alleviating link congestion and packet reordering issues.</p>
 relation:
 - type: updatedBy
   bibitem:

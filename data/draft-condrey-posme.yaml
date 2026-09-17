@@ -1,3 +1,4 @@
+---
 id: draftcondreyposme
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,22 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines Proof of Sequential Memory Execution (PoSME), a\n   cryptographic primitive combining mutable arena state, data-\n   dependent pointer-chase addressing, and per-block causal hash binding\n   in a single step function.  A Prover executes K sequential steps over\n   a mutable N-block arena.  Each step reads d blocks at addresses\n   determined by the previous read's result (pointer chasing), writes\n   one block with spatial neighborhood entanglement (incorporating\n   A\\[w-1\\] and A\\[w+1\\]), and advances a transcript chain.  The\n   construction provides three properties: (1) unconditional sequential\n   time enforcement anchored in physics-bounded latency floors, (2)\n   forgery prevention via causal hashes (reduces to collision resistance\n   of H), and (3) TMTO resistance scaling as $1/\\alpha$ with spatial\n   entanglement, where $\\alpha$ is the adversary's storage fraction.\n   Verification requires O(Q * d^R * log N) hash evaluations with no\n   arena allocation.  No trusted setup is required.</p>"
+  content: |-
+    <p>This document defines Proof of Sequential Memory Execution (PoSME), a
+       cryptographic primitive combining mutable arena state, data-
+       dependent pointer-chase addressing, and per-block causal hash binding
+       in a single step function.  A Prover executes K sequential steps over
+       a mutable N-block arena.  Each step reads d blocks at addresses
+       determined by the previous read's result (pointer chasing), writes
+       one block with spatial neighborhood entanglement (incorporating
+       A\[w-1\] and A\[w+1\]), and advances a transcript chain.  The
+       construction provides three properties: (1) unconditional sequential
+       time enforcement anchored in physics-bounded latency floors, (2)
+       forgery prevention via causal hashes (reduces to collision resistance
+       of H), and (3) TMTO resistance scaling as $1/\alpha$ with spatial
+       entanglement, where $\alpha$ is the adversary's storage fraction.
+       Verification requires O(Q * d^R * log N) hash evaluations with no
+       arena allocation.  No trusted setup is required.</p>
 relation:
 - type: includes
   bibitem:

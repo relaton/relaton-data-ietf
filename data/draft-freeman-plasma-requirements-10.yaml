@@ -1,3 +1,4 @@
+---
 id: draftfreemanplasmarequirements10
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,44 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>S/MIME delivers confidentiality, integrity, and data origination\n  authentication for email. However, there are many situations where\n  organizations also want robust access control applied to information\n  in messages. The Enhanced Security Services (ESS) RFC5035 for S/MIME\n  defines an access control mechanism for email, but the  access check\n  happens after the data is decrypted by the recipient which devalues\n  the protection afforded by the cryptography and provides very weak\n  guarantees of policy compliance. Another major issues for S/MIME is\n  its dependency on a single type of identity credential, an X.509\n  certificate. Many users on the Internet today do not have X.509\n  certificates and therefore cannot use S/MIME.  Furthermore, the\n  requirement to discover the X.509 certificate for every recipient of\n  an encrypted message by the sender has proven to be an unreliable\n  process for a number of reasons.\n\n  This document presents requirements for an alternative model to ESS to\n  address the identified issues with access control in order to deliver\n  more robust compliance for S/MIME protected messages. This document\n  describes an access control model which uses cryptographic keys to\n  enforce access control policy decisions where the policy check is\n  performed prior to the decryption of the message contents. This\n  authorization model can be instantiated using many existing standard\n  and is in not intended to be a one off just for email and can also be\n  applied to other data types.\n\n  This document also presents requirements for the abstraction of the\n  specifics of the authentication technologies used by S/MIME users. The\n  abstraction makes it possible for other forms of authentication\n  credentials to be used with S/MIME thereby enabling much broader\n  adoption. The authentication abstraction model also removes the\n  dependency on the need to discover encryption keys by the sender. This\n  abstraction can be used independently from access control to enable\n  simple scenarios where authentication of the recipient is sufficient\n  to grant access to the message.\n\n  The name Plasma was assigned to this effort as part of the IETF\n  process. It is derived from PoLicy enhAnced Secure eMAil.</p>"
+  content: |-
+    <p>S/MIME delivers confidentiality, integrity, and data origination
+      authentication for email. However, there are many situations where
+      organizations also want robust access control applied to information
+      in messages. The Enhanced Security Services (ESS) RFC5035 for S/MIME
+      defines an access control mechanism for email, but the  access check
+      happens after the data is decrypted by the recipient which devalues
+      the protection afforded by the cryptography and provides very weak
+      guarantees of policy compliance. Another major issues for S/MIME is
+      its dependency on a single type of identity credential, an X.509
+      certificate. Many users on the Internet today do not have X.509
+      certificates and therefore cannot use S/MIME.  Furthermore, the
+      requirement to discover the X.509 certificate for every recipient of
+      an encrypted message by the sender has proven to be an unreliable
+      process for a number of reasons.
+
+      This document presents requirements for an alternative model to ESS to
+      address the identified issues with access control in order to deliver
+      more robust compliance for S/MIME protected messages. This document
+      describes an access control model which uses cryptographic keys to
+      enforce access control policy decisions where the policy check is
+      performed prior to the decryption of the message contents. This
+      authorization model can be instantiated using many existing standard
+      and is in not intended to be a one off just for email and can also be
+      applied to other data types.
+
+      This document also presents requirements for the abstraction of the
+      specifics of the authentication technologies used by S/MIME users. The
+      abstraction makes it possible for other forms of authentication
+      credentials to be used with S/MIME thereby enabling much broader
+      adoption. The authentication abstraction model also removes the
+      dependency on the need to discover encryption keys by the sender. This
+      abstraction can be used independently from access control to enable
+      simple scenarios where authentication of the recipient is sufficient
+      to grant access to the message.
+
+      The name Plasma was assigned to this effort as part of the IETF
+      process. It is derived from PoLicy enhAnced Secure eMAil.</p>
 relation:
 - type: updates
   bibitem:

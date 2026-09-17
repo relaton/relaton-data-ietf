@@ -1,3 +1,4 @@
+---
 id: draftwingbehavenatcontrolstunusage
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A drawback with many NAT UDP hole punching techniques is the\nkeepalive traffic necessary to keep the UDP binding open.  It it\nnecessary to send keepalives frequently because it is not possible to\ndetermine or modify the NAT's binding lifetime.  This keepalive\ntraffic causes server load and additional network traffic, which is\nespecially problematic with battery-operated wireless devices.\nThis document describes two mechanisms to discover NATs and firewalls\nand a mechanism to query and control their binding lifetime.  With\nthese mechanisms, UDP binding discovery and UDP keepalive traffic can\nbe reduced to involve only the necessary NATs or firewalls.  This\neliminates the keepalive traffic to servers, and vastly reduces\nkeepalive traffic across the network.  At the same time, backwards\ncompatibility with NATs and firewalls that do not support this\nspecification is retained, which allows for incremental deployment of\nthis mechanism.\n\nThis document is discussed on the SAFE mailing list,\n&lt;http://www1.ietf.org/mailman/listinfo/safe&gt;.</p>"
+  content: |-
+    <p>A drawback with many NAT UDP hole punching techniques is the
+    keepalive traffic necessary to keep the UDP binding open.  It it
+    necessary to send keepalives frequently because it is not possible to
+    determine or modify the NAT's binding lifetime.  This keepalive
+    traffic causes server load and additional network traffic, which is
+    especially problematic with battery-operated wireless devices.
+    This document describes two mechanisms to discover NATs and firewalls
+    and a mechanism to query and control their binding lifetime.  With
+    these mechanisms, UDP binding discovery and UDP keepalive traffic can
+    be reduced to involve only the necessary NATs or firewalls.  This
+    eliminates the keepalive traffic to servers, and vastly reduces
+    keepalive traffic across the network.  At the same time, backwards
+    compatibility with NATs and firewalls that do not support this
+    specification is retained, which allows for incremental deployment of
+    this mechanism.
+
+    This document is discussed on the SAFE mailing list,
+    &lt;http://www1.ietf.org/mailman/listinfo/safe&gt;.</p>
 relation:
 - type: includes
   bibitem:

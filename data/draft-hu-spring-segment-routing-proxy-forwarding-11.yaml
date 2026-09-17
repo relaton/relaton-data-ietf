@@ -1,3 +1,4 @@
+---
 id: drafthuspringsegmentroutingproxyforwarding11
 schema_version: v1.5.6
 type: standard
@@ -148,7 +149,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Segment Routing Traffic Engineering (SR-TE) supports the creation of\n   explicit paths using segment lists containing adjacency-SIDs, node-\n   SIDs, anycast-SIDs, and binding-SIDs.  When the segment list defining\n   an SR-TE path contains a node-SID, and the node fails, the network\n   may no longer be able to properly forward traffic on that SR-TE path.\n   [I-D.ietf-rtgwg-segment-routing-ti-lfa] describes a mechanism that\n   allows local repair actions on the direct neighbors of the failed\n   node to temporarily route traffic to the node immediately following\n   the failed node on the SR-TE path segment list.  However, once the\n   IGP shortest paths have converged, the local repair mechanism is no\n   longer sufficient to continue forwarding traffic using the original\n   segment list of the SR-TE path, since the non-neighbors of the failed\n   node will no longer have a route to reach the failed node.  This\n   document describes a mechanism that allows traffic to continue to be\n   forwarded on an SR-TE path for an extended period of time after the\n   failure of a node used in the path's segment list.</p>"
+  content: |-
+    <p>Segment Routing Traffic Engineering (SR-TE) supports the creation of
+       explicit paths using segment lists containing adjacency-SIDs, node-
+       SIDs, anycast-SIDs, and binding-SIDs.  When the segment list defining
+       an SR-TE path contains a node-SID, and the node fails, the network
+       may no longer be able to properly forward traffic on that SR-TE path.
+       [I-D.ietf-rtgwg-segment-routing-ti-lfa] describes a mechanism that
+       allows local repair actions on the direct neighbors of the failed
+       node to temporarily route traffic to the node immediately following
+       the failed node on the SR-TE path segment list.  However, once the
+       IGP shortest paths have converged, the local repair mechanism is no
+       longer sufficient to continue forwarding traffic using the original
+       segment list of the SR-TE path, since the non-neighbors of the failed
+       node will no longer have a route to reach the failed node.  This
+       document describes a mechanism that allows traffic to continue to be
+       forwarded on an SR-TE path for an extended period of time after the
+       failure of a node used in the path's segment list.</p>
 relation:
 - type: updates
   bibitem:

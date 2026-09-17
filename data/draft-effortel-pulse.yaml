@@ -1,0 +1,52 @@
+---
+id: drafteffortelpulse
+schema_version: v1.5.6
+formattedref:
+  content: draft-effortel-pulse
+title:
+- language: en
+  script: Latn
+  content: 'Pulse: Real-Time Online Charging for AI Services'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-effortel-pulse-00
+docidentifier:
+- content: draft-effortel-pulse
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-17'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Pulse, version 1.1 — the AI online charging
+       protocol: the interface between an AI Gateway (the client) and the
+       Charging Server (the server) by which AI service usage is authorised
+       in real time, supervised under a granted budget, and settled.  The
+       spend guarantee is precisely stated: *settled spend never exceeds the
+       reported meter or the plan's ceiling*, and serving exposure is
+       bounded by the granted pool plus the completion of Calls already in
+       flight when a stop lands.  The protocol consists of two request/
+       response operations over HTTPS with JSON bodies: *Authorise* and
+       *Report*. It follows the reserve-then-settle discipline of telecom
+       online charging (cf. Diameter Credit-Control, RFC 4006) applied to AI
+       workloads.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-effortel-pulse-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-effortel-pulse-00
+    docidentifier:
+    - content: draft-effortel-pulse-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

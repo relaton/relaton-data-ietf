@@ -1,3 +1,4 @@
+---
 id: draftietfidrrfc5575bis12
 schema_version: v1.5.6
 type: standard
@@ -156,7 +157,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a Border Gateway Protocol Network Layer\n   Reachability Information (BGP NLRI) encoding format that can be used\n   to distribute traffic Flow Specifications.  This allows the routing\n   system to propagate information regarding more specific components of\n   the traffic aggregate defined by an IP destination prefix.\n\n   It specifies IPv4 traffic Flow Specifications via a BGP NLRI which\n   carries traffic Flow Specification filter, and an Extended community\n   value which encodes actions a routing system can take if the packet\n   matches the traffic flow filters.  The flow filters and the actions\n   are processed in a fixed order.  Other drafts specify IPv6, MPLS\n   addresses, L2VPN addresses, and NV03 encapsulation of IP addresses.\n\n   This document obsoletes RFC5575 and RFC7674 to correct unclear\n   specifications in the flow filters.\n\n   Applications which use the bgp Flow Specification are: 1) application\n   which automate inter-domain coordination of traffic filtering, such\n   as what is required in order to mitigate (distributed) denial-of-\n   service attacks; 2) applications which control traffic filtering in\n   the context of a BGP/MPLS VPN service, and 3) applications with\n   centralized control of traffic in a SDN or NFV context.  Some\n   deployments of these three applications can be handled by the strict\n   ordering of the BGP NLRI traffic flow filters, and the strict actions\n   encoded in the extended community Flow Specification actions.</p>"
+  content: |-
+    <p>This document defines a Border Gateway Protocol Network Layer
+       Reachability Information (BGP NLRI) encoding format that can be used
+       to distribute traffic Flow Specifications.  This allows the routing
+       system to propagate information regarding more specific components of
+       the traffic aggregate defined by an IP destination prefix.
+
+       It specifies IPv4 traffic Flow Specifications via a BGP NLRI which
+       carries traffic Flow Specification filter, and an Extended community
+       value which encodes actions a routing system can take if the packet
+       matches the traffic flow filters.  The flow filters and the actions
+       are processed in a fixed order.  Other drafts specify IPv6, MPLS
+       addresses, L2VPN addresses, and NV03 encapsulation of IP addresses.
+
+       This document obsoletes RFC5575 and RFC7674 to correct unclear
+       specifications in the flow filters.
+
+       Applications which use the bgp Flow Specification are: 1) application
+       which automate inter-domain coordination of traffic filtering, such
+       as what is required in order to mitigate (distributed) denial-of-
+       service attacks; 2) applications which control traffic filtering in
+       the context of a BGP/MPLS VPN service, and 3) applications with
+       centralized control of traffic in a SDN or NFV context.  Some
+       deployments of these three applications can be handled by the strict
+       ordering of the BGP NLRI traffic flow filters, and the strict actions
+       encoded in the extended community Flow Specification actions.</p>
 relation:
 - type: updates
   bibitem:

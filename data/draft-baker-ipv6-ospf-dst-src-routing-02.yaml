@@ -1,3 +1,4 @@
+---
 id: draftbakeripv6ospfdstsrcrouting02
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This note describes the changes necessary for OSPFv3 to route classes\n   of IPv6 traffic that are defined by an IPv6 source prefix and a\n   destination prefix.  This implies not simply routing \"to a\n   destination\", but \"traffic going to that destination AND coming from\n   a specified source\".  It may be combined with other qualifying\n   attributes, such as \"traffic going to that destination AND using a\n   specified flow label AND from a specified source prefix\".  The\n   obvious application is egress routing, as required for a multihomed\n   entity with a provider-allocated prefix from each of several upstream\n   networks.  Traffic within the network could be source/destination\n   routed as well, or could be routed from \"any prefix\", ::/0.  If\n   traffic is routed from the relevant PA prefixes but in fact has a\n   source address that is in none of them, the traffic in effect has no\n   route.</p>"
+  content: |-
+    <p>This note describes the changes necessary for OSPFv3 to route classes
+       of IPv6 traffic that are defined by an IPv6 source prefix and a
+       destination prefix.  This implies not simply routing "to a
+       destination", but "traffic going to that destination AND coming from
+       a specified source".  It may be combined with other qualifying
+       attributes, such as "traffic going to that destination AND using a
+       specified flow label AND from a specified source prefix".  The
+       obvious application is egress routing, as required for a multihomed
+       entity with a provider-allocated prefix from each of several upstream
+       networks.  Traffic within the network could be source/destination
+       routed as well, or could be routed from "any prefix", ::/0.  If
+       traffic is routed from the relevant PA prefixes but in fact has a
+       source address that is in none of them, the traffic in effect has no
+       route.</p>
 relation:
 - type: updates
   bibitem:

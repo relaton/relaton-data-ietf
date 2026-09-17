@@ -1,3 +1,4 @@
+---
 id: draftsatosooshem03
 schema_version: v1.5.6
 type: standard
@@ -49,7 +50,56 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>An AI agent that has been authorized to act autonomously has no\n   inherent mechanism to stop itself.  If its mission requires a\n   decision that exceeds its authorization, if policy mandates human\n   judgment before proceeding, or if the agent itself reaches the\n   boundary of its reliable competence, what happens?  Without a\n   protocol specifying the answer, one of three failure modes occurs:\n   the agent proceeds beyond its authorization and executes actions\n   that no human approved; it stalls silently with no notification\n   to any principal; or it continues running under a mission that has\n   already entered a terminal state, producing actions with no\n   legitimate purpose.  In all three cases, the humans responsible\n   for the system find out too late.\n\n   This document defines the Human Escalation Mechanism (HEM): a\n   normative protocol specifying what a Governance Execution\n   Controller (GEC) does when an AI agent session requires human\n   judgment before execution may continue.  HEM replaces the three\n   failure modes above with a single governed path: the GEC places\n   the session into a formally defined HEM_PENDING state, routes a\n   structured escalation request to one or more designated human\n   principals along an ordered designation chain, enforces a\n   prohibition on all state transitions until a human decision is\n   received, and processes five defined human decision types.  HEM\n   also defines the Policy Rationale Declaration (PRD), which links\n   Cedar policies that route to HEM with machine-readable rationale,\n   and the Decision Rationale Record (DRR), which captures the human\n   principal's reasoning for audit and learning purposes.\n\n   For human principals, HEM provides more than oversight: it\n   provides better project outcomes, a learning record of both human\n   and agent decisions, and a normative channel for injecting real-\n   world context into agent execution at the moment it is most\n   relevant.  For AI agents, HEM provides a governed recovery path\n   that enables higher confidence operation near decision boundaries\n   and a shorter, more efficient route to correct outcomes.\n\n   HEM is the entry point to a four-draft governance stack.  The\n   Intent Declaration Primitive [I-D.sato-soos-idp] makes HEM\n   escalation requests legible to human principals.  The Governance\n   Audit Record [I-D.sato-soos-gar] provides the permanent, non-\n   suppressible record that oversight occurred and what was decided.\n   The Constitutional AI Protocol [I-D.sato-soos-cap] defines the\n   prohibition floor below which no HEM decision may operate.\n\n   HEM is enforced by the GEC, not by the agent and not by the\n   application layer.  An agent cannot opt out; an application\n   cannot suppress it.  This non-bypassability is the source of\n   HEM's regulatory utility and provides the technical specification\n   for human oversight required by EU AI Act Article 14.</p>"
+  content: |-
+    <p>An AI agent that has been authorized to act autonomously has no
+       inherent mechanism to stop itself.  If its mission requires a
+       decision that exceeds its authorization, if policy mandates human
+       judgment before proceeding, or if the agent itself reaches the
+       boundary of its reliable competence, what happens?  Without a
+       protocol specifying the answer, one of three failure modes occurs:
+       the agent proceeds beyond its authorization and executes actions
+       that no human approved; it stalls silently with no notification
+       to any principal; or it continues running under a mission that has
+       already entered a terminal state, producing actions with no
+       legitimate purpose.  In all three cases, the humans responsible
+       for the system find out too late.
+
+       This document defines the Human Escalation Mechanism (HEM): a
+       normative protocol specifying what a Governance Execution
+       Controller (GEC) does when an AI agent session requires human
+       judgment before execution may continue.  HEM replaces the three
+       failure modes above with a single governed path: the GEC places
+       the session into a formally defined HEM_PENDING state, routes a
+       structured escalation request to one or more designated human
+       principals along an ordered designation chain, enforces a
+       prohibition on all state transitions until a human decision is
+       received, and processes five defined human decision types.  HEM
+       also defines the Policy Rationale Declaration (PRD), which links
+       Cedar policies that route to HEM with machine-readable rationale,
+       and the Decision Rationale Record (DRR), which captures the human
+       principal's reasoning for audit and learning purposes.
+
+       For human principals, HEM provides more than oversight: it
+       provides better project outcomes, a learning record of both human
+       and agent decisions, and a normative channel for injecting real-
+       world context into agent execution at the moment it is most
+       relevant.  For AI agents, HEM provides a governed recovery path
+       that enables higher confidence operation near decision boundaries
+       and a shorter, more efficient route to correct outcomes.
+
+       HEM is the entry point to a four-draft governance stack.  The
+       Intent Declaration Primitive [I-D.sato-soos-idp] makes HEM
+       escalation requests legible to human principals.  The Governance
+       Audit Record [I-D.sato-soos-gar] provides the permanent, non-
+       suppressible record that oversight occurred and what was decided.
+       The Constitutional AI Protocol [I-D.sato-soos-cap] defines the
+       prohibition floor below which no HEM decision may operate.
+
+       HEM is enforced by the GEC, not by the agent and not by the
+       application layer.  An agent cannot opt out; an application
+       cannot suppress it.  This non-bypassability is the source of
+       HEM's regulatory utility and provides the technical specification
+       for human oversight required by EU AI Act Article 14.</p>
 relation:
 - type: updates
   bibitem:

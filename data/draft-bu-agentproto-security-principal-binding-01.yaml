@@ -1,3 +1,4 @@
+---
 id: draftbuagentprotosecurityprincipalbinding01
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agent communication protocols often carry claims about user\n   authority, agent instance identity, tool or external-resource\n   identity, delegation state, session continuity, and action evidence.\n   These claims have different verifiers, freshness requirements,\n   failure modes, and security consequences.  If they are collapsed into\n   a single token, identity label, session identifier, or audit record,\n   protocol text can accidentally imply more authority or accountability\n   than the receiver can actually verify.\n\n   This document defines a verifier-facing model for separating those\n   claims.  It provides a reusable matrix format that protocol authors\n   can use to state, for each security-relevant claim, which field\n   carries it, which party verifies it, what binding or freshness rule\n   applies, and what failure behavior is required when the claim is\n   absent, stale, inconsistent, or not verifiable.  The document is\n   protocol-neutral.  It is intended to help compare candidate agent\n   communication drafts and to provide security-considerations and\n   requirements text for agent session and delegation binding.</p>"
+  content: |-
+    <p>Agent communication protocols often carry claims about user
+       authority, agent instance identity, tool or external-resource
+       identity, delegation state, session continuity, and action evidence.
+       These claims have different verifiers, freshness requirements,
+       failure modes, and security consequences.  If they are collapsed into
+       a single token, identity label, session identifier, or audit record,
+       protocol text can accidentally imply more authority or accountability
+       than the receiver can actually verify.
+
+       This document defines a verifier-facing model for separating those
+       claims.  It provides a reusable matrix format that protocol authors
+       can use to state, for each security-relevant claim, which field
+       carries it, which party verifies it, what binding or freshness rule
+       applies, and what failure behavior is required when the claim is
+       absent, stale, inconsistent, or not verifiable.  The document is
+       protocol-neutral.  It is intended to help compare candidate agent
+       communication drafts and to provide security-considerations and
+       requirements text for agent session and delegation binding.</p>
 relation:
 - type: updates
   bibitem:

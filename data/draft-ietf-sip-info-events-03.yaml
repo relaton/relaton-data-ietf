@@ -1,3 +1,4 @@
+---
 id: draftietfsipinfoevents03
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the new SIP INFO method and a mechanism for\ndefining, negotiating and exchanging Info Packages that use the INFO\nmethod.  Applications that need to exchange session-related\ninformation within a SIP INVITE-created dialog, also known as\napplication level information, use these INFO requests.  This draft\naddresses issues and open items from RFC 2976 and replaces it.\n\nConventions Used in this Document\n\nThe key words \"MUST\", \"MUST NOT\", \"REQUIRED\", \"SHALL\", \"SHALL NOT\",\n\"SHOULD\", \"SHOULD NOT\", \"RECOMMENDED\", \"MAY\", and \"OPTIONAL\" in this\ndocument are to be interpreted as described in RFC 2119 [RFC2119].\nThe terminology in this document conforms to the Internet Security\nGlossary [RFC4949].\n\nBe mindful of the terms User Agent Server (UAS) and User Agent Client\n(UAC).  This document strictly follows RFC 3261 [RFC3261].  The UAC\nissues a SIP request and the UAS responds.  This terminology may be\nconfusing when one combines the INFO case with the INVITE case.  For\nan INVITE, the initiator of the session is the UAC and the target of\nthe session is the UAS.  However, it is possible for the target UA of\nthe session, the UAS of the INVITE transaction, to send an INFO to\nthe initiating UA of the session, the UAC of the INVITE transaction.\nFrom the perspective of the INFO, the target UA of the session\n(INVITE UAS) is, in fact, the UAC (sender) of the INFO request.\nLikewise, from the perspective of the INFO, the initiating UA of the\nsession (INVITE UAC) is the UAS (recipient) of the INFO request.\nSince this document strictly follows RFC 3261, we refer to the UA\nthat issues the INVITE as the \"initiating UA\" and the UA that\nresponds to the INVITE as the \"target UA\" to remove any confusion.</p>"
+  content: |-
+    <p>This document defines the new SIP INFO method and a mechanism for
+    defining, negotiating and exchanging Info Packages that use the INFO
+    method.  Applications that need to exchange session-related
+    information within a SIP INVITE-created dialog, also known as
+    application level information, use these INFO requests.  This draft
+    addresses issues and open items from RFC 2976 and replaces it.
+
+    Conventions Used in this Document
+
+    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+    document are to be interpreted as described in RFC 2119 [RFC2119].
+    The terminology in this document conforms to the Internet Security
+    Glossary [RFC4949].
+
+    Be mindful of the terms User Agent Server (UAS) and User Agent Client
+    (UAC).  This document strictly follows RFC 3261 [RFC3261].  The UAC
+    issues a SIP request and the UAS responds.  This terminology may be
+    confusing when one combines the INFO case with the INVITE case.  For
+    an INVITE, the initiator of the session is the UAC and the target of
+    the session is the UAS.  However, it is possible for the target UA of
+    the session, the UAS of the INVITE transaction, to send an INFO to
+    the initiating UA of the session, the UAC of the INVITE transaction.
+    From the perspective of the INFO, the target UA of the session
+    (INVITE UAS) is, in fact, the UAC (sender) of the INFO request.
+    Likewise, from the perspective of the INFO, the initiating UA of the
+    session (INVITE UAC) is the UAS (recipient) of the INFO request.
+    Since this document strictly follows RFC 3261, we refer to the UA
+    that issues the INVITE as the "initiating UA" and the UA that
+    responds to the INVITE as the "target UA" to remove any confusion.</p>
 series:
 - type: main
   title:

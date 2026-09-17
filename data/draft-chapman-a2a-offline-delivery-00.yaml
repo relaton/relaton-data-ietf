@@ -1,3 +1,4 @@
+---
 id: draftchapmana2aofflinedelivery00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agent-to-agent protocols assume a live HTTP or streaming hop.  Many\n   deployments cannot keep every agent always reachable: devices sleep,\n   cost tiers duty-cycle backends, and operators park agents outside\n   business hours.  Senders need a machine-readable asleep signal, a\n   bounded expectation for store-and-forward, and validation rules so an\n   offline agent is not a spam sink and does not act on forged or\n   expired messages after wake.\n\n   This document profiles offline delivery and reachability for A2A-\n   style JSON-RPC messaging.  It defines abstract reachability modes, an\n   asleep refusal signal, queue bounds and distinct queue-full errors,\n   validate-on-dequeue requirements, and split delivery semantics\n   (durable persist versus notify).  It is independent of Messaging\n   Layer Security (MLS) grouping; deployments that also use [GOMLS] MAY\n   apply both profiles.</p>"
+  content: |-
+    <p>Agent-to-agent protocols assume a live HTTP or streaming hop.  Many
+       deployments cannot keep every agent always reachable: devices sleep,
+       cost tiers duty-cycle backends, and operators park agents outside
+       business hours.  Senders need a machine-readable asleep signal, a
+       bounded expectation for store-and-forward, and validation rules so an
+       offline agent is not a spam sink and does not act on forged or
+       expired messages after wake.
+
+       This document profiles offline delivery and reachability for A2A-
+       style JSON-RPC messaging.  It defines abstract reachability modes, an
+       asleep refusal signal, queue bounds and distinct queue-full errors,
+       validate-on-dequeue requirements, and split delivery semantics
+       (durable persist versus notify).  It is independent of Messaging
+       Layer Security (MLS) grouping; deployments that also use [GOMLS] MAY
+       apply both profiles.</p>
 series:
 - type: main
   title:

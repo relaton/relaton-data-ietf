@@ -1,3 +1,4 @@
+---
 id: draftvicentelampspqchc00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The current Internet Public Key Infrastructure (PKI) lacks a machine-\n   verifiable, cryptographically bound mechanism for certificate holders\n   to commit, at issuance time, to the specific post-quantum (PQ) or PQ/\n   T hybrid key material they intend to present at the next certificate\n   renewal.  Without such a mechanism, relying parties cannot\n   distinguish a legitimate algorithm migration from a covert downgrade\n   attack — one in which a cryptographically relevant quantum computer\n   (CRQC) enables an adversary to suppress a PQ or composite certificate\n   at renewal and substitute one based solely on a classical algorithm\n   whose long-term security has been compromised.\n\n   This document defines the PQC Hybrid Commitment (PQCHC) X.509 v3\n   extension.  The extension carries an advisory, non-authoritative\n   commitment that is encoded as a cryptographic hash of the future\n   SubjectPublicKeyInfo the certificate subject intends to present in\n   the successor certificate, together with the intended committed\n   algorithm identifier and an expiry time for the commitment.  The\n   extension is non-critical, preserving backward compatibility with\n   legacy relying parties that do not recognize it.  PQCHC-aware relying\n   parties may use the commitment to detect downgrade at renewal time,\n   to integrate with ACME Renewal Information (ARI) scheduling, and to\n   provide an observable signal of an operator's concrete, binding\n   intent to complete PQ migration within a declared time window.</p>"
+  content: |-
+    <p>The current Internet Public Key Infrastructure (PKI) lacks a machine-
+       verifiable, cryptographically bound mechanism for certificate holders
+       to commit, at issuance time, to the specific post-quantum (PQ) or PQ/
+       T hybrid key material they intend to present at the next certificate
+       renewal.  Without such a mechanism, relying parties cannot
+       distinguish a legitimate algorithm migration from a covert downgrade
+       attack — one in which a cryptographically relevant quantum computer
+       (CRQC) enables an adversary to suppress a PQ or composite certificate
+       at renewal and substitute one based solely on a classical algorithm
+       whose long-term security has been compromised.
+
+       This document defines the PQC Hybrid Commitment (PQCHC) X.509 v3
+       extension.  The extension carries an advisory, non-authoritative
+       commitment that is encoded as a cryptographic hash of the future
+       SubjectPublicKeyInfo the certificate subject intends to present in
+       the successor certificate, together with the intended committed
+       algorithm identifier and an expiry time for the commitment.  The
+       extension is non-critical, preserving backward compatibility with
+       legacy relying parties that do not recognize it.  PQCHC-aware relying
+       parties may use the commitment to detect downgrade at renewal time,
+       to integrate with ACME Renewal Information (ARI) scheduling, and to
+       provide an observable signal of an operator's concrete, binding
+       intent to complete PQ migration within a declared time window.</p>
 relation:
 - type: updatedBy
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftasorwimseagentdelegationchain00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>AI agents increasingly delegate tasks to other agents.  Each\n   delegation should convey only a subset of the delegating party's\n   authority, that subset should be bounded in scope, magnitude, and\n   time, and any enforcement point should be able to verify -- offline,\n   with no call to an authorization server -- that a token presented at\n   hop N carries authority no greater than the token at hop N-1, back to\n   a trusted root.  OAuth 2.0 Token Exchange (RFC 8693) models two-party\n   delegation and records prior actors in a nested \"act\" claim, but that\n   claim is informational only and cannot enforce attenuation across a\n   chain of depth two or more.  This document defines the Agent\n   Delegation Chain: a profile of OAuth 2.0 JWT access tokens (RFC 9068)\n   that carries authority as Rich Authorization Requests (RFC 9396),\n   links each delegation to its parent by a cryptographic byte-\n   commitment, and specifies a deterministic offline verification\n   algorithm that enforces monotonic attenuation, bounded depth, and\n   monotonic expiry.  It reuses existing JOSE, proof-of-possession (RFC\n   9449), and status-list machinery (the OAuth Status List draft) and\n   introduces no new cryptography.</p>"
+  content: |-
+    <p>AI agents increasingly delegate tasks to other agents.  Each
+       delegation should convey only a subset of the delegating party's
+       authority, that subset should be bounded in scope, magnitude, and
+       time, and any enforcement point should be able to verify -- offline,
+       with no call to an authorization server -- that a token presented at
+       hop N carries authority no greater than the token at hop N-1, back to
+       a trusted root.  OAuth 2.0 Token Exchange (RFC 8693) models two-party
+       delegation and records prior actors in a nested "act" claim, but that
+       claim is informational only and cannot enforce attenuation across a
+       chain of depth two or more.  This document defines the Agent
+       Delegation Chain: a profile of OAuth 2.0 JWT access tokens (RFC 9068)
+       that carries authority as Rich Authorization Requests (RFC 9396),
+       links each delegation to its parent by a cryptographic byte-
+       commitment, and specifies a deterministic offline verification
+       algorithm that enforces monotonic attenuation, bounded depth, and
+       monotonic expiry.  It reuses existing JOSE, proof-of-possession (RFC
+       9449), and status-list machinery (the OAuth Status List draft) and
+       introduces no new cryptography.</p>
 relation:
 - type: updatedBy
   bibitem:

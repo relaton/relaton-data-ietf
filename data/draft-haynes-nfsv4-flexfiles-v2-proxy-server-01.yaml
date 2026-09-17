@@ -1,3 +1,4 @@
+---
 id: drafthaynesnfsv4flexfilesv2proxyserver01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type\n   supports client-side erasure coding and per-chunk repair between\n   clients and data servers.  This document extends that architecture\n   with a proxy server (PS) role: a registered peer of the metadata\n   server that polls the metadata server for work assignments and\n   carries them out -- moving a file from one layout to another,\n   reconstructing a whole file from surviving shards, or translating\n   between codecs for clients that cannot participate in the file's\n   native encoding (including NFSv3 clients).  All PS-MDS coordination\n   is fore-channel: the metadata server returns work assignments inline\n   in the response to a PS-initiated PROXY_PROGRESS poll, and the PS\n   reports completion via a fore-channel PROXY_DONE.  No callback\n   operations are required for the PS protocol.</p>"
+  content: |-
+    <p>Parallel NFS (pNFS) with the Flexible Files Version 2 layout type
+       supports client-side erasure coding and per-chunk repair between
+       clients and data servers.  This document extends that architecture
+       with a proxy server (PS) role: a registered peer of the metadata
+       server that polls the metadata server for work assignments and
+       carries them out -- moving a file from one layout to another,
+       reconstructing a whole file from surviving shards, or translating
+       between codecs for clients that cannot participate in the file's
+       native encoding (including NFSv3 clients).  All PS-MDS coordination
+       is fore-channel: the metadata server returns work assignments inline
+       in the response to a PS-initiated PROXY_PROGRESS poll, and the PS
+       reports completion via a fore-channel PROXY_DONE.  No callback
+       operations are required for the PS protocol.</p>
 relation:
 - type: updates
   bibitem:

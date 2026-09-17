@@ -1,3 +1,4 @@
+---
 id: draftthomassendnsopcdsconsistency00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>For maintaining DNSSEC Delegation Trust, DS records have to be kept\n   up to date.  [RFC7344] automates this by having the child publish CDS\n   and/or CDNSKEY records which hold the prospective DS parameters.\n   Parent-side entities (e.g.  Registries, Registrars) can use these\n   records to update the delegation's DS records.  A common method for\n   detecting changes in CDS/CDNSKEY record sets is to query them\n   periodically from the child zone (\"polling\"), as described in\n   Section 6.1 of [RFC7344].\n\n   This document specifies that if polling is used, parent-side entities\n   MUST ensure that CDS/CDNSKEY record sets are equivalent across all of\n   the child's authoritative nameservers, before taking any action based\n   on these records.</p>"
+  content: |-
+    <p>For maintaining DNSSEC Delegation Trust, DS records have to be kept
+       up to date.  [RFC7344] automates this by having the child publish CDS
+       and/or CDNSKEY records which hold the prospective DS parameters.
+       Parent-side entities (e.g.  Registries, Registrars) can use these
+       records to update the delegation's DS records.  A common method for
+       detecting changes in CDS/CDNSKEY record sets is to query them
+       periodically from the child zone ("polling"), as described in
+       Section 6.1 of [RFC7344].
+
+       This document specifies that if polling is used, parent-side entities
+       MUST ensure that CDS/CDNSKEY record sets are equivalent across all of
+       the child's authoritative nameservers, before taking any action based
+       on these records.</p>
 relation:
 - type: updatedBy
   bibitem:

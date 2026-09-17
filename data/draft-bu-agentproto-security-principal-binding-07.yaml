@@ -1,3 +1,4 @@
+---
 id: draftbuagentprotosecurityprincipalbinding07
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agent communication protocols often carry claims about user\n   authority, agent instance identity, tool or external-resource\n   identity, delegation state, session continuity, and action evidence.\n   These claims have different verifiers, freshness requirements,\n   failure modes, and security consequences.  If they are collapsed into\n   a single token, identity label, session identifier, or audit record,\n   protocol text can accidentally imply more authority or accountability\n   than the receiver can actually verify.\n\n   This document defines a verifier-facing model for separating those\n   claims.  It provides a reusable matrix format that protocol authors\n   can use to state, for each security-relevant claim, which field\n   carries it, which party verifies it, what binding or freshness rule\n   applies, what failure behavior is required when the claim is absent,\n   stale, inconsistent, or not verifiable, and what constrained result\n   an application may consume after successful verification.  It also\n   separates specification status, implementation status, and evidence\n   type so that reviewers can distinguish current protocol text,\n   implementation evidence, inherited mechanisms, and architectural\n   assumptions.  The document is protocol-neutral.  It is intended to\n   help compare candidate agent communication drafts and to provide\n   security-considerations and requirements text for agent session and\n   delegation binding.\n\n   The document also defines row-outcome semantics and dependency-\n   closure rules for composed mappings.  These rules prevent a composite\n   result from becoming stronger than its verified inputs, distinguish\n   failed checks, unsupported verifier capabilities, checks skipped\n   after a failed prerequisite, and unavailable or ambiguous inputs,\n   propagate transitive dependency failures, and make cyclic, stale,\n   downgraded, or revision-incoherent dependencies visible to reviewers.</p>"
+  content: |-
+    <p>Agent communication protocols often carry claims about user
+       authority, agent instance identity, tool or external-resource
+       identity, delegation state, session continuity, and action evidence.
+       These claims have different verifiers, freshness requirements,
+       failure modes, and security consequences.  If they are collapsed into
+       a single token, identity label, session identifier, or audit record,
+       protocol text can accidentally imply more authority or accountability
+       than the receiver can actually verify.
+
+       This document defines a verifier-facing model for separating those
+       claims.  It provides a reusable matrix format that protocol authors
+       can use to state, for each security-relevant claim, which field
+       carries it, which party verifies it, what binding or freshness rule
+       applies, what failure behavior is required when the claim is absent,
+       stale, inconsistent, or not verifiable, and what constrained result
+       an application may consume after successful verification.  It also
+       separates specification status, implementation status, and evidence
+       type so that reviewers can distinguish current protocol text,
+       implementation evidence, inherited mechanisms, and architectural
+       assumptions.  The document is protocol-neutral.  It is intended to
+       help compare candidate agent communication drafts and to provide
+       security-considerations and requirements text for agent session and
+       delegation binding.
+
+       The document also defines row-outcome semantics and dependency-
+       closure rules for composed mappings.  These rules prevent a composite
+       result from becoming stronger than its verified inputs, distinguish
+       failed checks, unsupported verifier capabilities, checks skipped
+       after a failed prerequisite, and unavailable or ambiguous inputs,
+       propagate transitive dependency failures, and make cyclic, stale,
+       downgraded, or revision-incoherent dependencies visible to reviewers.</p>
 relation:
 - type: updates
   bibitem:

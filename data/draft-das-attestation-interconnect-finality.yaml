@@ -1,3 +1,4 @@
+---
 id: draftdasattestationinterconnectfinality
 schema_version: v1.5.6
 formattedref:
@@ -5,7 +6,8 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'When Attestation Is Not Enough: Execution Finality for High-Assurance Resource Transitions'
+  content: 'When Attestation Is Not Enough: Execution Finality for High-Assurance
+    Resource Transitions'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-attestation-interconnect-finality-00
@@ -19,7 +21,47 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Modern infrastructure increasingly allows memory, accelerators,\n   device interfaces, storage regions, and other resources to move\n   dynamically between hosts, tenants, virtual machines, and security\n   domains.  Existing mechanisms can authenticate devices, attest\n   software and firmware state, protect communication, and authorize\n   resource operations.  However, these properties do not necessarily\n   establish that the exact resource transition that becomes effective\n   is still the transition that was evaluated and authorized.\n\n   This distinction becomes security-critical when a change in\n   addressability, ownership, routing, or device assignment itself\n   exposes protected state.  For example, a dynamically reassigned\n   memory extent may become accessible to a new tenant even though the\n   device is authentic and the transport is protected, if sanitization,\n   ownership state, allocation generation, destination binding, or other\n   required conditions are no longer valid at the moment of\n   reassignment.\n\n   This document describes an execution-finality model in which a\n   proposed transition remains non-effective until a protected\n   enforcement boundary verifies the concrete operation immediately\n   before effectuation.  Authorization is bound to the exact resource,\n   source, destination, generation, security state, freshness\n   conditions, and required preconditions, with replay and alternate-\n   path protections.\n\n   The problem is particularly relevant to high-assurance AI and\n   composable-compute environments, including NVIDIA NVLink-based\n   confidential multi-GPU systems, Arm Confidential Compute Architecture\n   (CCA) and Realm Management Extension (RME) systems, UALink\n   accelerator fabrics, CXL pooled-memory systems, and confidential-\n   computing deployments operated by cloud providers.  These names\n   identify published industry directions and alignment points; they are\n   not assertions that any named implementation is vulnerable or non-\n   conformant.\n\n   The model complements attestation, confidential computing, secure\n   transport, and device-assignment mechanisms rather than replacing\n   them.  Its central security invariant is that a trusted component\n   does not, by itself, imply a trusted transition.</p>"
+  content: |-
+    <p>Modern infrastructure increasingly allows memory, accelerators,
+       device interfaces, storage regions, and other resources to move
+       dynamically between hosts, tenants, virtual machines, and security
+       domains.  Existing mechanisms can authenticate devices, attest
+       software and firmware state, protect communication, and authorize
+       resource operations.  However, these properties do not necessarily
+       establish that the exact resource transition that becomes effective
+       is still the transition that was evaluated and authorized.
+
+       This distinction becomes security-critical when a change in
+       addressability, ownership, routing, or device assignment itself
+       exposes protected state.  For example, a dynamically reassigned
+       memory extent may become accessible to a new tenant even though the
+       device is authentic and the transport is protected, if sanitization,
+       ownership state, allocation generation, destination binding, or other
+       required conditions are no longer valid at the moment of
+       reassignment.
+
+       This document describes an execution-finality model in which a
+       proposed transition remains non-effective until a protected
+       enforcement boundary verifies the concrete operation immediately
+       before effectuation.  Authorization is bound to the exact resource,
+       source, destination, generation, security state, freshness
+       conditions, and required preconditions, with replay and alternate-
+       path protections.
+
+       The problem is particularly relevant to high-assurance AI and
+       composable-compute environments, including NVIDIA NVLink-based
+       confidential multi-GPU systems, Arm Confidential Compute Architecture
+       (CCA) and Realm Management Extension (RME) systems, UALink
+       accelerator fabrics, CXL pooled-memory systems, and confidential-
+       computing deployments operated by cloud providers.  These names
+       identify published industry directions and alignment points; they are
+       not assertions that any named implementation is vulnerable or non-
+       conformant.
+
+       The model complements attestation, confidential computing, secure
+       transport, and device-assignment mechanisms rather than replacing
+       them.  Its central security invariant is that a trusted component
+       does not, by itself, imply a trusted transition.</p>
 relation:
 - type: includes
   bibitem:

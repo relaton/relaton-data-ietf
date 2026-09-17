@@ -1,3 +1,4 @@
+---
 id: draftmoskowitzadsbauth02
 schema_version: v1.5.6
 type: standard
@@ -153,7 +154,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Automatic Dependent Surveillance – Broadcast (ADS-B) is a\n   surveillance technology mandated in many airspaces.  It is now widely\n   deployed but suffers from a lack of security and privacy.  From a\n   security point of view, it is relatively easy to spoof ADS-B messages\n   with readily available hardware and software.  From a privacy point\n   of view, every ADS-B message contains the aircraft's assigned 24-bit\n   ICAO address, a unique identifier that can be cross-referenced with\n   external databases (e.g. aircraft registries) to reveal the owner,\n   and can be used to track when and where a specific aircraft has\n   flown.  In addition, the main transmission medium used for ADS-B, the\n   1090 MHz frequency, on which messages are broadcast using the\n   Extended Squitter (1090ES) format, is approaching saturation in some\n   parts of the world due to the volume of ADS-B and other protocol\n   messages, resulting in packet loss in certain areas.\n\n   This paper presents the IETF TESLA protocol along with X.509\n   certificates issued by ICAO member states for each aircraft to\n   authenticate all ADS-B messaging.  It leverages the 8PSK phase\n   overlay (PO) scheme proposed in the Minimum Operational Performance\n   Standards (MOPS) for ADS-B (RTCA [DO-260C]), which enables 1090ES\n   ADS-B transmissions to convey three times more information, to\n   support the transmission of the extra security information required\n   by the authentication scheme.  By doing so, the impact of\n   authentication on channel usage is negligible.  Beyond message\n   authentication, this scheme protocol has two important additional\n   benefits: 1) the possibility to implement a Flight Authorization\n   scheme, allowing ATC and intercepting aircraft to not only\n   authenticate an aircraft but to verify that it is authorizes to\n   conduct that flight and 2) a privacy-preserving methodology that\n   assigns random 24-bit identifiers to designated aircraft while still\n   enabling blind authentication of their ADS-B transmissions.</p>"
+  content: |-
+    <p>Automatic Dependent Surveillance – Broadcast (ADS-B) is a
+       surveillance technology mandated in many airspaces.  It is now widely
+       deployed but suffers from a lack of security and privacy.  From a
+       security point of view, it is relatively easy to spoof ADS-B messages
+       with readily available hardware and software.  From a privacy point
+       of view, every ADS-B message contains the aircraft's assigned 24-bit
+       ICAO address, a unique identifier that can be cross-referenced with
+       external databases (e.g. aircraft registries) to reveal the owner,
+       and can be used to track when and where a specific aircraft has
+       flown.  In addition, the main transmission medium used for ADS-B, the
+       1090 MHz frequency, on which messages are broadcast using the
+       Extended Squitter (1090ES) format, is approaching saturation in some
+       parts of the world due to the volume of ADS-B and other protocol
+       messages, resulting in packet loss in certain areas.
+
+       This paper presents the IETF TESLA protocol along with X.509
+       certificates issued by ICAO member states for each aircraft to
+       authenticate all ADS-B messaging.  It leverages the 8PSK phase
+       overlay (PO) scheme proposed in the Minimum Operational Performance
+       Standards (MOPS) for ADS-B (RTCA [DO-260C]), which enables 1090ES
+       ADS-B transmissions to convey three times more information, to
+       support the transmission of the extra security information required
+       by the authentication scheme.  By doing so, the impact of
+       authentication on channel usage is negligible.  Beyond message
+       authentication, this scheme protocol has two important additional
+       benefits: 1) the possibility to implement a Flight Authorization
+       scheme, allowing ATC and intercepting aircraft to not only
+       authenticate an aircraft but to verify that it is authorizes to
+       conduct that flight and 2) a privacy-preserving methodology that
+       assigns random 24-bit identifiers to designated aircraft while still
+       enabling blind authentication of their ADS-B transmissions.</p>
 relation:
 - type: updates
   bibitem:

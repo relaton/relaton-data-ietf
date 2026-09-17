@@ -1,3 +1,4 @@
+---
 id: draftmorrisonidentityattributedcommits02
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a git commit trailer grammar for identity-\n   attributed contributions using the ~handle identity primitive defined\n   in [MCPDNS].  The grammar binds sovereign actors, automated bots, and\n   AI instruments to specific commits via three tier-structured trailers\n   (Acted-By, Executed-By, Drafted-With) and three optional\n   cryptographic trailers (Identity-Signature, Identity-Key-Id,\n   Identity-Anchor).  The signature is computed with Ed25519 over the\n   commit's tree hash rather than its commit hash, preserving\n   attribution across rebase, cherry-pick, and squash merge operations.\n   Conformant parsers reject cross-tier category errors (e.g., an\n   Instrument-tier handle in an Acted-By slot) as malformed.  The\n   mechanism is provider-neutral, depends only on DNS [RFC1035] and the\n   ~handle resolution algorithm of [MCPDNS], and requires no central\n   authority or platform-specific verification service.</p>"
+  content: |-
+    <p>This document defines a git commit trailer grammar for identity-
+       attributed contributions using the ~handle identity primitive defined
+       in [MCPDNS].  The grammar binds sovereign actors, automated bots, and
+       AI instruments to specific commits via three tier-structured trailers
+       (Acted-By, Executed-By, Drafted-With) and three optional
+       cryptographic trailers (Identity-Signature, Identity-Key-Id,
+       Identity-Anchor).  The signature is computed with Ed25519 over the
+       commit's tree hash rather than its commit hash, preserving
+       attribution across rebase, cherry-pick, and squash merge operations.
+       Conformant parsers reject cross-tier category errors (e.g., an
+       Instrument-tier handle in an Acted-By slot) as malformed.  The
+       mechanism is provider-neutral, depends only on DNS [RFC1035] and the
+       ~handle resolution algorithm of [MCPDNS], and requires no central
+       authority or platform-specific verification service.</p>
 relation:
 - type: updates
   bibitem:

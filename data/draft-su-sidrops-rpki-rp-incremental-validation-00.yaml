@@ -1,10 +1,12 @@
+---
 id: draftsusidropsrpkirpincrementalvalidation00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: A Publication-Point-Based Incremental Validation Procedure for RPKI Relying Parties
+  content: A Publication-Point-Based Incremental Validation Procedure for RPKI Relying
+    Parties
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-su-sidrops-rpki-rp-incremental-validation-00
@@ -103,7 +105,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>RPKI Relying Parties commonly perform top-down validation of the RPKI\n   certificate tree after repository synchronization.  Existing\n   repository synchronization mechanisms can update the local repository\n   incrementally, avoiding a complete retrieval of all repository data.\n   However, after such an incremental repository update, an RP\n   implementation may still repeat full top-down validation over the\n   local repository.  It means that the RP starts from the trust anchors\n   and performs complete validation checks for all currently reachable\n   RPKI objects encountered during the traversal.  Repeating such\n   validation for objects whose validation inputs have not changed can\n   introduce unnecessary validation overhead.\n\n   This document specifies a publication-point-based incremental\n   validation procedure for RPKI RPs.  The procedure is intended to\n   reduce redundant validation work after incremental repository\n   synchronization, while preserving the same validation result as a\n   full top-down validation over the same repository snapshot, trust\n   anchor set, validation policy, and validation time.  This document\n   does not change the syntax or validation semantics of any RPKI\n   object.</p>"
+  content: |-
+    <p>RPKI Relying Parties commonly perform top-down validation of the RPKI
+       certificate tree after repository synchronization.  Existing
+       repository synchronization mechanisms can update the local repository
+       incrementally, avoiding a complete retrieval of all repository data.
+       However, after such an incremental repository update, an RP
+       implementation may still repeat full top-down validation over the
+       local repository.  It means that the RP starts from the trust anchors
+       and performs complete validation checks for all currently reachable
+       RPKI objects encountered during the traversal.  Repeating such
+       validation for objects whose validation inputs have not changed can
+       introduce unnecessary validation overhead.
+
+       This document specifies a publication-point-based incremental
+       validation procedure for RPKI RPs.  The procedure is intended to
+       reduce redundant validation work after incremental repository
+       synchronization, while preserving the same validation result as a
+       full top-down validation over the same repository snapshot, trust
+       anchor set, validation policy, and validation time.  This document
+       does not change the syntax or validation semantics of any RPKI
+       object.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftreillyplantsbulksubtreeproofs00
 schema_version: v1.5.6
 type: standard
@@ -59,7 +60,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Merkle Tree Certificates require relying parties to periodically\n   obtain a set of active landmark subtrees and verify each is\n   consistent with a reference checkpoint of the issuance log.  As\n   specified, this requires one subtree consistency proof per landmark\n   subtree.  Because the active landmark subtrees form a contiguous\n   range of the log, their individual consistency proofs share the great\n   majority of their interior nodes, and verifying them independently\n   carries substantial redundancy.\n\n   This document defines a bulk subtree consistency proof, which\n   verifies an entire set of landmark subtrees against a single\n   reference checkpoint using proof material logarithmic in the size of\n   the log, rather than logarithmic per subtree.  It is a size\n   optimization for the relying party update channel and introduces no\n   change to certificate verification or to the security properties of\n   Merkle Tree Certificates.\n\n   The construction in this document has not yet been validated against\n   a reference implementation.  It is published to solicit review of the\n   approach.  Open items are recorded in an appendix.</p>"
+  content: |-
+    <p>Merkle Tree Certificates require relying parties to periodically
+       obtain a set of active landmark subtrees and verify each is
+       consistent with a reference checkpoint of the issuance log.  As
+       specified, this requires one subtree consistency proof per landmark
+       subtree.  Because the active landmark subtrees form a contiguous
+       range of the log, their individual consistency proofs share the great
+       majority of their interior nodes, and verifying them independently
+       carries substantial redundancy.
+
+       This document defines a bulk subtree consistency proof, which
+       verifies an entire set of landmark subtrees against a single
+       reference checkpoint using proof material logarithmic in the size of
+       the log, rather than logarithmic per subtree.  It is a size
+       optimization for the relying party update channel and introduces no
+       change to certificate verification or to the security properties of
+       Merkle Tree Certificates.
+
+       The construction in this document has not yet been validated against
+       a reference implementation.  It is published to solicit review of the
+       approach.  Open items are recorded in an appendix.</p>
 relation:
 - type: updatedBy
   bibitem:

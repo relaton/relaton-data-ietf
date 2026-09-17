@@ -1,3 +1,4 @@
+---
 id: draftvaubanx402delegationbinding
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,30 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agent-to-agent HTTP payment pipelines built on x402 V2 require a\n   mechanism to bind a DelegationGrant receipt to the identity of the\n   delegatee agent that will consume it.  Existing x402 DelegationGrant\n   fields (as defined in [LIFECYCLE-FSM]) constrain spend scope and\n   expiry but do not cryptographically bind the grant to an agent\n   identity token recognised by A2A or MCP agent protocol layers.\n   Without this binding, a grant issued to one agent can be replayed by\n   another agent with different authority bounds, enabling undetected\n   privilege escalation in automated payment pipelines.\n\n   This document defines a delegation binding extension for x402 V2\n   DelegationGrant receipts.  The extension introduces a\n   delegate_pseudonym field derived from the agent's identity via the\n   JCS canonical preimage discipline ([RFC8785]), a structured set of\n   spend-cap and scope fields, and a delegation_nonce that enables\n   nullifier consumption on revocation.  The binding is cross-validated\n   against 18 bounded-spend vectors in five language runtimes\n   ([X402-2432]).  Integration notes are provided for A2A Composable\n   Trust Evidence Format ([A2A-CTEF]) and MCP agent protocol surfaces\n   ([VAUBAN-DEMO]).  This document is the fourth companion in the Vauban\n   Pay normative quartet: format ([STARK-RECEIPTS]), lifecycle FSM\n   ([LIFECYCLE-FSM]), and delegation binding (this document); the\n   algebra companion draft-vauban-x402-vpsf-algebra is in preparation.</p>"
+  content: |-
+    <p>Agent-to-agent HTTP payment pipelines built on x402 V2 require a
+       mechanism to bind a DelegationGrant receipt to the identity of the
+       delegatee agent that will consume it.  Existing x402 DelegationGrant
+       fields (as defined in [LIFECYCLE-FSM]) constrain spend scope and
+       expiry but do not cryptographically bind the grant to an agent
+       identity token recognised by A2A or MCP agent protocol layers.
+       Without this binding, a grant issued to one agent can be replayed by
+       another agent with different authority bounds, enabling undetected
+       privilege escalation in automated payment pipelines.
+
+       This document defines a delegation binding extension for x402 V2
+       DelegationGrant receipts.  The extension introduces a
+       delegate_pseudonym field derived from the agent's identity via the
+       JCS canonical preimage discipline ([RFC8785]), a structured set of
+       spend-cap and scope fields, and a delegation_nonce that enables
+       nullifier consumption on revocation.  The binding is cross-validated
+       against 18 bounded-spend vectors in five language runtimes
+       ([X402-2432]).  Integration notes are provided for A2A Composable
+       Trust Evidence Format ([A2A-CTEF]) and MCP agent protocol surfaces
+       ([VAUBAN-DEMO]).  This document is the fourth companion in the Vauban
+       Pay normative quartet: format ([STARK-RECEIPTS]), lifecycle FSM
+       ([LIFECYCLE-FSM]), and delegation binding (this document); the
+       algebra companion draft-vauban-x402-vpsf-algebra is in preparation.</p>
 relation:
 - type: includes
   bibitem:

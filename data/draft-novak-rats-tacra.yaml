@@ -1,3 +1,4 @@
+---
 id: draftnovakratstacra
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,31 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>There is a large class of \"RATS-Unaware\" Relying Parties (RUPs) that\n   Attesters nevertheless need to interoperate with.  Existing deployed\n   services, which precede the introduction of Remote Attestation, are\n   often difficult to change/update in significant ways due to, among\n   other reasons, organizational friction, technological inertia, and\n   regulatory policies.  There are significant advantages if workloads\n   can be incrementally updated in the trustworthiness of the platform,\n   without disrupting their clients and servers.\n\n   This document describes an architecture by which Remote Attestation\n   is utilized for providing Attesters with Identity Documents (keys or\n   credentials) to authenticate to RUPs.  This architecture is intended\n   to work with common credential acquisition protocols and mechanisms\n   such as EST, SPIFFE/SPIRE, ACMEv2, and many others.\n\n   Another important but separate goal is to encapsulate the Attester-\n   side complexity of Remote Attestation and credential acquisition\n   similar to how Envoy does it.  This allows Attesters to be\n   implemented in a way that abstracts away the details of credential\n   acquisition: both the protocols used and the Credential Acquisition\n   Mechanisms employed, whether minting new (Enrollment), or requesting\n   existing (Retrieval) credentials.  Likewise, the choice between RATS\n   Passport and Background Check models is made opaque to the Attester,\n   further simplifying its development.</p>"
+  content: |-
+    <p>There is a large class of "RATS-Unaware" Relying Parties (RUPs) that
+       Attesters nevertheless need to interoperate with.  Existing deployed
+       services, which precede the introduction of Remote Attestation, are
+       often difficult to change/update in significant ways due to, among
+       other reasons, organizational friction, technological inertia, and
+       regulatory policies.  There are significant advantages if workloads
+       can be incrementally updated in the trustworthiness of the platform,
+       without disrupting their clients and servers.
+
+       This document describes an architecture by which Remote Attestation
+       is utilized for providing Attesters with Identity Documents (keys or
+       credentials) to authenticate to RUPs.  This architecture is intended
+       to work with common credential acquisition protocols and mechanisms
+       such as EST, SPIFFE/SPIRE, ACMEv2, and many others.
+
+       Another important but separate goal is to encapsulate the Attester-
+       side complexity of Remote Attestation and credential acquisition
+       similar to how Envoy does it.  This allows Attesters to be
+       implemented in a way that abstracts away the details of credential
+       acquisition: both the protocols used and the Credential Acquisition
+       Mechanisms employed, whether minting new (Enrollment), or requesting
+       existing (Retrieval) credentials.  Likewise, the choice between RATS
+       Passport and Background Check models is made opaque to the Attester,
+       further simplifying its development.</p>
 relation:
 - type: includes
   bibitem:

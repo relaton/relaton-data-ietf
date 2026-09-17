@@ -1,10 +1,12 @@
+---
 id: draftfletchertransactiontokenchainingprofile01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Transaction Token Authorization Grant Profile for OAuth Identity and Authorization Chaining
+  content: Transaction Token Authorization Grant Profile for OAuth Identity and Authorization
+    Chaining
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-fletcher-transaction-token-chaining-profile-01
@@ -103,7 +105,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines a profile of the OAuth Identity and\n   Authorization Chaining Across Domains\n   [I-D.ietf-oauth-identity-chaining] mechanism that uses a Transaction\n   Token (Txn-Token) [I-D.ietf-oauth-transaction-tokens] as the subject\n   token in a Token Exchange [RFC8693] request to obtain a JWT\n   Authorization Grant for crossing a trust boundary.\n\n   A Txn-Token is scoped to a single trust domain and represents the\n   full authorization context of an in-progress transaction, regardless\n   of whether that transaction was initiated by a human user calling an\n   external API, by an internal system event, or by an automated\n   workload.  This profile specifies how a service operating within that\n   trust domain can present its Txn-Token to obtain a JWT Authorization\n   Grant that carries the necessary context across a trust boundary,\n   enabling an access token to be issued for a partner service, without\n   exposing internal trust-domain credentials or token formats beyond\n   the trust boundary.</p>"
+  content: |-
+    <p>This specification defines a profile of the OAuth Identity and
+       Authorization Chaining Across Domains
+       [I-D.ietf-oauth-identity-chaining] mechanism that uses a Transaction
+       Token (Txn-Token) [I-D.ietf-oauth-transaction-tokens] as the subject
+       token in a Token Exchange [RFC8693] request to obtain a JWT
+       Authorization Grant for crossing a trust boundary.
+
+       A Txn-Token is scoped to a single trust domain and represents the
+       full authorization context of an in-progress transaction, regardless
+       of whether that transaction was initiated by a human user calling an
+       external API, by an internal system event, or by an automated
+       workload.  This profile specifies how a service operating within that
+       trust domain can present its Txn-Token to obtain a JWT Authorization
+       Grant that carries the necessary context across a trust boundary,
+       enabling an access token to be issued for a partner service, without
+       exposing internal trust-domain credentials or token formats beyond
+       the trust boundary.</p>
 relation:
 - type: updates
   bibitem:

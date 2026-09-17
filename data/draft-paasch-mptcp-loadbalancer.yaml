@@ -1,3 +1,4 @@
+---
 id: draftpaaschmptcploadbalancer
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,19 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Large webserver farms consist of thousands of frontend proxies that\n   serve as endpoints for the TCP and TLS connection and relay traffic\n   to the (sometimes distant) backend servers.  Load-balancing across\n   those server is done by layer-4 loadbalancers that ensure that a TCP\n   flow will always reach the same server.\n\n   Multipath TCP's use of multiple TCP subflows for the transmission of\n   the data stream requires those loadbalancers to be aware of MPTCP to\n   ensure that all subflows belonging to the same MPTCP connection reach\n   the same frontend proxy.  In this document we analyze the challenges\n   related to this and suggest a simple modification to the generation\n   of the MPTCP-token to overcome those challenges.</p>"
+  content: |-
+    <p>Large webserver farms consist of thousands of frontend proxies that
+       serve as endpoints for the TCP and TLS connection and relay traffic
+       to the (sometimes distant) backend servers.  Load-balancing across
+       those server is done by layer-4 loadbalancers that ensure that a TCP
+       flow will always reach the same server.
+
+       Multipath TCP's use of multiple TCP subflows for the transmission of
+       the data stream requires those loadbalancers to be aware of MPTCP to
+       ensure that all subflows belonging to the same MPTCP connection reach
+       the same frontend proxy.  In this document we analyze the challenges
+       related to this and suggest a simple modification to the generation
+       of the MPTCP-token to overcome those challenges.</p>
 relation:
 - type: includes
   bibitem:

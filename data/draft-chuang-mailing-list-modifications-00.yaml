@@ -1,3 +1,4 @@
+---
 id: draftchuangmailinglistmodifications00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Mailing-lists distribute email to multiple recipients by forwarding\n   and potentially modifying messages to document the distribution to\n   the recipients.  Unfortunately forwarding breaks SPF (RFC7208)\n   authentication and message modification breaks DKIM (RFC6376)\n   authentication.  This document is based on draft-chuang-replay-\n   resistant-arc which is built on ARC (RFC8617) with extensions to\n   tolerate common mailing-list message modifications.  This\n   specification characterizes the mailing-list transforms such that a\n   receiver can reverse them to enable digital signatures verification\n   and attribution of the message content.  These message modifications\n   are: 1) prepending a description string to the Subject header, 2)\n   rewriting the From header, 3) removing the original DKIM-Signature\n   and 4) appending a footer to the message body.</p>"
+  content: |-
+    <p>Mailing-lists distribute email to multiple recipients by forwarding
+       and potentially modifying messages to document the distribution to
+       the recipients.  Unfortunately forwarding breaks SPF (RFC7208)
+       authentication and message modification breaks DKIM (RFC6376)
+       authentication.  This document is based on draft-chuang-replay-
+       resistant-arc which is built on ARC (RFC8617) with extensions to
+       tolerate common mailing-list message modifications.  This
+       specification characterizes the mailing-list transforms such that a
+       receiver can reverse them to enable digital signatures verification
+       and attribution of the message content.  These message modifications
+       are: 1) prepending a description string to the Subject header, 2)
+       rewriting the From header, 3) removing the original DKIM-Signature
+       and 4) appending a footer to the message body.</p>
 relation:
 - type: updatedBy
   bibitem:

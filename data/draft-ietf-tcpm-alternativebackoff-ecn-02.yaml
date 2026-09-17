@@ -1,3 +1,4 @@
+---
 id: draftietftcpmalternativebackoffecn02
 schema_version: v1.5.6
 type: standard
@@ -125,7 +126,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Recent Active Queue Management (AQM) mechanisms instantiate shallow\n   buffers with burst tolerance to minimise the time that packets spend\n   enqueued at a bottleneck.  However, shallow buffering can cause\n   noticeable performance degradation when TCP is used over a network\n   path with a large bandwidth-delay-product.  Traditional methods rely\n   on detecting network congestion through reported loss of transport\n   packets.  Explicit Congestion Notification (ECN) instead allows a\n   router to directly signal incipient congestion.  A sending endpoint\n   can distinguish when congestion is signalled via ECN, rather than by\n   packet loss.  An ECN signal indicates that an AQM mechanism has done\n   its job, and therefore the bottleneck network queue is likely to be\n   shallow.  This document therefore proposes an update to the TCP\n   sender-side ECN reaction in congestion avoidance to reduce the\n   Congestion Window (cwnd) by a smaller amount than the congestion\n   control algorithm's reaction to loss.  This document also recommends\n   this approach to be adopted by any other transport protocol that\n   implements a congestion control reduction to an ECN congestion\n   signal.</p>"
+  content: |-
+    <p>Recent Active Queue Management (AQM) mechanisms instantiate shallow
+       buffers with burst tolerance to minimise the time that packets spend
+       enqueued at a bottleneck.  However, shallow buffering can cause
+       noticeable performance degradation when TCP is used over a network
+       path with a large bandwidth-delay-product.  Traditional methods rely
+       on detecting network congestion through reported loss of transport
+       packets.  Explicit Congestion Notification (ECN) instead allows a
+       router to directly signal incipient congestion.  A sending endpoint
+       can distinguish when congestion is signalled via ECN, rather than by
+       packet loss.  An ECN signal indicates that an AQM mechanism has done
+       its job, and therefore the bottleneck network queue is likely to be
+       shallow.  This document therefore proposes an update to the TCP
+       sender-side ECN reaction in congestion avoidance to reduce the
+       Congestion Window (cwnd) by a smaller amount than the congestion
+       control algorithm's reaction to loss.  This document also recommends
+       this approach to be adopted by any other transport protocol that
+       implements a congestion control reduction to an ECN congestion
+       signal.</p>
 relation:
 - type: updates
   bibitem:

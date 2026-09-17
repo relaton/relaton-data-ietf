@@ -1,3 +1,4 @@
+---
 id: draftjurkovikjhttpintegritycache00
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>HTTP caches update stored response fields, combine partial responses,\n   and construct responses from stored state.  Those operations can move\n   an Integrity field value onto content or representation data\n   different from the data to which the value originally applied.\n\n   This document updates RFC 9111 by defining field-specific maintenance\n   rules for Content-Digest, Repr-Digest, and Unencoded-Digest.  A cache\n   either preserves the association between each retained or emitted\n   dictionary member and its defined input, recomputes the member over\n   the resulting input, or removes the member.  The rules cover stored-\n   field updates, 304 and HEAD freshening, partial-response combination,\n   cache-generated 304, HEAD, and 206 responses, and content-coding\n   transformations.  No new HTTP field, status code, cache directive,\n   validator, or digest algorithm is defined.</p>"
+  content: |-
+    <p>HTTP caches update stored response fields, combine partial responses,
+       and construct responses from stored state.  Those operations can move
+       an Integrity field value onto content or representation data
+       different from the data to which the value originally applied.
+
+       This document updates RFC 9111 by defining field-specific maintenance
+       rules for Content-Digest, Repr-Digest, and Unencoded-Digest.  A cache
+       either preserves the association between each retained or emitted
+       dictionary member and its defined input, recomputes the member over
+       the resulting input, or removes the member.  The rules cover stored-
+       field updates, 304 and HEAD freshening, partial-response combination,
+       cache-generated 304, HEAD, and 206 responses, and content-coding
+       transformations.  No new HTTP field, status code, cache directive,
+       validator, or digest algorithm is defined.</p>
 series:
 - type: main
   title:

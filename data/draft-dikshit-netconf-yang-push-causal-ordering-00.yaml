@@ -1,3 +1,4 @@
+---
 id: draftdikshitnetconfyangpushcausalordering00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>YANG Datastore Telemetry, YANG-Push version 2\n   [I-D.ietf-netconf-yang-push-2], assigns each publisher a\n   monotonically increasing sequence number so a receiver can detect\n   loss and reordering. The current design leaves two questions\n   unanswered: what happens when the counter wraps, and how a\n   receiver aggregating records from more than one publisher is to\n   compare sequence numbers that were never defined to be comparable\n   across publishers in the first place. Both questions have already\n   been studied, and largely settled, in the distributed systems\n   literature under the heading of logical and hybrid logical clocks,\n   and in deployed streaming systems under the heading of offset and\n   epoch numbering. This document evaluates three existing causal-\n   ordering primitives against YANG-Push's specific constraints and\n   proposes adopting a Hybrid Logical Clock so that the wraparound and\n   cross-publisher comparison problems are removed by construction\n   rather than patched with a wider counter.</p>"
+  content: |-
+    <p>YANG Datastore Telemetry, YANG-Push version 2
+       [I-D.ietf-netconf-yang-push-2], assigns each publisher a
+       monotonically increasing sequence number so a receiver can detect
+       loss and reordering. The current design leaves two questions
+       unanswered: what happens when the counter wraps, and how a
+       receiver aggregating records from more than one publisher is to
+       compare sequence numbers that were never defined to be comparable
+       across publishers in the first place. Both questions have already
+       been studied, and largely settled, in the distributed systems
+       literature under the heading of logical and hybrid logical clocks,
+       and in deployed streaming systems under the heading of offset and
+       epoch numbering. This document evaluates three existing causal-
+       ordering primitives against YANG-Push's specific constraints and
+       proposes adopting a Hybrid Logical Clock so that the wraparound and
+       cross-publisher comparison problems are removed by construction
+       rather than patched with a wider counter.</p>
 series:
 - type: main
   title:

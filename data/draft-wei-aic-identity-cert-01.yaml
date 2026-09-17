@@ -1,3 +1,4 @@
+---
 id: draftweiaicidentitycert01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the AI Agent Identity Certificate (AIC)\n   Extension for X.509 v3 certificates.  The AIC extension enables\n   binding of an AI Agent's cryptographic identity to a natural person\n   (principal), providing cryptographic evidence that can support\n   attribution of AI-autonomous actions to a principal.  This\n   specification intentionally separates cryptographic delegation from\n   authorization semantics: AIC defines the cryptographic binding\n   between agent and principal, while all capability and policy\n   semantics are defined externally by vendors, industries, or\n   regulators.  The extension is identified by the IANA Private\n   Enterprise Number 66257 assigned to the document author's\n   organization.\n\n   The AIC extension carries agent identity fields (agentId,\n   delegationMode), a principal identifier (principalUid) linking the\n   agent to the authorizing principal, a container-based capability\n   declaration, authorization boundary constraints, and delegation\n   authorization evidence with replay protection.  A companion\n   PrincipalAuthorization extension anchors Principal-side grant\n   declarations and delegation policies.  An authorizationConstraints\n   container provides offline-verifiable execution boundaries (IP range,\n   window).  An extensibility framework allows vendor-specific and user-\n   specific metadata.\n\n   This document specifies the ASN.1 module, OID registration, field\n   semantics, delegation model, and extensibility framework.  Security\n   considerations for deployment in regulated enterprise environments\n   are discussed.</p>"
+  content: |-
+    <p>This document defines the AI Agent Identity Certificate (AIC)
+       Extension for X.509 v3 certificates.  The AIC extension enables
+       binding of an AI Agent's cryptographic identity to a natural person
+       (principal), providing cryptographic evidence that can support
+       attribution of AI-autonomous actions to a principal.  This
+       specification intentionally separates cryptographic delegation from
+       authorization semantics: AIC defines the cryptographic binding
+       between agent and principal, while all capability and policy
+       semantics are defined externally by vendors, industries, or
+       regulators.  The extension is identified by the IANA Private
+       Enterprise Number 66257 assigned to the document author's
+       organization.
+
+       The AIC extension carries agent identity fields (agentId,
+       delegationMode), a principal identifier (principalUid) linking the
+       agent to the authorizing principal, a container-based capability
+       declaration, authorization boundary constraints, and delegation
+       authorization evidence with replay protection.  A companion
+       PrincipalAuthorization extension anchors Principal-side grant
+       declarations and delegation policies.  An authorizationConstraints
+       container provides offline-verifiable execution boundaries (IP range,
+       window).  An extensibility framework allows vendor-specific and user-
+       specific metadata.
+
+       This document specifies the ASN.1 module, OID registration, field
+       semantics, delegation model, and extensibility framework.  Security
+       considerations for deployment in regulated enterprise environments
+       are discussed.</p>
 relation:
 - type: updates
   bibitem:

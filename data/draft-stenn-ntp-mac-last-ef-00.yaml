@@ -1,3 +1,4 @@
+---
 id: draftstennntpmaclastef00
 schema_version: v1.5.6
 type: standard
@@ -68,7 +69,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>NTPv4 is defined by RFC 5905 [RFC5905], and it and earlier versions\n   of the NTP Protocol have supported symmetric private key Message\n   Authentication Code (MAC) authentication.  MACs were first described\n   in Appendix C of RFC 1305 [RFC1305] and are further described in RFC\n   5905 [RFC5905].  As the number of Extension Fields grows there is an\n   increasing chance of a parsing ambiguity when deciding if the \"next\"\n   set of data is an Extension Field or a legacy MAC.  This proposal\n   defines two new Extension Fields to avoid this ambiguity.  One is\n   used to signifiy that it is the last Extension Field in the packet.\n   If present, any subsequent data MUST be considered to be a legacy\n   MAC.  The other allows one or more MACs to be encapsulated in an\n   Extension Field.  If all parties in an association support MAC-EF,\n   the use of a legacy MAC may be avoided.</p>"
+  content: |-
+    <p>NTPv4 is defined by RFC 5905 [RFC5905], and it and earlier versions
+       of the NTP Protocol have supported symmetric private key Message
+       Authentication Code (MAC) authentication.  MACs were first described
+       in Appendix C of RFC 1305 [RFC1305] and are further described in RFC
+       5905 [RFC5905].  As the number of Extension Fields grows there is an
+       increasing chance of a parsing ambiguity when deciding if the "next"
+       set of data is an Extension Field or a legacy MAC.  This proposal
+       defines two new Extension Fields to avoid this ambiguity.  One is
+       used to signifiy that it is the last Extension Field in the packet.
+       If present, any subsequent data MUST be considered to be a legacy
+       MAC.  The other allows one or more MACs to be encapsulated in an
+       Extension Field.  If all parties in an association support MAC-EF,
+       the use of a legacy MAC may be avoided.</p>
 relation:
 - type: updatedBy
   bibitem:

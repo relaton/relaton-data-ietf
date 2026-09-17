@@ -1,3 +1,4 @@
+---
 id: draftdierkenconditionalaccesshttp
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document introduces conditional access to resources based on\n   pricing constraints signaled via request and response headers.  An\n   origin states the conditions for serving a resource, and a client\n   states the constraints under which it will accept it.\n\n   This specification applies this conditional access approach using\n   standard HTTP request and response semantics while staying\n   interoperable with intermediaries.  It introduces a Pricing response\n   header field that communicates current pricing terms and an If-Price-\n   LTE request header field that allows a client to declare a maximum\n   acceptable price.\n\n   When a request is served under such conditions, the response includes\n   a Response-Id header identifying the served response context.  This\n   identifier can be used for reconciliation, auditing, and downstream\n   usage reporting.\n\n   This specification defines access condition signaling only.\n   Accounting and usage reporting may be implemented using a companion\n   protocol such as usage-log.</p>"
+  content: |-
+    <p>This document introduces conditional access to resources based on
+       pricing constraints signaled via request and response headers.  An
+       origin states the conditions for serving a resource, and a client
+       states the constraints under which it will accept it.
+
+       This specification applies this conditional access approach using
+       standard HTTP request and response semantics while staying
+       interoperable with intermediaries.  It introduces a Pricing response
+       header field that communicates current pricing terms and an If-Price-
+       LTE request header field that allows a client to declare a maximum
+       acceptable price.
+
+       When a request is served under such conditions, the response includes
+       a Response-Id header identifying the served response context.  This
+       identifier can be used for reconciliation, auditing, and downstream
+       usage reporting.
+
+       This specification defines access condition signaling only.
+       Accounting and usage reporting may be implemented using a companion
+       protocol such as usage-log.</p>
 relation:
 - type: includes
   bibitem:

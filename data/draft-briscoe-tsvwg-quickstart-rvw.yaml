@@ -1,3 +1,4 @@
+---
 id: draftbriscoetsvwgquickstartrvw
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,32 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This review thoroughly analyses draft 01 of the Quick-Start proposal,\n   focusing mostly on security issues.  It is argued that the recent new\n   QS nonce proposal gives insufficient protection against misbehaving\n   receivers, and a new approach is suggested.  But it would be perverse\n   to strengthen protection against malicious receivers too much when\n   the protocol only works if all senders can be trusted to comply.  The\n   review argues this is an inevitable result of choosing to have\n   routers allocate rate to senders without keeping per-flow state.  The\n   paper also questions whether Quick-Start's under-utilisation\n   assumption defines a distinct range of operation where fairness can\n   be ignored.  Because traffic variance will always blur the boundary,\n   we argue that under-utilisation should be treated as the extreme of a\n   spectrum where fairness is always an issue to some extent.\n\n   If we are to avoid per-flow state on routers, the review points to an\n   alternative direction where endpoints allocate rate to themselves.\n   Counter-intuitively, this allows scalable security and a spectrum of\n   fairness to be built in from the start, but rate allocation is less\n   deterministic.\n\n   Issues not related to security are also raised, including the\n   possibility of a catastrophic overload if path delays are atypical.\n   A solution to this is offered, as well as solutions to scalability\n   issues with the range and precision of the Rate Request field.  Many\n   other more minor review comments are given.</p>"
+  content: |-
+    <p>This review thoroughly analyses draft 01 of the Quick-Start proposal,
+       focusing mostly on security issues.  It is argued that the recent new
+       QS nonce proposal gives insufficient protection against misbehaving
+       receivers, and a new approach is suggested.  But it would be perverse
+       to strengthen protection against malicious receivers too much when
+       the protocol only works if all senders can be trusted to comply.  The
+       review argues this is an inevitable result of choosing to have
+       routers allocate rate to senders without keeping per-flow state.  The
+       paper also questions whether Quick-Start's under-utilisation
+       assumption defines a distinct range of operation where fairness can
+       be ignored.  Because traffic variance will always blur the boundary,
+       we argue that under-utilisation should be treated as the extreme of a
+       spectrum where fairness is always an issue to some extent.
+
+       If we are to avoid per-flow state on routers, the review points to an
+       alternative direction where endpoints allocate rate to themselves.
+       Counter-intuitively, this allows scalable security and a spectrum of
+       fairness to be built in from the start, but rate allocation is less
+       deterministic.
+
+       Issues not related to security are also raised, including the
+       possibility of a catastrophic overload if path delays are atypical.
+       A solution to this is offered, as well as solutions to scalability
+       issues with the range and precision of the Rate Request field.  Many
+       other more minor review comments are given.</p>
 relation:
 - type: includes
   bibitem:

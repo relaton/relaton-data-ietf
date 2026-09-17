@@ -1,3 +1,4 @@
+---
 id: draftschrockeprevocationstatement01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Signed authorization artifacts for agent actions (receipts, commits,\n   delegations) are being defined faster than the means to retract them.\n   Many deployed systems use live status services, revocation lists, or\n   issuer datastores.  This document defines a complementary portable\n   form for action-bound authorization artifacts: a signed, offline-\n   verifiable claim that a named logical target, addressed by identifier\n   and action commitment, is revoked.  Verification is fail-closed and\n   evaluates a fixed set of checks: version, closed object structure,\n   target binding, a revoker key pinned by the verifier and, for newly\n   emitted artifacts, bound to a full digest-derived key identifier (a\n   self-asserted key confers nothing), the presence of a strict\n   revocation instant that has taken effect by the verifier's decision\n   time, and an independently recomputed signature.  The statement\n   proves that a named, pinned revoker revoked this specific target.  It\n   does not prove that every relying party saw it, and offline\n   verification cannot prove the absence of a revocation that was not\n   presented.  A terminal revocation never ages out; current non-\n   revocation requires separate authenticated, policy-fresh status\n   evidence.  A Trust Program profile binds revocation to the complete\n   execution claim, and requires revocation-versus-claim to be resolved\n   atomically; a revocation learned after a claim never rewrites an\n   effect that may already have occurred.</p>"
+  content: |-
+    <p>Signed authorization artifacts for agent actions (receipts, commits,
+       delegations) are being defined faster than the means to retract them.
+       Many deployed systems use live status services, revocation lists, or
+       issuer datastores.  This document defines a complementary portable
+       form for action-bound authorization artifacts: a signed, offline-
+       verifiable claim that a named logical target, addressed by identifier
+       and action commitment, is revoked.  Verification is fail-closed and
+       evaluates a fixed set of checks: version, closed object structure,
+       target binding, a revoker key pinned by the verifier and, for newly
+       emitted artifacts, bound to a full digest-derived key identifier (a
+       self-asserted key confers nothing), the presence of a strict
+       revocation instant that has taken effect by the verifier's decision
+       time, and an independently recomputed signature.  The statement
+       proves that a named, pinned revoker revoked this specific target.  It
+       does not prove that every relying party saw it, and offline
+       verification cannot prove the absence of a revocation that was not
+       presented.  A terminal revocation never ages out; current non-
+       revocation requires separate authenticated, policy-fresh status
+       evidence.  A Trust Program profile binds revocation to the complete
+       execution claim, and requires revocation-versus-claim to be resolved
+       atomically; a revocation learned after a claim never rewrites an
+       effect that may already have occurred.</p>
 relation:
 - type: updates
   bibitem:

@@ -1,10 +1,12 @@
+---
 id: draftgengacmepublickey06
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Automated Certificate Management Environment (ACME) Extension for Public Key Challenges
+  content: Automated Certificate Management Environment (ACME) Extension for Public
+    Key Challenges
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-geng-acme-public-key-06
@@ -125,7 +127,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The current ACME protocol [RFC8555] requires applicants to submit a\n   PKCS#10 Certificate Signing Request (CSR) during the finalization\n   phase.  The construction, ASN.1 encoding, and transmission of the CSR\n   impose additional implementation burdens on both the client\n   (especially resource-constrained devices) and the server.  Moreover,\n   the CSR cannot prevent a public key from being replaced by an\n   intermediary at the protocol level.\n\n   This document introduces the \"pk-01\" challenge extension based on the\n   ACME protocol.  Its core mechanism is as follows: the applicant\n   declares the public key to be authenticated during the \"newOrder\"\n   phase and completes the Proof of Possession (PoP) by signing with the\n   private key during the challenge phase.  Since the public key is\n   declared when the order is created and verified during the challenge\n   phase, there is no need to submit a CSR during the finalization\n   phase; the ACME server can issue the certificate directly based on\n   the verified public key, thereby eliminating the CSR at the protocol\n   level.\n\n   The \"pk-01\" challenge supports two verification modes via the\n   pop_mode field:</p>"
+  content: |-
+    <p>The current ACME protocol [RFC8555] requires applicants to submit a
+       PKCS#10 Certificate Signing Request (CSR) during the finalization
+       phase.  The construction, ASN.1 encoding, and transmission of the CSR
+       impose additional implementation burdens on both the client
+       (especially resource-constrained devices) and the server.  Moreover,
+       the CSR cannot prevent a public key from being replaced by an
+       intermediary at the protocol level.
+
+       This document introduces the "pk-01" challenge extension based on the
+       ACME protocol.  Its core mechanism is as follows: the applicant
+       declares the public key to be authenticated during the "newOrder"
+       phase and completes the Proof of Possession (PoP) by signing with the
+       private key during the challenge phase.  Since the public key is
+       declared when the order is created and verified during the challenge
+       phase, there is no need to submit a CSR during the finalization
+       phase; the ACME server can issue the certificate directly based on
+       the verified public key, thereby eliminating the CSR at the protocol
+       level.
+
+       The "pk-01" challenge supports two verification modes via the
+       pop_mode field:</p>
 relation:
 - type: updates
   bibitem:

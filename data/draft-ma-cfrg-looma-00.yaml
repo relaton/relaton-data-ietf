@@ -1,3 +1,4 @@
+---
 id: draftmacfrglooma00
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Post-quantum (PQ) authentication in TLS 1.3 can add tens to hundreds\n   of microseconds of handshake processing time.  In datacenters, where\n   mutual authentication is mandatory, this authentication cost becomes\n   a dominant contributor to end-to-end request latency, particularly\n   when connections are short-lived and handshake rates are high.\n\n   This document specifies Looma, an online/offline authentication\n   architecture integrated into the TLS 1.3 handshake.  Looma replaces\n   the on-path, per-handshake PQ signature with a fast, one-time\n   signature over the TLS transcript and moves expensive work (including\n   the multi-use PQ signature) to an asynchronous background plane.\n   Looma includes a fallback strategy to preserve correct authentication\n   when the verifier does not have the peer's one-time verification key\n   cached.</p>"
+  content: |-
+    <p>Post-quantum (PQ) authentication in TLS 1.3 can add tens to hundreds
+       of microseconds of handshake processing time.  In datacenters, where
+       mutual authentication is mandatory, this authentication cost becomes
+       a dominant contributor to end-to-end request latency, particularly
+       when connections are short-lived and handshake rates are high.
+
+       This document specifies Looma, an online/offline authentication
+       architecture integrated into the TLS 1.3 handshake.  Looma replaces
+       the on-path, per-handshake PQ signature with a fast, one-time
+       signature over the TLS transcript and moves expensive work (including
+       the multi-use PQ signature) to an asynchronous background plane.
+       Looma includes a fallback strategy to preserve correct authentication
+       when the verifier does not have the peer's one-time verification key
+       cached.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftietftcpmproportionalratereduction02
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an experimental algorithm, Proportional Rate\n   Reduction (PPR) to improve the accuracy of the amount of data sent by\n   TCP during loss recovery.  Standard Congestion Control requires that\n   TCP and other protocols reduce their congestion window in response to\n   losses.  This window reduction naturally occurs in the same round\n   trip as the data retransmissions to repair the losses, and is\n   implemented by choosing not to transmit any data in response to some\n   ACKs arriving from the receiver.  Two widely deployed algorithms are\n   used to implement this window reduction: Fast Recovery and Rate\n   Halving.  Both algorithms are needlessly fragile under a number of\n   conditions, particularly when there is a burst of losses such that\n   the number of ACKs returning to the sender is small.  Proportional\n   Rate Reduction minimizes these excess window reductions such that at\n   the end of recovery the actual window size will be as close as\n   possible to ssthresh, the window size determined by the congestion\n   control algorithm.  It is patterned after Rate Halving, but using the\n   fraction that is appropriate for target window chosen by the\n   congestion control algorithm.</p>"
+  content: |-
+    <p>This document describes an experimental algorithm, Proportional Rate
+       Reduction (PPR) to improve the accuracy of the amount of data sent by
+       TCP during loss recovery.  Standard Congestion Control requires that
+       TCP and other protocols reduce their congestion window in response to
+       losses.  This window reduction naturally occurs in the same round
+       trip as the data retransmissions to repair the losses, and is
+       implemented by choosing not to transmit any data in response to some
+       ACKs arriving from the receiver.  Two widely deployed algorithms are
+       used to implement this window reduction: Fast Recovery and Rate
+       Halving.  Both algorithms are needlessly fragile under a number of
+       conditions, particularly when there is a burst of losses such that
+       the number of ACKs returning to the sender is small.  Proportional
+       Rate Reduction minimizes these excess window reductions such that at
+       the end of recovery the actual window size will be as close as
+       possible to ssthresh, the window size determined by the congestion
+       control algorithm.  It is patterned after Rate Halving, but using the
+       fraction that is appropriate for target window chosen by the
+       congestion control algorithm.</p>
 relation:
 - type: updates
   bibitem:

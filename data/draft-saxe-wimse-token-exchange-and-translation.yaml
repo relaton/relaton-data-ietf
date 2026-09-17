@@ -1,3 +1,4 @@
+---
 id: draftsaxewimsetokenexchangeandtranslation
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,28 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The specification defines the processes of token exchange and token\n   translation for workloads.  Token exchange is introduced in\n   [RFC8693], allowing the exchange of access tokens, OpenID Connect ID\n   Tokens, and SAML assertions for new OAuth access tokens.  However,\n   for workloads, there exist a broad array of input and output token\n   types which must be considered beyond the input types supported by\n   [RFC8693].  These token types include, but are not limited to, SPIFFE\n   SVIDs, x.509 certificates, Kerberos service tickets, Amazon sigv4A,\n   macaroons, &lt;...&gt;.  Further, these tokens may be encoded in formats\n   including JWT OAuth 2.0 Acesss Tokens [RFC9068], CWT [RFC8392], and\n   protocol buffers (protobufs).  Given the variety and complexity of\n   input and output token types and encoding, a strict token exchange\n   that maintains all of the contextual information from the input token\n   to the output token may not be possible.  We define these non-RFC8693\n   use cases with potentially lossy conversions as \"token translation\"\n   (e.g. information may be lost in translation).  In this document we\n   describe a workload profile for token exchange, using the mechanisms\n   in [RFC8693], and a new set of translations between arbitrary token\n   types.  Additionally, we define mechanisms to enrich tokens during\n   translation to support the use cases defined in (todo: add link to\n   use cases doc).</p>"
+  content: |-
+    <p>The specification defines the processes of token exchange and token
+       translation for workloads.  Token exchange is introduced in
+       [RFC8693], allowing the exchange of access tokens, OpenID Connect ID
+       Tokens, and SAML assertions for new OAuth access tokens.  However,
+       for workloads, there exist a broad array of input and output token
+       types which must be considered beyond the input types supported by
+       [RFC8693].  These token types include, but are not limited to, SPIFFE
+       SVIDs, x.509 certificates, Kerberos service tickets, Amazon sigv4A,
+       macaroons, &lt;...&gt;.  Further, these tokens may be encoded in formats
+       including JWT OAuth 2.0 Acesss Tokens [RFC9068], CWT [RFC8392], and
+       protocol buffers (protobufs).  Given the variety and complexity of
+       input and output token types and encoding, a strict token exchange
+       that maintains all of the contextual information from the input token
+       to the output token may not be possible.  We define these non-RFC8693
+       use cases with potentially lossy conversions as "token translation"
+       (e.g. information may be lost in translation).  In this document we
+       describe a workload profile for token exchange, using the mechanisms
+       in [RFC8693], and a new set of translations between arbitrary token
+       types.  Additionally, we define mechanisms to enrich tokens during
+       translation to support the use cases defined in (todo: add link to
+       use cases doc).</p>
 relation:
 - type: includes
   bibitem:

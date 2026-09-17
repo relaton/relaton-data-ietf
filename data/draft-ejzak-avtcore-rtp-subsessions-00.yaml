@@ -1,3 +1,4 @@
+---
 id: draftejzakavtcorertpsubsessions00
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a means of multiplexing RTP streams having\n   different media types within a single transport connection and how to\n   represent this multiplexing option in SDP.  This mechanism is an\n   alternative to the BUNDLE and SHIM proposals currently under active\n   consideration in AVTCORE.  Instead of adding an extra multiplexing\n   header as in SHIM to allow multiple RTP sessions within a single\n   transport connection, or using the payload type field to separate\n   different media streams within a single RTP session, this document\n   describes how to partition the existing SSRC space to create RTP\n   subsessions from a single RTP session.  A filter can be used to\n   identify each RTP subsession for different QoS handling as necessary.\n   RTP subsessions can be treated like RTP sessions with a few\n   restrictions.  In particular, SSRC mapping may be needed when\n   forwarding RTP streams into an RTP subsession to avoid SSRC\n   conflicts, but there are few use cases in which this limitation is a\n   concern and RTP subsessions can be disabled if necessary.</p>"
+  content: |-
+    <p>This document describes a means of multiplexing RTP streams having
+       different media types within a single transport connection and how to
+       represent this multiplexing option in SDP.  This mechanism is an
+       alternative to the BUNDLE and SHIM proposals currently under active
+       consideration in AVTCORE.  Instead of adding an extra multiplexing
+       header as in SHIM to allow multiple RTP sessions within a single
+       transport connection, or using the payload type field to separate
+       different media streams within a single RTP session, this document
+       describes how to partition the existing SSRC space to create RTP
+       subsessions from a single RTP session.  A filter can be used to
+       identify each RTP subsession for different QoS handling as necessary.
+       RTP subsessions can be treated like RTP sessions with a few
+       restrictions.  In particular, SSRC mapping may be needed when
+       forwarding RTP streams into an RTP subsession to avoid SSRC
+       conflicts, but there are few use cases in which this limitation is a
+       concern and RTP subsessions can be disabled if necessary.</p>
 relation:
 - type: updatedBy
   bibitem:

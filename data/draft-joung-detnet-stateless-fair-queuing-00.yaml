@@ -1,3 +1,4 @@
+---
 id: draftjoungdetnetstatelessfairqueuing00
 schema_version: v1.5.6
 type: standard
@@ -150,7 +151,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the framework and the operational procedure\n   for deterministic networks with work conserving packet schedulers\n   that guarantees end-to-end latency bounds to flows.  Schedulers in\n   core nodes of the network do not need to maintain flow states.\n   Instead, the entrance node of a flow marks an ideal service\n   completion time, called Finish Time (FT), of a packet in the packet\n   header.  The subsequent core nodes update FT by adding a delay\n   factor, which is a function of the flow and upstream nodes.  The\n   packets in the queue are served in the ascending order of the FT.\n   This technique is called fair queuing.  The result is that flows are\n   isolated from each other almost perfectly.  The latency bound of a\n   flow depends only on the flow's intrinsic parameters, except the\n   maximum packet length among other flows sharing each output link with\n   the flow.</p>"
+  content: |-
+    <p>This document specifies the framework and the operational procedure
+       for deterministic networks with work conserving packet schedulers
+       that guarantees end-to-end latency bounds to flows.  Schedulers in
+       core nodes of the network do not need to maintain flow states.
+       Instead, the entrance node of a flow marks an ideal service
+       completion time, called Finish Time (FT), of a packet in the packet
+       header.  The subsequent core nodes update FT by adding a delay
+       factor, which is a function of the flow and upstream nodes.  The
+       packets in the queue are served in the ascending order of the FT.
+       This technique is called fair queuing.  The result is that flows are
+       isolated from each other almost perfectly.  The latency bound of a
+       flow depends only on the flow's intrinsic parameters, except the
+       maximum packet length among other flows sharing each output link with
+       the flow.</p>
 relation:
 - type: updatedBy
   bibitem:

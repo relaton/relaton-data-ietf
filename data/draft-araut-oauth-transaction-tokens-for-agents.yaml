@@ -1,3 +1,4 @@
+---
 id: draftarautoauthtransactiontokensforagents
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,41 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies an extension to the to support agent context\n   propagation within Transaction Tokens for agent-based workloads.  The\n   extension defines the use of the act field to identify the agent\n   performing the action, and leverages the existing sub field (as\n   defined in the base Transaction Tokens specification) to represent\n   the principal.  The sub field is populated according to the rules\n   specified in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-\n   transaction-tokens/draft-ietf-oauth-transaction-tokens.html), based\n   on the 'subject_token' provided in the token request.  For autonomous\n   agents operating independently, the sub field represents the agent\n   itself.  These mechanisms enable services within the call graph to\n   make more granular access control decisions, thereby enhancing\n   security.  This document specifies an extension to OAuth Transaction\n   Tokens OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-transaction-\n   tokens/draft-ietf-oauth-transaction-tokens.html) to support agent\n   context propagation within Transaction Tokens for agent-based\n   workloads.  The extension defines the agentic_ctx claim, a structured\n   JWT claim that carries chain-level metadata required for multi-agent\n   flow integrity and MAY contain additional deployment-specific agent\n   context.  The extension addresses two deployment patterns: single-\n   agent flows where one agent acts on behalf of a user within a\n   transaction, and multi-agent flows where multiple agents collaborate\n   across a call chain.  In multi-agent scenarios, the Transaction Token\n   is replaced at each agent transition by the Transaction Token\n   Service, updating the agentic_ctx claim while preserving the\n   immutable identity context (sub and act claims) established at\n   transaction initiation.  This specification leverages the existing\n   act claim as defined in RFC8693\n   (https://datatracker.ietf.org/doc/html/rfc8693) and the sub claim as\n   defined in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-\n   transaction-tokens/draft-ietf-oauth-transaction-tokens.html).  It\n   does not define new token types or grant types; it operates entirely\n   within the existing Transaction Token issuance and replacement\n   mechanisms defined by the base specification.</p>"
+  content: |-
+    <p>This document specifies an extension to the to support agent context
+       propagation within Transaction Tokens for agent-based workloads.  The
+       extension defines the use of the act field to identify the agent
+       performing the action, and leverages the existing sub field (as
+       defined in the base Transaction Tokens specification) to represent
+       the principal.  The sub field is populated according to the rules
+       specified in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-
+       transaction-tokens/draft-ietf-oauth-transaction-tokens.html), based
+       on the 'subject_token' provided in the token request.  For autonomous
+       agents operating independently, the sub field represents the agent
+       itself.  These mechanisms enable services within the call graph to
+       make more granular access control decisions, thereby enhancing
+       security.  This document specifies an extension to OAuth Transaction
+       Tokens OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-transaction-
+       tokens/draft-ietf-oauth-transaction-tokens.html) to support agent
+       context propagation within Transaction Tokens for agent-based
+       workloads.  The extension defines the agentic_ctx claim, a structured
+       JWT claim that carries chain-level metadata required for multi-agent
+       flow integrity and MAY contain additional deployment-specific agent
+       context.  The extension addresses two deployment patterns: single-
+       agent flows where one agent acts on behalf of a user within a
+       transaction, and multi-agent flows where multiple agents collaborate
+       across a call chain.  In multi-agent scenarios, the Transaction Token
+       is replaced at each agent transition by the Transaction Token
+       Service, updating the agentic_ctx claim while preserving the
+       immutable identity context (sub and act claims) established at
+       transaction initiation.  This specification leverages the existing
+       act claim as defined in RFC8693
+       (https://datatracker.ietf.org/doc/html/rfc8693) and the sub claim as
+       defined in OAUTH-TXN-TOKENS (https://drafts.oauth.net/oauth-
+       transaction-tokens/draft-ietf-oauth-transaction-tokens.html).  It
+       does not define new token types or grant types; it operates entirely
+       within the existing Transaction Token issuance and replacement
+       mechanisms defined by the base specification.</p>
 relation:
 - type: includes
   bibitem:

@@ -1,10 +1,12 @@
+---
 id: draftietftsvwgecnsyn00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Adding Explicit Congestion Notification (ECN) Capability to TCP's SYN/ACK Packets
+  content: Adding Explicit Congestion Notification (ECN) Capability to TCP's SYN/ACK
+    Packets
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-ecnsyn-00
@@ -53,7 +55,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft specifies a modification to RFC 3168 to allow TCP SYN/ACK\n   packets to be ECN-Capable.  For TCP, RFC 3168 only specified setting\n   an ECN-Capable codepoint on data packets, and not on SYN and SYN/ACK\n   packets.  However, because of the high cost to the TCP transfer of\n   having a SYN/ACK packet dropped, with the resulting retransmit\n   timeout, this document is specifying the use of ECN for the SYN/ACK\n   packet itself, when sent in response to a SYN packet with the two ECN\n   flags set in the TCP header, indicating a willingness to use ECN.\n   Setting TCP SYN/ACK packets as ECN-Capable can be of great benefit to\n   the TCP connection, avoiding the severe penalty of a retransmit\n   timeout for a connection that has not yet started placing a load on\n   the network.  The sender of the SYN/ACK packet must respond to an ECN\n   mark by reducing its initial congestion window from two, three, or\n   four segments to one segment, reducing the subsequent load from that\n   connection on the network.</p>"
+  content: |-
+    <p>This draft specifies a modification to RFC 3168 to allow TCP SYN/ACK
+       packets to be ECN-Capable.  For TCP, RFC 3168 only specified setting
+       an ECN-Capable codepoint on data packets, and not on SYN and SYN/ACK
+       packets.  However, because of the high cost to the TCP transfer of
+       having a SYN/ACK packet dropped, with the resulting retransmit
+       timeout, this document is specifying the use of ECN for the SYN/ACK
+       packet itself, when sent in response to a SYN packet with the two ECN
+       flags set in the TCP header, indicating a willingness to use ECN.
+       Setting TCP SYN/ACK packets as ECN-Capable can be of great benefit to
+       the TCP connection, avoiding the severe penalty of a retransmit
+       timeout for a connection that has not yet started placing a load on
+       the network.  The sender of the SYN/ACK packet must respond to an ECN
+       mark by reducing its initial congestion window from two, three, or
+       four segments to one segment, reducing the subsequent load from that
+       connection on the network.</p>
 series:
 - type: main
   title:

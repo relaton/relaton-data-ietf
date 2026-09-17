@@ -1,3 +1,4 @@
+---
 id: draftietfoauthjwsreq08
 schema_version: v1.5.6
 type: standard
@@ -68,7 +69,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The authorization request in OAuth 2.0 [RFC6749] utilizes query\n   parameter serialization, which means that Authorization Request\n   parameters are encoded in the URI of the request and sent through\n   user agents such as web browsers.  While it is easy to implement, it\n   means that (a) the communication through the user agents are not\n   integrity protected and thus the parameters can be tainted, and (b)\n   the source of the communication is not authentciated.  Because of\n   these weaknesses, several attacks to the protocol have now been put\n   forward.\n\n   This document introduces the ability to send request parameters in a\n   JSON Web Token (JWT) instead, which allows the request to be JWS\n   signed and/or JWE encrypted so that the integrity, source\n   authentication and confidentiallity property of the Authorization\n   Request is attained.  The request can be sent by value or by\n   reference.</p>"
+  content: |-
+    <p>The authorization request in OAuth 2.0 [RFC6749] utilizes query
+       parameter serialization, which means that Authorization Request
+       parameters are encoded in the URI of the request and sent through
+       user agents such as web browsers.  While it is easy to implement, it
+       means that (a) the communication through the user agents are not
+       integrity protected and thus the parameters can be tainted, and (b)
+       the source of the communication is not authentciated.  Because of
+       these weaknesses, several attacks to the protocol have now been put
+       forward.
+
+       This document introduces the ability to send request parameters in a
+       JSON Web Token (JWT) instead, which allows the request to be JWS
+       signed and/or JWE encrypted so that the integrity, source
+       authentication and confidentiallity property of the Authorization
+       Request is attained.  The request can be sent by value or by
+       reference.</p>
 relation:
 - type: updates
   bibitem:

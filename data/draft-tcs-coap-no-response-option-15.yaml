@@ -1,3 +1,4 @@
+---
 id: drafttcscoapnoresponseoption15
 schema_version: v1.5.6
 type: standard
@@ -108,7 +109,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>There can be M2M scenarios where responses from a server against\n   requests from client are redundant. This kind of open-loop exchange\n   (with no response path from the server to the client) may be desired\n   to minimize resource consumption in constrained systems while\n   updating a bulk of resources simultaneously, or updating a resource\n   with a very high frequency. CoAP already provides Non-confirmable\n   (NON) messages that are not acknowledged by the recipient. However,\n   the request/response semantics still require the server to respond\n   with a status code indicating \"the result of the attempt to\n   understand and satisfy the request\".\n\n   This specification introduces a CoAP option called 'No-Response'.\n   Using this option the client can explicitly tell the server to\n   suppress all responses against the particular request. This option\n   also provides granular control to enable suppression of a particular\n   class of response or a combination of response-classes. This option\n   may be effective for both unicast and multicast requests. This\n   document also discusses a few exemplary applications which benefit\n   from this option.</p>"
+  content: |-
+    <p>There can be M2M scenarios where responses from a server against
+       requests from client are redundant. This kind of open-loop exchange
+       (with no response path from the server to the client) may be desired
+       to minimize resource consumption in constrained systems while
+       updating a bulk of resources simultaneously, or updating a resource
+       with a very high frequency. CoAP already provides Non-confirmable
+       (NON) messages that are not acknowledged by the recipient. However,
+       the request/response semantics still require the server to respond
+       with a status code indicating "the result of the attempt to
+       understand and satisfy the request".
+
+       This specification introduces a CoAP option called 'No-Response'.
+       Using this option the client can explicitly tell the server to
+       suppress all responses against the particular request. This option
+       also provides granular control to enable suppression of a particular
+       class of response or a combination of response-classes. This option
+       may be effective for both unicast and multicast requests. This
+       document also discusses a few exemplary applications which benefit
+       from this option.</p>
 relation:
 - type: updates
   bibitem:

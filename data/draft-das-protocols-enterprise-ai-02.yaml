@@ -1,10 +1,12 @@
+---
 id: draftdasprotocolsenterpriseai02
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Assume the AI Server Is Already Compromised: Execution-Consequence Decoupling So a High-Risk Enterprise AI Cannot Join, Infer, or Send'
+  content: 'Assume the AI Server Is Already Compromised: Execution-Consequence Decoupling
+    So a High-Risk Enterprise AI Cannot Join, Infer, or Send'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-protocols-enterprise-ai-02
@@ -53,7 +55,79 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Start from the assumption that the attacker already controls the AI\n   server — that the workload is fully compromised.  Not the perimeter,\n   not a phished seat — the workload itself: its credentials, its\n   connectors, its context window, its output path.  Nearly every\n   enterprise control in use today has already failed by that point,\n   because nearly every one of them is designed to keep the attacker out\n   of the workload rather than to limit what the workload can do once it\n   is theirs.\n\n   Before anything else, the engineering posture: this architecture is\n   specified for high-risk AI systems, where the standard priorities\n   shift from speed and latency toward determinism, containment, and\n   safety.  It is written for billion-dollar enterprise and mission-\n   critical deployments — banking and treasury, defence and national\n   security, critical infrastructure, and regulated enterprises holding\n   unreleased material — and not for general day-to-day, consumer-grade,\n   or low-stakes use.  It introduces evaluation on the join path and on\n   the release path, and accepts that cost deliberately, because in\n   these environments an unauthorized reconstruction or an unauthorized\n   send is not recoverable by being fast.\n\n   This document asks what is still denied to the attacker at that\n   moment, and specifies an architecture in which two things are still\n   denied: the attacker cannot cause independently held enterprise\n   fragments to be bound into a map of the organization, and cannot\n   cause any generated result to become externally effective.  Access to\n   a store is not authority to join it to another store.  Finishing a\n   generation is not authority to send it.\n\n   The mechanism is Execution-Consequence Decoupling, enforced by three\n   pillars: Decomposition of Authority (Technical Non-Joinability)\n   across independently controlled identity, content, relationship-\n   mapping, and cryptographic domains; Mandatory Mediation of every\n   consequence-bearing Candidate Output; and Technical Non-\n   Completability, so that computation can run to completion in a\n   compromised environment without the ability to complete an external\n   consequence.  Reconstruction is governed by a non-bearer\n   Reconstruction Authorization Object bound to attested execution\n   context, session, purpose, and Permitted Association Scope.\n   Candidate Outputs are sealed, re-verified at output time, and\n   committed to a Protected Output Validation Receipt before an output-\n   specific Release Capability can be issued and exercised at a\n   designated Output Release Boundary.\n\n   The industrially relevant systems are the enterprise assistant and\n   agent runtimes now deployed into exactly those environments,\n   including those built on Anthropic Claude, OpenAI ChatGPT, Google\n   Gemini, xAI Grok, and self-hosted Meta Llama models, together with\n   the connector and Model Context Protocol fleets attached to them.\n   These are named as publicly described deployment classes, because an\n   architecture for high-risk enterprise AI should say plainly which\n   systems it is about; nothing here characterizes any vendor's internal\n   design or security posture, and no vendor has reviewed or endorsed\n   this work.  It states the problem space, compares the architecture\n   against representative conventional technologies (access control,\n   bearer credentials, vaulting, TEEs, sandboxes, DLP, provenance, DRM,\n   clean rooms, and information-flow control), gives a detailed\n   technical description, and supplies JSON Schema definitions for the\n   three protected objects.  A published runnable reference\n   implementation [GITHUB-DAS-VII] executes the protected chain\n   described here, so the architecture can be run and tested rather than\n   only read; it is an architectural reference for the state machine and\n   its failure states, not a claim of production isolation.\n\n   This is the architecture and rationale document.  Its companion,\n   draft-das-enterprise-ai-output-finality\n   [I-D.das-enterprise-ai-output-finality], specifies the same split as\n   a deployable protocol profile and metadata format for vendor\n   assistant and agent seats.  The two are read together: this document\n   explains why authority must be separated from computation; the\n   companion specifies the objects, bindings, and boundary sequences\n   that carry the separation on the wire.</p>"
+  content: |-
+    <p>Start from the assumption that the attacker already controls the AI
+       server — that the workload is fully compromised.  Not the perimeter,
+       not a phished seat — the workload itself: its credentials, its
+       connectors, its context window, its output path.  Nearly every
+       enterprise control in use today has already failed by that point,
+       because nearly every one of them is designed to keep the attacker out
+       of the workload rather than to limit what the workload can do once it
+       is theirs.
+
+       Before anything else, the engineering posture: this architecture is
+       specified for high-risk AI systems, where the standard priorities
+       shift from speed and latency toward determinism, containment, and
+       safety.  It is written for billion-dollar enterprise and mission-
+       critical deployments — banking and treasury, defence and national
+       security, critical infrastructure, and regulated enterprises holding
+       unreleased material — and not for general day-to-day, consumer-grade,
+       or low-stakes use.  It introduces evaluation on the join path and on
+       the release path, and accepts that cost deliberately, because in
+       these environments an unauthorized reconstruction or an unauthorized
+       send is not recoverable by being fast.
+
+       This document asks what is still denied to the attacker at that
+       moment, and specifies an architecture in which two things are still
+       denied: the attacker cannot cause independently held enterprise
+       fragments to be bound into a map of the organization, and cannot
+       cause any generated result to become externally effective.  Access to
+       a store is not authority to join it to another store.  Finishing a
+       generation is not authority to send it.
+
+       The mechanism is Execution-Consequence Decoupling, enforced by three
+       pillars: Decomposition of Authority (Technical Non-Joinability)
+       across independently controlled identity, content, relationship-
+       mapping, and cryptographic domains; Mandatory Mediation of every
+       consequence-bearing Candidate Output; and Technical Non-
+       Completability, so that computation can run to completion in a
+       compromised environment without the ability to complete an external
+       consequence.  Reconstruction is governed by a non-bearer
+       Reconstruction Authorization Object bound to attested execution
+       context, session, purpose, and Permitted Association Scope.
+       Candidate Outputs are sealed, re-verified at output time, and
+       committed to a Protected Output Validation Receipt before an output-
+       specific Release Capability can be issued and exercised at a
+       designated Output Release Boundary.
+
+       The industrially relevant systems are the enterprise assistant and
+       agent runtimes now deployed into exactly those environments,
+       including those built on Anthropic Claude, OpenAI ChatGPT, Google
+       Gemini, xAI Grok, and self-hosted Meta Llama models, together with
+       the connector and Model Context Protocol fleets attached to them.
+       These are named as publicly described deployment classes, because an
+       architecture for high-risk enterprise AI should say plainly which
+       systems it is about; nothing here characterizes any vendor's internal
+       design or security posture, and no vendor has reviewed or endorsed
+       this work.  It states the problem space, compares the architecture
+       against representative conventional technologies (access control,
+       bearer credentials, vaulting, TEEs, sandboxes, DLP, provenance, DRM,
+       clean rooms, and information-flow control), gives a detailed
+       technical description, and supplies JSON Schema definitions for the
+       three protected objects.  A published runnable reference
+       implementation [GITHUB-DAS-VII] executes the protected chain
+       described here, so the architecture can be run and tested rather than
+       only read; it is an architectural reference for the state machine and
+       its failure states, not a claim of production isolation.
+
+       This is the architecture and rationale document.  Its companion,
+       draft-das-enterprise-ai-output-finality
+       [I-D.das-enterprise-ai-output-finality], specifies the same split as
+       a deployable protocol profile and metadata format for vendor
+       assistant and agent seats.  The two are read together: this document
+       explains why authority must be separated from computation; the
+       companion specifies the objects, bindings, and boundary sequences
+       that carry the separation on the wire.</p>
 relation:
 - type: updates
   bibitem:

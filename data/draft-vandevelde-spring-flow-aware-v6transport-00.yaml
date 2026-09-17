@@ -1,3 +1,4 @@
+---
 id: draftvandeveldespringflowawarev6transport00
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Flow-Aware transport of Pseudowires over an MPLS Packet Switched\n   Network (RFC6391) introduces an ECMP use-case, making assumption that\n   the payload of a pseudowire comprises of a number of distinct flows.\n   RFC6391 provides a mechanism for fine flow granularity beyond the\n   individual pseudowire, helping better flow granularity for ECMP\n   purpose.  To identify the granular pseudowire flows the concept of\n   MPLS Flow Label is introduced.  Furthermore RFC6391 defines the\n   required LDP protocol extensions to exchange the MPLS Flow Label\n   between LDP speakers.\n\n   Another method to exchange MPLS flow labels is found in draft-ietf-\n   bess-fat-pw-bgp.  Draft-ietf-bess-fat-pw-bgp defines extensions\n   required to synchronise flow label state between PEs using BGP-based\n   signalling procedures.  This draft assumes MPLS is the transport\n   technology used.\n\n   This draft extends the applicability of draft-ietf-bess-fat-pw-bgp\n   and uses the BGP derived flow label for IPv6 Segment Routing\n   transport.  The PE responsible for imposing the IPv6 Segment Routing\n   top level header will in addition to an IPv6 header AND the IPv6\n   Source Routing header ALSO impose the BGP derived Flow Label as the\n   IPv6 outer header flow Label.  This functionality will provide fine\n   ECMP granularity of IPv6 Segment routing enabled pseudowire transport\n   services.</p>"
+  content: |-
+    <p>Flow-Aware transport of Pseudowires over an MPLS Packet Switched
+       Network (RFC6391) introduces an ECMP use-case, making assumption that
+       the payload of a pseudowire comprises of a number of distinct flows.
+       RFC6391 provides a mechanism for fine flow granularity beyond the
+       individual pseudowire, helping better flow granularity for ECMP
+       purpose.  To identify the granular pseudowire flows the concept of
+       MPLS Flow Label is introduced.  Furthermore RFC6391 defines the
+       required LDP protocol extensions to exchange the MPLS Flow Label
+       between LDP speakers.
+
+       Another method to exchange MPLS flow labels is found in draft-ietf-
+       bess-fat-pw-bgp.  Draft-ietf-bess-fat-pw-bgp defines extensions
+       required to synchronise flow label state between PEs using BGP-based
+       signalling procedures.  This draft assumes MPLS is the transport
+       technology used.
+
+       This draft extends the applicability of draft-ietf-bess-fat-pw-bgp
+       and uses the BGP derived flow label for IPv6 Segment Routing
+       transport.  The PE responsible for imposing the IPv6 Segment Routing
+       top level header will in addition to an IPv6 header AND the IPv6
+       Source Routing header ALSO impose the BGP derived Flow Label as the
+       IPv6 outer header flow Label.  This functionality will provide fine
+       ECMP granularity of IPv6 Segment routing enabled pseudowire transport
+       services.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftyakungoauthagentattestation
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,21 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Agent Credential Attestation Protocol\n   (ACAP), a cryptographic credentialing protocol for autonomous AI\n   agent pipelines.  An ACAP credential is a short-lived JSON Web Token\n   (JWT) signed with RS256 that carries scope-limited permissions\n   together with a SHA-256 hash of the original human instruction that\n   initiated the task.  Credentials may be delegated to child agents;\n   each delegation narrows scope, cannot outlive its parent, increments\n   a delegation depth counter, and extends a tamper-evident chain of\n   token identifiers.  Every lifecycle event is recorded in an append-\n   only, hash-chained audit log.\n\n   This document specifies the credential format, issuance rules,\n   delegation rules, verification algorithm, revocation semantics,\n   human-in-the-loop approval protocol, and audit log structure.</p>"
+  content: |-
+    <p>This document defines the Agent Credential Attestation Protocol
+       (ACAP), a cryptographic credentialing protocol for autonomous AI
+       agent pipelines.  An ACAP credential is a short-lived JSON Web Token
+       (JWT) signed with RS256 that carries scope-limited permissions
+       together with a SHA-256 hash of the original human instruction that
+       initiated the task.  Credentials may be delegated to child agents;
+       each delegation narrows scope, cannot outlive its parent, increments
+       a delegation depth counter, and extends a tamper-evident chain of
+       token identifiers.  Every lifecycle event is recorded in an append-
+       only, hash-chained audit log.
+
+       This document specifies the credential format, issuance rules,
+       delegation rules, verification algorithm, revocation semantics,
+       human-in-the-loop approval protocol, and audit log structure.</p>
 relation:
 - type: includes
   bibitem:

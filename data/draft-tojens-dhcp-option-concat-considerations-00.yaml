@@ -1,3 +1,4 @@
+---
 id: drafttojensdhcpoptionconcatconsiderations00
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,17 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DHCP has a length limit of 255 on individual options because of its\n   one-byte length field for options.  To accommodate longer options,\n   splitting option data across multiple instances of the same Option\n   Type is defined by [RFC3396].  However, this mechanism is required to\n   be supported for all options.  This leads to real-world\n   implementations in the years since the RFC was published to deviate\n   from these requirements to avoid breaking basic functionality.  This\n   document updates RFC 3396 to be more flexible regarding when DHCP\n   agents are required to concatenate options to reflect deployement\n   experiences.</p>"
+  content: |-
+    <p>DHCP has a length limit of 255 on individual options because of its
+       one-byte length field for options.  To accommodate longer options,
+       splitting option data across multiple instances of the same Option
+       Type is defined by [RFC3396].  However, this mechanism is required to
+       be supported for all options.  This leads to real-world
+       implementations in the years since the RFC was published to deviate
+       from these requirements to avoid breaking basic functionality.  This
+       document updates RFC 3396 to be more flexible regarding when DHCP
+       agents are required to concatenate options to reflect deployement
+       experiences.</p>
 relation:
 - type: updatedBy
   bibitem:

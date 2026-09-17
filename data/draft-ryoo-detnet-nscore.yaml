@@ -1,3 +1,4 @@
+---
 id: draftryoodetnetnscore
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,24 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the framework and operational procedure for\n   deterministic networking that guarantees maximum and minimum end-to-\n   end latency bounds to flows.  The solution has non-periodic,\n   asynchronous, flow-level, non-work conserving, on-time, and rate-\n   based functional characteristics, according to the taxonomy suggested\n   by [draft-ietf-detnet-dataplane-taxonomy-03].\n\n   The packets are stored in the queue in ascending order of the ideal\n   service start time, called Eligible Time (ET), and the ideal service\n   completion time, called Finish Time (FT).  The queued packets were\n   forwarded between ET and FT in a non-work conserving manner.  The ET\n   and FT are calculated at the entrance node according to the packet\n   size and rate of the flow.  All subsequent core nodes are stateless\n   and asynchronously compute ET and FT based on metadata received via\n   packet headers.  This mechanism is called non-work-preserving\n   stateless fair queuing, which guarantees both E2E latency upper and\n   lower bounds.</p>"
+  content: |-
+    <p>This document specifies the framework and operational procedure for
+       deterministic networking that guarantees maximum and minimum end-to-
+       end latency bounds to flows.  The solution has non-periodic,
+       asynchronous, flow-level, non-work conserving, on-time, and rate-
+       based functional characteristics, according to the taxonomy suggested
+       by [draft-ietf-detnet-dataplane-taxonomy-03].
+
+       The packets are stored in the queue in ascending order of the ideal
+       service start time, called Eligible Time (ET), and the ideal service
+       completion time, called Finish Time (FT).  The queued packets were
+       forwarded between ET and FT in a non-work conserving manner.  The ET
+       and FT are calculated at the entrance node according to the packet
+       size and rate of the flow.  All subsequent core nodes are stateless
+       and asynchronously compute ET and FT based on metadata received via
+       packet headers.  This mechanism is called non-work-preserving
+       stateless fair queuing, which guarantees both E2E latency upper and
+       lower bounds.</p>
 relation:
 - type: includes
   bibitem:

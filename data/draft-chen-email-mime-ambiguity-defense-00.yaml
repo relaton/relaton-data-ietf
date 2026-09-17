@@ -1,3 +1,4 @@
+---
 id: draftchenemailmimeambiguitydefense00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Email security gateways and endpoint mail clients frequently rely on\n   different MIME parsers, decoders, and error-recovery behavior.  An\n   attacker can exploit those differences so that a security control\n   fails to extract or scan an attachment that a downstream client later\n   exposes to a user.  This document describes defensive processing\n   guidance for SMTP receivers, mail gateways, and message stores that\n   handle MIME messages with malformed or ambiguous structure.\n\n   This document provides operational guidance for ingress validation,\n   strict decoding floors, ambiguity detection, multi-view extraction,\n   union scanning, logging, and policy handling.  It also defines an\n   optional \"MIME-Ambiguity-Results\" header field for conveying\n   receiver-generated ambiguity assessments to downstream components\n   inside an administrative domain.</p>"
+  content: |-
+    <p>Email security gateways and endpoint mail clients frequently rely on
+       different MIME parsers, decoders, and error-recovery behavior.  An
+       attacker can exploit those differences so that a security control
+       fails to extract or scan an attachment that a downstream client later
+       exposes to a user.  This document describes defensive processing
+       guidance for SMTP receivers, mail gateways, and message stores that
+       handle MIME messages with malformed or ambiguous structure.
+
+       This document provides operational guidance for ingress validation,
+       strict decoding floors, ambiguity detection, multi-view extraction,
+       union scanning, logging, and policy handling.  It also defines an
+       optional "MIME-Ambiguity-Results" header field for conveying
+       receiver-generated ambiguity assessments to downstream components
+       inside an administrative domain.</p>
 series:
 - type: main
   title:

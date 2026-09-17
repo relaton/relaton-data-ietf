@@ -1,3 +1,4 @@
+---
 id: draftashavthcovermplsprotocol01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>VoIP typically uses the encapsulation voice/RTP/UDP/IP. When MPLS\n   Labels are added, this becomes voice/RTP/UDP/IP/MPLS-labels. For an\n   MPLS VPN, the packet header is typically 48 bytes, while the voice\n   payload is often no more than 30 bytes, for example. Header\n   compression can significantly reduce the overhead through various\n   compression mechanisms.  MPLS is used to route header-compressed (HC)\n   packets over an MPLS LSP without compression/decompression cycles at\n   each router.  Such an HC over MPLS capability increases the bandwidth\n   efficiency as well as processing scalability of the maximum number of\n   simultaneous compressed flows that use HC at each router.  MPLS\n   pseudowires are used to transport the HC context and other control\n   messages between the ingress and egress MPLS label switched router\n   (LSR), and the pseudowires define a point to point instance of each\n   HC session at the header decompressor.  Standard HC methods (e.g.,\n   ECRTP, ROHC, etc.) are re-used to determine the context.</p>"
+  content: |-
+    <p>VoIP typically uses the encapsulation voice/RTP/UDP/IP. When MPLS
+       Labels are added, this becomes voice/RTP/UDP/IP/MPLS-labels. For an
+       MPLS VPN, the packet header is typically 48 bytes, while the voice
+       payload is often no more than 30 bytes, for example. Header
+       compression can significantly reduce the overhead through various
+       compression mechanisms.  MPLS is used to route header-compressed (HC)
+       packets over an MPLS LSP without compression/decompression cycles at
+       each router.  Such an HC over MPLS capability increases the bandwidth
+       efficiency as well as processing scalability of the maximum number of
+       simultaneous compressed flows that use HC at each router.  MPLS
+       pseudowires are used to transport the HC context and other control
+       messages between the ingress and egress MPLS label switched router
+       (LSR), and the pseudowires define a point to point instance of each
+       HC session at the header decompressor.  Standard HC methods (e.g.,
+       ECRTP, ROHC, etc.) are re-used to determine the context.</p>
 series:
 - type: main
   title:

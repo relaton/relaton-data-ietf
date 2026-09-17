@@ -1,3 +1,4 @@
+---
 id: draftramasamyidrsrpolicycompositeperflow
 schema_version: v1.5.6
 formattedref:
@@ -5,7 +6,8 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'BGP Extensions for SRv6 Per-Flow Traffic Engineering: Composite Candidate Path and Forwarding-Class Signaling'
+  content: 'BGP Extensions for SRv6 Per-Flow Traffic Engineering: Composite Candidate
+    Path and Forwarding-Class Signaling'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ramasamy-idr-sr-policy-composite-perflow-00
@@ -19,7 +21,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Segment Routing Policy Architecture (RFC 9256) defines the\n   concept of a Composite Candidate Path, which enables a parent SR\n   Policy to recursively steer traffic into a set of constituent SR\n   Policies.  Section 8.6 of RFC 9256 further defines per-flow steering,\n   in which packets are classified into a Forwarding Class value by a\n   Quality-of-Service classifier at the headend, and that Forwarding\n   Class value selects a specific constituent SR Policy, identified by\n   its color, for forwarding.\n\n   RFC 9830 specifies how BGP distributes SR Policy Candidate Paths but\n   explicitly excludes composite Candidate Paths from its scope.\n   Consequently, no standard BGP mechanism currently exists to\n   distribute a parent per-flow SR Policy -- including its Forwarding-\n   Class-to-color mapping table -- to headend nodes.  This document\n   defines two new sub-TLVs for the BGP Tunnel Encapsulation Attribute\n   (SR Policy type, Tunnel Type 15): the Constituent SR Policy sub-TLV\n   and the nested Per-Flow Forwarding Class sub-TLV.  Together, these\n   extensions allow a controller to distribute a fully specified\n   composite or per-flow Candidate Path to headend routers via BGP.</p>"
+  content: |-
+    <p>The Segment Routing Policy Architecture (RFC 9256) defines the
+       concept of a Composite Candidate Path, which enables a parent SR
+       Policy to recursively steer traffic into a set of constituent SR
+       Policies.  Section 8.6 of RFC 9256 further defines per-flow steering,
+       in which packets are classified into a Forwarding Class value by a
+       Quality-of-Service classifier at the headend, and that Forwarding
+       Class value selects a specific constituent SR Policy, identified by
+       its color, for forwarding.
+
+       RFC 9830 specifies how BGP distributes SR Policy Candidate Paths but
+       explicitly excludes composite Candidate Paths from its scope.
+       Consequently, no standard BGP mechanism currently exists to
+       distribute a parent per-flow SR Policy -- including its Forwarding-
+       Class-to-color mapping table -- to headend nodes.  This document
+       defines two new sub-TLVs for the BGP Tunnel Encapsulation Attribute
+       (SR Policy type, Tunnel Type 15): the Constituent SR Policy sub-TLV
+       and the nested Per-Flow Forwarding Class sub-TLV.  Together, these
+       extensions allow a controller to distribute a fully specified
+       composite or per-flow Candidate Path to headend routers via BGP.</p>
 relation:
 - type: includes
   bibitem:

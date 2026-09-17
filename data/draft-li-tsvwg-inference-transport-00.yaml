@@ -1,3 +1,4 @@
+---
 id: draftlitsvwginferencetransport00
 schema_version: v1.5.6
 type: standard
@@ -203,7 +204,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Large-scale distributed inference systems generate traffic patterns\n   that differ from both traditional data center workloads and\n   distributed training workloads.  Disaggregated prefill/decode serving\n   transfers key-value cache state between server pools, and expert-\n   parallel architectures generate all-to-all traffic among expert\n   groups.  These flows are typically carried over a small number of\n   RDMA connections, producing low-entropy traffic that is prone to\n   uneven link utilization under Equal-Cost Multipath (ECMP) forwarding.\n\n   This document specifies transport considerations for such networks,\n   covering path load awareness, path steering through ECMP entropy\n   variation, ordering tolerance at the receiver, and differentiated\n   reliability for data with different loss sensitivity.  The discussion\n   builds on existing IETF building blocks; this document does not\n   define new protocol elements.</p>"
+  content: |-
+    <p>Large-scale distributed inference systems generate traffic patterns
+       that differ from both traditional data center workloads and
+       distributed training workloads.  Disaggregated prefill/decode serving
+       transfers key-value cache state between server pools, and expert-
+       parallel architectures generate all-to-all traffic among expert
+       groups.  These flows are typically carried over a small number of
+       RDMA connections, producing low-entropy traffic that is prone to
+       uneven link utilization under Equal-Cost Multipath (ECMP) forwarding.
+
+       This document specifies transport considerations for such networks,
+       covering path load awareness, path steering through ECMP entropy
+       variation, ordering tolerance at the receiver, and differentiated
+       reliability for data with different loss sensitivity.  The discussion
+       builds on existing IETF building blocks; this document does not
+       define new protocol elements.</p>
 series:
 - type: main
   title:

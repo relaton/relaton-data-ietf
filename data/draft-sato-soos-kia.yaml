@@ -1,3 +1,4 @@
+---
 id: draftsatosooskia
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,77 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the Kernel Identity and Attestation (KIA)\n   protocol for the Sovereign Object OS (SOOS) governance architecture.\n   KIA defines the cryptographic identity of the GEC, the trust\n   chain anchoring kernel authority from hardware root through operator\n   root keypair to every signed Event Log entry, the GEC Manifest\n   schema for runtime state attestation, and the Revocation Registry\n   maintenance requirements.  KIA is the Layer 0 signing and\n   attestation component on which the audit trail guarantees of\n   draft-sato-soos-gar, the mandate enforcement guarantees of\n   draft-sato-soos-mjwt, and the multi-agent delegation chain of\n   draft-sato-soos-mad all depend.\n\n   Version -03 adds FROST threshold signing for high-availability GEC\n   keypair deployments, the Cross-Principal Identifier (XPID) for\n   cross-instance federation audit correlation, the XPID cross-\n   instance trust model, and four new Security Considerations\n   addressing FROST nonce reuse, XPID revocation gap, identity\n   takeover via claimed identifier (CVE-2025-13609 class), and\n   attestation channel binding (CVE-2026-33697 class).\n\n   This document is the reference specification for the KIA RATS WG\n   presentation at IETF 126 Vienna.  The XPID primitive and the\n   CVE-2026-33697 attestation channel binding defense are the primary\n   novel contributions presented to the RATS WG.\n\n   Version -04 corrects a registry-format mismatch identified by IANA\n   early review (#1456067): the IANA Considerations request to\n   register XPID_DERIVED and XPID_VERIFICATION_FAILED into the GAR\n   Authority\n   Lifecycle Event Types Registry the GAR draft defines now uses that\n   registry's actual column set (Event Type, Class, Reference) and\n   assigns both entries the newly-defined Class ID (Identity/\n   Federation event).  No new event types, fields, or normative\n   behavior are introduced in -04; this is a registration-format\n   correction only.\n\n   Version -05 discloses a known open issue found by a WIMSE security\n   review checklist dry-run against -03 (DR-MJWT-KIA-CHECKLIST-01,\n   Finding 4): the Cross-Instance Trust Model verifies an XPID but\n   does not restrict which federation participants can see the\n   underlying Evidence in the first place.  This is named as\n   OQ-KIA-EVIDENCE-VIS, following the same acknowledge-rather-than-\n   silently-omit pattern this document already uses for\n   OQ-S-XPID-REV.  No mechanism is specified in -05; resolution is\n   deferred, consistent with how OQ-S-XPID-REV is treated.\n\n   Version -06 closes out a full WIMSE Security Review checklist pass\n   (Stage 0 through Stage 2) run against -05.  It restores seven GEC\n   Manifest fields silently absent since -03 despite -03's text\n   claiming the -02 schema was carried forward in full, including\n   attestation_certificate; mints a dedicated XPID namespace UUID in\n   place of the reused DNS namespace UUID; updates the FROST\n   reference from the CFRG working draft to RFC 9591 and corrects\n   the nonce-generation section citations; resolves a genuine\n   bootstrapping contradiction between the quorum-failure signing\n   prohibition and the quorum-failure alerting requirement (new\n   CONF-KIA-24); tightens Security Considerations wording describing\n   the XPID derivation input; adds a new Denial of Service Security\n   Considerations entry for the quorum-isolation availability\n   asymmetry; and adds a Privacy Considerations section addressing\n   XPID's by-design stability and cross-context linkability.  No\n   prior conformance requirement is weakened by this revision.\n\n   Version -07 is an editorial revision with no normative content\n   changes: sibling-draft citations had gone stale against those\n   drafts' current live versions and are updated to\n   draft-sato-soos-cap-06, draft-sato-soos-gar-08,\n   draft-sato-soos-mad-05, draft-sato-soos-mjwt-06, and\n   draft-sato-soos-idp-06; the companion-drafts discussion's HEM\n   and AEP mentions are similarly updated to hem-07 and aep-04.</p>"
+  content: |-
+    <p>This document specifies the Kernel Identity and Attestation (KIA)
+       protocol for the Sovereign Object OS (SOOS) governance architecture.
+       KIA defines the cryptographic identity of the GEC, the trust
+       chain anchoring kernel authority from hardware root through operator
+       root keypair to every signed Event Log entry, the GEC Manifest
+       schema for runtime state attestation, and the Revocation Registry
+       maintenance requirements.  KIA is the Layer 0 signing and
+       attestation component on which the audit trail guarantees of
+       draft-sato-soos-gar, the mandate enforcement guarantees of
+       draft-sato-soos-mjwt, and the multi-agent delegation chain of
+       draft-sato-soos-mad all depend.
+
+       Version -03 adds FROST threshold signing for high-availability GEC
+       keypair deployments, the Cross-Principal Identifier (XPID) for
+       cross-instance federation audit correlation, the XPID cross-
+       instance trust model, and four new Security Considerations
+       addressing FROST nonce reuse, XPID revocation gap, identity
+       takeover via claimed identifier (CVE-2025-13609 class), and
+       attestation channel binding (CVE-2026-33697 class).
+
+       This document is the reference specification for the KIA RATS WG
+       presentation at IETF 126 Vienna.  The XPID primitive and the
+       CVE-2026-33697 attestation channel binding defense are the primary
+       novel contributions presented to the RATS WG.
+
+       Version -04 corrects a registry-format mismatch identified by IANA
+       early review (#1456067): the IANA Considerations request to
+       register XPID_DERIVED and XPID_VERIFICATION_FAILED into the GAR
+       Authority
+       Lifecycle Event Types Registry the GAR draft defines now uses that
+       registry's actual column set (Event Type, Class, Reference) and
+       assigns both entries the newly-defined Class ID (Identity/
+       Federation event).  No new event types, fields, or normative
+       behavior are introduced in -04; this is a registration-format
+       correction only.
+
+       Version -05 discloses a known open issue found by a WIMSE security
+       review checklist dry-run against -03 (DR-MJWT-KIA-CHECKLIST-01,
+       Finding 4): the Cross-Instance Trust Model verifies an XPID but
+       does not restrict which federation participants can see the
+       underlying Evidence in the first place.  This is named as
+       OQ-KIA-EVIDENCE-VIS, following the same acknowledge-rather-than-
+       silently-omit pattern this document already uses for
+       OQ-S-XPID-REV.  No mechanism is specified in -05; resolution is
+       deferred, consistent with how OQ-S-XPID-REV is treated.
+
+       Version -06 closes out a full WIMSE Security Review checklist pass
+       (Stage 0 through Stage 2) run against -05.  It restores seven GEC
+       Manifest fields silently absent since -03 despite -03's text
+       claiming the -02 schema was carried forward in full, including
+       attestation_certificate; mints a dedicated XPID namespace UUID in
+       place of the reused DNS namespace UUID; updates the FROST
+       reference from the CFRG working draft to RFC 9591 and corrects
+       the nonce-generation section citations; resolves a genuine
+       bootstrapping contradiction between the quorum-failure signing
+       prohibition and the quorum-failure alerting requirement (new
+       CONF-KIA-24); tightens Security Considerations wording describing
+       the XPID derivation input; adds a new Denial of Service Security
+       Considerations entry for the quorum-isolation availability
+       asymmetry; and adds a Privacy Considerations section addressing
+       XPID's by-design stability and cross-context linkability.  No
+       prior conformance requirement is weakened by this revision.
+
+       Version -07 is an editorial revision with no normative content
+       changes: sibling-draft citations had gone stale against those
+       drafts' current live versions and are updated to
+       draft-sato-soos-cap-06, draft-sato-soos-gar-08,
+       draft-sato-soos-mad-05, draft-sato-soos-mjwt-06, and
+       draft-sato-soos-idp-06; the companion-drafts discussion's HEM
+       and AEP mentions are similarly updated to hem-07 and aep-04.</p>
 relation:
 - type: includes
   bibitem:

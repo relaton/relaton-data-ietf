@@ -1,3 +1,4 @@
+---
 id: drafthardthttpbissignaturekey08
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines five HTTP header fields for use with HTTP\n   Message Signatures as defined in RFC 9421.  The Signature-Key request\n   header distributes public keys used to verify signatures, with eight\n   initial key distribution schemes: pseudonymous inline keys (hwk),\n   self-issued key delegation via JWK Thumbprint JWTs (jkt-jwt),\n   identified signers with JWKS URI discovery (jwks_uri), direct JWKS\n   fetch (jwks), JWT-based delegation (jwt), self-issued JWTs (self-\n   jwt), X.509 certificate chains (x509), and references to previously\n   cached assertions (cached).  The Accept-Signature-Scheme and Accept-\n   Signature-Alg response headers state the schemes and algorithms a\n   server accepts, so a client can select both before it signs.  The\n   Signature-Error response header provides structured error information\n   when signature verification fails, and the Signature-Key-Cache\n   response header issues a cache identifier by which a caller can\n   reference a previously presented assertion instead of resending it.\n   Together, these mechanisms enable flexible trust models ranging from\n   privacy-preserving pseudonymous verification to horizontally-scalable\n   delegated authentication and PKI-based identity chains.</p>"
+  content: |-
+    <p>This document defines five HTTP header fields for use with HTTP
+       Message Signatures as defined in RFC 9421.  The Signature-Key request
+       header distributes public keys used to verify signatures, with eight
+       initial key distribution schemes: pseudonymous inline keys (hwk),
+       self-issued key delegation via JWK Thumbprint JWTs (jkt-jwt),
+       identified signers with JWKS URI discovery (jwks_uri), direct JWKS
+       fetch (jwks), JWT-based delegation (jwt), self-issued JWTs (self-
+       jwt), X.509 certificate chains (x509), and references to previously
+       cached assertions (cached).  The Accept-Signature-Scheme and Accept-
+       Signature-Alg response headers state the schemes and algorithms a
+       server accepts, so a client can select both before it signs.  The
+       Signature-Error response header provides structured error information
+       when signature verification fails, and the Signature-Key-Cache
+       response header issues a cache identifier by which a caller can
+       reference a previously presented assertion instead of resending it.
+       Together, these mechanisms enable flexible trust models ranging from
+       privacy-preserving pseudonymous verification to horizontally-scalable
+       delegated authentication and PKI-based identity chains.</p>
 relation:
 - type: updates
   bibitem:

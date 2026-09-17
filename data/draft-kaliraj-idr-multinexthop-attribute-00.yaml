@@ -1,3 +1,4 @@
+---
 id: draftkalirajidrmultinexthopattribute00
 schema_version: v1.5.6
 type: standard
@@ -81,7 +82,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in\n   an Update.  This nexthop can be encoded in either the BGP-Nexthop\n   attribute (code 3), or inside the MP_REACH attribute (code 14).\n\n   For cases where multiple nexthops need to be advertised, BGP-Addpath\n   is used.  Though Addpath allows basic ability to advertise multiple-\n   nexthops, it does not allow the sender to specify desired\n   relationship between the multiple nexthops being advertised e.g.,\n   relative-preference, type of load-balancing.  These are local\n   decisions at the receiving speaker based on path-selection between\n   the various additional-paths, which may tie-break on some arbitrary\n   step like Router-Id.\n\n   Some scenarios with a BGP-free core may benefit from having a\n   mechanism, where egress-node can signal multiple-nexthops along with\n   their relationship to ingress nodes.  This document defines a new BGP\n   attribute \"MultiNexthop\" that can be used for this purpose.\n\n   This attribute can be used for both labeled and unlabled BGP\n   families.  For labeled-families, it is used for a different purpose\n   in \"downstream allocation\" case than \"upstream allocation\" scenarios.</p>"
+  content: |-
+    <p>Today, a BGP speaker can advertise one nexthop for a set of NLRIs in
+       an Update.  This nexthop can be encoded in either the BGP-Nexthop
+       attribute (code 3), or inside the MP_REACH attribute (code 14).
+
+       For cases where multiple nexthops need to be advertised, BGP-Addpath
+       is used.  Though Addpath allows basic ability to advertise multiple-
+       nexthops, it does not allow the sender to specify desired
+       relationship between the multiple nexthops being advertised e.g.,
+       relative-preference, type of load-balancing.  These are local
+       decisions at the receiving speaker based on path-selection between
+       the various additional-paths, which may tie-break on some arbitrary
+       step like Router-Id.
+
+       Some scenarios with a BGP-free core may benefit from having a
+       mechanism, where egress-node can signal multiple-nexthops along with
+       their relationship to ingress nodes.  This document defines a new BGP
+       attribute "MultiNexthop" that can be used for this purpose.
+
+       This attribute can be used for both labeled and unlabled BGP
+       families.  For labeled-families, it is used for a different purpose
+       in "downstream allocation" case than "upstream allocation" scenarios.</p>
 relation:
 - type: updatedBy
   bibitem:

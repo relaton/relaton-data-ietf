@@ -1,3 +1,4 @@
+---
 id: draftgakiwatednsopoptimisticdns00
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DNS lookups introduce user-visible delay, particularly when cached\n   records have expired and must be refreshed from the network.  This\n   document describes Optimistic DNS, a client-side stub resolver\n   mechanism that immediately returns expired cached DNS records to\n   applications while simultaneously refreshing them with a network\n   query.  The application receives an answer in microseconds rather\n   than milliseconds, and if the data has changed receives an updated\n   answer shortly thereafter.  Optimistic DNS is complementary to RFC\n   8767, which addresses serving stale data at recursive resolvers.\n   This document focuses exclusively on client-side stub resolver\n   behavior, including explicit signaling from the application to inform\n   the stub resolver that the application is able to handle old and\n   possibly incorrect information.</p>"
+  content: |-
+    <p>DNS lookups introduce user-visible delay, particularly when cached
+       records have expired and must be refreshed from the network.  This
+       document describes Optimistic DNS, a client-side stub resolver
+       mechanism that immediately returns expired cached DNS records to
+       applications while simultaneously refreshing them with a network
+       query.  The application receives an answer in microseconds rather
+       than milliseconds, and if the data has changed receives an updated
+       answer shortly thereafter.  Optimistic DNS is complementary to RFC
+       8767, which addresses serving stale data at recursive resolvers.
+       This document focuses exclusively on client-side stub resolver
+       behavior, including explicit signaling from the application to inform
+       the stub resolver that the application is able to handle old and
+       possibly incorrect information.</p>
 series:
 - type: main
   title:

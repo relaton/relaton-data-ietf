@@ -1,3 +1,4 @@
+---
 id: draftsahuagentactionreceipts00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a format for action receipts: compact,\n   individually signed JSON records that state that a specific AI agent\n   attempted a specific action at a specific time, under a specific\n   policy decision, and what the outcome was.  Receipts are linked into\n   an append-only hash chain so that deletion, insertion, reordering, or\n   modification of any previously recorded receipt is detectable by a\n   verifier that holds only the records and the signer's public key.\n\n   The format is deliberately small and self-contained.  Verification\n   requires no network access, no service operated by the producer of\n   the receipts, and no state beyond the records themselves and a trust\n   anchor obtained out of band.  This document specifies the record\n   fields, the canonical byte sequence that is signed, the chain linkage\n   rule, the verification procedure, and test vectors.</p>"
+  content: |-
+    <p>This document specifies a format for action receipts: compact,
+       individually signed JSON records that state that a specific AI agent
+       attempted a specific action at a specific time, under a specific
+       policy decision, and what the outcome was.  Receipts are linked into
+       an append-only hash chain so that deletion, insertion, reordering, or
+       modification of any previously recorded receipt is detectable by a
+       verifier that holds only the records and the signer's public key.
+
+       The format is deliberately small and self-contained.  Verification
+       requires no network access, no service operated by the producer of
+       the receipts, and no state beyond the records themselves and a trust
+       anchor obtained out of band.  This document specifies the record
+       fields, the canonical byte sequence that is signed, the chain linkage
+       rule, the verification procedure, and test vectors.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: drafthopleyx402settlementattestation01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a categorical settlement attestation format\n   for agentic-payment flows.  The format records that a payment has\n   reached a particular settlement state on a particular chain, at a\n   particular instant, under the attesting party's risk model.\n\n   The receipt format uses a closed enumeration of categorical outcomes\n   (SETTLED, PENDING_FINALITY, REVERSED).  The categorical outcome is\n   load-bearing for downstream regulatory obligations: SETTLED triggers\n   settlement-finality record-keeping obligations under EU Markets in\n   Crypto-Assets Regulation Article 80 and Anti-Money Laundering\n   Regulation Article 56; the PSD2 (Directive 2015/2366) Article 89\n   unauthorised-payment refund-window clock begins at SETTLED.\n   PENDING_FINALITY records an inclusion-without-finality state where\n   the refund-window has not yet started.  REVERSED records chain-\n   reorganisation, fraud-reversal, or operator-initiated reversal events\n   for chain-of-custody audit.\n\n   The format is multi-chain: a single settlement_chain string field\n   identifies the chain on which settlement occurred, using a flat\n   identifier convention (&lt;chain_family&gt; for default mainnets,\n   &lt;chain_family&gt;:&lt;network&gt; for non-default networks).  The receipt does\n   not encode chain-specific finality semantics; those are applied at\n   verification time by a verifier that knows the chain.\n\n   The format composes with the AlgoVoi-authored compliance receipt\n   format (draft-hopley-x402-compliance-receipt) and refund receipt\n   format (draft-hopley-x402-refund-receipt) under the same\n   canonicalisation discipline (draft-hopley-x402-canonicalisation-jcs).\n   A verifier walking the audit chain confirms the full payment\n   lifecycle from admission through settlement to refund (or non-refund)\n   under one byte-deterministic canonicalisation pin.</p>"
+  content: |-
+    <p>This document specifies a categorical settlement attestation format
+       for agentic-payment flows.  The format records that a payment has
+       reached a particular settlement state on a particular chain, at a
+       particular instant, under the attesting party's risk model.
+
+       The receipt format uses a closed enumeration of categorical outcomes
+       (SETTLED, PENDING_FINALITY, REVERSED).  The categorical outcome is
+       load-bearing for downstream regulatory obligations: SETTLED triggers
+       settlement-finality record-keeping obligations under EU Markets in
+       Crypto-Assets Regulation Article 80 and Anti-Money Laundering
+       Regulation Article 56; the PSD2 (Directive 2015/2366) Article 89
+       unauthorised-payment refund-window clock begins at SETTLED.
+       PENDING_FINALITY records an inclusion-without-finality state where
+       the refund-window has not yet started.  REVERSED records chain-
+       reorganisation, fraud-reversal, or operator-initiated reversal events
+       for chain-of-custody audit.
+
+       The format is multi-chain: a single settlement_chain string field
+       identifies the chain on which settlement occurred, using a flat
+       identifier convention (&lt;chain_family&gt; for default mainnets,
+       &lt;chain_family&gt;:&lt;network&gt; for non-default networks).  The receipt does
+       not encode chain-specific finality semantics; those are applied at
+       verification time by a verifier that knows the chain.
+
+       The format composes with the AlgoVoi-authored compliance receipt
+       format (draft-hopley-x402-compliance-receipt) and refund receipt
+       format (draft-hopley-x402-refund-receipt) under the same
+       canonicalisation discipline (draft-hopley-x402-canonicalisation-jcs).
+       A verifier walking the audit chain confirms the full payment
+       lifecycle from admission through settlement to refund (or non-refund)
+       under one byte-deterministic canonicalisation pin.</p>
 relation:
 - type: updates
   bibitem:

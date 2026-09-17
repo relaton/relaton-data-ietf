@@ -1,3 +1,4 @@
+---
 id: draftschrockauthorizationevidencechallenge
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,27 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The agent-action evidence stack has declaration (a resource declares\n   what evidence its actions require), presentation (an evidence graph\n   of signed artifacts), and decision (deterministic policy replay\n   yielding a closed verdict).  Nothing closes the loop: when the\n   verdict is that evidence is missing or stale, no machine-readable\n   message tells the agent what to obtain, how to re-present, or what\n   the retry semantics are — every deployment hand-rolls the dance.\n   This document defines the Authorization Evidence Challenge: the\n   message a relying party returns before a high-risk action executes,\n   naming the exact evidence still required (type, assurance\n   constraints, freshness bound, revocation-check requirement), how to\n   present it, where it might be obtained, and the challenge's own\n   expiry and single-use nonce.  The action digest in a challenge is\n   computed by the RELYING PARTY over its own canonical action, so\n   evidence is obtained against the action that will actually execute.\n   The exchange generalizes OAuth step-up authentication (RFC 9470) from\n   authentication to evidence, and completes the circuit: declare,\n   attempt, challenge, obtain, present, replay, consume.  A satisfied\n   challenge yields a verdict under the relying party's policy, never a\n   promise to execute.</p>"
+  content: |-
+    <p>The agent-action evidence stack has declaration (a resource declares
+       what evidence its actions require), presentation (an evidence graph
+       of signed artifacts), and decision (deterministic policy replay
+       yielding a closed verdict).  Nothing closes the loop: when the
+       verdict is that evidence is missing or stale, no machine-readable
+       message tells the agent what to obtain, how to re-present, or what
+       the retry semantics are — every deployment hand-rolls the dance.
+       This document defines the Authorization Evidence Challenge: the
+       message a relying party returns before a high-risk action executes,
+       naming the exact evidence still required (type, assurance
+       constraints, freshness bound, revocation-check requirement), how to
+       present it, where it might be obtained, and the challenge's own
+       expiry and single-use nonce.  The action digest in a challenge is
+       computed by the RELYING PARTY over its own canonical action, so
+       evidence is obtained against the action that will actually execute.
+       The exchange generalizes OAuth step-up authentication (RFC 9470) from
+       authentication to evidence, and completes the circuit: declare,
+       attempt, challenge, obtain, present, replay, consume.  A satisfied
+       challenge yields a verdict under the relying party's policy, never a
+       promise to execute.</p>
 relation:
 - type: includes
   bibitem:

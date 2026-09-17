@@ -1,3 +1,4 @@
+---
 id: draftsatosoosaep03
 schema_version: v1.5.6
 type: standard
@@ -49,7 +50,63 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>An AI agent that can act cannot be governed unless there is a\n   normative contract for how it receives its world, how it declares\n   its intent, and how it learns what it is and is not permitted to\n   do -- at every step, in every iteration, without exception.\n\n   AI agents operating on governed resources require a normative\n   interface contract between their internal reasoning loop and the\n   Governing Enforcement Component (GEC) that enforces authorization\n   policy, records transitions to a tamper-evident Event Stream, and\n   mediates access to Sovereign Object instances.  Existing agent\n   frameworks define no such contract.  Agents submit actions without a\n   normative delivery protocol for the state and permission context they\n   act on; GECs enforce policy without a normative protocol for\n   communicating denial rationale back to agents; human oversight is\n   invoked without a normative session state that governs the resulting\n   suspension.\n\n   This document defines the Agent Execution Protocol (AEP): the\n   normative five-step loop -- SENSE, REASON, PLAN, ACT, OBSERVE --\n   that specifies how a governed AI agent interfaces with GEC services\n   at each iteration.  The AEP defines the Context Package delivered at\n   SENSE, the GEC Query Interface exercised at PLAN, the Transition\n   Request submitted at ACT, and the atomic GEC response received at\n   OBSERVE.  The AEP specifies two conformance modes -- Standard and\n   Goal Execution Engine (GEE) -- and normatively integrates the Intent\n   Declaration Primitive, the Mandate JWT, the Human Escalation\n   Mechanism, the Governance Audit Record, the Constitutional AI\n   Protocol, and the Sovereign Object as components of a single\n   governed execution architecture.\n\n   The REASON step is intentionally GEC-unspecified: the LLM reasoning\n   engine is opaque to the protocol.  The AEP is the transmission\n   between the LLM engine and the GEC enforcement substrate.\n\n   Version -02 adds: XPID binding at session open (GEC MUST bind XPID\n   from KIA-verified Party Registry; MUST NOT accept client-supplied\n   XPID); STALLED and PLAN_B_ACTIVE session states with full normative\n   definitions, trigger conditions, and resume conditions; Expected\n   Outcome Declaration (EOD) as a pre-session commitment structure with\n   primary outcome, acceptance envelope, and pre-declared Plan B;\n   RETRY_CONTINUATION normative strengthening with what-changed-since-\n   last-attempt requirement and prior_denial_count Cedar attribute;\n   an AEP-to-OTel mapping with mandatory span attributes at each AEP\n   phase; four new Security Considerations; and updated IANA\n   registrations for new state codes and EOD media type.\n\n   Version -03 adds Step 4a of the GEC execution sequence: DAM\n   lineage and residency validation.  When a Transition Request's\n   optional da_production field is present, the GEC resolves every\n   referenced input artifact, confirms each is in a VALID lifecycle\n   state, and computes the resulting artifact's data_residency under\n   the applicable narrowing rule -- before the transition's Event\n   Stream write occurs, and under the same signature as that write.\n   This is the enforcement point for a rule the data governance\n   companion specification had defined but this document, until now,\n   gave no mechanism to actually apply.</p>"
+  content: |-
+    <p>An AI agent that can act cannot be governed unless there is a
+       normative contract for how it receives its world, how it declares
+       its intent, and how it learns what it is and is not permitted to
+       do -- at every step, in every iteration, without exception.
+
+       AI agents operating on governed resources require a normative
+       interface contract between their internal reasoning loop and the
+       Governing Enforcement Component (GEC) that enforces authorization
+       policy, records transitions to a tamper-evident Event Stream, and
+       mediates access to Sovereign Object instances.  Existing agent
+       frameworks define no such contract.  Agents submit actions without a
+       normative delivery protocol for the state and permission context they
+       act on; GECs enforce policy without a normative protocol for
+       communicating denial rationale back to agents; human oversight is
+       invoked without a normative session state that governs the resulting
+       suspension.
+
+       This document defines the Agent Execution Protocol (AEP): the
+       normative five-step loop -- SENSE, REASON, PLAN, ACT, OBSERVE --
+       that specifies how a governed AI agent interfaces with GEC services
+       at each iteration.  The AEP defines the Context Package delivered at
+       SENSE, the GEC Query Interface exercised at PLAN, the Transition
+       Request submitted at ACT, and the atomic GEC response received at
+       OBSERVE.  The AEP specifies two conformance modes -- Standard and
+       Goal Execution Engine (GEE) -- and normatively integrates the Intent
+       Declaration Primitive, the Mandate JWT, the Human Escalation
+       Mechanism, the Governance Audit Record, the Constitutional AI
+       Protocol, and the Sovereign Object as components of a single
+       governed execution architecture.
+
+       The REASON step is intentionally GEC-unspecified: the LLM reasoning
+       engine is opaque to the protocol.  The AEP is the transmission
+       between the LLM engine and the GEC enforcement substrate.
+
+       Version -02 adds: XPID binding at session open (GEC MUST bind XPID
+       from KIA-verified Party Registry; MUST NOT accept client-supplied
+       XPID); STALLED and PLAN_B_ACTIVE session states with full normative
+       definitions, trigger conditions, and resume conditions; Expected
+       Outcome Declaration (EOD) as a pre-session commitment structure with
+       primary outcome, acceptance envelope, and pre-declared Plan B;
+       RETRY_CONTINUATION normative strengthening with what-changed-since-
+       last-attempt requirement and prior_denial_count Cedar attribute;
+       an AEP-to-OTel mapping with mandatory span attributes at each AEP
+       phase; four new Security Considerations; and updated IANA
+       registrations for new state codes and EOD media type.
+
+       Version -03 adds Step 4a of the GEC execution sequence: DAM
+       lineage and residency validation.  When a Transition Request's
+       optional da_production field is present, the GEC resolves every
+       referenced input artifact, confirms each is in a VALID lifecycle
+       state, and computes the resulting artifact's data_residency under
+       the applicable narrowing rule -- before the transition's Event
+       Stream write occurs, and under the same signature as that write.
+       This is the enforcement point for a rule the data governance
+       companion specification had defined but this document, until now,
+       gave no mechanism to actually apply.</p>
 relation:
 - type: updates
   bibitem:

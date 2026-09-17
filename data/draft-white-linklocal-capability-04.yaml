@@ -1,3 +1,4 @@
+---
 id: draftwhitelinklocalcapability04
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>BGP[RFC4271], was originally designed to provide reachability between\n   domains and between the edges of a domain.  As such, BGP assumes the\n   next hop towards any reachable destination may not reside on the\n   advertising speaker, but rather may either be through a router\n   connected to the same subnet as the speaker, or through a router only\n   reachable by traversing multiple hops through the network.  Because\n   of this, as per [RFC4291] - BGP does not recognize IPv6 link-local\n   addresses, as a valid next hop for the forwarding purposes.\n\n   However, in many current deplyments, BGP peering is often deployed on\n   point-to-point links in networks where multihop reachability of any\n   kind is not assumed or desired (all next hops are assumed to be the\n   speaker reachable through a directly connected point-to-point link).\n   This is common, for instance, in data center fabrics[RFC7938].  In\n   these situations, a global IPv6 address is not required for the\n   advertisement of reachability information; in fact, providing global\n   IPv6 addresses in these kinds of networks can be detrimental to Zero\n   Touch Provisioning (ZTP).\n\n   This draft standardizes the operation of BGP over a point-to-point\n   link using link-local IPv6 addressing only.\n\n   Since link-local IPv6 addresses are not required to be globally\n   unique, implementations must ensure that they are strictly associated\n   with a specific interface.</p>"
+  content: |-
+    <p>BGP[RFC4271], was originally designed to provide reachability between
+       domains and between the edges of a domain.  As such, BGP assumes the
+       next hop towards any reachable destination may not reside on the
+       advertising speaker, but rather may either be through a router
+       connected to the same subnet as the speaker, or through a router only
+       reachable by traversing multiple hops through the network.  Because
+       of this, as per [RFC4291] - BGP does not recognize IPv6 link-local
+       addresses, as a valid next hop for the forwarding purposes.
+
+       However, in many current deplyments, BGP peering is often deployed on
+       point-to-point links in networks where multihop reachability of any
+       kind is not assumed or desired (all next hops are assumed to be the
+       speaker reachable through a directly connected point-to-point link).
+       This is common, for instance, in data center fabrics[RFC7938].  In
+       these situations, a global IPv6 address is not required for the
+       advertisement of reachability information; in fact, providing global
+       IPv6 addresses in these kinds of networks can be detrimental to Zero
+       Touch Provisioning (ZTP).
+
+       This draft standardizes the operation of BGP over a point-to-point
+       link using link-local IPv6 addressing only.
+
+       Since link-local IPv6 addresses are not required to be globally
+       unique, implementations must ensure that they are strictly associated
+       with a specific interface.</p>
 relation:
 - type: updates
   bibitem:

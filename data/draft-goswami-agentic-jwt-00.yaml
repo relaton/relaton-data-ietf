@@ -1,3 +1,4 @@
+---
 id: draftgoswamiagenticjwt00
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,34 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies Agentic JSON Web Token (Agentic JWT), as an\n   extension to OAuth 2.0 that addresses authorization challenges unique\n   to autonomous agentic AI systems.  This protocol solves the problem\n   of Zero-Trust drift due to non-deterministic Agentic AI clients\n   causing separation between user's (resource owner's) intent and\n   client application's actions.\n\n   Traditional OAuth 2.0 assumes that client applications faithfully\n   represent user intent when requesting authorization.  This assumption\n   breaks down when autonomous AI agents dynamically generate workflows,\n   create sub-agents, and make authorization decisions without\n   continuous human oversight.  We term this the \"intent-execution\n   separation problem.\"\n\n   Agentic JWT introduces three mechanisms to address this problem: (1)\n   cryptographic agent identity through agent checksums (based on\n   agent's system prompts, tools and configurations), (2) workflow-aware\n   token binding that links user intent to agent execution, and (3) a\n   new OAuth 2.0 grant type (agent_checksum) for secure token issuance,\n   (4) a flavor of PoP (Proof-of-Possession) at the level of an agentic\n   identity to prevent token replays by other agents in the same multi-\n   agent process.\n\n   This specification enables Zero-Trust security principles in multi-\n   agent systems while maintaining backward compatibility with existing\n   OAuth 2.0 infrastructure.  The security analysis and experimental\n   validation are described in the companion research paper.</p>"
+  content: |-
+    <p>This document specifies Agentic JSON Web Token (Agentic JWT), as an
+       extension to OAuth 2.0 that addresses authorization challenges unique
+       to autonomous agentic AI systems.  This protocol solves the problem
+       of Zero-Trust drift due to non-deterministic Agentic AI clients
+       causing separation between user's (resource owner's) intent and
+       client application's actions.
+
+       Traditional OAuth 2.0 assumes that client applications faithfully
+       represent user intent when requesting authorization.  This assumption
+       breaks down when autonomous AI agents dynamically generate workflows,
+       create sub-agents, and make authorization decisions without
+       continuous human oversight.  We term this the "intent-execution
+       separation problem."
+
+       Agentic JWT introduces three mechanisms to address this problem: (1)
+       cryptographic agent identity through agent checksums (based on
+       agent's system prompts, tools and configurations), (2) workflow-aware
+       token binding that links user intent to agent execution, and (3) a
+       new OAuth 2.0 grant type (agent_checksum) for secure token issuance,
+       (4) a flavor of PoP (Proof-of-Possession) at the level of an agentic
+       identity to prevent token replays by other agents in the same multi-
+       agent process.
+
+       This specification enables Zero-Trust security principles in multi-
+       agent systems while maintaining backward compatibility with existing
+       OAuth 2.0 infrastructure.  The security analysis and experimental
+       validation are described in the companion research paper.</p>
 relation:
 - type: updatedBy
   bibitem:

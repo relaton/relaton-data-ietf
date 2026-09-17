@@ -1,10 +1,12 @@
+---
 id: draftguptaemueapwsim00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'EAP-WSIM: A SIM-Based EAP Method Using the MILENAGE-ECDH-FWD Authentication Construction'
+  content: 'EAP-WSIM: A SIM-Based EAP Method Using the MILENAGE-ECDH-FWD Authentication
+    Construction'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-gupta-emu-eap-wsim-00
@@ -53,7 +55,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies EAP-WSIM, a new EAP authentication method\n   for enterprise wireless networks that performs offline mutual\n   authentication without contacting any Mobile Network Operator (MNO)\n   Home Subscriber Server (HSS), Home Location Register (HLR), or\n   Unified Data Management (UDM) function during the authentication\n   exchange.\n\n   EAP-WSIM uses a new cryptographic construction called MILENAGE-\n   ECDH-FWD, which combines the MILENAGE authentication and key\n   agreement algorithm [TS35.205] with an ephemeral Elliptic Curve\n   Diffie-Hellman (ECDH) exchange.  This construction simultaneously\n   provides mutual authentication via MILENAGE challenge-response and\n   forward secrecy via ephemeral ECDH, such that compromise of long-\n   term key material does not expose keys from prior sessions.\n\n   The key distinction from all existing SIM-based EAP methods --\n   EAP-SIM [RFC4186], EAP-AKA [RFC4187], EAP-AKA' [RFC9048], and\n   EAP-AKA' FS [RFC9678] -- is that EAP-WSIM requires no MNO backend\n   contact during authentication.  The EAP server holds a SIM card\n   (the WSIM) that functions as a self-contained Authentication Centre,\n   enabling deployment in air-gapped enterprise environments without\n   MNO infrastructure dependency.\n\n   This document specifies the protocol core: the four-round EAP-WSIM\n   exchange, message formats, attribute encodings, and key derivation.\n   Key slot selection [WSIM-KEY-SELECT] and IEEE 802.11r Fast\n   Transition integration [WSIM-FT] will be submitted as additional\n   specifications only if required based on review and comments on\n   this document.\n\n   This document does not update any existing RFC.</p>"
+  content: |-
+    <p>This document specifies EAP-WSIM, a new EAP authentication method
+       for enterprise wireless networks that performs offline mutual
+       authentication without contacting any Mobile Network Operator (MNO)
+       Home Subscriber Server (HSS), Home Location Register (HLR), or
+       Unified Data Management (UDM) function during the authentication
+       exchange.
+
+       EAP-WSIM uses a new cryptographic construction called MILENAGE-
+       ECDH-FWD, which combines the MILENAGE authentication and key
+       agreement algorithm [TS35.205] with an ephemeral Elliptic Curve
+       Diffie-Hellman (ECDH) exchange.  This construction simultaneously
+       provides mutual authentication via MILENAGE challenge-response and
+       forward secrecy via ephemeral ECDH, such that compromise of long-
+       term key material does not expose keys from prior sessions.
+
+       The key distinction from all existing SIM-based EAP methods --
+       EAP-SIM [RFC4186], EAP-AKA [RFC4187], EAP-AKA' [RFC9048], and
+       EAP-AKA' FS [RFC9678] -- is that EAP-WSIM requires no MNO backend
+       contact during authentication.  The EAP server holds a SIM card
+       (the WSIM) that functions as a self-contained Authentication Centre,
+       enabling deployment in air-gapped enterprise environments without
+       MNO infrastructure dependency.
+
+       This document specifies the protocol core: the four-round EAP-WSIM
+       exchange, message formats, attribute encodings, and key derivation.
+       Key slot selection [WSIM-KEY-SELECT] and IEEE 802.11r Fast
+       Transition integration [WSIM-FT] will be submitted as additional
+       specifications only if required based on review and comments on
+       this document.
+
+       This document does not update any existing RFC.</p>
 relation:
 - type: updatedBy
   bibitem:

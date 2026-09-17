@@ -1,10 +1,12 @@
+---
 id: draftietflpwanipv6staticcontexthc05
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: LPWAN Static Context Header Compression (SCHC) and fragmentation for IPv6 and UDP
+  content: LPWAN Static Context Header Compression (SCHC) and fragmentation for IPv6
+    and UDP
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-lpwan-ipv6-static-context-hc-05
@@ -103,7 +105,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a header compression scheme and fragmentation\n   functionality for very low bandwidth networks.  These techniques are\n   especially tailored for LPWAN (Low Power Wide Area Network) networks.\n\n   The Static Context Header Compression (SCHC) offers a great level of\n   flexibility when processing the header fields and must be used for\n   these kind of networks.  A common context stored in a LPWAN device\n   and in the network is used.  This context keeps information that will\n   not be transmitted in the constrained network.  Static context means\n   that information stored in the context which describes field values,\n   does not change during packet transmission, avoiding complex\n   resynchronization mechanisms, incompatible with LPWAN\n   characteristics.  In most of the cases, IPv6/UDP headers are reduced\n   to a small identifier called Rule ID.  But sometimes the SCHC header\n   compression mechanisms will not be enough to send the compressed\n   packet in one L2 PDU, so the SCHC Fragmentation protocol must be used\n   when needed.\n\n   This document describes SCHC compression/decompression mechanism\n   framework and applies it to IPv6/UDP headers.  Similar solutions for\n   other protocols such as CoAP will be described in separate documents.\n   Moreover, this document specifies fragmentation and reassembly\n   mechanim for SCHC compressed packets exceeding the L2 PDU size and\n   for the case where the SCHC compression is not possible then the\n   packet is sent using the fragmentation protocol.</p>"
+  content: |-
+    <p>This document describes a header compression scheme and fragmentation
+       functionality for very low bandwidth networks.  These techniques are
+       especially tailored for LPWAN (Low Power Wide Area Network) networks.
+
+       The Static Context Header Compression (SCHC) offers a great level of
+       flexibility when processing the header fields and must be used for
+       these kind of networks.  A common context stored in a LPWAN device
+       and in the network is used.  This context keeps information that will
+       not be transmitted in the constrained network.  Static context means
+       that information stored in the context which describes field values,
+       does not change during packet transmission, avoiding complex
+       resynchronization mechanisms, incompatible with LPWAN
+       characteristics.  In most of the cases, IPv6/UDP headers are reduced
+       to a small identifier called Rule ID.  But sometimes the SCHC header
+       compression mechanisms will not be enough to send the compressed
+       packet in one L2 PDU, so the SCHC Fragmentation protocol must be used
+       when needed.
+
+       This document describes SCHC compression/decompression mechanism
+       framework and applies it to IPv6/UDP headers.  Similar solutions for
+       other protocols such as CoAP will be described in separate documents.
+       Moreover, this document specifies fragmentation and reassembly
+       mechanim for SCHC compressed packets exceeding the L2 PDU size and
+       for the case where the SCHC compression is not possible then the
+       packet is sent using the fragmentation protocol.</p>
 relation:
 - type: updates
   bibitem:

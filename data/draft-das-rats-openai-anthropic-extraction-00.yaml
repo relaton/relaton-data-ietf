@@ -1,10 +1,13 @@
+---
 id: draftdasratsopenaianthropicextraction00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Beyond Attestation: An Execution-Finality Architecture for Controlling Release and Limiting Unauthorized Extraction and Distillation of Sensitive OpenAI and Anthropic Claude Model Information'
+  content: 'Beyond Attestation: An Execution-Finality Architecture for Controlling
+    Release and Limiting Unauthorized Extraction and Distillation of Sensitive OpenAI
+    and Anthropic Claude Model Information'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-rats-openai-anthropic-extraction-00
@@ -53,7 +56,48 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Anthropic and OpenAI already ship inference interfaces richer than\n   raw completions -- log-probabilities, embeddings, hidden states,\n   intermediate activations, KV-cache material, and diagnostic output\n   are all in production today.  Each is a channel an adversary, a\n   compromised partner integration, or a stolen enterprise seat can use\n   to reconstruct, steal, or distill a model far faster than by scraping\n   ordinary text output.  In this document, a \"release\" is any point at\n   which such information leaves the protected execution environment and\n   becomes usable outside it: returned to a caller, cached, forwarded,\n   or otherwise materialized.  The operational question this document\n   answers is narrow: given that the caller is authenticated and the\n   workload is attested, is this specific release still authorized to\n   happen right now?\n\n   Authentication establishes who is asking.  Confidential computing and\n   remote attestation establish whether the execution environment is\n   trustworthy.  Neither establishes whether this particular release, of\n   this particular artifact, at this particular moment, should be\n   allowed to cross the protected boundary.  A valid API key, a genuine\n   TEE, and a passing Attestation Result are all fully compatible with\n   an unauthorized bulk-extraction run already in progress.  Rate\n   limits, output filtering, and anomaly detection operate after the\n   release has already happened; they make extraction easier to notice,\n   not harder to complete.\n\n   This document specifies an execution-finality architecture that makes\n   release control a technical precondition rather than a monitoring\n   layer: computation is separated from authority to release, every\n   sensitive result is held as a non-effective Candidate Release, and\n   release becomes possible only after release-specific validation,\n   rollback-resistant extraction-state evaluation, bounded\n   authorization, and verification at a controlled Finality Sink.\n   Because release authority is bound to rollback-resistant, atomically\n   consumed extraction state rather than to a bearer credential, the\n   volume of privileged teacher signal an adversary can accumulate\n   through the governed path is capped by authorized state transitions,\n   not by request volume or attacker persistence alone.  The mechanism\n   is not claimed to prevent all forms of model distillation; its\n   objective is to make unauthorized or excessive extraction of\n   privileged model information structurally harder to complete, not\n   merely easier to detect afterward.</p>"
+  content: |-
+    <p>Anthropic and OpenAI already ship inference interfaces richer than
+       raw completions -- log-probabilities, embeddings, hidden states,
+       intermediate activations, KV-cache material, and diagnostic output
+       are all in production today.  Each is a channel an adversary, a
+       compromised partner integration, or a stolen enterprise seat can use
+       to reconstruct, steal, or distill a model far faster than by scraping
+       ordinary text output.  In this document, a "release" is any point at
+       which such information leaves the protected execution environment and
+       becomes usable outside it: returned to a caller, cached, forwarded,
+       or otherwise materialized.  The operational question this document
+       answers is narrow: given that the caller is authenticated and the
+       workload is attested, is this specific release still authorized to
+       happen right now?
+
+       Authentication establishes who is asking.  Confidential computing and
+       remote attestation establish whether the execution environment is
+       trustworthy.  Neither establishes whether this particular release, of
+       this particular artifact, at this particular moment, should be
+       allowed to cross the protected boundary.  A valid API key, a genuine
+       TEE, and a passing Attestation Result are all fully compatible with
+       an unauthorized bulk-extraction run already in progress.  Rate
+       limits, output filtering, and anomaly detection operate after the
+       release has already happened; they make extraction easier to notice,
+       not harder to complete.
+
+       This document specifies an execution-finality architecture that makes
+       release control a technical precondition rather than a monitoring
+       layer: computation is separated from authority to release, every
+       sensitive result is held as a non-effective Candidate Release, and
+       release becomes possible only after release-specific validation,
+       rollback-resistant extraction-state evaluation, bounded
+       authorization, and verification at a controlled Finality Sink.
+       Because release authority is bound to rollback-resistant, atomically
+       consumed extraction state rather than to a bearer credential, the
+       volume of privileged teacher signal an adversary can accumulate
+       through the governed path is capped by authorized state transitions,
+       not by request volume or attacker persistence alone.  The mechanism
+       is not claimed to prevent all forms of model distillation; its
+       objective is to make unauthorized or excessive extraction of
+       privileged model information structurally harder to complete, not
+       merely easier to detect afterward.</p>
 relation:
 - type: updatedBy
   bibitem:

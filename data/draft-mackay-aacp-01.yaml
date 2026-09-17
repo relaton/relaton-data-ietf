@@ -1,3 +1,4 @@
+---
 id: draftmackayaacp01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,36 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Agent Action Compression Protocol (AACP), a\n   pipe-delimited coordination format for agent-to-agent communication\n   in multi-agent large language model (LLM) systems.  AACP transforms\n   verbose natural language coordination instructions into\n   deterministic, typed, machine-parseable packets that can be validated\n   before transmission, logged as structured audit records, and replayed\n   consistently across workflow runs.\n\n   For known workflow types, a rule-based encoder produces AACP packets\n   deterministically at zero LLM cost.  A three-tier fallback encoder\n   extends this to novel instructions: exact matches are served from a\n   local registry cache at zero cost; pattern matches route to rule-\n   based encoding at zero cost; novel instructions are encoded via LLM\n   and logged to the registry, ensuring each novel pattern incurs at\n   most one LLM encoding call regardless of how many times it\n   subsequently appears.\n\n   As a secondary benefit, AACP reduces coordination token usage by\n   approximately 23 percent versus equivalent natural language\n   instructions, measured against live API tokenisation on Claude Sonnet\n   4.5 and GPT-4o.  Consistent token reduction has been validated across\n   four models: Claude Sonnet 4.5, GPT-4o, GPT-4.1, and GPT-4.1-mini.\n\n   AACP operates above transport protocols such as the Model Context\n   Protocol (MCP) and Agent-to-Agent Protocol (A2A), compressing message\n   payload content rather than addressing routing or delivery.  The\n   protocol is transport-agnostic, model-agnostic, and designed to\n   complement rather than replace existing agent coordination\n   infrastructure.</p>"
+  content: |-
+    <p>This document defines the Agent Action Compression Protocol (AACP), a
+       pipe-delimited coordination format for agent-to-agent communication
+       in multi-agent large language model (LLM) systems.  AACP transforms
+       verbose natural language coordination instructions into
+       deterministic, typed, machine-parseable packets that can be validated
+       before transmission, logged as structured audit records, and replayed
+       consistently across workflow runs.
+
+       For known workflow types, a rule-based encoder produces AACP packets
+       deterministically at zero LLM cost.  A three-tier fallback encoder
+       extends this to novel instructions: exact matches are served from a
+       local registry cache at zero cost; pattern matches route to rule-
+       based encoding at zero cost; novel instructions are encoded via LLM
+       and logged to the registry, ensuring each novel pattern incurs at
+       most one LLM encoding call regardless of how many times it
+       subsequently appears.
+
+       As a secondary benefit, AACP reduces coordination token usage by
+       approximately 23 percent versus equivalent natural language
+       instructions, measured against live API tokenisation on Claude Sonnet
+       4.5 and GPT-4o.  Consistent token reduction has been validated across
+       four models: Claude Sonnet 4.5, GPT-4o, GPT-4.1, and GPT-4.1-mini.
+
+       AACP operates above transport protocols such as the Model Context
+       Protocol (MCP) and Agent-to-Agent Protocol (A2A), compressing message
+       payload content rather than addressing routing or delivery.  The
+       protocol is transport-agnostic, model-agnostic, and designed to
+       complement rather than replace existing agent coordination
+       infrastructure.</p>
 relation:
 - type: updates
   bibitem:

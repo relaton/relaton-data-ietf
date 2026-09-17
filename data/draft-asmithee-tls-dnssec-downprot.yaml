@@ -1,3 +1,4 @@
+---
 id: draftasmitheetlsdnssecdownprot
 schema_version: v1.5.6
 formattedref:
@@ -5,7 +6,8 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: TLS Downgrade protection extension for TLS DNSSEC Authentication Chain Extension
+  content: TLS Downgrade protection extension for TLS DNSSEC Authentication Chain
+    Extension
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-asmithee-tls-dnssec-downprot-00
@@ -19,7 +21,25 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft specifies a TLS extension that adds downgrade protection\n   for another TLS extension, [dnssec-chain-extension].  Without the\n   downgrade protection specified in this TLS extension, the only effect\n   of deploying [dnssec-chain-extension] is to reduce TLS security from\n   the standard \"WebPKI security\" to \"WebPKI or DANE, whichever is\n   weaker\".\n\n   This draft dictates that [dnssec-chain-extension] MUST only be used\n   in combination with this TLS extension, whose only content is a two\n   octet SupportLifetime value.  A value of 0 prohibits the TLS client\n   from unilaterally requiring ongoing use of both TLS extensions based\n   on prior observation of their use (pinning).  A non-zero value is the\n   value in hours for which this TLS extension as well as\n   [dnssec-chain-extension] MUST appear in subsequent TLS handshakes to\n   the same TLS hostname and port.  If this TLS extention or\n   [dnssec-chain-extension] is missing from the TLS handshake within\n   this observed pinning time, the TLS client MUST assume it is under\n   attack and abort the TLS connection.</p>"
+  content: |-
+    <p>This draft specifies a TLS extension that adds downgrade protection
+       for another TLS extension, [dnssec-chain-extension].  Without the
+       downgrade protection specified in this TLS extension, the only effect
+       of deploying [dnssec-chain-extension] is to reduce TLS security from
+       the standard "WebPKI security" to "WebPKI or DANE, whichever is
+       weaker".
+
+       This draft dictates that [dnssec-chain-extension] MUST only be used
+       in combination with this TLS extension, whose only content is a two
+       octet SupportLifetime value.  A value of 0 prohibits the TLS client
+       from unilaterally requiring ongoing use of both TLS extensions based
+       on prior observation of their use (pinning).  A non-zero value is the
+       value in hours for which this TLS extension as well as
+       [dnssec-chain-extension] MUST appear in subsequent TLS handshakes to
+       the same TLS hostname and port.  If this TLS extention or
+       [dnssec-chain-extension] is missing from the TLS handshake within
+       this observed pinning time, the TLS client MUST assume it is under
+       attack and abort the TLS connection.</p>
 relation:
 - type: includes
   bibitem:

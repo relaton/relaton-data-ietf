@@ -1,3 +1,4 @@
+---
 id: draftandrewstcpandipv6useminmtu
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,17 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The IPV6_USE_MIN_MTU socket option directs the IP layer to limit the\n   IPv6 packet size to the minimum required supported MTU from the base\n   IPv6 specification, i.e. 1280 bytes.  Many implementations of TCP\n   running over IPv6 neglect to check the IPV6_USE_MIN_MTU value when\n   performing MSS negotiation and when constructing a TCP segment\n   despite MSS being defined to be the MTU less the IP and TCP header\n   sizes (60 bytes for IPv6).  This leads to oversized IPv6 packets\n   being sent resulting in unintended Path Maximum Transport Unit\n   Discovery (PMTUD) being performed and to fragmented IPv6 packets\n   being sent.</p>"
+  content: |-
+    <p>The IPV6_USE_MIN_MTU socket option directs the IP layer to limit the
+       IPv6 packet size to the minimum required supported MTU from the base
+       IPv6 specification, i.e. 1280 bytes.  Many implementations of TCP
+       running over IPv6 neglect to check the IPV6_USE_MIN_MTU value when
+       performing MSS negotiation and when constructing a TCP segment
+       despite MSS being defined to be the MTU less the IP and TCP header
+       sizes (60 bytes for IPv6).  This leads to oversized IPv6 packets
+       being sent resulting in unintended Path Maximum Transport Unit
+       Discovery (PMTUD) being performed and to fragmented IPv6 packets
+       being sent.</p>
 relation:
 - type: includes
   bibitem:

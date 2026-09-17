@@ -1,3 +1,4 @@
+---
 id: draftietfnfsv4uncacheabledirectories10
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Network File System version 4.2 (NFSv4.2) clients may cache the file\n   attributes returned by READDIR alongside each directory entry.  This\n   caching is inherently best-effort: those attributes belong to the\n   underlying files and change when the files are written, which the\n   directory's change attribute does not track.  In some deployments the\n   rate of file writes by other clients makes such caching produce\n   incorrect size and timestamp values often enough to be a deployment\n   problem.  This document introduces an uncacheable dirent metadata\n   attribute for NFSv4.2 that allows a server to identify a directory\n   for which an honoring client is required to retrieve dirent metadata\n   from the server on each READDIR rather than serving the response from\n   a local cache.</p>"
+  content: |-
+    <p>Network File System version 4.2 (NFSv4.2) clients may cache the file
+       attributes returned by READDIR alongside each directory entry.  This
+       caching is inherently best-effort: those attributes belong to the
+       underlying files and change when the files are written, which the
+       directory's change attribute does not track.  In some deployments the
+       rate of file writes by other clients makes such caching produce
+       incorrect size and timestamp values often enough to be a deployment
+       problem.  This document introduces an uncacheable dirent metadata
+       attribute for NFSv4.2 that allows a server to identify a directory
+       for which an honoring client is required to retrieve dirent metadata
+       from the server on each READDIR rather than serving the response from
+       a local cache.</p>
 relation:
 - type: updates
   bibitem:

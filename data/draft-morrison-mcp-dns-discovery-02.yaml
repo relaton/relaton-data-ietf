@@ -1,3 +1,4 @@
+---
 id: draftmorrisonmcpdnsdiscovery02
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a DNS-based mechanism for the discovery of\n   Model Context Protocol (MCP) servers and the identity properties of\n   the organisations that operate them.  Two TXT resource records are\n   defined.  The _mcp.&lt;domain&gt; record (defined in v01 of this document)\n   advertises the presence, endpoint URL, transport protocol,\n   cryptographic identity, and capability profile of an MCP server\n   associated with a domain name.  The _org-alter.&lt;domain&gt; record\n   (introduced in this revision) advertises the canonical organisational\n   identity of the domain operator: legal entity name, registry\n   identifier, founding date, primary regions of operation, and any\n   regulatory frameworks under which the operator is bound to refuse\n   external automated access.  Together, the two records provide both\n   service discovery and identity bootstrap from a single canonical\n   source -- the domain's own DNS zone.  The mechanism complements\n   HTTPS-based discovery (.well-known/mcp/server-card.json) by providing\n   a lightweight, resolver-cached bootstrap that requires no HTTPS\n   round-trip.  The design follows the precedent established by DKIM\n   [RFC6376], SPF [RFC7208], DMARC [RFC7489], and MTA-STS [RFC8461], all\n   of which use DNS TXT records at underscore-prefixed labels to\n   advertise domain-scoped policy and service metadata.</p>"
+  content: |-
+    <p>This document defines a DNS-based mechanism for the discovery of
+       Model Context Protocol (MCP) servers and the identity properties of
+       the organisations that operate them.  Two TXT resource records are
+       defined.  The _mcp.&lt;domain&gt; record (defined in v01 of this document)
+       advertises the presence, endpoint URL, transport protocol,
+       cryptographic identity, and capability profile of an MCP server
+       associated with a domain name.  The _org-alter.&lt;domain&gt; record
+       (introduced in this revision) advertises the canonical organisational
+       identity of the domain operator: legal entity name, registry
+       identifier, founding date, primary regions of operation, and any
+       regulatory frameworks under which the operator is bound to refuse
+       external automated access.  Together, the two records provide both
+       service discovery and identity bootstrap from a single canonical
+       source -- the domain's own DNS zone.  The mechanism complements
+       HTTPS-based discovery (.well-known/mcp/server-card.json) by providing
+       a lightweight, resolver-cached bootstrap that requires no HTTPS
+       round-trip.  The design follows the precedent established by DKIM
+       [RFC6376], SPF [RFC7208], DMARC [RFC7489], and MTA-STS [RFC8461], all
+       of which use DNS TXT records at underscore-prefixed labels to
+       advertise domain-scoped policy and service metadata.</p>
 relation:
 - type: updates
   bibitem:

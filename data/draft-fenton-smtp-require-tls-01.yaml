@@ -1,3 +1,4 @@
+---
 id: draftfentonsmtprequiretls01
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,18 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The SMTP STARTTLS option, used in negotiating transport-level\n   encryption of SMTP connections, is not as useful from a security\n   standpoint as it might be because of its opportunistic nature;\n   message delivery is prioritized over security.  This document\n   describes a complementary SMTP service extension, REQUIRETLS.  If the\n   REQUIRETLS option is used when sending a message, it causes message\n   delivery to fail if a TLS connection with the required security\n   characteristics cannot be completed with the next hop MTA or if that\n   MTA does not also advertise that it supports REQUIRETLS.  Message\n   originators may therefore expect transport security to be used for\n   messages sent with this option.</p>"
+  content: |-
+    <p>The SMTP STARTTLS option, used in negotiating transport-level
+       encryption of SMTP connections, is not as useful from a security
+       standpoint as it might be because of its opportunistic nature;
+       message delivery is prioritized over security.  This document
+       describes a complementary SMTP service extension, REQUIRETLS.  If the
+       REQUIRETLS option is used when sending a message, it causes message
+       delivery to fail if a TLS connection with the required security
+       characteristics cannot be completed with the next hop MTA or if that
+       MTA does not also advertise that it supports REQUIRETLS.  Message
+       originators may therefore expect transport security to be used for
+       messages sent with this option.</p>
 relation:
 - type: updates
   bibitem:

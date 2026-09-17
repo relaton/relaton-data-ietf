@@ -1,3 +1,4 @@
+---
 id: draftcoetzeeoauthspttxntokens03
 schema_version: v1.5.6
 type: standard
@@ -56,7 +57,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Current authorization is role-scoped: an actor is granted a role\n   whose authority persists across every action it takes.  This fails\n   exactly when actors fail -- under compromise, prompt injection, or\n   goal hijacking -- because a compromised actor retains full role\n   authority.  This document specifies SPT-Txn, a family of transaction-\n   bound authorization tokens in which authority exists only inside a\n   short-lived token bound to one declared action, on one resource,\n   under one jurisdictional policy, verified against how the requesting\n   workload was attested.  Delegation across agents and tools is\n   expressed as a cryptographically sealed chain that can only narrow\n   authority and is verifiable offline.  Each authorization decision\n   emits a signed, tamper-evident receipt as a byproduct of enforcement.\n   This document specifies normative intent binding, transaction\n   receipts and their transparency log, attested issuance via OAuth 2.0\n   Token Exchange, per-token status-list revocation, and cryptographic\n   algorithm agility including hybrid post-quantum signing.  It also\n   hardens attested issuance in response to an adversarial security\n   review of the reference implementation: it makes an audience and a\n   verifiable expiry mandatory on the presented attestation, requires\n   the issuer to bound the delegated depth it grants, and clamps a\n   token's lifetime to the attestation it was minted on.  The issuer-\n   side requested-versus-permitted scope intersection is retained; the\n   enforcement point re-checks the chain independently.</p>"
+  content: |-
+    <p>Current authorization is role-scoped: an actor is granted a role
+       whose authority persists across every action it takes.  This fails
+       exactly when actors fail -- under compromise, prompt injection, or
+       goal hijacking -- because a compromised actor retains full role
+       authority.  This document specifies SPT-Txn, a family of transaction-
+       bound authorization tokens in which authority exists only inside a
+       short-lived token bound to one declared action, on one resource,
+       under one jurisdictional policy, verified against how the requesting
+       workload was attested.  Delegation across agents and tools is
+       expressed as a cryptographically sealed chain that can only narrow
+       authority and is verifiable offline.  Each authorization decision
+       emits a signed, tamper-evident receipt as a byproduct of enforcement.
+       This document specifies normative intent binding, transaction
+       receipts and their transparency log, attested issuance via OAuth 2.0
+       Token Exchange, per-token status-list revocation, and cryptographic
+       algorithm agility including hybrid post-quantum signing.  It also
+       hardens attested issuance in response to an adversarial security
+       review of the reference implementation: it makes an audience and a
+       verifiable expiry mandatory on the presented attestation, requires
+       the issuer to bound the delegated depth it grants, and clamps a
+       token's lifetime to the attestation it was minted on.  The issuer-
+       side requested-versus-permitted scope intersection is retained; the
+       enforcement point re-checks the chain independently.</p>
 relation:
 - type: updates
   bibitem:

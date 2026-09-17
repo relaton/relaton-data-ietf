@@ -1,10 +1,12 @@
+---
 id: draftdasexecutionfinalityaiinteroperability01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Breaking the Apple-Siri EU DMA Deadlock Without Sacrificing Privacy or Security
+  content: Breaking the Apple-Siri EU DMA Deadlock Without Sacrificing Privacy or
+    Security
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-01
@@ -53,7 +55,43 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Apple-Siri interoperability debate under the EU Digital Markets\n   Act exposes a difficult technical question: how can third-party AI\n   assistants gain meaningful access to device functions without forcing\n   the platform to surrender privacy, security, or control over\n   consequential actions?\n\n   The DMA can require AI interoperability, but interoperability alone\n   does not determine when a third-party AI is authorized to cause a\n   real-world effect.  The architecture described in this document\n   addresses that missing execution-finality boundary.\n\n   This document proposes an execution-finality architecture in which an\n   AI assistant may request an action, but the request itself has no\n   power to make that action effective.  Each consequential operation\n   remains in a Non-Effective State until protected infrastructure\n   validates the requester, resource, destination, user intent where\n   required, freshness, revocation state, and policy conditions.\n\n   Only then is narrowly scoped, non-bearer execution authority created.\n   At the Finality Sink—the first boundary where the action can become\n   externally effective—the system independently verifies that the real\n   operation still matches what was authorized.  Any mismatch, replay,\n   substitution, expiry, or revocation causes fail-closed denial.\n\n   The key principle is simple: interoperability should grant\n   participation, not uncontrolled execution authority.\n\n   This offers a possible technical approach to the interoperability-\n   security problem: third-party assistants could participate\n   meaningfully without requiring broad reusable permissions, while\n   platforms retain privacy, security, revocation, anti-replay, and\n   final-effect controls.\n\n   Execution-Finality Governance therefore reframes the problem from\n   closed versus open to open participation with bounded, verifiable\n   authority.</p>"
+  content: |-
+    <p>The Apple-Siri interoperability debate under the EU Digital Markets
+       Act exposes a difficult technical question: how can third-party AI
+       assistants gain meaningful access to device functions without forcing
+       the platform to surrender privacy, security, or control over
+       consequential actions?
+
+       The DMA can require AI interoperability, but interoperability alone
+       does not determine when a third-party AI is authorized to cause a
+       real-world effect.  The architecture described in this document
+       addresses that missing execution-finality boundary.
+
+       This document proposes an execution-finality architecture in which an
+       AI assistant may request an action, but the request itself has no
+       power to make that action effective.  Each consequential operation
+       remains in a Non-Effective State until protected infrastructure
+       validates the requester, resource, destination, user intent where
+       required, freshness, revocation state, and policy conditions.
+
+       Only then is narrowly scoped, non-bearer execution authority created.
+       At the Finality Sink—the first boundary where the action can become
+       externally effective—the system independently verifies that the real
+       operation still matches what was authorized.  Any mismatch, replay,
+       substitution, expiry, or revocation causes fail-closed denial.
+
+       The key principle is simple: interoperability should grant
+       participation, not uncontrolled execution authority.
+
+       This offers a possible technical approach to the interoperability-
+       security problem: third-party assistants could participate
+       meaningfully without requiring broad reusable permissions, while
+       platforms retain privacy, security, revocation, anti-replay, and
+       final-effect controls.
+
+       Execution-Finality Governance therefore reframes the problem from
+       closed versus open to open participation with bounded, verifiable
+       authority.</p>
 relation:
 - type: updates
   bibitem:

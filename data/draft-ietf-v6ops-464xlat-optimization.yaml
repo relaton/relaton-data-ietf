@@ -1,3 +1,4 @@
+---
 id: draftietfv6ops464xlatoptimization
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,19 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IP/ICMP Translation Algorithm (SIIT) can be used to provide access\n   for IPv4-only hosts or applications to IPv4-only or dual-stack\n   destinations over IPv6-only infrastructure.  In that case, the\n   traffic flows are translated twice: first from IPv4 to IPv6\n   (stateless NAT46 at the ingress point to the IPv6-only\n   infrastructure) and then from IPv6 back to IPv4 (stateful NAT64, at\n   the egress point).  When the destination is IPv6-enabled, the second\n   translation might be avoided.  This document describes a possible\n   optimization to 464XLAT and MAP-T to avoid translating IPv6 flows\n   back to IPv4 if the destination is reachable over IPv6.  The proposed\n   solution would significantly reduce the NAT64 utilization in the\n   operator's network, increasing the performance.</p>"
+  content: |-
+    <p>IP/ICMP Translation Algorithm (SIIT) can be used to provide access
+       for IPv4-only hosts or applications to IPv4-only or dual-stack
+       destinations over IPv6-only infrastructure.  In that case, the
+       traffic flows are translated twice: first from IPv4 to IPv6
+       (stateless NAT46 at the ingress point to the IPv6-only
+       infrastructure) and then from IPv6 back to IPv4 (stateful NAT64, at
+       the egress point).  When the destination is IPv6-enabled, the second
+       translation might be avoided.  This document describes a possible
+       optimization to 464XLAT and MAP-T to avoid translating IPv6 flows
+       back to IPv4 if the destination is reachable over IPv6.  The proposed
+       solution would significantly reduce the NAT64 utilization in the
+       operator's network, increasing the performance.</p>
 relation:
 - type: includes
   bibitem:

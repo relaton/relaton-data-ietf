@@ -1,3 +1,4 @@
+---
 id: draftmelegassimvpsincrementalbe
 schema_version: v1.5.6
 formattedref:
@@ -5,7 +6,8 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Incremental Bandwidth-Efficient Multi-Vantage Path Synchrony (BE-MVPS): Cell-Partitioned Coherence with epsilon-Gated Sherman-Morrison Updates'
+  content: 'Incremental Bandwidth-Efficient Multi-Vantage Path Synchrony (BE-MVPS):
+    Cell-Partitioned Coherence with epsilon-Gated Sherman-Morrison Updates'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-melegassi-mvps-incremental-be-00
@@ -19,7 +21,82 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies BE-MVPS (Bandwidth-Efficient MVPS), an\n   incremental execution layer for the Multi-Vantage Path Synchrony\n   (MVPS) framework that trades a constant-factor increase in\n   broker-side CPU for an order-of-magnitude decrease in vantage-to-\n   broker bandwidth.  Where MVPS as defined in\n   [I-D.melegassi-ippm-mvps-bundle] performs a dense recomputation of\n   the coherence vector C = (C_1, C_2, C_3) at every tick over the\n   full population of N observers, BE-MVPS partitions the observer\n   set into k coherence cells, gates per-observer state transmission\n   by a local epsilon threshold, performs Sherman-Morrison incremental\n   updates of the Mahalanobis distance D^2, and detects Byzantine\n   vantages via a cell-aware minimax estimator whose breakdown point\n   is shown (Theorem 7) to be exactly f/k where f is the adversarial\n   vantage fraction.\n\n   The earlier informal label \"Fast Incremental MVPS (FMVPS)\" is\n   superseded by BE-MVPS in this document; the rename and its\n   rationale are recorded in the ERRATUM block below and proved\n   formally in Theorem T_BE of the v5.0 unified proof.  The IETF\n   identifier of this document is draft-melegassi-mvps-incremental-be.\n\n   Nine theorems formalise the framework: the partition existence\n   theorem (Theorem 2), the cell-equivalence bound (Theorem 3), the\n   gating information-loss bound (Theorem 4), the Sherman-Morrison-\n   Woodbury incremental D^2 update (Theorem 5), strong eventual\n   consistency of the CRDT merge (Theorem 6), the cell-aware Byzantine\n   breakdown point (Theorem 7), the C_4 perturbation non-incrementality\n   theorem (Theorem 8), and the detection latency lower bound for\n   sub-tick variants (Theorem 9).  Section 13 introduces five\n   BFD-inspired execution variants and reports wall-clock benchmark\n   results: variant V3 (Echo) achieves tau_detect = 55 ms, a 1091x\n   reduction relative to the baseline tick scale.  Wall-clock\n   benchmarks on N = 1000 to 10 000 vantages confirm that BE-MVPS reduces\n   edge-to-broker bandwidth by a factor of 25x while preserving\n   detection completeness for all canonical scenarios except adversary\n   fractions below 1/k.\n\n   This document is a companion to [I-D.melegassi-ippm-mvps-bundle] and\n   to the AI-coherence extension [I-D.melegassi-mvps-ai-coherence].\n   The algebra is preserved verbatim; only the execution model\n   changes.\n\n   NOTE ON DATA PROVENANCE.  All wall-clock and bandwidth numbers\n   in this document are obtained from synthetic simulations\n   (scripts/benchmark_fmvps_vs_ml.py and\n   scripts/benchmark_coherence_bfd.py) under controlled\n   conditions.  Validation against operational data (RIPE Atlas,\n   CAIDA, or commercial operator traces) is identified as required\n   future work before publication outside the Experimental track.\n\n   A REFERENCE IMPLEMENTATION of the cell-aware minimax detector\n   (Theorem 7) is provided in pure Python at\n   &lt;https://catellix.com/static/download/reference-impl/&gt;.  See\n   reference-impl/README.md.\n\n   ERRATUM (v5.0 unified proof, Theorem T_BE -- applied to this -00\n   document at submission time, not deferred to -01).  Earlier\n   drafts and internal material used the label \"Fast Incremental\n   MVPS (FMVPS)\".  Wall-clock measurements\n   (scripts/benchmark_fmvps_vs_ml.py) and the T_BE theorem of\n   docs/MVPS_V5_UNIFIED_PROOF.txt show that, at N = 1000 to 10 000\n   vantages and d = 3, this algorithm is on average approximately\n   TWO times slower in per-tick CPU than MVPS-classic (Welford on\n   a dense covariance), while sending approximately TWENTY FIVE\n   times fewer bytes from each vantage to the broker.  The\n   genuine advantage of the algorithm specified here is therefore\n   BANDWIDTH efficiency under epsilon-gating, not CPU latency.\n\n   This document is therefore identified at submission time as\n   draft-melegassi-mvps-incremental-be (Bandwidth-Efficient),\n   with the \"Fast\" label dropped from both filename and title.\n   The earlier name \"draft-melegassi-mvps-fast-incremental\" was\n   never submitted to the IETF Datatracker; the BE name is the\n   first authoritative IETF identifier.  Theorem T_BE of the unified proof gives the crossover\n   condition</p>"
+  content: |-
+    <p>This document specifies BE-MVPS (Bandwidth-Efficient MVPS), an
+       incremental execution layer for the Multi-Vantage Path Synchrony
+       (MVPS) framework that trades a constant-factor increase in
+       broker-side CPU for an order-of-magnitude decrease in vantage-to-
+       broker bandwidth.  Where MVPS as defined in
+       [I-D.melegassi-ippm-mvps-bundle] performs a dense recomputation of
+       the coherence vector C = (C_1, C_2, C_3) at every tick over the
+       full population of N observers, BE-MVPS partitions the observer
+       set into k coherence cells, gates per-observer state transmission
+       by a local epsilon threshold, performs Sherman-Morrison incremental
+       updates of the Mahalanobis distance D^2, and detects Byzantine
+       vantages via a cell-aware minimax estimator whose breakdown point
+       is shown (Theorem 7) to be exactly f/k where f is the adversarial
+       vantage fraction.
+
+       The earlier informal label "Fast Incremental MVPS (FMVPS)" is
+       superseded by BE-MVPS in this document; the rename and its
+       rationale are recorded in the ERRATUM block below and proved
+       formally in Theorem T_BE of the v5.0 unified proof.  The IETF
+       identifier of this document is draft-melegassi-mvps-incremental-be.
+
+       Nine theorems formalise the framework: the partition existence
+       theorem (Theorem 2), the cell-equivalence bound (Theorem 3), the
+       gating information-loss bound (Theorem 4), the Sherman-Morrison-
+       Woodbury incremental D^2 update (Theorem 5), strong eventual
+       consistency of the CRDT merge (Theorem 6), the cell-aware Byzantine
+       breakdown point (Theorem 7), the C_4 perturbation non-incrementality
+       theorem (Theorem 8), and the detection latency lower bound for
+       sub-tick variants (Theorem 9).  Section 13 introduces five
+       BFD-inspired execution variants and reports wall-clock benchmark
+       results: variant V3 (Echo) achieves tau_detect = 55 ms, a 1091x
+       reduction relative to the baseline tick scale.  Wall-clock
+       benchmarks on N = 1000 to 10 000 vantages confirm that BE-MVPS reduces
+       edge-to-broker bandwidth by a factor of 25x while preserving
+       detection completeness for all canonical scenarios except adversary
+       fractions below 1/k.
+
+       This document is a companion to [I-D.melegassi-ippm-mvps-bundle] and
+       to the AI-coherence extension [I-D.melegassi-mvps-ai-coherence].
+       The algebra is preserved verbatim; only the execution model
+       changes.
+
+       NOTE ON DATA PROVENANCE.  All wall-clock and bandwidth numbers
+       in this document are obtained from synthetic simulations
+       (scripts/benchmark_fmvps_vs_ml.py and
+       scripts/benchmark_coherence_bfd.py) under controlled
+       conditions.  Validation against operational data (RIPE Atlas,
+       CAIDA, or commercial operator traces) is identified as required
+       future work before publication outside the Experimental track.
+
+       A REFERENCE IMPLEMENTATION of the cell-aware minimax detector
+       (Theorem 7) is provided in pure Python at
+       &lt;https://catellix.com/static/download/reference-impl/&gt;.  See
+       reference-impl/README.md.
+
+       ERRATUM (v5.0 unified proof, Theorem T_BE -- applied to this -00
+       document at submission time, not deferred to -01).  Earlier
+       drafts and internal material used the label "Fast Incremental
+       MVPS (FMVPS)".  Wall-clock measurements
+       (scripts/benchmark_fmvps_vs_ml.py) and the T_BE theorem of
+       docs/MVPS_V5_UNIFIED_PROOF.txt show that, at N = 1000 to 10 000
+       vantages and d = 3, this algorithm is on average approximately
+       TWO times slower in per-tick CPU than MVPS-classic (Welford on
+       a dense covariance), while sending approximately TWENTY FIVE
+       times fewer bytes from each vantage to the broker.  The
+       genuine advantage of the algorithm specified here is therefore
+       BANDWIDTH efficiency under epsilon-gating, not CPU latency.
+
+       This document is therefore identified at submission time as
+       draft-melegassi-mvps-incremental-be (Bandwidth-Efficient),
+       with the "Fast" label dropped from both filename and title.
+       The earlier name "draft-melegassi-mvps-fast-incremental" was
+       never submitted to the IETF Datatracker; the BE name is the
+       first authoritative IETF identifier.  Theorem T_BE of the unified proof gives the crossover
+       condition</p>
 relation:
 - type: includes
   bibitem:

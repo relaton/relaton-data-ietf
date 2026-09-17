@@ -1,3 +1,4 @@
+---
 id: draftvanbrouwershavenacmeclientdiscovery00
 schema_version: v1.5.6
 type: standard
@@ -147,7 +148,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A significant challenge in the widespread adoption of the Automated\n   Certificate Management Environment (ACME) [RFC8555] is the trust\n   establishment between ACME servers and clients.  While ACME clients\n   can automatically discover the URL of the ACME server through ACME\n   Auto Discovery [I-D.vanbrouwershaven-acme-auto-discovery], they face\n   difficulty in identifying authorized clients.  This draft proposes a\n   solution to this problem by allowing Certification Authority (CA)\n   customers to specify which ACME keys are authorized to request\n   certificates on their behalf by simply providing the domain name of\n   the service provider.\n\n   Specifically, this document registers the URI \"/.well-known/acme-\n   keys\" at which all compliant service providers can publish their ACME\n   client public keys.  This mechanism allows the ACME server to\n   identify the specific service provider, enhancing the trust\n   relationship.  Furthermore, it provides flexibility to service\n   providers as they can use multiple keys and rotate them as often as\n   they like, thereby improving security and control over their ACME\n   client configurations while giving CA customers the ability to\n   specifically authorize which service providers can request\n   certificates on their behalf.</p>"
+  content: |-
+    <p>A significant challenge in the widespread adoption of the Automated
+       Certificate Management Environment (ACME) [RFC8555] is the trust
+       establishment between ACME servers and clients.  While ACME clients
+       can automatically discover the URL of the ACME server through ACME
+       Auto Discovery [I-D.vanbrouwershaven-acme-auto-discovery], they face
+       difficulty in identifying authorized clients.  This draft proposes a
+       solution to this problem by allowing Certification Authority (CA)
+       customers to specify which ACME keys are authorized to request
+       certificates on their behalf by simply providing the domain name of
+       the service provider.
+
+       Specifically, this document registers the URI "/.well-known/acme-
+       keys" at which all compliant service providers can publish their ACME
+       client public keys.  This mechanism allows the ACME server to
+       identify the specific service provider, enhancing the trust
+       relationship.  Furthermore, it provides flexibility to service
+       providers as they can use multiple keys and rotate them as often as
+       they like, thereby improving security and control over their ACME
+       client configurations while giving CA customers the ability to
+       specifically authorize which service providers can request
+       certificates on their behalf.</p>
 series:
 - type: main
   title:

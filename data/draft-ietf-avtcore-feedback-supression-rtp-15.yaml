@@ -1,3 +1,4 @@
+---
 id: draftietfavtcorefeedbacksupressionrtp15
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,18 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In a large RTP session using the RTCP feedback mechanism defined in\n   RFC 4585, a feedback target may experience transient overload if some\n   event causes a large number of receivers to send feedback at once.\n   This overload is usually avoided by ensuring that feedback reports\n   are forwarded to all receivers, allowing them to avoid sending\n   duplicate feedback reports.  However, there are cases where it is not\n   recommended to forward feedback reports, and this may allow feedback\n   implosion.  This memo discusses these cases and defines a new RTCP\n   third-party loss report that can be used to inform receivers that the\n   feedback target is aware of some loss event, allowing them to\n   suppress feedback.  Associated SDP signalling is also defined.</p>"
+  content: |-
+    <p>In a large RTP session using the RTCP feedback mechanism defined in
+       RFC 4585, a feedback target may experience transient overload if some
+       event causes a large number of receivers to send feedback at once.
+       This overload is usually avoided by ensuring that feedback reports
+       are forwarded to all receivers, allowing them to avoid sending
+       duplicate feedback reports.  However, there are cases where it is not
+       recommended to forward feedback reports, and this may allow feedback
+       implosion.  This memo discusses these cases and defines a new RTCP
+       third-party loss report that can be used to inform receivers that the
+       feedback target is aware of some loss event, allowing them to
+       suppress feedback.  Associated SDP signalling is also defined.</p>
 relation:
 - type: updates
   bibitem:

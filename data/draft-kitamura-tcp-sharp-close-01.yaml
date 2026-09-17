@@ -1,3 +1,4 @@
+---
 id: draftkitamuratcpsharpclose01
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,28 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes an idea \"Sharp Close\" that eliminates or\n   minimizes TIME-WAIT state of TCP connections.\n\n   In the current TCP specification ([RFC0793]), there are some\n   inappropriate or not up to date functions. Here we focus and\n   discuss on TCP TIME-WAIT state function.\n\n   TIME-WAIT is the last state of TCP connection of Active Close side\n   node.  After TCP connections are effectively closed, they move to\n   TIME-WAIT state. After TIME-WAIT state is finished, resources of\n   connections are released. This means that even if connections are\n   effectively finished, resources of connections are NOT released.\n   The TIME-WAIT state prevents from releasing them.\n\n   From the viewpoints of current high-speed and high-multiplicity\n   communication styles, it is thought that TIME-WAIT state is one of\n   evil functions.\n\n   In order to provide efficient communication that matches current\n   styles, an idea \"Sharp Close\" that eliminates or minimizes TIME-\n   WAIT state of TCP connections is proposed.</p>"
+  content: |-
+    <p>This document describes an idea "Sharp Close" that eliminates or
+       minimizes TIME-WAIT state of TCP connections.
+
+       In the current TCP specification ([RFC0793]), there are some
+       inappropriate or not up to date functions. Here we focus and
+       discuss on TCP TIME-WAIT state function.
+
+       TIME-WAIT is the last state of TCP connection of Active Close side
+       node.  After TCP connections are effectively closed, they move to
+       TIME-WAIT state. After TIME-WAIT state is finished, resources of
+       connections are released. This means that even if connections are
+       effectively finished, resources of connections are NOT released.
+       The TIME-WAIT state prevents from releasing them.
+
+       From the viewpoints of current high-speed and high-multiplicity
+       communication styles, it is thought that TIME-WAIT state is one of
+       evil functions.
+
+       In order to provide efficient communication that matches current
+       styles, an idea "Sharp Close" that eliminates or minimizes TIME-
+       WAIT state of TCP connections is proposed.</p>
 relation:
 - type: updates
   bibitem:

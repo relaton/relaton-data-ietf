@@ -1,3 +1,4 @@
+---
 id: draftschrockepevidencerecord00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Regulations increasingly require that records of who authorized a\n   high-risk action be retained for years (e.g. five years under DORA,\n   six under HIPAA and SEC 17a-4).  Any fixed signature or hash\n   algorithm used to protect such a record weakens over time; a receipt\n   signed today with Ed25519 over SHA-256 may be cryptographically\n   attackable before its retention period ends.  This document defines\n   EP-EVIDENCE-RECORD, an OPTIONAL profile that preserves the\n   verifiability of EMILIA Protocol authorization receipts (and other\n   artifacts) across algorithm aging, using a renewal chain in the style\n   of the Evidence Record Syntax [RFC4998].  Each renewal time-attests\n   the entire prior renewal under a fresh, stronger algorithm before the\n   older one is broken, so an unbroken chain links the original artifact\n   to the most recent renewal.  The record is offline- verifiable, fail-\n   closed, and maintained as cross-language conformance vectors that\n   three independent implementations agree on.</p>"
+  content: |-
+    <p>Regulations increasingly require that records of who authorized a
+       high-risk action be retained for years (e.g. five years under DORA,
+       six under HIPAA and SEC 17a-4).  Any fixed signature or hash
+       algorithm used to protect such a record weakens over time; a receipt
+       signed today with Ed25519 over SHA-256 may be cryptographically
+       attackable before its retention period ends.  This document defines
+       EP-EVIDENCE-RECORD, an OPTIONAL profile that preserves the
+       verifiability of EMILIA Protocol authorization receipts (and other
+       artifacts) across algorithm aging, using a renewal chain in the style
+       of the Evidence Record Syntax [RFC4998].  Each renewal time-attests
+       the entire prior renewal under a fresh, stronger algorithm before the
+       older one is broken, so an unbroken chain links the original artifact
+       to the most recent renewal.  The record is offline- verifiable, fail-
+       closed, and maintained as cross-language conformance vectors that
+       three independent implementations agree on.</p>
 relation:
 - type: updatedBy
   bibitem:

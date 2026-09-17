@@ -1,3 +1,4 @@
+---
 id: RFC8220
 schema_version: v1.5.6
 type: standard
@@ -154,7 +155,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the procedures and recommendations for Virtual Private LAN Service (VPLS) Provider Edges (PEs) to facilitate replication of multicast traffic to only certain ports (behind which there are interested Protocol Independent Multicast (PIM) routers and/or Internet Group Management Protocol (IGMP) hosts) via PIM snooping and proxying.</p><p>With PIM snooping, PEs passively listen to certain PIM control messages to build control and forwarding states while transparently flooding those messages. With PIM proxying, PEs do not flood PIM Join/Prune messages but only generate their own and send them out of certain ports, based on the control states built from downstream Join/Prune messages. PIM proxying is required when PIM Join suppression is enabled on the Customer Edge (CE) devices and is useful for reducing PIM control traffic in a VPLS domain.</p><p>This document also describes PIM relay, which can be viewed as lightweight proxying, where all downstream Join/Prune messages are simply forwarded out of certain ports and are not flooded, thereby avoiding the triggering of PIM Join suppression on CE devices.</p>"
+  content: "<p>This document describes the procedures and recommendations for Virtual
+    Private LAN Service (VPLS) Provider Edges (PEs) to facilitate replication of multicast
+    traffic to only certain ports (behind which there are interested Protocol Independent
+    Multicast (PIM) routers and/or Internet Group Management Protocol (IGMP) hosts)
+    via PIM snooping and proxying.</p><p>With PIM snooping, PEs passively listen to
+    certain PIM control messages to build control and forwarding states while transparently
+    flooding those messages. With PIM proxying, PEs do not flood PIM Join/Prune messages
+    but only generate their own and send them out of certain ports, based on the control
+    states built from downstream Join/Prune messages. PIM proxying is required when
+    PIM Join suppression is enabled on the Customer Edge (CE) devices and is useful
+    for reducing PIM control traffic in a VPLS domain.</p><p>This document also describes
+    PIM relay, which can be viewed as lightweight proxying, where all downstream Join/Prune
+    messages are simply forwarded out of certain ports and are not flooded, thereby
+    avoiding the triggering of PIM Join suppression on CE devices.</p>"
 status:
   stage:
     content: INFORMATIONAL

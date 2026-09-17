@@ -1,3 +1,4 @@
+---
 id: draftludwigtsvwgtcpeifelalg00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,18 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>TCP's intertwined error and congestion control is not robust against\nspurious timeouts nor is it robust against packet re-orderings. A\npacket that is delayed in the network beyond the expiration of TCP's\nretransmission timer, is mistaken for a packet loss by a TCP sender.\nAlso, a packet that is re-ordered in the network beyond TCP's\nduplicate acknowledgment threshold, is eventually mistaken for a\npacket loss by a TCP sender. Both situations lead to a spurious\nretransmit of the oldest outstanding segment, and an unnecessary\nreduction of the congestion window at the sender. Moreover, a\nspurious timeout forces the sender into a go-back-N retransmission\nmode leading to spurious retransmits of all outstanding segments.</p>"
+  content: |-
+    <p>TCP's intertwined error and congestion control is not robust against
+    spurious timeouts nor is it robust against packet re-orderings. A
+    packet that is delayed in the network beyond the expiration of TCP's
+    retransmission timer, is mistaken for a packet loss by a TCP sender.
+    Also, a packet that is re-ordered in the network beyond TCP's
+    duplicate acknowledgment threshold, is eventually mistaken for a
+    packet loss by a TCP sender. Both situations lead to a spurious
+    retransmit of the oldest outstanding segment, and an unnecessary
+    reduction of the congestion window at the sender. Moreover, a
+    spurious timeout forces the sender into a go-back-N retransmission
+    mode leading to spurious retransmits of all outstanding segments.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftschrockaechallenge06
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,38 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When a relying party refuses a consequential agent action because\n   authorization evidence is missing, stale, or unverifiable, the agent\n   needs a machine-readable description of what remains necessary.  This\n   document defines a transport-neutral Authorization Evidence Challenge\n   data model bound to the relying party's exact action.  The challenge\n   identifies outstanding evidence requirements, freshness and status\n   constraints, acceptable presentation profiles, and retry state.  It\n   authorizes nothing, transfers no admission ownership, and provides no\n   promise that a later request will execute.\n\n   The document also defines an HTTP binding using 403 Forbidden and RFC\n   9457 Problem Details, and describes an informative gateway-handoff\n   profile for DMSC-style federation.  The gateway profile communicates\n   evidence requirements; it does not solve conserved admission or\n   double-admission across independently operated gateways.\n\n   A challenge can synchronize corrected retries and amplify load.  The\n   core therefore defines optional retry timing with per-challenge\n   jitter, and the HTTP binding maps its lower bound to Retry-After.\n   Retry timing controls presentation attempts only; it does not\n   authorize the action or make an uncertain action safe to repeat.\n\n   Single-use processing also places state on the refusal path.  The\n   core therefore requires bounded outstanding and replay state, fail-\n   closed behavior when state cannot be claimed, and retention of live\n   replay records until they are no longer security-relevant.  Capacity\n   MUST be reserved before native evidence verification, and a binding\n   capacity refusal reveals no remaining evidence requirements.  In a\n   sharded replay domain, only the authoritative owner can classify a\n   nonce as already claimed; inability to reach that owner is\n   unavailability, not replay.</p>"
+  content: |-
+    <p>When a relying party refuses a consequential agent action because
+       authorization evidence is missing, stale, or unverifiable, the agent
+       needs a machine-readable description of what remains necessary.  This
+       document defines a transport-neutral Authorization Evidence Challenge
+       data model bound to the relying party's exact action.  The challenge
+       identifies outstanding evidence requirements, freshness and status
+       constraints, acceptable presentation profiles, and retry state.  It
+       authorizes nothing, transfers no admission ownership, and provides no
+       promise that a later request will execute.
+
+       The document also defines an HTTP binding using 403 Forbidden and RFC
+       9457 Problem Details, and describes an informative gateway-handoff
+       profile for DMSC-style federation.  The gateway profile communicates
+       evidence requirements; it does not solve conserved admission or
+       double-admission across independently operated gateways.
+
+       A challenge can synchronize corrected retries and amplify load.  The
+       core therefore defines optional retry timing with per-challenge
+       jitter, and the HTTP binding maps its lower bound to Retry-After.
+       Retry timing controls presentation attempts only; it does not
+       authorize the action or make an uncertain action safe to repeat.
+
+       Single-use processing also places state on the refusal path.  The
+       core therefore requires bounded outstanding and replay state, fail-
+       closed behavior when state cannot be claimed, and retention of live
+       replay records until they are no longer security-relevant.  Capacity
+       MUST be reserved before native evidence verification, and a binding
+       capacity refusal reveals no remaining evidence requirements.  In a
+       sharded replay domain, only the authoritative owner can classify a
+       nonce as already claimed; inability to reach that owner is
+       unavailability, not replay.</p>
 relation:
 - type: updates
   bibitem:

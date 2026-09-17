@@ -1,3 +1,4 @@
+---
 id: draftsullivantlssignedechupdates00
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Encrypted ClientHello (ECH) requires clients to have the server's ECH\n   configuration before connecting.  Currently, when ECH fails, servers\n   can send updated configurations but clients cannot authenticate them\n   without a certificate for the public name, limiting deployment\n   flexibility.\n\n   This document specifies an authenticated ECH configuration update\n   mechanism.  Servers can deliver signed ECH configurations during the\n   TLS handshake, allowing clients to authenticate and immediately use\n   them for retry.  The mechanism decouples ECH key distribution from\n   transport, enabling the same signed configuration to work via DNS or\n   TLS delivery.</p>"
+  content: |-
+    <p>Encrypted ClientHello (ECH) requires clients to have the server's ECH
+       configuration before connecting.  Currently, when ECH fails, servers
+       can send updated configurations but clients cannot authenticate them
+       without a certificate for the public name, limiting deployment
+       flexibility.
+
+       This document specifies an authenticated ECH configuration update
+       mechanism.  Servers can deliver signed ECH configurations during the
+       TLS handshake, allowing clients to authenticate and immediately use
+       them for retry.  The mechanism decouples ECH key distribution from
+       transport, enabling the same signed configuration to work via DNS or
+       TLS delivery.</p>
 relation:
 - type: updatedBy
   bibitem:

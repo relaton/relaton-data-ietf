@@ -1,3 +1,4 @@
+---
 id: draftsipidentityconfusionbcp00
 schema_version: v1.5.6
 type: standard
@@ -75,7 +76,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Session Initiation Protocol (SIP) carries originator identity\n   through multiple header fields --- From, P-Asserted-Identity, P-\n   Preferred-Identity, Remote-Party-ID, Identity and so on --- whose\n   processing is spread across several specifications.  Because these\n   mechanisms leave significant room for implementation choice, SIP\n   servers and user agents frequently disagree on which identity signal\n   to trust and how to parse it.  Recent research has demonstrated that\n   these semantic ambiguities enable caller-ID and message-origin\n   spoofing in the majority of tested server-client combinations, even\n   when TLS and authentication are correctly deployed.\n\n   This document provides best current practices for mitigating identity\n   spoofing caused by such ambiguities.  It defines identity-validation\n   rules at each stage of the SIP signaling path, from the originating\n   server through trust boundaries and transit proxies to the receiving\n   user agent, and includes guidance on deployment, migration, and\n   interoperability with legacy systems.</p>"
+  content: |-
+    <p>The Session Initiation Protocol (SIP) carries originator identity
+       through multiple header fields --- From, P-Asserted-Identity, P-
+       Preferred-Identity, Remote-Party-ID, Identity and so on --- whose
+       processing is spread across several specifications.  Because these
+       mechanisms leave significant room for implementation choice, SIP
+       servers and user agents frequently disagree on which identity signal
+       to trust and how to parse it.  Recent research has demonstrated that
+       these semantic ambiguities enable caller-ID and message-origin
+       spoofing in the majority of tested server-client combinations, even
+       when TLS and authentication are correctly deployed.
+
+       This document provides best current practices for mitigating identity
+       spoofing caused by such ambiguities.  It defines identity-validation
+       rules at each stage of the SIP signaling path, from the originating
+       server through trust boundaries and transit proxies to the receiving
+       user agent, and includes guidance on deployment, migration, and
+       interoperability with legacy systems.</p>
 series:
 - type: main
   title:

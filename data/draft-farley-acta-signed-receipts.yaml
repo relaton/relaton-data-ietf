@@ -1,3 +1,4 @@
+---
 id: draftfarleyactasignedreceipts
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,19 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a portable, cryptographically signed receipt\n   format for recording machine-to-machine access control decisions.\n   Each receipt captures the identity of the decision maker, the tool or\n   resource being accessed, the policy evaluation result, and a\n   timestamp.  All of these are signed with Ed25519 [RFC8032] and\n   serialized using deterministic JSON canonicalization [RFC8785].\n\n   The format is designed for environments where AI agents invoke tools\n   on behalf of human operators, particularly the Model Context Protocol\n   (MCP) ecosystem.  Receipts are independently verifiable without\n   contacting the issuer, enabling offline audit, regulatory compliance,\n   and cross-organizational trust federation.</p>"
+  content: |-
+    <p>This document defines a portable, cryptographically signed receipt
+       format for recording machine-to-machine access control decisions.
+       Each receipt captures the identity of the decision maker, the tool or
+       resource being accessed, the policy evaluation result, and a
+       timestamp.  All of these are signed with Ed25519 [RFC8032] and
+       serialized using deterministic JSON canonicalization [RFC8785].
+
+       The format is designed for environments where AI agents invoke tools
+       on behalf of human operators, particularly the Model Context Protocol
+       (MCP) ecosystem.  Receipts are independently verifiable without
+       contacting the issuer, enabling offline audit, regulatory compliance,
+       and cross-organizational trust federation.</p>
 relation:
 - type: includes
   bibitem:

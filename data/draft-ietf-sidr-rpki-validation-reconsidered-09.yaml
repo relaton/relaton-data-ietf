@@ -1,3 +1,4 @@
+---
 id: draftietfsidrrpkivalidationreconsidered09
 schema_version: v1.5.6
 type: standard
@@ -184,7 +185,31 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies an alternative to the certificate validation\n   procedure specified in RFC 6487 that reduces aspects of operational\n   fragility in the management of certificates in the RPKI, while\n   retaining essential security features.\n\n   Where the procedure specified in RFC 6487 requires that Resource\n   Certificates are rejecting entirely if they are found to over-claim\n   any resources not contained on the issuing certificate, the\n   validation process defined here allows an issuing Certificate\n   Authority to chose to communicate that such Resource Certificates\n   should be accepted for the intersection of their resources and the\n   issuing certificate.\n\n   This choice is signalled by form of a set of alternative Object\n   Identifiers (OIDs) of RFC 3779 X.509 Extensions for IP Addresses and\n   AS Identifiers, and certificate policy for the Resource Public Key\n   Infrastructure (RFC 6484).  It should be noted that in case these\n   OIDs are not used for any certificate under a Trust Anchor, the\n   validation procedure defined here has the same outcome as the\n   procedure defined in RFC 6487\n\n   Furthermore this document provides an alternative to ROA (RFC 6482),\n   and BGPSec Router Certificate (BGPSec PKI Profiles - publication\n   requested) validation.</p>"
+  content: |-
+    <p>This document specifies an alternative to the certificate validation
+       procedure specified in RFC 6487 that reduces aspects of operational
+       fragility in the management of certificates in the RPKI, while
+       retaining essential security features.
+
+       Where the procedure specified in RFC 6487 requires that Resource
+       Certificates are rejecting entirely if they are found to over-claim
+       any resources not contained on the issuing certificate, the
+       validation process defined here allows an issuing Certificate
+       Authority to chose to communicate that such Resource Certificates
+       should be accepted for the intersection of their resources and the
+       issuing certificate.
+
+       This choice is signalled by form of a set of alternative Object
+       Identifiers (OIDs) of RFC 3779 X.509 Extensions for IP Addresses and
+       AS Identifiers, and certificate policy for the Resource Public Key
+       Infrastructure (RFC 6484).  It should be noted that in case these
+       OIDs are not used for any certificate under a Trust Anchor, the
+       validation procedure defined here has the same outcome as the
+       procedure defined in RFC 6487
+
+       Furthermore this document provides an alternative to ROA (RFC 6482),
+       and BGPSec Router Certificate (BGPSec PKI Profiles - publication
+       requested) validation.</p>
 relation:
 - type: updates
   bibitem:

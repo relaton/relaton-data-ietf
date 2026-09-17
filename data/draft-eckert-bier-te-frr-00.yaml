@@ -1,3 +1,4 @@
+---
 id: drafteckertbiertefrr00
 schema_version: v1.5.6
 type: standard
@@ -111,7 +112,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document proposes an Fast ReRoute (FRR) extension to the BIER-TE\n   Architecture [I-D.eckert-bier-te-arch].  The FRR procedure has to be\n   supported by the BIER-TE Controller host and the BFRs that are\n   attached to a link/adjacency for which FRR support is required.\n   Thus, the FRR concept can be incrementally deployed in the data plane\n   to only those BFR adjacent to adjacencies for which FRR protection is\n   desired.\n\n   The FRR procedure does not require changes to the packet format\n   described in [I-D.ietf-bier-architecture] that is also used for BIER-\n   TE.  Existing BIER-TE tables do not have to be altered.  FRR\n   procedures do require additional forwarding plane logic on the BFR\n   that need to support FRR.\n\n   An additional table is needed that carries information about pre-\n   computed backup paths.  This table is used to modify upon detection\n   of failure the bitstring in the BIER header.  To prevent packet\n   duplicates, tunneling mechanisms such as remote adjacencies or BIER-\n   in-BIER encapsulation can be leveraged.</p>"
+  content: |-
+    <p>This document proposes an Fast ReRoute (FRR) extension to the BIER-TE
+       Architecture [I-D.eckert-bier-te-arch].  The FRR procedure has to be
+       supported by the BIER-TE Controller host and the BFRs that are
+       attached to a link/adjacency for which FRR support is required.
+       Thus, the FRR concept can be incrementally deployed in the data plane
+       to only those BFR adjacent to adjacencies for which FRR protection is
+       desired.
+
+       The FRR procedure does not require changes to the packet format
+       described in [I-D.ietf-bier-architecture] that is also used for BIER-
+       TE.  Existing BIER-TE tables do not have to be altered.  FRR
+       procedures do require additional forwarding plane logic on the BFR
+       that need to support FRR.
+
+       An additional table is needed that carries information about pre-
+       computed backup paths.  This table is used to modify upon detection
+       of failure the bitstring in the BIER header.  To prevent packet
+       duplicates, tunneling mechanisms such as remote adjacencies or BIER-
+       in-BIER encapsulation can be leveraged.</p>
 relation:
 - type: updatedBy
   bibitem:

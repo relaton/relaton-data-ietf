@@ -1,3 +1,4 @@
+---
 id: draftzhangtrillresilienttrees00
 schema_version: v1.5.6
 type: standard
@@ -108,7 +109,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>TRILL protocol provides layer 2 multicast data forwarding using IS-IS\n   link state routing. Distribution trees are computed based on the link\n   state information through Shortest Path First calculation and shared\n   among VLANs across the campus. When a link on the distribution tree\n   fails, a campus-wide recovergence of this distribution tree will take\n   place, which can be time consuming and may cause considerable\n   disruption to the ongoing multicast service.\n\n   This document makes use of Affinity TLVs to build the backup\n   distribution tree to protect links on the primary distribution tree.\n   Since the backup distribution tree is built up ahead of the link\n   failure, when a link on the primary distribution tree fails, the pre-\n   installed backup forwarding table will be utilized to deliver\n   multicast packets without waiting for the campus-wide recovergence,\n   which minimizes the service disruption.</p>"
+  content: |-
+    <p>TRILL protocol provides layer 2 multicast data forwarding using IS-IS
+       link state routing. Distribution trees are computed based on the link
+       state information through Shortest Path First calculation and shared
+       among VLANs across the campus. When a link on the distribution tree
+       fails, a campus-wide recovergence of this distribution tree will take
+       place, which can be time consuming and may cause considerable
+       disruption to the ongoing multicast service.
+
+       This document makes use of Affinity TLVs to build the backup
+       distribution tree to protect links on the primary distribution tree.
+       Since the backup distribution tree is built up ahead of the link
+       failure, when a link on the primary distribution tree fails, the pre-
+       installed backup forwarding table will be utilized to deliver
+       multicast packets without waiting for the campus-wide recovergence,
+       which minimizes the service disruption.</p>
 relation:
 - type: updatedBy
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftprevidifilsfilsisissegmentrouting02
 schema_version: v1.5.6
 type: standard
@@ -303,7 +304,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Segment Routing (SR) enables any node to select any path (explicit or\n   derived from IGPs SPT computations) for each of its traffic classes.\n   The path does not depend on a hop-by-hop signaling technique (neither\n   LDP nor RSVP).  It only depends on a set of \"segments\" that are\n   advertised by the IS-IS routing protocol.  These segments act as\n   topological sub-paths that can be combined together to form the\n   desired path.\n\n   There are two forms of segments: node and adjacency.  A node segment\n   represents a path to a node.  An adjacency segment represents a\n   specific adjacency to a node.  A node segment is typically a multi-\n   hop path while an adjacency segment is a one-hop path.  SR's control-\n   plane can be applied to IPv6 and MPLS dataplanes.\n\n   Segment Routing control-plane can be applied to the MPLS dataplane: a\n   node segment to node N is instantiated in the MPLS dataplane as an\n   LSP along the shortest-path (SPT) to the node.  An adjacency segment\n   is instantiated in the MPLS dataplane as a cross-connect entry\n   pointing to a specific egress datalink.\n\n   This document describes the Segment Routing functions, a set of use\n   cases it addresses and the necessary changes that are required in the\n   IS-IS protocol.</p>"
+  content: |-
+    <p>Segment Routing (SR) enables any node to select any path (explicit or
+       derived from IGPs SPT computations) for each of its traffic classes.
+       The path does not depend on a hop-by-hop signaling technique (neither
+       LDP nor RSVP).  It only depends on a set of "segments" that are
+       advertised by the IS-IS routing protocol.  These segments act as
+       topological sub-paths that can be combined together to form the
+       desired path.
+
+       There are two forms of segments: node and adjacency.  A node segment
+       represents a path to a node.  An adjacency segment represents a
+       specific adjacency to a node.  A node segment is typically a multi-
+       hop path while an adjacency segment is a one-hop path.  SR's control-
+       plane can be applied to IPv6 and MPLS dataplanes.
+
+       Segment Routing control-plane can be applied to the MPLS dataplane: a
+       node segment to node N is instantiated in the MPLS dataplane as an
+       LSP along the shortest-path (SPT) to the node.  An adjacency segment
+       is instantiated in the MPLS dataplane as a cross-connect entry
+       pointing to a specific egress datalink.
+
+       This document describes the Segment Routing functions, a set of use
+       cases it addresses and the necessary changes that are required in the
+       IS-IS protocol.</p>
 relation:
 - type: updates
   bibitem:

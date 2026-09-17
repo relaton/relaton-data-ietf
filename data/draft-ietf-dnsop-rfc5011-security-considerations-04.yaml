@@ -1,3 +1,4 @@
+---
 id: draftietfdnsoprfc5011securityconsiderations04
 schema_version: v1.5.6
 type: standard
@@ -81,7 +82,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document extends the RFC5011 rollover strategy with timing\n   advice that must be followed in order to maintain security.\n   Specifically, this document describes the math behind the minimum\n   time-length that a DNS zone publisher must wait before signing\n   exclusively with recently added DNSKEYs.  It contains much math and\n   complicated equations, but the summary is that the key rollover /\n   revocation time is much longer than intuition would suggest.  If you\n   are not both publishing a DNSSEC trust anchor, and using RFC5011 to\n   update that trust anchor, you probably don't need to read this\n   document.\n\n   This document also describes the minimum time-length that a DNS zone\n   publisher must wait after publishing a revoked DNSKEY before assuming\n   that all active RFC5011 resolvers should have seen the revocation-\n   marked key and removed it from their list of trust anchors.</p>"
+  content: |-
+    <p>This document extends the RFC5011 rollover strategy with timing
+       advice that must be followed in order to maintain security.
+       Specifically, this document describes the math behind the minimum
+       time-length that a DNS zone publisher must wait before signing
+       exclusively with recently added DNSKEYs.  It contains much math and
+       complicated equations, but the summary is that the key rollover /
+       revocation time is much longer than intuition would suggest.  If you
+       are not both publishing a DNSSEC trust anchor, and using RFC5011 to
+       update that trust anchor, you probably don't need to read this
+       document.
+
+       This document also describes the minimum time-length that a DNS zone
+       publisher must wait after publishing a revoked DNSKEY before assuming
+       that all active RFC5011 resolvers should have seen the revocation-
+       marked key and removed it from their list of trust anchors.</p>
 relation:
 - type: updates
   bibitem:

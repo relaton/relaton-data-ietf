@@ -1,3 +1,4 @@
+---
 id: drafttianccwgibcsdatapathprocessing00
 schema_version: v1.5.6
 type: standard
@@ -178,7 +179,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In-band congestion signaling protocols, such as Congestion Signaling\n   (CSIG) and High Precision Congestion Control (HPCC++), require\n   intermediate Network Elements (NEs) to actively parse scalar\n   congestion metrics from packet headers, evaluate them against local\n   link states, and conditionally rewrite these fields before\n   transmission.  To ensure end-to-end algorithmic consistency and avoid\n   unintended interactions with routing topologies (e.g., packet\n   reordering), the datapath of these NEs must adhere to a standardized\n   logical processing model.\n\n   This document defines the normative datapath processing architecture\n   for Network Elements participating in In-Band Congestion Signaling\n   (IBCS).  By establishing abstract topological roles (Edge vs. Transit\n   NEs) and standardizing the \"Compare-and-Replace\" operational\n   paradigm, this specification abstracts the signal update logic from\n   hardware-specific pipelines.  It guarantees strict orthogonality\n   between congestion signaling and Equal-Cost Multi-Path (ECMP) routing\n   invariants, supporting diverse congestion metrics across multi-vendor\n   deployments.</p>"
+  content: |-
+    <p>In-band congestion signaling protocols, such as Congestion Signaling
+       (CSIG) and High Precision Congestion Control (HPCC++), require
+       intermediate Network Elements (NEs) to actively parse scalar
+       congestion metrics from packet headers, evaluate them against local
+       link states, and conditionally rewrite these fields before
+       transmission.  To ensure end-to-end algorithmic consistency and avoid
+       unintended interactions with routing topologies (e.g., packet
+       reordering), the datapath of these NEs must adhere to a standardized
+       logical processing model.
+
+       This document defines the normative datapath processing architecture
+       for Network Elements participating in In-Band Congestion Signaling
+       (IBCS).  By establishing abstract topological roles (Edge vs. Transit
+       NEs) and standardizing the "Compare-and-Replace" operational
+       paradigm, this specification abstracts the signal update logic from
+       hardware-specific pipelines.  It guarantees strict orthogonality
+       between congestion signaling and Equal-Cost Multi-Path (ECMP) routing
+       invariants, supporting diverse congestion metrics across multi-vendor
+       deployments.</p>
 series:
 - type: main
   title:

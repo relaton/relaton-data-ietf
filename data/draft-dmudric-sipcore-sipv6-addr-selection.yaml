@@ -1,3 +1,4 @@
+---
 id: draftdmudricsipcoresipv6addrselection
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In the networks where multihomed hosts can have ULA and GUA addresses\n   from different ISPs, multiple SIP signaling and media connectivity\n   issues might arise due to inappropriate address selections. Some of\n   the problems are described in [RFC5220]. Since SIP and SDP allow IP\n   addresses to be embedded into their headers and lines, even if proper\n   addresses are selected initially, SIP is not equipped with the\n   mechanisms to respond to network events, and transition transport to\n   reachable addresses. As a result, SIP messages and media might be\n   filtered by routers, or discarded as unreachable destinations.\n\n   SIP protocol (RFC 3261) defines signaling messages and their headers.\n   This document describes how a multihomed host should select addresses\n   for SIP headers, like Contact and Via, to be reachable destinations.\n   Host SHOULD change a default router for uplink failures, remove\n   prefixes and addresses for unreachable ISP, and update contact\n   address list.\n\n   SDP protocol (RFC 3264) defines how participants in a session select\n   their parameters. This document describes how an offerer and answerer\n   on multihomed hosts should select their addresses. If one of the\n   selected addresses becomes unreachable, the document describes the\n   mechanism how a new one should be selected and renegotiated.</p>"
+  content: |-
+    <p>In the networks where multihomed hosts can have ULA and GUA addresses
+       from different ISPs, multiple SIP signaling and media connectivity
+       issues might arise due to inappropriate address selections. Some of
+       the problems are described in [RFC5220]. Since SIP and SDP allow IP
+       addresses to be embedded into their headers and lines, even if proper
+       addresses are selected initially, SIP is not equipped with the
+       mechanisms to respond to network events, and transition transport to
+       reachable addresses. As a result, SIP messages and media might be
+       filtered by routers, or discarded as unreachable destinations.
+
+       SIP protocol (RFC 3261) defines signaling messages and their headers.
+       This document describes how a multihomed host should select addresses
+       for SIP headers, like Contact and Via, to be reachable destinations.
+       Host SHOULD change a default router for uplink failures, remove
+       prefixes and addresses for unreachable ISP, and update contact
+       address list.
+
+       SDP protocol (RFC 3264) defines how participants in a session select
+       their parameters. This document describes how an offerer and answerer
+       on multihomed hosts should select their addresses. If one of the
+       selected addresses becomes unreachable, the document describes the
+       mechanism how a new one should be selected and renegotiated.</p>
 relation:
 - type: includes
   bibitem:

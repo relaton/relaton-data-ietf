@@ -1,3 +1,4 @@
+---
 id: drafttemplemanscittframingspace00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A signed statement conveyed as a COSE_Sign1 object may be serialized\n   into many distinct byte sequences that all decode to the same data\n   item.  Where a protocol identifies such a statement by a digest\n   computed over its wire octets (referred to here as a data-hash), the\n   identifier is sensitive to that framing while the signature over the\n   statement is not.\n\n   This document reports a measurement of the size of that class.\n   Taking one 165-octet COSE_Sign1 object and re-emitting it under every\n   combination of six CBOR encoding freedoms yields 64 distinct octet\n   sequences.  All 64 carry an identical Sig_structure and therefore an\n   identical, valid signature.  All 64 produce distinct data-hash\n   values, with no collisions.  A stock CBOR decoder rejected none of\n   them, and 31 were silently repaired into the canonical form by the\n   act of being read.\n\n   This document specifies nothing and proposes no wording.  It reports\n   a measurement, publishes the reproduction recipe, and identifies the\n   prior work that already addresses the problem it measures.</p>"
+  content: |-
+    <p>A signed statement conveyed as a COSE_Sign1 object may be serialized
+       into many distinct byte sequences that all decode to the same data
+       item.  Where a protocol identifies such a statement by a digest
+       computed over its wire octets (referred to here as a data-hash), the
+       identifier is sensitive to that framing while the signature over the
+       statement is not.
+
+       This document reports a measurement of the size of that class.
+       Taking one 165-octet COSE_Sign1 object and re-emitting it under every
+       combination of six CBOR encoding freedoms yields 64 distinct octet
+       sequences.  All 64 carry an identical Sig_structure and therefore an
+       identical, valid signature.  All 64 produce distinct data-hash
+       values, with no collisions.  A stock CBOR decoder rejected none of
+       them, and 31 were silently repaired into the canonical form by the
+       act of being read.
+
+       This document specifies nothing and proposes no wording.  It reports
+       a measurement, publishes the reproduction recipe, and identifies the
+       prior work that already addresses the problem it measures.</p>
 series:
 - type: main
   title:

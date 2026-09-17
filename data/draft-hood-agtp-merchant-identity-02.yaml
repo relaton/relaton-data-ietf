@@ -1,3 +1,4 @@
+---
 id: drafthoodagtpmerchantidentity02
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,37 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Agent Transfer Protocol (AGTP) specifies the sending side of an\n   agentic transaction: agent identity, Authority-Scope enforcement,\n   Budget- Limit declaration, and a signed Attribution-Record on every\n   method invocation.  The receiving side of a PURCHASE transaction --\n   the merchant or service provider -- has no equivalent protocol-level\n   identity or verification mechanism.  This is the merchant identity\n   gap.\n\n   This document specifies the AGTP Merchant Identity and Agentic\n   Commerce Binding.  It defines a merchant in AGTP as an agent whose\n   Agent Identity Document carries role: \"merchant\", specifies the\n   merchant-specific fields that ride on the Agent Identity Document\n   under that declaration, aligns Merchant Trust Tiers with AGTP Trust\n   Tier semantics, and defines the protocol integration points at which\n   merchant identity is verified.  These include the PURCHASE method\n   handshake, the DISCOVER method result surface, and the Attribution-\n   Record.  This document also defines the Intent-Assertion header for\n   portable, detached principal-authorized intent, the Cart-Digest\n   mechanism for multi-line-item transactions, and the 458 Counterparty\n   Unverified status code.  Together these mechanisms close the\n   verification loop between agent and merchant within AGTP's governance\n   model.\n\n   Version 02 unifies merchant identity onto the Agent Genesis + Agent\n   Identity Document architecture: there is no separate Merchant Genesis\n   document type.  A merchant is an agent with role: \"merchant\" declared\n   in its Agent Identity Document.  This reflects the architectural\n   principle that identity is permanent (carried on Genesis) and\n   capability is mutable (carried on the Identity Document); a role\n   change does not re-mint an Agent-ID.</p>"
+  content: |-
+    <p>The Agent Transfer Protocol (AGTP) specifies the sending side of an
+       agentic transaction: agent identity, Authority-Scope enforcement,
+       Budget- Limit declaration, and a signed Attribution-Record on every
+       method invocation.  The receiving side of a PURCHASE transaction --
+       the merchant or service provider -- has no equivalent protocol-level
+       identity or verification mechanism.  This is the merchant identity
+       gap.
+
+       This document specifies the AGTP Merchant Identity and Agentic
+       Commerce Binding.  It defines a merchant in AGTP as an agent whose
+       Agent Identity Document carries role: "merchant", specifies the
+       merchant-specific fields that ride on the Agent Identity Document
+       under that declaration, aligns Merchant Trust Tiers with AGTP Trust
+       Tier semantics, and defines the protocol integration points at which
+       merchant identity is verified.  These include the PURCHASE method
+       handshake, the DISCOVER method result surface, and the Attribution-
+       Record.  This document also defines the Intent-Assertion header for
+       portable, detached principal-authorized intent, the Cart-Digest
+       mechanism for multi-line-item transactions, and the 458 Counterparty
+       Unverified status code.  Together these mechanisms close the
+       verification loop between agent and merchant within AGTP's governance
+       model.
+
+       Version 02 unifies merchant identity onto the Agent Genesis + Agent
+       Identity Document architecture: there is no separate Merchant Genesis
+       document type.  A merchant is an agent with role: "merchant" declared
+       in its Agent Identity Document.  This reflects the architectural
+       principle that identity is permanent (carried on Genesis) and
+       capability is mutable (carried on the Identity Document); a role
+       change does not re-mint an Agent-ID.</p>
 relation:
 - type: updates
   bibitem:

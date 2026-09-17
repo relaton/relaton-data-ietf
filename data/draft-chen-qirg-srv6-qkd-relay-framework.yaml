@@ -1,3 +1,4 @@
+---
 id: draftchenqirgsrv6qkdrelayframework
 schema_version: v1.5.6
 formattedref:
@@ -5,7 +6,8 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: A Framework for SRv6-Based Trusted Key Relay in Quantum Key Distribution Networks
+  content: A Framework for SRv6-Based Trusted Key Relay in Quantum Key Distribution
+    Networks
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-chen-qirg-srv6-qkd-relay-framework-00
@@ -19,7 +21,29 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Quantum Key Distribution (QKD) links generate symmetric key material\n   between directly connected QKD nodes.  Trusted relay is commonly used\n   to extend key delivery beyond the reach of a single QKD link.  A\n   complete trusted-relay service requires the network to collect QKD\n   link capacity and node trust information, compute a relay path\n   according to service requirements, translate the result into an SRv6\n   path, and carry the relayed key information in an IPv6/UDP packet\n   steered by that SRv6 path.\n\n   This document describes an architectural framework for such a\n   service.  Each QKD link provides its available quantum key rate\n   capacity, and each relay node provides a trust level.  A controller\n   uses these inputs together with application requirements to calculate\n   a relay path.  The path-computation algorithm is not standardized and\n   may be selected or defined by the user, operator, or implementation.\n   The calculated relay sequence is represented as an SRv6 path, and UDP\n   packets following that path carry the key-relay information.\n\n   This document identifies the protocol extension points needed to\n   support the framework.  The detailed encodings, message formats, SRv6\n   behaviors, TLVs, and signaling procedures are left for future work\n   and are marked as TBD.</p>"
+  content: |-
+    <p>Quantum Key Distribution (QKD) links generate symmetric key material
+       between directly connected QKD nodes.  Trusted relay is commonly used
+       to extend key delivery beyond the reach of a single QKD link.  A
+       complete trusted-relay service requires the network to collect QKD
+       link capacity and node trust information, compute a relay path
+       according to service requirements, translate the result into an SRv6
+       path, and carry the relayed key information in an IPv6/UDP packet
+       steered by that SRv6 path.
+
+       This document describes an architectural framework for such a
+       service.  Each QKD link provides its available quantum key rate
+       capacity, and each relay node provides a trust level.  A controller
+       uses these inputs together with application requirements to calculate
+       a relay path.  The path-computation algorithm is not standardized and
+       may be selected or defined by the user, operator, or implementation.
+       The calculated relay sequence is represented as an SRv6 path, and UDP
+       packets following that path carry the key-relay information.
+
+       This document identifies the protocol extension points needed to
+       support the framework.  The detailed encodings, message formats, SRv6
+       behaviors, TLVs, and signaling procedures are left for future work
+       and are marked as TBD.</p>
 relation:
 - type: includes
   bibitem:

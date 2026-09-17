@@ -1,3 +1,4 @@
+---
 id: draftkuehlewindtcpmaccurateecn03
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Explicit Congestion Notification (ECN) is a mechanism where network\n   nodes can mark IP packets instead of dropping them to indicate\n   incipient congestion to the end-points.  Receivers with an ECN-\n   capable transport protocol feed back this information to the sender.\n   ECN is specified for TCP in such a way that only one feedback signal\n   can be transmitted per Round-Trip Time (RTT).  Recently, new TCP\n   mechanisms like Congestion Exposure (ConEx) or Data Center TCP\n   (DCTCP) need more accurate ECN feedback information whenever more\n   than one marking is received in one RTT.  This document specifies an\n   experimental scheme to provide more than one feedback signal per RTT\n   in the TCP header.  Given TCP header space is scarce, it overloads\n   the three existing ECN-related flags in the TCP header.  Also, to\n   improve robustness it uses 15 more bits if available.  For initial\n   experiments it places these in a TCP option.  However, if the Urgent\n   flag is cleared, zero header overhead could be achieved by reusing\n   the Urgent Pointer opportunistically.  Therefore this document\n   reserves space in the Urgent Pointer to be used if the protocol\n   progresses to the standards track.</p>"
+  content: |-
+    <p>Explicit Congestion Notification (ECN) is a mechanism where network
+       nodes can mark IP packets instead of dropping them to indicate
+       incipient congestion to the end-points.  Receivers with an ECN-
+       capable transport protocol feed back this information to the sender.
+       ECN is specified for TCP in such a way that only one feedback signal
+       can be transmitted per Round-Trip Time (RTT).  Recently, new TCP
+       mechanisms like Congestion Exposure (ConEx) or Data Center TCP
+       (DCTCP) need more accurate ECN feedback information whenever more
+       than one marking is received in one RTT.  This document specifies an
+       experimental scheme to provide more than one feedback signal per RTT
+       in the TCP header.  Given TCP header space is scarce, it overloads
+       the three existing ECN-related flags in the TCP header.  Also, to
+       improve robustness it uses 15 more bits if available.  For initial
+       experiments it places these in a TCP option.  However, if the Urgent
+       flag is cleared, zero header overhead could be achieved by reusing
+       the Urgent Pointer opportunistically.  Therefore this document
+       reserves space in the Urgent Pointer to be used if the protocol
+       progresses to the standards track.</p>
 relation:
 - type: updates
   bibitem:

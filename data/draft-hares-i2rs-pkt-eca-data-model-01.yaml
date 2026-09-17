@@ -1,3 +1,4 @@
+---
 id: draftharesi2rspktecadatamodel01
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes the yang data model for packet forwarding\n   policy that filters received packets and forwards (or drops) the\n   packets.  Prior to forwarding the packets out other interfaces, some\n   of the fields in the packets may be modified.  If one considers the\n   packet reception an event, this packet policy is a minimalistic\n   Event-Match Condition-Action policy.  This policy controls forwarding\n   of packets received by a routing device on one or more interfaces on\n   which this policy is enabled.  The policy is composed of an ordered\n   list of policy rules.  Each policy policy rule contains a set of\n   match conditions that filters for packets plus a set of actions to\n   modify the packet and forward packets.  The match conditions can\n   match tuples in multiple layers (L1-L4, application), interface\n   received on, and and other conditions regarding the packet (size of\n   packet, time of day).  The modify packet actions allow for setting\n   things within the packet plus decapsulation and encapsulation packet.\n   The forwarding actions include forwarding via interfaces, tunnels, or\n   nexthops and dropping the packet.  The policy model can be used with\n   the session ephemeral (BGP Flow Specifications), reboot ephemeral\n   state (I2RS ephemeral), and non-ephemeral routing/forwarding state\n   (e.g. configuration state ).</p>"
+  content: |-
+    <p>This document describes the yang data model for packet forwarding
+       policy that filters received packets and forwards (or drops) the
+       packets.  Prior to forwarding the packets out other interfaces, some
+       of the fields in the packets may be modified.  If one considers the
+       packet reception an event, this packet policy is a minimalistic
+       Event-Match Condition-Action policy.  This policy controls forwarding
+       of packets received by a routing device on one or more interfaces on
+       which this policy is enabled.  The policy is composed of an ordered
+       list of policy rules.  Each policy policy rule contains a set of
+       match conditions that filters for packets plus a set of actions to
+       modify the packet and forward packets.  The match conditions can
+       match tuples in multiple layers (L1-L4, application), interface
+       received on, and and other conditions regarding the packet (size of
+       packet, time of day).  The modify packet actions allow for setting
+       things within the packet plus decapsulation and encapsulation packet.
+       The forwarding actions include forwarding via interfaces, tunnels, or
+       nexthops and dropping the packet.  The policy model can be used with
+       the session ephemeral (BGP Flow Specifications), reboot ephemeral
+       state (I2RS ephemeral), and non-ephemeral routing/forwarding state
+       (e.g. configuration state ).</p>
 relation:
 - type: updates
   bibitem:

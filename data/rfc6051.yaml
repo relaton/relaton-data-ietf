@@ -1,3 +1,4 @@
+---
 id: RFC6051
 schema_version: v1.5.6
 type: standard
@@ -94,7 +95,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo outlines how RTP sessions are synchronised, and discusses how rapidly such synchronisation can occur. We show that most RTP sessions can be synchronised immediately, but that the use of video switching multipoint conference units (MCUs) or large source-specific multicast (SSM) groups can greatly increase the synchronisation delay. This increase in delay can be unacceptable to some applications that use layered and/or multi-description codecs.</p><p>This memo introduces three mechanisms to reduce the synchronisation delay for such sessions. First, it updates the RTP Control Protocol (RTCP) timing rules to reduce the initial synchronisation delay for SSM sessions. Second, a new feedback packet is defined for use with the extended RTP profile for RTCP-based feedback (RTP/AVPF), allowing video switching MCUs to rapidly request resynchronisation. Finally, new RTP header extensions are defined to allow rapid synchronisation of late joiners, and guarantee correct timestamp-based decoding order recovery for layered codecs in the presence of clock skew. [STANDARDS-TRACK]</p>"
+  content: "<p>This memo outlines how RTP sessions are synchronised, and discusses
+    how rapidly such synchronisation can occur. We show that most RTP sessions can
+    be synchronised immediately, but that the use of video switching multipoint conference
+    units (MCUs) or large source-specific multicast (SSM) groups can greatly increase
+    the synchronisation delay. This increase in delay can be unacceptable to some
+    applications that use layered and/or multi-description codecs.</p><p>This memo
+    introduces three mechanisms to reduce the synchronisation delay for such sessions.
+    First, it updates the RTP Control Protocol (RTCP) timing rules to reduce the initial
+    synchronisation delay for SSM sessions. Second, a new feedback packet is defined
+    for use with the extended RTP profile for RTCP-based feedback (RTP/AVPF), allowing
+    video switching MCUs to rapidly request resynchronisation. Finally, new RTP header
+    extensions are defined to allow rapid synchronisation of late joiners, and guarantee
+    correct timestamp-based decoding order recovery for layered codecs in the presence
+    of clock skew. [STANDARDS-TRACK]</p>"
 status:
   stage:
     content: PROPOSED STANDARD

@@ -1,3 +1,4 @@
+---
 id: draftschrockepquorum00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines EP-QUORUM, a multi-party authorization profile\n   for the EMILIA Protocol (EP) authorization receipt (draft-schrock-ep-\n   authorization-receipts).  Where the base receipt binds a single\n   accountable human to one exact high-risk action, EP-QUORUM binds a\n   set of distinct accountable humans -- the \"two-person rule,\"\n   generalized to M-of-N and to ordered approval trails -- to one exact\n   action, such that no action is authorized until the full quorum\n   holds.  The profile is purely additive: each quorum member is an\n   unmodified EP signoff over the same action hash, and a single-\n   approver policy is the degenerate one-member case.  EP-QUORUM\n   specifies a fail-closed quorum predicate (all member signatures\n   valid, every member bound to the exact action, approvers pairwise\n   distinct, every approver admitted by role, the threshold met, the\n   declared order respected, and all signatures within a bounded time\n   window), an incremental server-side admission rule that rejects a\n   non-conforming signer before it enters the trail, and a set of\n   adversarial conformance vectors.  The predicate is offline-verifiable\n   under the base draft's verification model and is maintained as cross-\n   language conformance vectors that three independent implementations\n   (JavaScript, Python, Go) are required to agree on.</p>"
+  content: |-
+    <p>This document defines EP-QUORUM, a multi-party authorization profile
+       for the EMILIA Protocol (EP) authorization receipt (draft-schrock-ep-
+       authorization-receipts).  Where the base receipt binds a single
+       accountable human to one exact high-risk action, EP-QUORUM binds a
+       set of distinct accountable humans -- the "two-person rule,"
+       generalized to M-of-N and to ordered approval trails -- to one exact
+       action, such that no action is authorized until the full quorum
+       holds.  The profile is purely additive: each quorum member is an
+       unmodified EP signoff over the same action hash, and a single-
+       approver policy is the degenerate one-member case.  EP-QUORUM
+       specifies a fail-closed quorum predicate (all member signatures
+       valid, every member bound to the exact action, approvers pairwise
+       distinct, every approver admitted by role, the threshold met, the
+       declared order respected, and all signatures within a bounded time
+       window), an incremental server-side admission rule that rejects a
+       non-conforming signer before it enters the trail, and a set of
+       adversarial conformance vectors.  The predicate is offline-verifiable
+       under the base draft's verification model and is maintained as cross-
+       language conformance vectors that three independent implementations
+       (JavaScript, Python, Go) are required to agree on.</p>
 relation:
 - type: updatedBy
   bibitem:

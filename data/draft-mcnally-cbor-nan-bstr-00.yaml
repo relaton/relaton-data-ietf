@@ -1,3 +1,4 @@
+---
 id: draftmcnallycbornanbstr00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>IEEE-754 NaN formations are not numbers and have no equivalence\n   class.  They are not comparable to anything, including reflexively,\n   and therefore each attribute - sign bit, signaling/quiet bit, payload\n   bits, and representation width (binary16, binary32, binary64) - can\n   carry meaning for an implementation.  CBOR permits encoding NaNs as\n   floating-point values, but generic processing, preferred\n   serialization, and deterministic profiles may canonicalize or\n   otherwise alter NaN encodings, losing information.  This document\n   defines a CBOR tag, colloquially \"nan-bstr\", whose content is a byte\n   string carrying the exact IEEE-754 NaN bit pattern so that all\n   attributes are preserved across encode/decode, enabling use cases\n   like NaN boxing, platform-specific error signaling, diagnostics, and\n   forensics.</p>"
+  content: |-
+    <p>IEEE-754 NaN formations are not numbers and have no equivalence
+       class.  They are not comparable to anything, including reflexively,
+       and therefore each attribute - sign bit, signaling/quiet bit, payload
+       bits, and representation width (binary16, binary32, binary64) - can
+       carry meaning for an implementation.  CBOR permits encoding NaNs as
+       floating-point values, but generic processing, preferred
+       serialization, and deterministic profiles may canonicalize or
+       otherwise alter NaN encodings, losing information.  This document
+       defines a CBOR tag, colloquially "nan-bstr", whose content is a byte
+       string carrying the exact IEEE-754 NaN bit pattern so that all
+       attributes are preserved across encode/decode, enabling use cases
+       like NaN boxing, platform-specific error signaling, diagnostics, and
+       forensics.</p>
 relation:
 - type: updatedBy
   bibitem:

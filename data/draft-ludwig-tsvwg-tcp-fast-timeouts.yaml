@@ -1,3 +1,4 @@
+---
 id: draftludwigtsvwgtcpfasttimeouts
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,16 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A 'fast timeout' occurs if the retransmission timer expires, and\nafterwards the TCP sender receives the duplicate ACK that would have\ntriggered a fast retransmit of the oldest outstanding segment. In\nthis case, staying in slow start is an unnecessarily drastic response\nto the congestion indication. Instead, we believe it is safe to back\nout of the slow start phase but instead go into the fast recovery\nphase. One benefit of this approach is that the potentially following\nduplicate ACKs can be exploited for advanced loss recovery\nalgorithms.</p>"
+  content: |-
+    <p>A 'fast timeout' occurs if the retransmission timer expires, and
+    afterwards the TCP sender receives the duplicate ACK that would have
+    triggered a fast retransmit of the oldest outstanding segment. In
+    this case, staying in slow start is an unnecessarily drastic response
+    to the congestion indication. Instead, we believe it is safe to back
+    out of the slow start phase but instead go into the fast recovery
+    phase. One benefit of this approach is that the potentially following
+    duplicate ACKs can be exploited for advanced loss recovery
+    algorithms.</p>
 relation:
 - type: includes
   bibitem:

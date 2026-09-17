@@ -1,3 +1,4 @@
+---
 id: draftmcguinnessoauthidcontinuationassertion
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,22 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Identity Continuation Assertion, a short-\n   lived, sender-constrained JSON Web Token (JWT) used as an OAuth 2.0\n   Token Exchange subject token.  It enables a workload acting on a\n   user's behalf to obtain an Identity Assertion JWT Authorization Grant\n   (ID-JAG) for another service when it lacks a suitable credential,\n   including when the user is no longer present.\n\n   A trusted issuer attests that a resource authorization server\n   accepted an earlier ID-JAG and that the resulting authorization\n   remains active and eligible for continuation.  The workload exchanges\n   this assertion at the identity provider, which evaluates the\n   requested access under the chain authorization and current policy\n   before issuing an onward ID-JAG.  The profile supports multi-hop\n   access across resource authorization servers that trust a common\n   identity provider.</p>"
+  content: |-
+    <p>This document defines the Identity Continuation Assertion, a short-
+       lived, sender-constrained JSON Web Token (JWT) used as an OAuth 2.0
+       Token Exchange subject token.  It enables a workload acting on a
+       user's behalf to obtain an Identity Assertion JWT Authorization Grant
+       (ID-JAG) for another service when it lacks a suitable credential,
+       including when the user is no longer present.
+
+       A trusted issuer attests that a resource authorization server
+       accepted an earlier ID-JAG and that the resulting authorization
+       remains active and eligible for continuation.  The workload exchanges
+       this assertion at the identity provider, which evaluates the
+       requested access under the chain authorization and current policy
+       before issuing an onward ID-JAG.  The profile supports multi-hop
+       access across resource authorization servers that trust a common
+       identity provider.</p>
 relation:
 - type: includes
   bibitem:

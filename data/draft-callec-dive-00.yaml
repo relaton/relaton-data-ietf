@@ -1,3 +1,4 @@
+---
 id: draftcallecdive00
 schema_version: v1.5.6
 type: standard
@@ -56,7 +57,25 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Domain-based Integrity Verification Enforcement (DIVE) version 0.1 is\n   an application-layer protocol that provides cryptographic integrity\n   and authenticity verification of web resources by leveraging the\n   Domain Name System Security Extensions (DNSSEC) as an independent\n   verification channel.\n\n   DIVE operates as an additional security layer above HTTP and HTTPS.\n   Public keys and policy configuration are published as DNS TXT records\n   protected by DNSSEC, while HTTP response headers carry per-resource\n   cryptographic signatures.  A client implementing DIVE verifies each\n   covered resource against the corresponding DNS-published public key\n   before accepting it.  An attacker must therefore compromise both the\n   DNS infrastructure and the origin server simultaneously in order to\n   deliver a tampered resource to a DIVE-compliant client.\n\n   This document defines the DNS record format, the HTTP header format,\n   the client verification algorithm, the reporting mechanism, and the\n   operational recommendations for the DIVE 0.1 protocol.</p>"
+  content: |-
+    <p>Domain-based Integrity Verification Enforcement (DIVE) version 0.1 is
+       an application-layer protocol that provides cryptographic integrity
+       and authenticity verification of web resources by leveraging the
+       Domain Name System Security Extensions (DNSSEC) as an independent
+       verification channel.
+
+       DIVE operates as an additional security layer above HTTP and HTTPS.
+       Public keys and policy configuration are published as DNS TXT records
+       protected by DNSSEC, while HTTP response headers carry per-resource
+       cryptographic signatures.  A client implementing DIVE verifies each
+       covered resource against the corresponding DNS-published public key
+       before accepting it.  An attacker must therefore compromise both the
+       DNS infrastructure and the origin server simultaneously in order to
+       deliver a tampered resource to a DIVE-compliant client.
+
+       This document defines the DNS record format, the HTTP header format,
+       the client verification algorithm, the reporting mechanism, and the
+       operational recommendations for the DIVE 0.1 protocol.</p>
 relation:
 - type: updatedBy
   bibitem:

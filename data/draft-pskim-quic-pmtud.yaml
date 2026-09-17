@@ -1,3 +1,4 @@
+---
 id: draftpskimquicpmtud
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,21 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This draft describes an alternative Path MTU Discovery (PMTUD) for\n   QUIC. RFC 8899 searches for PMTU by sending a probe at the QUIC\n   layer, which is an active probing approach. In this draft, a passive\n   probing approach is adopted to discover the PMTU. The process of\n   discovering the PMTU is not performed separately, but is performed\n   simultaneously in the actual application data communication. That is,\n   the actual application data is allowed to be carried in the process\n   of discovering the PMTU. A probe packet is defined newly using 1-RTT\n   packet which includes actual application data as well as a short\n   packet header and a PING_EXT frame. The PING_EXT frame is also\n   defined newly. Until the best PMTU is discovered, the size of the\n   probe packet is changed according to the size of the PMTU candidate.\n   A simple discovery algorithm using only the PMTU candidate sequence\n   with linear upward is described in this draft.</p>"
+  content: |-
+    <p>This draft describes an alternative Path MTU Discovery (PMTUD) for
+       QUIC. RFC 8899 searches for PMTU by sending a probe at the QUIC
+       layer, which is an active probing approach. In this draft, a passive
+       probing approach is adopted to discover the PMTU. The process of
+       discovering the PMTU is not performed separately, but is performed
+       simultaneously in the actual application data communication. That is,
+       the actual application data is allowed to be carried in the process
+       of discovering the PMTU. A probe packet is defined newly using 1-RTT
+       packet which includes actual application data as well as a short
+       packet header and a PING_EXT frame. The PING_EXT frame is also
+       defined newly. Until the best PMTU is discovered, the size of the
+       probe packet is changed according to the size of the PMTU candidate.
+       A simple discovery algorithm using only the PMTU candidate sequence
+       with linear upward is described in this draft.</p>
 relation:
 - type: includes
   bibitem:

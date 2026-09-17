@@ -1,3 +1,4 @@
+---
 id: draftirtfcfrgfiatshamir01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes how to construct a non-interactive proof via\n   the Fiat–Shamir transformation, using a generic procedure that\n   compiles an interactive proof into a non-interactive one by relying\n   on a stateful hash object that provides a duplex sponge interface.\n\n   The duplex sponge interface requires two methods: absorb and squeeze,\n   which respectively read and write elements of a specified base type.\n   The absorb operation incrementally updates the sponge's internal hash\n   state, while the squeeze operation produces variable-length,\n   unpredictable outputs.  This interface can be instantiated with\n   various hash functions based on permutation or compression functions.\n\n   This specification also defines codecs to securely map elements from\n   the prover into the duplex sponge domain, and from the duplex sponge\n   domain into verifier messages.</p>"
+  content: |-
+    <p>This document describes how to construct a non-interactive proof via
+       the Fiat–Shamir transformation, using a generic procedure that
+       compiles an interactive proof into a non-interactive one by relying
+       on a stateful hash object that provides a duplex sponge interface.
+
+       The duplex sponge interface requires two methods: absorb and squeeze,
+       which respectively read and write elements of a specified base type.
+       The absorb operation incrementally updates the sponge's internal hash
+       state, while the squeeze operation produces variable-length,
+       unpredictable outputs.  This interface can be instantiated with
+       various hash functions based on permutation or compression functions.
+
+       This specification also defines codecs to securely map elements from
+       the prover into the duplex sponge domain, and from the duplex sponge
+       domain into verifier messages.</p>
 relation:
 - type: updates
   bibitem:

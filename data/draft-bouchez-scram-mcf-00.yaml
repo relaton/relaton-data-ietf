@@ -1,3 +1,4 @@
+---
 id: draftbouchezscrammcf00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies SCRAM-MCF, an extension to the Salted\n   Challenge Response Authentication Mechanism (SCRAM) family of SASL\n   mechanisms ([RFC5802]) and HTTP Digest extensions ([RFC7616],\n   [RFC7677]).\n\n   The extension replaces the PBKDF2-specific iteration count attributes\n   i= and s= in the server-first-message with a generic Modular Crypt\n   Format (MCF) descriptor mcf=. This allows servers to use modern\n   memory-hard key derivation functions such as Argon2, SCrypt, or\n   bcrypt while preserving the full security properties and message flow\n   of SCRAM.\n\n   The change is fully backward compatible: servers can continue sending\n   i= and s= for legacy clients and only send mcf= (or both) when the\n   client advertises support.</p>"
+  content: |-
+    <p>This document specifies SCRAM-MCF, an extension to the Salted
+       Challenge Response Authentication Mechanism (SCRAM) family of SASL
+       mechanisms ([RFC5802]) and HTTP Digest extensions ([RFC7616],
+       [RFC7677]).
+
+       The extension replaces the PBKDF2-specific iteration count attributes
+       i= and s= in the server-first-message with a generic Modular Crypt
+       Format (MCF) descriptor mcf=. This allows servers to use modern
+       memory-hard key derivation functions such as Argon2, SCrypt, or
+       bcrypt while preserving the full security properties and message flow
+       of SCRAM.
+
+       The change is fully backward compatible: servers can continue sending
+       i= and s= for legacy clients and only send mcf= (or both) when the
+       client advertises support.</p>
 relation:
 - type: updatedBy
   bibitem:

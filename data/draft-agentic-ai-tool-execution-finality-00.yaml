@@ -1,10 +1,13 @@
+---
 id: draftagenticaitoolexecutionfinality00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Execution Finality for Agentic AI: Stopping Unauthorized Tool Calls, Memory Writes, and Real-World Consequences Before They Happen (DAS -- Decoupled Authorisation System)'
+  content: 'Execution Finality for Agentic AI: Stopping Unauthorized Tool Calls, Memory
+    Writes, and Real-World Consequences Before They Happen (DAS -- Decoupled Authorisation
+    System)'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-agentic-ai-tool-execution-finality-00
@@ -53,7 +56,40 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agentic AI systems now call tools, write memory, move money, change\n   infrastructure, and trigger physical actions.  Most safety layers\n   still decide permission upstream and then trust the downstream path.\n   Once that path is compromised, or once the approved request is\n   widened, replayed, or substituted, the act becomes real before any\n   audit can stop it.\n\n   This document specifies a protected execution-finality architecture\n   of the Decoupled Authorisation System (DAS).  It is built on four\n   mechanisms: (1) two-instance binding that separates collection-time\n   evidence from execution-time validation, (2) mutually load-bearing,\n   cross-committed protected evidence so that no single artifact\n   authorizes effectuation, (3) scoped non-bearer finality authority\n   whose possession alone is never enough, and (4) independent Finality\n   Sink reconstruction that re-derives the actual pending operation at\n   the effectuation boundary and permits the act only when every\n   required condition still matches.\n\n   A Candidate Act remains in a Non-Effective State until the Finality\n   Sink has reconstructed the operation, verified the protected evidence\n   against sink-local monotonic state, and advanced that state.  Failure\n   at any step produces fail-closed denial before effectuation rather\n   than post-event remediation.  The architecture is applicable to\n   agentic tool use, MCP and connector frameworks, RAG and vector-memory\n   systems, cloud control planes, financial settlement, telecom routing,\n   and cyber-physical control.\n\n   The document elaborates the problem space, compares the approach with\n   representative existing techniques, presents the detailed solution\n   and its advantages, supplies JSON Schema definitions for core\n   protected objects, and includes an industry-relevance section.\n   Related Indian provisional applications and PCT filings appear in the\n   final appendix.</p>"
+  content: |-
+    <p>Agentic AI systems now call tools, write memory, move money, change
+       infrastructure, and trigger physical actions.  Most safety layers
+       still decide permission upstream and then trust the downstream path.
+       Once that path is compromised, or once the approved request is
+       widened, replayed, or substituted, the act becomes real before any
+       audit can stop it.
+
+       This document specifies a protected execution-finality architecture
+       of the Decoupled Authorisation System (DAS).  It is built on four
+       mechanisms: (1) two-instance binding that separates collection-time
+       evidence from execution-time validation, (2) mutually load-bearing,
+       cross-committed protected evidence so that no single artifact
+       authorizes effectuation, (3) scoped non-bearer finality authority
+       whose possession alone is never enough, and (4) independent Finality
+       Sink reconstruction that re-derives the actual pending operation at
+       the effectuation boundary and permits the act only when every
+       required condition still matches.
+
+       A Candidate Act remains in a Non-Effective State until the Finality
+       Sink has reconstructed the operation, verified the protected evidence
+       against sink-local monotonic state, and advanced that state.  Failure
+       at any step produces fail-closed denial before effectuation rather
+       than post-event remediation.  The architecture is applicable to
+       agentic tool use, MCP and connector frameworks, RAG and vector-memory
+       systems, cloud control planes, financial settlement, telecom routing,
+       and cyber-physical control.
+
+       The document elaborates the problem space, compares the approach with
+       representative existing techniques, presents the detailed solution
+       and its advantages, supplies JSON Schema definitions for core
+       protected objects, and includes an industry-relevance section.
+       Related Indian provisional applications and PCT filings appear in the
+       final appendix.</p>
 series:
 - type: main
   title:

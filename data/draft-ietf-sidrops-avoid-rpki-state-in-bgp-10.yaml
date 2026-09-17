@@ -1,3 +1,4 @@
+---
 id: draftietfsidropsavoidrpkistateinbgp10
 schema_version: v1.5.6
 type: standard
@@ -103,7 +104,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides guidance to avoid carrying Resource Public Key\n   Infrastructure (RPKI) derived validation states in Border Gateway\n   Protocol (BGP) Path Attributes whose change triggers a BGP UPDATE\n   being sent across external BGP sessions.  Annotating routes with BGP\n   Path Attributes carried across external BGP sessions signaling\n   validation states may cause needless flooding of BGP UPDATE messages\n   through the global Internet routing system, for example when Route\n   Origin Authorizations (ROAs) are issued, or are revoked, or when\n   RPKI-To-Router sessions are terminated.\n\n   Operators should ensure RPKI-derived validation states are not\n   signaled in BGP Path Attributes whose change triggers a BGP UPDATE\n   being sent across external BGP sessions.  Specifically, operators\n   should not associate Prefix Origin Validation state with BGP routes\n   using any form of BGP Communities carried across EBGP session.\n\n   This document updates RFC 8097.</p>"
+  content: |-
+    <p>This document provides guidance to avoid carrying Resource Public Key
+       Infrastructure (RPKI) derived validation states in Border Gateway
+       Protocol (BGP) Path Attributes whose change triggers a BGP UPDATE
+       being sent across external BGP sessions.  Annotating routes with BGP
+       Path Attributes carried across external BGP sessions signaling
+       validation states may cause needless flooding of BGP UPDATE messages
+       through the global Internet routing system, for example when Route
+       Origin Authorizations (ROAs) are issued, or are revoked, or when
+       RPKI-To-Router sessions are terminated.
+
+       Operators should ensure RPKI-derived validation states are not
+       signaled in BGP Path Attributes whose change triggers a BGP UPDATE
+       being sent across external BGP sessions.  Specifically, operators
+       should not associate Prefix Origin Validation state with BGP routes
+       using any form of BGP Communities carried across EBGP session.
+
+       This document updates RFC 8097.</p>
 relation:
 - type: updates
   bibitem:

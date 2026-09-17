@@ -1,3 +1,4 @@
+---
 id: draftsonginaframework
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,45 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Collective communication is a critical performance bottleneck for\n   distributed deep learning and large model training and inference in\n   data centers for AI computing.  In-Network Aggregation (INA) has been\n   identified as an effective accelerating technique to improve its\n   performance.  This draft describes a flexible and efficient INA\n   framework for packet routing and forwarding in which a tree is\n   encoded by a bitmap and the same bitmap is reused for data movement\n   in both directions, with the multicast direction realized by a\n   stateless bitmap-driven forwarding mechanism that adopts an encoding\n   and replication behavior similar to BIER.  The bitmap encoding is\n   compact, hardware friendly, exact and self-describing, and, being\n   carried per packet, supports highly dynamic endpoint sets without any\n   signaling to the network.\n\n   The framework is applied to three use cases.  The first is AllReduce,\n   used in model training, which performs an in-network aggregation\n   toward the root followed by a multicast of the result back to the\n   workers.  The second is the dispatch and combine operations of\n   Mixture-of-Experts (MoE) expert parallelism, which performs a dynamic\n   multicast of tokens to the selected experts followed by an in-network\n   aggregation of the expert outputs.  In both use cases a single\n   bitmap-encoded tree drives both directions.  The third use case is\n   for reliable multicast, which aggregates the acknowledgments of all\n   multicast receivers in the network to avoid ACK implosion; its ACK-\n   aggregation tree can be either pre-configured, as in the AllReduce\n   use case, or self-installed by the data multicast itself, as in the\n   MoE use case.\n\n   The draft further analyzes why the base BIER architecture alone\n   cannot realize the framework and identifies the per-packet\n   information an INA encapsulation must carry beyond the endpoint-set\n   encoding: a direction indicator, a job identifier, a sequence number,\n   and an encoding-type indicator.  It also examines the efficiency of\n   the endpoint-set encoding at scale, covering hierarchical bitmaps and\n   multiple parallel trees for large dense endpoint sets, node-list\n   encoding for very large domains with few active endpoints, and the\n   trade-offs between header overhead and network processing complexity\n   among these encodings.</p>"
+  content: |-
+    <p>Collective communication is a critical performance bottleneck for
+       distributed deep learning and large model training and inference in
+       data centers for AI computing.  In-Network Aggregation (INA) has been
+       identified as an effective accelerating technique to improve its
+       performance.  This draft describes a flexible and efficient INA
+       framework for packet routing and forwarding in which a tree is
+       encoded by a bitmap and the same bitmap is reused for data movement
+       in both directions, with the multicast direction realized by a
+       stateless bitmap-driven forwarding mechanism that adopts an encoding
+       and replication behavior similar to BIER.  The bitmap encoding is
+       compact, hardware friendly, exact and self-describing, and, being
+       carried per packet, supports highly dynamic endpoint sets without any
+       signaling to the network.
+
+       The framework is applied to three use cases.  The first is AllReduce,
+       used in model training, which performs an in-network aggregation
+       toward the root followed by a multicast of the result back to the
+       workers.  The second is the dispatch and combine operations of
+       Mixture-of-Experts (MoE) expert parallelism, which performs a dynamic
+       multicast of tokens to the selected experts followed by an in-network
+       aggregation of the expert outputs.  In both use cases a single
+       bitmap-encoded tree drives both directions.  The third use case is
+       for reliable multicast, which aggregates the acknowledgments of all
+       multicast receivers in the network to avoid ACK implosion; its ACK-
+       aggregation tree can be either pre-configured, as in the AllReduce
+       use case, or self-installed by the data multicast itself, as in the
+       MoE use case.
+
+       The draft further analyzes why the base BIER architecture alone
+       cannot realize the framework and identifies the per-packet
+       information an INA encapsulation must carry beyond the endpoint-set
+       encoding: a direction indicator, a job identifier, a sequence number,
+       and an encoding-type indicator.  It also examines the efficiency of
+       the endpoint-set encoding at scale, covering hierarchical bitmaps and
+       multiple parallel trees for large dense endpoint sets, node-list
+       encoding for very large domains with few active endpoints, and the
+       trade-offs between header overhead and network processing complexity
+       among these encodings.</p>
 relation:
 - type: includes
   bibitem:

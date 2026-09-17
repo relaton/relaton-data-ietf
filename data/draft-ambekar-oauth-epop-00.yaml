@@ -1,10 +1,12 @@
+---
 id: draftambekaroauthepop00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: JSON Web Token (JWT) Profile for OAuth 2.0 Enveloped Proof of Possession (EPOP)
+  content: JSON Web Token (JWT) Profile for OAuth 2.0 Enveloped Proof of Possession
+    (EPOP)
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ambekar-oauth-epop-00
@@ -53,7 +55,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This specification defines a profile for OAuth 2.0 sender-constrained\n   credentials in which authorization codes, access tokens, and refresh\n   tokens are cryptographically bound to the client's private key as a\n   single inseparable envelope.  The profile extends sender-constraining\n   beyond HTTP to non-HTTP transports including MQTT, Kafka, the Model\n   Context Protocol (MCP), gRPC, and SASL-based protocols such as those\n   defined in [RFC7628].  It introduces atomic proof-of-possession key\n   rotation, enabling clients to rotate key pairs without disrupting\n   active sessions, and an offline-derived client nonce (cnonce) that\n   eliminates the server-issued nonce round-trip required by existing\n   mechanisms — enabling stateless proof validation critical for non-\n   HTTP and high-throughput deployments.  Authorization servers,\n   resource servers, and clients from different vendors can implement\n   this profile interoperably.</p>"
+  content: |-
+    <p>This specification defines a profile for OAuth 2.0 sender-constrained
+       credentials in which authorization codes, access tokens, and refresh
+       tokens are cryptographically bound to the client's private key as a
+       single inseparable envelope.  The profile extends sender-constraining
+       beyond HTTP to non-HTTP transports including MQTT, Kafka, the Model
+       Context Protocol (MCP), gRPC, and SASL-based protocols such as those
+       defined in [RFC7628].  It introduces atomic proof-of-possession key
+       rotation, enabling clients to rotate key pairs without disrupting
+       active sessions, and an offline-derived client nonce (cnonce) that
+       eliminates the server-issued nonce round-trip required by existing
+       mechanisms — enabling stateless proof validation critical for non-
+       HTTP and high-throughput deployments.  Authorization servers,
+       resource servers, and clients from different vendors can implement
+       this profile interoperably.</p>
 relation:
 - type: updatedBy
   bibitem:

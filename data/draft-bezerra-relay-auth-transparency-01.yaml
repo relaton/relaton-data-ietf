@@ -1,3 +1,4 @@
+---
 id: draftbezerrarelayauthtransparency01
 schema_version: v1.5.6
 type: standard
@@ -59,7 +60,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Protocol-aware middleware (relays, bridges, gateways) re-serializes\n   messages at their protocol frame boundary, silently discarding any\n   bytes appended outside that boundary.  Authentication material placed\n   after the frame boundary by a sender is therefore stripped at every\n   relay hop before reaching the receiver, with no error indication.\n   This document identifies this behavior as a protocol design\n   vulnerability class -- \"relay-transparent authentication stripping\"\n   -- demonstrates it with running code in three independent protocol\n   stacks (MAVLink v2, ROS2/DDS CDR, and CAN/ISO-TP with a SecOC-unaware\n   gateway), and specifies the architectural principle that\n   authentication material must be carried as a first-class,\n   independently addressable protocol unit to survive relay transit.\n   Post-quantum signature sizes push authentication out of fixed fields\n   and so create the precondition systematically; this revision reports\n   three measured cases where they do not, because a transport that\n   refuses to carry the oversized unit produces a loss of availability\n   instead of a silent authentication bypass.</p>"
+  content: |-
+    <p>Protocol-aware middleware (relays, bridges, gateways) re-serializes
+       messages at their protocol frame boundary, silently discarding any
+       bytes appended outside that boundary.  Authentication material placed
+       after the frame boundary by a sender is therefore stripped at every
+       relay hop before reaching the receiver, with no error indication.
+       This document identifies this behavior as a protocol design
+       vulnerability class -- "relay-transparent authentication stripping"
+       -- demonstrates it with running code in three independent protocol
+       stacks (MAVLink v2, ROS2/DDS CDR, and CAN/ISO-TP with a SecOC-unaware
+       gateway), and specifies the architectural principle that
+       authentication material must be carried as a first-class,
+       independently addressable protocol unit to survive relay transit.
+       Post-quantum signature sizes push authentication out of fixed fields
+       and so create the precondition systematically; this revision reports
+       three measured cases where they do not, because a transport that
+       refuses to carry the oversized unit produces a loss of availability
+       instead of a silent authentication bypass.</p>
 relation:
 - type: updates
   bibitem:

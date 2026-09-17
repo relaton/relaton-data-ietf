@@ -1,8 +1,10 @@
+---
 id: RFC9370
 schema_version: v1.5.6
 type: standard
 title:
-- content: Multiple Key Exchanges in the Internet Key Exchange Protocol Version 2 (IKEv2)
+- content: Multiple Key Exchanges in the Internet Key Exchange Protocol Version 2
+    (IKEv2)
   type: main
 source:
 - type: src
@@ -194,7 +196,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>This document describes how to extend the Internet Key Exchange Protocol Version 2 (IKEv2) to allow multiple key exchanges to take place while computing a shared secret during a Security Association (SA) setup.</p><p>This document utilizes the IKE_INTERMEDIATE exchange, where multiple key exchanges are performed when an IKE SA is being established. It also introduces a new IKEv2 exchange, IKE_FOLLOWUP_KE, which is used for the same purpose when the IKE SA is being rekeyed or is creating additional Child SAs.</p><p>This document updates RFC 7296 by renaming a Transform Type 4 from "Diffie-Hellman Group (D-H)" to "Key Exchange Method (KE)" and renaming a field in the Key Exchange Payload from "Diffie-Hellman Group Num" to "Key Exchange Method". It also renames an IANA registry for this Transform Type from "Transform Type 4 - Diffie- Hellman Group Transform IDs" to "Transform Type 4 - Key Exchange Method Transform IDs". These changes generalize key exchange algorithms that can be used in IKEv2.</p>
+  content: <p>This document describes how to extend the Internet Key Exchange Protocol
+    Version 2 (IKEv2) to allow multiple key exchanges to take place while computing
+    a shared secret during a Security Association (SA) setup.</p><p>This document
+    utilizes the IKE_INTERMEDIATE exchange, where multiple key exchanges are performed
+    when an IKE SA is being established. It also introduces a new IKEv2 exchange,
+    IKE_FOLLOWUP_KE, which is used for the same purpose when the IKE SA is being rekeyed
+    or is creating additional Child SAs.</p><p>This document updates RFC 7296 by renaming
+    a Transform Type 4 from "Diffie-Hellman Group (D-H)" to "Key Exchange Method (KE)"
+    and renaming a field in the Key Exchange Payload from "Diffie-Hellman Group Num"
+    to "Key Exchange Method". It also renames an IANA registry for this Transform
+    Type from "Transform Type 4 - Diffie- Hellman Group Transform IDs" to "Transform
+    Type 4 - Key Exchange Method Transform IDs". These changes generalize key exchange
+    algorithms that can be used in IKEv2.</p>
 status:
   stage:
     content: PROPOSED STANDARD

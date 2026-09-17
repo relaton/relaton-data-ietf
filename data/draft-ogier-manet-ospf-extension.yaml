@@ -1,3 +1,4 @@
+---
 id: draftogiermanetospfextension
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,26 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies an extension of OSPF for IPv6 to support\nmobile ad hoc networks (MANETs).  The extension, called OSPF-MDR, is\ndesigned as a new OSPF interface type for MANETs.  OSPF-MDR is based\non the selection of a subset of MANET routers, consisting of MANET\nDesignated Routers (MDRs) and Backup MDRs. The MDRs form a connected\ndominating set (CDS), and the MDRs and Backup MDRs together form a\nbiconnected CDS for robustness.  This CDS is exploited in two ways.\nFirst, to reduce flooding overhead, an optimized flooding procedure\nis used in which only (Backup) MDRs flood new LSAs back out the\nreceiving interface; reliable flooding is ensured by retransmitting\nLSAs along adjacencies.  Second, adjacencies are formed only between\n(Backup) MDRs and a subset of their neighbors, allowing for much\nbetter scaling in dense networks.  The CDS is constructed using 2-hop\nneighbor information provided in a Hello protocol extension.  The\nHello protocol is further optimized by allowing differential Hellos\nthat report only changes in neighbor states.  Options are specified\nfor originating router-LSAs that provide full or partial topology\ninformation, allowing overhead to be reduced by advertising less\ntopology information.</p>"
+  content: |-
+    <p>This document specifies an extension of OSPF for IPv6 to support
+    mobile ad hoc networks (MANETs).  The extension, called OSPF-MDR, is
+    designed as a new OSPF interface type for MANETs.  OSPF-MDR is based
+    on the selection of a subset of MANET routers, consisting of MANET
+    Designated Routers (MDRs) and Backup MDRs. The MDRs form a connected
+    dominating set (CDS), and the MDRs and Backup MDRs together form a
+    biconnected CDS for robustness.  This CDS is exploited in two ways.
+    First, to reduce flooding overhead, an optimized flooding procedure
+    is used in which only (Backup) MDRs flood new LSAs back out the
+    receiving interface; reliable flooding is ensured by retransmitting
+    LSAs along adjacencies.  Second, adjacencies are formed only between
+    (Backup) MDRs and a subset of their neighbors, allowing for much
+    better scaling in dense networks.  The CDS is constructed using 2-hop
+    neighbor information provided in a Hello protocol extension.  The
+    Hello protocol is further optimized by allowing differential Hellos
+    that report only changes in neighbor states.  Options are specified
+    for originating router-LSAs that provide full or partial topology
+    information, allowing overhead to be reduced by advertising less
+    topology information.</p>
 relation:
 - type: includes
   bibitem:

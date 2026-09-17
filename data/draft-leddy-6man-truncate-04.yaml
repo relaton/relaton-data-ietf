@@ -1,3 +1,4 @@
+---
 id: draftleddy6mantruncate04
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines IPv6 packet truncation procedures.  When an\n   IPv6 source node originates a packet, it can mark the packet as being\n   eligible for truncation and forward it towards its destination.  If\n   an intermediate node cannot forward the packet because of an MTU\n   issue, it truncates the packet, marks it as being truncated, and,\n   again, forwards it towards its destination.  When the destination\n   node receives the packet, it detects that it has been truncated and\n   sends an ICMP message to the source node.  The ICMP message contains\n   MTU information that the source node uses to update its Path MTU\n   estimate.\n\n   The above-mentioned procedures enhance Path MTU Discovery (PMTUD) by\n   eliminating its reliance on the network's ability to deliver ICMP\n   messages from an intermediate node to the source node.  However, the\n   above-mentioned procedures require the network to deliver ICMP\n   messages from the destination node to the source node.</p>"
+  content: |-
+    <p>This document defines IPv6 packet truncation procedures.  When an
+       IPv6 source node originates a packet, it can mark the packet as being
+       eligible for truncation and forward it towards its destination.  If
+       an intermediate node cannot forward the packet because of an MTU
+       issue, it truncates the packet, marks it as being truncated, and,
+       again, forwards it towards its destination.  When the destination
+       node receives the packet, it detects that it has been truncated and
+       sends an ICMP message to the source node.  The ICMP message contains
+       MTU information that the source node uses to update its Path MTU
+       estimate.
+
+       The above-mentioned procedures enhance Path MTU Discovery (PMTUD) by
+       eliminating its reliance on the network's ability to deliver ICMP
+       messages from an intermediate node to the source node.  However, the
+       above-mentioned procedures require the network to deliver ICMP
+       messages from the destination node to the source node.</p>
 relation:
 - type: updates
   bibitem:

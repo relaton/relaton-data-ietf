@@ -1,10 +1,12 @@
+---
 id: draftietfsidropsavoidrpkistateinbgp02
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Guidance to Avoid Carrying RPKI Validation States in Transitive BGP Path Attributes
+  content: Guidance to Avoid Carrying RPKI Validation States in Transitive BGP Path
+    Attributes
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-ietf-sidrops-avoid-rpki-state-in-bgp-02
@@ -98,7 +100,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document provides guidance to avoid carrying Resource Public Key\n   Infrastructure (RPKI) derived Validation States in Transitive Border\n   Gateway Protocol (BGP) Path Attributes.  Annotating routes with\n   transitive attributes signaling Validation State may cause needless\n   flooding of BGP UPDATE messages through the global Internet routing\n   system, for example when Route Origin Authorizations (ROAs) are\n   issued, or are revoked, or when RPKI-To-Router sessions are\n   terminated.\n\n   Operators SHOULD ensure Validation States are not signaled in\n   transitive BGP Path Attributes.  Specifically, Operators SHOULD NOT\n   group BGP routes by their Prefix Origin Validation state into BGP\n   Communities.</p>"
+  content: |-
+    <p>This document provides guidance to avoid carrying Resource Public Key
+       Infrastructure (RPKI) derived Validation States in Transitive Border
+       Gateway Protocol (BGP) Path Attributes.  Annotating routes with
+       transitive attributes signaling Validation State may cause needless
+       flooding of BGP UPDATE messages through the global Internet routing
+       system, for example when Route Origin Authorizations (ROAs) are
+       issued, or are revoked, or when RPKI-To-Router sessions are
+       terminated.
+
+       Operators SHOULD ensure Validation States are not signaled in
+       transitive BGP Path Attributes.  Specifically, Operators SHOULD NOT
+       group BGP routes by their Prefix Origin Validation state into BGP
+       Communities.</p>
 relation:
 - type: updates
   bibitem:

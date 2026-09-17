@@ -1,3 +1,4 @@
+---
 id: draftietfdnsopdnszonedigest11
 schema_version: v1.5.6
 type: standard
@@ -156,7 +157,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document describes a protocol and new DNS Resource Record that\n   provides a cryptographic message digest over DNS zone data.  The\n   ZONEMD Resource Record conveys the digest data in the zone itself.\n   When a zone publisher includes a ZONEMD record, recipients can verify\n   the zone contents for accuracy and completeness.  This provides\n   assurance that received zone data matches published data, regardless\n   of how the zone data has been transmitted and received.\n\n   ZONEMD does not replace DNSSEC.  Whereas DNSSEC protects individual\n   RRSets (DNS data with fine granularity), ZONEMD protects a zone's\n   data as a whole, whether consumed by authoritative name servers,\n   recursive name servers, or any other applications.\n\n   As specified herein, ZONEMD is impractical for large, dynamic zones\n   due to the time and resources required for digest calculation.\n   However, The ZONEMD record is extensible so that new digest schemes\n   may be added in the future to support large, dynamic zones.</p>"
+  content: |-
+    <p>This document describes a protocol and new DNS Resource Record that
+       provides a cryptographic message digest over DNS zone data.  The
+       ZONEMD Resource Record conveys the digest data in the zone itself.
+       When a zone publisher includes a ZONEMD record, recipients can verify
+       the zone contents for accuracy and completeness.  This provides
+       assurance that received zone data matches published data, regardless
+       of how the zone data has been transmitted and received.
+
+       ZONEMD does not replace DNSSEC.  Whereas DNSSEC protects individual
+       RRSets (DNS data with fine granularity), ZONEMD protects a zone's
+       data as a whole, whether consumed by authoritative name servers,
+       recursive name servers, or any other applications.
+
+       As specified herein, ZONEMD is impractical for large, dynamic zones
+       due to the time and resources required for digest calculation.
+       However, The ZONEMD record is extensible so that new digest schemes
+       may be added in the future to support large, dynamic zones.</p>
 relation:
 - type: updates
   bibitem:

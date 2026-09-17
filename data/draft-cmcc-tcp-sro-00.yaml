@@ -1,3 +1,4 @@
+---
 id: draftcmcctcpsro00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,16 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines the Session Recovery Option (SRO) for TCP.  SRO\n   improves the reliability of SNAT and LB services and simplifies the\n   implementation of elastically scaling SNAT/LB clusters.  SRO enables\n   a client and a server to exchange their identifiers during connection\n   establishment.  When a session needs to be recovered, an endpoint\n   conveys the identifier of the peer to the network node, which uses it\n   to locate the endpoint holding the session backup and recover the\n   session.  SRO is optional: endpoints that do not support it behave as\n   if the option did not exist.</p>"
+  content: |-
+    <p>This document defines the Session Recovery Option (SRO) for TCP.  SRO
+       improves the reliability of SNAT and LB services and simplifies the
+       implementation of elastically scaling SNAT/LB clusters.  SRO enables
+       a client and a server to exchange their identifiers during connection
+       establishment.  When a session needs to be recovered, an endpoint
+       conveys the identifier of the peer to the network node, which uses it
+       to locate the endpoint holding the session backup and recover the
+       session.  SRO is optional: endpoints that do not support it behave as
+       if the option did not exist.</p>
 relation:
 - type: updatedBy
   bibitem:

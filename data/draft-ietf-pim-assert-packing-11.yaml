@@ -1,3 +1,4 @@
+---
 id: draftietfpimassertpacking11
 schema_version: v1.5.6
 type: standard
@@ -131,7 +132,19 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In PIM-SM shared LAN networks, there is often more than one upstream\n   router.  When PIM Sparse Mode (PIM-SM), including PIM Source\n   Specific-Specific Multicast (PIM-SSM), is used, this can lead to\n   duplicate IP multicast packets being forwarded by these PIM routers.\n   PIM Assert messages are used to elect a single forwarder for each IP\n   multicast traffic flow between these routers.\n\n   This document defines a mechanism to send and receive information for\n   multiple IP multicast flows in a single PackedAssert message.  This\n   optimization reduces the total number of PIM packets on the LAN and\n   can therefore speed up the election of the single forwarder, reducing\n   the number of duplicate IP multicast packets incurred.</p>"
+  content: |-
+    <p>In PIM-SM shared LAN networks, there is often more than one upstream
+       router.  When PIM Sparse Mode (PIM-SM), including PIM Source
+       Specific-Specific Multicast (PIM-SSM), is used, this can lead to
+       duplicate IP multicast packets being forwarded by these PIM routers.
+       PIM Assert messages are used to elect a single forwarder for each IP
+       multicast traffic flow between these routers.
+
+       This document defines a mechanism to send and receive information for
+       multiple IP multicast flows in a single PackedAssert message.  This
+       optimization reduces the total number of PIM packets on the LAN and
+       can therefore speed up the election of the single forwarder, reducing
+       the number of duplicate IP multicast packets incurred.</p>
 relation:
 - type: updates
   bibitem:

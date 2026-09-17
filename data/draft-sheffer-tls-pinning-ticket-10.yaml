@@ -1,3 +1,4 @@
+---
 id: draftsheffertlspinningticket10
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Misissued public-key certificates can prevent TLS clients from\n   appropriately authenticating the TLS server.  Several alternatives\n   have been proposed to detect this situation and prevent a client from\n   establishing a TLS session with a TLS end point authenticated with an\n   illegitimate public-key certificate.  These mechanisms are either not\n   widely deployed or limited to public web browsing.\n\n   This document proposes experimental extensions to TLS with opaque\n   pinning tickets as a way to pin the server's identity.  During an\n   initial TLS session, the server provides an original encrypted\n   pinning ticket.  In subsequent TLS session establishment, upon\n   receipt of the pinning ticket, the server proves its ability to\n   decrypt the pinning ticket and thus the ownership of the pinning\n   protection key.  The client can now safely conclude that the TLS\n   session is established with the same TLS server as the original TLS\n   session.  One of the important properties of this proposal is that no\n   manual management actions are required.</p>"
+  content: |-
+    <p>Misissued public-key certificates can prevent TLS clients from
+       appropriately authenticating the TLS server.  Several alternatives
+       have been proposed to detect this situation and prevent a client from
+       establishing a TLS session with a TLS end point authenticated with an
+       illegitimate public-key certificate.  These mechanisms are either not
+       widely deployed or limited to public web browsing.
+
+       This document proposes experimental extensions to TLS with opaque
+       pinning tickets as a way to pin the server's identity.  During an
+       initial TLS session, the server provides an original encrypted
+       pinning ticket.  In subsequent TLS session establishment, upon
+       receipt of the pinning ticket, the server proves its ability to
+       decrypt the pinning ticket and thus the ownership of the pinning
+       protection key.  The client can now safely conclude that the TLS
+       session is established with the same TLS server as the original TLS
+       session.  One of the important properties of this proposal is that no
+       manual management actions are required.</p>
 relation:
 - type: updates
   bibitem:

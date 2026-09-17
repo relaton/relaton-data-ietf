@@ -1,3 +1,4 @@
+---
 id: draftmwoauthactorchain00
 schema_version: v1.5.6
 type: standard
@@ -125,7 +126,27 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Multi-hop service-to-service and agentic workflows need a\n   standardized way to preserve and validate delegation-path continuity\n   across successive token exchanges.  This document defines six actor-\n   chain profiles for OAuth 2.0 Token Exchange [RFC8693].  [RFC8693]\n   permits nested act claims, but prior actors remain informational only\n   and token exchange does not define how a delegation path is preserved\n   and validated across successive exchanges.\n\n   This document profiles delegation-chain tokens and defines profile-\n   specific processing for multi-hop workflows.  The six profiles are:\n   Declared Full Disclosure; Declared Subset Disclosure; Declared Actor-\n   Only Disclosure; Verified Full Disclosure; Verified Subset\n   Disclosure; and Verified Actor-Only Disclosure.\n\n   These profiles preserve the existing meanings of sub, act, and\n   may_act.  They support same-domain and cross-domain delegation and\n   provide different tradeoffs among visible chain-based authorization,\n   cryptographic accountability, auditability, privacy, and long-running\n   workflow support.  Plain RFC 8693 impersonation-shaped outputs remain\n   valid RFC 8693 behavior but are outside this profile family.</p>"
+  content: |-
+    <p>Multi-hop service-to-service and agentic workflows need a
+       standardized way to preserve and validate delegation-path continuity
+       across successive token exchanges.  This document defines six actor-
+       chain profiles for OAuth 2.0 Token Exchange [RFC8693].  [RFC8693]
+       permits nested act claims, but prior actors remain informational only
+       and token exchange does not define how a delegation path is preserved
+       and validated across successive exchanges.
+
+       This document profiles delegation-chain tokens and defines profile-
+       specific processing for multi-hop workflows.  The six profiles are:
+       Declared Full Disclosure; Declared Subset Disclosure; Declared Actor-
+       Only Disclosure; Verified Full Disclosure; Verified Subset
+       Disclosure; and Verified Actor-Only Disclosure.
+
+       These profiles preserve the existing meanings of sub, act, and
+       may_act.  They support same-domain and cross-domain delegation and
+       provide different tradeoffs among visible chain-based authorization,
+       cryptographic accountability, auditability, privacy, and long-running
+       workflow support.  Plain RFC 8693 impersonation-shaped outputs remain
+       valid RFC 8693 behavior but are outside this profile family.</p>
 relation:
 - type: updatedBy
   bibitem:

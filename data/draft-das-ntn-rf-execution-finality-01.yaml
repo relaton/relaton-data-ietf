@@ -1,10 +1,12 @@
+---
 id: draftdasntnrfexecutionfinality01
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'RF Enable Is Not Transmit Authority: Finality for LEO/NTN and Inter-Satellite Control'
+  content: 'RF Enable Is Not Transmit Authority: Finality for LEO/NTN and Inter-Satellite
+    Control'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-das-ntn-rf-execution-finality-01
@@ -53,7 +55,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A LEO constellation computer can compute a transmit burst, a beam\n   command, an inter-satellite forward, or a user-terminal PA enable\n   faster than any ground reviewer can see it.  Today those acts become\n   RF because the scheduler selected them, the command link\n   authenticated, or the flight process had the radio device open.\n   Authentication of TT&amp;C, 3GPP NTN registration, and operator\n   allowlists decide who may talk to the vehicle.  They do not decide\n   whether this burst, on this beam, to this next hop, over this\n   territory, in this mission epoch, may leave the aperture.\n\n   Radiation is not reversible.  An ISL hop is not a log line.  A\n   phased-array user terminal that is already pointed is one register\n   write away from radiating.  If the enable line trusts the last ground\n   \"go,\" a stale, substituted, or autonomy-generated command becomes\n   sky-facing consequence.\n\n   This document specifies a radio-side execution-finality profile for\n   NTN and mega-constellation control.  A proposed RF, ISL, beam,\n   gateway, or payload act remains a Candidate Act. A Protected\n   Enforcement Domain binds vehicle, beam, frequency class, duration,\n   next hop, overflight or jurisdiction epoch, and intended sink, then\n   issues scoped non-bearer authority.  The Finality Sink sits at the PA\n   enable, ISL switch, beam driver, feeder gateway, or UT transmit path\n   and verifies that authority immediately before energy leaves the\n   system.  RF enable is not transmit authority.</p>"
+  content: |-
+    <p>A LEO constellation computer can compute a transmit burst, a beam
+       command, an inter-satellite forward, or a user-terminal PA enable
+       faster than any ground reviewer can see it.  Today those acts become
+       RF because the scheduler selected them, the command link
+       authenticated, or the flight process had the radio device open.
+       Authentication of TT&amp;C, 3GPP NTN registration, and operator
+       allowlists decide who may talk to the vehicle.  They do not decide
+       whether this burst, on this beam, to this next hop, over this
+       territory, in this mission epoch, may leave the aperture.
+
+       Radiation is not reversible.  An ISL hop is not a log line.  A
+       phased-array user terminal that is already pointed is one register
+       write away from radiating.  If the enable line trusts the last ground
+       "go," a stale, substituted, or autonomy-generated command becomes
+       sky-facing consequence.
+
+       This document specifies a radio-side execution-finality profile for
+       NTN and mega-constellation control.  A proposed RF, ISL, beam,
+       gateway, or payload act remains a Candidate Act. A Protected
+       Enforcement Domain binds vehicle, beam, frequency class, duration,
+       next hop, overflight or jurisdiction epoch, and intended sink, then
+       issues scoped non-bearer authority.  The Finality Sink sits at the PA
+       enable, ISL switch, beam driver, feeder gateway, or UT transmit path
+       and verifies that authority immediately before energy leaves the
+       system.  RF enable is not transmit authority.</p>
 relation:
 - type: updates
   bibitem:

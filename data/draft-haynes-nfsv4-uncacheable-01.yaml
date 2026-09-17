@@ -1,3 +1,4 @@
+---
 id: drafthaynesnfsv4uncacheable01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,17 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The Network File System v4.2 (NFSv4.2) allows a client to cache both\n   the metadata and the data for a file object.  It can also cache the\n   metadata for a directory object.  Caching the dirents (i.e., the\n   metadata) allows the client to avoid querying the server to refresh\n   information.  But this defeats the server checking to see if the user\n   has permission to view the dirent's attributes.  Caching the data can\n   cause performance impacts if the page cache hit rate is low..  This\n   document introduces a new file attribute called uncacheable which\n   indicates that the client MUST NOT cache the metadata or data for\n   that dirent.  This document extends NFSv4.2 (see RFC7863).</p>"
+  content: |-
+    <p>The Network File System v4.2 (NFSv4.2) allows a client to cache both
+       the metadata and the data for a file object.  It can also cache the
+       metadata for a directory object.  Caching the dirents (i.e., the
+       metadata) allows the client to avoid querying the server to refresh
+       information.  But this defeats the server checking to see if the user
+       has permission to view the dirent's attributes.  Caching the data can
+       cause performance impacts if the page cache hit rate is low..  This
+       document introduces a new file attribute called uncacheable which
+       indicates that the client MUST NOT cache the metadata or data for
+       that dirent.  This document extends NFSv4.2 (see RFC7863).</p>
 relation:
 - type: updates
   bibitem:

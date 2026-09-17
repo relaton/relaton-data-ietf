@@ -1,3 +1,4 @@
+---
 id: draftfujiwaradnsopresolverupdate
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,19 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Parent side NS RRSet and glue records are all information to access\n   servers for child zone.  However, they may be overwritten by child\n   zone data (zone apex NS RRSet and other A/AAAA RRSets).  The\n   overwrite makes name resolution unstable and induces vulnerabilities.\n   RFC 2181 section 5.4.1 specifies trustworthiness of DNS data.  And it\n   is deemed that that all cached data (authoritative data, non-\n   authoritative data, referrals and glue records) are merged into one.\n   Resolvers may answer non-authoritative data, referrals and glue\n   records that should not be returned.  This document proposes updating\n   resolver algorithm that separates the cache to \"authoritative data\n   cache\" and \"delegation cache\".  The former is used to answer stub\n   resolvers, and the latter is used to iterate zones.</p>"
+  content: |-
+    <p>Parent side NS RRSet and glue records are all information to access
+       servers for child zone.  However, they may be overwritten by child
+       zone data (zone apex NS RRSet and other A/AAAA RRSets).  The
+       overwrite makes name resolution unstable and induces vulnerabilities.
+       RFC 2181 section 5.4.1 specifies trustworthiness of DNS data.  And it
+       is deemed that that all cached data (authoritative data, non-
+       authoritative data, referrals and glue records) are merged into one.
+       Resolvers may answer non-authoritative data, referrals and glue
+       records that should not be returned.  This document proposes updating
+       resolver algorithm that separates the cache to "authoritative data
+       cache" and "delegation cache".  The former is used to answer stub
+       resolvers, and the latter is used to iterate zones.</p>
 relation:
 - type: includes
   bibitem:

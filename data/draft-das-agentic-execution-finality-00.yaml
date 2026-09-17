@@ -1,3 +1,4 @@
+---
 id: draftdasagenticexecutionfinality00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,35 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Agentic AI systems can translate model outputs directly into tool\n   calls, API requests, browser actions, shell commands, memory writes,\n   messages, delegated acts, and other externally effective operations.\n   Conventional authentication or tool access can establish that an\n   agent may reach a tool without establishing that a particular\n   generated act is authorized to take effect.\n\n   This document defines an Agent Candidate Act and Tool-Dispatch\n   Finality Sink model.  A proposed agent action is held in a Non-\n   Effective State while a Protected Enforcement Domain validates act-\n   specific predicates such as agent identity, instruction provenance,\n   tool and function identity, argument scope, purpose, destination,\n   policy and revocation state, and intended sink.  Protected validation\n   evidence is committed before, or atomically with, release of scoped\n   non-bearer finality authority.  The dispatch sink independently\n   verifies that authority immediately before the tool or external\n   action executes.\n\n   The design is fail-closed and includes replay resistance, single-use\n   authority, sink binding, policy-epoch checking, revocation, and\n   alternate-path closure.  The core principle is: tool selection is not\n   tool-execution authority, and computation is not authority.\n\n   This revision also defines a concrete JSON-based interoperability\n   profile for Agent Candidate Acts, protected validation evidence,\n   scoped finality authority, and Tool-Dispatch Sink verification,\n   enabling protocol and API implementers to evaluate a specific\n   interface rather than only an architectural concept.</p>"
+  content: |-
+    <p>Agentic AI systems can translate model outputs directly into tool
+       calls, API requests, browser actions, shell commands, memory writes,
+       messages, delegated acts, and other externally effective operations.
+       Conventional authentication or tool access can establish that an
+       agent may reach a tool without establishing that a particular
+       generated act is authorized to take effect.
+
+       This document defines an Agent Candidate Act and Tool-Dispatch
+       Finality Sink model.  A proposed agent action is held in a Non-
+       Effective State while a Protected Enforcement Domain validates act-
+       specific predicates such as agent identity, instruction provenance,
+       tool and function identity, argument scope, purpose, destination,
+       policy and revocation state, and intended sink.  Protected validation
+       evidence is committed before, or atomically with, release of scoped
+       non-bearer finality authority.  The dispatch sink independently
+       verifies that authority immediately before the tool or external
+       action executes.
+
+       The design is fail-closed and includes replay resistance, single-use
+       authority, sink binding, policy-epoch checking, revocation, and
+       alternate-path closure.  The core principle is: tool selection is not
+       tool-execution authority, and computation is not authority.
+
+       This revision also defines a concrete JSON-based interoperability
+       profile for Agent Candidate Acts, protected validation evidence,
+       scoped finality authority, and Tool-Dispatch Sink verification,
+       enabling protocol and API implementers to evaluate a specific
+       interface rather than only an architectural concept.</p>
 relation:
 - type: updatedBy
   bibitem:

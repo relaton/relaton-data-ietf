@@ -1,3 +1,4 @@
+---
 id: RFC9999
 schema_version: v1.5.6
 type: standard
@@ -134,7 +135,26 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The conceptual messages introduced by the Remote ATtestation procedureS (RATS) architecture (RFC 9334) are protocol-agnostic data units that are conveyed between RATS roles during RATS interactions. Conceptual messages describe the meaning and function of such data units within RATS data flows without specifying a wire format, encoding, transport mechanism, or processing details. The initial set of conceptual messages is defined in Section 8 of RFC 9334 and includes Evidence, Attestation Results, Endorsements, Reference Values, and Appraisal Policies.</p><p>This document introduces the Conceptual Message Wrapper (CMW) that provides a common structure to encapsulate these messages. It defines a dedicated Concise Binary Object Representation (CBOR) tag, corresponding JSON Web Token (JWT) and CBOR Web Token (CWT) claims, and an X.509 extension.</p><p>Together, these mechanisms allow CMWs to be used in CBOR-based protocols, web APIs using JWTs and CWTs, and PKIX artifacts such as X.509 certificates. Additionally, this document defines media types and CoAP Content-Formats that may be used to identify CMWs when transported over protocols such as HTTP, MIME, and CoAP.</p><p>The goal is to improve the interoperability and flexibility of remote attestation protocols. Introducing a shared message format such as CMW enables consistent support for different attestation message types, enables the evolution of message serialization formats without breaking compatibility, and avoids the need to redefine how messages are handled within each protocol.</p>"
+  content: "<p>The conceptual messages introduced by the Remote ATtestation procedureS
+    (RATS) architecture (RFC 9334) are protocol-agnostic data units that are conveyed
+    between RATS roles during RATS interactions. Conceptual messages describe the
+    meaning and function of such data units within RATS data flows without specifying
+    a wire format, encoding, transport mechanism, or processing details. The initial
+    set of conceptual messages is defined in Section 8 of RFC 9334 and includes Evidence,
+    Attestation Results, Endorsements, Reference Values, and Appraisal Policies.</p><p>This
+    document introduces the Conceptual Message Wrapper (CMW) that provides a common
+    structure to encapsulate these messages. It defines a dedicated Concise Binary
+    Object Representation (CBOR) tag, corresponding JSON Web Token (JWT) and CBOR
+    Web Token (CWT) claims, and an X.509 extension.</p><p>Together, these mechanisms
+    allow CMWs to be used in CBOR-based protocols, web APIs using JWTs and CWTs, and
+    PKIX artifacts such as X.509 certificates. Additionally, this document defines
+    media types and CoAP Content-Formats that may be used to identify CMWs when transported
+    over protocols such as HTTP, MIME, and CoAP.</p><p>The goal is to improve the
+    interoperability and flexibility of remote attestation protocols. Introducing
+    a shared message format such as CMW enables consistent support for different attestation
+    message types, enables the evolution of message serialization formats without
+    breaking compatibility, and avoids the need to redefine how messages are handled
+    within each protocol.</p>"
 status:
   stage:
     content: PROPOSED STANDARD

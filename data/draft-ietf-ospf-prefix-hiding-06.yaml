@@ -1,3 +1,4 @@
+---
 id: draftietfospfprefixhiding06
 schema_version: v1.5.6
 type: standard
@@ -85,7 +86,21 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>A transit-only network is defined as a network connecting routers\n   only.  In OSPF, transit-only networks are usually configured with\n   routable IP addresses, which are advertised in Link State\n   Advertisements (LSAs) but not needed for data traffic.  In addition,\n   remote attacks can be launched against routers by sending packets to\n   these transit-only networks.  This document presents a mechanism to\n   hide transit-only networks to speed up network convergence and reduce\n   remote attack vulnerability.\n\n   In the context of this document, 'hiding' implies that the prefixes\n   are not installed in the routing tables on OSPF routers. In some\n   cases, IP addresses may still be visible when using OSPFv2.\n\n   This document updates RFC 2328 and RFC 5340.</p>"
+  content: |-
+    <p>A transit-only network is defined as a network connecting routers
+       only.  In OSPF, transit-only networks are usually configured with
+       routable IP addresses, which are advertised in Link State
+       Advertisements (LSAs) but not needed for data traffic.  In addition,
+       remote attacks can be launched against routers by sending packets to
+       these transit-only networks.  This document presents a mechanism to
+       hide transit-only networks to speed up network convergence and reduce
+       remote attack vulnerability.
+
+       In the context of this document, 'hiding' implies that the prefixes
+       are not installed in the routing tables on OSPF routers. In some
+       cases, IP addresses may still be visible when using OSPFv2.
+
+       This document updates RFC 2328 and RFC 5340.</p>
 relation:
 - type: updates
   bibitem:

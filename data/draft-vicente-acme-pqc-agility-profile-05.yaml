@@ -1,3 +1,4 @@
+---
 id: draftvicenteacmepqcagilityprofile05
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an Automated Certificate Management Environment\n   (ACME) [RFC8555] profile extension that enables ACME servers and\n   clients to express per-account and per-order post-quantum\n   cryptographic (PQC) posture.  The extension introduces a pqcAgility\n   metadata object in the ACME directory, an optional pqcAgility member\n   in order objects, and a server-side adequacy scoring mechanism that\n   determines whether a given order satisfies an account's declared PQC\n   readiness threshold.\n\n   The profile is designed for both public and private ACME deployments\n   and does not modify the core ACME state machine: it adds discoverable\n   capability metadata and per-order policy directives that servers MAY\n   enforce.  Multi-tenant ACME servers MUST implement tenant-isolation\n   controls that prevent cross-account PQC posture leakage.\n\n   This document is distinguished from draft-giron-acme-pqcnegotiation\n   [I-D.giron-acme-pqcnegotiation], which defines algorithm negotiation\n   at the ACME protocol level.  This profile operates above the\n   negotiation layer: it defines per-account posture scoring, adequacy\n   thresholds, hybrid policy bits, rotation epoch anchoring, and tenant-\n   isolation requirements that apply regardless of which negotiation\n   mechanism is used.</p>"
+  content: |-
+    <p>This document defines an Automated Certificate Management Environment
+       (ACME) [RFC8555] profile extension that enables ACME servers and
+       clients to express per-account and per-order post-quantum
+       cryptographic (PQC) posture.  The extension introduces a pqcAgility
+       metadata object in the ACME directory, an optional pqcAgility member
+       in order objects, and a server-side adequacy scoring mechanism that
+       determines whether a given order satisfies an account's declared PQC
+       readiness threshold.
+
+       The profile is designed for both public and private ACME deployments
+       and does not modify the core ACME state machine: it adds discoverable
+       capability metadata and per-order policy directives that servers MAY
+       enforce.  Multi-tenant ACME servers MUST implement tenant-isolation
+       controls that prevent cross-account PQC posture leakage.
+
+       This document is distinguished from draft-giron-acme-pqcnegotiation
+       [I-D.giron-acme-pqcnegotiation], which defines algorithm negotiation
+       at the ACME protocol level.  This profile operates above the
+       negotiation layer: it defines per-account posture scoring, adequacy
+       thresholds, hybrid policy bits, rotation epoch anchoring, and tenant-
+       isolation requirements that apply regardless of which negotiation
+       mechanism is used.</p>
 relation:
 - type: updates
   bibitem:

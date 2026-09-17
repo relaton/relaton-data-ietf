@@ -1,3 +1,4 @@
+---
 id: draftietfecritlostplannedchanges08
 schema_version: v1.5.6
 type: standard
@@ -48,7 +49,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines an extension to the Location to Service\n   Translation (LoST) protocol (RFC5222) that allows a LoSR server ti\n   notify a client of planned changes to the data.  This extension is\n   only useful with the validation function of LoST.  It is beneficial\n   for LoST validation clients to be aware of planned changes, as\n   records that previously were valid may become invalid at a known\n   future date, and new locations may become valid after the date.  This\n   extension adds an element to the &lt;findService&gt; request: a date that\n   allows the LoST client to request that the server perform validation\n   as of the date specified.  It adds an optional Time-To-Live element\n   to the response, which informs clients of the current expected\n   lifetime of a validation.  It also adds a separate interface to the\n   LoST server that allows a client to poll for planned changes.\n   Additionally, this document provides a conventional XML schema for\n   LoST, as a backwards compatible alternative to the RelaxNG schema in\n   RFC5222.</p>"
+  content: |-
+    <p>This document defines an extension to the Location to Service
+       Translation (LoST) protocol (RFC5222) that allows a LoSR server ti
+       notify a client of planned changes to the data.  This extension is
+       only useful with the validation function of LoST.  It is beneficial
+       for LoST validation clients to be aware of planned changes, as
+       records that previously were valid may become invalid at a known
+       future date, and new locations may become valid after the date.  This
+       extension adds an element to the &lt;findService&gt; request: a date that
+       allows the LoST client to request that the server perform validation
+       as of the date specified.  It adds an optional Time-To-Live element
+       to the response, which informs clients of the current expected
+       lifetime of a validation.  It also adds a separate interface to the
+       LoST server that allows a client to poll for planned changes.
+       Additionally, this document provides a conventional XML schema for
+       LoST, as a backwards compatible alternative to the RelaxNG schema in
+       RFC5222.</p>
 relation:
 - type: updates
   bibitem:

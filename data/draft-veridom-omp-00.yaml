@@ -1,10 +1,12 @@
+---
 id: draftveridomomp00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: 'Operating Model Protocol (OMP): A Deterministic Routing and Evidence Architecture for AI Decision Accountability in Regulated Industries'
+  content: 'Operating Model Protocol (OMP): A Deterministic Routing and Evidence Architecture
+    for AI Decision Accountability in Regulated Industries'
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-veridom-omp-00
@@ -103,7 +105,41 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Regulated institutions deploying AI face a structural evidence\n   problem: the gap between what their systems claim to do and what they\n   can prove happened at the level of an individual decision.  Existing\n   compliance infrastructure addresses this problem observationally --\n   monitoring, dashboards, retrospective reporting -- but does not close\n   it structurally.\n\n   This specification defines the Operating Model Protocol (OMP), a\n   deterministic routing invariant that classifies every interaction in\n   a regulated operation to exactly one of three outcome states --\n   AUTONOMOUS, ASSISTED, or ESCALATED -- and generates a tamper-evident\n   audit trace at the point of every decision.  The routing decision is\n   a deterministic function of a composite Confidence Score, Watchtower\n   enforcement evaluations, and domain-specific thresholds.  Given\n   identical inputs, the protocol produces identical outputs.  This\n   invariance is the architectural basis of the regulatory claim.\n\n   Each audit trace is sealed using a three-layer cryptographic\n   integrity architecture: SHA-256 content hash, RFC 3161 trusted\n   timestamp from an accredited third-party Timestamp Authority, and\n   institution signature.  The chain forms a Merkle structure in which\n   modification of any historical trace invalidates all subsequent chain\n   hashes.  Per-decision accountability is therefore verifiable by any\n   third party without access to the institution's or Veridom's\n   infrastructure.\n\n   The protocol has been independently instantiated across four\n   regulated domains -- digital credit under the Kenya CBK NDTCP\n   framework, FCA Consumer Duty, FCA agent distribution oversight, and\n   US legal AI supervision under ABA Rule 5.3 -- with the same two\n   invariants holding in each: deterministic classification and\n   immutable audit trail.  Domain-specific profiles for digital credit\n   and cooperative lending are published separately as draft-veridom-\n   omp-ndtcp and draft-veridom-omp-sacco.</p>"
+  content: |-
+    <p>Regulated institutions deploying AI face a structural evidence
+       problem: the gap between what their systems claim to do and what they
+       can prove happened at the level of an individual decision.  Existing
+       compliance infrastructure addresses this problem observationally --
+       monitoring, dashboards, retrospective reporting -- but does not close
+       it structurally.
+
+       This specification defines the Operating Model Protocol (OMP), a
+       deterministic routing invariant that classifies every interaction in
+       a regulated operation to exactly one of three outcome states --
+       AUTONOMOUS, ASSISTED, or ESCALATED -- and generates a tamper-evident
+       audit trace at the point of every decision.  The routing decision is
+       a deterministic function of a composite Confidence Score, Watchtower
+       enforcement evaluations, and domain-specific thresholds.  Given
+       identical inputs, the protocol produces identical outputs.  This
+       invariance is the architectural basis of the regulatory claim.
+
+       Each audit trace is sealed using a three-layer cryptographic
+       integrity architecture: SHA-256 content hash, RFC 3161 trusted
+       timestamp from an accredited third-party Timestamp Authority, and
+       institution signature.  The chain forms a Merkle structure in which
+       modification of any historical trace invalidates all subsequent chain
+       hashes.  Per-decision accountability is therefore verifiable by any
+       third party without access to the institution's or Veridom's
+       infrastructure.
+
+       The protocol has been independently instantiated across four
+       regulated domains -- digital credit under the Kenya CBK NDTCP
+       framework, FCA Consumer Duty, FCA agent distribution oversight, and
+       US legal AI supervision under ABA Rule 5.3 -- with the same two
+       invariants holding in each: deterministic classification and
+       immutable audit trail.  Domain-specific profiles for digital credit
+       and cooperative lending are published separately as draft-veridom-
+       omp-ndtcp and draft-veridom-omp-sacco.</p>
 relation:
 - type: updatedBy
   bibitem:

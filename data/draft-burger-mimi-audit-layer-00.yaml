@@ -1,3 +1,4 @@
+---
 id: draftburgermimiauditlayer00
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document defines a Merkle-tree-based approach that can act as an\n   audit-layer detection mechanism to identify a malicious hub,\n   responsible for interoperable group communication between various\n   messaging platforms.  The proposed approach is based on the MIMI\n   protocol, which uses a central hub for timestamping and broadcasting\n   messages to clients operating on different platforms.  Even though\n   all MLS ciphertexts are end-to-end encrypted, they are routed through\n   the hub, making it a lucrative attack surface for message reordering\n   attacks.  To detect such attacks, the proposed approach suggests\n   creating Merkle proofs of messages and timestamps on the client-side,\n   which can subsequently be broadcast to other clients for verification\n   with local Merkle proofs.  The broadcast messages are encrypted too\n   and are sent probabilistically to avoid being dropped by the hub.  If\n   any of the proofs do not match, an alert is broadcast to the room,\n   indicating a malicious hub.  The approach has minimal communication\n   overhead for practical purposes.</p>"
+  content: |-
+    <p>This document defines a Merkle-tree-based approach that can act as an
+       audit-layer detection mechanism to identify a malicious hub,
+       responsible for interoperable group communication between various
+       messaging platforms.  The proposed approach is based on the MIMI
+       protocol, which uses a central hub for timestamping and broadcasting
+       messages to clients operating on different platforms.  Even though
+       all MLS ciphertexts are end-to-end encrypted, they are routed through
+       the hub, making it a lucrative attack surface for message reordering
+       attacks.  To detect such attacks, the proposed approach suggests
+       creating Merkle proofs of messages and timestamps on the client-side,
+       which can subsequently be broadcast to other clients for verification
+       with local Merkle proofs.  The broadcast messages are encrypted too
+       and are sent probabilistically to avoid being dropped by the hub.  If
+       any of the proofs do not match, an alert is broadcast to the room,
+       indicating a malicious hub.  The approach has minimal communication
+       overhead for practical purposes.</p>
 series:
 - type: main
   title:

@@ -1,3 +1,4 @@
+---
 id: draftchuangreplayresistantarc08
 schema_version: v1.5.6
 type: standard
@@ -78,7 +79,20 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>DKIM (RFC6376) is an IETF standard for the cryptographic protocol to\n   authenticate email at the domain level and protect the integrity of\n   messages during transit.  Section 8.6 defines a vulnerability called\n   DKIM Replay as a spam message sent through a SMTP MTA DKIM signer,\n   that then is sent to many more recipients, leveraging the reputation\n   of the signer.  We propose a replay resistant cryptographic based\n   protocol that discloses all SMTP recipients and signs them, allowing\n   a receiver or any third party to verify that the message went to the\n   intended recipient.  If not then then potentially the message is\n   replayed.  Moreover it leverages ARC (RFC8617) and sender defined\n   forwarding path to build a \"chain of custody\" that accurately defines\n   the SMTP forwarding path of the message.  This also allows the\n   protocol to detect DKIM and ARC replay attacks and other attacks.</p>"
+  content: |-
+    <p>DKIM (RFC6376) is an IETF standard for the cryptographic protocol to
+       authenticate email at the domain level and protect the integrity of
+       messages during transit.  Section 8.6 defines a vulnerability called
+       DKIM Replay as a spam message sent through a SMTP MTA DKIM signer,
+       that then is sent to many more recipients, leveraging the reputation
+       of the signer.  We propose a replay resistant cryptographic based
+       protocol that discloses all SMTP recipients and signs them, allowing
+       a receiver or any third party to verify that the message went to the
+       intended recipient.  If not then then potentially the message is
+       replayed.  Moreover it leverages ARC (RFC8617) and sender defined
+       forwarding path to build a "chain of custody" that accurately defines
+       the SMTP forwarding path of the message.  This also allows the
+       protocol to detect DKIM and ARC replay attacks and other attacks.</p>
 relation:
 - type: updates
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftietfaltonewtransport05
 schema_version: v1.5.6
 type: standard
@@ -128,7 +129,32 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The ALTO base protocol [RFC7285] is based on HTTP/1.x, designed for\n   the simple, sequential request-reply use case, in which an ALTO\n   client requests a sequence of information resources, and the server\n   sends the complete content of each information resource to the client\n   one by one.  To support the use case that an ALTO client can monitor\n   multiple resources at the same time and the ALTO server sends only\n   their updates, the ALTO Working Group introduced ALTO/SSE [RFC8895],\n   which defines a new, SSE-based multiplexing protocol on top of\n   HTTP/1.x, to allow the server to concurrently, and incrementally push\n   updates to the client whenever monitored network information\n   resources change.  However, newer versions of HTTP (e.g., HTTP/2\n   [RFC7540]) already support concurrent, non-blocking transport of\n   multiple streams in the same HTTP connection.  This document\n   introduces the ALTO transport information publication service (TIPS),\n   which allows the naming of (i.e., assigning resource identifiers to)\n   individual incremental updates to multiple ALTO information resources\n   and the distribution of the naming, enabling ALTO to take advantage\n   of newer HTTP versions.  In particular, it gives an ALTO client the\n   new capability to explicitly request (pull) a specific incremental\n   update.  It also provides an ALTO server the new capability to push a\n   specific incremental update using native HTTP/2 or HTTP/3 server\n   push.  This document defines TIPS as a service, independent of client\n   pull or server push.  A companion document\n   [draft-schott-alto-new-transport-push] defines the complete server-\n   push ALTO transport based on ALTO TIPS.</p>"
+  content: |-
+    <p>The ALTO base protocol [RFC7285] is based on HTTP/1.x, designed for
+       the simple, sequential request-reply use case, in which an ALTO
+       client requests a sequence of information resources, and the server
+       sends the complete content of each information resource to the client
+       one by one.  To support the use case that an ALTO client can monitor
+       multiple resources at the same time and the ALTO server sends only
+       their updates, the ALTO Working Group introduced ALTO/SSE [RFC8895],
+       which defines a new, SSE-based multiplexing protocol on top of
+       HTTP/1.x, to allow the server to concurrently, and incrementally push
+       updates to the client whenever monitored network information
+       resources change.  However, newer versions of HTTP (e.g., HTTP/2
+       [RFC7540]) already support concurrent, non-blocking transport of
+       multiple streams in the same HTTP connection.  This document
+       introduces the ALTO transport information publication service (TIPS),
+       which allows the naming of (i.e., assigning resource identifiers to)
+       individual incremental updates to multiple ALTO information resources
+       and the distribution of the naming, enabling ALTO to take advantage
+       of newer HTTP versions.  In particular, it gives an ALTO client the
+       new capability to explicitly request (pull) a specific incremental
+       update.  It also provides an ALTO server the new capability to push a
+       specific incremental update using native HTTP/2 or HTTP/3 server
+       push.  This document defines TIPS as a service, independent of client
+       pull or server push.  A companion document
+       [draft-schott-alto-new-transport-push] defines the complete server-
+       push ALTO transport based on ALTO TIPS.</p>
 relation:
 - type: updates
   bibitem:

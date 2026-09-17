@@ -1,3 +1,4 @@
+---
 id: draftietfaltonewtransport06
 schema_version: v1.5.6
 type: standard
@@ -153,7 +154,29 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The ALTO protocol (RFC 7285) leverages HTTP/1.x and is designed for\n   the simple, sequential request-reply use case, in which an ALTO\n   client requests a sequence of information resources, and the server\n   responds with the complete content of each resource one at a time.\n\n   ALTO/SSE (RFC 8895) defines a multiplexing protocol on top of\n   HTTP/1.x, so that the server can incrementally push resource updates\n   to the client whenever monitored network information resources\n   change, allowing the client to monitor multiple resources at the same\n   time.  However, HTTP/2 and later versions already support concurrent,\n   non-blocking transport of multiple streams in the same HTTP\n   connection.\n\n   To take advantage of newer HTTP features, this document introduces\n   the ALTO Transport Information Publication Service (TIPS).  TIPS\n   allows the naming of (i.e., assigning resource identifiers to)\n   individual incremental updates to multiple ALTO information\n   resources, and the distribution of those names.  It gives an ALTO\n   client the capability to explicitly request (pull) a specific\n   incremental update.  It also provides an ALTO server the capability\n   to push a specific incremental update.  This document defines TIPS as\n   a service, with client pull and server push.</p>"
+  content: |-
+    <p>The ALTO protocol (RFC 7285) leverages HTTP/1.x and is designed for
+       the simple, sequential request-reply use case, in which an ALTO
+       client requests a sequence of information resources, and the server
+       responds with the complete content of each resource one at a time.
+
+       ALTO/SSE (RFC 8895) defines a multiplexing protocol on top of
+       HTTP/1.x, so that the server can incrementally push resource updates
+       to the client whenever monitored network information resources
+       change, allowing the client to monitor multiple resources at the same
+       time.  However, HTTP/2 and later versions already support concurrent,
+       non-blocking transport of multiple streams in the same HTTP
+       connection.
+
+       To take advantage of newer HTTP features, this document introduces
+       the ALTO Transport Information Publication Service (TIPS).  TIPS
+       allows the naming of (i.e., assigning resource identifiers to)
+       individual incremental updates to multiple ALTO information
+       resources, and the distribution of those names.  It gives an ALTO
+       client the capability to explicitly request (pull) a specific
+       incremental update.  It also provides an ALTO server the capability
+       to push a specific incremental update.  This document defines TIPS as
+       a service, with client pull and server push.</p>
 relation:
 - type: updates
   bibitem:

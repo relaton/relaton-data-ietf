@@ -1,3 +1,4 @@
+---
 id: draftjohanidnsopdnssecalgexperimentalrange
 schema_version: v1.5.6
 formattedref:
@@ -19,7 +20,24 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The DNSSEC Algorithm Numbers registry contains two code points, 253\n   (PRIVATEDNS) and 254 (PRIVATEOID), intended for private and\n   experimental algorithms.  These code points identify the algorithm by\n   prepending a domain name or an object identifier to the \"Public Key\"\n   field of the DNSKEY RDATA, overloading the semantics of that field\n   and forcing every implementation to special-case algorithm dispatch.\n   Because all such algorithms share a single code point, they cannot be\n   distinguished on the wire by the algorithm number alone.\n\n   This document reserves two small ranges of DNSSEC algorithm numbers:\n   one for Private Use, requiring no IANA registration, and one for\n   experimental algorithms, registered on a First Come First Served\n   basis.  Code points drawn from these ranges behave identically to\n   ordinary algorithm numbers and require no overloading of the DNSKEY\n   RDATA.  This enables clean experimentation with the growing set of\n   post-quantum and other candidate signature algorithms.  This document\n   updates RFC 6014 and RFC 9157.</p>"
+  content: |-
+    <p>The DNSSEC Algorithm Numbers registry contains two code points, 253
+       (PRIVATEDNS) and 254 (PRIVATEOID), intended for private and
+       experimental algorithms.  These code points identify the algorithm by
+       prepending a domain name or an object identifier to the "Public Key"
+       field of the DNSKEY RDATA, overloading the semantics of that field
+       and forcing every implementation to special-case algorithm dispatch.
+       Because all such algorithms share a single code point, they cannot be
+       distinguished on the wire by the algorithm number alone.
+
+       This document reserves two small ranges of DNSSEC algorithm numbers:
+       one for Private Use, requiring no IANA registration, and one for
+       experimental algorithms, registered on a First Come First Served
+       basis.  Code points drawn from these ranges behave identically to
+       ordinary algorithm numbers and require no overloading of the DNSKEY
+       RDATA.  This enables clean experimentation with the growing set of
+       post-quantum and other candidate signature algorithms.  This document
+       updates RFC 6014 and RFC 9157.</p>
 relation:
 - type: includes
   bibitem:

@@ -1,3 +1,4 @@
+---
 id: draftcardwelliccrgbbrcongestioncontrol02
 schema_version: v1.5.6
 type: standard
@@ -156,7 +157,22 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies the BBR congestion control algorithm.  BBR\n   (\"Bottleneck Bandwidth and Round-trip propagation time\") uses recent\n   measurements of a transport connection's delivery rate, round-trip\n   time, and packet loss rate to build an explicit model of the network\n   path.  BBR then uses this model to control both how fast it sends\n   data and the maximum volume of data it allows in flight in the\n   network at any time.  Relative to loss-based congestion control\n   algorithms such as Reno [RFC5681] or CUBIC [RFC8312], BBR offers\n   substantially higher throughput for bottlenecks with shallow buffers\n   or random losses, and substantially lower queueing delays for\n   bottlenecks with deep buffers (avoiding \"bufferbloat\").  BBR can be\n   implemented in any transport protocol that supports packet-delivery\n   acknowledgment.  Thus far, open source implementations are available\n   for TCP [RFC793] and QUIC [RFC9000].  This document specifies version\n   2 of the BBR algorithm, also sometimes referred to as BBRv2 or bbr2.</p>"
+  content: |-
+    <p>This document specifies the BBR congestion control algorithm.  BBR
+       ("Bottleneck Bandwidth and Round-trip propagation time") uses recent
+       measurements of a transport connection's delivery rate, round-trip
+       time, and packet loss rate to build an explicit model of the network
+       path.  BBR then uses this model to control both how fast it sends
+       data and the maximum volume of data it allows in flight in the
+       network at any time.  Relative to loss-based congestion control
+       algorithms such as Reno [RFC5681] or CUBIC [RFC8312], BBR offers
+       substantially higher throughput for bottlenecks with shallow buffers
+       or random losses, and substantially lower queueing delays for
+       bottlenecks with deep buffers (avoiding "bufferbloat").  BBR can be
+       implemented in any transport protocol that supports packet-delivery
+       acknowledgment.  Thus far, open source implementations are available
+       for TCP [RFC793] and QUIC [RFC9000].  This document specifies version
+       2 of the BBR algorithm, also sometimes referred to as BBRv2 or bbr2.</p>
 relation:
 - type: updates
   bibitem:

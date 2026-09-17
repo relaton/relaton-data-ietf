@@ -1,3 +1,4 @@
+---
 id: draftshimoqkvcache00
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,17 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>Large language model (LLM) inference involves two stages: prefill and\n   decode.  The prefill phase processes the prompt in parallel,\n   generating the KVCache, which is then used by the decode phase to\n   produce tokens sequentially.  KVCache can be reused if the model and\n   prompt is the same, reducing computing cost of the prefill.  However,\n   its large size makes efficient transfer challenging.  Delivering\n   these over architectures enabled by publish/subscribe transport like\n   MoQT, allows local nodes to cache the KVCache to be later retrieved\n   via new subscriptions, saving the bandwidth.  This document specifies\n   the transmission of KVCache over MoQT.</p>"
+  content: |-
+    <p>Large language model (LLM) inference involves two stages: prefill and
+       decode.  The prefill phase processes the prompt in parallel,
+       generating the KVCache, which is then used by the decode phase to
+       produce tokens sequentially.  KVCache can be reused if the model and
+       prompt is the same, reducing computing cost of the prefill.  However,
+       its large size makes efficient transfer challenging.  Delivering
+       these over architectures enabled by publish/subscribe transport like
+       MoQT, allows local nodes to cache the KVCache to be later retrieved
+       via new subscriptions, saving the bandwidth.  This document specifies
+       the transmission of KVCache over MoQT.</p>
 relation:
 - type: updatedBy
   bibitem:

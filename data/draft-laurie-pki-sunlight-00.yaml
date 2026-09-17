@@ -1,3 +1,4 @@
+---
 id: draftlauriepkisunlight00
 schema_version: v1.5.6
 type: standard
@@ -88,7 +89,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>The aim of Certificate Transparency is to have every public end-\n   entity TLS certificate issued by a known Certificate Authority\n   recorded in one or more certificate logs.  In order to detect mis-\n   issuance of certificates, all logs are publicly auditable.  In\n   particular, domain owners will be able to monitor logs for\n   certificates issued on their own domain.\n\n   In order to protect clients from unlogged mis-issued certificates,\n   logs sign all recorded certificates, and clients can choose not to\n   trust certificates that are not accompanied by an appropriate log\n   signature.  For privacy and performance reasons log signatures are\n   embedded in the TLS handshake via the TLS authorization extension\n   [RFC5878], or in the certificate itself via an X.509v3 certificate\n   extension [RFC5280].\n\n   In order to ensure a globally consistent view of the log, logs also\n   provide a global signature over the entire log.  Any inconsistency of\n   logs can be detected through cross-checks on the global signature.\n\n   Logs are only expected to certify that they have seen a certificate\n   and thus, we do not specify any revocation mechanism for log\n   signatures in this document.  Logs will be append-only, and log\n   signatures will be valid indefinitely.</p>"
+  content: |-
+    <p>The aim of Certificate Transparency is to have every public end-
+       entity TLS certificate issued by a known Certificate Authority
+       recorded in one or more certificate logs.  In order to detect mis-
+       issuance of certificates, all logs are publicly auditable.  In
+       particular, domain owners will be able to monitor logs for
+       certificates issued on their own domain.
+
+       In order to protect clients from unlogged mis-issued certificates,
+       logs sign all recorded certificates, and clients can choose not to
+       trust certificates that are not accompanied by an appropriate log
+       signature.  For privacy and performance reasons log signatures are
+       embedded in the TLS handshake via the TLS authorization extension
+       [RFC5878], or in the certificate itself via an X.509v3 certificate
+       extension [RFC5280].
+
+       In order to ensure a globally consistent view of the log, logs also
+       provide a global signature over the entire log.  Any inconsistency of
+       logs can be detected through cross-checks on the global signature.
+
+       Logs are only expected to certify that they have seen a certificate
+       and thus, we do not specify any revocation mechanism for log
+       signatures in this document.  Logs will be append-only, and log
+       signatures will be valid indefinitely.</p>
 relation:
 - type: updatedBy
   bibitem:

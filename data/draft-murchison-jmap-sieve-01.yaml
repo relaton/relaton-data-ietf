@@ -1,3 +1,4 @@
+---
 id: draftmurchisonjmapsieve01
 schema_version: v1.5.6
 type: standard
@@ -53,7 +54,24 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This document specifies a data model for managing Sieve scripts on a\n   server using JMAP.\n\nOpen Issues\n\n   o  How should doing /set{create} with an existing script name be\n      handled?  Should it fail or overwrite the existing script?  Should\n      the /set request include an 'overwrite' boolean argument?\n\n   o  Should setting isActive==true on a script automatically deactivate\n      any other existing active script, or should the client have to do\n      so itself (as is currently documented)?\n\n   o  Do we want/need a SieveScript/copy method?\n\n   o  Do we want to leverage draft-ietf-jmap-quotas to query Sieve\n      script storage quotas?</p>"
+  content: |-
+    <p>This document specifies a data model for managing Sieve scripts on a
+       server using JMAP.
+
+    Open Issues
+
+       o  How should doing /set{create} with an existing script name be
+          handled?  Should it fail or overwrite the existing script?  Should
+          the /set request include an 'overwrite' boolean argument?
+
+       o  Should setting isActive==true on a script automatically deactivate
+          any other existing active script, or should the client have to do
+          so itself (as is currently documented)?
+
+       o  Do we want/need a SieveScript/copy method?
+
+       o  Do we want to leverage draft-ietf-jmap-quotas to query Sieve
+          script storage quotas?</p>
 relation:
 - type: updates
   bibitem:

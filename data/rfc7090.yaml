@@ -1,3 +1,4 @@
+---
 id: RFC7090
 schema_version: v1.5.6
 type: standard
@@ -134,7 +135,23 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: <p>After an emergency call is completed (terminated either prematurely by the emergency caller or normally by the call taker), the call taker may feel the need for further communication. For example, the call may have been dropped by accident without the call taker having sufficient information about the current state of an accident victim. A call taker may trigger a callback to the emergency caller using the contact information provided with the initial emergency call. This callback could, under certain circumstances, be treated like any other call and, as a consequence, it may get blocked by authorization policies or may get forwarded to an answering machine.</p><p>The IETF emergency services architecture specification already offers a solution approach for allowing Public Safety Answering Point (PSAP) callbacks to bypass authorization policies in order to reach the caller without unnecessary delays. Unfortunately, the specified mechanism only supports limited scenarios. This document discusses shortcomings of the current mechanisms and illustrates additional scenarios where better-than-normal call treatment behavior would be desirable. We describe a solution based on a new header field value for the SIP Priority header field, called "psap-callback", to mark PSAP callbacks.</p>
+  content: <p>After an emergency call is completed (terminated either prematurely
+    by the emergency caller or normally by the call taker), the call taker may feel
+    the need for further communication. For example, the call may have been dropped
+    by accident without the call taker having sufficient information about the current
+    state of an accident victim. A call taker may trigger a callback to the emergency
+    caller using the contact information provided with the initial emergency call.
+    This callback could, under certain circumstances, be treated like any other call
+    and, as a consequence, it may get blocked by authorization policies or may get
+    forwarded to an answering machine.</p><p>The IETF emergency services architecture
+    specification already offers a solution approach for allowing Public Safety Answering
+    Point (PSAP) callbacks to bypass authorization policies in order to reach the
+    caller without unnecessary delays. Unfortunately, the specified mechanism only
+    supports limited scenarios. This document discusses shortcomings of the current
+    mechanisms and illustrates additional scenarios where better-than-normal call
+    treatment behavior would be desirable. We describe a solution based on a new header
+    field value for the SIP Priority header field, called "psap-callback", to mark
+    PSAP callbacks.</p>
 status:
   stage:
     content: PROPOSED STANDARD

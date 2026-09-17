@@ -1,10 +1,12 @@
+---
 id: draftdikshitbessevpnmobilitycrdt00
 schema_version: v1.5.6
 type: standard
 title:
 - language: en
   script: Latn
-  content: Modeling EVPN MAC-Mobility Sequence State as a Conflict-Free Replicated Data Type
+  content: Modeling EVPN MAC-Mobility Sequence State as a Conflict-Free Replicated
+    Data Type
 source:
 - type: src
   content: https://datatracker.ietf.org/doc/html/draft-dikshit-bess-evpn-mobility-crdt-00
@@ -53,7 +55,30 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>EVPN MAC Mobility, as carried in the MAC Mobility Extended\n   Community defined by [RFC7432], uses a per-MAC sequence number to\n   let PEs agree on the most recent location of a moving host.\n   [I-D.ietf-bess-evpn-umr-mobility] extends this to cross-data-center\n   moves via gateways, and already specifies, in some detail, how\n   ordinary intra-DC and inter-DC moves are kept consistent: each\n   gateway maintains two independent MAC Mobility sequence counters\n   per host (one intra-DC, one inter-DC) specifically so that a\n   purely local move does not have to be reconciled against the\n   interconnect network's state. What that document does not specify\n   is what a gateway does if it fails after locally resetting its\n   intra-DC counter to zero (Section 5.2, the step taken when a host\n   is confirmed to have left every local PE) but before propagating\n   that fact onward; no failure-handling or crash-recovery text\n   exists anywhere in the document. This document shows that this\n   narrower, but concretely unaddressed, gap is a special case of a\n   data type with known, formally proven convergence properties, the\n   Last-Writer-Wins Register, one member of the Conflict-Free\n   Replicated Data Type (CRDT) family, and proposes modeling the\n   per-gateway mobility sequence state that way so that a mid-reset\n   gateway crash is recovered from as a consequence of the data\n   type's algebra rather than requiring a new, separately specified\n   recovery procedure.</p>"
+  content: |-
+    <p>EVPN MAC Mobility, as carried in the MAC Mobility Extended
+       Community defined by [RFC7432], uses a per-MAC sequence number to
+       let PEs agree on the most recent location of a moving host.
+       [I-D.ietf-bess-evpn-umr-mobility] extends this to cross-data-center
+       moves via gateways, and already specifies, in some detail, how
+       ordinary intra-DC and inter-DC moves are kept consistent: each
+       gateway maintains two independent MAC Mobility sequence counters
+       per host (one intra-DC, one inter-DC) specifically so that a
+       purely local move does not have to be reconciled against the
+       interconnect network's state. What that document does not specify
+       is what a gateway does if it fails after locally resetting its
+       intra-DC counter to zero (Section 5.2, the step taken when a host
+       is confirmed to have left every local PE) but before propagating
+       that fact onward; no failure-handling or crash-recovery text
+       exists anywhere in the document. This document shows that this
+       narrower, but concretely unaddressed, gap is a special case of a
+       data type with known, formally proven convergence properties, the
+       Last-Writer-Wins Register, one member of the Conflict-Free
+       Replicated Data Type (CRDT) family, and proposes modeling the
+       per-gateway mobility sequence state that way so that a mid-reset
+       gateway crash is recovered from as a consequence of the data
+       type's algebra rather than requiring a new, separately specified
+       recovery procedure.</p>
 series:
 - type: main
   title:
