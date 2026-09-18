@@ -1,4 +1,3 @@
----
 id: draftietfdnsopparentsig00
 schema_version: v1.5.6
 type: standard
@@ -89,16 +88,11 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>When dealing with large amounts of keys the procedures to update a
-    zone and to sign a zone need to be clearly defined and practically possible. \nThe
-    current idea is to have the KEY RR and the parent's SIG to reside in the child's
-    zone and perhaps also in the parent's zone. We feel that this would lead to very
-    complicated procedures for large TLD's. We propose a alternative scheme in which
-    the parent zone stores the parent's signature over the child's key and also a
-    copy of the child's key itself. \nThe advantage of this proposal is that all signatures
-    signed by a key are in the same zone file as the producing key. This allows for
-    a simple key rollover and resigning mechanism. For large TLD's this is extremely
-    important.\nWe further discuss the impact on a secure aware resolver/forwarder.</p>"
+  content: |-
+    <p>When dealing with large amounts of keys the procedures to update a zone and to sign a zone need to be clearly defined and practically possible. 
+    The current idea is to have the KEY RR and the parent's SIG to reside in the child's zone and perhaps also in the parent's zone. We feel that this would lead to very complicated procedures for large TLD's. We propose a alternative scheme in which the parent zone stores the parent's signature over the child's key and also a copy of the child's key itself. 
+    The advantage of this proposal is that all signatures signed by a key are in the same zone file as the producing key. This allows for a simple key rollover and resigning mechanism. For large TLD's this is extremely important.
+    We further discuss the impact on a secure aware resolver/forwarder.</p>
 series:
 - type: main
   title:

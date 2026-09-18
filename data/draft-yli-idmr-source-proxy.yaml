@@ -1,4 +1,3 @@
----
 id: draftyliidmrsourceproxy
 schema_version: v1.5.6
 formattedref:
@@ -20,16 +19,22 @@ date:
 abstract:
 - language: en
   script: Latn
-  content: "<p>This memo introduces a multicast source proxy option to the IP \nheader
-    of multicast data in anticipation to improve the \nscalability of dense-mode multicast
-    protocols.\n\nIn case of many-to-many multicast applications, this option will
-    \nenable downstream routers to aggregate (S,G) states consistently. \nThis option
-    will also allow to dynamically re-root subset of \nmulticast distribution tree
-    as required.\n\nThis option will enable an MOSPF domain to function as a transit
-    \ndomain. For each aggregation source network S/mask, this option \nallows internal
-    MOSPF routers to create a default state (S/mask, *), \nwhose forwarding decision
-    maps to (ASBR, *). All multicast data for \ngroup without internal membership
-    will be forwarded in accordance \nwith the default state.</p>"
+  content: |-
+    <p>This memo introduces a multicast source proxy option to the IP 
+    header of multicast data in anticipation to improve the 
+    scalability of dense-mode multicast protocols.
+
+    In case of many-to-many multicast applications, this option will 
+    enable downstream routers to aggregate (S,G) states consistently. 
+    This option will also allow to dynamically re-root subset of 
+    multicast distribution tree as required.
+
+    This option will enable an MOSPF domain to function as a transit 
+    domain. For each aggregation source network S/mask, this option 
+    allows internal MOSPF routers to create a default state (S/mask, *), 
+    whose forwarding decision maps to (ASBR, *). All multicast data for 
+    group without internal membership will be forwarded in accordance 
+    with the default state.</p>
 relation:
 - type: includes
   bibitem:

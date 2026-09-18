@@ -1,10 +1,8 @@
----
 id: RFC8361
 schema_version: v1.5.6
 type: standard
 title:
-- content: 'Transparent Interconnection of Lots of Links (TRILL): Centralized Replication
-    for Active-Active Broadcast, Unknown Unicast, and Multicast (BUM) Traffic'
+- content: 'Transparent Interconnection of Lots of Links (TRILL): Centralized Replication for Active-Active Broadcast, Unknown Unicast, and Multicast (BUM) Traffic'
   type: main
 source:
 - type: src
@@ -156,20 +154,7 @@ script:
 abstract:
 - language: en
   script: Latn
-  content: "<p>In Transparent Interconnection of Lots of Links (TRILL) active-active
-    access, a Reverse Path Forwarding (RPF) check failure issue may occur when using
-    the pseudo-nickname mechanism specified in RFC 7781.  This document describes
-    a solution to resolve this RPF check failure issue through centralized replication.
-    \ All ingress Routing Bridges (RBridges) send Broadcast, Unknown Unicast, and
-    Multicast (BUM) traffic to a centralized node with unicast TRILL encapsulation.
-    \ When the centralized node receives the BUM traffic, it decapsulates the packets
-    and forwards them to their destination RBridges using a distribution tree established
-    per the TRILL base protocol (RFC 6325).  To avoid RPF check failure on an RBridge
-    sitting between the ingress RBridge and the centralized replication node, some
-    change in the RPF calculation algorithm is required.  RPF checks on each RBridge
-    MUST be calculated as if the centralized node was the ingress RBridge, instead
-    of being calculated using the actual ingress RBridge.  This document updates RFC
-    6325.</p>"
+  content: "<p>In Transparent Interconnection of Lots of Links (TRILL) active-active access, a Reverse Path Forwarding (RPF) check failure issue may occur when using the pseudo-nickname mechanism specified in RFC 7781.  This document describes a solution to resolve this RPF check failure issue through centralized replication.  All ingress Routing Bridges (RBridges) send Broadcast, Unknown Unicast, and Multicast (BUM) traffic to a centralized node with unicast TRILL encapsulation.  When the centralized node receives the BUM traffic, it decapsulates the packets and forwards them to their destination RBridges using a distribution tree established per the TRILL base protocol (RFC 6325).  To avoid RPF check failure on an RBridge sitting between the ingress RBridge and the centralized replication node, some change in the RPF calculation algorithm is required.  RPF checks on each RBridge MUST be calculated as if the centralized node was the ingress RBridge, instead of being calculated using the actual ingress RBridge.  This document updates RFC 6325.</p>"
 status:
   stage:
     content: PROPOSED STANDARD

@@ -1,4 +1,3 @@
----
 id: draftbormannjwpmodularbbs
 schema_version: v1.5.6
 formattedref:
@@ -9,14 +8,14 @@ title:
   content: BBS and Modular Sub-proofs with JSON Web Proofs
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-bormann-jwp-modular-bbs-02
+  content: https://datatracker.ietf.org/doc/html/draft-bormann-jwp-modular-bbs-03
 docidentifier:
 - content: draft-bormann-jwp-modular-bbs
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-03'
+  at: '2026-09-18'
 abstract:
 - language: en
   script: Latn
@@ -27,10 +26,11 @@ abstract:
        zero-knowledge sub-proofs.  This allows a Holder to reveal some
        attributes directly while proving predicates such as range or
        equality over the ones they keep hidden.  A credential can
-       additionally be bound to an ECDSA P-256 device key, with possession
-       of the key proven in every presentation without revealing the public
-       key.  The credential type definition and data model follow SD-JWT VC
-       [I-D.ietf-oauth-sd-jwt-vc].</p>
+       additionally be bound to a Holder-held device key, with possession of
+       the key proven in every presentation without revealing the public key
+       or signature.  Concrete sub-proof and device-binding constructions
+       are not defined in this document, only the core serialization.  The
+       credential type definition and data model follow SD-JWT VC.</p>
 relation:
 - type: includes
   bibitem:
@@ -63,6 +63,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-bormann-jwp-modular-bbs-02
     docidentifier:
     - content: draft-bormann-jwp-modular-bbs-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bormann-jwp-modular-bbs-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bormann-jwp-modular-bbs-03
+    docidentifier:
+    - content: draft-bormann-jwp-modular-bbs-03
       type: Internet-Draft
       primary: true
 ext:

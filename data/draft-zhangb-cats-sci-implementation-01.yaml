@@ -1,0 +1,157 @@
+id: draftzhangbcatssciimplementation01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: CATS Service Contact Instance Functional Implementation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-sci-implementation-01
+docidentifier:
+- content: draft-zhangb-cats-sci-implementation
+  type: Internet-Draft
+- content: draft-zhangb-cats-sci-implementation-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhangb-cats-sci-implementation
+date:
+- type: published
+  at: '2026-09-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bin
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Bin Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bowen
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Shen
+      completename:
+        language: en
+        content: Bowen Shen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Harbin Institute of Technology
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yixuan
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Yixuan Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sun Yat-sen University
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Computing-Aware Traffic Steering (CATS) framework
+       [I-D.ietf-cats-framework] introduces the concept of a Service Contact
+       Instance (SCI) as the client-facing entity responsible for receiving
+       and dispatching service requests.  While the framework and the CATS
+       metric documents define the components and the metrics, the concrete
+       observable behavior of a Service Contact Instance - in particular,
+       what it reports to the CATS Service Metric Agent (C-SMA), when it
+       reports, and how service-instance health changes are reflected in the
+       reported metrics - remains underspecified.
+
+       This document fills that gap.  It specifies the functional behavior
+       of a CATS Service Contact Instance in terms of observable behavior
+       and reporting semantics: how an SCI aggregates instance-level
+       information into service-oriented metrics (e.g., Global Available
+       Slots and Computing Time) as defined in
+       [I-D.zhangb-cats-service-metrics-op]; how it monitors the health and
+       status of underlying service instances and adjusts reported metrics
+       accordingly; how it maintains affinity and handles failure scenarios;
+       and how it reports metrics and status updates to the C-SMA, including
+       update policies and threshold-based triggers.  A decomposition of the
+       SCI into internal functional components is provided as illustrative
+       implementation guidance, not as a mandated software architecture.
+
+       This document complements [I-D.ietf-cats-framework],
+       [I-D.ietf-cats-metric-definition-11], and
+       [I-D.zhangb-cats-service-metrics-op] by providing the operational
+       execution layer for the SCI within the unified CATS architecture.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-sci-implementation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-sci-implementation-00
+    docidentifier:
+    - content: draft-zhangb-cats-sci-implementation-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhangb-cats-sci-implementation-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,4 +1,3 @@
----
 id: draftzhangbcatssciimplementation
 schema_version: v1.5.6
 formattedref:
@@ -9,36 +8,45 @@ title:
   content: CATS Service Contact Instance Functional Implementation
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-sci-implementation-00
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-sci-implementation-01
 docidentifier:
 - content: draft-zhangb-cats-sci-implementation
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-26'
+  at: '2026-09-18'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>The Computing-Aware Traffic Steering (CATS) framework introduces the
-       concept of a Service Contact Instance (SCI) as the client-facing
-       entity responsible for receiving and dispatching service requests.
-       While existing drafts define the framework and metrics, the concrete
-       functional behavior of a Service Contact Instance remains
-       underspecified.
+    <p>The Computing-Aware Traffic Steering (CATS) framework
+       [I-D.ietf-cats-framework] introduces the concept of a Service Contact
+       Instance (SCI) as the client-facing entity responsible for receiving
+       and dispatching service requests.  While the framework and the CATS
+       metric documents define the components and the metrics, the concrete
+       observable behavior of a Service Contact Instance - in particular,
+       what it reports to the CATS Service Metric Agent (C-SMA), when it
+       reports, and how service-instance health changes are reflected in the
+       reported metrics - remains underspecified.
 
-       This document fills that gap by defining the functional
-       implementation of a CATS Service Contact Instance.  Specifically, it
-       specifies how an SCI collects, aggregates, and reports service
-       instance metrics to the CATS Service Metric Agent (C-SMA); how it
-       monitors the health and status of underlying service instances; how
-       it dispatches client requests to the most appropriate service
-       instance based on local policy and real-time conditions; and how it
-       maintains affinity and handles failure scenarios.  This document
-       complements [I-D.ietf-cats-framework] and
+       This document fills that gap.  It specifies the functional behavior
+       of a CATS Service Contact Instance in terms of observable behavior
+       and reporting semantics: how an SCI aggregates instance-level
+       information into service-oriented metrics (e.g., Global Available
+       Slots and Computing Time) as defined in
+       [I-D.zhangb-cats-service-metrics-op]; how it monitors the health and
+       status of underlying service instances and adjusts reported metrics
+       accordingly; how it maintains affinity and handles failure scenarios;
+       and how it reports metrics and status updates to the C-SMA, including
+       update policies and threshold-based triggers.  A decomposition of the
+       SCI into internal functional components is provided as illustrative
+       implementation guidance, not as a mandated software architecture.
+
+       This document complements [I-D.ietf-cats-framework],
+       [I-D.ietf-cats-metric-definition-11], and
        [I-D.zhangb-cats-service-metrics-op] by providing the operational
-       execution layer for the SCI.</p>
+       execution layer for the SCI within the unified CATS architecture.</p>
 relation:
 - type: includes
   bibitem:
@@ -49,6 +57,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-sci-implementation-00
     docidentifier:
     - content: draft-zhangb-cats-sci-implementation-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-sci-implementation-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-sci-implementation-01
+    docidentifier:
+    - content: draft-zhangb-cats-sci-implementation-01
       type: Internet-Draft
       primary: true
 ext:
