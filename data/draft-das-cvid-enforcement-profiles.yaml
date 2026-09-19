@@ -8,26 +8,55 @@ title:
   content: 'Capability-Validated Inbound Descriptors: Catalogue of Enforcement Profiles'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-cvid-enforcement-profiles-00
+  content: https://datatracker.ietf.org/doc/html/draft-das-cvid-enforcement-profiles-01
 docidentifier:
 - content: draft-das-cvid-enforcement-profiles
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-13'
+  at: '2026-09-19'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>A destination identifier, an API credential, a completed computation,
-       and an attested execution environment are each routinely treated as
-       if they carried authority for consequence.  This document argues that
-       none of them does, and catalogues fifty-nine enforcement profiles of
-       the Capability-Validated Inbound Descriptor (CVID) architecture, in
-       which an attempted act is a Candidate Act with no external effect
-       until a protected enforcement domain validates a conjunctive
-       predicate set and releases the capability the effect requires.
+    <p>Modern networks, AI systems, cloud platforms, vehicles, radios,
+       accelerators, and control systems often authenticate a requester,
+       authorize access, attest a workload, or complete a computation before
+       the resulting operation reaches the component that can make it
+       externally effective.  Those checks are necessary, but an earlier
+       approval can become stale, be replayed, be applied to changed
+       parameters, or be exercised through a different consequence path.
+       This document describes seventy-seven enforcement profiles for a
+       common engineering pattern: keep a pending operation in a non-
+       effective or inhibited state until a mandatory enforcement point at
+       the actual consequence boundary verifies that the exact live
+       operation still matches current bounded authority.
+
+       The document uses the term Capability-Validated Inbound Descriptor
+       (CVID) for one representation of that bounded machine-verifiable
+       authority.  In ordinary industry terminology, the same function may
+       be implemented as an act-specific authorization descriptor,
+       constrained capability, one-shot permit, transaction authorization,
+       command permit, or protected release token.  The final enforcement
+       role may be implemented as a policy enforcement point, reference
+       monitor, safety interlock, command gate, actuation gate, transaction
+       commit guard, packet-egress gate, RF enable gate, secure resolver,
+       hardware release controller, or another mandatory control point.
+       Functional equivalence depends on the enforced sequence and failure
+       behavior, not on use of a particular name.
+
+       The common sequence is: identify the exact pending act or output;
+       keep it non-effective; bind authority to effect-determining
+       parameters, destination or sink, current generation or policy state,
+       freshness, and bounded-use state; reconstruct or observe the live
+       operation at the consequence boundary; recheck current revocation,
+       replay, quota, and fencing state; and serialize final verification
+       and authority consumption with the consequence-bearing commit.
+       Missing, stale, revoked, replayed, mismatched, exhausted,
+       unavailable, or indeterminate required state leaves the protected
+       consequence unavailable unless an explicitly defined fail-safe
+       profile authorizes a narrower safe action.
 
        The profiles span inbound communication; network capability exposure
        and intent-driven network programming; AI-native radio access,
@@ -37,28 +66,24 @@ abstract:
        to-device networks; optical inter-satellite links; immersive and
        semantic media; machine swarms; ambient IoT and backscatter;
        reconfigurable intelligent surfaces; device paging and wake; offline
-       central bank digital currency settlement; lawful disclosure through
-       escrow; platform neutrality measurement; network energy expenditure;
-       and enforcement in silicon at accelerator output paths, DMA and RDMA
-       boundaries, interconnects, and die-to-die interfaces.
+       central-bank-digital-currency settlement; lawful disclosure through
+       escrow; platform-neutrality measurement; network energy expenditure;
+       accelerator output paths; DMA and RDMA boundaries; interconnects and
+       die-to-die interfaces; eSIM/eUICC activation; subscriber rebinding;
+       roaming; UPF egress; break-glass operation; key use; firmware and
+       model activation; AI memory and vector persistence; agent and tool
+       dispatch; streaming release; cumulative budgets; failover; and
+       maintenance or debug paths.
 
-       Three authorities commonly conflated are separated: authority to
-       consume resources, authority to compute, and authority to cause an
-       external effect.  From that separation follows the treatment of
-       energy as an enforceable security resource rather than only an
-       efficiency metric, with a low-energy admission tier deciding whether
-       a candidate may activate expensive baseband, accelerator, or radio
-       paths at all.  The document compares this position with published 6G
-       energy work from Ericsson, Nokia, Qualcomm, and Huawei, states what
-       the author believes is new, and sets out the limitations of the
-       approach.
-
-       Profiles are reproduced in the structural form in which they were
-       drafted, including system and method variants of the same mechanism.
-       The architecture itself, its terminology, and its protocol mappings
-       are described in a companion document.  This document is published
-       for discussion and comment; it is not a product of an IETF Working
-       Group, and corrections are invited.</p>
+       Three authorities are deliberately separated: authority to consume
+       resources, authority to perform computation, and authority to cause
+       an external effect.  The document is an individual technical
+       submission offered for engineering review.  Existing authentication,
+       authorization, attestation, safety, transaction, and hardware-
+       isolation mechanisms can supply parts of the required enforcement;
+       the architectural delta is the explicit consequence-bound check that
+       keeps the exact pending operation non-effective until current
+       authority is verified at the last mandatory point before effect.</p>
 relation:
 - type: includes
   bibitem:
@@ -69,6 +94,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-cvid-enforcement-profiles-00
     docidentifier:
     - content: draft-das-cvid-enforcement-profiles-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-cvid-enforcement-profiles-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-cvid-enforcement-profiles-01
+    docidentifier:
+    - content: draft-das-cvid-enforcement-profiles-01
       type: Internet-Draft
       primary: true
 ext:

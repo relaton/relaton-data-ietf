@@ -8,14 +8,14 @@ title:
   content: 'Possession Is Not Authority: Execution Handle, Sink Verification, Atomic Consumption, and Finality Receipt'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-execution-handle-01
+  content: https://datatracker.ietf.org/doc/html/draft-das-execution-handle-02
 docidentifier:
 - content: draft-das-execution-handle
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-16'
+  at: '2026-09-18'
 abstract:
 - language: en
   script: Latn
@@ -74,6 +74,20 @@ abstract:
        Encoding profiles are provided for JSON and COSE/CWT; the
        architecture requires the semantics, not one exclusive encoding.
 
+       In conventional engineering terms, the architecture is a consequence-
+       bound policy enforcement point or reference monitor placed at the
+       command/transaction/actuation gate.  It combines cryptographic
+       parameter binding, sink or destination binding, freshness and
+       fencing/generation checks, protected anti-replay state, and a TOCTOU-
+       resistant verify-consume-commit step.  Aerospace and control
+       engineers may recognize the role as a safety interlock or command
+       gate; payment and distributed-systems engineers may recognize
+       transactional authorization plus idempotency/anti-replay state; cloud
+       and hardware-security engineers may recognize a protected reference
+       monitor or egress enforcement boundary.  Different component names or
+       protocol packaging do not change the pattern when the same
+       enforcement sequence and failure semantics are implemented.
+
        Three rejections are expected and are addressed in the body rather
        than dismissed here.  First, a saga, 2PC, or workflow plus ordinary
        tokens already coordinates steps; that coordinator is complementary,
@@ -109,6 +123,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-execution-handle-01
     docidentifier:
     - content: draft-das-execution-handle-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-execution-handle-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-execution-handle-02
+    docidentifier:
+    - content: draft-das-execution-handle-02
       type: Internet-Draft
       primary: true
 ext:

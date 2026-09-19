@@ -8,109 +8,132 @@ title:
   content: 'Secure and Privacy-Preserving AI Interoperability under Article 6(7) of the European Digital Markets Act: An Execution-Finality Architecture'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-04
+  content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-05
 docidentifier:
 - content: draft-das-execution-finality-ai-interoperability
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-11'
+  at: '2026-09-19'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document presents a security- and privacy-preserving execution-
-       finality architecture for third-party AI interoperability under the
-       European Digital Markets Act (DMA).  It is designed to enable
-       meaningful participation by external AI assistants while keeping
-       consequential device actions under bounded, verifiable platform
-       control.
+    <p>AI assistants increasingly interoperate with operating-system
+       functions, applications, cloud services, payments, files, messaging,
+       sensors, network interfaces, and device controls.  In that
+       environment, authenticating an assistant or granting it a broad
+       permission does not by itself answer the final security question:
+       whether this exact pending operation, with these exact parameters and
+       this current system state, is authorized to become externally
+       effective.
 
-       The architecture separates an AI-generated request from the authority
-       to make that request externally effective.  A requested operation
-       remains in a Non-Effective State until protected infrastructure
-       validates the requester, intended resource, destination, user
-       authorization or intent where required, purpose and scope, freshness,
-       revocation state, runtime conditions, and other applicable policy
-       predicates.
+       Existing mechanisms such as operating-system permissions and
+       sandboxing, application intents and typed APIs, OAuth delegated
+       authorization, Rich Authorization Requests, sender-constrained
+       tokens, trusted execution environments, attestation, hardware-backed
+       keys, transaction preconditions, and audit logs address important
+       parts of that problem.  They can also be composed with the
+       architecture described here.  However, those mechanisms do not
+       inherently require the complete sequence defined in this document:
+       keep the proposed act non-effective, bind authority to the exact act
+       and current protected state, re-derive the actual pending consequence
+       at a mandatory effectuation boundary, consume freshness or budget
+       state in a TOCTOU-resistant manner, and deny any alternate path that
+       could cause the same protected effect without the final check.
 
-       After successful validation, the system creates narrowly scoped, non-
-       bearer execution authority bound to the specific Candidate Act. At
-       the Finality Sink—the first boundary at which the operation can
-       become externally effective—the system independently verifies that
-       the actual operation still matches the validated act and that the
-       authority remains current and unused.
+       This document calls the staged operation a Candidate Act and the pre-
+       effect condition the Non-Effective State.  A Protected Execution
+       Domain performs protected validation and may commit pre-effect
+       validation evidence, including a LAVR.  It then makes available
+       narrowly scoped, non-bearer execution authority bound to the exact
+       act, requester, resource, destination, policy and revocation epoch,
+       freshness state, Finality Sink, and Effectuation Boundary.  The
+       Finality Sink is the mandatory policy-enforcement or command/commit
+       gate that independently reconstructs the actual operation immediately
+       before the consequence can occur.
 
-       This design is intended to address major security risks associated
-       with AI interoperability, including prompt injection, compromised
-       assistant or cloud infrastructure, confused-deputy behavior, replay,
-       token theft or reuse, destination or parameter substitution, scope
-       escalation, stale authorization, alternate-path bypass, and
-       unauthorized consequential execution.
+       In conventional security and control terminology, the architecture
+       combines properties associated with a reference monitor, policy
+       enforcement point, safety interlock, command gate, actuation gate,
+       transactional authorization check, cryptographic parameter binding,
+       proof-of-possession or sender-constrained authority, anti-replay
+       state, fencing or generation epochs, bounded capabilities, and a
+       TOCTOU-resistant check-and-commit operation.  The terminology is not
+       intended to require one component name, protocol, hardware block, or
+       packaging model; functional equivalence depends on the enforcement
+       sequence and invariants.
 
-       It also supports privacy protections by limiting access and
-       effectuation to the minimum act-specific scope, reducing dependence
-       on broad reusable permissions, preserving revocation and user-control
-       boundaries, and preventing data release or transmission when the
-       protected validation conditions are not satisfied.
+       The design addresses prompt injection, compromised assistants or
+       cloud infrastructure, confused-deputy behavior, replay, token theft
+       or reuse, destination and parameter substitution, scope escalation,
+       stale authorization, policy or revocation changes, wrong-sink
+       presentation, alternate-path bypass, crash ambiguity, persistent-
+       state rollback, and unauthorized consequential execution.  It also
+       supports privacy minimization by allowing a platform to expose a
+       narrow act without granting reusable authority over an entire
+       application or data class.
 
-       The resulting model is open participation with bounded, verifiable
-       authority: third-party AI systems may interoperate with device
-       functions without receiving unrestricted final-effect authority,
-       while the platform retains protected enforcement over whether a
-       proposed action is permitted to become externally effective.
+       For interoperability deployments, the intended result is open
+       participation with bounded, verifiable effectuation authority: a
+       third-party or first-party AI may propose the same class of device or
+       service action, while the platform or service independently enforces
+       whether the concrete action may cross the protected consequence
+       boundary.  This document describes a technical architecture and does
+       not determine whether a particular deployment satisfies the Digital
+       Markets Act, GDPR, the EU AI Act, or any other legal requirement.
 
-       The length of this document is intentional.  It aims to work through
-       the major security- and privacy-related objections associated with
-       third-party AI interoperability at a technical level of detail
-       sufficient to show that they are addressed, rather than merely
-       asserted, and reviewers are welcome to engage with any section on its
-       own merits.
+       The same engineering question is relevant beyond any single assistant
+       or mobile platform.  Representative current interoperability contexts
+       include Google Gemini on Android, where Gemini can operate as a
+       default digital assistant and Android exposes device-assistance
+       functions and AppFunctions-style application capabilities for use by
+       agents and assistants, including MCP-oriented integrations; Apple's
+       iOS and iPadOS interoperability-request process in the European Union
+       under DMA Article 6(7), together with the public Siri AI
+       interoperability and security discussion; European AI-assistant and
+       agent ecosystems including Mistral Vibe in France, Deutsche Telekom's
+       Magenta AI Call Assistant in Germany, Proton Lumo in Switzerland, and
+       Infomaniak Euria in Switzerland; and public agent and tool ecosystems
+       associated with OpenAI, Anthropic, Microsoft, and Amazon Web Services
+       (AWS), which connect AI systems to external tools, applications,
+       APIs, data sources, cloud services, communications, or other agents
+       through mechanisms such as tool calling, agent frameworks, the Model
+       Context Protocol (MCP), Agent2Agent (A2A), and related integration
+       interfaces.  The named systems are not asserted to provide identical
+       capabilities: some are operating-system or device assistants, some
+       are communications-integrated assistants, and others are broader
+       conversational or agent platforms.  They are referenced only as
+       representative industry contexts in which act-specific authority and
+       effectuation-boundary enforcement may be relevant; no review,
+       endorsement, adoption, affiliation, or absence of equivalent
+       safeguards is implied.
 
-       In June 2026, Apple announced that it would not ship its new Siri AI
-       on iOS 27 and iPadOS 27 in the European Union, stating that EU
-       regulators had not accepted its proposed interoperability safeguards
-       and that granting third-party assistants access equivalent to Siri's
-       created unacceptable security and privacy exposure.  The European
-       Commission responded that nothing in the DMA itself required Apple to
-       withhold the feature, describing Apple's decision as a voluntary
-       business choice rather than a legal necessity, and noting that Apple
-       had requested a blanket exemption rather than submitting a compliant
-       technical mechanism.  Both positions are correct within their own
-       frame: Apple's underlying security concern about undifferentiated
-       third-party system access is real, and the Commission is also correct
-       that the DMA does not itself compel a trade-off between
-       interoperability and security.  This document's execution-finality
-       architecture is offered as the middle solution by which both can be
-       satisfied simultaneously: third-party AI assistants gain the
-       interoperability the DMA requires, while the platform retains the
-       bounded, verifiable finality control that Apple's objection is
-       actually about.  To show this is not only a theoretical proposal, a
-       runnable reference implementation of this architecture has been
-       published, demonstrating how the design behaves end to end in a
-       virtual/test environment (note: behavior and measurements in an
-       actual production environment may differ).
+       The June 2026 Siri AI dispute provides one public example of the
+       underlying engineering tension.  Apple stated
+       (https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-
+       in-eu-for-ios-27-and-ipados-27/) that Siri AI would not initially
+       ship on iOS 27 and iPadOS 27 in the European Union and attributed the
+       delay to DMA interoperability and privacy/security concerns.  The
+       European Commission publicly stated (https://digital-markets-
+       act.ec.europa.eu/citizens-and-whistleblower-portal/eu-citizens-qa_en)
+       that the DMA does not prohibit the product launch and that
+       interoperability may be implemented subject to applicable
+       requirements and user consent.  This document does not resolve those
+       legal or policy positions; it uses the dispute as a concrete
+       interoperability threat-model example and proposes one technical
+       pattern for separating access to request functionality from authority
+       to create the final effect.
 
-       A note for reviewers: the length of this document is deliberate.
-       More than sixty technical questions are answered in question-and-
-       answer form, covering anticipated security, privacy, deployment, and
-       standardisation objections as well as performance, scalability, and
-       hardware enforcement.  To show that the architecture is intended to
-       be implementable and not only a paper proposal, two runnable open-
-       source reference implementations are also referenced: the initial
-       demonstrator, and an adversarially hardened follow-on that adds live
-       challenge-bound finality, strict object verification, cross-object
-       consistency checks, and 100 executable tests.  The latest
-       implementation is available in the Hardened Challenge-Bound
-       Execution-Finality Reference Implementation repository
-       (https://github.com/sangmdas/Hardened-Challenge-Bound-Execution-
-       Finality-for-AI-Interoperability).  Both implementations were
-       exercised in a virtual/local test environment, and actual readings
-       may vary in separate environments; they are offered as evidence of
-       engineering feasibility rather than as production-certified software.
-       Critical review of both the document and the code is sincerely
-       welcomed.</p>
+       Two runnable reference implementations are linked in this document.
+       The second is an adversarially hardened follow-on that adds a fresh
+       Finality-Sink challenge, challenge-bound proof of possession, strict
+       object validation, cross-object consistency checks, explicit temporal
+       enforcement, exact-effect binding, and an expanded executable test
+       suite.  These implementations are engineering demonstrations in
+       virtual/local environments, not production certification or
+       regulatory-conformance determinations.</p>
 relation:
 - type: includes
   bibitem:
@@ -165,6 +188,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-04
     docidentifier:
     - content: draft-das-execution-finality-ai-interoperability-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-execution-finality-ai-interoperability-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-execution-finality-ai-interoperability-05
+    docidentifier:
+    - content: draft-das-execution-finality-ai-interoperability-05
       type: Internet-Draft
       primary: true
 ext:

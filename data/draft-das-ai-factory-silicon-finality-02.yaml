@@ -1,0 +1,156 @@
+id: draftdasaifactorysiliconfinality02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Execution Finality for AI-Factory Silicon and Accelerated Infrastructure: Enforcement Profiles for GPUs, Chiplets, Memory Fabrics, DPUs, RDMA, CXL, and Photonic Boundaries'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-ai-factory-silicon-finality-02
+docidentifier:
+- content: draft-das-ai-factory-silicon-finality
+  type: Internet-Draft
+- content: draft-das-ai-factory-silicon-finality-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.das-ai-factory-silicon-finality
+date:
+- type: published
+  at: '2026-09-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sangam
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Das
+      completename:
+        language: en
+        content: Sangam Das
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>AI factories and AI-native infrastructure are heterogeneous control
+       systems in which CPUs, GPUs, NPUs, memory controllers, CXL and PCIe
+       paths, DMA and RDMA engines, DPUs, SmartNICs, accelerator fabrics,
+       chiplets, storage, optical interconnects, model-serving runtimes,
+       schedulers, firmware, and physical power or cooling controllers can
+       all participate in one consequential operation.  Existing industry
+       mechanisms such as authentication, access control, workload identity,
+       attestation, confidential computing, IOMMU/SMMU isolation, memory
+       protection, transport security, scheduler policy, safety logic, and
+       hardware roots of trust are necessary building blocks, but they do
+       not by themselves define one common rule for whether the exact
+       pending operation is still authorized at the instant and location
+       where it becomes effective.
+
+       This document describes that missing effectuation-boundary rule.  In
+       plain engineering terms, the architecture holds a consequential
+       operation in a pending or inhibited state, identifies the exact
+       command, transfer, route, memory range, output, configuration change,
+       or actuation request, validates current authority and protected
+       state, binds a narrowly scoped authorization artifact to those exact
+       parameters and to the intended enforcement boundary, and requires the
+       boundary that physically or logically controls the consequence to
+       verify the binding before commit.  The boundary therefore acts like a
+       policy enforcement point, reference monitor, transaction-commit gate,
+       command gate, safety interlock, actuation gate, output-release gate,
+       or hardware admission controller, depending on the deployment domain.
+
+       The document uses the specialized terms Candidate Act, Non-Effective
+       State, Protected Enforcement Domain, Protected Validation Evidence,
+       scoped non-bearer capability, and Finality Sink.  These terms name
+       functions rather than required products or protocol objects.
+       Equivalent implementations may instead use concepts such as a staged
+       transaction, command descriptor, authorization decision record,
+       sender-constrained or context-bound permit, anti-replay state,
+       generation or fencing epoch, compare-and-swap style commit, fail-safe
+       inhibit, or transactional check-and-commit.  The functional
+       requirement is that the actual pending effect cannot complete through
+       the protected path unless the exact act, current state, freshness,
+       scope, destination, and effectuation boundary still correspond.
+
+       The Finality Sink is the component with mandatory control over the
+       consequence.  Depending on the profile, it may be a memory
+       controller, HBM gate, GPU scheduler, accelerator partition
+       controller, IOMMU or SMMU, DMA or RDMA engine, DPU or SmartNIC,
+       fabric switch, chiplet link controller, CXL component, cache-
+       coherence controller, model loader, token-emission gate, optical
+       modulator or wavelength controller, eFPGA configuration gate, rack
+       power controller, radio-control path, or another protected commit
+       point.  Physical separation from the compute component is not
+       required; mandatory mediation and protected verification are
+       required.
+
+       The document provides 98 detailed Enforcement Profiles.  Sixty-three
+       translate the supplied GPU, silicon, chiplet, memory-fabric, and AI-
+       factory source set; twelve supplementary profiles map the same
+       execution-finality model onto current hyperscale and Arm-based
+       infrastructure directions; eight additional profiles selectively
+       adapt non-duplicative mechanisms from companion DAS Protocols
+       disclosures for silicon and AI-factory use; and fifteen profiles
+       address electrical package-I/O, sideband, error, test, and coherence-
+       transition boundaries.  Profile identifiers retain source numbering
+       for traceability, so gaps are intentional.
+
+       The architecture is intended to complement, not replace, accelerated
+       computing, confidential computing, chiplet and coherent-memory
+       protocols, accelerator fabrics, optical I/O, attestation, identity,
+       authorization, hardware isolation, safety engineering, and existing
+       control systems.  The IETF relevance is principally the cross-layer
+       relationship among identity, evidence, attestation, cryptographic
+       binding, protected state, replay resistance, delegation, and the
+       final effectuation boundary.  Hardware-specific wire protocols remain
+       within the remit of the appropriate hardware, semiconductor,
+       telecommunications, optical, automotive, aerospace, and control-
+       system standards bodies.  The common invariant is: computation may
+       produce a proposed act, but computation alone is not authority for
+       consequence.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-das-ai-factory-silicon-finality-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-ai-factory-silicon-finality-01
+    docidentifier:
+    - content: draft-das-ai-factory-silicon-finality-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-das-ai-factory-silicon-finality-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
