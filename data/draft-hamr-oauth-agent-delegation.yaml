@@ -8,30 +8,33 @@ title:
   content: An Attenuated Delegation Profile for Automated Agents
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hamr-oauth-agent-delegation-01
+  content: https://datatracker.ietf.org/doc/html/draft-hamr-oauth-agent-delegation-02
 docidentifier:
 - content: draft-hamr-oauth-agent-delegation
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-02'
+  at: '2026-09-20'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies a profile for delegating authorization to
-       automated agents across administrative domains.  It defines an HTTP
-       header field, Agent-Delegation, that carries a chain of attenuated
-       delegation links.  Each link narrows the scope, tightens or holds a
-       set of floor conditions, and shortens or holds the expiry of its
-       parent.  A verifier checks every link in the chain, not only the
-       last, and rejects the chain if any link violates attenuation.  The
-       profile is deliberately agnostic to the credential format and to the
-       nature of the entity that issues floor attestations; it specifies
-       required properties, not a specific encoding or a specific kind of
-       issuer.  It composes with, and does not replace, existing work on
-       agent credential provisioning and posture.</p>
+    <p>This document builds on HTTP Message Signatures (RFC 9421) for
+       requests that automated agents send on behalf of people.  RFC 9421
+       shows who signed a request.  It does not show who the agent acts for,
+       or what the agent may do.  This document defines an HTTP header
+       field, Agent-Delegation, that carries a chain of delegation links.
+       Each link can only narrow the scope, floors, and expiry of the link
+       before it, and a verifier checks every link.  Floors cover two
+       things.  The first is the person or account behind the agent: an
+       Attestation Issuer, such as a mobile network operator or an identity-
+       document check, answers with a signed yes or no, bound to the
+       verifier's nonce and to an expiry, and never returns the value behind
+       the answer.  The second is what the agent may do: each call has a
+       class, r, w, or x, with an optional count per class, and a signed
+       menu gives the class of each call.  This document does not define a
+       credential format, an identity system, or revocation.</p>
 relation:
 - type: includes
   bibitem:
@@ -53,6 +56,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hamr-oauth-agent-delegation-01
     docidentifier:
     - content: draft-hamr-oauth-agent-delegation-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hamr-oauth-agent-delegation-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hamr-oauth-agent-delegation-02
+    docidentifier:
+    - content: draft-hamr-oauth-agent-delegation-02
       type: Internet-Draft
       primary: true
 ext:
