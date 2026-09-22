@@ -8,33 +8,34 @@ title:
   content: Workload Authorization Grant
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-00
+  content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-01
 docidentifier:
 - content: draft-carleton-workload-authz-grant
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-03'
+  at: '2026-09-22'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document profiles the Agent Identity Management System (AIMS)
-       framework for agent platforms that host many agent instances per
-       customer.  Each agent is identified by an opaque, non-reassignable
-       agent identifier; the agent obtains access tokens by presenting a JWT
-       authorization grant (RFC 7523), signed by the platform's per-tenancy
-       issuer, in the assertion parameter at the authorization server
-       protecting the resource server.  Trust is established once, by
-       reference to the issuer's published metadata and keys; agent creation
-       requires no per-agent step at the authorization server or resource
-       server; and authorization is expressed over platform-asserted agent
-       properties that resource servers map locally to permissions.  This
-       profile addresses agents acting on their own behalf; access on behalf
-       of a user or other principal is out of scope, though the design is
-       intended to compose with existing delegation mechanisms in which the
-       agent appears as the actor.</p>
+    <p>This document defines the Workload Authorization Grant (WAG), by
+       which a workload hosted on a platform -- an AI agent is the
+       motivating case -- obtains access tokens from a third party's OAuth
+       authorization server without requiring an administrator to perform a
+       per-workload provisioning step.  Each workload is identified by an
+       opaque identifier that is never reassigned.  The platform signs a JWT
+       authorization grant ([RFC7523]) that names one workload, and the
+       workload presents it at the token endpoint of an authorization server
+       that has been configured, once, to trust that platform.  The
+       authorization server does not reject a workload because it has not
+       seen it before.  The workload's access is determined by the
+       authorization server's own policy, which may consult claims the
+       platform asserts about the workload.  This document covers workloads
+       acting on their own behalf.  Access on behalf of a user or other
+       principal is out of scope, though the grant is intended to compose
+       with delegation mechanisms in which the workload is the actor.</p>
 relation:
 - type: includes
   bibitem:
@@ -45,6 +46,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-00
     docidentifier:
     - content: draft-carleton-workload-authz-grant-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-carleton-workload-authz-grant-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-01
+    docidentifier:
+    - content: draft-carleton-workload-authz-grant-01
       type: Internet-Draft
       primary: true
 ext:
