@@ -6,26 +6,29 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Authenticated Transfer: Repository'
+  content: 'Authenticated Transfer: Repository and Synchronization'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-holmgren-at-repository-02
+  content: https://datatracker.ietf.org/doc/html/draft-holmgren-at-repository-03
 docidentifier:
 - content: draft-holmgren-at-repository
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-04'
+  at: '2026-09-23'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies a repository data structure for storage and
-       transfer of public user data records as part of the Authenticated
-       Transfer Protocol (ATP).  It describes encoding formats for both
-       individual data records and entire repositories.  The repository data
-       structure is content-addressable and cryptographically authenticated.</p>
+    <p>This document specifies a repository data structure and
+       synchronization mechanisms for public data as part of the
+       Authenticated Transfer Protocol (ATP).  It describes encoding formats
+       for both individual data records and entire repositories.  The
+       repository data structure is content-addressable and
+       cryptographically authenticated.  For synchronization, it specifies
+       both a low-latency streaming protocol over WebSocket, and a full-
+       repository fetch mechanism over HTTP.</p>
 relation:
 - type: includes
   bibitem:
@@ -58,6 +61,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-holmgren-at-repository-02
     docidentifier:
     - content: draft-holmgren-at-repository-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-holmgren-at-repository-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-holmgren-at-repository-03
+    docidentifier:
+    - content: draft-holmgren-at-repository-03
       type: Internet-Draft
       primary: true
 ext:

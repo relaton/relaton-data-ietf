@@ -1,0 +1,127 @@
+---
+id: draftvandemeentupipprocessintegrity02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'UPIP: Universal Process Integrity Protocol with Task Capsules, Work Corridors, and Fork Tokens'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vandemeent-upip-process-integrity-02
+docidentifier:
+- content: draft-vandemeent-upip-process-integrity
+  type: Internet-Draft
+- content: draft-vandemeent-upip-process-integrity-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vandemeent-upip-process-integrity
+date:
+- type: published
+  at: '2026-09-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jasper
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: van de Meent
+      completename:
+        language: en
+        content: Jasper van de Meent
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Humotica
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Root
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: AI
+      completename:
+        language: en
+        content: Root AI
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Humotica
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines UPIP (Universal Process Integrity Protocol), a
+       five-layer protocol for capturing, verifying, and reproducing
+       computational processes across machines, actors, and trust domains.
+       UPIP defines a cryptographic hash chain over five layers: STATE
+       (input), DEPS (dependencies), PROCESS (execution), RESULT (output),
+       and VERIFY (cross- machine proof).  The stack hash chains these
+       layers, ensuring that modification of any component is detectable.
+
+       This document also defines continuation artifacts: Task Capsules,
+       Work Corridors, and Fork Tokens.  A task capsule carries a bounded
+       process blueprint and evidence context.  A work corridor names a
+       bounded continuation window.  A fork token freezes the UPIP stack at
+       a specific point and transfers it to another actor with cryptographic
+       chain of custody.  The receiving actor can verify what was handed
+       off, validate capabilities, and continue the process with full
+       provenance.
+
+       UPIP integrates with TIBET [TIBET] for provenance tokens, JIS [JIS]
+       for actor identity, AINS [AINS] for discovery, and RVP [RVP] for
+       presence evidence.  UPIP is transport-agnostic with JSON as the
+       baseline serialization.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-vandemeent-upip-process-integrity-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vandemeent-upip-process-integrity-01
+    docidentifier:
+    - content: draft-vandemeent-upip-process-integrity-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vandemeent-upip-process-integrity-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -9,14 +9,14 @@ title:
   content: 'The verification.* Constraint Family: Pre-Action Fail-Closed Gates for AI Agent Decisions'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-krausz-verification-state-01
+  content: https://datatracker.ietf.org/doc/html/draft-krausz-verification-state-02
 docidentifier:
 - content: draft-krausz-verification-state
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-12'
+  at: '2026-09-23'
 abstract:
 - language: en
   script: Latn
@@ -24,18 +24,35 @@ abstract:
     <p>This document specifies the verification.* constraint family --- a
        pre-action, fail-closed gate primitive for AI agent decisions,
        sibling in shape to the environment.* family used in Verifiable
-       Intent specifications.  A verification.* receipt is a JWS-signed
-       artifact ([RFC7515]) carrying a canonical input, a derived binary
-       act/halt output, and a versioned mapping identifier that binds them.
-       A relying party recomputes the gate locally from signed primitives
-       under the named mapping; the verifier never trusts the issuer's
-       runtime.  This shape provides decision explainability and
-       traceability evidence aligned with EU AI Act Article 12 record-
-       keeping obligations and with the Decision Explainability tier of
-       Anthropic's Zero Trust for AI Agents framework [ANTHROPIC-ZT].  The
-       format is forward-compatible across mapping revisions: receipts
-       signed under one mapping ID remain verifiable as correct-under-that-
-       mapping after newer mappings ship.</p>
+       Intent specifications.  A verification.* receipt is a JSON Web
+       Signature (JWS) signed artifact carrying a canonical input, a derived
+       binary act/halt output, and a versioned mapping identifier that binds
+       them.  A relying party recomputes the gate locally from signed
+       primitives under the named mapping; the verifier never trusts the
+       issuer's runtime.
+
+       This revision replaces the raw verdict domain of draft-krausz-
+       verification-state-01 (supported/refuted/unverifiable/unknown) with a
+       four-state vocabulary --- verified, contradicted, indeterminate, and
+       not_evaluated --- together with a reason-code mechanism that
+       separates a state's substance from a verifier's own instrument
+       failure, and with an admissibility gate applied before a state is
+       ever assigned.  It adds evidence pinning: a receipt MAY carry an
+       evidence_set block that content-addresses the sources considered
+       during verification, so that a verdict can be recomputed offline from
+       the receipt and the pinned bytes alone, without depending on a live
+       retrieval provider.  Freshness is anchored to the evidence's own
+       retrieved_at timestamp rather than a separately declared validity
+       window.  This shape provides decision explainability and traceability
+       evidence aligned with EU AI Act Article 12 record-keeping obligations
+       and with the Decision Explainability tier of an industry Zero Trust
+       for AI Agents framework published in 2026.  The format is forward-
+       compatible across mapping revisions: receipts signed under one
+       mapping ID remain verifiable as correct-under-that-mapping after
+       newer mappings ship.  The vectors that content-address a mapping
+       document or an evidence set are historical, digest-anchored artifacts
+       and are unchanged by this revision; nothing in this document alters a
+       previously issued digest.</p>
 relation:
 - type: includes
   bibitem:
@@ -57,6 +74,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-krausz-verification-state-01
     docidentifier:
     - content: draft-krausz-verification-state-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-krausz-verification-state-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-krausz-verification-state-02
+    docidentifier:
+    - content: draft-krausz-verification-state-02
       type: Internet-Draft
       primary: true
 ext:
