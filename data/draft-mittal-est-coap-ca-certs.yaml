@@ -1,0 +1,59 @@
+---
+id: draftmittalestcoapcacerts
+schema_version: v1.5.6
+formattedref:
+  content: draft-mittal-est-coap-ca-certs
+title:
+- language: en
+  script: Latn
+  content: Manufacturer-Signed CA Certificate Distribution for EST and EST-coaps Deployments
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mittal-est-coap-ca-certs-00
+docidentifier:
+- content: draft-mittal-est-coap-ca-certs
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-25'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a manufacturer-assisted mechanism for
+       distributing operational certification authority (CA) certificates to
+       devices using Enrollment over Secure Transport (EST) or EST over
+       secure CoAP (EST-coaps).
+
+       The mechanism is intended for deployments in which a device is
+       manufactured before the operational PKI and EST server trust anchors
+       are known.  The device is provisioned during manufacturing with a
+       manufacturer trust anchor.  An operational CA certificate bundle is
+       subsequently signed by the manufacturer, or by a manufacturer-
+       authorized signing authority, and delivered through a manufacturer-
+       specific EST alias.
+
+       The device validates the signed bundle using its manufacturer trust
+       anchor before installing the contained CA certificates as operational
+       trust anchors.  This mechanism is limited to CA certificate bootstrap
+       and does not change EST enrollment semantics, proof-of-possession
+       requirements, certification authority policy, or authenticated EST
+       operation following bootstrap.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mittal-est-coap-ca-certs-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mittal-est-coap-ca-certs-00
+    docidentifier:
+    - content: draft-mittal-est-coap-ca-certs-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
