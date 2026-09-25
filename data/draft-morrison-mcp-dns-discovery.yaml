@@ -9,14 +9,14 @@ title:
   content: Discovery of Model Context Protocol Servers via DNS TXT Records
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-05
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-06
 docidentifier:
 - content: draft-morrison-mcp-dns-discovery
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-22'
+  at: '2026-09-24'
 abstract:
 - language: en
   script: Latn
@@ -39,14 +39,18 @@ abstract:
        on the MCP endpoint is REQUIRED where resolving an envelope and
        opening an MCP session are one recognition transaction.
 
-       This revision (v05) corrects earlier ones and introduces no new
-       mechanism.  It withdraws several claims that v04 could not support,
-       marks publication of a per-individual envelope in DNS as NOT
-       RECOMMENDED on enumeration, size, and erasure grounds, and separates
-       the agent protocol family from the transport binding in the _mcp
-       record, aligning that vocabulary with neighbouring DNS agent-
-       discovery drafts.  All three record formats and all three procedures
-       are given here in full, so no earlier revision need be fetched.
+       This revision (v06) adds a key continuity rule for the _mcp record.
+       It says what a client does when the key it pinned differs from the
+       key DNS now serves, and when the published epoch goes down, neither
+       of which any earlier revision covered.  It also corrects two
+       statements in the Implementation Status section.  Revision 05
+       withdrew several claims that v04 could not support, marked
+       publication of a per-individual envelope in DNS as NOT RECOMMENDED on
+       enumeration, size, and erasure grounds, and separated the agent
+       protocol family from the transport binding in the _mcp record,
+       aligning that vocabulary with neighbouring DNS agent-discovery
+       drafts.  All three record formats and all three procedures are given
+       here in full, so no earlier revision need be fetched.
 
        The mechanism complements HTTPS-based discovery, and follows the
        precedent set by DKIM, SPF, DMARC, and MTA-STS.  Provisional
@@ -117,6 +121,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-05
     docidentifier:
     - content: draft-morrison-mcp-dns-discovery-05
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-morrison-mcp-dns-discovery-06
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-mcp-dns-discovery-06
+    docidentifier:
+    - content: draft-morrison-mcp-dns-discovery-06
       type: Internet-Draft
       primary: true
 ext:

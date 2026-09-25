@@ -1,0 +1,77 @@
+---
+id: draftkazuhoccwgcuback00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'CUBACK: CUBIC Driven by the ACK Clock'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kazuho-ccwg-cuback-00
+docidentifier:
+- content: draft-kazuho-ccwg-cuback
+  type: Internet-Draft
+- content: draft-kazuho-ccwg-cuback-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kazuho-ccwg-cuback
+date:
+- type: published
+  at: '2026-09-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kazuho
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Oku
+      completename:
+        language: en
+        content: Kazuho Oku
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fastly
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Cuback, an ACK-driven reformulation of CUBIC
+       congestion control.  It simplifies implementation by replacing
+       CUBIC's mutable time- and ACK-driven state with pure functions over
+       immutable per-epoch parameters, for which test vectors are provided.
+       Congestion-window growth uses the same ACK-driven mechanism as Reno,
+       removing several sources of implementation error.  When entering a
+       high-capacity path, a newcomer converges on its share sooner than
+       under CUBIC, so short flows complete earlier.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kazuho-ccwg-cuback-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
