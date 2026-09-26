@@ -6,38 +6,36 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'JAC: Declared Dependency Chains for Agent Receipts A JEP/HJS Extension Profile for Chain Infrastructure'
+  content: 'JAC: Declared Dependency Graphs for JEP Events and Receipts'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-wang-jac-02
+  content: https://datatracker.ietf.org/doc/html/draft-wang-jac-03
 docidentifier:
 - content: draft-wang-jac
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-04-29'
+  at: '2026-09-26'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines JAC v0.5, a minimal declared-dependency chain
-       infrastructure for agent and AI-agent receipt systems. JAC is a
-       profile over the Judgment Event Protocol (JEP) and, when AI-agent
-       behavior receipts are used, over HJS. JAC does not define an
-       independent event format, signature syntax, hash format, replay
-       mechanism, identity framework, or governance framework.
-       JAC uses JEP extension fields to bind a signed event or receipt
-       element to a declared parent dependency. The core is intentionally
-       small: a single chain extension records a declared dependency link.
-       Optional extensions can record state declarations, assignment
-       references, handoff references, result references, capability claims,
-       input/output references, and declared chain breaks.
-       JAC provides infrastructure only. It records signed dependency
-       declarations; it does not determine factual causality,
-       responsibility, fault, authorization validity, assignment validity,
-       handoff validity, task correctness, fairness, entitlement, legal
-       effect, or regulatory compliance.</p>
+    <p>This document defines JAC-2, a minimal declared-dependency graph
+       profile for the Judgment Event Protocol (JEP) [JEP].
+
+       JAC-2 binds a signed JEP event to zero or more declared parent
+       dependencies through one critical JEP extension.  JEP Event Identity
+       is used for logical JEP event dependencies; Event Hash is used only
+       when an exact signed artifact must also be pinned.  Digest-addressed
+       receipt or external records can be linked without becoming JEP
+       events.
+
+       JAC-2 defines dependency-link structure, partial-fragment semantics,
+       cycle handling, chain validation checks, and non-inference
+       boundaries.  It does not determine factual causality, responsibility,
+       fault, authorization validity, workflow correctness, legal effect, or
+       regulatory compliance.</p>
 relation:
 - type: includes
   bibitem:
@@ -70,6 +68,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-wang-jac-02
     docidentifier:
     - content: draft-wang-jac-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wang-jac-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-jac-03
+    docidentifier:
+    - content: draft-wang-jac-03
       type: Internet-Draft
       primary: true
 ext:
