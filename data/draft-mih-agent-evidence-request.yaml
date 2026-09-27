@@ -1,0 +1,62 @@
+---
+id: draftmihagentevidencerequest
+schema_version: v1.5.6
+formattedref:
+  content: draft-mih-agent-evidence-request
+title:
+- language: en
+  script: Latn
+  content: An Interaction Model for Requesting Verifiable Evidence
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mih-agent-evidence-request-00
+docidentifier:
+- content: draft-mih-agent-evidence-request
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-26'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Parties increasingly need to request verifiable evidence from a
+       counterparty they do not trust — an audit trail, an interaction
+       history, an account of actions taken — and to receive an answer they
+       can check rather than believe.  Evidence formats for the answer
+       exist; the ask has no standard shape, and today one system's silence,
+       another's error, and a third's stale cache are indistinguishable to a
+       relying party.  This document defines a transport-agnostic request/
+       response interaction for verifiable evidence: a request that names
+       its subject and a coverage anchor, and a set of possible outcomes
+       that is exactly one of three things — the evidence artifact, a signed
+       refusal carrying a machine-readable reason, or a recorded absence.
+       The interaction makes asking, granting, and refusing each
+       attributable and checkable, and requires that the same subject under
+       the same coverage yield a byte-identical artifact for every
+       requester.  The interaction is symmetric: any party to a recorded
+       exchange may ask the other, anchored on its own record of that
+       exchange.  A responder may additionally commit, in a signed
+       statement, to keep a subject answerable until a stated time, so that
+       a later absence is attributable rather than merely recorded.  The
+       document deliberately defines no evidence format, no identity or
+       principal scheme, no trust policy, no availability guarantee, and no
+       rule about who may ask.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mih-agent-evidence-request-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mih-agent-evidence-request-00
+    docidentifier:
+    - content: draft-mih-agent-evidence-request-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

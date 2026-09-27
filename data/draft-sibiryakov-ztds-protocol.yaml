@@ -9,32 +9,35 @@ title:
   content: The Zero-Trust Data Sanitization (ZTDS) Protocol for Frontier Artificial Intelligence Ingestion
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-sibiryakov-ztds-protocol-01
+  content: https://datatracker.ietf.org/doc/html/draft-sibiryakov-ztds-protocol-02
 docidentifier:
 - content: draft-sibiryakov-ztds-protocol
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-23'
+  at: '2026-09-26'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies the Zero-Trust Data Sanitization (ZTDS)
-       protocol, an architectural framework and execution standard designed
-       to eliminate personally identifiable information (PII), protected
-       health information (PHI), payment card data, and corporate
-       credentials from unstructured text payloads prior to ingestion by
-       remote Large Language Models (LLMs) and autonomous AI agents.
+    <p>Zero-Trust Data Sanitization (ZTDS) defines a formal architectural
+       standard and execution protocol for client-side, in-memory de-
+       identification and re-identification across Generative Artificial
+       Intelligence (GenAI), Retrieval-Augmented Generation (RAG), and
+       autonomous agent workflows.
 
-       ZTDS enforces strict in-memory execution within volatile Random
-       Access Memory (RAM), ephemeral surrogate tokenization, tab-isolated
-       session mapping, and mathematically verifiable zero network egress of
-       raw identifying data.  Reversible mapping is executed strictly on the
-       client or private host boundary, precluding intermediate cloud proxy
-       interception, prompt injection exfiltration, and persistent vector
-       database poisoning.</p>
+       Under ZTDS, sensitive information (including Personally Identifiable
+       Information (PII), Protected Health Information (PHI), financial
+       account numbers, and developer secrets) is intercepted and
+       transformed into synthetic surrogate tokens strictly within volatile
+       memory (RAM) of the originating client or private host node before
+       network serialization.
+
+       This protocol specification formalizes the threat model, the four
+       core invariants, surrogate token syntaxes, cryptographic transport
+       handoffs, and verification procedures required for interoperable,
+       zero-subprocessor implementations.</p>
 relation:
 - type: includes
   bibitem:
@@ -56,6 +59,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-sibiryakov-ztds-protocol-01
     docidentifier:
     - content: draft-sibiryakov-ztds-protocol-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sibiryakov-ztds-protocol-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sibiryakov-ztds-protocol-02
+    docidentifier:
+    - content: draft-sibiryakov-ztds-protocol-02
       type: Internet-Draft
       primary: true
 ext:
