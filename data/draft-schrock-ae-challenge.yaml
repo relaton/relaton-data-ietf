@@ -9,20 +9,21 @@ title:
   content: An Authorization Evidence Challenge for High-Risk Agent Actions
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-07
+  content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-08
 docidentifier:
 - content: draft-schrock-ae-challenge
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-10'
+  at: '2026-09-28'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>When a relying party refuses a consequential agent action because
-       authorization evidence is missing, stale, or unverifiable, the agent
+       authorization evidence is missing, stale, not verified, not accepted
+       under its trust inputs, or not bound to the exact action, the agent
        needs a machine-readable description of what remains necessary.  This
        document defines a transport-neutral Authorization Evidence Challenge
        data model bound to the relying party's exact action.  The challenge
@@ -53,7 +54,17 @@ abstract:
        capacity refusal reveals no remaining evidence requirements.  In a
        sharded replay domain, only the authoritative owner can classify a
        nonce as already claimed; inability to reach that owner is
-       unavailability, not replay.</p>
+       unavailability, not replay.
+
+       An optional evaluation-lineage profile carries an authenticated
+       issuer statement about one evaluation of a claimed presentation.  It
+       binds the predecessor challenge, presentation, action, policy,
+       evaluation semantics, and any successor-challenge reference.  A
+       recipient that retains authenticated artifacts can distinguish an
+       earlier unsatisfied result, whether or not its evaluation completed,
+       from a later result.  The profile carries no authority, does not
+       prove challenge consumption, ordering, completeness, or non-omission,
+       and makes no claim that an action was admitted or executed.</p>
 relation:
 - type: includes
   bibitem:
@@ -141,6 +152,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-07
     docidentifier:
     - content: draft-schrock-ae-challenge-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-schrock-ae-challenge-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-schrock-ae-challenge-08
+    docidentifier:
+    - content: draft-schrock-ae-challenge-08
       type: Internet-Draft
       primary: true
 ext:

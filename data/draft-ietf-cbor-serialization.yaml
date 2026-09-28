@@ -9,27 +9,37 @@ title:
   content: CBOR Serialization and Determinism
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-08
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-09
 docidentifier:
 - content: draft-ietf-cbor-serialization
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-29'
+  at: '2026-09-28'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines two CBOR serializations: "preferred-plus
-       serialization" and "deterministic serialization."  It also introduces
-       the term "general serialization" to name the complete set of all
-       serializations defined in RFC 8949.  Together, these three form a set
-       of serializations that cover the majority of CBOR serialization use
-       cases.
-
+    <p>RFC 8949 defines CBOR, a standard for serializing data types such as
+       integers, strings, and arrays into encoded bytes.  CBOR serialization
+       is flexible, allowing data types to be encoded in multiple ways to
+       accommodate deployment in constrained environments.  This document
+       normatively defines one particular serialization, called "preferred-
+       plus serialization," that is suitable for the majority of CBOR-based
+       protocols.  Protocol designers and implementers who choose it need
+       not understand or specify serialization details themselves.  This
+       document also normatively defines a deterministic serialization.
        These serializations are largely compatible with those widely
-       implemented by the CBOR community.</p>
+       implemented by the CBOR community.
+
+       This document updates RFC 8949 with a new rule that limits how new
+       tag definitions can affect the CBOR data model.
+
+       This document provides clarifications to RFC 8949 regarding bignums
+       and floating-point NaN handling, along with general background
+       information on serialization, determinism, and CBOR byte-string
+       wrapping.</p>
 relation:
 - type: includes
   bibitem:
@@ -128,6 +138,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-08
     docidentifier:
     - content: draft-ietf-cbor-serialization-08
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-cbor-serialization-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-09
+    docidentifier:
+    - content: draft-ietf-cbor-serialization-09
       type: Internet-Draft
       primary: true
 ext:
