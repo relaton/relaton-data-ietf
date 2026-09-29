@@ -6,39 +6,41 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'RVP: Real-time Verification Protocol - Continuous Identity and Process Verification'
+  content: 'RVP: Real-time Verification Protocol for Requirement-Bound Evidence'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-vandemeent-rvp-continuous-verification-02
+  content: https://datatracker.ietf.org/doc/html/draft-vandemeent-rvp-continuous-verification-03
 docidentifier:
 - content: draft-vandemeent-rvp-continuous-verification
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-17'
+  at: '2026-09-29'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines RVP (Real-time Verification Protocol), a
-       protocol for continuous identity verification through ordered
-       cascades of verification methods.  Unlike traditional authentication
-       models that verify once and trust until session expiry, RVP treats
-       every interaction as a verification moment.  Each moment produces a
-       Verification Token: a cryptographic evidence record capturing which
-       methods were used, what confidence each produced, and whether the
-       accumulated confidence meets the required threshold.
+    <p>This document defines RVP, a protocol for asking a bounded
+       verification question, carrying that question through one of several
+       possible verification mechanisms, and producing evidence that is
+       bound to the exact question.  RVP separates five concerns that are
+       often collapsed: the consumer policy that decides whether evidence is
+       needed, the frozen evidence requirement, the lifecycle of the
+       question, the carrier that obtains a response, and the later act of
+       consuming the evidence.
 
-       RVP defines a Verification Cascade: an ordered chain of verification
-       methods (behavioral biometrics, physical identity, device context)
-       where each layer activates only when preceding layers produce
-       insufficient confidence.  The cascade produces evidence at every
-       step; enforcement is a local policy decision.
+       RVP does not grant authority, establish admission, or replace account
+       authentication and session policy.  A successful result means only
+       that the presented evidence satisfied the referenced requirement for
+       the referenced question.  The consumer and target system remain
+       responsible for deciding what, if anything, may happen next.
 
-       RVP integrates with TIBET [TIBET] for provenance tokens and JIS [JIS]
-       for identity semantics.  The protocol is designed for local-first
-       operation with no dependency on centralized identity providers.</p>
+       The protocol supports local biometric checks, signed companion-device
+       responses, WebAuthn, authenticated-session evidence, recovery
+       standing, and future carriers without assigning ceremony semantics or
+       authority to those carriers.  It is transport-independent and can
+       operate locally without a central identity provider.</p>
 relation:
 - type: includes
   bibitem:
@@ -71,6 +73,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-vandemeent-rvp-continuous-verification-02
     docidentifier:
     - content: draft-vandemeent-rvp-continuous-verification-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-vandemeent-rvp-continuous-verification-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vandemeent-rvp-continuous-verification-03
+    docidentifier:
+    - content: draft-vandemeent-rvp-continuous-verification-03
       type: Internet-Draft
       primary: true
 ext:
