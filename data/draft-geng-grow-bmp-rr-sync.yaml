@@ -1,0 +1,53 @@
+---
+id: draftgenggrowbmprrsync
+schema_version: v1.5.6
+formattedref:
+  content: draft-geng-grow-bmp-rr-sync
+title:
+- language: en
+  script: Latn
+  content: BMP Extension for Non-Disruptive RIB View Synchronization
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-rr-sync-00
+docidentifier:
+- content: draft-geng-grow-bmp-rr-sync
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-09-30'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The BGP Monitoring Protocol (BMP) provides full visibility into BGP
+       Routing Information Base (RIB) state across routers and collectors.
+       However, transient network faults, process restarts, or buffer
+       overflows can cause data inconsistencies between the BMP sender's
+       authoritative RIB and the collector's stored view.  Existing recovery
+       requires tearing down BMP sessions or re-exporting all peers,
+       introducing severe operational disruption.
+
+       This document defines a new BMP message type, the BMP Route-Refresh
+       message.  It encapsulated standard BGP Route-Refresh and Enhanced
+       Route-Refresh semantics within BMP to enable fine-grained, non-
+       disruptive, and targeted per-peer or per-AFI/SAFI RIB view re-
+       synchronization.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-geng-grow-bmp-rr-sync-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-geng-grow-bmp-rr-sync-00
+    docidentifier:
+    - content: draft-geng-grow-bmp-rr-sync-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

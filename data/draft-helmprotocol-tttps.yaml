@@ -9,57 +9,34 @@ title:
   content: The TLS TimeToken Secure Protocol (TTTPS)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-helmprotocol-tttps-11
+  content: https://datatracker.ietf.org/doc/html/draft-helmprotocol-tttps-12
 docidentifier:
 - content: draft-helmprotocol-tttps
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-22'
+  at: '2026-09-30'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>This document specifies TTTPS, an application-layer protocol for
-       evaluating temporal evidence before an application accepts an event or
-       performs a related state transition.  The protocol defines a fixed
+       evaluating temporal evidence before an application accepts an event
+       or performs a related state transition.  The protocol defines a fixed
        180-byte Proof-of-Time Record v2 containing context, freshness,
        integrity, issuer-authentication, and holder-authentication fields.
 
        When TLS 1.3 transport binding is selected, a separate holder binding
        proof is derived from TLS exporter output and holder key material.
-       The proof is sent with, but is not part of, the 180-byte record.
-       The fixed-record GRG admission path is bounded with respect to peer
-       count under declared frame and correction limits.
+       The proof is sent with, but is not part of, the 180-byte record.  The
+       fixed-record GRG admission path is bounded with respect to peer count
+       under declared frame and correction limits.
 
        TTTPS returns an explicit admission result before application state
        mutation.  Confidence and propagation-aware profiles are optional.
        This document does not define agent intent, audit record schemas, or
-       transparency-log operation.
-
-    Discussion Note
-
-       This document is prepared for discussion in the AUDIT BOF and related
-       IETF venues. Comments should be directed through the venue selected by
-       the responsible IETF process.
-
-       Changes from -10:
-
-       *  Clarified the 180-octet v2 layout and removed the overlapping
-          reserved field.
-
-       *  Added issuer trust-anchor and certificate resolution before issuer
-          signature verification.
-
-       *  Kept confidence and propagation processing outside the core wire and
-          cryptographic verification path.
-
-       *  Clarified the separate TLS exporter binding proof and the scope of
-          the bounded single-record processing claim.
-
-       *  Limited this revision to the core protocol; profile mathematics and
-          physical-context algorithms belong in companion drafts.</p>
+       transparency-log operation.</p>
 relation:
 - type: includes
   bibitem:
@@ -191,6 +168,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-helmprotocol-tttps-11
     docidentifier:
     - content: draft-helmprotocol-tttps-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-helmprotocol-tttps-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-helmprotocol-tttps-12
+    docidentifier:
+    - content: draft-helmprotocol-tttps-12
       type: Internet-Draft
       primary: true
 ext:

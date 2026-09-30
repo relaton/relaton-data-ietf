@@ -1,0 +1,82 @@
+---
+id: drafttulshioauthtransactionalaccesstokens00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Transactional Access Tokens
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tulshi-oauth-transactional-access-tokens-00
+docidentifier:
+- content: draft-tulshi-oauth-transactional-access-tokens
+  type: Internet-Draft
+- content: draft-tulshi-oauth-transactional-access-tokens-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.tulshi-oauth-transactional-access-tokens
+date:
+- type: published
+  at: '2026-09-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Atul
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Tulshibagwale
+      completename:
+        language: en
+        content: Atul Tulshibagwale
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CrowdStrike
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>OAuth 2.0 access tokens are typically scoped to a session rather than
+       to a transaction.  They carry no transaction identifier and no
+       context beyond scope.  This document defines Transactional Access
+       Tokens: a profile of JSON Web Token (JWT) access tokens that carries
+       a transaction identifier and authorization server-asserted
+       transaction context, has a very short lifetime, and is audienced to a
+       single resource server.  Transactional Access Tokens align with the
+       claims and semantics of OAuth Transaction Tokens, so that transaction
+       context can flow from the authorization server to a resource server
+       and onward into that resource server's trust domain.  A primary use
+       case is task-scoped authorization of AI agents, where the
+       authorization server makes a fresh policy decision for each
+       transaction.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-tulshi-oauth-transactional-access-tokens-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
