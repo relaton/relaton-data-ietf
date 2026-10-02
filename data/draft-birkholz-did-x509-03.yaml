@@ -1,0 +1,179 @@
+---
+id: draftbirkholzdidx50903
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The did:x509 Decentralized Identifier (DID) Method
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-birkholz-did-x509-03
+docidentifier:
+- content: draft-birkholz-did-x509
+  type: Internet-Draft
+- content: draft-birkholz-did-x509-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.birkholz-did-x509
+date:
+- type: published
+  at: '2026-09-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Maik
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Riechert
+      completename:
+        language: en
+        content: Maik Riechert
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Antoine
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Delignat-Lavaud
+      completename:
+        language: en
+        content: Antoine Delignat-Lavaud
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Henk
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Birkholz
+      completename:
+        language: en
+        content: Henk Birkholz
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Fraunhofer SIT
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Amaury
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Chamayou
+      completename:
+        language: en
+        content: Amaury Chamayou
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the did:x509 decentralized identifier (DID)
+       method, a flexible issuer identifier format for messages that
+       transport or refer to X.509 certificates, including CBOR Object
+       Signing and Encryption (COSE) messages using RFC 9360.  The did:x509
+       identifier format implements a direct, resolvable binding between a
+       certificate chain and a compact issuer string (DID string).  It
+       combines the fingerprint of a certification authority (CA)
+       certificate in the chain with one or more predicates on the leaf
+       certificate's subject name, subject alternative names, extended key
+       usage, or Fulcio issuer.  The identifier can be conveyed as an issuer
+       value in a COSE Header CBOR Web Token (CWT) Claims map as defined in
+       RFC 9597, in JSON Object Signing and Encryption (JOSE) and JSON Web
+       Token (JWT) messages, such as in the "iss" claim defined in RFC 7519,
+       or through other protocol-specific mechanisms that associate the
+       identifier with the certificate chain.  The did:x509 method lets
+       existing X.509 solutions and DID-based systems interoperate where a
+       full transition to DIDs is not achievable or desired.  This issuer
+       identifier is convenient for references and policy evaluation, for
+       example in the context of transparency ledgers.
+
+       This Informational document is published as an Independent Submission
+       to describe the method as implemented by Microsoft.  It is neither a
+       standard nor a product of the IETF.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-birkholz-did-x509-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-birkholz-did-x509-02
+    docidentifier:
+    - content: draft-birkholz-did-x509-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-birkholz-did-x509-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
