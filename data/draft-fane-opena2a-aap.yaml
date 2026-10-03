@@ -9,14 +9,14 @@ title:
   content: OpenA2A Agent Authorization Protocol (AAP)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-fane-opena2a-aap-01
+  content: https://datatracker.ietf.org/doc/html/draft-fane-opena2a-aap-02
 docidentifier:
 - content: draft-fane-opena2a-aap
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-22'
+  at: '2026-10-02'
 abstract:
 - language: en
   script: Latn
@@ -37,7 +37,14 @@ abstract:
        without the credential value ever entering the agent's reasoning
        context.  This confinement property, that no secret, temporary
        credential, or backend identifier reaches the agent or the model
-       behind it, is the primary design goal of the protocol.</p>
+       behind it, is the primary design goal of the protocol.
+
+       This revision adds a structured, mandatory-to-understand
+       "authorization_details" claim with a typed entry registry and a per-
+       type attenuation relation for delegation, an "aap_crit" claim naming
+       the claims a verifier must understand, a "cnf" claim binding a token
+       to the presenter's key, a session label in the behavioral attestation
+       claim, and a local grant revocation list.</p>
 relation:
 - type: includes
   bibitem:
@@ -59,6 +66,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-fane-opena2a-aap-01
     docidentifier:
     - content: draft-fane-opena2a-aap-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-fane-opena2a-aap-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-fane-opena2a-aap-02
+    docidentifier:
+    - content: draft-fane-opena2a-aap-02
       type: Internet-Draft
       primary: true
 ext:

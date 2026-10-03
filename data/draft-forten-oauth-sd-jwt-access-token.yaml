@@ -1,0 +1,49 @@
+---
+id: draftfortenoauthsdjwtaccesstoken
+schema_version: v1.5.6
+formattedref:
+  content: draft-forten-oauth-sd-jwt-access-token
+title:
+- language: en
+  script: Latn
+  content: Selective Disclosure for JWT Access Tokens Without Changing the Token
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-forten-oauth-sd-jwt-access-token-00
+docidentifier:
+- content: draft-forten-oauth-sd-jwt-access-token
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-03'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document adds selective disclosure to JWT access tokens without
+       changing the form of the Authorization header or how the token is
+       validated.  The RFC 9068 token is sent as today, with some of its
+       claims selectively disclosable as defined by SD-JWT (RFC 9901); the
+       Disclosures and the optional Key Binding JWT travel in two new HTTP
+       fields.  A recipient that does not implement this profile ignores the
+       fields and processes the token as an ordinary JWT access token.  The
+       token itself then carries no selectively disclosable value, and the
+       holder chooses per request which values to reveal.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-forten-oauth-sd-jwt-access-token-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-forten-oauth-sd-jwt-access-token-00
+    docidentifier:
+    - content: draft-forten-oauth-sd-jwt-access-token-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
