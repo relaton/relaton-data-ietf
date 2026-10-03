@@ -40,6 +40,20 @@ RSpec.describe IetfCrawler do
       allow(described_class).to receive(:sync_drafts)
       allow(described_class).to receive(:committed_record_count).and_return(0)
       allow(Relaton::Ietf::DataFetcher).to receive(:fetch)
+      allow(described_class).to receive(:write_index_v1)
+      allow(described_class).to receive(:check_index)
+    end
+
+    it "writes index-v1 after the fetches and checks the indexes last" do
+      calls = []
+      allow(Relaton::Ietf::DataFetcher).to receive(:fetch) { calls << :fetch }
+      allow(described_class).to receive(:write_index_v1) { calls << :index_v1 }
+      allow(described_class).to receive(:check_yield) { calls << :yield }
+      allow(described_class).to receive(:check_index) { calls << :index }
+
+      described_class.run(["--skip-rsync"])
+
+      expect(calls).to eq [:fetch] * described_class::SOURCES.size + %i[index_v1 yield index]
     end
 
     it "fetches every DataFetcher source" do
@@ -129,6 +143,117 @@ RSpec.describe IetfCrawler do
     it "publishes a genuine shrink when it is declared" do
       produce 40
       expect { described_class.check_yield(100, allow_shrink: true) }.not_to raise_error
+    end
+  end
+
+  describe ".write_index_v1" do
+    around do |example|
+      Dir.mktmpdir do |root|
+        FileUtils.mkdir_p File.join(root, "data")
+        @root = root
+        Dir.chdir(root) { example.run }
+      end
+    end
+
+    after { Relaton::Index.close :IETF_V1 }
+
+    def record(name, docids)
+      File.write File.join(@root, "data", "#{name}.yaml"),
+                 { "id" => name, "docidentifier" => docids, "docnumber" => name }.to_yaml
+    end
+
+    def rows
+      YAML.safe_load_file(File.join(@root, "index-v1.yaml"), permitted_classes: [Symbol])
+    end
+
+    it "writes one string-keyed row per record, keyed on the primary docidentifier" do
+      record "rfc3986", [{ "content" => "10.17487/RFC3986", "type" => "DOI" },
+                         { "content" => "RFC 3986", "type" => "IETF", "primary" => true }]
+      record "draft-ietf-quic-transport-34",
+             [{ "content" => "draft-ietf-quic-transport-34", "type" => "Internet-Draft" }]
+
+      described_class.write_index_v1
+
+      expect(rows).to eq [
+        { id: "draft-ietf-quic-transport-34", file: "data/draft-ietf-quic-transport-34.yaml" },
+        { id: "RFC 3986", file: "data/rfc3986.yaml" },
+      ]
+    end
+
+    # A record's free text may carry characters a YAML loader rejects (six
+    # abstracts hold a form feed), so only the docidentifier block is read.
+    it "indexes a record whose body is not loadable YAML" do
+      File.write File.join(@root, "data", "draft-x-00.yaml"),
+                 "---\nid: draftx00\ndocidentifier:\n- content: draft-x-00\n  " \
+                 "type: Internet-Draft\n  primary: true\nabstract:\n- content: a\fb\n"
+
+      described_class.write_index_v1
+
+      expect(rows).to eq [{ id: "draft-x-00", file: "data/draft-x-00.yaml" }]
+    end
+
+    it "skips, and reports, a record with no docidentifier" do
+      File.write File.join(@root, "data", "odd.yaml"), "---\nid: odd\n"
+
+      expect { described_class.write_index_v1 }.to output(/odd\.yaml/).to_stderr
+      expect(rows).to eq []
+    end
+  end
+
+  # check_yield counts data/ only. On 2026-09-27 pubid could not parse a single
+  # id, DataFetcher wrote `index-v2.yaml` as `[]` beside a complete data/, and
+  # the empty index was committed and served for days.
+  describe ".check_index" do
+    around do |example|
+      Dir.mktmpdir do |root|
+        FileUtils.mkdir_p File.join(root, "data")
+        @root = root
+        Dir.chdir(root) { example.run }
+      end
+    end
+
+    def produce(count)
+      count.times { |i| File.write File.join(@root, "data", "rfc#{i}.yaml"), "id: #{i}\n" }
+    end
+
+    # Each index in its real shape: v2 keys a row on a pubid hash, so nothing
+    # follows `- :id:` on its line; v1 keys it on a plain string.
+    def index(name, count)
+      rows = Array.new(count) do |i|
+        id = name == described_class::INDEXFILE ? { "_type" => "pubid:ietf:rfc", "number" => i.to_s } : "RFC #{i}"
+        { id: id, file: "data/rfc#{i}.yaml" }
+      end
+      File.write File.join(@root, name), rows.to_yaml
+    end
+
+    it "passes when every index covers the corpus" do
+      produce 100
+      index described_class::INDEXFILE, 100
+      index "index-v1.yaml", 100
+      expect { described_class.check_index }.not_to raise_error
+    end
+
+    it "aborts on an empty index" do
+      produce 100
+      File.write File.join(@root, described_class::INDEXFILE), "--- []\n"
+      index "index-v1.yaml", 100
+      expect { described_class.check_index }
+        .to raise_error(SystemExit).and output(/#{Regexp.escape described_class::INDEXFILE} has 0 rows for 100 records/).to_stderr
+    end
+
+    it "aborts on a short index" do
+      produce 100
+      index described_class::INDEXFILE, 100
+      index "index-v1.yaml", 50
+      expect { described_class.check_index }
+        .to raise_error(SystemExit).and output(/index-v1\.yaml has 50 rows/).to_stderr
+    end
+
+    it "aborts when an index was not written at all" do
+      produce 100
+      index "index-v1.yaml", 100
+      expect { described_class.check_index }
+        .to raise_error(SystemExit).and output(/#{Regexp.escape described_class::INDEXFILE} was not written/).to_stderr
     end
   end
 

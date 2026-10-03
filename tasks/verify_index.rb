@@ -16,23 +16,22 @@ require 'pubid/ietf'
 # pubid that round-trips and sorts, every :file present, and the whole thing
 # readable back through Relaton::Index with pubid_class.
 #
-# Handles either index generation. `Relaton::Ietf::DataFetcher` is being
-# switched from the plain-string `index-v1` to the pubid `index-v2` as a straight
-# replacement, so exactly one of the two exists at a time; the pubid checks
-# (round-trip, sort key, structured `_type`) only apply to v2 and are reported as
-# skipped against v1.
+# Verifies each index generation the crawl publishes: the pubid `index-v2`
+# DataFetcher writes and the plain-string `index-v1` crawler.rb writes. The pubid
+# checks (round-trip, sort key, structured `_type`) only apply to v2 and are
+# reported as skipped against v1.
 #
 # Deliberately not an rspec example: it takes minutes, so it must be opt-in.
 module VerifyIndex
   ROOT = File.expand_path('..', __dir__)
-  # Preferred first. DataFetcher writes one or the other, never both.
-  INDEX_NAMES = %w[index-v2.yaml index-v1.yaml].freeze
+  # The pubid index first, under the gem's own name for it.
+  INDEX_NAMES = ["#{Relaton::Ietf::INDEXFILE}.yaml", 'index-v1.yaml'].freeze
   # Ids whose resolution is the point of the whole exercise. DataFetcher
-  # downcases filenames, so these are the post-migration names.
+  # downcases filenames and no longer zero-pads sub-series numbers.
   SPOT_CHECKS = {
     'RFC 3986' => 'data/rfc3986.yaml',
-    'STD 66' => 'data/std0066.yaml',
-    'BCP 9' => 'data/bcp0009.yaml',
+    'STD 66' => 'data/std66.yaml',
+    'BCP 9' => 'data/bcp9.yaml',
     'draft-ietf-quic-transport-34' => 'data/draft-ietf-quic-transport-34.yaml',
     'draft-ietf-quic-transport' => 'data/draft-ietf-quic-transport.yaml',
   }.freeze
@@ -40,20 +39,33 @@ module VerifyIndex
   module_function
 
   def run
-    @failures = []
-    name = INDEX_NAMES.find { |n| File.exist?(File.join(ROOT, n)) }
-    unless name
+    names = index_names
+    if names.empty?
       abort "no #{INDEX_NAMES.join(' or ')} — run `bundle exec ruby crawler.rb` " \
             '(the index is a crawl output; nothing else writes it)'
     end
 
-    @index_name = name
-    @pubid = name.start_with?('index-v2')
-    committed = File.join(ROOT, name)
-    puts "index: #{name}#{@pubid ? '' : ' (plain-string v1 — pubid checks skipped)'}"
-
     records = Dir[File.join(ROOT, 'data', '*.yaml')].size
     puts "corpus: #{records} records"
+    # One report for all of them: a broken v2 must not hide the state of v1,
+    # which is the index that survives a pubid failure.
+    @failures = []
+    @verified = names
+    names.each { |name| verify name, records }
+    report
+  end
+
+  # Every index the crawl published. Both are written on each crawl — v2 by
+  # DataFetcher, v1 by crawler.rb — and each is downloaded by its own readers.
+  def index_names
+    INDEX_NAMES.select { |n| File.exist?(File.join(ROOT, n)) }
+  end
+
+  def verify(name, records)
+    @index_name = name
+    @pubid = name == INDEX_NAMES.first
+    committed = File.join(ROOT, name)
+    puts "\nindex: #{name}#{@pubid ? '' : ' (plain-string v1 — pubid checks skipped)'}"
 
     rows = check_rows committed, records
 
@@ -64,8 +76,6 @@ module VerifyIndex
       File.symlink File.join(ROOT, 'data'), File.join(scratch, 'data')
       timed('load through Relaton::Index') { check_loadable scratch, rows }
     end
-
-    report
   end
 
   # Every way a record can fail to reach the index drops exactly one row, so
@@ -144,7 +154,9 @@ module VerifyIndex
 
       SPOT_CHECKS.each do |ref, file|
         query = @pubid ? ::Pubid::Ietf::Identifier.parse(ref) : ref
-        found = index.search(query).first
+        # A String query is a substring match, under which the draft slug
+        # also matches each of its versions; a v1 lookup has to be exact.
+        found = index.search(query, exact: !@pubid).first
         if found.nil?
           fail_with "#{ref} resolves to nothing"
         elsif found[:file] != file
@@ -164,15 +176,15 @@ module VerifyIndex
   end
 
   def fail_with(message)
-    @failures << message
+    @failures << "#{@index_name}: #{message}"
   end
 
   def report
     if @failures.empty?
-      puts "\nindex-v2.yaml verified.'
+      puts "#{@verified.join(', ')} verified."
     else
-      @failures.each { |f| warn 'FAIL: #{f}' }
-      abort '\n#{@failures.size} check(s) failed."
+      @failures.each { |f| warn "FAIL: #{f}" }
+      abort "\n#{@failures.size} check(s) failed."
     end
   end
 end

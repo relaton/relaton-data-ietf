@@ -9,8 +9,9 @@
 #
 # All three are `Relaton::Ietf::DataFetcher` sources, so the records are v3
 # natively and `index-v2.yaml` — the pubid-structured index consumers download
-# — is written by the fetcher as the crawl runs. There is no conversion step,
-# nothing here builds the index, and nothing here derives metadata: thin
+# — is written by the fetcher as the crawl runs. There is no conversion step and
+# the only index built here is the plain-string `index-v1.yaml`, read back from
+# data/ once the fetches are done. Nothing here derives metadata: thin
 # records (sub-series, unversioned draft aggregators) inherit date, doctype and
 # source from their newest constituent inside the gem (relaton#120).
 #
@@ -21,6 +22,7 @@
 
 require 'fileutils'
 require 'open3'
+require 'yaml'
 require 'relaton'
 # Not loaded by `require "relaton"` — the flavor's fetcher is an opt-in entry
 # point, reached only by the data repos that crawl.
@@ -43,6 +45,14 @@ module IetfCrawler
   # publishable. Expressed as what is KEPT, so 0.99 allows at most 1% shrinkage.
   MIN_RETENTION = 0.99
 
+  # The pubid-structured index DataFetcher writes, and the plain-string one
+  # written here from data/. Both must cover the corpus to be publishable.
+  # INDEXFILE is whatever generation the current relaton writes and reads
+  # (`index-v2` today): DataFetcher and Scraper share that one constant, so a
+  # move to v3 is picked up here without an edit.
+  INDEXFILE = "#{Relaton::Ietf::INDEXFILE}.yaml"
+  INDEX_V1 = 'index-v1.yaml'
+
   module_function
 
   # Everything runs with the process CWD pinned to the repository root, because
@@ -61,7 +71,9 @@ module IetfCrawler
     sync_drafts unless opts[:skip_rsync]
     reset_outputs
     SOURCES.each { |source| Relaton::Ietf::DataFetcher.fetch(source) }
+    write_index_v1
     check_yield(previous, allow_shrink: opts[:allow_shrink])
+    check_index
 
     t2 = Time.now
     puts "Stopped at: #{t2}"
@@ -129,6 +141,55 @@ module IetfCrawler
           "from the #{previous} committed. A short crawl usually means an " \
           'upstream fetch failed rather than that documents were withdrawn — ' \
           'check the log above. Pass --allow-shrink if the loss is real.'
+  end
+
+  # The flat index keyed on each record's primary docidentifier string, in the
+  # shape every relaton-data-* repo publishes as `index-v1`. DataFetcher writes
+  # only the pubid INDEXFILE, so this one is built from what landed in data/ —
+  # and, needing no pubid, it still covers the corpus when pubid cannot parse
+  # (as on 2026-09-27, when pubid broke and index-v2 came out empty).
+  def write_index_v1
+    index = Relaton::Index.find_or_create(:IETF_V1, url: nil, file: INDEX_V1)
+    Dir[File.join(DATA_DIR, '*.yaml')].sort.each do |file|
+      id = primary_docid(file)
+      id ? index.add_or_update(id, file) : warn("Not indexing #{file}: it has no docidentifier")
+    end
+    index.save
+  ensure
+    Relaton::Index.close :IETF_V1
+  end
+
+  # Only the top-level `docidentifier:` block is read, never the whole record:
+  # it is ~5x faster over 178k files, and a record's free text can hold a
+  # character Psych rejects (a few draft abstracts carry a form feed) while its
+  # identifiers are always plain.
+  def primary_docid(file)
+    block = File.read(file, encoding: 'UTF-8')[/^docidentifier:\n((?:[- ] .*\n)+)/, 1]
+    ids = block && YAML.safe_load(block)
+    return unless ids.is_a?(Array)
+
+    (ids.find { |i| i['primary'] } || ids.first)&.fetch('content', nil)
+  end
+
+  # check_yield counts data/ and nothing else, so a crawl whose records all
+  # landed but whose index did not would pass it. That happened on 2026-09-27:
+  # pubid main could not load its parser, DataFetcher logged `Not indexing` for
+  # every record, and an empty index-v2 was committed beside a full corpus.
+  # Not overridable by --allow-shrink: a shrinking corpus can be real, an index
+  # that does not cover the corpus never is.
+  def check_index
+    records = Dir[File.join(DATA_DIR, '*.yaml')].size
+    [INDEXFILE, INDEX_V1].each do |name|
+      abort "Refusing to publish: #{name} was not written." unless File.exist?(name)
+
+      rows = File.foreach(name).count { |line| line.start_with?('- :id:') }
+      puts "#{name}: #{rows} rows"
+      next if rows >= records * MIN_RETENTION
+
+      abort "Refusing to publish: #{name} has #{rows} rows for #{records} records. " \
+            'The records were written but not indexed — look for `Not indexing` ' \
+            "warnings above; for #{INDEXFILE} they usually mean pubid cannot parse."
+    end
   end
 end
 

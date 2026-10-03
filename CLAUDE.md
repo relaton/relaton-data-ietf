@@ -2,7 +2,8 @@
 
 The IETF corpus (RFCs, Internet-Drafts, RFC sub-series) as Relaton v3 YAML,
 crawled by `Relaton::Ietf::DataFetcher` straight from the authoritative sources,
-plus the pubid-structured `index-v2.yaml` the fetcher writes alongside it.
+plus the pubid-structured `index-v2.yaml` the fetcher writes alongside it and
+the plain-string `index-v1.yaml` that `crawler.rb` writes from `data/`.
 
 `main` is the default branch. `v2` is four years stale — it holds only the
 retired bibxml XML mirror and the old xml2rfc downloader. Do not work from it.
@@ -11,9 +12,10 @@ retired bibxml XML mirror and the old xml2rfc downloader. Do not work from it.
 
 | Path | What |
 |---|---|
-| `crawler.rb` | rsyncs the drafts mirror, clears the outputs, runs the three fetches |
+| `crawler.rb` | rsyncs the drafts mirror, clears the outputs, runs the three fetches, writes `index-v1` |
 | `data/*.yaml` | ~177k v3 records, flat, lower-cased filenames |
-| `index-v2.yaml` / `.zip` | The document index, written by DataFetcher during the crawl |
+| `index-v2.yaml` / `.zip` | The pubid document index, written by DataFetcher during the crawl |
+| `index-v1.yaml` / `.zip` | The same rows with plain-string ids, written by `crawler.rb` from `data/` |
 | `bibxml-ids/` | Local rsync mirror the drafts fetch reads. Gitignored |
 | `tasks/verify_index.rb` | Full-corpus verification behind `rake index:verify` |
 
@@ -57,6 +59,20 @@ plus an `<is-also>`, nothing more) and the aggregator is synthesised rather than
 fetched. They inherit from their newest constituent **inside the gem**
 (relaton#120). This repo used to patch that up in a second pass; that code is
 gone and must not come back.
+
+**`index-v1` is built here, from `data/`.** DataFetcher writes only `index-v2`.
+`write_index_v1` reads each record's top-level `docidentifier:` block — never
+the whole file, because a few draft abstracts carry a form feed that Psych
+rejects — and keys the row on the primary id string. It needs no pubid. It was
+removed in `ab26aa0` and published again on request.
+
+**The crawler refuses to publish an index that does not cover the corpus.**
+On 2026-09-27 pubid main used `parsanol` without declaring it, so DataFetcher
+logged `Not indexing` for every id and wrote `index-v2.yaml` as `[]` beside a
+complete `data/`. `check_yield` counts `data/` only, so CI committed the empty
+index, and every IETF lookup failed for days. `check_index` now aborts when
+either index has fewer rows than `MIN_RETENTION` × records. `--allow-shrink`
+does not override it.
 
 **Nothing here writes the `.zip`.** relaton/support's shared `crawler.yml` zips
 any changed `index*.yaml` and commits both.
