@@ -20,6 +20,16 @@ gem 'relaton', git: 'https://github.com/relaton/relaton.git', branch: 'main'
 # TODO: drop once these ship in a pubid release.
 gem 'pubid', git: 'https://github.com/metanorma/pubid.git', branch: 'main'
 
+# relaton routes all YAML through the yeptris Psych drop-in, and from 0.6.28.4
+# yeptris loads a native materializer on Ruby 3.4 that leaks native memory on
+# every dump and load (leptris/yeptris-ruby#259) — ~45 KB a record, never
+# freed. The crawl writes ~179k records; the runner is killed mid-fetch
+# ("The runner has received a shutdown signal"). 0.6.28.5 still leaks.
+# spec/yeptris_leak_spec.rb fails while a leaking release is resolved.
+#
+# TODO: drop once yeptris-ruby#259 is fixed and released.
+gem 'yeptris', '< 0.6.28.4'
+
 group :development, :test do
   gem 'rake', '~> 13.0'
   gem 'rspec', '~> 3.13'
