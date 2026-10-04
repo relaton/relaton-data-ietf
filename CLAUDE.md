@@ -25,11 +25,12 @@ retired bibxml XML mirror and the old xml2rfc downloader. Do not work from it.
 this repo needs in a release. `Gemfile.lock` is gitignored, so every
 `bundle install` and CI run re-resolves them.
 
-`yeptris` is pinned `< 0.6.28.4`. From that release its native materializer
-leaks on every YAML dump/load on Ruby 3.4 (leptris/yeptris-ruby#259), and the
+`yeptris` has a floor of `>= 0.6.28.6`. 0.6.28.4 and 0.6.28.5 leak native
+memory on every YAML dump/load on Ruby 3.4 (leptris/yeptris-ruby#259), and the
 crawl dies when the runner runs out of memory — the log says only "The runner
-has received a shutdown signal". `spec/yeptris_leak_spec.rb` measures the leak;
-run it after you raise or drop the pin.
+has received a shutdown signal". To check a release for the leak, measure a
+model round-trip (`Relaton::Ietf::Item.from_yaml(...).to_yaml`): since relaton
+stopped rebinding `::Psych`, plain `YAML` never reaches yeptris.
 
 To build against an unmerged relaton, do **not** edit the Gemfile. Use Bundler's
 local override, which lives in the gitignored `.bundle/`:
