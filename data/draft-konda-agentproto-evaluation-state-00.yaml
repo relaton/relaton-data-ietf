@@ -1,0 +1,82 @@
+---
+id: draftkondaagentprotoevaluationstate00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Preserving Evaluation State in Agent Protocol Decisions
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-konda-agentproto-evaluation-state-00
+docidentifier:
+- content: draft-konda-agentproto-evaluation-state
+  type: Internet-Draft
+- content: draft-konda-agentproto-evaluation-state-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.konda-agentproto-evaluation-state
+date:
+- type: published
+  at: '2026-10-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Girish
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Konda
+      completename:
+        language: en
+        content: Girish Konda
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Agent protocols often require a participant to establish a decision-
+       time input before it acts: issuer standing, key availability,
+       delegated authority, policy profile availability, consumption state,
+       revocation status, or the outcome of a downstream operation.  A
+       participant that establishes an input and receives a negative answer
+       has learned a different fact from a participant that cannot establish
+       the input at all.  Collapsing those facts into one denial or failure
+       value changes retry behavior, alert routing, audit interpretation,
+       incident ownership, and post-incident reconstruction.
+
+       This document specifies requirements for preserving evaluation state
+       across agent protocol boundaries: the value of an input, whether that
+       value was established at decision time, the freshness of the source
+       used to establish it, and whether the resulting policy decision was
+       actually evaluated.  The requirements are stated independently of
+       encoding, so that policy, authorization, revocation, routing, and
+       audit documents can satisfy them in their own formats.  A subsequent
+       revision will specify concrete representations.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-konda-agentproto-evaluation-state-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,140 @@
+---
+id: draftmocatsagentstateaffinity00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: State, Storage, and Compute Affinity for AI Agent Service Selection in Computing-Aware Traffic Steering
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mo-cats-agent-state-affinity-00
+docidentifier:
+- content: draft-mo-cats-agent-state-affinity
+  type: Internet-Draft
+- content: draft-mo-cats-agent-state-affinity-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mo-cats-agent-state-affinity
+date:
+- type: published
+  at: '2026-10-05'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yijun
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Mo
+      completename:
+        language: en
+        content: Yijun Mo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huazhong University of Science and Technology
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dewei
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Dewei Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huazhong University of Science and Technology
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: 周诚宇
+      completename:
+        language: en
+        content: 周诚宇
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huazhong University of Science and Technology
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>AI agent services are stateful and long-running: the speed with which
+       a step can be served depends on whether the session's context,
+       retrieved data, tool results, and model-side state such as a
+       key-value (KV) cache are already available at, or near, the selected
+       service contact instance, and on whether the computation that the
+       step needs is ready there. Computing-Aware Traffic Steering (CATS)
+       exposes computing and network metrics and defines service contact
+       instance affinity, but it does not expose the availability of
+       reusable state, does not distinguish a hard locality constraint on
+       state from a preference for reusing it, does not provide a way to
+       compare the cost of moving state with the cost of recomputing it, and
+       does not represent the readiness of a specific computation. This
+       document describes affinity in three coupled dimensions -- state,
+       storage, and compute -- for agent service selection. It states the
+       motivation and the goals of introducing affinity, the requirements
+       and constraints that affinity places on the mapping of an agent
+       workload onto storage and compute resources, the metrics and
+       measurement methods by which affinity is observed, the mechanisms and
+       the procedure by which affinity is assured, and two cases in detail:
+       a long-horizon session that passes through several stages, and a
+       group of similar agents or of tenants served by shared reusable
+       state. This document defines no wire protocol, no encoding, and no
+       data model, and it does not define the transfer mechanisms
+       themselves.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mo-cats-agent-state-affinity-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
