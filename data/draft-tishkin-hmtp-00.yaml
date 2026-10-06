@@ -1,0 +1,84 @@
+---
+id: drafttishkinhmtp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: HTTP Mail Transfer Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tishkin-hmtp-00
+docidentifier:
+- content: draft-tishkin-hmtp
+  type: Internet-Draft
+- content: draft-tishkin-hmtp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.tishkin-hmtp
+date:
+- type: published
+  at: '2026-10-06'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dmitrii
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Tishkin
+      completename:
+        language: en
+        content: Dmitrii Tishkin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the HTTP Mail Transfer Protocol (HMTP), a
+       protocol for the submission and transfer of Internet mail over HTTPS.
+       HMTP covers both the submission of messages by clients to their mail
+       service and the transfer of messages between mail servers.  Each
+       message is carried unmodified in the existing Internet Message Format
+       inside a JSON envelope that holds the information needed for
+       delivery.  Large messages and attachments can be transferred by
+       reference, with their integrity protected by cryptographic hashes.
+       Requests are authenticated by signatures bound to the sending domain,
+       using keys published with the DomainKeys Identified Mail (DKIM) key
+       publication mechanism, which allows receivers to identify senders
+       independently of their IP addresses.  Servers discover HMTP endpoints
+       through DNS.  To allow incremental deployment alongside existing mail
+       infrastructure, a server can optionally fall back to the Simple Mail
+       Transfer Protocol (SMTP) when a peer does not support HMTP.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-tishkin-hmtp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,55 @@
+---
+id: drafttishkinhmtp
+schema_version: v1.5.6
+formattedref:
+  content: draft-tishkin-hmtp
+title:
+- language: en
+  script: Latn
+  content: HTTP Mail Transfer Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tishkin-hmtp-00
+docidentifier:
+- content: draft-tishkin-hmtp
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-06'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the HTTP Mail Transfer Protocol (HMTP), a
+       protocol for the submission and transfer of Internet mail over HTTPS.
+       HMTP covers both the submission of messages by clients to their mail
+       service and the transfer of messages between mail servers.  Each
+       message is carried unmodified in the existing Internet Message Format
+       inside a JSON envelope that holds the information needed for
+       delivery.  Large messages and attachments can be transferred by
+       reference, with their integrity protected by cryptographic hashes.
+       Requests are authenticated by signatures bound to the sending domain,
+       using keys published with the DomainKeys Identified Mail (DKIM) key
+       publication mechanism, which allows receivers to identify senders
+       independently of their IP addresses.  Servers discover HMTP endpoints
+       through DNS.  To allow incremental deployment alongside existing mail
+       infrastructure, a server can optionally fall back to the Simple Mail
+       Transfer Protocol (SMTP) when a peer does not support HMTP.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-tishkin-hmtp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tishkin-hmtp-00
+    docidentifier:
+    - content: draft-tishkin-hmtp-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
