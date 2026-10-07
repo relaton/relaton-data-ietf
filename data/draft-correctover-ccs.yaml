@@ -9,14 +9,14 @@ title:
   content: 'Correctover Conformance Shape (CCS): Runtime Verification for AI Agent Tool Calls'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-09
+  content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-10
 docidentifier:
 - content: draft-correctover-ccs
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-14'
+  at: '2026-10-07'
 abstract:
 - language: en
   script: Latn
@@ -41,7 +41,16 @@ abstract:
        relationship to SCITT-based agent evidence work, and updates the
        author contact address.  The detached Ed25519 signature construction
        over RFC 8785 canonical JSON and the receipt lifecycle and signing-
-       algorithm conformance are unchanged from draft-08.</p>
+       algorithm conformance are unchanged from draft-08.
+
+       This revision restructures key management around two orthogonal trust
+       levels: VERIFIED, the self-contained integrity and key/signature
+       consistency verifiable fully offline from the receipt alone, and
+       ACCEPTED, which adds out-of-band issuer pinning and is the only level
+       that authenticates the signer.  The embedded public_key,
+       public_key_fingerprint, and signing_algorithm fields are now required
+       to be covered by the signature to prevent key substitution and
+       algorithm downgrade.</p>
 relation:
 - type: includes
   bibitem:
@@ -151,6 +160,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-09
     docidentifier:
     - content: draft-correctover-ccs-09
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-correctover-ccs-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-correctover-ccs-10
+    docidentifier:
+    - content: draft-correctover-ccs-10
       type: Internet-Draft
       primary: true
 ext:
