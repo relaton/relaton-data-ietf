@@ -1,0 +1,183 @@
+---
+id: draftzhangbcatscsmaimplementation01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: CATS Service Metric Agent (C-SMA) Functional Implementation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-csma-implementation-01
+docidentifier:
+- content: draft-zhangb-cats-csma-implementation
+  type: Internet-Draft
+- content: draft-zhangb-cats-csma-implementation-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhangb-cats-csma-implementation
+date:
+- type: published
+  at: '2026-10-07'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bin
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Bin Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bowen
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Shen
+      completename:
+        language: en
+        content: Bowen Shen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Harbin Institute of Technology
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yixuan
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Yixuan Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sun Yat-sen University
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Computing-Aware Traffic Steering (CATS) framework defines the
+       CATS Service Metric Agent (C-SMA) as the functional entity
+       responsible for collecting service capabilities and status, and
+       reporting them to CATS Path Selectors (C-PSes).  While the framework
+       and the CATS metric documents define the components and the metrics,
+       the concrete observable behavior of the C-SMA - in particular, how it
+       validates and sanitizes the metrics it collects, how it manages soft-
+       state for stale or failing Service Contact Instances (SCIs), and how
+       it synchronizes with the C-PS - remains underspecified.
+
+       This document fills that gap.  It specifies the functional behavior
+       of the C-SMA in terms of observable behavior and reporting semantics:
+       how the C-SMA collects metric reports from SCIs (as specified in
+       [I-D.zhangb-cats-sci-implementation]); how it validates and sanitizes
+       these reports to prevent erroneous or malicious data from influencing
+       traffic steering; how it manages a local metric cache with soft-state
+       aging; how it enforces local policies and update control policies;
+       and how it synchronizes with the C-PS, including recovery and
+       reconciliation.  A decomposition of the C-SMA into internal
+       functional components is provided as illustrative implementation
+       guidance, not as a mandated software architecture.
+
+       This document complements [RFC10053],
+       [I-D.ietf-cats-metric-definition-13],
+       [I-D.zhangb-cats-service-metrics-op], and
+       [I-D.zhangb-cats-sci-implementation] by providing the operational
+       execution layer for the C-SMA within the unified CATS architecture.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-csma-implementation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-csma-implementation-00
+    docidentifier:
+    - content: draft-zhangb-cats-csma-implementation-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhangb-cats-csma-implementation-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
