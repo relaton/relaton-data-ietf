@@ -9,7 +9,7 @@ title:
   content: 'AER-1: A Portable Execution Receipt for AI Agent Tool Calls'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-13
+  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-15
 docidentifier:
 - content: draft-zambo-aer1
   type: Internet-Draft
@@ -45,10 +45,23 @@ abstract:
        verification rule.  The -13 revision fixes a malformed sentence in
        the Abstract, three incorrect section cross-references, stale Table
        of Contents page numbers, a skipped footer page number, misaligned
-       table rows, and chain version-string updates, and records two live
-       independent interop validations in Implementation Status; it
+       table rows, and chain version-string updates, and records two reported
+       interoperability examples in Implementation Status; it
        changes no receipt field, digest construction, or verification
-       rule.</p>
+       rule.  The -14 revision adds tamper-evident metadata binding (new
+       Section 3.1; conditional metadata_hash for schema 0.4 and later),
+       disambiguates the anchor receipt_id (Table 4), corrects the
+       self-anchoring witnessing claim (Section 10), makes the Section 8.3
+       display rule a SHOULD with a byte-testable MUST, narrows the
+       provenance attestation wording (Section 5), states the binding
+       non-transfer rule normatively (new Section 10.2), pins
+       anchored_digest to bare hex (Table 4), corrects the vector corpus
+       counts, and adds normative disclosure of missing issuer
+       authentication.  It changes no existing receipt field, digest
+       construction, or verification rule for schema 0.3 and earlier.
+       The -15 revision narrows the Implementation Status wording for the
+       reported interoperability examples at the implementer's request; it
+       changes no receipt field, digest construction, or verification rule.</p>
 relation:
 - type: includes
   bibitem:
@@ -202,6 +215,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-13
     docidentifier:
     - content: draft-zambo-aer1-13
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zambo-aer1-14
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-14
+    docidentifier:
+    - content: draft-zambo-aer1-14
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zambo-aer1-15
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-15
+    docidentifier:
+    - content: draft-zambo-aer1-15
       type: Internet-Draft
       primary: true
 ext:

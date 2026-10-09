@@ -9,29 +9,26 @@ title:
   content: OAuth Actor-Signed Hop Proofs
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-proofs-00
+  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-proofs-01
 docidentifier:
 - content: draft-mcguinness-oauth-actor-proofs
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-04'
+  at: '2026-10-09'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>This document defines OAuth Actor-Signed Hop Proofs, an optional
-       companion profile for delegated OAuth tokens that conform to the
-       OAuth Actor Profile for Delegation.  It introduces the actor_proofs
-       claim, a signed per-hop proof chain in which the actor added at each
-       visible hop signs its own participation and the target binding it
-       authorized for that hop.  Proofs are linked into a hash chain, are
-       validated against actor verification keys resolved through pre-
-       established trust, and optionally cross-reference sibling actor
-       receipts.  This document also defines a token request parameter for
-       conveying proofs at issuance, and metadata and introspection
-       parameters for advertising and consuming actor-proof support.</p>
+       companion to the OAuth Actor Profile for Delegation.  Each proof is a
+       signed JSON Web Token (JWT) recording an actor's participation and
+       authorized target for one hop.  The actor_proofs claim carries a
+       hash-linked chain verified through trusted actor-key sources.  This
+       document specifies proof conveyance, validation, optional links to
+       Actor Receipts, metadata parameters, and introspection response
+       members.</p>
 relation:
 - type: includes
   bibitem:
@@ -42,6 +39,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-proofs-00
     docidentifier:
     - content: draft-mcguinness-oauth-actor-proofs-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-actor-proofs-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-proofs-01
+    docidentifier:
+    - content: draft-mcguinness-oauth-actor-proofs-01
       type: Internet-Draft
       primary: true
 ext:

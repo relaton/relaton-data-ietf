@@ -1,0 +1,85 @@
+---
+id: draftdiasagentpaymentverdicts00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Signed Authorization Verdicts for Agent-Initiated Payments
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dias-agent-payment-verdicts-00
+docidentifier:
+- content: draft-dias-agent-payment-verdicts
+  type: Internet-Draft
+- content: draft-dias-agent-payment-verdicts-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dias-agent-payment-verdicts
+date:
+- type: published
+  at: '2026-10-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ithelia
+      - language: en
+        script: Latn
+        initial: I
+      formatted_initials:
+        language: en
+        content: I.
+      surname:
+        language: en
+        content: Dias
+      completename:
+        language: en
+        content: Ithelia Dias
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Saifuro LLC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When a software agent initiates a payment on behalf of an
+       organization, the party that settles the payment usually cannot see
+       the policy under which it was permitted.  This document describes a
+       signed authorization verdict: a JSON Web Token, signed with ES256,
+       that records the outcome of evaluating one payment request, including
+       its amount, currency, and recipient, against a spending policy that
+       the organization configured.  A party holding the issuer's published
+       public key can verify a verdict without contacting the issuer.
+
+       The document describes the claim set, key publication and rotation,
+       and a verification procedure, and states what a verdict does not
+       assert.  It describes the format as one implementation issues it,
+       including the points where it departs from JSON Web Token Best
+       Current Practices (RFC 8725).  It is offered as input to IETF
+       discussion of authorization records for agent-initiated actions and
+       is not a proposal for standardization.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dias-agent-payment-verdicts-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

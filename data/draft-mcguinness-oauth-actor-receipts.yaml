@@ -9,28 +9,26 @@ title:
   content: OAuth Actor Receipts for Delegation Provenance
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-receipts-00
+  content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-receipts-01
 docidentifier:
 - content: draft-mcguinness-oauth-actor-receipts
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-04'
+  at: '2026-10-08'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines OAuth Actor Receipts, an optional companion
-       provenance profile for delegated OAuth tokens that conform to the
-       OAuth Actor Profile for Delegation.  It introduces the actor_receipts
-       claim, a signed per-hop receipt chain that records which issuer added
-       each visible actor hop, optionally preserves the historical top-level
-       cnf value associated with that hop subject to deployment disclosure
-       policy, and links receipts together so recipients can validate prior-
-       hop provenance without relying solely on the current outer token
-       issuer.  This document also defines metadata and introspection
-       parameters for advertising and consuming actor-receipt support.</p>
+    <p>This document defines OAuth Actor Receipts, an optional companion to
+       the OAuth Actor Profile for Delegation.  Each receipt is a signed
+       JSON Web Token (JWT) attesting which issuer added an actor hop and,
+       optionally, the hop's historical presenter binding.  The
+       actor_receipts claim carries a hash-linked chain of receipts that
+       recipients verify against each hop's issuer.  This document specifies
+       receipt processing rules and the associated metadata parameters and
+       introspection response members.</p>
 relation:
 - type: includes
   bibitem:
@@ -41,6 +39,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-receipts-00
     docidentifier:
     - content: draft-mcguinness-oauth-actor-receipts-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mcguinness-oauth-actor-receipts-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mcguinness-oauth-actor-receipts-01
+    docidentifier:
+    - content: draft-mcguinness-oauth-actor-receipts-01
       type: Internet-Draft
       primary: true
 ext:

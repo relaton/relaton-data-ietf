@@ -1,0 +1,113 @@
+---
+id: draftmittalestcoapnocert00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: EST-coaps Enrollment Using Device-Unique Symmetric Keys for Field Devices without Initial Certificates
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mittal-est-coap-no-cert-00
+docidentifier:
+- content: draft-mittal-est-coap-no-cert
+  type: Internet-Draft
+- content: draft-mittal-est-coap-no-cert-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mittal-est-coap-no-cert
+date:
+- type: published
+  at: '2026-10-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Narinder
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Mittal
+      completename:
+        language: en
+        content: Narinder Mittal
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Landis+Gyr
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hett
+      completename:
+        language: en
+        content: Chris Hett
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Landis+Gyr
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a profile for Enrollment over Secure
+       Transport using secure CoAP, where the EST-coaps client is a field
+       device that does not possess an initial device certificate,
+       manufacturer certificate, or other certificates usable for DTLS
+       client authentication.  Instead, the device is authenticated during
+       the DTLS handshake using a device-unique symmetric key or a pre-
+       shared key derived from that device-unique key.
+
+       This profile is intended for already registered and operational
+       devices that do not possess a certificate suitable for EST-coaps
+       client authentication but do possess a device-unique symmetric key
+       that can be used for initial authentication during certificate
+       enrollment.  The mechanism preserves EST certificate enrollment
+       semantics while replacing the initial certificate-based DTLS client
+       authentication requirement with PSK-based DTLS authentication.
+       [RFC9148] defines EST over secure CoAP and requires client
+       authentication for EST-coaps functions, while [RFC7030] permits
+       certificate-less TLS authentication scenarios for EST when suitable
+       shared credentials are available.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mittal-est-coap-no-cert-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
