@@ -1,0 +1,93 @@
+---
+id: draftnelsonagentdelegationreceipts11
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Agent Delegation Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-11
+docidentifier:
+- content: draft-nelson-agent-delegation-receipts
+  type: Internet-Draft
+- content: draft-nelson-agent-delegation-receipts-11
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.nelson-agent-delegation-receipts
+date:
+- type: published
+  at: '2026-10-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ryan
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Nelson
+      completename:
+        language: en
+        content: Ryan Nelson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Authproof
+version:
+- content: '11'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Agent Delegation Receipt: a signed record
+       of what a human principal authorized an AI agent to do, for how long,
+       and under what instructions.  The receipt carries a scope, hard
+       boundaries, a validity window, and a hash of the operator's stated
+       instructions, all signed by the authorizing key.  Version -11
+       replaces the draft's earlier custom signature format with two
+       standard profiles: a JWS profile (RFC 7515) over JCS-canonicalized
+       JSON (RFC 8785) as the primary wire format, and a COSE_Sign1 profile
+       (RFC 9052) for constrained environments.  It also specifies scope
+       attenuation rules for multi-agent delegation chains, a revocation
+       registry model with cascade semantics, and the limitations of what
+       receipts can and cannot prove.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-10
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-10
+    docidentifier:
+    - content: draft-nelson-agent-delegation-receipts-10
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-nelson-agent-delegation-receipts-11
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

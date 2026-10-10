@@ -1,0 +1,151 @@
+---
+id: draftzhangdawnagentdiscoveryframework04
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A Framework for Agent Discovery in DAWN
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhang-dawn-agent-discovery-framework-04
+docidentifier:
+- content: draft-zhang-dawn-agent-discovery-framework
+  type: Internet-Draft
+- content: draft-zhang-dawn-agent-discovery-framework-04
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhang-dawn-agent-discovery-framework
+date:
+- type: published
+  at: '2026-10-09'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bin
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Bin Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yixuan
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Yixuan Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sun Yat-sen University
+version:
+- content: '04'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The IETF DAWN (Discovery of Agents With Names) working group is
+       chartered to enable a client to discover the minimum public discovery
+       information about AI resources (e.g., AI agents) before interacting
+       with them, within the local network, within an organization, and
+       between cooperating parties over the public Internet.  Existing DAWN
+       contributions include terminology, use cases, requirements, gap
+       analysis, a discovery mechanism survey, and an information model for
+       Minimum Discoverable Information (MDI).
+
+       This document, the DAWN Discovery Architecture deliverable, describes
+       a two-layer federated reference architecture for this initial
+       discovery.  The first layer, the Local Discovery Plane, performs
+       zero-configuration advertisement and collection of the minimum public
+       discovery information inside each local site, without mandating a
+       specific link-local protocol.  The second layer, the Federation
+       Plane, builds a federation among site gateways to exchange
+       lightweight Federation Metadata Records (FMRs) — a concrete binding
+       of the minimum public discovery information — across independent
+       administrative domains, and provides integrity for all exchanged
+       discovery information.
+
+       The architecture emphasizes data sovereignty through an Export Policy
+       Engine, supports iterative discovery via referrals, delegation, and
+       indirection, and allows organizations to publish their discovery
+       information independently.  The Federation Plane is preferably
+       realized over DNS (Mode A, DNS Delegation Model), in which each site
+       publishes its FMRs as resource records in its own authoritative zone
+       and other sites' validating resolvers obtain and verify them with
+       DNSSEC, with delegation and referral between authoritative zones
+       providing the primary means of inter-organizational interaction.
+       Alternatively, the Federation Plane MAY be realized over non-DNS
+       synchronization modes (Mode B), selected according to the number and
+       scale of participating organizations and the deployment scenario from
+       BGP-like structured peering, gossip-based epidemic dissemination, and
+       trusted directory publication; the modes may be combined.  The
+       architecture supports multiple federation synchronization strategies
+       and builds on existing IETF protocols such as DNS and mDNS.  This
+       document is informational: it does not define normative protocol
+       formats, nor does it compete with existing DAWN proposals such as
+       ACAP, Agent Directory, or ARDP; rather, it provides a deployment
+       framework showing how these mechanisms may be composed at
+       administrative boundaries.  Consistent with the DAWN charter, open-
+       ended search, semantic matchmaking, ranking, selection based on
+       capabilities, capability catalogs, and communication beyond the
+       initial discovery process are out of scope.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-zhang-dawn-agent-discovery-framework-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-dawn-agent-discovery-framework-03
+    docidentifier:
+    - content: draft-zhang-dawn-agent-discovery-framework-03
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhang-dawn-agent-discovery-framework-04
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

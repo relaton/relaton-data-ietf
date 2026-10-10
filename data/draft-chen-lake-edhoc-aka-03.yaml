@@ -1,0 +1,150 @@
+---
+id: draftchenlakeedhocaka03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: EDHOC Authenticated with AKA
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chen-lake-edhoc-aka-03
+docidentifier:
+- content: draft-chen-lake-edhoc-aka
+  type: Internet-Draft
+- content: draft-chen-lake-edhoc-aka-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chen-lake-edhoc-aka
+date:
+- type: published
+  at: '2026-10-10'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Meiling
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Meiling Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: L
+      formatted_initials:
+        language: en
+        content: L.
+      surname:
+        language: en
+        content: Su
+      completename:
+        language: en
+        content: Li Su
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xueyan
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Song
+      completename:
+        language: en
+        content: Xueyan Song
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: ZTE Corp.
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an Authentication and Key Agreement (AKA)
+       authentication method for the Ephemeral Diffie-Hellman Over COSE
+       (EDHOC) key exchange protocol.  This method, named EDHOC-AKA, is
+       designed as a specific profile of the EDHOC Pre-Shared Key (PSK)
+       authentication method defined in [I-D.ietf-lake-edhoc-psk].
+
+       EDHOC-AKA enables a resource-constrained device (Initiator), which
+       has a mobile network subscription (e.g., a SIM/UICC), to establish a
+       secure, forward-secret session with an application server
+       (Responder).  It achieves this by embedding a 3GPP AKA challenge-
+       response exchange within the standard EDHOC message flow using
+       External Authorization Data (EAD) fields.  The EDHOC Responder acts
+       as a proxy, relaying AKA messages to the mobile core network.
+
+       Upon successful AKA authentication, a session-specific key is derived
+       and used as the Pre-Shared Key for the EDHOC-PSK protocol.  This
+       approach provides efficient, end-to-end authenticated session
+       establishment for scenarios like Non-Terrestrial Networks (NTN) or
+       massive IoT, while inheriting the security properties of EDHOC-PSK,
+       including mutual authentication, identity protection, and strong
+       forward secrecy.  It offers a highly integrated and byte-efficient
+       alternative to more generic frameworks like EAP.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-chen-lake-edhoc-aka-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-lake-edhoc-aka-02
+    docidentifier:
+    - content: draft-chen-lake-edhoc-aka-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chen-lake-edhoc-aka-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

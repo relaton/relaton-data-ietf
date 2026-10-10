@@ -9,14 +9,14 @@ title:
   content: EDHOC Authenticated with AKA
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-chen-lake-edhoc-aka-02
+  content: https://datatracker.ietf.org/doc/html/draft-chen-lake-edhoc-aka-03
 docidentifier:
 - content: draft-chen-lake-edhoc-aka
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-03-15'
+  at: '2026-10-10'
 abstract:
 - language: en
   script: Latn
@@ -25,17 +25,24 @@ abstract:
        authentication method for the Ephemeral Diffie-Hellman Over COSE
        (EDHOC) key exchange protocol.  This method, named EDHOC-AKA, is
        designed as a specific profile of the EDHOC Pre-Shared Key (PSK)
-       authentication method defined in [draft-ietf-lake-edhoc-psk-06].
+       authentication method defined in [I-D.ietf-lake-edhoc-psk].
 
-       EDHOC-AKA leverages the 3GPP AKA protocol to dynamically generate a
-       session-specific Pre-Shared Key, which is then used to run the EDHOC-
-       PSK protocol flow.  The AKA-specific parameters are transported
-       within the External Authorization Data (EAD) fields of the EDHOC
-       messages.  This approach provides efficient mobile communication
-       network access authentication for resource-constrained scenarios
-       (such as Non-Terrestrial Networks, NTN) while inheriting the security
-       properties of EDHOC-PSK, including mutual authentication, identity
-       protection, and forward secrecy.</p>
+       EDHOC-AKA enables a resource-constrained device (Initiator), which
+       has a mobile network subscription (e.g., a SIM/UICC), to establish a
+       secure, forward-secret session with an application server
+       (Responder).  It achieves this by embedding a 3GPP AKA challenge-
+       response exchange within the standard EDHOC message flow using
+       External Authorization Data (EAD) fields.  The EDHOC Responder acts
+       as a proxy, relaying AKA messages to the mobile core network.
+
+       Upon successful AKA authentication, a session-specific key is derived
+       and used as the Pre-Shared Key for the EDHOC-PSK protocol.  This
+       approach provides efficient, end-to-end authenticated session
+       establishment for scenarios like Non-Terrestrial Networks (NTN) or
+       massive IoT, while inheriting the security properties of EDHOC-PSK,
+       including mutual authentication, identity protection, and strong
+       forward secrecy.  It offers a highly integrated and byte-efficient
+       alternative to more generic frameworks like EAP.</p>
 relation:
 - type: includes
   bibitem:
@@ -68,6 +75,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-chen-lake-edhoc-aka-02
     docidentifier:
     - content: draft-chen-lake-edhoc-aka-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-chen-lake-edhoc-aka-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-lake-edhoc-aka-03
+    docidentifier:
+    - content: draft-chen-lake-edhoc-aka-03
       type: Internet-Draft
       primary: true
 ext:
