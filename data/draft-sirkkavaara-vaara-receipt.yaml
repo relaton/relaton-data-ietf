@@ -9,14 +9,14 @@ title:
   content: 'The Vaara Receipt: A Recomputable Receipt Format for Decisions About Autonomous Actions'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-12
+  content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-13
 docidentifier:
 - content: draft-sirkkavaara-vaara-receipt
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-28'
+  at: '2026-10-10'
 abstract:
 - language: en
   script: Latn
@@ -25,10 +25,11 @@ abstract:
        recomputable record that binds a decision about an autonomous action
        to the evidence the decision was made on, and optionally to one or
        more external timestamp anchors.  The format is canonicalized with
-       the JSON Canonicalization Scheme (JCS) so that any third party can
-       recompute its digests and verify its signature without access to the
-       issuer.  A decision and the execution receipt that answers it form
-       one recomputable pair through the envelope's back link.
+       the JSON Canonicalization Scheme (JCS) so that a third party can
+       recompute its digests, and, for a receipt signed with a public-key
+       algorithm, verify its signature, without access to the issuer.  A
+       decision and the execution receipt that answers it form one
+       recomputable pair through the envelope's back link.
 
        The receipt's trust is root-agnostic: the same record is verifiable
        with or without a hardware trusted execution environment and is re-
@@ -39,11 +40,9 @@ abstract:
        envelope.  The format described here is deployed, and its receipts
        are independently recomputable from public conformance vectors that
        ship with standalone checkers importing no issuer code.  The minimal
-       profile is a governance decision over a single autonomous action,
-       bound to the action's own intent with no external rail; it is the
-       floor of the format, and a reference library offers a matching
-       adoption floor at the API layer as a one-line decorator over the
-       governed function.</p>
+       profile is the engine decision: one receipt per decision an engine
+       records on its own audit trail, bound to the trail record it decided,
+       with no external rail.</p>
 relation:
 - type: includes
   bibitem:
@@ -186,6 +185,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-12
     docidentifier:
     - content: draft-sirkkavaara-vaara-receipt-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sirkkavaara-vaara-receipt-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sirkkavaara-vaara-receipt-13
+    docidentifier:
+    - content: draft-sirkkavaara-vaara-receipt-13
       type: Internet-Draft
       primary: true
 ext:

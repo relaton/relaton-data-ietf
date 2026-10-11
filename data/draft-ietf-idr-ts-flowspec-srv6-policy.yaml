@@ -9,14 +9,14 @@ title:
   content: Traffic Steering using BGP FlowSpec with SR Policy
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-18
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-19
 docidentifier:
 - content: draft-ietf-idr-ts-flowspec-srv6-policy
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-05'
+  at: '2026-10-11'
 abstract:
 - language: en
   script: Latn
@@ -24,12 +24,12 @@ abstract:
     <p>BGP Flow Specification (FlowSpec) provides mechanisms to distribute
        traffic filtering and steering rules across BGP networks.  This
        document specifies BGP FlowSpec procedures to steer matching traffic
-       flows into Segment Routing (SR) Policies.  Specifically, it defines
-       protocol mechanisms for combining FlowSpec NLRIs with specific BGP
-       Extended Communities for transport policy steering (Mode 1) in SR-
-       MPLS and SRv6 networks, and optionally with the BGP Prefix-SID
-       Attribute when egress service action execution is required (Mode 2)
-       in SRv6 networks.</p>
+       flows into Segment Routing (SR) Policies.  It defines two modes of
+       operation: transport steering into an SR Policy ("Mode 1"), in SR-
+       MPLS and SRv6 networks, using BGP Extended Communities; and, in SRv6
+       networks, transport steering combined with an egress service action
+       at the egress node ("Mode 2"), signaled with the BGP Prefix-SID
+       Attribute.</p>
 relation:
 - type: includes
   bibitem:
@@ -238,6 +238,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-18
     docidentifier:
     - content: draft-ietf-idr-ts-flowspec-srv6-policy-18
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-idr-ts-flowspec-srv6-policy-19
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-idr-ts-flowspec-srv6-policy-19
+    docidentifier:
+    - content: draft-ietf-idr-ts-flowspec-srv6-policy-19
       type: Internet-Draft
       primary: true
 ext:

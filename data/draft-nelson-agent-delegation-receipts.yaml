@@ -9,14 +9,14 @@ title:
   content: Agent Delegation Receipts
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-11
+  content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-12
 docidentifier:
 - content: draft-nelson-agent-delegation-receipts
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-09'
+  at: '2026-10-10'
 abstract:
 - language: en
   script: Latn
@@ -32,7 +32,12 @@ abstract:
        (RFC 9052) for constrained environments.  It also specifies scope
        attenuation rules for multi-agent delegation chains, a revocation
        registry model with cascade semantics, and the limitations of what
-       receipts can and cannot prove.</p>
+       receipts can and cannot prove.  Version -12 resolves the unknown-
+       fields question raised on the IETF oauth mailing list: authorization
+       fields are closed (verifiers reject unknown top-level body fields
+       rather than silently ignoring them), the "metadata" object is the
+       defined extension point, and one-time-use receipts fail closed
+       without a durable consumption store.</p>
 relation:
 - type: includes
   bibitem:
@@ -164,6 +169,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-11
     docidentifier:
     - content: draft-nelson-agent-delegation-receipts-11
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-12
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-12
+    docidentifier:
+    - content: draft-nelson-agent-delegation-receipts-12
       type: Internet-Draft
       primary: true
 ext:
