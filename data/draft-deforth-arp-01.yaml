@@ -1,0 +1,96 @@
+---
+id: draftdefortharp01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Agentic Reasoning Protocol (ARP): DNS-Bound Signatures for Entity Self-Descriptions'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-deforth-arp-01
+docidentifier:
+- content: draft-deforth-arp
+  type: Internet-Draft
+- content: draft-deforth-arp-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.deforth-arp
+date:
+- type: published
+  at: '2026-10-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sascha
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Deforth
+      completename:
+        language: en
+        content: Sascha Deforth
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: TrueSource
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies version 1.3 ("Reader Profile") of the Agentic
+       Reasoning Protocol (ARP).  ARP defines a JSON manifest, served at a
+       well-known location, in which the operator of a domain publishes a
+       self-description of an entity, and an optional Ed25519 signature that
+       binds the manifest to the domain through a public key in a DNS TXT
+       record.  A valid signature shows that the domain operator published
+       exactly this file and that it has not been altered since; it does not
+       show that the statements in the file are true.
+
+       Version 1.3 adds a wording profile that limits manifest text to
+       third-person statements about the entity, a required provenance
+       statement, a readable description of the signature with pointers for
+       checking it, a Markdown representation bound to the manifest by a
+       SHA-256 digest, a discovery profile, and key revocation through an
+       empty key value in the DNS record.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-deforth-arp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-deforth-arp-00
+    docidentifier:
+    - content: draft-deforth-arp-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-deforth-arp-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

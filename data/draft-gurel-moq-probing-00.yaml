@@ -1,0 +1,135 @@
+---
+id: draftgurelmoqprobing00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Probe Tracks for Bandwidth Estimation in Media over QUIC Transport
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gurel-moq-probing-00
+docidentifier:
+- content: draft-gurel-moq-probing
+  type: Internet-Draft
+- content: draft-gurel-moq-probing-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gurel-moq-probing
+date:
+- type: published
+  at: '2026-10-12'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zafer
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Gürel
+      completename:
+        language: en
+        content: Zafer Gürel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ozyegin University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ali
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: A. C.
+      surname:
+        language: en
+        content: Begen
+      completename:
+        language: en
+        content: Ali C. Begen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Networked Media
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Deniz
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Ugur
+      completename:
+        language: en
+        content: Deniz Ugur
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ozyegin University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines probe tracks for Media over QUIC Transport
+       (MOQT): tracks of synthetic objects, generated on demand, that
+       measure the bandwidth of a single hop.  Probe tracks live under
+       reserved, session-scoped Track Namespaces and are never forwarded or
+       cached.  The track name selects the shape of the probe: target
+       bitrate, duration or size, object rate, object size, group structure
+       and key-object bursts.  For a downlink probe, a subscriber subscribes
+       to a probe track in the namespace (.session, .probe), and the relay
+       generates it, so the subscriber can measure whether a higher bitrate
+       is sustainable on the relay-to-subscriber hop before it switches to a
+       higher-quality track.  For an uplink probe, a publisher generates a
+       probe track and publishes it to its relay in the namespace (.session,
+       .sink), to measure the publisher-to-relay hop.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gurel-moq-probing-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
