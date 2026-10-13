@@ -1,0 +1,92 @@
+---
+id: draftsinghpsimerkle01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: PSI Merkle Commitment Profile (RFC6962-SHA256)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-singh-psi-merkle-01
+docidentifier:
+- content: draft-singh-psi-merkle
+  type: Internet-Draft
+- content: draft-singh-psi-merkle-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.singh-psi-merkle
+date:
+- type: published
+  at: '2026-10-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: kawaljeet
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: singh
+      completename:
+        language: en
+        content: kawaljeet singh
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: APEX Infrastructure
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Merkle commitment profile used by Proof
+       of Stateful Integrity (PSI) receipts.  It adopts the Merkle Tree Hash
+       and inclusion proof of RFC 9162 without modification, fixes leaf
+       order, and defines how a receipt declares the profile and how a
+       verifier obtains and checks an inclusion proof.  A valid proof shows
+       only that a leaf was committed under a root; it says nothing about
+       the truth or lawfulness of the sealed content.
+
+       This revision replaces the lexicographic ordering and odd-leaf
+       duplication of revision 00, which were incompatible with RFC 9162,
+       and withdraws all anchoring claims other than OpenTimestamps.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-singh-psi-merkle-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-psi-merkle-00
+    docidentifier:
+    - content: draft-singh-psi-merkle-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-singh-psi-merkle-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

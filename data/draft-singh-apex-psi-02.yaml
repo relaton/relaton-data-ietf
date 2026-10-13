@@ -6,26 +6,33 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'PSI-02: ACCU Carbon Sequestration Attestation'
+  content: 'PSI-02: Receipts for Carbon Sequestration Measurement Records'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-02-00
+  content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-02-01
 docidentifier:
 - content: draft-singh-apex-psi-02
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-19'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>PSI-02 specifies a privacy-preserving cryptographic attestation that
-       a registered NDIS service provider's operational evidence satisfies
-       the NDIS Practice Standards.  The attestation binds a canonicalised
-       evidence digest to an Ed25519 signature without disclosing
-       participant data or commercially sensitive material.</p>
+    <p>This document defines PSI-02, a domain profile of Proof of Stateful
+       Integrity (PSI) for measurement records supporting carbon
+       sequestration claims, such as field sampling results, remote-sensing
+       extracts, and calculation inputs.  Each record is sealed as a PSI
+       receipt so that later alteration, reordering, or removal is
+       detectable.  Only digests are sealed.  PSI-02 shows integrity and
+       ordering only; it does not show that the sequestration occurred, that
+       a methodology was followed, or that any credit is valid.
+
+       Revision 00 carried this title over an abstract describing
+       disability-services evidence.  This revision makes the body match the
+       title.</p>
 relation:
 - type: includes
   bibitem:
@@ -36,6 +43,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-02-00
     docidentifier:
     - content: draft-singh-apex-psi-02-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-singh-apex-psi-02-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-02-01
+    docidentifier:
+    - content: draft-singh-apex-psi-02-01
       type: Internet-Draft
       primary: true
 ext:

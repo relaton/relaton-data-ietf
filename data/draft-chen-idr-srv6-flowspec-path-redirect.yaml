@@ -9,28 +9,29 @@ title:
   content: Flowspec Indirection-id Redirect for SRv6
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-chen-idr-srv6-flowspec-path-redirect-00
+  content: https://datatracker.ietf.org/doc/html/draft-chen-idr-srv6-flowspec-path-redirect-03
 docidentifier:
 - content: draft-chen-idr-srv6-flowspec-path-redirect
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-04-21'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines extensions to "FlowSpec Redirect to
-       indirection-id Extended Community" for SRv6.  This extended community
-       can trigger advanced redirection capabilities to flowspec clients for
-       SRv6.  When activated, this flowspec extended community is used by a
-       flowspec client to retrieve the corresponding next-hop and encoding
-       information within a localised indirection-id mapping table.
-
-       The functionality detailed in this document allows a network
-       controller to decouple the BGP flowspec redirection instruction from
-       the operation of the available paths.</p>
+    <p>BGP Flow Specification Version 2 (FSv2) provides an extensible
+       framework for disseminating traffic flow filtering rules and
+       associated traffic redirection actions.  This document specifies
+       extensions to the FlowSpec Redirect to Indirection-id Extended
+       Community specifically for SRv6 (Segment Routing over IPv6).  When
+       received by a Flowspec client, this extended community triggers an
+       indirection-based lookup within a localized mapping table to retrieve
+       the target SRv6 Segment Identifier (SID), SRv6 Policy, or Binding SID
+       (BSID) forwarding state.  This mechanism decouples control-plane BGP
+       Flowspec redirection instructions from dynamic underlay path updates
+       in SRv6 networks.</p>
 relation:
 - type: includes
   bibitem:
@@ -41,6 +42,39 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-chen-idr-srv6-flowspec-path-redirect-00
     docidentifier:
     - content: draft-chen-idr-srv6-flowspec-path-redirect-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-chen-idr-srv6-flowspec-path-redirect-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-idr-srv6-flowspec-path-redirect-01
+    docidentifier:
+    - content: draft-chen-idr-srv6-flowspec-path-redirect-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-chen-idr-srv6-flowspec-path-redirect-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-idr-srv6-flowspec-path-redirect-02
+    docidentifier:
+    - content: draft-chen-idr-srv6-flowspec-path-redirect-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-chen-idr-srv6-flowspec-path-redirect-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-chen-idr-srv6-flowspec-path-redirect-03
+    docidentifier:
+    - content: draft-chen-idr-srv6-flowspec-path-redirect-03
       type: Internet-Draft
       primary: true
 ext:

@@ -1,0 +1,95 @@
+---
+id: draftsinghpsi02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Proof of Stateful Integrity (PSI): Signed, Merkle-Committed Receipts for Digital Records'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-singh-psi-02
+docidentifier:
+- content: draft-singh-psi
+  type: Internet-Draft
+- content: draft-singh-psi-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.singh-psi
+date:
+- type: published
+  at: '2026-10-13'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: kawaljeet
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: singh
+      completename:
+        language: en
+        content: kawaljeet singh
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: APEX Infrastructure
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Proof of Stateful Integrity (PSI), a format
+       and procedure for issuing signed receipts over digital records.  A
+       PSI receipt binds the SHA-256 digest of a canonical JSON record to an
+       issuer signature, a monotonic sequence number, and a Merkle tree root
+       computed with the RFC 6962 hashing profile, and may reference an
+       external timestamp anchor.  Any party holding the record, the
+       receipt, and the issuer public key can verify the receipt offline.
+       PSI provides evidence of integrity, origin, and ordering only.  It
+       does not establish that a record is true, lawful, safe, or compliant
+       with any regulation.
+
+       This revision replaces revision 01.  It withdraws all claims of zero-
+       knowledge proofs, multi-party computation, and inclusion proofs,
+       which the reference implementation does not provide.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-singh-psi-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-psi-01
+    docidentifier:
+    - content: draft-singh-psi-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-singh-psi-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

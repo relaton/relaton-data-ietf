@@ -9,14 +9,14 @@ title:
   content: Agent Delegation Receipts
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-12
+  content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-13
 docidentifier:
 - content: draft-nelson-agent-delegation-receipts
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-10'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
@@ -37,7 +37,11 @@ abstract:
        fields are closed (verifiers reject unknown top-level body fields
        rather than silently ignoring them), the "metadata" object is the
        defined extension point, and one-time-use receipts fail closed
-       without a durable consumption store.</p>
+       without a durable consumption store.  Version -13 incorporates
+       independent-implementation feedback: it pins the
+       orchestratorSignature verification key to the sub-receipt signer's
+       key, states the receipt-issuance computation order explicitly, and
+       guides issuers on default boundaries versus explicit allowances.</p>
 relation:
 - type: includes
   bibitem:
@@ -180,6 +184,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-12
     docidentifier:
     - content: draft-nelson-agent-delegation-receipts-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-nelson-agent-delegation-receipts-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nelson-agent-delegation-receipts-13
+    docidentifier:
+    - content: draft-nelson-agent-delegation-receipts-13
       type: Internet-Draft
       primary: true
 ext:

@@ -9,14 +9,14 @@ title:
   content: 'Cleared to Fly or Drive Is Not Cleared to Act: Actuator-Level Execution Finality and Compact Act Evidence for UAS and Autonomous Vehicles'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-das-drip-uas-act-finality-01
+  content: https://datatracker.ietf.org/doc/html/draft-das-drip-uas-act-finality-02
 docidentifier:
 - content: draft-das-drip-uas-act-finality
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-18'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
@@ -43,31 +43,33 @@ abstract:
        Broadcast Act Evidence: 16-octet per-act decision records
        authenticated with a TESLA-style one-way key chain sealed inside a
        Protected Enforcement Domain and anchored to the aircraft's DRIP
-       identity.  This lets an Observer verify, after a short disclosure
-       delay and within the 25-octet Broadcast RID message budget, that the
-       protected enforcement domain made an allow, deny, or safe-state
-       decision before the corresponding evidence key was disclosed, without
-       requiring a public-key signature on every act.  The evidence
-       mechanism is coupled to an execution-finality profile in which each
-       safety-significant or externally consequential act remains non-
-       effective as a Candidate Act until the Protected Enforcement Domain
-       verifies an act-bound, sink-bound Execution Handle against live
-       trusted context, consumes current authority state atomically, commits
-       a Finality Receipt, and only then releases the physical enablement
-       condition at the Finality Sink.  The profile also specifies act
-       classes and sinks, self-contained object fields, sink processing
-       pseudocode, envelope handles for high-rate control, a boundary-
-       proximity revalidation policy, bounded offline operation, and
-       composite multi-aircraft semantics.  For constrained onboard, air-to-
-       air, telemetry, or other small-frame links, the profile also defines
-       an optional Beacon Proof Capsule (BPC): a compact act-bound and sink-
-       bound execution-proof representation using an Authority Reference,
-       freshness and generation state, a context commitment, a keyed binding
-       commitment, explicit truncation-risk sizing, authenticated multi-
-       frame reconstruction when necessary, and fail-closed resolver
-       semantics.  A BPC is an input to execution verification; the AER/KDR/
-       Anchor mechanism is output evidence of the PED decision, and the two
-       roles are intentionally non-interchangeable.
+       identity.  Where the Observer receives a safely timed AER, the
+       required authenticated bootstrap material, and a usable disclosed
+       key, this enables delayed verification within the 25-octet Broadcast
+       RID message budget that the protected enforcement domain made an
+       allow, deny, or safe-state decision before the corresponding evidence
+       key was disclosed, without requiring a public-key signature on every
+       act.  The evidence mechanism is coupled to an execution-finality
+       profile in which each safety-significant or externally consequential
+       act remains non-effective as a Candidate Act until the Protected
+       Enforcement Domain verifies an act-bound, sink-bound Execution Handle
+       against live trusted context, consumes current authority state
+       atomically, commits a Finality Receipt, and only then releases the
+       physical enablement condition at the Finality Sink.  The profile also
+       specifies act classes and sinks, self-contained object fields, sink
+       processing pseudocode, envelope handles for high-rate control, a
+       boundary-proximity revalidation policy, bounded offline operation,
+       and composite multi-aircraft semantics.  For constrained onboard,
+       air-to-air, telemetry, or other small-frame links, the profile also
+       defines an optional Beacon Proof Capsule (BPC): a compact act-bound
+       and sink-bound execution-proof representation using an Authority
+       Reference, freshness and generation state, a context commitment, a
+       keyed binding commitment, explicit truncation-risk sizing,
+       authenticated multi-frame reconstruction when necessary, and fail-
+       closed resolver semantics.  A BPC is an input to execution
+       verification; the AER/KDR/Anchor mechanism is output evidence of the
+       PED decision, and the two roles are intentionally non-
+       interchangeable.
 
        Additional profiles: This document also describes three narrowly
        scoped execution-finality embodiments: conflict-set-bound Detect-and-
@@ -136,6 +138,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-das-drip-uas-act-finality-01
     docidentifier:
     - content: draft-das-drip-uas-act-finality-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-drip-uas-act-finality-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-drip-uas-act-finality-02
+    docidentifier:
+    - content: draft-das-drip-uas-act-finality-02
       type: Internet-Draft
       primary: true
 ext:

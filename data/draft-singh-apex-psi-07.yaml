@@ -6,26 +6,32 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'PSI-07: Organic Production Attestation'
+  content: 'PSI-07: Receipts for Organic Production Records'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-07-01
+  content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-07-02
 docidentifier:
 - content: draft-singh-apex-psi-07
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-21'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>PSI-07 defines a standard signal format for regulatory events
-       detected by automated monitoring systems.  The format is a signed
-       JSON envelope carrying the event classification, evidence hash, and
-       jurisdiction code, enabling autonomous reporting to one or more
-       regulators without human intervention.</p>
+    <p>This document defines PSI-07, a domain profile of Proof of Stateful
+       Integrity (PSI) for production records for organic certification,
+       such as input purchases, field activities, and inspection notes.
+       Each record is sealed as a PSI receipt so that later alteration,
+       reordering, or removal is detectable.  Only digests are sealed.
+       PSI-07 shows integrity and ordering only; it does not show that a
+       product is organic or that any certification standard was met.
+
+       Earlier revisions carried this title over an abstract describing
+       regulatory monitoring signals.  This revision makes the body match
+       the title.</p>
 relation:
 - type: includes
   bibitem:
@@ -47,6 +53,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-07-01
     docidentifier:
     - content: draft-singh-apex-psi-07-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-singh-apex-psi-07-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-07-02
+    docidentifier:
+    - content: draft-singh-apex-psi-07-02
       type: Internet-Draft
       primary: true
 ext:

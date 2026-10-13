@@ -6,25 +6,31 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'PSI-08: Health Records Access Attestation'
+  content: 'PSI-08: Receipts for Health Record Access Events'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-08-00
+  content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-08-01
 docidentifier:
 - content: draft-singh-apex-psi-08
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-19'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>PSI-08 specifies a format for composing multiple Digital Gallows
-       predicates into a verifiable chain.  Each link in the chain is a
-       signed predicate output that serves as input to the next, enabling
-       verifiable multi-step inference without a trusted intermediary.</p>
+    <p>This document defines PSI-08, a domain profile of Proof of Stateful
+       Integrity (PSI) for access events on health records, recording that
+       an access occurred, by which role, and for what stated purpose.  Each
+       record is sealed as a PSI receipt so that later alteration,
+       reordering, or removal is detectable.  Only digests are sealed.
+       PSI-08 shows integrity and ordering only; it does not show that an
+       access was authorised, appropriate, or lawful.
+
+       Revision 00 carried this title over an abstract describing predicate
+       chains.  This revision makes the body match the title.</p>
 relation:
 - type: includes
   bibitem:
@@ -35,6 +41,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-08-00
     docidentifier:
     - content: draft-singh-apex-psi-08-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-singh-apex-psi-08-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-apex-psi-08-01
+    docidentifier:
+    - content: draft-singh-apex-psi-08-01
       type: Internet-Draft
       primary: true
 ext:

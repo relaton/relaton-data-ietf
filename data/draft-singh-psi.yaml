@@ -6,37 +6,35 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Proof of Sovereign Integrity (PSI): A Cryptographic Protocol for Verifiable AI Regulatory Compliance'
+  content: 'Proof of Stateful Integrity (PSI): Signed, Merkle-Committed Receipts for Digital Records'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-singh-psi-01
+  content: https://datatracker.ietf.org/doc/html/draft-singh-psi-02
 docidentifier:
 - content: draft-singh-psi
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-29'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies the Proof of Sovereign Integrity (PSI)
-       Protocol, version 1.2, a cryptographic framework enabling
-       organizations to prove compliance with AI regulations (including the
-       EU AI Act 2024/1689, NIST AI RMF, UK AI Safety Institute guidelines,
-       and equivalent frameworks) without disclosing proprietary model
-       architectures, training data, or inference logic.
+    <p>This document specifies Proof of Stateful Integrity (PSI), a format
+       and procedure for issuing signed receipts over digital records.  A
+       PSI receipt binds the SHA-256 digest of a canonical JSON record to an
+       issuer signature, a monotonic sequence number, and a Merkle tree root
+       computed with the RFC 6962 hashing profile, and may reference an
+       external timestamp anchor.  Any party holding the record, the
+       receipt, and the issuer public key can verify the receipt offline.
+       PSI provides evidence of integrity, origin, and ordering only.  It
+       does not establish that a record is true, lawful, safe, or compliant
+       with any regulation.
 
-       PSI achieves this through a combination of SHA-256 hash-chained audit
-       trails, Ed25519 digital signatures, Merkle inclusion proofs,
-       Groth16-compatible zero-knowledge commitments over BN128 fields, and
-       a 3-node Multi-Party Computation (MPC) consensus mechanism with 2/3
-       threshold verification.
-
-       This revision documents a deployed public reference implementation
-       and adds optional post-quantum signature profiles and Bitcoin
-       timestamp anchoring.</p>
+       This revision replaces revision 01.  It withdraws all claims of zero-
+       knowledge proofs, multi-party computation, and inclusion proofs,
+       which the reference implementation does not provide.</p>
 relation:
 - type: includes
   bibitem:
@@ -58,6 +56,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-singh-psi-01
     docidentifier:
     - content: draft-singh-psi-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-singh-psi-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-psi-02
+    docidentifier:
+    - content: draft-singh-psi-02
       type: Internet-Draft
       primary: true
 ext:

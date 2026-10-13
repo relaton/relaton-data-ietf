@@ -6,28 +6,32 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: PSI AI Agent Action Sealing and Liability Protocol
+  content: PSI Receipts for AI Agent Actions
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-singh-psi-agent-00
+  content: https://datatracker.ietf.org/doc/html/draft-singh-psi-agent-01
 docidentifier:
 - content: draft-singh-psi-agent
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-19'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies a cryptographic protocol for sealing AI agent
-       actions, establishing an auditable chain of custody from instruction
-       to execution.  As AI agents increasingly perform autonomous actions —
-       financial transfers, content publication, system configuration, legal
-       filings — the need for a verifiable record of "who instructed what,
-       when, and what actually happened" becomes critical for liability
-       attribution, regulatory compliance, and trust.  The PSI Agent Se</p>
+    <p>This document defines a profile of Proof of Stateful Integrity (PSI)
+       for recording actions taken by software agents, including calls to
+       language models and tools.  The agent runtime computes a digest of
+       each action locally and seals only the digest, so later alteration or
+       omission of a recorded action is detectable.  A receipt shows that a
+       specific action record existed unchanged at a time; it does not show
+       that the action was correct, safe, authorised, or lawful, and it
+       allocates no liability.
+
+       This revision withdraws the liability-allocation language of revision
+       00 and aligns the Merkle commitment with draft-singh-psi-merkle-01.</p>
 relation:
 - type: includes
   bibitem:
@@ -38,6 +42,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-singh-psi-agent-00
     docidentifier:
     - content: draft-singh-psi-agent-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-singh-psi-agent-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-singh-psi-agent-01
+    docidentifier:
+    - content: draft-singh-psi-agent-01
       type: Internet-Draft
       primary: true
 ext:
