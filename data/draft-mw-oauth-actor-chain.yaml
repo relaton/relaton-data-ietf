@@ -6,36 +6,33 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Cryptographically Verifiable Actor Chains for OAuth 2.0 Token Exchange
+  content: 'OAuth Actor Chain: Protocol and Interoperability'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-actor-chain-01
+  content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-actor-chain-02
 docidentifier:
 - content: draft-mw-oauth-actor-chain
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-15'
+  at: '2026-10-13'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>Multi-hop service-to-service and agentic workflows often exchange
-       OAuth access tokens across a sequence of actors.  OAuth 2.0 Token
-       Exchange permits an act claim, including nested prior actors, but it
-       does not define interoperable rules for preserving, extending,
-       disclosing, and validating a delegation path across successive
-       exchanges.
-
-       This document defines six actor-chain profiles for OAuth 2.0 Token
-       Exchange: Declared Full Disclosure, Declared Subset Disclosure,
-       Declared Actor-Only Disclosure, Verified Full Disclosure, Verified
-       Subset Disclosure, and Verified Actor-Only Disclosure.  The profiles
-       preserve the existing meanings of sub, act, and may_act.  They add
-       explicit profile selection, a stable workflow actor-chain identifier,
-       profile-controlled actor disclosure, and, for verified profiles,
-       actor-signed step proofs with cumulative commitment state.</p>
+    <p>This document defines the protocol and interoperability requirements
+       for OAuth Actor Chain.  Six profiles combine Authorization Server
+       declarations or actor-signed evidence with Full, Subset, or Actor-
+       Only disclosure.  Verified profiles create one actor proof and one AS
+       acceptance at every actor step, with optional current-actor,
+       disclosed-actor, or full-path evidence delivered inline or through
+       introspection.  This specification defines the wire formats,
+       validation, replay and retry behavior, cross-domain preservation,
+       resource limits, and IANA registration requests.  A separate
+       Informational overview provides additional design discussion.  This
+       revision continues the existing OAuth Actor Chain draft series, with
+       Internet-Draft lineage beginning in SPICE in February 2026.</p>
 relation:
 - type: includes
   bibitem:
@@ -57,6 +54,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-actor-chain-01
     docidentifier:
     - content: draft-mw-oauth-actor-chain-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mw-oauth-actor-chain-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mw-oauth-actor-chain-02
+    docidentifier:
+    - content: draft-mw-oauth-actor-chain-02
       type: Internet-Draft
       primary: true
 ext:

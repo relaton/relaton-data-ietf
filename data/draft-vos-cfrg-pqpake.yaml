@@ -9,29 +9,29 @@ title:
   content: Hybrid Post-Quantum Password Authenticated Key Exchange
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-vos-cfrg-pqpake-02
+  content: https://datatracker.ietf.org/doc/html/draft-vos-cfrg-pqpake-03
 docidentifier:
 - content: draft-vos-cfrg-pqpake
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-06'
+  at: '2026-10-14'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document describes the CPaceOQUAKE+ protocol, a hybrid
-       asymmetric password-authenticated key exchange (aPAKE) that supports
-       mutual authentication in a client-server setting secure against
-       quantum-capable attackers.  CPaceOQUAKE+ is composed of two stages —
-       CPace and OQUAKE+ — that run sequentially, with the output of CPace
-       feeding as the secret_context into OQUAKE+. OQUAKE+ is an augmented
-       variant of OQUAKE that adds password confirmation.  This document
-       also describes standalone OQUAKE+, a post-quantum aPAKE, and
-       CPaceOQUAKE, the hybrid symmetric PAKE composed of the CPace and
-       OQUAKE stages.  This document recommends configurations for
-       CPaceOQUAKE+.</p>
+    <p>This document describes four post-quantum password authenticated key
+       exchange (PAKE) protocols: OQUAKE, OQUAKE+, CPaceOQUAKE, and
+       CPaceOQUAKE+. OQUAKE and OQUAKE+ are standalone PAKEs that both offer
+       security against a quantum-capable attacker.  OQUAKE is a symmetric
+       PAKE, suitable for use cases where both parties share a view of the
+       password.  OQUAKE+ is an augmented version of OQUAKE suitable for
+       client-server settings where only one party (the client) knows the
+       password.  CPaceOQUAKE is a hybrid PAKE that runs a classical PAKE
+       (CPace) and OQUAKE sequentially, and CPaceOQUAKE+ is its augmented
+       version.  This document also provides recommended configurations for
+       each protocol.</p>
 relation:
 - type: includes
   bibitem:
@@ -64,6 +64,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-vos-cfrg-pqpake-02
     docidentifier:
     - content: draft-vos-cfrg-pqpake-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-vos-cfrg-pqpake-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vos-cfrg-pqpake-03
+    docidentifier:
+    - content: draft-vos-cfrg-pqpake-03
       type: Internet-Draft
       primary: true
 ext:

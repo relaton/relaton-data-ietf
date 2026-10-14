@@ -1,0 +1,95 @@
+---
+id: draftzhangdawnbgpstylefederateddiscovery00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Federated Agent Metadata Synchronization Protocol (FAMS-P)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhang-dawn-bgp-style-federated-discovery-00
+docidentifier:
+- content: draft-zhang-dawn-bgp-style-federated-discovery
+  type: Internet-Draft
+- content: draft-zhang-dawn-bgp-style-federated-discovery-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zhang-dawn-bgp-style-federated-discovery
+date:
+- type: published
+  at: '2026-10-14'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Bin
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Bin Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Pengcheng Laboratory
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the Federated Agent Metadata Synchronization
+       Protocol (FAMS-P), a normative protocol realization of the "BGP-like
+       structured peering" federation mode (Mode B) defined in the two-layer
+       DAWN discovery architecture (draft-zhang-dawn-agent-discovery-
+       framework).  FAMS-P is a peer-to-peer unicast protocol for
+       synchronizing agent discovery metadata between Federation Gateways
+       (FGWs) across administrative domains, in deployments where the
+       preferred DNS delegation model does not meet operational
+       requirements, such as closed trusted federations of approximately 2
+       to 200 sites.
+
+       FAMS-P runs over mutually-authenticated TLS 1.3 sessions between
+       peering gateways.  It supports initial full metadata synchronization
+       and incremental updates for agent online, offline, and change events.
+       Each gateway maintains a local Federated Agent Directory (FAD).  The
+       protocol synchronizes only lightweight Federation Metadata Records
+       (FMRs) — a concrete binding of the DAWN Minimum Discoverable
+       Information (MDI) — and thus transfers only the minimum public
+       discovery information permitted by the DAWN charter; richer
+       capability retrieval is out of scope.
+
+       The protocol defines complete message formats, a session state
+       machine with connection collision resolution, timestamp-and-replay-
+       protected conflict resolution, mandatory FMR origin signatures, time-
+       to-live aging with bounded refresh jitter, and fine-grained per-peer
+       export policy enforcement.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zhang-dawn-bgp-style-federated-discovery-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
