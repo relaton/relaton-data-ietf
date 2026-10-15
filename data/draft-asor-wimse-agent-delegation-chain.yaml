@@ -9,14 +9,14 @@ title:
   content: Verifiable Attenuated Delegation for AI Agent Chains
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-asor-wimse-agent-delegation-chain-01
+  content: https://datatracker.ietf.org/doc/html/draft-asor-wimse-agent-delegation-chain-02
 docidentifier:
 - content: draft-asor-wimse-agent-delegation-chain
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-03'
+  at: '2026-10-15'
 abstract:
 - language: en
   script: Latn
@@ -27,18 +27,20 @@ abstract:
        time, and any enforcement point should be able to verify -- offline,
        with no call to an authorization server -- that a token presented at
        hop N carries authority no greater than the token at hop N-1, back to
-       a trusted root.  OAuth 2.0 Token Exchange (RFC 8693) models two-party
+       a trusted root, and that every hop acts under the same accountable
+       principal.  OAuth 2.0 Token Exchange (RFC 8693) models two-party
        delegation and records prior actors in a nested "act" claim, but that
        claim is informational only and cannot enforce attenuation across a
        chain of depth two or more.  This document defines the Agent
        Delegation Chain: a profile of OAuth 2.0 JWT access tokens (RFC 9068)
        that carries authority as Rich Authorization Requests (RFC 9396),
-       links each delegation to its parent by a cryptographic byte-
+       binds the chain to one principal and names the agent acting at each
+       hop, links each delegation to its parent by a cryptographic byte-
        commitment, and specifies a deterministic offline verification
-       algorithm that enforces monotonic attenuation, bounded depth, and
-       monotonic expiry.  It reuses existing JOSE, proof-of-possession (RFC
-       9449), and status-list machinery (the OAuth Status List draft) and
-       introduces no new cryptography.</p>
+       algorithm that enforces monotonic attenuation, bounded depth,
+       monotonic expiry, and principal invariance.  It reuses existing JOSE,
+       proof-of-possession (RFC 9449), and status-list machinery (the OAuth
+       Status List draft) and introduces no new cryptography.</p>
 relation:
 - type: includes
   bibitem:
@@ -60,6 +62,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-asor-wimse-agent-delegation-chain-01
     docidentifier:
     - content: draft-asor-wimse-agent-delegation-chain-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-asor-wimse-agent-delegation-chain-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-asor-wimse-agent-delegation-chain-02
+    docidentifier:
+    - content: draft-asor-wimse-agent-delegation-chain-02
       type: Internet-Draft
       primary: true
 ext:
