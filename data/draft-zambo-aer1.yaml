@@ -9,14 +9,14 @@ title:
   content: 'AER-1: A Portable Execution Receipt for AI Agent Tool Calls'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-19
+  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-20
 docidentifier:
 - content: draft-zambo-aer1
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-12'
+  at: '2026-10-15'
 abstract:
 - language: en
   script: Latn
@@ -45,8 +45,8 @@ abstract:
        verification rule.  The -13 revision fixes a malformed sentence in
        the Abstract, three incorrect section cross-references, stale Table
        of Contents page numbers, a skipped footer page number, misaligned
-       table rows, and chain version-string updates, and records two reported
-       interoperability examples in Implementation Status; it
+       table rows, and chain version-string updates, and records two
+       reported interoperability examples in Implementation Status; it
        changes no receipt field, digest construction, or verification
        rule.  The -14 revision adds tamper-evident metadata binding (new
        Section 3.1; conditional metadata_hash for schema 0.4 and later),
@@ -94,8 +94,19 @@ abstract:
        in Section 8.1: both descriptions named step output hashes
        as the root's leaf input where Section 8.1 specifies step
        receipt identifiers.  An implementer report identified the
-       divergence.  It changes no construction, receipt field,
-       digest, or verification outcome.</p>
+       divergence.  It changes no construction, receipt field, digest, or
+       verification outcome.  The -20 revision adopts three findings
+       reported by an independent implementer who built a conformance
+       verifier from the -19 text alone.  It requires the published byte
+       layout of a recorded input to state the member ordering rule it
+       applies when the input is a JSON object (Section 3.3), and it bars
+       control characters from provenance class labels, with rejection
+       required (Section 5).  The conformance kit's quickstart core tier
+       also gains the provenance-label and schema-version metadata checks as
+       a stated rule.  It changes no receipt field or digest construction; a
+       receipt well-formed under the -19 rules verifies identically, except
+       that an input commitment whose published layout states no ordering
+       rule is no longer reported as confirmed.</p>
 relation:
 - type: includes
   bibitem:
@@ -315,6 +326,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-19
     docidentifier:
     - content: draft-zambo-aer1-19
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zambo-aer1-20
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-20
+    docidentifier:
+    - content: draft-zambo-aer1-20
       type: Internet-Draft
       primary: true
 ext:

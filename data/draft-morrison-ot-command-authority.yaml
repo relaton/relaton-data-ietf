@@ -6,17 +6,17 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Consented and Attributable Agent Authority for Operational-Technology Control Actions
+  content: Authorised and Attributable Agent Authority for Operational-Technology Control Actions
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-03
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-04
 docidentifier:
 - content: draft-morrison-ot-command-authority
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-30'
+  at: '2026-10-15'
 abstract:
 - language: en
   script: Latn
@@ -31,19 +31,18 @@ abstract:
        sufficient to attribute the action afterward.  The profile does not
        invent new cryptography or a new identity mechanism.  It composes
        primitives specified elsewhere, DNSSEC-rooted agent discovery, a
-       scoped and revocable authorisation grant, a named-human authorization
-       receipt bound into the record as human-authorization evidence, and an
-       append-only transparency record, into a single structure, the Command
-       Authority Envelope, that an enforcement point evaluates and, on any
-       missing or invalid binding, refuses.  The profile is availability-
-       first and fails closed on authority, never on safety: it MUST NOT be
-       placed in the trip path of a safety function.  The memo maps the
-       profile onto the identification, use-control, and audit requirements
-       that the IEC 62443 and NERC CIP frameworks state but do not give a
-       wire mechanism for.  A neighbouring proposal gates safety-critical
-       commands on an agent's trust level; this profile takes the opposite
-       position, and states why.  The methods by which a principal's
-       identity is inferred are out of scope by construction.</p>
+       scoped and revocable authorisation grant, and a named-human
+       authorization receipt bound into the record as human-authorization
+       evidence, together with an append-only audit record, into a single
+       structure, the Command Authority Envelope, that an enforcement point
+       evaluates and, on any missing or invalid binding, refuses.  The
+       profile is availability-first and fails closed on authority, never on
+       safety: it MUST NOT be placed in the trip path of a safety function.
+       The memo relates the profile to the identification, use-control, and
+       audit requirements that the IEC 62443 and NERC CIP frameworks state
+       but do not give a wire mechanism for.  A neighbouring proposal gates
+       safety-critical commands on an agent's trust level; this profile
+       takes the opposite position, and states why.</p>
 relation:
 - type: includes
   bibitem:
@@ -87,6 +86,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-03
     docidentifier:
     - content: draft-morrison-ot-command-authority-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-morrison-ot-command-authority-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-ot-command-authority-04
+    docidentifier:
+    - content: draft-morrison-ot-command-authority-04
       type: Internet-Draft
       primary: true
 ext:
