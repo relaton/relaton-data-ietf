@@ -1,0 +1,67 @@
+---
+id: draftliumcguinnessoauthboundedwork
+schema_version: v1.5.6
+formattedref:
+  content: draft-liu-mcguinness-oauth-bounded-work
+title:
+- language: en
+  script: Latn
+  content: OAuth 2.0 Bounded Work Authorization
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-liu-mcguinness-oauth-bounded-work-00
+docidentifier:
+- content: draft-liu-mcguinness-oauth-bounded-work
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-17'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>OAuth 2.0 provides mechanisms for requesting and granting access,
+       constraining access tokens, and managing their lifecycle.  It does
+       not define a common way to identify the work a user approved and to
+       associate that work's bounds and termination with the credentials
+       issued for it.  When an AI agent acts on a user's behalf, that work
+       is what most needs governing: the agent's authority should come from
+       the approval of a bounded piece of work, should stay within the
+       bounds the user approved, and should end when the work is done or the
+       user withdraws it.
+
+       This document presents a use case in which a user withdraws an
+       agent's approved work and the agent's further operations are denied,
+       and identifies the semantics that independently implemented clients,
+       Authorization Servers, and Resource Servers need to share to deliver
+       that outcome.  It then describes a framework for approved bounded
+       work, built on three objects: a bounded work proposal, the governing
+       authorization established when it is approved, and approval evidence,
+       a durable record of the authorization decision and the approved
+       bounds.  Credentials issued for the work are associated with the
+       governing authorization, and ending the authorization has defined
+       consequences for further issuance and, within a stated acceptance
+       window, for resource access.
+
+       This version specifies no wire formats and requests no IANA actions.
+       It is a direction-setting document: its goal is agreement on the
+       problem and the conceptual model, with details left to subsequent
+       revisions and working group discussion.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-liu-mcguinness-oauth-bounded-work-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-mcguinness-oauth-bounded-work-00
+    docidentifier:
+    - content: draft-liu-mcguinness-oauth-bounded-work-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -9,29 +9,29 @@ title:
   content: JMAP Object Metadata
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-metadata-02
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-metadata-03
 docidentifier:
 - content: draft-ietf-jmap-metadata
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-05-27'
+  at: '2026-10-17'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>This document defines an extension to the JSON Meta Application
        Protocol (JMAP) that lets clients and servers attach metadata to
-       existing JMAP data types.  Each opted-in data type gains two new
-       properties, metadata and privateMetadata, whose values are objects
-       keyed by _namespace identifier_. A namespace identifier is either a
-       name registered with IANA or a domain name controlled by the vendor
-       providing the namespace; the latter allows vendors and applications
-       to extend the metadata schema without prior coordination.  Because
-       metadata is carried as a property on the related object, clients use
-       the existing /get, /set, /changes, and /query methods to read,
-       modify, and synchronize it.</p>
+       objects of existing JMAP data types.  Each data type the server lists
+       gains two new properties, metadata and privateMetadata, whose values
+       are objects keyed by _namespace identifier_. A namespace identifier
+       is either a name registered with IANA or a domain name controlled by
+       the vendor providing the namespace; the latter allows vendors and
+       applications to extend the metadata schema without prior
+       coordination.  Because metadata is carried as a property on the
+       related object, clients use the existing /get, /set, /changes, and
+       /query methods to read, modify, and synchronize it.</p>
 relation:
 - type: includes
   bibitem:
@@ -64,6 +64,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-metadata-02
     docidentifier:
     - content: draft-ietf-jmap-metadata-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-jmap-metadata-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-jmap-metadata-03
+    docidentifier:
+    - content: draft-ietf-jmap-metadata-03
       type: Internet-Draft
       primary: true
 ext:

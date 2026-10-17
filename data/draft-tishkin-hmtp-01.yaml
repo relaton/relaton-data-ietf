@@ -1,0 +1,102 @@
+---
+id: drafttishkinhmtp01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: HTTP Mail Transfer Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-tishkin-hmtp-01
+docidentifier:
+- content: draft-tishkin-hmtp
+  type: Internet-Draft
+- content: draft-tishkin-hmtp-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.tishkin-hmtp
+date:
+- type: published
+  at: '2026-10-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Dmitrii
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Tishkin
+      completename:
+        language: en
+        content: Dmitrii Tishkin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Independent
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the HTTP Mail Transfer Protocol (HMTP), a
+       protocol for the submission and transfer of Internet mail over HTTPS.
+       HMTP retains what SMTP and the mail system built around it have
+       proven, namely the Internet Message Format, the separation of
+       envelope and message, and the semantics of delivery and delivery
+       status notifications, and adds what SMTP provides only through
+       optional extensions or not at all.  Security is built in: transport
+       encryption is mandatory, and every transfer request is signed on
+       behalf of the sending domain, using keys published with the
+       DomainKeys Identified Mail (DKIM) key publication mechanism.
+       Requests carry identifiers that make retries safe, failures are
+       reported per recipient as structured problem details with a mapping
+       to SMTP status codes, and extensions are declared explicitly as
+       capabilities.  Messages are carried unmodified inside a JSON
+       envelope, and large messages and attachments can be transferred by
+       reference, with their integrity protected by cryptographic hashes.
+       Servers discover HMTP endpoints through DNS and a well-known URI, and
+       a domain can publish a policy that prevents downgrade to SMTP.  HMTP
+       does not depend on SMTP, but an implementation can optionally fall
+       back to SMTP when a peer does not support HMTP, so that it can be
+       deployed incrementally alongside existing systems.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-tishkin-hmtp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tishkin-hmtp-00
+    docidentifier:
+    - content: draft-tishkin-hmtp-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-tishkin-hmtp-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
