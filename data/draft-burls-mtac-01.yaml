@@ -1,0 +1,101 @@
+---
+id: draftburlsmtac01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Merkle Tree Agent Certificates (MTAC): A Merkle Tree Certificates Profile for AI Agent Identity'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-burls-mtac-01
+docidentifier:
+- content: draft-burls-mtac
+  type: Internet-Draft
+- content: draft-burls-mtac-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.burls-mtac
+date:
+- type: published
+  at: '2026-10-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Reuben
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Burls
+      completename:
+        language: en
+        content: Reuben Burls
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Aelethion OU
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document profiles Merkle Tree Certificates (MTC) for the
+       identity of AI agents.  An MTAC certificate is an MTC whose subject
+       is one AI agent instance, named by a workload identifier in a URI
+       subject alternative name, so that it is also a Workload Identity
+       Certificate.  It carries a mandatory non-critical extension naming
+       the sponsor the CA recorded as accountable for the agent, and two
+       optional ones: scopes declared for the agent at issuance, and the
+       model and configuration components the agent is issued for, each
+       graded by how the CA came to record it.
+
+       The document also defines an audit cosigner role and a procedure by
+       which an auditor, possibly without network access and possibly long
+       after issuance, can establish that a certificate was issued and
+       logged and what it declared.
+
+       An MTAC certificate identifies an agent.  It does not authorize the
+       agent to do anything, and it does not record what the agent did.
+       Records of agent actions can be expressed as signed statements in a
+       transparency service that refer to an MTAC certificate as the acting
+       party.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-burls-mtac-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-burls-mtac-00
+    docidentifier:
+    - content: draft-burls-mtac-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-burls-mtac-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,60 @@
+---
+id: draftzhangbcatscentralizedcontrolplane
+schema_version: v1.5.6
+formattedref:
+  content: draft-zhangb-cats-centralized-control-plane
+title:
+- language: en
+  script: Latn
+  content: A Centralized Control Plane for Computing-Aware Traffic Steering
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-centralized-control-plane-00
+docidentifier:
+- content: draft-zhangb-cats-centralized-control-plane
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-18'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a centralized control-plane realization of
+       Computing-Aware Traffic Steering (CATS).  The realization uses a
+       logically centralized CATS Path Selector (C-PS) together with ingress
+       and egress CATS-Forwarders.  The C-PS receives a service request from
+       an ingress CATS-Forwarder, resolves the requested service to an
+       eligible service contact instance using computing service and network
+       information, and then invokes a path-computation function for the
+       selected destination.  The path-computation request contains a
+       resolved headend, endpoint, and network constraints; it does not ask
+       the PCE to discover service instances.
+
+       After path computation, the C-PS returns a steering binding to the
+       ingress CATS-Forwarder.  The binding identifies the selected
+       destination address, the egress CATS-Forwarder, and a realizable path
+       or policy.  The ingress forwarder applies the destination replacement
+       and path encapsulation to the first packet and forwards it.  The
+       egress forwarder removes the path encapsulation and delivers the
+       packet to the selected service contact instance.  Subsequent packets
+       use the installed flow binding, and reverse traffic uses the
+       corresponding return binding.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-centralized-control-plane-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-centralized-control-plane-00
+    docidentifier:
+    - content: draft-zhangb-cats-centralized-control-plane-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

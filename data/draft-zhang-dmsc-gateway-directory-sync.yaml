@@ -9,38 +9,35 @@ title:
   content: Gateway Capability Directory and Synchronization for Internet of Agents
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zhang-dmsc-gateway-directory-sync-01
+  content: https://datatracker.ietf.org/doc/html/draft-zhang-dmsc-gateway-directory-sync-02
 docidentifier:
 - content: draft-zhang-dmsc-gateway-directory-sync
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-04-28'
+  at: '2026-10-18'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>This document describes a gateway capability-directory framework for
-       the Internet of Agents (IoA) in deployments that use Agent Gateways.
-       In such deployments, a gateway-managed capability directory is a
-       necessary control-plane function for maintaining validated capability
-       information beyond transient advertisements, static endpoint
-       bindings, or external descriptions alone.  This document defines
-       requirements and a common object model for gateway-managed capability
-       information, including the Agent Capability Specification (ACS),
-       Capability Digest, and directory entry lifecycle.  It also specifies
-       synchronization, freshness, provenance, and validation requirements
-       for capability information exchanged across gateways.
+       Internet of Agents deployments that maintain persistent capability
+       views and exchange selected information across gateways.  It defines
+       requirements for Agent Capability Specifications (ACSs), derived
+       Capability Digests, lifecycle state, provenance, validation, and
+       synchronization.  It clarifies authority-scoped revisions, remaining-
+       lifetime preservation, withdrawal handling, partial views, and
+       recovery after disconnection or state loss.
 
-       This document clarifies the relationship between gateway-managed ACS
-       objects and externally published descriptions such as the A2A Agent
-       Card, and briefly compares this framework with broader distributed
-       directory-service approaches.  It does not define a discovery query
-       protocol, ranking algorithm, storage substrate, distributed lookup
-       algorithm, task orchestration protocol, or agent-to-agent session
-       protocol.  It can inform subsequent DMSC protocol work, including
-       capability digest synchronization and related gateway procedures.</p>
+       The framework distinguishes source descriptions from gateway-accepted
+       objects and distinguishes directory visibility from semantic
+       compatibility, authorization, and execution admission.  It does not
+       define a discovery query protocol, ranking algorithm, storage
+       substrate, distributed lookup algorithm, synchronization wire format,
+       task orchestration protocol, or agent session protocol.  It provides
+       requirements that can inform subsequent gateway procedures and
+       protocol bindings.</p>
 relation:
 - type: includes
   bibitem:
@@ -62,6 +59,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zhang-dmsc-gateway-directory-sync-01
     docidentifier:
     - content: draft-zhang-dmsc-gateway-directory-sync-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhang-dmsc-gateway-directory-sync-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-dmsc-gateway-directory-sync-02
+    docidentifier:
+    - content: draft-zhang-dmsc-gateway-directory-sync-02
       type: Internet-Draft
       primary: true
 ext:
