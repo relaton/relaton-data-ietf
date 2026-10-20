@@ -1,0 +1,56 @@
+---
+id: draftshankarlingamoauthagentdnslink
+schema_version: v1.5.6
+formattedref:
+  content: draft-shankarlingam-oauth-agent-dns-link
+title:
+- language: en
+  script: Latn
+  content: Linking an Agent's DNS Name to its OAuth Client
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-shankarlingam-oauth-agent-dns-link-00
+docidentifier:
+- content: draft-shankarlingam-oauth-agent-dns-link
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-20'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Software agents increasingly call agents and services operated by
+       other organizations.  A receiving organization often wants to know
+       two things about any such caller: that it is the agent it claims to
+       be, and that the organization operating it still authorizes it.
+       Existing approaches to the second question require a trust
+       relationship between the two organizations' authorization servers.
+
+       This document defines a DNS record by which the owner of a domain
+       links an agent's DNS name to the OAuth client that the agent uses at
+       the owner's own authorization server.  The sending agent presents a
+       fresh access token for that client; the receiver verifies the token
+       against the record and against the issuer's published keys.  No trust
+       relationship, registration or federation between the two
+       organizations is needed, and disabling the client at the sending
+       organization's authorization server stops the agent being accepted by
+       every receiver.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-shankarlingam-oauth-agent-dns-link-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-shankarlingam-oauth-agent-dns-link-00
+    docidentifier:
+    - content: draft-shankarlingam-oauth-agent-dns-link-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

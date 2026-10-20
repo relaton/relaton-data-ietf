@@ -9,14 +9,14 @@ title:
   content: 'AER-1: A Portable Execution Receipt for AI Agent Tool Calls'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-23
+  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-24
 docidentifier:
 - content: draft-zambo-aer1
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-19'
+  at: '2026-10-20'
 abstract:
 - language: en
   script: Latn
@@ -176,13 +176,24 @@ abstract:
        git clone https://gitlab.com/rambozambodotdev/zambo.git python3 aer1-
        implementations/python/conformance.py
 
+       Since the -23 revision, each conformance run also emits the evaluated
+       vector set: one line per vector carrying its id and content digest,
+       with a corpus digest over the set, so a claimed pass can be checked
+       as a set difference against the full corpus.  The cross-runner parity
+       gate mints a receipt of each of its runs (schema 0.4; the committed
+       payload carries the evaluated vector ids, the corpus digest, and the
+       verdict, pass or fail) and pins it in the kit repository as parity-
+       gate-receipt.json; the gate verifies that receipt with the kit
+       conformance check and with aer1-verify, id bound, before it reports
+       success.
+
        An implementation is conformant when it produces byte-identical
        verdicts to the reference runners across the full vector corpus.  The
        corpus includes attack vectors for tampered provenance labels, schema
        version downgrades, and legacy (pre-0.4) receipts; conformance
        requires the Section 6 metadata checks to fail the first two and to
        report the third with a legacy notice rather than a failure.  The kit
-       is versioned; the v1.5.5 release is the frozen reference for the
+       is versioned; the v1.5.6 release is the frozen reference for the
        corpus described above.
 
        Independent verification.  The Section 6 verification procedure has
@@ -230,7 +241,7 @@ abstract:
        Seven bundled kit runners for Sections 3 through 6 are maintained in
        the conformance kit repository (Rust, Go, TypeScript, Python, Java,
        C#, and Swift), each verified against the full vector corpus
-       described above (113 vectors, 116 checks per runner).  These runners
+       described above (119 vectors, 122 checks per runner).  These runners
        are the kit's own test runners, not independent implementations.
        Independent third-party implementations, built from the draft text
        alone without access to kit internals, include ARION's Node.js and
@@ -512,6 +523,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-23
     docidentifier:
     - content: draft-zambo-aer1-23
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zambo-aer1-24
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-24
+    docidentifier:
+    - content: draft-zambo-aer1-24
       type: Internet-Draft
       primary: true
 ext:
