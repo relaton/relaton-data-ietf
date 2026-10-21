@@ -1,0 +1,118 @@
+---
+id: draftcmcctcpsro03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Session Identifier Option (SIO)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-cmcc-tcp-sro-03
+docidentifier:
+- content: draft-cmcc-tcp-sro
+  type: Internet-Draft
+- content: draft-cmcc-tcp-sro-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.cmcc-tcp-sro
+date:
+- type: published
+  at: '2026-10-21'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhaoyu
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Luo
+      completename:
+        language: en
+        content: Zhaoyu Luo
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CMCC
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Haishuang
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Yan
+      completename:
+        language: en
+        content: Haishuang Yan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CMCC
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Session Identifier Option (SIO), carried as
+       a TCP option for TCP connections and as a UDP option for UDP
+       datagrams.  The option lets the endpoints of a connection or flow
+       publish identifiers at the transport layer, where network functions
+       on the path - load balancers, NAT gateways, firewalls - can read them
+       without per-flow state and without payload inspection.  Network
+       functions of all kinds can benefit from it: session recovery in load-
+       balancing and NAT clusters, stateless forwarding, connection-tracking
+       recovery, and telemetry.  The option adds only a few octets, and only
+       to the packets that carry it; which packets carry it is a deployment
+       choice.  Endpoints that do not support it behave as if the option did
+       not exist.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-cmcc-tcp-sro-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-cmcc-tcp-sro-02
+    docidentifier:
+    - content: draft-cmcc-tcp-sro-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-cmcc-tcp-sro-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

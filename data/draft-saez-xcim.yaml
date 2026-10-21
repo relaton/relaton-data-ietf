@@ -9,30 +9,37 @@ title:
   content: eXplicit Consent-Identified Mail (XCIM)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-saez-xcim-01
+  content: https://datatracker.ietf.org/doc/html/draft-saez-xcim-03
 docidentifier:
 - content: draft-saez-xcim
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-20'
+  at: '2026-10-21'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>XCIM specifies experimental evidence linking purpose-specific
-       communication authorization to an application, an original email
-       recipient, and message content.  A signed receipt records an issuer's
-       observation of consent; a receiver also verifies current permission,
-       signing authority, freshness, authenticated publication, and DKIM.
-       The minimum direct-email profile uses one recipient and purpose per
-       message copy, issuer-signed recipient binding, and application-
-       authorized message signatures.  This document defines a bounded
-       experimental integration and identifies unresolved lifecycle,
-       history-continuity, and registration questions.  It does not
-       establish the truth of an issuer's consent observation or claim
-       production readiness.</p>
+    <p>XCIM specifies evidence that a party controlling an email address
+       explicitly consented to receive defined types of communication from
+       an identified sender.  A trusted third-party Consent Attester
+       verifies address control, observes a separate affirmative decision,
+       and signs an attestation binding the recipient, sender, and agreed
+       types.  Blockchain anchoring provides immutable evidence of the
+       attestation under an admitted finality policy.  Authenticated
+       lifecycle events and fresh status distinguish the historical decision
+       from current consent.
+
+       XCIM concerns the consent relationship independently of individual
+       email messages.  It does not sign, inspect, classify, or authenticate
+       their content.  A receiving email service may use verified current
+       consent as a positive policy signal after independently establishing
+       the sender identity relevant to its query.  This document defines a
+       portable consent object format and verification contract, together
+       with requirements for separately admitted blockchain adapters.  It
+       does not select a universal blockchain network or claim operational
+       readiness.</p>
 relation:
 - type: includes
   bibitem:
@@ -54,6 +61,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-saez-xcim-01
     docidentifier:
     - content: draft-saez-xcim-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-saez-xcim-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saez-xcim-02
+    docidentifier:
+    - content: draft-saez-xcim-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-saez-xcim-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-saez-xcim-03
+    docidentifier:
+    - content: draft-saez-xcim-03
       type: Internet-Draft
       primary: true
 ext:
