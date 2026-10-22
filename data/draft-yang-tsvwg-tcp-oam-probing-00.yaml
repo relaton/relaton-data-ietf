@@ -1,0 +1,109 @@
+---
+id: draftyangtsvwgtcpoamprobing00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: TCP Connectivity Probing Extension for Highly-Dynamic Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yang-tsvwg-tcp-oam-probing-00
+docidentifier:
+- content: draft-yang-tsvwg-tcp-oam-probing
+  type: Internet-Draft
+- content: draft-yang-tsvwg-tcp-oam-probing-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.yang-tsvwg-tcp-oam-probing
+date:
+- type: published
+  at: '2026-10-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Feng
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: F.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Feng Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xiaoqiu
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Xiaoqiu Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines TCP OAM-ACK, a TCP extension for fast
+       transport-layer connectivity detection in highly-dynamic networks
+       such as LEO satellite constellations, high-speed rail, and ad-hoc
+       intelligent agent networks.  Traditional TCP keep-alive uses fixed
+       long probe intervals and cannot rapidly differentiate genuine link
+       outages from congestion-induced packet loss.  TCP OAM-ACK negotiates
+       capability via TCP SYN/SYN-ACK handshake using shared experimental
+       TCP option [RFC6994].  A sender adaptively shortens probing interval
+       upon consecutive probe ACK losses, triggers path-switching
+       notifications to external path-control entities instead of
+       mis-invoking TCP congestion window reduction.  This mechanism acts
+       like transport-layer BFD for TCP connections.  This document
+       describes option formats, sender/receiver behavior, fallback
+       strategies, RTT-assisted early triggering, and interaction with path
+       management modules.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-yang-tsvwg-tcp-oam-probing-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -6,32 +6,39 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Encrypted ESP Echo Protocol
+  content: ESP Echo Protocol
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-encrypted-esp-ping-03
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-encrypted-esp-ping-04
 docidentifier:
 - content: draft-ietf-ipsecme-encrypted-esp-ping
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-05-04'
+  at: '2026-10-21'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines the Encrypted ESP Echo Function, a mechanism to
-       assess the reachability of IP Security (IPsec) network paths using
-       Encapsulating Security Payload (ESP) packets.  It detects end-to-end
-       path status by exchanging only encrypted ESP packets between IPsec
-       peers.  The Encrypted Echo message can either use existing congestion
-       control payloads from RFC9347 or a new message format defined here,
-       with an option to specify a preferred return path when there is more
-       than one pair of IPsec SAs between the same set of IPsec peers.
+    <p>This document defines the ESP Echo Protocol, an extension to the ESP
+       AGGFRAG protocol [RFC9347] that provides an Echo Request and Echo
+       Reply mechanism for IP Security (IPsec) link diagnostics.  It enables
+       endpoints to assess end-to-end path reachability, and it defines
+       probe packets that can be used for path Maximum Transmission Unit
+       (MTU) discovery, using Encapsulating Security Payload (ESP) packets.
 
-       A peer can announce support using a new IKEv2 Status Notification
-       ENCRYPTED_PING_SUPPORTED.</p>
+       The protocol supports two modes of operation: an encrypted mode used
+       over established IPsec Security Associations (SAs), with an option to
+       specify a preferred reply path when multiple SAs exist between the
+       peers, and an unencrypted mode used outside the context of a
+       negotiated ESP SA.  In addition to bidirectional echo probing, the
+       protocol supports sending one-way ESP packets without eliciting a
+       reply, primarily for keepalives, NAT and firewall pinhole
+       maintenance, and unidirectional link diagnostics.
+
+       A peer can announce support for ESP Echo using a new IKEv2 Status
+       Notification ESP_ECHO_SUPPORTED.</p>
 relation:
 - type: includes
   bibitem:
@@ -75,6 +82,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-encrypted-esp-ping-03
     docidentifier:
     - content: draft-ietf-ipsecme-encrypted-esp-ping-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-ipsecme-encrypted-esp-ping-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-ipsecme-encrypted-esp-ping-04
+    docidentifier:
+    - content: draft-ietf-ipsecme-encrypted-esp-ping-04
       type: Internet-Draft
       primary: true
 ext:

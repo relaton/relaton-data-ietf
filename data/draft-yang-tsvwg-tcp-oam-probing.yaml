@@ -1,0 +1,55 @@
+---
+id: draftyangtsvwgtcpoamprobing
+schema_version: v1.5.6
+formattedref:
+  content: draft-yang-tsvwg-tcp-oam-probing
+title:
+- language: en
+  script: Latn
+  content: TCP Connectivity Probing Extension for Highly-Dynamic Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yang-tsvwg-tcp-oam-probing-00
+docidentifier:
+- content: draft-yang-tsvwg-tcp-oam-probing
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-22'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines TCP OAM-ACK, a TCP extension for fast
+       transport-layer connectivity detection in highly-dynamic networks
+       such as LEO satellite constellations, high-speed rail, and ad-hoc
+       intelligent agent networks.  Traditional TCP keep-alive uses fixed
+       long probe intervals and cannot rapidly differentiate genuine link
+       outages from congestion-induced packet loss.  TCP OAM-ACK negotiates
+       capability via TCP SYN/SYN-ACK handshake using shared experimental
+       TCP option [RFC6994].  A sender adaptively shortens probing interval
+       upon consecutive probe ACK losses, triggers path-switching
+       notifications to external path-control entities instead of
+       mis-invoking TCP congestion window reduction.  This mechanism acts
+       like transport-layer BFD for TCP connections.  This document
+       describes option formats, sender/receiver behavior, fallback
+       strategies, RTT-assisted early triggering, and interaction with path
+       management modules.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-yang-tsvwg-tcp-oam-probing-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yang-tsvwg-tcp-oam-probing-00
+    docidentifier:
+    - content: draft-yang-tsvwg-tcp-oam-probing-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
