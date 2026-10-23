@@ -9,14 +9,14 @@ title:
   content: 'AER-1: A Portable Execution Receipt for AI Agent Tool Calls'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-24
+  content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-26
 docidentifier:
 - content: draft-zambo-aer1
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-20'
+  at: '2026-10-22'
 abstract:
 - language: en
   script: Latn
@@ -153,29 +153,44 @@ abstract:
        parent workflow ("Part of workflow") while workflow pages link to
        each step receipt.
 
+       Since 2026-10-22, the reference implementation closes workflows under
+       the seq-output-v1 construction and declares merkle_version on every
+       new workflow receipt; workflow receipts issued before that date carry
+       no merkle_version member and remain verifiable under receipt-id-v0
+       exactly as issued.  This revision defines both constructions and the
+       selector.  The conformance corpus described below now carries seq-
+       output-v1 vectors as well, including multi-step closes, the odd-level
+       duplication case, a single-step close, and mixed-version cases in
+       which a single verifier checks closes under both constructions, each
+       keyed on the close's declared merkle_version.
+
        Conformance kit.  An open conformance suite for this vocabulary is
        maintained at https://gitlab.com/rambozambodotdev/zambo.  It ships
        seven bundled kit runners (Rust, Go, TypeScript, Python, Java, C#,
        and Swift), each verified against the full vector corpus, which at
-       this revision stands at 119 vectors (122 checks per runner) across
+       this revision stands at 124 vectors (127 checks per runner) across
        the receipt-level, Merkle (Section 8.1), timeline (Section 7),
        hardened chain (Section 7.1), chain commitment (Section 7.3),
-       Unicode, id-binding, and anchor-report suites.  The -22 revision adds
-       vectors pinning the canonical base64 spelling (Section 4), the nil-
-       UUID rejection as a standalone case, the legacy schema 0.3 production
-       shape (Section 6), the bare presentation form (Section 3), a current-
-       schema (0.4) real receipt beside the two bundled 0.3 fixtures, and
-       one vector per id_verdict state (Section 6).  The -23 revision adds
-       the anchor-report vectors pinning the per-anchor outcome report of
-       Section 6, implemented in the kit runners (kit v1.5.6) and in the
-       reference verifier (aer1-verify 0.2.13) ahead of this text.  Each
-       runner is zero-dependency within its language toolchain.  Running the
-       Python suite takes two steps and no dependencies beyond git and a
-       Python 3 interpreter:
+       Unicode, id-binding, and anchor-report suites.  The kit repository
+       publishes the corpus's current vector count, check count, and
+       evaluated-set corpus digest alongside the corpus itself; that
+       published record states the corpus's current counts, and if the
+       corpus grows beyond the counts stated here, the published record
+       governs.  The -22 revision adds vectors pinning the canonical base64
+       spelling (Section 4), the nil-UUID rejection as a standalone case,
+       the legacy schema 0.3 production shape (Section 6), the bare
+       presentation form (Section 3), a current-schema (0.4) real receipt
+       beside the two bundled 0.3 fixtures, and one vector per id_verdict
+       state (Section 6).  The -23 revision adds the anchor-report vectors
+       pinning the per-anchor outcome report of Section 6, implemented in
+       the kit runners (kit v1.5.6) and in the reference verifier
+       (aer1-verify 0.2.13) ahead of this text.  Each runner is zero-
+       dependency within its language toolchain.  Running the Python suite
+       takes two steps and no dependencies beyond git and a Python 3
+       interpreter:
 
        git clone https://gitlab.com/rambozambodotdev/zambo.git python3 aer1-
        implementations/python/conformance.py
-
        Since the -23 revision, each conformance run also emits the evaluated
        vector set: one line per vector carrying its id and content digest,
        with a corpus digest over the set, so a claimed pass can be checked
@@ -193,7 +208,7 @@ abstract:
        version downgrades, and legacy (pre-0.4) receipts; conformance
        requires the Section 6 metadata checks to fail the first two and to
        report the third with a legacy notice rather than a failure.  The kit
-       is versioned; the v1.5.6 release is the frozen reference for the
+       is versioned; the v1.5.7 release is the frozen reference for the
        corpus described above.
 
        Independent verification.  The Section 6 verification procedure has
@@ -241,7 +256,7 @@ abstract:
        Seven bundled kit runners for Sections 3 through 6 are maintained in
        the conformance kit repository (Rust, Go, TypeScript, Python, Java,
        C#, and Swift), each verified against the full vector corpus
-       described above (119 vectors, 122 checks per runner).  These runners
+       described above (124 vectors, 127 checks per runner).  These runners
        are the kit's own test runners, not independent implementations.
        Independent third-party implementations, built from the draft text
        alone without access to kit internals, include ARION's Node.js and
@@ -534,6 +549,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-24
     docidentifier:
     - content: draft-zambo-aer1-24
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zambo-aer1-25
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-25
+    docidentifier:
+    - content: draft-zambo-aer1-25
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zambo-aer1-26
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zambo-aer1-26
+    docidentifier:
+    - content: draft-zambo-aer1-26
       type: Internet-Draft
       primary: true
 ext:

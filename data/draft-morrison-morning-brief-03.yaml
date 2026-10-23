@@ -1,0 +1,100 @@
+---
+id: draftmorrisonmorningbrief03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'The Morning Brief: A Federated, Identity-Attested Situational-Awareness Payload'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-morning-brief-03
+docidentifier:
+- content: draft-morrison-morning-brief
+  type: Internet-Draft
+- content: draft-morrison-morning-brief-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-morning-brief
+date:
+- type: published
+  at: '2026-10-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Morning Brief: a federated, identity-
+       attested situational-awareness payload exchanged between
+       organisations, their agents, and peer agents operating under an
+       Identity Accord.  A Morning Brief carries a signed, bounded-lifetime
+       summary of signals, escalations, decisions, and optional commerce
+       quotes from one ~handle to another.  Every signal entry carries a
+       provenance_class distinguishing active self-report, passive aggregate
+       observation, and passive individual observation; the last of these is
+       forbidden on the wire and rejected at the grammar level.  Readers
+       present a capability token scoped by (category, provenance_class)
+       that gates release before payload emission.  The payload is envelope-
+       signed with COSE_Sign1 over a JCS-canonicalised representation, bound
+       to the issuer's Sovereign-tier handle per the Identity-Attributed Git
+       Commits draft.  Briefs carry a mandatory not_after (default 24h) and
+       reference a revocation endpoint discovered via DNS TXT records.  A
+       brief may be requested by its reader or delivered as a standing brief
+       without a request, and a handle may address a brief to itself.  The
+       document defines the wire format only; rendering, storage, and
+       retention are out of scope.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-morning-brief-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-morning-brief-02
+    docidentifier:
+    - content: draft-morrison-morning-brief-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-morning-brief-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

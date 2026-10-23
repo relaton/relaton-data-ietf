@@ -1,0 +1,97 @@
+---
+id: draftshigeyadnsopkey00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Using Secure DNS for Originator Profile
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-shigeya-dns-opkey-00
+docidentifier:
+- content: draft-shigeya-dns-opkey
+  type: Internet-Draft
+- content: draft-shigeya-dns-opkey-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.shigeya-dns-opkey
+date:
+- type: published
+  at: '2026-10-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Shigeya
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Suzuki
+      completename:
+        language: en
+        content: Shigeya Suzuki
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Keio University / OP-CIP / WIDE Project
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Originator Profile Framework (OPF) provides information about the
+       origin of content, together with a verifiable binding of the content
+       to that origin, in digital media, advertising, and email ecosystems.
+       In the framework, an originator holds an Originator Profile (OP): a
+       Core Profile (CP) issued by a CP issuer, and Profile Annotations (PA)
+       issued by PA issuers.  The CP carries the public keys with which the
+       originator signs the data it originates; a PA annotates the CP with
+       validated attributes about the originator.  Verifiers need an
+       authenticated way to confirm that the public keys used by an
+       originator and by the issuers of these documents are currently valid,
+       that the originator's CP has not been revoked by its CP issuer, and
+       that a PA has not been revoked by its PA issuer.
+
+       This document defines the OPKEY DNS resource record, which associates
+       a public key with a DNS name under the _op label.  Its wire and
+       presentation formats are those of the TLSA record.  The DNS does not
+       carry the CP or the PAs themselves; it carries records that identify
+       their keys by digest, and it signals, through the presence or absence
+       of OPKEY records, whether a CP has been revoked.
+
+       The document specifies where OPKEY records are located, how a
+       verifier uses them, and how DNSSEC is used to authenticate them.  It
+       also specifies two further records under _op, of existing types: an
+       SVCB record by which an originator names the CP issuers it accepts,
+       and a TXT record whose presence signals that a PA issuer has revoked
+       a PA.  Operational aspects of the framework, such as registration,
+       key rollover procedures, and revocation timing, are outside the scope
+       of this document.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-shigeya-dns-opkey-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

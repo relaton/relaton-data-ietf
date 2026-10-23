@@ -1,0 +1,68 @@
+---
+id: draftrappammp
+schema_version: v1.5.6
+formattedref:
+  content: draft-rapp-ammp
+title:
+- language: en
+  script: Latn
+  content: The Agent Mediated Messaging Protocol (AMMP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-rapp-ammp-00
+docidentifier:
+- content: draft-rapp-ammp
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-22'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Agent Mediated Messaging Protocol (AMMP) is a wire contract,
+       carried over a filesystem namespace, between an untrusted per-agent
+       connector and a trusted, credentialed, store-and-forward messaging
+       runtime.  It gives a sandboxed AI agent the ability to send and
+       receive messages (email, and under an optional profile, messages to
+       other agents) through a runtime that does not trust it: every
+       outbound message begins as an inert request file that the runtime
+       copies into private staging, validates independently, and applies
+       policy to before anything is transmitted, and every inbound message
+       is authenticated and screened by the runtime before a notice
+       describing it appears in the agent's namespace.
+
+       This document specifies the directory layout and its filesystem
+       obligations — ownership, write and delete rights, and the path,
+       symlink, and concurrency discipline a runtime observes; the JSON
+       message shapes for submit requests, results, deliver notices, spooled
+       message bodies, and an optional binding record; the correlation and
+       versioning rules, including a direction-aware unknown-member
+       tolerance rule; and two conformance classes.  An optional profile
+       gives agent-to-agent traffic within one principal its own tree, and
+       specifies how a Runtime signs and verifies that traffic when it
+       travels between hosts as mail.
+
+       AMMP is deliberately not a mail protocol: it neither defines nor
+       replaces SMTP, IMAP, or provider-side infrastructure, and composes
+       with them rather than displacing them.  Its single design center is
+       that no security property depends on the agent — or on the connector
+       speaking for it — behaving correctly.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rapp-ammp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rapp-ammp-00
+    docidentifier:
+    - content: draft-rapp-ammp-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
