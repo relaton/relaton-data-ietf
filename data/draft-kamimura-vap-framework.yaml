@@ -6,28 +6,29 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Verifiable AI Provenance Framework (VAP): An Architectural Framework for Evidentiary-Grade AI Decision Trails'
+  content: 'Verifiable AI Provenance Framework (VAP): An Architectural Framework for Auditable AI Decision Trails'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-kamimura-vap-framework-01
+  content: https://datatracker.ietf.org/doc/html/draft-kamimura-vap-framework-02
 docidentifier:
 - content: draft-kamimura-vap-framework
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-21'
+  at: '2026-10-24'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>Automated decision-making systems, including AI and algorithmic
        systems in critical infrastructure, currently lack standardized
-       mechanisms for producing evidentiary-grade provenance records that
-       can withstand independent verification.  Traditional logging
-       approaches fail to provide the cryptographic guarantees required for
-       regulatory compliance, forensic investigation, and cross-
-       organizational accountability.
+       mechanisms for producing provenance records that third parties can
+       verify independently.  Traditional logging approaches do not provide
+       the cryptographic properties that regulatory examination, forensic
+       investigation, and cross-organizational accountability depend on:
+       detectability of alteration, detectability of omission after
+       commitment, and attribution.
 
        This document describes the Verifiable AI Provenance Framework (VAP),
        an architectural framework that defines requirements for producing
@@ -38,6 +39,13 @@ abstract:
        Transparency and Trust (SCITT), Remote Attestation Procedures (RATS),
        CBOR Object Signing and Encryption (COSE), and related IETF work in a
        consistent manner.
+
+       VAP makes records auditable and attributable after the fact.  It does
+       not prevent, block, or intercept any system behaviour, and it does
+       not warrant that any recorded decision was correct, fair, or safe.
+       The detailed requirement set is maintained by the VeritasChain
+       Standards Organization (VSO) as a separate specification; this
+       document describes the architecture and its mapping to IETF work.
 
        This document is intended to frame the problem space and facilitate
        discussion about whether architectural coordination work is needed in
@@ -63,6 +71,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-kamimura-vap-framework-01
     docidentifier:
     - content: draft-kamimura-vap-framework-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kamimura-vap-framework-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kamimura-vap-framework-02
+    docidentifier:
+    - content: draft-kamimura-vap-framework-02
       type: Internet-Draft
       primary: true
 ext:

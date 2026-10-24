@@ -1,0 +1,90 @@
+---
+id: draftizmaylovagentpermissionreceipts01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Signed Permissions and Action Receipts for Automated Agents
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-izmaylov-agent-permission-receipts-01
+docidentifier:
+- content: draft-izmaylov-agent-permission-receipts
+  type: Internet-Draft
+- content: draft-izmaylov-agent-permission-receipts-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.izmaylov-agent-permission-receipts
+date:
+- type: published
+  at: '2026-10-24'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pavel
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Izmaylov
+      completename:
+        language: en
+        content: Pavel Izmaylov
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies records with which a third party can
+       establish, later and without network access, what an automated agent,
+       such as an artificial intelligence (AI) agent, was permitted to do
+       and what it recorded doing.  The person for whom the agent acts, the
+       principal, signs a permission with a passkey; the permission carries
+       limits that a verifier can check mechanically.  The agent signs a
+       receipt for each action with Ed25519 and the Module-Lattice-Based
+       Digital Signature Algorithm (ML-DSA-87).  Receipts are chained and
+       entered in a log whose signed tree heads are time-stamped.  A
+       verifier reports, separately, whether the records are sound and
+       whether each recorded action stayed within its permission.  The
+       content of each record is specified independently of its encoding;
+       one encoding, JSON Web Signature (JWS) over canonical JavaScript
+       Object Notation (JSON), is defined.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-izmaylov-agent-permission-receipts-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-izmaylov-agent-permission-receipts-00
+    docidentifier:
+    - content: draft-izmaylov-agent-permission-receipts-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-izmaylov-agent-permission-receipts-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
