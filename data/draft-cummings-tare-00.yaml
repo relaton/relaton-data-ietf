@@ -1,0 +1,91 @@
+---
+id: draftcummingstare00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Time Asymmetry Regression Estimator (TARE): Estimating the Packet-Length-Dependent Component of NTP Offset'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-cummings-tare-00
+docidentifier:
+- content: draft-cummings-tare
+  type: Internet-Draft
+- content: draft-cummings-tare-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.cummings-tare
+date:
+- type: published
+  at: '2026-10-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Samuel
+      - language: en
+        script: Latn
+        initial: S
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S. S.
+      surname:
+        language: en
+        content: Cummings
+      completename:
+        language: en
+        content: Samuel S. Cummings
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: E2 LLC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Network Time Protocol (NTP) offset measurements can contain bias
+       associated with differences in packet serialization delay in the
+       forward and reverse directions.  This document describes TARE (Time
+       Asymmetry Regression Estimator), a client-side experimental method
+       that estimates a packet-length-dependent component of measured NTP
+       offset using regression over exchanges with varied packet lengths.  A
+       client may use the estimate to produce two named outputs
+       (Section 6.1): Output A, an offset normalized to a selected reference
+       packet length, which does not reduce the length-dependent bias at
+       that length; and Output B, the intercept of the fitted model at zero
+       length of a documented length layer, an extrapolated quantity whose
+       meaning depends on the validity of the model.
+
+       TARE does not, by itself, determine or remove fixed propagation-delay
+       asymmetry, distinguish that asymmetry from true clock offset, or
+       guarantee improved synchronization accuracy.  This document defines
+       an experimental measurement model, calibration procedure, validity
+       checks, fallback behavior, and evaluation plan.  It does not define
+       new NTP packet fields or require server changes.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-cummings-tare-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
