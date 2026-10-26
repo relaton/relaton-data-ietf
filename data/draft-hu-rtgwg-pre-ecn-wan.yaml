@@ -6,22 +6,22 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Precise ECN in WAN
+  content: Early-Warning ECN for WAN
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hu-rtgwg-pre-ecn-wan-01
+  content: https://datatracker.ietf.org/doc/html/draft-hu-rtgwg-pre-ecn-wan-02
 docidentifier:
 - content: draft-hu-rtgwg-pre-ecn-wan
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-03-01'
+  at: '2026-10-25'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This draft defines the precise ECN during used in WAN.  With the
+    <p>This document defines the precise use of ECN in WAN.  With the
        growing demand for AI computing power, the computational capacity of
        a single Artificial Intelligence Data Center (AIDC) can no longer
        meet the requirements of large-scale model training.  This has led to
@@ -34,12 +34,14 @@ abstract:
 
        ECN achieves active feedback of network congestion by setting ECN
        flag bits in the header of IP packets, which is an effective traffic
-       control method.  RFC6040 introduces the application of ECN in WAN.
+       control method.  RFC 6040 introduces the application of ECN in WAN.
        However, due to the much higher end-to-end delay in WAN than in DC,
        and the frequent occurrence of instantaneous traffic bursts in WAN,
-       it is easy to trigger ECN at the wrong time.  This draft focuses on
-       the precise use of ECN in WAN, by introducing different reactions of
-       ECN in different WAN transmission scenarios</p>
+       it is easy to trigger ECN at the wrong time.  This document focuses
+       on the precise use of ECN in WAN, by introducing different reactions
+       of ECN in different WAN transmission scenarios.  It updates RFC 6040
+       to specify a domain-local early-warning semantics for the ECT(1)
+       codepoint within managed WAN infrastructure.</p>
 relation:
 - type: includes
   bibitem:
@@ -61,6 +63,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hu-rtgwg-pre-ecn-wan-01
     docidentifier:
     - content: draft-hu-rtgwg-pre-ecn-wan-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hu-rtgwg-pre-ecn-wan-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hu-rtgwg-pre-ecn-wan-02
+    docidentifier:
+    - content: draft-hu-rtgwg-pre-ecn-wan-02
       type: Internet-Draft
       primary: true
 ext:
