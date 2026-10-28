@@ -9,30 +9,29 @@ title:
   content: Signer-Zone Containment for DNSSEC Wildcard Validation
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zhang-dnssec-wildcard-validation-01
+  content: https://datatracker.ietf.org/doc/html/draft-zhang-dnssec-wildcard-validation-02
 docidentifier:
 - content: draft-zhang-dnssec-wildcard-validation
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-16'
+  at: '2026-10-27'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>Validators for the DNS Security Extensions (DNSSEC) reconstruct the
        original owner name of a signed resource record set (RRset) using the
-       RRSIG Labels field.  If the reconstructed owner is outside the
-       signing zone, a cryptographically correct signature can be
-       misinterpreted as authenticating wildcard data belonging to another
-       zone.  Aggressive use of DNSSEC-validated caches can extend the
-       effect to other names.  This document updates RFC 4035 to require
-       signer-zone containment of the reconstructed owner and updates RFC
-       8198 to preserve that authenticated relationship when reusing
-       wildcard data.  These requirements constrain DNSSEC authentication
-       and cached reuse.  They do not change DNS wildcard matching or
-       synthesis rules, or DNS message formats.</p>
+       RRSIG Labels field.  This document updates RFC 4035 to make explicit
+       how its existing signing-zone authority requirement applies to that
+       reconstructed owner, and updates RFC 8198 to preserve the
+       authenticated association between wildcard data, its original owner,
+       and its signing zone during cache reuse.  These clarifications
+       prevent cryptographically correct signatures from being treated as
+       authenticating wildcard sources outside the signing zone.  They do
+       not change DNS wildcard matching or synthesis rules, or DNS message
+       formats.</p>
 relation:
 - type: includes
   bibitem:
@@ -54,6 +53,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zhang-dnssec-wildcard-validation-01
     docidentifier:
     - content: draft-zhang-dnssec-wildcard-validation-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhang-dnssec-wildcard-validation-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhang-dnssec-wildcard-validation-02
+    docidentifier:
+    - content: draft-zhang-dnssec-wildcard-validation-02
       type: Internet-Draft
       primary: true
 ext:

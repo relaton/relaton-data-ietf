@@ -1,0 +1,55 @@
+---
+id: draftbaileyscittagentsessionreceipt
+schema_version: v1.5.6
+formattedref:
+  content: draft-bailey-scitt-agent-session-receipt
+title:
+- language: en
+  script: Latn
+  content: 'Causal Provenance Receipts for Agent Sessions: A SCITT Profile'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bailey-scitt-agent-session-receipt-00
+docidentifier:
+- content: draft-bailey-scitt-agent-session-receipt
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-27'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a Supply Chain Integrity, Transparency, and
+       Trust (SCITT) payload profile for agent session provenance: signed
+       records that bind an autonomous agent session's lifecycle (start,
+       governed tool dispatch, state transitions, termination, and
+       settlement) to offline-verifiable cryptographic evidence, with an
+       explicit head commitment that detects local hash-chain truncation and
+       whole-store rollback.  It reuses the SCITT architecture and COSE
+       receipt envelope: the Causal Provenance Receipt (CPR) bundle is the
+       signed statement payload, and registration with a Transparency
+       Service is optional and explicitly disclosed.  This profile addresses
+       the session-lifecycle and resumption-evidence grain rather than
+       isolated per-action telemetry, while preserving bounded verifier
+       semantics: a verifier checks cryptographic signatures, canonical
+       digests, chain links, and external anchors; it does not prove that
+       unallegeable physical events occurred.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bailey-scitt-agent-session-receipt-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bailey-scitt-agent-session-receipt-00
+    docidentifier:
+    - content: draft-bailey-scitt-agent-session-receipt-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

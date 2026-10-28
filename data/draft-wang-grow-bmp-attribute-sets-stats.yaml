@@ -1,0 +1,53 @@
+---
+id: draftwanggrowbmpattributesetsstats
+schema_version: v1.5.6
+formattedref:
+  content: draft-wang-grow-bmp-attribute-sets-stats
+title:
+- language: en
+  script: Latn
+  content: BMP Extension for BGP Path Attribute Sets and Statistics
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wang-grow-bmp-attribute-sets-stats-00
+docidentifier:
+- content: draft-wang-grow-bmp-attribute-sets-stats
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-28'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The BGP Monitoring Protocol (BMP) specified in RFC 7854 requires a
+       monitored router to send full BGP Path Attributes for every Route
+       Monitoring message.  In networks with a large number of prefixes
+       sharing identical BGP Path Attributes, this requirement leads to
+       substantial transmission redundancy and protocol overhead.
+
+       This document specifies a decoupled architecture for BMP monitoring
+       that separates Path Attribute Set registration from NLRI volume
+       statistics.  Attribute updates are triggered immediately upon path
+       attribute changes, while NLRI count updates can be configured for
+       either event-driven (immediate) or periodic reporting modes, with
+       mandatory instant notification when an attribute set's reference
+       count drops to zero.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wang-grow-bmp-attribute-sets-stats-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wang-grow-bmp-attribute-sets-stats-00
+    docidentifier:
+    - content: draft-wang-grow-bmp-attribute-sets-stats-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

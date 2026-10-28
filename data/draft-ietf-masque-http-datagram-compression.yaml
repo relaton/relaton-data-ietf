@@ -9,14 +9,14 @@ title:
   content: Extensions to Compress and Derive Fields in HTTP Datagrams
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-http-datagram-compression-01
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-http-datagram-compression-02
 docidentifier:
 - content: draft-ietf-masque-http-datagram-compression
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-06'
+  at: '2026-10-28'
 abstract:
 - language: en
   script: Latn
@@ -33,9 +33,10 @@ abstract:
        enabling receivers to complete Internet checksums using sender-
        provided partial values.
 
-       These optimisations reduce per-packet overhead, processing cost, and
-       increase the effective maximum transmission unit (MTU) when datagrams
-       are encapsulated in QUIC DATAGRAM frames.</p>
+       These optimisations reduce per-packet overhead and processing cost.
+       Compression can allow larger original packets to fit in QUIC DATAGRAM
+       frames, depending on the applicable processing context and path
+       maximum transmission unit (MTU).</p>
 relation:
 - type: includes
   bibitem:
@@ -57,6 +58,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-http-datagram-compression-01
     docidentifier:
     - content: draft-ietf-masque-http-datagram-compression-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-masque-http-datagram-compression-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-masque-http-datagram-compression-02
+    docidentifier:
+    - content: draft-ietf-masque-http-datagram-compression-02
       type: Internet-Draft
       primary: true
 ext:
