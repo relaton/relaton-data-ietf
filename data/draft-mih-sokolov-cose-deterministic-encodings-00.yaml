@@ -1,0 +1,106 @@
+---
+id: draftmihsokolovcosedeterministicencodings00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Deterministic Encodings for COSE
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-cose-deterministic-encodings-00
+docidentifier:
+- content: draft-mih-sokolov-cose-deterministic-encodings
+  type: Internet-Draft
+- content: draft-mih-sokolov-cose-deterministic-encodings-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mih-sokolov-cose-deterministic-encodings
+date:
+- type: published
+  at: '2026-10-28'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Steven
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Mih
+      completename:
+        language: en
+        content: Steven Mih
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Action State Group, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Anton
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Sokolov
+      completename:
+        language: en
+        content: Anton Sokolov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tyche Institute
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A COSE Hash Envelope signs the digest of a preimage, not the preimage
+       itself.  When the preimage is the encoding of a structured value,
+       such as a CBOR data item, and a verifier holds that value but not the
+       bytes that were hashed, the verifier has to encode the value again,
+       and the digest matches only if it applies the same deterministic
+       encoding as the producer.  RFC 8949 describes more than one such
+       encoding for the same content type, and the preimage content type
+       does not identify which one was applied.  This document defines a
+       COSE Hash Envelope protected-header parameter that identifies the
+       encoding, and an IANA registry of deterministic encodings whose
+       initial entry is the Core Deterministic Encoding Requirements of RFC
+       8949.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mih-sokolov-cose-deterministic-encodings-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

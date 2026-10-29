@@ -9,14 +9,14 @@ title:
   content: 'TRIP: Trajectory-based Recognition of Identity Proof'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ayerbe-trip-protocol-04
+  content: https://datatracker.ietf.org/doc/html/draft-ayerbe-trip-protocol-05
 docidentifier:
 - content: draft-ayerbe-trip-protocol
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-05-08'
+  at: '2026-10-29'
 abstract:
 - language: en
   script: Latn
@@ -29,24 +29,26 @@ abstract:
        verifiable epochs, and distilled into a Trajectory Identity Token
        (TIT) that serves as a persistent pseudonymous identifier.
 
-       The protocol employs a Criticality Engine grounded in statistical
-       physics to distinguish biological movement from synthetic
-       trajectories.  Power Spectral Density (PSD) analysis detects the 1/f
-       signature of Self-Organized Criticality in human mobility through the
-       PSD scaling exponent alpha.  A six-component Hamiltonian energy
-       function scores each breadcrumb against the identity's learned
-       behavioral profile in real time.
+       The protocol employs a Criticality Engine, a statistical anomaly
+       detector informed by complex-systems research, to distinguish
+       biological movement from synthetic trajectories.  Power Spectral
+       Density (PSD) analysis of the displacement series yields a scaling
+       exponent alpha that captures long-range temporal correlation in
+       movement.  A six-component Hamiltonian energy function scores each
+       breadcrumb against the identity's learned behavioral profile in real
+       time.
 
-       This revision (-03) addresses three areas identified through expert
-       review by researchers in the statistical physics community: it
-       replaces informal terminology with standard spectral analysis
-       nomenclature; it provides the analytical and numerical bridge between
-       the Levy flight displacement exponent and the PSD scaling exponent;
-       and it introduces a convergence analysis framework for quantifying
-       the minimum trajectory length required for reliable single-trajectory
-       classification.  Additionally, this revision removes Passive
-       Verification mode entirely, requiring all Attestation Results to be
-       bound to Relying Party nonces via the Active Verification Protocol.
+       This revision (-05) reframes the statistical core of the Criticality
+       Engine in light of empirical validation against human-mobility data:
+       the PSD scaling exponent alpha is specified as a per-deployment-
+       calibrated scored feature rather than a fixed classification gate;
+       the fixed [0.30, 0.80] "biological" band is withdrawn in favor of
+       calibrated ranges; the asserted Levy-PSD bridge is replaced by a
+       statement of the independence of the step-size and temporal-
+       correlation features; and a new validation section reports separation
+       results and methodology.  The cryptographic chain, RATS mapping,
+       Active Verification Protocol, and privacy model are unchanged from
+       -04.
 
        TRIP is designed to be transport-agnostic and operates independently
        of any particular naming system, blockchain, or application layer.</p>
@@ -104,6 +106,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ayerbe-trip-protocol-04
     docidentifier:
     - content: draft-ayerbe-trip-protocol-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ayerbe-trip-protocol-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ayerbe-trip-protocol-05
+    docidentifier:
+    - content: draft-ayerbe-trip-protocol-05
       type: Internet-Draft
       primary: true
 ext:

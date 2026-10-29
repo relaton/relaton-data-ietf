@@ -9,14 +9,14 @@ title:
   content: Retransmission Indication for IS-IS Fast Flooding
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-przygienda-lsr-fast-flooding-rtx-indication-00
+  content: https://datatracker.ietf.org/doc/html/draft-przygienda-lsr-fast-flooding-rtx-indication-01
 docidentifier:
 - content: draft-przygienda-lsr-fast-flooding-rtx-indication
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-06'
+  at: '2026-10-29'
 abstract:
 - language: en
   script: Latn
@@ -36,11 +36,11 @@ abstract:
        acknowledgments keep freeing credit, a sender may keep refilling the
        window up to RWIN.  It does so even while it is actively
        retransmitting LSPs on that adjacency.  Without an explicit,
-       mandatory-to-implement reaction to observed retransmission, fast
+       normatively specified reaction to observed retransmission, fast
        flooding at scale can degenerate into sustained retransmission storms
        that serve only to keep the window full.
 
-       This document specifies a local backoff.  A node SHOULD reduce the
+       This document specifies a local backoff.  A node reduces the
        effective outstanding-LSP ceiling it uses against a neighbor's
        advertised RWIN by a meaningful fraction.  The trigger is a count of
        LSP retransmissions generated toward that neighbor within a trailing
@@ -73,6 +73,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-przygienda-lsr-fast-flooding-rtx-indication-00
     docidentifier:
     - content: draft-przygienda-lsr-fast-flooding-rtx-indication-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-przygienda-lsr-fast-flooding-rtx-indication-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-przygienda-lsr-fast-flooding-rtx-indication-01
+    docidentifier:
+    - content: draft-przygienda-lsr-fast-flooding-rtx-indication-01
       type: Internet-Draft
       primary: true
 ext:

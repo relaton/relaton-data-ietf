@@ -9,32 +9,35 @@ title:
   content: Hybrid Digital Signatures with Strong Unforgeability
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-prabel-cfrg-suf-hybrid-sigs-02
+  content: https://datatracker.ietf.org/doc/html/draft-prabel-cfrg-suf-hybrid-sigs-03
 docidentifier:
 - content: draft-prabel-cfrg-suf-hybrid-sigs
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-01'
+  at: '2026-10-28'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document proposes a generic hybrid signature construction that
-       achieves strong unforgeability under chosen-message attacks (SUF-
-       CMA), provided that the second component (typically the post-quantum
-       one) is SUF-CMA secure.  The proposed hybrid construction differs
-       from the current composite hybrid approach by binding the second
-       (post-quantum) signature to the concatenation of the message and the
-       first (traditional) signature.  This approach ensures that hybrid
-       signatures maintain SUF-CMA security even when the first component
-       only provides EUF-CMA security.
+    <p>This document proposes two PQ/T (Post-Quantum/Traditional) hybrid
+       signature constructions that achieve strong unforgeability under
+       chosen-message attacks (SUF-CMA).  The first, a black-box
+       construction, achieves SUF-CMA security provided that the second
+       component (typically the post-quantum one) is SUF-CMA secure; it
+       differs from the current composite hybrid approach by binding the
+       second (post-quantum) signature to the concatenation of the message
+       and the first (traditional) signature.  This approach ensures that
+       hybrid signatures maintain SUF-CMA security even when the first
+       component only provides EUF-CMA security.
 
-       In addition to this general hybrid construction, this document also
-       proposes a non-black-box variant specifically tailored for schemes
-       built from the Fiat-Shamir paradigm.  This variant is SUF-CMA secure
-       as long as only one component is SUF-CMA secure.</p>
+       The second, a non-black-box construction, requires the first
+       (traditional) component to be built from the Fiat-Shamir paradigm,
+       and binds the post-quantum signature directly into that component's
+       challenge computation rather than treating it as an opaque sign/
+       verify oracle.  This variant is SUF-CMA secure as long as at least
+       one of the two components is SUF-CMA secure.</p>
 relation:
 - type: includes
   bibitem:
@@ -67,6 +70,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-prabel-cfrg-suf-hybrid-sigs-02
     docidentifier:
     - content: draft-prabel-cfrg-suf-hybrid-sigs-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-prabel-cfrg-suf-hybrid-sigs-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-prabel-cfrg-suf-hybrid-sigs-03
+    docidentifier:
+    - content: draft-prabel-cfrg-suf-hybrid-sigs-03
       type: Internet-Draft
       primary: true
 ext:

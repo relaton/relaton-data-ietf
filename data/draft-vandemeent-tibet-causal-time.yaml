@@ -9,14 +9,14 @@ title:
   content: TIBET Causal Time Substrate
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-vandemeent-tibet-causal-time-02
+  content: https://datatracker.ietf.org/doc/html/draft-vandemeent-tibet-causal-time-03
 docidentifier:
 - content: draft-vandemeent-tibet-causal-time
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-05-12'
+  at: '2026-10-29'
 abstract:
 - language: en
   script: Latn
@@ -31,6 +31,13 @@ abstract:
        including NTP, RFC 3161 timestamping services, Roughtime, GNSS, or
        public ledger timestamps, are treated as auxiliary alignment anchors
        rather than as the constitutive source of event order.
+
+       This revision adds an optional vector-observation layer for relating
+       events across independent lanes, a classification of time-bounded
+       checks that separates physical-world windows from ledger-state
+       windows, replay protection that does not depend on clock agreement
+       between parties, and a distinction between forks, breaks, and
+       reseeds.
 
        The core claim is simple: TIBET is a forward-only causal substrate
        that enables recovery and reversibility without rewriting history.</p>
@@ -66,6 +73,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-vandemeent-tibet-causal-time-02
     docidentifier:
     - content: draft-vandemeent-tibet-causal-time-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-vandemeent-tibet-causal-time-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-vandemeent-tibet-causal-time-03
+    docidentifier:
+    - content: draft-vandemeent-tibet-causal-time-03
       type: Internet-Draft
       primary: true
 ext:

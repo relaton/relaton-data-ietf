@@ -1,0 +1,105 @@
+---
+id: draftspkhttpbisclientgroups00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Client Groups for Shared HTTP Connections
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-spk-httpbis-client-groups-00
+docidentifier:
+- content: draft-spk-httpbis-client-groups
+  type: Internet-Draft
+- content: draft-spk-httpbis-client-groups-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.spk-httpbis-client-groups
+date:
+- type: published
+  at: '2026-10-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Santosh
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Pallagatti
+      completename:
+        language: en
+        content: Santosh Pallagatti
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zscaler
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pranjal
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: Sharma
+      completename:
+        language: en
+        content: Pranjal Sharma
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Zscaler
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Intermediaries often carry requests from many unrelated clients over
+       one HTTP/2 or HTTP/3 connection to an origin server.  The origin has
+       no way to know this, to say whether it accepts it, or to act on the
+       traffic of one client without disturbing every other client on the
+       connection.  This document defines a pair of settings that let an
+       intermediary and an origin agree on whether a connection is shared, a
+       request header field that marks which client a request belongs to,
+       and a frame that lets the origin drain, block, or limit one client on
+       a shared connection.  It also states what an intermediary needs to do
+       so that GOAWAY and connection failures reach only the affected client
+       streams.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-spk-httpbis-client-groups-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
