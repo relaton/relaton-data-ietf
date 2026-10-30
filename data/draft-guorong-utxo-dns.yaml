@@ -6,26 +6,32 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'UTXO Domain Name System (UTXO6-DNS): Data RR for Cryptographic Endpoint Discovery'
+  content: 'UTXO6-DNS: Resolving Payment Endpoints via Private-use RRTYPE and Prefix Isolation'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-guorong-utxo-dns-02
+  content: https://datatracker.ietf.org/doc/html/draft-guorong-utxo-dns-03
 docidentifier:
 - content: draft-guorong-utxo-dns
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-24'
+  at: '2026-10-30'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies a new DNS Data Resource Record (RRTYPE 260)
-       for transporting opaque cryptographic pointers. The RDATA contains
-       a CBOR-encoded endpoint identifier and an optional Verifiable Random
-       Function (VRF) proof. This document prohibits apex usage and
-       mandates the _utxo prefix.</p>
+    <p>This document specifies the _utxo application namespace for DNS.  It
+       defines how wallet clients and TEE (Trusted Execution Environment)
+       applications resolve verifiable payment endpoints and blockchain UTXO
+       (Unspent Transaction Output) references using DNS.
+
+       To avoid exacerbating public RRTYPE space congestion and DNS-layer
+       transparent parsing, this document utilizes the RFC 3597 Private-use
+       space (QTYPE 65400).  The DNS protocol does not parse the payload.
+       Application semantics are isolated strictly via the _utxo underscore
+       prefix in the owner name, while the RDATA consists of a purely opaque
+       CBOR-encoded byte stream.</p>
 relation:
 - type: includes
   bibitem:
@@ -58,6 +64,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-guorong-utxo-dns-02
     docidentifier:
     - content: draft-guorong-utxo-dns-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-guorong-utxo-dns-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-guorong-utxo-dns-03
+    docidentifier:
+    - content: draft-guorong-utxo-dns-03
       type: Internet-Draft
       primary: true
 ext:

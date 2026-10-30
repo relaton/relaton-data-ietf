@@ -1,0 +1,58 @@
+---
+id: draftbrissetteidrdcoriginleafid
+schema_version: v1.5.6
+formattedref:
+  content: draft-brissette-idr-dc-origin-leaf-id
+title:
+- language: en
+  script: Latn
+  content: Origin-Leaf Identification in Data-Center eBGP Underlays using BGP Large Communities
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-brissette-idr-dc-origin-leaf-id-00
+docidentifier:
+- content: draft-brissette-idr-dc-origin-leaf-id
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-30'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Data-center fabrics that run hop-by-hop eBGP routing frequently need
+       to identify the originating node (leaf) of a prefix as it is
+       propagated through the fabric.  The BGP AS_PATH attribute provides
+       loop prevention and identifies the originating Autonomous System
+       (AS), but under common AS numbering models an AS does not map to a
+       single leaf.  While several BGP community mechanisms could carry such
+       an identifier, there is no documented practice describing the
+       mechanism and encoding choices for underlay origin-leaf tagging.
+
+       This document analyzes the problem, states the requirements, and
+       surveys candidate BGP mechanisms for carrying an origin-leaf
+       identifier.  It recommends encoding the identifier in a BGP Large
+       Community (RFC 8092), describes how the identifier is allocated
+       within the Large Community namespace, and describes how it is
+       originated, propagated unchanged across the fabric, and consumed at
+       receiving leaves.  It also describes an optional profile for locally
+       significant route-attachment metadata.  This document is
+       Informational and defines no new protocol elements.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-brissette-idr-dc-origin-leaf-id-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-brissette-idr-dc-origin-leaf-id-00
+    docidentifier:
+    - content: draft-brissette-idr-dc-origin-leaf-id-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

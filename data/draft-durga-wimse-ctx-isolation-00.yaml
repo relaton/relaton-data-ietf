@@ -1,0 +1,88 @@
+---
+id: draftdurgawimsectxisolation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Cryptographic Separation of Untrusted Data-Plane Context from Control-Plane Tool Invocations in Autonomous AI Agents
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-durga-wimse-ctx-isolation-00
+docidentifier:
+- content: draft-durga-wimse-ctx-isolation
+  type: Internet-Draft
+- content: draft-durga-wimse-ctx-isolation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.durga-wimse-ctx-isolation
+date:
+- type: published
+  at: '2026-10-29'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raghuvar
+      - language: en
+        script: Latn
+        initial: R
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: R. K.
+      surname:
+        language: en
+        content: Durga
+      completename:
+        language: en
+        content: Raghuvar Karthik Durga
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft Corporation
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Autonomous AI agents operating over Model Context Protocol (MCP) and
+       Agent-to-Agent (A2A) transports routinely ingest untrusted external
+       data (emails, web documents, retrieved RAG chunks) into the same
+       inference context that authorizes privileged control-plane tool
+       calls.  Existing workload identity and token standards (OAuth 2.1,
+       GNAP, WIMSE Wit/Wpt tokens) bind client identity and authorization
+       scope, but fail to cryptographically bind the provenance taint of the
+       data-plane context that induced the tool invocation, leaving systems
+       vulnerable to indirect prompt-injection confused-deputy attacks.
+       This document specifies a deterministic COSE_Sign1 and JSON
+       Canonicalization Scheme (JCS, RFC 8785) wire profile that attaches a
+       cryptographic Context Taint Attestation (CTA) header to every
+       control-plane tool invocation, forcing relying parties to fail closed
+       when an untrusted or mixed data-plane context attempts to trigger a
+       state-mutating action without an independent out-of-band human or
+       policy approval receipt.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-durga-wimse-ctx-isolation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
