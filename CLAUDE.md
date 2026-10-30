@@ -14,8 +14,9 @@ retired bibxml XML mirror and the old xml2rfc downloader. Do not work from it.
 |---|---|
 | `crawler.rb` | rsyncs the drafts mirror, clears the outputs, runs the three fetches, writes `index-v1` |
 | `data/*.yaml` | ~177k v3 records, flat, lower-cased filenames |
+| `static/*.yaml` | Hand-written v3 records no source carries any more. Never cleared |
 | `index-v2.yaml` / `.zip` | The pubid document index, written by DataFetcher during the crawl |
-| `index-v1.yaml` / `.zip` | The same rows with plain-string ids, written by `crawler.rb` from `data/` |
+| `index-v1.yaml` / `.zip` | The same rows with plain-string ids, written by `crawler.rb` from `data/` and `static/` |
 | `bibxml-ids/` | Local rsync mirror the drafts fetch reads. Gitignored |
 | `tasks/verify_index.rb` | Full-corpus verification behind `rake index:verify` |
 
@@ -67,7 +68,19 @@ fetched. They inherit from their newest constituent **inside the gem**
 (relaton#120). This repo used to patch that up in a second pass; that code is
 gone and must not come back.
 
-**`index-v1` is built here, from `data/`.** DataFetcher writes only `index-v2`.
+**`static/` is source data, written and committed by hand.** It holds records
+no crawl source has any more — `draft-dusseault-caldav-04` survives only as
+archived text (relaton-ietf#124). `reset_outputs` never touches it, and
+`crawler.rb` adds it to both indexes after the fetches (`index_static_v2`,
+`write_index_v1`). **The crawl wins a collision:** a static id that is already a
+crawled row keeps the `data/` row and warns that the static file is redundant —
+delete it then. A static file with no docidentifier, or an id pubid cannot
+parse, aborts the crawl. `check_index` and `tasks/verify_index.rb` count
+`data/` + `static/`; `check_yield` counts `data/` only. A static file is not a
+derived patch, so "Nothing here derives metadata" still holds, and CI still
+stages only `index*.yaml` and `data/*`.
+
+**`index-v1` is built here, from `data/` and `static/`.** DataFetcher writes only `index-v2`.
 `write_index_v1` reads each record's top-level `docidentifier:` block — never
 the whole file, because a few draft abstracts carry a form feed that Psych
 rejects — and keys the row on the primary id string. It needs no pubid. It was

@@ -40,20 +40,22 @@ RSpec.describe IetfCrawler do
       allow(described_class).to receive(:sync_drafts)
       allow(described_class).to receive(:committed_record_count).and_return(0)
       allow(Relaton::Ietf::DataFetcher).to receive(:fetch)
+      allow(described_class).to receive(:index_static_v2)
       allow(described_class).to receive(:write_index_v1)
       allow(described_class).to receive(:check_index)
     end
 
-    it "writes index-v1 after the fetches and checks the indexes last" do
+    it "indexes static/ and writes index-v1 after the fetches, and checks the indexes last" do
       calls = []
       allow(Relaton::Ietf::DataFetcher).to receive(:fetch) { calls << :fetch }
+      allow(described_class).to receive(:index_static_v2) { calls << :static_v2 }
       allow(described_class).to receive(:write_index_v1) { calls << :index_v1 }
       allow(described_class).to receive(:check_yield) { calls << :yield }
       allow(described_class).to receive(:check_index) { calls << :index }
 
       described_class.run(["--skip-rsync"])
 
-      expect(calls).to eq [:fetch] * described_class::SOURCES.size + %i[index_v1 yield index]
+      expect(calls).to eq [:fetch] * described_class::SOURCES.size + %i[static_v2 index_v1 yield index]
     end
 
     it "fetches every DataFetcher source" do
@@ -88,8 +90,10 @@ RSpec.describe IetfCrawler do
     # index file it finds, so a crawl that did not clear both would publish the
     # union of every run rather than a snapshot.
     describe "resetting the outputs" do
-      it "clears stale records and any existing index" do
+      it "clears stale records and any existing index, but keeps static/" do
         File.write File.join(@root, "data", "gone.yaml"), "id: gone\n"
+        FileUtils.mkdir_p File.join(@root, "static")
+        File.write File.join(@root, "static", "kept.yaml"), "id: kept\n"
         File.write File.join(@root, "index-v2.yaml"), "--- []\n"
         File.write File.join(@root, "index-v2.zip"), "not really a zip\n"
 
@@ -99,6 +103,7 @@ RSpec.describe IetfCrawler do
         expect(File).not_to exist(File.join(@root, "index-v2.yaml"))
         expect(File).not_to exist(File.join(@root, "index-v2.zip"))
         expect(Dir).to exist(File.join(@root, "data"))
+        expect(File).to exist(File.join(@root, "static", "kept.yaml"))
       end
     end
   end
@@ -198,6 +203,130 @@ RSpec.describe IetfCrawler do
       expect { described_class.write_index_v1 }.to output(/odd\.yaml/).to_stderr
       expect(rows).to eq []
     end
+
+    describe "with static/" do
+      def static(name, docids)
+        FileUtils.mkdir_p File.join(@root, "static")
+        File.write File.join(@root, "static", "#{name}.yaml"),
+                   { "id" => name, "docidentifier" => docids }.to_yaml
+      end
+
+      it "indexes a static record beside the crawled ones" do
+        record "rfc3986", [{ "content" => "RFC 3986", "type" => "IETF", "primary" => true }]
+        static "draft-x-04", [{ "content" => "draft-x-04", "type" => "Internet-Draft", "primary" => true }]
+
+        described_class.write_index_v1
+
+        expect(rows).to eq [
+          { id: "RFC 3986", file: "data/rfc3986.yaml" },
+          { id: "draft-x-04", file: "static/draft-x-04.yaml" },
+        ]
+      end
+
+      it "keeps the crawled row when a static record has the same id, and warns" do
+        record "draft-x-04", [{ "content" => "draft-x-04", "type" => "Internet-Draft", "primary" => true }]
+        static "draft-x-04", [{ "content" => "draft-x-04", "type" => "Internet-Draft", "primary" => true }]
+
+        expect { described_class.write_index_v1 }
+          .to output(%r{static/draft-x-04\.yaml: draft-x-04 is now crawled.*redundant}).to_stderr
+        expect(rows).to eq [{ id: "draft-x-04", file: "data/draft-x-04.yaml" }]
+      end
+
+      it "aborts on a static record with no docidentifier" do
+        FileUtils.mkdir_p File.join(@root, "static")
+        File.write File.join(@root, "static", "odd.yaml"), "---\nid: odd\n"
+
+        expect { described_class.write_index_v1 }
+          .to raise_error(SystemExit).and output(%r{static/odd\.yaml has no docidentifier}).to_stderr
+      end
+    end
+  end
+
+  # DataFetcher saves the pubid index but never closes it; index_static_v2
+  # adds static/ to that same pooled instance.
+  describe ".index_static_v2" do
+    around do |example|
+      Dir.mktmpdir do |root|
+        FileUtils.mkdir_p File.join(root, "data")
+        FileUtils.mkdir_p File.join(root, "static")
+        @root = root
+        Dir.chdir(root) { example.run }
+      end
+    end
+
+    after { Relaton::Index.close :IETF }
+
+    # What the fetches leave behind: an open, saved :IETF index.
+    def crawl(*ids)
+      index = Relaton::Index.find_or_create(
+        :IETF, url: nil, file: described_class::INDEXFILE, pubid_class: Pubid::Ietf::Identifier
+      )
+      ids.each { |id| index.add_or_update Pubid::Ietf::Identifier.parse(id), "data/#{id.downcase.delete(' ')}.yaml" }
+      index.save
+    end
+
+    def static(name, primary)
+      File.write File.join(@root, "static", "#{name}.yaml"),
+                 { "id" => name, "docidentifier" => [
+                   { "content" => primary, "type" => "Internet-Draft", "primary" => true },
+                 ] }.to_yaml
+    end
+
+    def files
+      YAML.safe_load_file(File.join(@root, described_class::INDEXFILE), permitted_classes: [Symbol])
+          .map { |r| r[:file] }
+    end
+
+    it "adds a static row and keeps the crawled ones" do
+      crawl "RFC 3986"
+      static "draft-x-04", "draft-x-04"
+
+      described_class.index_static_v2
+
+      expect(files).to contain_exactly("data/rfc3986.yaml", "static/draft-x-04.yaml")
+    end
+
+    it "keeps the crawled row when a static record has the same id, and warns" do
+      crawl "draft-x-04"
+      static "draft-x-04", "draft-x-04"
+
+      expect { described_class.index_static_v2 }
+        .to output(%r{static/draft-x-04\.yaml: draft-x-04 is now crawled.*redundant}).to_stderr
+      expect(files).to eq ["data/draft-x-04.yaml"]
+    end
+
+    it "aborts on a static id pubid cannot parse" do
+      crawl "RFC 3986"
+      static "odd", "not an id"
+
+      expect { described_class.index_static_v2 }
+        .to raise_error(SystemExit).and output(%r{static/odd\.yaml has primary id "not an id"}).to_stderr
+    end
+  end
+
+  # Every hand-written record has to load as a v3 item and carry an id pubid
+  # can parse, or the crawl that indexes it aborts.
+  describe "static/ records" do
+    Dir[File.join(ROOT, "static", "*.yaml")].sort.each do |path|
+      file = path.delete_prefix("#{ROOT}/")
+
+      it "#{file} round-trips through Relaton::Ietf::Item" do
+        yaml = File.read(path)
+        expect(Relaton::Ietf::Item.from_yaml(yaml).to_yaml).to eq yaml
+      end
+
+      it "#{file} has a primary id pubid parses" do
+        expect { Pubid::Ietf::Identifier.parse(described_class.primary_docid(path)) }.not_to raise_error
+      end
+    end
+
+    it "parses draft-dusseault-caldav-04 as a versioned Internet-Draft" do
+      id = Pubid::Ietf::Identifier.parse(
+        described_class.primary_docid(File.join(ROOT, "static", "draft-dusseault-caldav-04.yaml"))
+      )
+      expect(id).to be_a Pubid::Ietf::Identifiers::InternetDraft
+      expect([id.number, id.version]).to eq %w[draft-dusseault-caldav 04]
+    end
   end
 
   # check_yield counts data/ only. On 2026-09-27 pubid could not parse a single
@@ -247,6 +376,16 @@ RSpec.describe IetfCrawler do
       index "index-v1.yaml", 50
       expect { described_class.check_index }
         .to raise_error(SystemExit).and output(/index-v1\.yaml has 50 rows/).to_stderr
+    end
+
+    it "counts static/ records as part of the corpus" do
+      produce 100
+      FileUtils.mkdir_p File.join(@root, "static")
+      10.times { |i| File.write File.join(@root, "static", "s#{i}.yaml"), "id: s#{i}\n" }
+      index described_class::INDEXFILE, 100
+      index "index-v1.yaml", 100
+      expect { described_class.check_index }
+        .to raise_error(SystemExit).and output(/has 100 rows for 110 records/).to_stderr
     end
 
     it "aborts when an index was not written at all" do

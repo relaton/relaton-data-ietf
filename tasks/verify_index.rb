@@ -34,7 +34,11 @@ module VerifyIndex
     'BCP 9' => 'data/bcp9.yaml',
     'draft-ietf-quic-transport-34' => 'data/draft-ietf-quic-transport-34.yaml',
     'draft-ietf-quic-transport' => 'data/draft-ietf-quic-transport.yaml',
+    # Hand-written: no source carries this version (relaton-ietf#124).
+    'draft-dusseault-caldav-04' => 'static/draft-dusseault-caldav-04.yaml',
   }.freeze
+  # Both are indexed by the crawl, so both make up the corpus.
+  RECORD_DIRS = %w[data static].freeze
 
   module_function
 
@@ -45,8 +49,9 @@ module VerifyIndex
             '(the index is a crawl output; nothing else writes it)'
     end
 
-    records = Dir[File.join(ROOT, 'data', '*.yaml')].size
-    puts "corpus: #{records} records"
+    counts = RECORD_DIRS.to_h { |dir| [dir, Dir[File.join(ROOT, dir, '*.yaml')].size] }
+    records = counts.values.sum
+    puts "corpus: #{records} records (#{counts.map { |dir, n| "#{dir}/ #{n}" }.join(', ')})"
     # One report for all of them: a broken v2 must not hide the state of v1,
     # which is the index that survives a pubid failure.
     @failures = []
@@ -73,7 +78,10 @@ module VerifyIndex
     # Relaton::Index's loader DELETES the file it was pointed at.
     Dir.mktmpdir do |scratch|
       FileUtils.cp committed, File.join(scratch, name)
-      File.symlink File.join(ROOT, 'data'), File.join(scratch, 'data')
+      RECORD_DIRS.each do |dir|
+        source = File.join(ROOT, dir)
+        File.symlink source, File.join(scratch, dir) if Dir.exist?(source)
+      end
       timed('load through Relaton::Index') { check_loadable scratch, rows }
     end
   end

@@ -15,6 +15,11 @@
 # records (sub-series, unversioned draft aggregators) inherit date, doctype and
 # source from their newest constituent inside the gem (relaton#120).
 #
+# static/ holds hand-written records for documents no source carries any more
+# (an early draft version that only survives as archived text). The crawl
+# never clears it; it only adds its records to both indexes, after the fetches,
+# and a crawled record always wins over a static one with the same id.
+#
 # This replaces an earlier design that combined the three ietf-tools/
 # relaton-data-* mirrors and converted them from Relaton v1. Those mirrors are
 # themselves produced by relaton's own gem from these same two origins, so the
@@ -22,6 +27,7 @@
 
 require 'fileutils'
 require 'open3'
+require 'set'
 require 'yaml'
 require 'relaton'
 # Not loaded by `require "relaton"` — the flavor's fetcher is an opt-in entry
@@ -36,6 +42,8 @@ module IetfCrawler
 
   ROOT = __dir__
   DATA_DIR = 'data'
+  # Hand-written records, committed by hand. reset_outputs never touches it.
+  STATIC_DIR = 'static'
   # `fetch_ieft_internet_drafts` globs this path relative to the working
   # directory; it does no fetching of its own.
   DRAFTS_MIRROR = 'bibxml-ids'
@@ -71,6 +79,7 @@ module IetfCrawler
     sync_drafts unless opts[:skip_rsync]
     reset_outputs
     SOURCES.each { |source| Relaton::Ietf::DataFetcher.fetch(source) }
+    index_static_v2
     write_index_v1
     check_yield(previous, allow_shrink: opts[:allow_shrink])
     check_index
@@ -143,20 +152,76 @@ module IetfCrawler
           'check the log above. Pass --allow-shrink if the loss is real.'
   end
 
+  def static_files
+    Dir[File.join(STATIC_DIR, '*.yaml')].sort
+  end
+
+  # Adds static/ to the pubid INDEXFILE that DataFetcher has just written.
+  # DataFetcher saves its index but never closes it, so this reopens the same
+  # pooled instance, crawled rows and all. It has to: on an index freshly
+  # loaded from the file, relaton's first `add_or_update` builds its id lookup
+  # with a scan per row, which over 180k rows does not finish in ten minutes.
+  # `add_or_update` replaces the row of an equal id, so a collision has to be
+  # caught before the add, or a static file would silently take over a crawled
+  # record.
+  def index_static_v2
+    index = Relaton::Index.find_or_create(
+      :IETF, url: nil, file: INDEXFILE, pubid_class: ::Pubid::Ietf::Identifier
+    )
+    static_files.each do |file|
+      id = static_docid(file)
+      pubid = parse_static_pubid(file, id)
+      next warn_redundant(file, id) if index.search(pubid, exact: true).any?
+
+      index.add_or_update pubid, file
+    end
+    index.save
+  ensure
+    Relaton::Index.close :IETF
+  end
+
   # The flat index keyed on each record's primary docidentifier string, in the
   # shape every relaton-data-* repo publishes as `index-v1`. DataFetcher writes
-  # only the pubid INDEXFILE, so this one is built from what landed in data/ —
-  # and, needing no pubid, it still covers the corpus when pubid cannot parse
-  # (as on 2026-09-27, when pubid broke and index-v2 came out empty).
+  # only the pubid INDEXFILE, so this one is built from what landed in data/,
+  # plus static/ — and, needing no pubid, it still covers the corpus when pubid
+  # cannot parse (as on 2026-09-27, when pubid broke and index-v2 came out empty).
   def write_index_v1
     index = Relaton::Index.find_or_create(:IETF_V1, url: nil, file: INDEX_V1)
+    crawled = Set.new
     Dir[File.join(DATA_DIR, '*.yaml')].sort.each do |file|
       id = primary_docid(file)
-      id ? index.add_or_update(id, file) : warn("Not indexing #{file}: it has no docidentifier")
+      next warn("Not indexing #{file}: it has no docidentifier") unless id
+
+      crawled << id
+      index.add_or_update(id, file)
+    end
+    static_files.each do |file|
+      id = static_docid(file)
+      crawled.include?(id) ? warn_redundant(file, id) : index.add_or_update(id, file)
     end
     index.save
   ensure
     Relaton::Index.close :IETF_V1
+  end
+
+  # A static record is hand-written, so a bad id in one is a mistake to fix
+  # now, not upstream drift to tolerate: abort rather than skip it.
+  def static_docid(file)
+    primary_docid(file) || abort("Refusing to publish: #{file} has no docidentifier.")
+  end
+
+  def parse_static_pubid(file, id)
+    ::Pubid::Ietf::Identifier.parse(id)
+  rescue StandardError => e
+    abort "Refusing to publish: #{file} has primary id #{id.inspect}, " \
+          "which pubid cannot parse (#{e.message})."
+  end
+
+  # The crawl wins: once upstream carries the document, the static file is
+  # only a stale copy of it.
+  def warn_redundant(file, id)
+    warn "#{file}: #{id} is now crawled into #{DATA_DIR}/ — the static record " \
+         'is redundant; delete it.'
   end
 
   # Only the top-level `docidentifier:` block is read, never the whole record:
@@ -176,9 +241,10 @@ module IetfCrawler
   # pubid main could not load its parser, DataFetcher logged `Not indexing` for
   # every record, and an empty index-v2 was committed beside a full corpus.
   # Not overridable by --allow-shrink: a shrinking corpus can be real, an index
-  # that does not cover the corpus never is.
+  # that does not cover the corpus never is. The corpus here is data/ plus
+  # static/, since both are indexed.
   def check_index
-    records = Dir[File.join(DATA_DIR, '*.yaml')].size
+    records = Dir[File.join(DATA_DIR, '*.yaml')].size + static_files.size
     [INDEXFILE, INDEX_V1].each do |name|
       abort "Refusing to publish: #{name} was not written." unless File.exist?(name)
 
