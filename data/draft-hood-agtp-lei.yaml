@@ -6,17 +6,17 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'AGTP-LEI: Binding the Agent Transfer Protocol to the Verifiable Legal Entity Identifier'
+  content: AGTP Binding to the Legal Entity Identifier (LEI and vLEI)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-lei-00
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-lei-01
 docidentifier:
 - content: draft-hood-agtp-lei
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-28'
+  at: '2026-10-30'
 abstract:
 - language: en
   script: Latn
@@ -32,20 +32,20 @@ abstract:
 
        This document specifies how the Agent Transfer Protocol (AGTP) binds
        to the LEI and vLEI infrastructure.  It defines how an LEI is carried
-       in an AGTP Owner-ID, how a vLEI Legal Entity credential composes with
-       AGTP-CERT to establish institutional identity at the wire, how a new
-       verification path (vlei-anchored) is added to AGTP-TRUST for KERI-
-       based verification, and how vLEI Role Credentials (OOR, ECR, AUTH)
-       express the human authorization chain that produced an agent.
+       as the owner of an agent in its Agent Genesis and Identity Document,
+       how a vLEI Legal Entity credential composes with AGTP-CERT to
+       establish institutional identity at the wire, how a new verification
+       path (vlei-anchored) is added to AGTP-TRUST for KERI-based
+       verification, and how vLEI Role Credentials (OOR, ECR, AUTH) express
+       the human authorization chain that produced an agent.
 
-       The result is a clean composition: AGTP provides the agent identity
-       substrate, the LEI provides the institutional identity, the vLEI
-       provides cryptographic verification of that institutional identity,
-       and the vLEI Role Credentials provide the authorization chain from
-       the legal entity through human officers to the agent.  This document
-       positions financial institutions, regulated entities, and other LEI
-       holders to deploy agents with structurally verifiable institutional
-       identity from day one.</p>
+       The four layers compose: AGTP provides the agent identity substrate,
+       the LEI provides the institutional identity, the vLEI provides
+       cryptographic verification of that institutional identity, and the
+       vLEI Role Credentials provide the authorization chain from the legal
+       entity through human officers to the agent.  This document positions
+       financial institutions, regulated entities, and other LEI holders to
+       deploy agents with verifiable institutional identity from day one.</p>
 relation:
 - type: includes
   bibitem:
@@ -56,6 +56,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-lei-00
     docidentifier:
     - content: draft-hood-agtp-lei-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hood-agtp-lei-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-lei-01
+    docidentifier:
+    - content: draft-hood-agtp-lei-01
       type: Internet-Draft
       primary: true
 ext:

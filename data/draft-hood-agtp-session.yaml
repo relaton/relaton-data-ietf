@@ -9,14 +9,14 @@ title:
   content: AGTP Session Protocol
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-session-00
+  content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-session-01
 docidentifier:
 - content: draft-hood-agtp-session
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-04-30'
+  at: '2026-10-30'
 abstract:
 - language: en
   script: Latn
@@ -26,8 +26,13 @@ abstract:
        and agent-to-API communication.  AGTP-SESSION addresses two distinct
        session models: bounded sessions for time-limited transactional
        flows, and persistent sessions for long-lived agent contexts.  Both
-       inherit identity, authority, and attribution from base AGTP.  This is
-       an early working draft; many design decisions are deliberately open.</p>
+       inherit identity, authority, and attribution from base AGTP.  This
+       revision specifies the session identifier format, the ESTABLISH,
+       RESUME, and TERMINATE methods and their wire format, and resumption
+       after transport loss, in which a session is bound to its participants
+       by a signed session token and to the live sender by the per-request
+       signature of base AGTP; no transport connection is part of the
+       binding.</p>
 relation:
 - type: includes
   bibitem:
@@ -38,6 +43,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-session-00
     docidentifier:
     - content: draft-hood-agtp-session-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hood-agtp-session-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-agtp-session-01
+    docidentifier:
+    - content: draft-hood-agtp-session-01
       type: Internet-Draft
       primary: true
 ext:

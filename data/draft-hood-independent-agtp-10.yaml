@@ -1,0 +1,103 @@
+---
+id: drafthoodindependentagtp10
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Agent Transfer Protocol (AGTP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-hood-independent-agtp-10
+docidentifier:
+- content: draft-hood-independent-agtp
+  type: Internet-Draft
+- content: draft-hood-independent-agtp-10
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.hood-independent-agtp
+date:
+- type: published
+  at: '2026-10-30'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chris
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Hood
+      completename:
+        language: en
+        content: Chris Hood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Nomotic, Inc.
+version:
+- content: '10'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines the Agent Transfer Protocol (AGTP): a transfer
+       protocol for AI agent traffic.  AGTP carries agent identity,
+       authority, delegation, and attribution as protocol elements of every
+       exchange, on an eighteen-method floor of intent-named methods, over
+       TCP/TLS or QUIC on IANA-assigned port 4480 and the IANA-registered
+       agtp:// URI scheme.  The method vocabulary beyond the floor, the path
+       grammar, and the endpoint contract are specified in [AGTP-METHODS];
+       runtime negotiation of endpoints is specified in [AGTP-RCNS]; the
+       agent identity document in [AGTP-IDDOC]; transport bindings in
+       [AGTP-BINDINGS].  Version 10 adds per-request proof of possession, so
+       that a verified identity document and a live sender are bound by
+       signature; specifies the Delegation-Chain header with pre-
+       authorization semantics (per-hop scope attenuation checked at mint
+       and at verify, parent re-verification at each hop, depth and cycle
+       limits, and defined failure behavior); maps the delegation model onto
+       the WIMSE chain convention; resolves the 262 and 455 status codes by
+       obtainability; adds structured failure fields to the status code
+       model, states the protocol's position in the transfer-protocol
+       vocabulary throughout, and moves module material to companion
+       specifications so that this document carries the protocol and only
+       the protocol.  AGTP is designed to compose with existing agent
+       frameworks, which keep their own semantics and development paths.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-hood-independent-agtp-09
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hood-independent-agtp-09
+    docidentifier:
+    - content: draft-hood-independent-agtp-09
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-hood-independent-agtp-10
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
