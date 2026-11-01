@@ -1,0 +1,79 @@
+---
+id: draftpospichalidryangoverbgp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: YANG over BGP
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-pospichal-idr-yang-over-bgp-00
+docidentifier:
+- content: draft-pospichal-idr-yang-over-bgp
+  type: Internet-Draft
+- content: draft-pospichal-idr-yang-over-bgp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.pospichal-idr-yang-over-bgp
+date:
+- type: published
+  at: '2026-11-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Pospíchal
+      completename:
+        language: en
+        content: Zbyněk Pospíchal
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Quantcom, a.s.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines YANG over BGP (YoBGP), an extension of BGP for
+       distributing network configuration objects (for example routing
+       policies, prefix sets, community sets, and access control lists)
+       modeled in YANG.  Objects are carried in a dedicated Address Family
+       (AFI/SAFI) and spread between routers the way routes do: they are
+       advertised to peers, carry a version, are filtered on receipt, and
+       are optionally re-advertised.  Received objects are subject to a per-
+       peer inbound filtering framework, persist in the receiving node's
+       configuration independently of the state of the BGP session, and are
+       removed only by an explicit, versioned tombstone.  Its goal is
+       effortless synchronization of selected configuration settings across
+       a large number of BGP speakers.  The framework is schema-agnostic:
+       any YANG module, including vendor-specific ones, can be distributed.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-pospichal-idr-yang-over-bgp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

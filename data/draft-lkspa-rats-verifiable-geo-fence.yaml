@@ -9,14 +9,14 @@ title:
   content: Verifiable Proof of Environment Attestation Profile
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-03
+  content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-04
 docidentifier:
 - content: draft-lkspa-rats-verifiable-geo-fence
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-13'
+  at: '2026-10-31'
 abstract:
 - language: en
   script: Latn
@@ -33,17 +33,21 @@ abstract:
        permits a compromised platform to claim valid placement.
 
        This document defines the *Verifiable Proof of Environment
-       Attestation Profile (V-PEA)*, a profile of the RATS Architecture
-       {{!RFC9334}} that fuses both properties into a single TPM-sealed
-       Evidence structure (lah-bundle).  V-PEA defines two Evidence
-       dimensions: *WHAT* — hardware provenance (TPM Attestation Key
-       registered and manufacturer-endorsed), platform integrity (firmware
-       and OS state matching reference values), and workload agent software
-       integrity (binary digest matching an approved value); and *WHERE* —
-       physical residency within an approved geographic boundary.  A TPM
-       quote seal binds WHAT and WHERE into a single unforgeable statement:
-       neither dimension can be forged or transplanted without invalidating
-       the other.
+       Attestation Profile (V-PEA)*, a profile of the RATS Architecture (RFC
+       9334) in which a platform binds location Claims to its own integrity
+       Evidence in a single TPM-sealed Evidence structure (lah-bundle).
+       V-PEA does not generate location Claims: they are produced by
+       location sources, such as GNSS receivers, mobile network operators,
+       or timing-based anchors, and V-PEA binds them to the particular
+       platform that will receive a credential or key.  V-PEA defines two
+       Evidence dimensions: *WHAT* — hardware provenance (TPM Attestation
+       Key registered and manufacturer-endorsed), platform integrity
+       (firmware and OS state matching reference values), and workload agent
+       software integrity (binary digest matching an approved value); and
+       *WHERE* — physical residency within an approved geographic boundary,
+       as reported by one or more location sources.  A TPM quote seal binds
+       WHAT and WHERE into a single unforgeable statement: neither dimension
+       can be forged or transplanted without invalidating the other.
 
        For the WHERE dimension, V-PEA supports Transparent Zero-Knowledge
        Proofs (ZKPs), enabling an Attester to prove geographic compliance
@@ -96,6 +100,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-03
     docidentifier:
     - content: draft-lkspa-rats-verifiable-geo-fence-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-lkspa-rats-verifiable-geo-fence-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-lkspa-rats-verifiable-geo-fence-04
+    docidentifier:
+    - content: draft-lkspa-rats-verifiable-geo-fence-04
       type: Internet-Draft
       primary: true
 ext:

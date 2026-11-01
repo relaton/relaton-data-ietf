@@ -1,0 +1,72 @@
+---
+id: draftdasdigitalmoneythreatmodels
+schema_version: v1.5.6
+formattedref:
+  content: draft-das-digital-money-threat-models
+title:
+- language: en
+  script: Latn
+  content: 'Valid Signature, Unauthorized Effect: Security Threat Models and Execution-Finality Controls for Digital Money'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-das-digital-money-threat-models-00
+docidentifier:
+- content: draft-das-digital-money-threat-models
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-10-31'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Problem: unauthorized movements of digital money often succeed with
+       valid credentials.  A compromised service presents its genuine
+       workload identity; a signing module signs a digest it was handed; an
+       account is delegated to changed code; a coordinator feeds threshold
+       signers inconsistent inputs; parallel wallets each see the same
+       balance; a stale region honors a revoked authorization; a retry after
+       a crash sends a second transfer; an AI agent turns injected text into
+       a valid payment-tool call; or a bridge releases on provisional
+       finality.  Identity checks, TLS, hardware key protection, threshold
+       signing, allowlists, fraud scoring, audit logs and ledger consensus
+       each answer a different question.  None of them, by itself, verifies
+       at the moment of release that the exact effect is authorized, current
+       and unused.
+
+       Solution: this document gives fourteen security threat models (TM-01
+       to TM-14), each with attacker capability, plausible pathway, why
+       existing protections may fail, a constructive protected procedure, a
+       YES/NO/UNKNOWN workflow, coverage limits and a negative-effect test.
+       It analyzes thirteen classes of existing controls and specifies a
+       common protected sequence: independent authority bound in a protected
+       domain, reconstruction of the effect from the final native bytes,
+       protected freshness, budget and replay state, a non-bearer handle
+       consumed atomically at the exclusive signer, dispatcher or account
+       guard, and typed outcomes that keep UNKNOWN distinct from success or
+       failure.  The control is complementary to ledger consensus, not a
+       replacement for it.
+
+       Scope: 29 diagrams, 56 test vectors, 90 enforcement points, worked
+       mathematical examples, and runnable Python, Go and Node.js reference
+       models with a latency harness.  The document is informational and
+       defines no wire format.  The scenarios are hypothetical threat
+       models, not findings about any real incident or organization.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-das-digital-money-threat-models-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-das-digital-money-threat-models-00
+    docidentifier:
+    - content: draft-das-digital-money-threat-models-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

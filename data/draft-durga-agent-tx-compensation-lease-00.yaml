@@ -1,0 +1,83 @@
+---
+id: draftdurgaagenttxcompensationlease00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Pre-Release Transactional Compensation Leases and CAS Fencing Receipts for Autonomous Agents Over Systems of Record
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-durga-agent-tx-compensation-lease-00
+docidentifier:
+- content: draft-durga-agent-tx-compensation-lease
+  type: Internet-Draft
+- content: draft-durga-agent-tx-compensation-lease-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.durga-agent-tx-compensation-lease
+date:
+- type: published
+  at: '2026-11-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Raghuvar
+      - language: en
+        script: Latn
+        initial: R
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: R. K.
+      surname:
+        language: en
+        content: Durga
+      completename:
+        language: en
+        content: Raghuvar Karthik Durga
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Microsoft Corporation
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When autonomous AI agents execute write operations against enterprise
+       Systems of Record (ERP, MES, WMS, CRM, ITSM), traditional HTTP
+       idempotency keys (RFC 9110) and post-hoc Saga orchestrators cannot
+       guarantee deterministic recovery if a stochastic multi-step plan
+       halts mid-flight or hallucinates downstream parameters.  This
+       document specifies the Pre-Release Transactional Compensation Lease
+       (PTCL) protocol: a fail-closed wire contract requiring an agent
+       runtime to acquire a cryptographically signed recovery reservation
+       lease, prove a bounded rollback window (T_req &lt;= T_granted), and
+       present a Compare-And-Swap (CAS) epoch fencing token prior to
+       committing any state mutation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-durga-agent-tx-compensation-lease-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

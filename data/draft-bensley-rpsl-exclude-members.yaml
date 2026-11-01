@@ -9,25 +9,25 @@ title:
   content: Explicitly excluding objects from RPSL sets
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-bensley-rpsl-exclude-members-00
+  content: https://datatracker.ietf.org/doc/html/draft-bensley-rpsl-exclude-members-01
 docidentifier:
 - content: draft-bensley-rpsl-exclude-members
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-04-15'
+  at: '2026-10-31'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document updates [RFC2622] and [RFC4012] by defining the excl-
-       members attribute on as-set and route-set classes in the Routing
-       Policy Specification Language (RPSL).  The existing RPSL syntax only
-       supports the implicit inclusion of everything contained within an as-
-       set or route-set.  The newly defined attribute allows operators to
-       overcome this limitation of the existing syntax by enabling them to
-       explicitly exclude specific members from that implicit inclusion.</p>
+    <p>This document updates RFC 2622 and RFC 4012 by defining the excl-
+       members attribute on the as-set and route-set classes in the Routing
+       Policy Specification Language (RPSL).  A set that references another
+       set includes everything the referenced set contains, however deeply
+       nested.  RPSL currently has no way for the set owner to make an
+       exception.  The excl-members attribute lets a set owner exclude
+       specific members, including ones brought in by a referenced set.</p>
 relation:
 - type: includes
   bibitem:
@@ -38,6 +38,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-bensley-rpsl-exclude-members-00
     docidentifier:
     - content: draft-bensley-rpsl-exclude-members-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bensley-rpsl-exclude-members-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bensley-rpsl-exclude-members-01
+    docidentifier:
+    - content: draft-bensley-rpsl-exclude-members-01
       type: Internet-Draft
       primary: true
 ext:
