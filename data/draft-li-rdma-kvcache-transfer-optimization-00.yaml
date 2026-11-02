@@ -1,0 +1,238 @@
+---
+id: draftlirdmakvcachetransferoptimization00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Key-Value (KV) Cache Block Transfer Protocol (KBTP) over RDMA: Block Load, Mapped Store, and Unmapped Store'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-rdma-kvcache-transfer-optimization-00
+docidentifier:
+- content: draft-li-rdma-kvcache-transfer-optimization
+  type: Internet-Draft
+- content: draft-li-rdma-kvcache-transfer-optimization-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-rdma-kvcache-transfer-optimization
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiqiang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhiqiang Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Wei Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ying
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Ying Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chunhao
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Chunhao Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SAIA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xun
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Sun
+      completename:
+        language: en
+        content: Xun Sun
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Inesa
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Inference systems move key-value (KV) cache blocks between instances
+       and cache tiers over RDMA.  Existing practice forces a choice between
+       statically registered remote memory, which is fast but wastes memory,
+       and per-transfer remote procedure calls, which use memory well but
+       involve the target's CPU in every transfer.  This document specifies
+       the KV Cache Block Transfer Protocol (KBTP), an upper-layer protocol
+       over RDMA with three operations: Block Load, which places a stored
+       block into the initiator's memory; Block Mapped Store, which writes a
+       block into an already allocated block; and Block Unmapped Store,
+       which allocates a free block at the target and writes it in one
+       operation.  KBTP defines the request and completion messages, a block
+       table, and a free-block ring whose counters use masked atomic fetch-
+       and-add.  These structures are designed so that a target can execute
+       loads and stores within its RDMA network interface, and allocations
+       as well where the interface supports conditional execution, without
+       involving its CPU per operation, while remaining interoperable with
+       targets that process requests in software.  KBTP is bound to RDMAP
+       with the RDMA protocol extensions, and can also be used over
+       InfiniBand and RoCEv2.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-rdma-kvcache-transfer-optimization-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

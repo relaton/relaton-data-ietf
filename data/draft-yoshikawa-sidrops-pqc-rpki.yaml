@@ -9,14 +9,14 @@ title:
   content: Post-Quantum Signature Experiments and Migration Considerations for the Resource Public Key Infrastructure (RPKI)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-yoshikawa-sidrops-pqc-rpki-02
+  content: https://datatracker.ietf.org/doc/html/draft-yoshikawa-sidrops-pqc-rpki-03
 docidentifier:
 - content: draft-yoshikawa-sidrops-pqc-rpki
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-19'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -26,15 +26,17 @@ abstract:
        Key Infrastructure (RPKI).  The experiments compare classical, post-
        quantum, and composite signature candidates; generate and validate
        RPKI-profiled certificate, CRL, manifest, and ROA test objects;
-       evaluate Parallel Publication and Mixed Tree migration as distinct
-       migration structures; and evaluate the effect of larger objects on
-       rsync, RRDP, and Erik Synchronization.  The results identify
-       implementation, interoperability, repository-distribution, and
-       operational questions that need to be resolved before a production
-       algorithm profile or transition procedure can be specified.  This
-       document is informational.  It does not update RFC 7935 or RFC 6916,
-       define a new RPKI algorithm profile, or authorize the use of the
-       evaluated algorithms or Mixed Tree migration in the production RPKI.</p>
+       compare separately produced Current Suite and Next Suite validation
+       outputs; and demonstrate an experimental Mixed Tree.  The evaluation
+       also models an idealized parallel-publication footprint and estimates
+       RRDP delta and snapshot response-body sizes from captured RPKI data.
+       The results identify implementation, interoperability, repository-
+       distribution, and operational questions that need to be resolved
+       before a production algorithm profile or transition procedure can be
+       specified.  This document is informational.  It does not update RFC
+       7935 or RFC 6916, define a new RPKI algorithm profile, or authorize
+       the use of the evaluated algorithms or Mixed Tree migration in the
+       production RPKI.</p>
 relation:
 - type: includes
   bibitem:
@@ -67,6 +69,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-yoshikawa-sidrops-pqc-rpki-02
     docidentifier:
     - content: draft-yoshikawa-sidrops-pqc-rpki-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-yoshikawa-sidrops-pqc-rpki-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yoshikawa-sidrops-pqc-rpki-03
+    docidentifier:
+    - content: draft-yoshikawa-sidrops-pqc-rpki-03
       type: Internet-Draft
       primary: true
 ext:

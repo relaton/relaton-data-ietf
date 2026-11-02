@@ -1,0 +1,82 @@
+---
+id: draftenglishmmoqcontentstitching00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Content Stitching for Media over QUIC
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-englishm-moq-content-stitching-00
+docidentifier:
+- content: draft-englishm-moq-content-stitching
+  type: Internet-Draft
+- content: draft-englishm-moq-content-stitching-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.englishm-moq-content-stitching
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mike
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: English
+      completename:
+        language: en
+        content: Mike English
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cloudflare
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Media over QUIC Transport (MOQT) requires that an Object is always
+       the same bytes, no matter who asks for it or where it is retrieved
+       from.  That property is what makes MOQT content cacheable by relays.
+       It also means that when different subscribers need to receive
+       different content, the straightforward approach is to publish a
+       separate track for each of them, even when most of what those tracks
+       carry is the same.  This document describes content stitching:
+       building the tracks that subscribers receive out of Objects taken
+       from other tracks, so shared Objects can be cached once while each
+       audience still receives a track of its own.  It names the pieces
+       involved, describes how they fit together, works through some
+       examples, and draws a line between a stitcher and a relay.  It does
+       not define a format or mechanism for stitching.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-englishm-moq-content-stitching-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

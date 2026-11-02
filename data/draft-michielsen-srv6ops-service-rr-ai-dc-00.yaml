@@ -1,0 +1,164 @@
+---
+id: draftmichielsensrv6opsservicerraidc00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: BGP Service-Route distribution in AI data centers
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-michielsen-srv6ops-service-rr-ai-dc-00
+docidentifier:
+- content: draft-michielsen-srv6ops-service-rr-ai-dc
+  type: Internet-Draft
+- content: draft-michielsen-srv6ops-service-rr-ai-dc-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.michielsen-srv6ops-service-rr-ai-dc
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kris
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Michielsen
+      completename:
+        language: en
+        content: Kris Michielsen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Clarence
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Filsfils
+      completename:
+        language: en
+        content: Clarence Filsfils
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Eddie
+      - language: en
+        script: Latn
+        initial: E
+      formatted_initials:
+        language: en
+        content: E.
+      surname:
+        language: en
+        content: Ruan
+      completename:
+        language: en
+        content: Eddie Ruan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alibaba Cloud
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yuqing
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Yuqing Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alibaba Cloud
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>AI clusters and hyperscale data centers can contain hundreds of leaf
+       switches and large numbers of service prefixes.  In a conventional
+       BGP leaf-spine design, each spine distributes routes for the service
+       prefixes originated by one leaf to all other leaves.  This leads to a
+       large number of received BGP route instances on the leaves and many
+       FIB entries for service prefixes on the spines.
+
+       This document describes an alternative deployment in which dedicated
+       eBGP speakers, referred to in this document as Service RRs,
+       distribute service routes.  The spines continue to distribute
+       infrastructure routes but do not carry service routes.  A Service RR
+       uses regular eBGP procedures while advertising service routes with
+       NEXT_HOP unchanged.  The leaves encapsulate the service traffic and
+       the spines forward the encapsulated service traffic using
+       infrastructure reachability.
+
+       The design improves control- and data-plane scaling by reducing the
+       number of service-route instances received by each leaf and removing
+       service-route state and processing from the spines.  This document
+       defines no new BGP extension.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-michielsen-srv6ops-service-rr-ai-dc-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

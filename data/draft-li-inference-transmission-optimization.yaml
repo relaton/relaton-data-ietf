@@ -1,0 +1,55 @@
+---
+id: draftliinferencetransmissionoptimization
+schema_version: v1.5.6
+formattedref:
+  content: draft-li-inference-transmission-optimization
+title:
+- language: en
+  script: Latn
+  content: Receiver-Driven Credit Control (RDCC) for Many-to-One Traffic in Distributed Inference Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-inference-transmission-optimization-00
+docidentifier:
+- content: draft-li-inference-transmission-optimization
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Expert-parallel and disaggregated (prefill/decode) inference
+       deployments generate many-to-one ("incast") traffic in which many
+       senders transmit to one receiver at the same time.  Mitigations based
+       on priority queues, enlarged switch buffers, and disabled Explicit
+       Congestion Notification (ECN) marking stop scaling when the
+       bandwidth-delay product of the network grows.  This document
+       specifies Receiver-Driven Credit Control (RDCC), a UDP-based
+       signaling protocol with which a receiver bounds the volume of data
+       that all senders may have in flight toward it.  RDCC defines a
+       receiver credit budget, a bounded unscheduled first window for short
+       messages, cumulative per-message and class-weighted credit grants,
+       sender backlog indications with suggested credit rates, and optional
+       congestion reports from on-path nodes.  RDCC operates within a
+       limited domain, complements the congestion control of the data
+       transport, and does not change the format of data packets.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-li-inference-transmission-optimization-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-inference-transmission-optimization-00
+    docidentifier:
+    - content: draft-li-inference-transmission-optimization-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

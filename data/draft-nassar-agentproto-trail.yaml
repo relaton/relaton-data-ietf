@@ -1,0 +1,57 @@
+---
+id: draftnassaragentprototrail
+schema_version: v1.5.6
+formattedref:
+  content: draft-nassar-agentproto-trail
+title:
+- language: en
+  script: Latn
+  content: 'TRAIL: Tamper-evident Records for Agent Interactions and Liveness'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-nassar-agentproto-trail-00
+docidentifier:
+- content: draft-nassar-agentproto-trail
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>AI agents call other agents and tools across organizational
+       boundaries, but the records of what they did are kept by the
+       operators whose conduct the records describe, and the parties
+       overseeing them learn of problems only afterwards.  TRAIL makes this
+       communication auditable and revocable by parties other than the
+       operator.  An enforcement point outside the agent and its sandbox,
+       the edge, signs each call as a COSE Action Record, which the receiver
+       keeps, and appends it to a tamper-evident trail that witnesses
+       countersign.  Authorities read the trails and publish rules that the
+       edge enforces on every call: require approval, refuse an action, stop
+       an agent, or cap how many agents run across machines.  The edge lets
+       traffic through only while it holds current state from each authority
+       and a recent witness countersignature, so an authority that goes
+       silent, or a trail that nobody is witnessing, stops the agent.  TRAIL
+       defines bindings to HTTP and to Media over QUIC Transport (MOQT) that
+       produce the same evidence; over MOQT, holds reach edges as soon as
+       they are published.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-nassar-agentproto-trail-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nassar-agentproto-trail-00
+    docidentifier:
+    - content: draft-nassar-agentproto-trail-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

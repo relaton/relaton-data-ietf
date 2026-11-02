@@ -1,0 +1,100 @@
+---
+id: draftgruszkaauditdecisionreceipts05
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Decision Receipts for Approvals, Declined Actions and Executed Actions in Agent Audit Records
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gruszka-audit-decision-receipts-05
+docidentifier:
+- content: draft-gruszka-audit-decision-receipts
+  type: Internet-Draft
+- content: draft-gruszka-audit-decision-receipts-05
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gruszka-audit-decision-receipts
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Konrad
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Gruszka
+      completename:
+        language: en
+        content: Konrad Gruszka
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: b7n0de
+version:
+- content: '05'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The architecture for auditing agent delegation and interactions
+       proposed for the AUDIT effort names Interaction Records, Action
+       Records and Authorization Transition Records, and leaves their
+       encoding open.  This document shows how an existing signed record,
+       the decision receipt of the open-source proofbundle project, together
+       with its companion outcome receipt, gives three such records exact
+       bytes, a signature and digest bindings that a third party can check
+       offline.  The three cases are a human approval, a declined action and
+       an executed action with its result.  For each case the document maps
+       the receipt members onto the record types of the architecture, states
+       what the receipt adds and what it does not show, and gives an offline
+       verification procedure.  It states one requirement for approvals,
+       that an approval is honoured at most once, also after the record of
+       consumed approvals is rotated.  Test vectors for all three cases,
+       each with a counterexample, are included.  The document also
+       describes, informatively, how a receipt can be registered with a
+       Transparency Service under RFC 9943 and what a SCITT Receipt then
+       shows and does not show.  This document defines no new format,
+       predicate or registry.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-gruszka-audit-decision-receipts-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-gruszka-audit-decision-receipts-04
+    docidentifier:
+    - content: draft-gruszka-audit-decision-receipts-04
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gruszka-audit-decision-receipts-05
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -9,14 +9,14 @@ title:
   content: MPEG Media Transport (MMT) Packaging for Media over QUIC
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-mmt-01
+  content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-mmt-02
 docidentifier:
 - content: draft-ramadan-moq-mmt
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-28'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -25,9 +25,13 @@ abstract:
        container format for Media over QUIC (MoQ).  MMT carries media over
        broadcast (ATSC 3.0, ARIB STD-B60), multicast, and unicast (QUIC/
        WebTransport) networks.  This specification defines the mapping of
-       MMT packets to MoQ objects, interaction with Application-Layer FEC,
-       the derivation of MoQ catalogs from MMTP signaling, and compatibility
-       considerations for both ATSC 3.0 and ARIB STD-B60 systems.</p>
+       MMT packets to MoQ objects, the "iso-ssbg1-v1" block profile under
+       which the Forward Error Correction (FEC) mechanism for MoQ protects
+       MMTP packets -- its source symbols, its Source FEC Payload ID
+       trailer, its repair packet and its keyframe overlay -- the derivation
+       of MoQ catalogs from MMTP signaling, and compatibility considerations
+       for both ATSC 3.0 and ARIB STD-B60 systems, including the ATSC 3.0
+       signed region.</p>
 relation:
 - type: includes
   bibitem:
@@ -49,6 +53,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-mmt-01
     docidentifier:
     - content: draft-ramadan-moq-mmt-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ramadan-moq-mmt-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-mmt-02
+    docidentifier:
+    - content: draft-ramadan-moq-mmt-02
       type: Internet-Draft
       primary: true
 ext:

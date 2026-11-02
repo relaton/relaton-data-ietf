@@ -1,0 +1,108 @@
+---
+id: draftselmalakeadditionalmessages00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Additional Messages in Lightweight Authenticated Key Exchange (LAKE)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-selma-lake-additional-messages-00
+docidentifier:
+- content: draft-selma-lake-additional-messages
+  type: Internet-Draft
+- content: draft-selma-lake-additional-messages-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.selma-lake-additional-messages
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Selander
+      completename:
+        language: en
+        content: Göran Selander
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: John
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: J. P.
+      surname:
+        language: en
+        content: Mattsson
+      completename:
+        language: en
+        content: John Preuß Mattsson
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ericsson
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The Lightweight Authenticated Key Exchange (LAKE) protocol supports
+       methods with different numbers of messages and different security
+       properties.  The methods defined in the original specification, RFC
+       9528, consist of three mandatory messages and an optional fourth
+       message.  This document defines a generic mechanism for additional
+       protected messages, message_n, where n is greater than the highest
+       message number defined for the method in use.  The format of each
+       message_n is identical to that of message_4 in RFC 9528, except that
+       its encryption key and initialization vector are derived using the
+       LAKE_Exporter.  This mechanism allows applications to include any
+       number of additional protected messages in a LAKE session, for
+       example, to carry additional External Authorization Data (EAD) and to
+       convey protected success indications when required by a method or
+       deployment, such as EAP-LAKE.  This document updates RFC 9528.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-selma-lake-additional-messages-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

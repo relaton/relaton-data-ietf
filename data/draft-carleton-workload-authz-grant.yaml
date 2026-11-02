@@ -9,14 +9,14 @@ title:
   content: Workload Authorization Grant
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-01
+  content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-02
 docidentifier:
 - content: draft-carleton-workload-authz-grant
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-22'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -26,17 +26,19 @@ abstract:
        motivating case -- obtains access tokens from a third party's OAuth
        authorization server without requiring an administrator to perform a
        per-workload provisioning step.  Each workload is identified by an
-       opaque identifier that is never reassigned.  The platform signs a JWT
-       authorization grant ([RFC7523]) that names one workload, and the
-       workload presents it at the token endpoint of an authorization server
-       that has been configured, once, to trust that platform.  The
+       opaque identifier that is never reassigned.  A Workload Identity
+       Provider operated by the platform signs a JWT authorization grant
+       ([RFC7523]) that names one workload, and the workload presents it at
+       the token endpoint of an authorization server that has been
+       configured, once, to trust that Workload Identity Provider.  The
        authorization server does not reject a workload because it has not
        seen it before.  The workload's access is determined by the
        authorization server's own policy, which may consult claims the
-       platform asserts about the workload.  This document covers workloads
-       acting on their own behalf.  Access on behalf of a user or other
-       principal is out of scope, though the grant is intended to compose
-       with delegation mechanisms in which the workload is the actor.</p>
+       Workload Identity Provider asserts about the workload.  This document
+       covers workloads acting on their own behalf.  Access on behalf of a
+       user or other principal is out of scope, though the grant is intended
+       to compose with delegation mechanisms in which the workload is the
+       actor.</p>
 relation:
 - type: includes
   bibitem:
@@ -58,6 +60,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-01
     docidentifier:
     - content: draft-carleton-workload-authz-grant-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-carleton-workload-authz-grant-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-carleton-workload-authz-grant-02
+    docidentifier:
+    - content: draft-carleton-workload-authz-grant-02
       type: Internet-Draft
       primary: true
 ext:

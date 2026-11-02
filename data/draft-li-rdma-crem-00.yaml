@@ -1,0 +1,236 @@
+---
+id: draftlirdmacrem00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Congestion-Aware Reliability Enhancement Mechanism (CREM) for RDMA over IP Networks
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-rdma-crem-00
+docidentifier:
+- content: draft-li-rdma-crem
+  type: Internet-Draft
+- content: draft-li-rdma-crem-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-rdma-crem
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiqiang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhiqiang Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Wei Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ying
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Ying Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chunhao
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Chunhao Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SAIA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xun
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Sun
+      completename:
+        language: en
+        content: Xun Sun
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Inesa
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>RDMA transports designed for lossless data center fabrics perform
+       poorly over long-distance, high bandwidth-delay product, or lossy IP
+       paths: go-back-N retransmission resends whole windows, selective
+       repeat costs at least a round trip per loss, and fixed forward
+       erasure correction wastes capacity when the path is clean.  This
+       document specifies the Congestion-Aware Reliability Enhancement
+       Mechanism (CREM), which protects datagram-based RDMA flows without
+       modifying their packets.  CREM adds a UDP-encapsulated repair channel
+       on which the sender transmits erasure-coded repair symbols computed
+       over blocks of RDMA packets, adapts the redundancy to measured loss
+       and to whether losses are caused by congestion, and recovers losses
+       that exceed the redundancy with a coded retransmission: a number of
+       repair symbols, computed only over the lost packets, that is smaller
+       than the number of lost packets.  Per-packet retransmission remains
+       as the final fallback.  Optional path reports from on-path nodes,
+       derived from Alternate Marking measurements or from the nodes' own
+       drops, inform the adaptation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-rdma-crem-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

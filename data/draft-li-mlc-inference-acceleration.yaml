@@ -1,0 +1,56 @@
+---
+id: draftlimlcinferenceacceleration
+schema_version: v1.5.6
+formattedref:
+  content: draft-li-mlc-inference-acceleration
+title:
+- language: en
+  script: Latn
+  content: Speculative Decoding Coordination Protocol (SDCP) for Distributed Inference with Multi-Level Caches
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-mlc-inference-acceleration-00
+docidentifier:
+- content: draft-li-mlc-inference-acceleration
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Speculative decoding accelerates language model inference: a small
+       draft model proposes several tokens and the large target model
+       verifies them in one forward pass.  In large deployments, draft
+       models and the target model run on separate, independently scaled
+       instances that exchange state through a multi-level cache.  This
+       document specifies the Speculative Decoding Coordination Protocol
+       (SDCP), with which a router assigns requests to draft instances by
+       load, draft instances submit proposals that reference draft state in
+       the cache, and a verifier, the only party that commits output, checks
+       proposals under a registered acceptance rule, returns the accepted
+       tokens and the next-round speculation limit, and escalates
+       persistently rejected sessions to a reduced speculation length,
+       another draft model, or decoding by the target model itself depending
+       on its load.  SDCP defines a session contract, a committed-prefix
+       digest chain, CBOR messages carried over HTTP, idempotent rounds, and
+       epoch fencing for recovery.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-li-mlc-inference-acceleration-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-mlc-inference-acceleration-00
+    docidentifier:
+    - content: draft-li-mlc-inference-acceleration-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

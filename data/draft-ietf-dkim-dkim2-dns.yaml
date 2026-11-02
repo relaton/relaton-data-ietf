@@ -6,31 +6,36 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Domain Name Specification for DKIM2
+  content: Domain Name Specification for DKIM1 and DKIM2
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-dns-02
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-dns-03
 docidentifier:
 - content: draft-ietf-dkim-dkim2-dns
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-21'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>The updated DomainKeys Identified Mail (DKIM2) permits an
-       organization that owns the signing domain to claim some
-       responsibility for a message by associating the domain with the
-       message through a digital signature.  This is done by publishing to
-       Domain Name Service (DNS) of the domain a public key that is then
-       associated to the domain and where messages can be signed by the
-       corresponding private key.  Assertion of responsibility is validated
-       through a cryptographic signature and by querying the Signer's domain
-       directly to retrieve the appropriate public key.  This document
-       describes DKIM2 DNS record format and how to find the record.</p>
+    <p>DomainKeys Identified Mail (DKIM) permits the owner of a signing
+       domain to document that they have handled an email message by
+       associating their domain with the message.  One part of this involves
+       publishing a public key to a Domain Name System (DNS) record
+       associated with the domain.  Signing with the associated private key
+       establishes their connection to the message.  This document describes
+       how to find the relevant DNS record and how information is recorded
+       within it.
+
+       This document updates RFC 6376, which describes DKIM, by clarifying
+       the RSA public key format and by deprecating key record features that
+       have not turned out to be useful.  It also describes which parts of
+       the key record are relevant to DomainKeys Identified Mail v2 (DKIM2)
+       and describes a new Domain Policy Record for DKIM2 that can hold
+       domain-wide settings.</p>
 relation:
 - type: includes
   bibitem:
@@ -63,6 +68,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-dns-02
     docidentifier:
     - content: draft-ietf-dkim-dkim2-dns-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-dkim-dkim2-dns-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-dkim-dkim2-dns-03
+    docidentifier:
+    - content: draft-ietf-dkim-dkim2-dns-03
       type: Internet-Draft
       primary: true
 ext:

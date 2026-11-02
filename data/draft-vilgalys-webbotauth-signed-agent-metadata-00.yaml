@@ -1,0 +1,108 @@
+---
+id: draftvilgalyswebbotauthsignedagentmetadata00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: The Signed-Agent-Metadata HTTP Header Field for Web Bot Auth
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vilgalys-webbotauth-signed-agent-metadata-00
+docidentifier:
+- content: draft-vilgalys-webbotauth-signed-agent-metadata
+  type: Internet-Draft
+- content: draft-vilgalys-webbotauth-signed-agent-metadata-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vilgalys-webbotauth-signed-agent-metadata
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rim
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Vilgalys
+      completename:
+        language: en
+        content: Rim Vilgalys
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Pablo
+      - language: en
+        script: Latn
+        initial: P
+      formatted_initials:
+        language: en
+        content: P.
+      surname:
+        language: en
+        content: González
+      completename:
+        language: en
+        content: Pablo González
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Google
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Web Bot Auth uses HTTP Message Signatures to let automated HTTP
+       clients authenticate their identity to origins via the Signature-
+       Agent header field.  When a multi-tenant agent platform signs
+       outbound requests with a shared key, all customer workloads on that
+       platform share a single cryptographic identity.  Abusive traffic from
+       one tenant or workload can degrade the reputation of the entire
+       platform and cause origins to block legitimate tenants.
+
+       This document defines the Signed-Agent-Metadata HTTP header field, an
+       RFC 9651 Dictionary that carries optional, pseudonymous per-request
+       metadata (product, project, and session).  By signing Signed-Agent-
+       Metadata inside the Web Bot Auth signature, a platform enables
+       verifiers to evaluate traffic, apply rate limits, and isolate
+       reputation at a narrower scope than the signing origin.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vilgalys-webbotauth-signed-agent-metadata-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,173 @@
+---
+id: draftsajassibessevpnsubnetslicing00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: EVPN Subnet Slicing
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sajassi-bess-evpn-subnet-slicing-00
+docidentifier:
+- content: draft-sajassi-bess-evpn-subnet-slicing
+  type: Internet-Draft
+- content: draft-sajassi-bess-evpn-subnet-slicing-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sajassi-bess-evpn-subnet-slicing
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ali
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Sajassi
+      completename:
+        language: en
+        content: Ali Sajassi
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Neeraj
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Malhotra
+      completename:
+        language: en
+        content: Neeraj Malhotra
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rahul
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Kachalia
+      completename:
+        language: en
+        content: Rahul Kachalia
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Carlos
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zeledon
+      completename:
+        language: en
+        content: Carlos Zeledon
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Meta
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Ethernet VPN (EVPN) Integrated Routing and Bridging (IRB) distributes
+       Layer 2 and Layer 3 reachability through BGP.  In a large stretched
+       broadcast domain, traditional IRB can cause every Provider Edge (PE)
+       to install MAC and IP addresses for every endpoint in the subnet thus
+       resulting in exhaustion of forwarding resources (MAC-VRF and IP-VRF)
+       on the PEs - i.e., route population is approximately proportional to
+       the number of endpoints in every stretched subnet imported by the PE
+
+       [Optimized-IRB] proposes a solution to alleviate the MAC-VRF resource
+       consumption by terminating ARP/ND messages on the PE and providing L3
+       forwarding (routing) for both intra and inter subnets.  Therefore,
+       eliminating the need for MAC lookups and the maintenance of MAC
+       addresses in MAC-VRF for IP hosts.  However, this solution does not
+       solve the IP-VRF resource consumption issue as IP host addresses
+       still need to be maintained in IP-VRF for both the locally connected
+       hosts and the remote hosts.
+
+       This problem is particularly pronounced in campus networks where most
+       subnets are stretched across the entire campus (and thus all access
+       switches) and the access switches used as EVPN-IRB PE devices have
+       significantly smaller forwarding tables and hence limit the total
+       endpoint scale that can be attached to stretched subnets across the
+       network.  This document defines an EVPN Subnet Slicing solution to
+       horizontally scale stretched subnets across the network without being
+       constrained by any PE's forwarding table size.  The solution enables
+       access layer PE devices to maintain only locally attached host routes
+       and allows host routes to be distributed across distribution or
+       aggregation layer PE devices as opposed to each PE maintaining all
+       host IP routes.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sajassi-bess-evpn-subnet-slicing-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

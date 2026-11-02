@@ -1,0 +1,208 @@
+---
+id: draftyangrtgwgecmpadaptiveloadbalance00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Adaptive Load Balancing for Equal-Cost Multipath (ECMP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yang-rtgwg-ecmp-adaptive-load-balance-00
+docidentifier:
+- content: draft-yang-rtgwg-ecmp-adaptive-load-balance
+  type: Internet-Draft
+- content: draft-yang-rtgwg-ecmp-adaptive-load-balance-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.yang-rtgwg-ecmp-adaptive-load-balance
+date:
+- type: published
+  at: '2026-11-01'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jin
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Yang
+      completename:
+        language: en
+        content: Jin Yang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Yuchi
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Tian
+      completename:
+        language: en
+        content: Yuchi Tian
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Weiqiang
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Weiqiang Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tingting
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Han
+      completename:
+        language: en
+        content: Tingting Han
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guoying
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Zhang
+      completename:
+        language: en
+        content: Guoying Zhang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Equal-Cost Multipath (ECMP) forwarding assigns a flow to a next-hop
+       by computing a hash over packet header fields when the flow is first
+       seen.  Because the assignment does not change after that, the load
+       across the paths of an ECMP group can become uneven when the set of
+       paths changes or when traffic shifts among existing flows.  This
+       document defines procedures for adaptive ECMP load balancing in which
+       a forwarding node periodically measures per-path load, determines
+       whether the load is sufficiently uneven to act on, and makes a
+       bounded number of incremental flow placement changes toward less-used
+       paths.  The procedures preserve per-flow packet ordering for all but
+       the small number of flows that are moved in any interval, and they
+       converge toward a balanced distribution across the group.  The
+       procedures operate within a single forwarding node and add no new
+       packet formats or inter-node signaling.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-yang-rtgwg-ecmp-adaptive-load-balance-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

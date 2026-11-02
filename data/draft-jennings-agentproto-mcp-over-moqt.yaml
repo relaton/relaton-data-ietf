@@ -9,14 +9,14 @@ title:
   content: Model Context Protocol and Agent Skills over Media over QUIC Transport
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-jennings-agentproto-mcp-over-moqt-00
+  content: https://datatracker.ietf.org/doc/html/draft-jennings-agentproto-mcp-over-moqt-01
 docidentifier:
 - content: draft-jennings-agentproto-mcp-over-moqt
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-06'
+  at: '2026-11-01'
 abstract:
 - language: en
   script: Latn
@@ -28,15 +28,17 @@ abstract:
        delivery over QUIC and WebTransport with native prioritization, relay
        caching, and multiplexing.
 
-       This specification maps MCP messages onto MOQT objects and defines
-       procedures for session establishment, capability discovery, and
-       ongoing communication.  It covers MCP's core primitives (resources,
-       tools, prompts, sampling, and notifications) through dedicated MOQT
-       tracks.
+       This specification maps MCP messages onto MOQT objects and tracks.
+       It covers MCP's tools, resources, prompts, multi round-trip requests,
+       and the Tasks extension, and it uses MOQT relays to cache content
+       that MCP marks as public across clients and to let a response outlive
+       the connection that carried its request.
 
-       The document also describes Agent Skills -- composed instructions
-       that extend AI capabilities beyond atomic tool operations -- using
-       progressive loading aligned with MOQT's object-based delivery.</p>
+       The document also describes Agent Skills, composed instructions that
+       extend AI capabilities beyond atomic tool operations, using
+       progressive loading aligned with MOQT's object-based delivery.  The
+       same tracks can run standalone or inside a dialog of the Protocol for
+       Agent Communication Exchange (PACE).</p>
 relation:
 - type: includes
   bibitem:
@@ -47,6 +49,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-jennings-agentproto-mcp-over-moqt-00
     docidentifier:
     - content: draft-jennings-agentproto-mcp-over-moqt-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-jennings-agentproto-mcp-over-moqt-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-jennings-agentproto-mcp-over-moqt-01
+    docidentifier:
+    - content: draft-jennings-agentproto-mcp-over-moqt-01
       type: Internet-Draft
       primary: true
 ext:

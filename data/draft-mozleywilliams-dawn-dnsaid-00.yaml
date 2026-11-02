@@ -1,0 +1,217 @@
+---
+id: draftmozleywilliamsdawndnsaid00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: DNS for AI Discovery
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-mozleywilliams-dawn-dnsaid-00
+docidentifier:
+- content: draft-mozleywilliams-dawn-dnsaid
+  type: Internet-Draft
+- content: draft-mozleywilliams-dawn-dnsaid-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.mozleywilliams-dawn-dnsaid
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jim
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Mozley
+      completename:
+        language: en
+        content: Jim Mozley
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Infoblox, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Nic
+      - language: en
+        script: Latn
+        initial: "N"
+      formatted_initials:
+        language: en
+        content: N.
+      surname:
+        language: en
+        content: Williams
+      completename:
+        language: en
+        content: Nic Williams
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Infoblox, Inc.
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Behcet
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Sarikaya
+      completename:
+        language: en
+        content: Behcet Sarikaya
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Unaffiliated
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Roland
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Schott
+      completename:
+        language: en
+        content: Roland Schott
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Deutsche Telekom
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jeffrey
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Damick
+      completename:
+        language: en
+        content: Jeffrey Damick
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Amazon
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Scott
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Courtney
+      completename:
+        language: en
+        content: Scott Courtney
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: GoDaddy
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies DNS for AI Discovery (DNS-AID), a method for
+       publishing AI agents in the Domain Name System (DNS) so that other
+       agents can discover them.  It defines three discovery use cases,
+       ordered by increasing latency and computational cost.  In the known-
+       agent case, the requestor knows both the agent and its domain, and a
+       single DNS query returns connectivity information and key metadata.
+       In the known-organization case, the requestor knows the domain but
+       not which agent provides a required capability, and queries a well-
+       known organizational index to get connectivity information to enable
+       a capability search of a catalog, agent registry or database.  In the
+       known-capability case, the requestor knows only the required
+       capability and must rely on an external directory or search service.
+       This document addresses the known-agent and known-organization cases.
+       The known-capability case is out of scope, but search and cataloging
+       services can be built from the organizational index defined here.
+       Once a client has learned an organization’s agents, later
+       interactions can use the known-agent case, relying on a minimal,
+       cacheable record set that each organization controls.  DNS-AID uses
+       Service Binding (SVCB) records, optionally with DNS-Based Service
+       Discovery (DNS-SD) labels, DNSSEC, and DANE TLSA records.  This gives
+       agents direct connections that no third party mediates and works the
+       same way on public and private networks.  No new resource record
+       types, opcodes, or response codes are introduced.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-mozleywilliams-dawn-dnsaid-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

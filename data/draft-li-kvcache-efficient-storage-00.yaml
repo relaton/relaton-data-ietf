@@ -1,0 +1,234 @@
+---
+id: draftlikvcacheefficientstorage00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Key-Value (KV) Cache Storage Protocol (KVSP): Indexing, Placement, Prefetch, and Migration for Distributed Inference'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-li-kvcache-efficient-storage-00
+docidentifier:
+- content: draft-li-kvcache-efficient-storage
+  type: Internet-Draft
+- content: draft-li-kvcache-efficient-storage-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.li-kvcache-efficient-storage
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zhiqiang
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Li
+      completename:
+        language: en
+        content: Zhiqiang Li
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zongpeng
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Du
+      completename:
+        language: en
+        content: Zongpeng Du
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: China Mobile
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjie
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Wang
+      completename:
+        language: en
+        content: Junjie Wang
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wei
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Cheng
+      completename:
+        language: en
+        content: Wei Cheng
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ying
+      - language: en
+        script: Latn
+        initial: "Y"
+      formatted_initials:
+        language: en
+        content: Y.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Ying Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Centec
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Chunhao
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Zhao
+      completename:
+        language: en
+        content: Chunhao Zhao
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: SAIA
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Xun
+      - language: en
+        script: Latn
+        initial: X
+      formatted_initials:
+        language: en
+        content: X.
+      surname:
+        language: en
+        content: Sun
+      completename:
+        language: en
+        content: Xun Sun
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Inesa
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Large language model inference keeps the attention key-value (KV)
+       cache of processed tokens so that they are not recomputed.  When
+       inference instances, cache tiers, and schedulers are separate
+       components, possibly from different implementers, they need a common
+       way to name reusable KV cache blocks, find where copies reside,
+       protect copies from eviction while they are being loaded, steer work
+       to the instance where loading is cheapest, and move a session to
+       another instance after a failure.  This document specifies the KV
+       Cache Storage Protocol (KVSP), an HTTP-based protocol that defines a
+       compatibility descriptor, keyed block identifiers that bind a block
+       to its entire token prefix, a self-describing block container, a
+       replica index with layer-granular residency, instance status
+       reporting, leased prefetch directives, session checkpoints for
+       migration, and a resharding procedure that retains sequence shards in
+       place when a parallel group is resized.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-li-kvcache-efficient-storage-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

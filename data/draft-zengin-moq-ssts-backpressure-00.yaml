@@ -1,0 +1,164 @@
+---
+id: draftzenginmoqsstsbackpressure00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A Backpressure Algorithm for Sender-Side Track Switching in MOQ Transport
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-zengin-moq-ssts-backpressure-00
+docidentifier:
+- content: draft-zengin-moq-ssts-backpressure
+  type: Internet-Draft
+- content: draft-zengin-moq-ssts-backpressure-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.zengin-moq-ssts-backpressure
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alperen
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: A. F.
+      surname:
+        language: en
+        content: Zengin
+      completename:
+        language: en
+        content: Alperen Fatih Zengin
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ozyegin University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Zafer
+      - language: en
+        script: Latn
+        initial: Z
+      formatted_initials:
+        language: en
+        content: Z.
+      surname:
+        language: en
+        content: Gürel
+      completename:
+        language: en
+        content: Zafer Gürel
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ozyegin University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ali
+      - language: en
+        script: Latn
+        initial: A
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: A. C.
+      surname:
+        language: en
+        content: Begen
+      completename:
+        language: en
+        content: Ali C. Begen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Networked Media
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Deniz
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Ugur
+      completename:
+        language: en
+        content: Deniz Ugur
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Ozyegin University
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Sender-Side Track Switching (SSTS) lets a publisher forward one track
+       at a time out of a switching set, and leaves the choice of which
+       track to a pluggable algorithm.  The default algorithm divides a
+       bandwidth estimate between switching sets.  This document defines an
+       alternative algorithm that uses no bandwidth estimate at all.  It
+       monitors the number of open forwarding streams carrying the currently
+       active tier, steps rapidly through the switching set's ladder during
+       fast start, regulates steady-state upshifts dynamically according to
+       relative bitrate jumps and the subscriber's probing risk tolerance,
+       and reacts to mid-group congestion using intra-group monitoring and
+       retroactive stream supersede.  The signal is directly observable at
+       the publisher, requires no cooperation from the congestion
+       controller, and degrades toward the lowest quality under load rather
+       than toward none.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-zengin-moq-ssts-backpressure-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

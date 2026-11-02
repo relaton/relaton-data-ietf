@@ -9,26 +9,31 @@ title:
   content: Authorization Evidence and Audit Trail for OAuth 2.0 Access Tokens
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-liu-oauth-authorization-evidence-01
+  content: https://datatracker.ietf.org/doc/html/draft-liu-oauth-authorization-evidence-02
 docidentifier:
 - content: draft-liu-oauth-authorization-evidence
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-06-22'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This specification defines an authorization details type for
-       including authorization evidence and audit trail information in OAuth
-       2.0 access tokens using the Rich Authorization Requests (RAR)
-       framework.  When an Authorization Server processes user consent, it
-       enriches the authorization details with cryptographic proof of user
-       confirmation, supporting accountability, compliance, and dispute
-       resolution in scenarios where autonomous agents act on behalf of
-       users.</p>
+    <p>This specification defines an authorization details type for carrying
+       authorization evidence in OAuth 2.0 access tokens, using the enriched
+       response mechanism of Rich Authorization Requests.  When an
+       Authorization Server records an approval decision, it enriches the
+       authorization details with cryptographic proof of the decision and of
+       the structured disclosure on which the decision was based.  Evidence
+       is recorded for approved, narrowed, and declined decisions,
+       supporting accountability, compliance, and dispute resolution in
+       scenarios where autonomous agents act on behalf of users.  An
+       approval record that cannot be ended is not an accountable record, so
+       this specification defines the withdrawal mechanism alongside the
+       evidence itself.  Withdrawal is one of the four ways a governing
+       authorization ends, alongside completion, termination, and expiry.</p>
 relation:
 - type: includes
   bibitem:
@@ -50,6 +55,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-liu-oauth-authorization-evidence-01
     docidentifier:
     - content: draft-liu-oauth-authorization-evidence-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-liu-oauth-authorization-evidence-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-oauth-authorization-evidence-02
+    docidentifier:
+    - content: draft-liu-oauth-authorization-evidence-02
       type: Internet-Draft
       primary: true
 ext:

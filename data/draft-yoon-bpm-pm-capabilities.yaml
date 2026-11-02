@@ -1,0 +1,57 @@
+---
+id: draftyoonbpmpmcapabilities
+schema_version: v1.5.6
+formattedref:
+  content: draft-yoon-bpm-pm-capabilities
+title:
+- language: en
+  script: Latn
+  content: A YANG Data Model for Performance Monitoring (PM) Capabilities
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yoon-bpm-pm-capabilities-00
+docidentifier:
+- content: draft-yoon-bpm-pm-capabilities
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines a YANG data model, "ietf-pm-capabilities", that
+       enables a server to advertise which sampling and collection
+       intervals, measurement methods, and collection types it supports for
+       each performance monitoring (PM) parameter.  A client reads this
+       capability information before configuring PM collection, so that it
+       selects only values that the server can honour.  The capabilities are
+       advertised by augmenting the "ietf-system-capabilities" module
+       defined in [RFC9196], so that a client discovers them at the same
+       well-known location used for subscription and notification
+       capabilities.  The model imports the "profile-names" and "collection-
+       type" types and the "performance-parameter" and "measurement-method"
+       identities from the companion PM collection model defined in
+       [I-D.yoon-bpm-pm-collection] and mirrors its profile-and-parameter
+       structure, ensuring direct alignment between capability discovery and
+       collection configuration.  The model does not define collection data
+       structures or any delivery mechanism; those are defined in the
+       companion document.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-yoon-bpm-pm-capabilities-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yoon-bpm-pm-capabilities-00
+    docidentifier:
+    - content: draft-yoon-bpm-pm-capabilities-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

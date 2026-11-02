@@ -1,0 +1,59 @@
+---
+id: draftllbindingsidreplace
+schema_version: v1.5.6
+formattedref:
+  content: draft-ll-binding-sid-replace
+title:
+- language: en
+  script: Latn
+  content: Binding SID Header Replacement (BSHR) for Enhanced Domain Isolation and Overhead Optimization
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-ll-binding-sid-replace-00
+docidentifier:
+- content: draft-ll-binding-sid-replace
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a mechanism for replacing the preceding
+       Segment Routing (SR) encapsulation upon the expansion of a Binding
+       Segment Identifier (BSID) in SRv6.  The current SR architecture, as
+       defined in RFC 8402 (Segment Routing Architecture), RFC 8754 (IPv6
+       Segment Routing Header (SRH)), and RFC 8986 (Segment Routing over
+       IPv6 (SRv6) Network Programming), mandates that the entire SR policy
+       remains intact when a BSID is expanded: the binding node encapsulates
+       the packet into a further outer IPv6 header with a new SRH,
+       preserving all preceding encapsulations as the inner payload.  This
+       imposes significant overhead on scenarios requiring strict domain
+       isolation, resource pooling, and future 6G core networks.  This
+       proposal, termed "Binding SID Header Replacement" (BSHR), challenges
+       the existing standard by allowing the binding node to substitute the
+       incoming SR encapsulation with a new one, via a decapsulation-plus-
+       re-encapsulation sequence.  This mechanism offers benefits in
+       reducing overhead, enforcing security boundaries, and enabling new
+       use cases.  The document discusses the technical rationale, potential
+       risks including path validation failures, and specifies a new SRv6
+       Endpoint behavior, End.B6.Replace, to realize the mechanism.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ll-binding-sid-replace-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ll-binding-sid-replace-00
+    docidentifier:
+    - content: draft-ll-binding-sid-replace-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

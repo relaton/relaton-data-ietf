@@ -9,25 +9,23 @@ title:
   content: Delegating QUIC Stateless Resets
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-kazuho-quic-delegated-stateless-reset-00
+  content: https://datatracker.ietf.org/doc/html/draft-kazuho-quic-delegated-stateless-reset-01
 docidentifier:
 - content: draft-kazuho-quic-delegated-stateless-reset
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-14'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies how a QUIC endpoint may delegate the emission
-       of Stateless Resets to a component that outlives the QUIC stack --
-       for example, an operating system that resets the peers of an
-       application that has exited.  As such delegation is most useful on
-       the client side, where endpoints often use zero-length Connection
-       IDs, this document also defines a transport parameter and a frame
-       that allow those clients to advertise a Stateless Reset Token.</p>
+    <p>This document specifies how a QUIC endpoint can delegate sending
+       Stateless Resets to a component that outlives its connection state.
+       It also defines a frame for clients using zero-length Connection IDs
+       to advertise a Stateless Reset Token and a transport parameter for
+       servers to indicate support for receiving the frame.</p>
 relation:
 - type: includes
   bibitem:
@@ -38,6 +36,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-kazuho-quic-delegated-stateless-reset-00
     docidentifier:
     - content: draft-kazuho-quic-delegated-stateless-reset-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kazuho-quic-delegated-stateless-reset-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kazuho-quic-delegated-stateless-reset-01
+    docidentifier:
+    - content: draft-kazuho-quic-delegated-stateless-reset-01
       type: Internet-Draft
       primary: true
 ext:

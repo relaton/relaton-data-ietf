@@ -6,17 +6,17 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Quantum-Resistant Key Encapsulation Mechanisms (KEMs) via the OSCORE Group Manager Using Authentication and Authorization for Constrained Environments (ACE)
+  content: Quantum-Resistant Key Encapsulation Mechanisms (KEMs) via the Object Security for Constrained RESTful Environments (OSCORE) Group Manager Using Authentication and Authorization for Constrained Environments (ACE)
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-tiloca-ace-oscore-gm-kem-00
+  content: https://datatracker.ietf.org/doc/html/draft-tiloca-ace-oscore-gm-kem-01
 docidentifier:
 - content: draft-tiloca-ace-oscore-gm-kem
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-06'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -32,9 +32,12 @@ abstract:
        rely on a quantum-resistant Key Encapsulation Mechanism (KEM) as the
        Pairwise Key Agreement Algorithm used to derive pairwise keys.  This
        document extends the interface of the ACE-based Group Manager to
-       enable the exchange of KEM public keys and KEM ciphertexts among
-       group members via the Group Manager, thus making the derivation of
-       pairwise keys in Group OSCORE post-quantum secure.</p>
+       allow for the exchange of KEM public keys and encapsulated KEM shared
+       secrets among group members via the Group Manager, thus enabling the
+       post-quantum secure derivation of pairwise keys in Group OSCORE.
+       Furthermore, this document accordingly extends the set of parameters
+       that can be used to specify the configuration of an OSCORE group at
+       the Group Manager.</p>
 relation:
 - type: includes
   bibitem:
@@ -45,6 +48,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-tiloca-ace-oscore-gm-kem-00
     docidentifier:
     - content: draft-tiloca-ace-oscore-gm-kem-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-tiloca-ace-oscore-gm-kem-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tiloca-ace-oscore-gm-kem-01
+    docidentifier:
+    - content: draft-tiloca-ace-oscore-gm-kem-01
       type: Internet-Draft
       primary: true
 ext:

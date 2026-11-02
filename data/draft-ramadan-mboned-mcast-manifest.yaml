@@ -9,30 +9,32 @@ title:
   content: Signed Digest Manifests for Multicast Datagram Authentication
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ramadan-mboned-mcast-manifest-00
+  content: https://datatracker.ietf.org/doc/html/draft-ramadan-mboned-mcast-manifest-01
 docidentifier:
 - content: draft-ramadan-mboned-mcast-manifest
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-29'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>This document defines a format for authenticating UDP datagrams
        delivered over IP multicast without changing them.  The sender
-       computes a digest over every datagram of a flow, places the digests
-       of up to 37 datagrams in a fixed-layout record, signs the record with
-       Ed25519 under a prefix that names the flow, and sends it on a second
-       port of the same source and group immediately before the datagrams it
-       covers, followed by a byte-identical twin.  A receiver verifies one
-       signature per record, hashes each datagram once, and delivers a
-       datagram only after its digest matches an entry of a verified record;
-       it needs no return channel.  A well-known document supplies a flow's
-       keys and parameters.  A Media over QUIC profile and a browser profile
-       use the format.</p>
+       computes a digest over every data datagram of a flow, places the
+       digests of up to 37 datagrams in a fixed-layout record, signs the
+       record with Ed25519 under a prefix that names the flow, and sends it
+       in band, on the flow's own source, group and port, immediately before
+       the datagrams it covers, followed by a byte-identical twin.  Every
+       record begins with four fixed octets, and no data datagram does, so a
+       receiver tells records from data by those octets alone.  A receiver
+       verifies one signature per record, hashes each datagram once, and
+       delivers a datagram only after its digest matches an entry of a
+       verified record; it needs no return channel.  A well-known document
+       supplies a flow's keys and parameters.  A Media over QUIC profile and
+       a browser profile use the format.</p>
 relation:
 - type: includes
   bibitem:
@@ -43,6 +45,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ramadan-mboned-mcast-manifest-00
     docidentifier:
     - content: draft-ramadan-mboned-mcast-manifest-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ramadan-mboned-mcast-manifest-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ramadan-mboned-mcast-manifest-01
+    docidentifier:
+    - content: draft-ramadan-mboned-mcast-manifest-01
       type: Internet-Draft
       primary: true
 ext:

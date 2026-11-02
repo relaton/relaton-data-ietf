@@ -1,0 +1,128 @@
+---
+id: draftsmjhteasdistbwmgmtarch00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An Architecture for Distributed Bandwidth Management Using TE Tunnels and Policies
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-smjh-teas-dist-bw-mgmt-arch-00
+docidentifier:
+- content: draft-smjh-teas-dist-bw-mgmt-arch
+  type: Internet-Draft
+- content: draft-smjh-teas-dist-bw-mgmt-arch-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.smjh-teas-dist-bw-mgmt-arch
+date:
+- type: published
+  at: '2026-11-02'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Sadhana
+      - language: en
+        script: Latn
+        initial: S
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: S. M.
+      surname:
+        language: en
+        content: Arasu
+      completename:
+        language: en
+        content: Sadhana Mani Arasu
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Jai
+      - language: en
+        script: Latn
+        initial: J
+      - language: en
+        script: Latn
+        initial: H
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: J. H. M.
+      surname:
+        language: en
+        content: K
+      completename:
+        language: en
+        content: Jai Hari M K
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: HPE
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Traffic Engineering (TE) deployments steer traffic over provisioned
+       TE constructs and associate bandwidth with them.  Examples include
+       point-to-point and point-to-multipoint (P2MP) Resource Reservation
+       Protocol - Traffic Engineering (RSVP-TE) tunnels, Segment Routing
+       (SR) Policies, and Multipath TE (MPTE) constructs that are
+       provisioned as directed acyclic graphs (DAGs).  As demand changes,
+       operators automatically resize the bandwidth allocated to each
+       construct based on measured traffic, a function commonly called auto-
+       bandwidth, but no common description of this practice exists across
+       TE technologies.
+
+       This document defines an architecture for distributed bandwidth
+       management, in which the originator of each TE construct evaluates
+       and adjusts its bandwidth without central coordination, and can
+       offload computation and bandwidth estimation to an external entity.
+       The architecture is independent of the forwarding plane and assumes a
+       signaling plane, such as RSVP-TE, that provides per-link bandwidth
+       accounting, admission control, and preemption.  It covers traffic
+       measurement, bandwidth estimation, adjustment, periodic and event-
+       driven evaluation, and the management of a service carried by
+       multiple concurrently usable tunnels (Container Tunnel management).
+       Technology-specific signaling, data models, path computation, and
+       estimation algorithms are outside its scope.
+
+       This document defines no new protocol extension or wire encoding.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-smjh-teas-dist-bw-mgmt-arch-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

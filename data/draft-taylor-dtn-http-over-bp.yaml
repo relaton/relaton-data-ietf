@@ -1,0 +1,57 @@
+---
+id: drafttaylordtnhttpoverbp
+schema_version: v1.5.6
+formattedref:
+  content: draft-taylor-dtn-http-over-bp
+title:
+- language: en
+  script: Latn
+  content: HTTP over the Bundle Protocol
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-taylor-dtn-http-over-bp-00
+docidentifier:
+- content: draft-taylor-dtn-http-over-bp
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a mechanism for carrying HTTP over Bundle
+       Protocol Version 7 (BPv7) networks.  Each HTTP request and each HTTP
+       response travels as a single bundle, encoded as a Binary HTTP message
+       inside a small CBOR envelope that correlates responses with requests.
+       Because every bundle carries a complete, self-contained message, the
+       mechanism needs none of the reliable, ordered, connection-oriented
+       transport services that HTTP otherwise relies on, and it tolerates
+       the delay, disruption, reordering, and duplication of a Delay-
+       Tolerant Network.  HTTP semantics are unchanged; only the transport
+       beneath them is replaced.  The mechanism enables HTTP application-
+       layer gateways at the edges of a bundle network, through which
+       unmodified HTTP clients and origin servers communicate across it, and
+       also lets BP-native applications act as HTTP clients or origin
+       servers directly.  The document describes how gateways use HTTP
+       caching to remain useful when round trips are long or intermittent,
+       and it requests a well-known ipn service number and a registry for
+       envelope options.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-taylor-dtn-http-over-bp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-taylor-dtn-http-over-bp-00
+    docidentifier:
+    - content: draft-taylor-dtn-http-over-bp-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

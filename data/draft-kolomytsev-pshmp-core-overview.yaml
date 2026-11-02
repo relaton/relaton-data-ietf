@@ -9,39 +9,43 @@ title:
   content: 'PSHMP Core: A Hybrid L4 Overlay for Proactive Self-Healing and Resilient Multi-Hop Delivery'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-kolomytsev-pshmp-core-overview-00
+  content: https://datatracker.ietf.org/doc/html/draft-kolomytsev-pshmp-core-overview-01
 docidentifier:
 - content: draft-kolomytsev-pshmp-core-overview
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-03'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>PSHMP Core is a hybrid L4-oriented overlay designed to keep multi-hop
-       data delivery working when individual nodes, links, or network
-       segments become unstable.  It runs above ordinary IP infrastructure
-       and does not require changes to Layer 3 routing.
+    <p>PSHMP Core is a hybrid Layer-4-oriented overlay designed to keep
+       multi-hop data delivery working when individual nodes, links, or
+       network segments become unstable.  It runs above ordinary IP
+       infrastructure and does not require changes to Layer-3 routing.
+       Implementations may carry overlay traffic over multiple bidirectional
+       transports (for example UDP, DTLS, or TLS-protected TCP); the
+       architecture is intentionally transport-agnostic at the edges.
 
-       Under stable conditions the system builds linear relay chains.  When
-       several nodes on a path show degradation, it can switch locally into
-       a mesh-style recovery mode: collect alternative candidates, apply
-       progressive fallback rules, enforce a quality gate, and replace the
-       affected path.  Continuous node assessment (K-Factor), diversity-
-       aware selection, failure tracking, gossip and DHT discovery, and
-       batch acknowledgements with gap recovery form the supporting
-       mechanisms.
+       Under stable conditions the system builds ordered relay chains and
+       forwards application fragments hop by hop while preserving fragment
+       identity.  When several nodes on a path show degradation, it can
+       switch locally into a mesh-style recovery posture: collect
+       alternative candidates, apply progressive fallback and diversity
+       rules, enforce a quality gate, and replace the affected path.
+       Continuous node assessment (K-Factor), a separate load signal,
+       diversity-aware selection, failure tracking, gossip and DHT-assisted
+       discovery, and batch acknowledgements with gap recovery form the
+       supporting mechanisms.
 
-       This document describes the architecture (including component
-       layers), operating principles, key evaluation and delivery formulas,
-       and the relationship to an experimental implementation (PSHMP Core
-       v3.1).  Implementation-specific scoring weights, exact thresholds,
-       and proprietary optimisations may be refined by integrators; the
-       formulas given here represent the reference model used in the current
-       experimental codebase.</p>
+       This document revises [I-D.kolomytsev-pshmp-core-overview] (-00).  It
+       clarifies forwarding invariants, separates path recovery from
+       fragment recovery, documents load-aware ranking, and strengthens
+       security and limitation language.  Scoring weights and thresholds
+       remain reference parameters of an experimental codebase; integrators
+       may refine them for their topologies.</p>
 relation:
 - type: includes
   bibitem:
@@ -52,6 +56,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-kolomytsev-pshmp-core-overview-00
     docidentifier:
     - content: draft-kolomytsev-pshmp-core-overview-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kolomytsev-pshmp-core-overview-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kolomytsev-pshmp-core-overview-01
+    docidentifier:
+    - content: draft-kolomytsev-pshmp-core-overview-01
       type: Internet-Draft
       primary: true
 ext:

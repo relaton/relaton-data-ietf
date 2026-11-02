@@ -1,0 +1,56 @@
+---
+id: draftyangrtgwgmclagfailurerecovery
+schema_version: v1.5.6
+formattedref:
+  content: draft-yang-rtgwg-mclag-failure-recovery
+title:
+- language: en
+  script: Latn
+  content: Forwarding-Plane Failure Recovery Procedures for Multi-Chassis Link Aggregation Groups
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-yang-rtgwg-mclag-failure-recovery-00
+docidentifier:
+- content: draft-yang-rtgwg-mclag-failure-recovery
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-01'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When a downlink member of a Multi-Chassis Link Aggregation Group (MC-
+       LAG) fails, a common recovery method flushes the MAC forwarding table
+       and relies on flooding to re-establish the forwarding paths, which
+       can cause a period of congestion and disruption.  This document
+       specifies two complementary forwarding-plane failure recovery
+       procedures for MC-LAG.  The first procedure preserves the forwarding
+       state by adjusting the LAG group's member set, adding an inter-
+       chassis link (ICL) port in place of the failed downlink, so that MAC
+       table entries remain valid and traffic is redistributed without a
+       table flush and without flooding.  The second procedure extends
+       recovery beyond a single Provider Edge (PE) pair: when the immediate
+       peer cannot satisfy a failover request, the request is relayed over a
+       secondary ICL to the next PE along a configured relay path, which
+       allows recovery across three or more PEs in the redundancy domain.
+       The procedures operate primarily in the forwarding plane and do not
+       require Ethernet VPN (EVPN) infrastructure.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-yang-rtgwg-mclag-failure-recovery-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-yang-rtgwg-mclag-failure-recovery-00
+    docidentifier:
+    - content: draft-yang-rtgwg-mclag-failure-recovery-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

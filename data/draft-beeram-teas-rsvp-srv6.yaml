@@ -9,14 +9,14 @@ title:
   content: Signaling RSVP-TE Tunnels on an SRv6 Forwarding Plane Using End.X Segment Identifiers
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-beeram-teas-rsvp-srv6-00
+  content: https://datatracker.ietf.org/doc/html/draft-beeram-teas-rsvp-srv6-01
 docidentifier:
 - content: draft-beeram-teas-rsvp-srv6
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-23'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -28,13 +28,15 @@ abstract:
        signaling extensions and procedures necessary to establish RSVP-TE
        tunnels that utilize SRv6 Segment Identifiers (SIDs) for forwarding.
 
-       This document specifies how SRv6 End.X SIDs serve as TE link SIDs,
-       defines new RSVP signaling extensions for carrying SRv6 SIDs,
-       describes TE path segment-list construction procedures at the
-       ingress, and adapts the delegation mechanisms of RFC 8577 to use SRv6
-       Binding SIDs.  The result couples the traffic engineering
-       capabilities of the RSVP-TE control plane with the native IPv6
-       forwarding of SRv6.</p>
+       This document specifies how SRv6 End.X SIDs that are advertised in
+       the IGP serve as TE link SIDs, defines new RSVP signaling extensions
+       for carrying SRv6 SIDs and for influencing the endpoint behavior
+       flavors of the SIDs, describes TE path segment-list construction
+       procedures at the ingress (including NEXT-CSID compressed segment
+       lists), adapts the delegation mechanisms of RFC 8577 to use SRv6
+       Binding SIDs, and describes the termination of the tunnel at the
+       egress.  The result couples the traffic engineering capabilities of
+       the RSVP-TE control plane with the native IPv6 forwarding of SRv6.</p>
 relation:
 - type: includes
   bibitem:
@@ -45,6 +47,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-beeram-teas-rsvp-srv6-00
     docidentifier:
     - content: draft-beeram-teas-rsvp-srv6-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-beeram-teas-rsvp-srv6-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-beeram-teas-rsvp-srv6-01
+    docidentifier:
+    - content: draft-beeram-teas-rsvp-srv6-01
       type: Internet-Draft
       primary: true
 ext:

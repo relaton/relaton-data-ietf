@@ -9,14 +9,14 @@ title:
   content: Homing Pigeon Message Protocol, Version 1
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-01
+  content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-03
 docidentifier:
 - content: draft-slutsky-homing-pigeon
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-01'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -31,7 +31,7 @@ abstract:
        to end by per-job AEAD encryption, a required part of the protocol:
        implementations MUST support it, the reference software sends
        encrypted by default, and a receiver refuses a cleartext job unless
-       the operator has explicitly enabled cleartext acceptance — in the
+       the operator has explicitly enabled cleartext acceptance - in the
        reference software, only by a command-line parameter.  The store-and-
        forward bindings open no inbound listener on the host that runs the
        job.
@@ -41,9 +41,10 @@ abstract:
        submitter and the runner.  It is a binding of version 1, not a new
        version of the protocol.  The shared secret is the session's external
        pre-shared key; key exchange is ephemeral-only, so sessions have
-       perfect forward secrecy; and once the handshake has authenticated the
-       submitter, the runner opens the session with a greeting that
-       discloses a tiered, responder-chosen summary of its platform.  The
+       perfect forward secrecy; and the runner discloses a tiered,
+       responder-chosen summary of its platform inside the handshake itself,
+       as an extension in its EncryptedExtensions, so the submitter holds
+       the platform from the flight that establishes the session.  The
        binding opens an inbound listener on the runner's host and is off
        unless the owner enables it.  It is an addition, never a replacement:
        the store-and-forward bindings remain the ones every submitter can
@@ -69,6 +70,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-01
     docidentifier:
     - content: draft-slutsky-homing-pigeon-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-slutsky-homing-pigeon-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-02
+    docidentifier:
+    - content: draft-slutsky-homing-pigeon-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-slutsky-homing-pigeon-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-03
+    docidentifier:
+    - content: draft-slutsky-homing-pigeon-03
       type: Internet-Draft
       primary: true
 ext:
