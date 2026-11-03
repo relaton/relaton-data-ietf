@@ -6,36 +6,38 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Provenance Traceability Augmentation for the GREEN Power and Energy YANG Module
+  content: Provenance Traceability for the GREEN Controller YANG Model
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-madpr-green-provenance-00
+  content: https://datatracker.ietf.org/doc/html/draft-madpr-green-provenance-01
 docidentifier:
 - content: draft-madpr-green-provenance
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-05'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines a YANG module that augments the GREEN Power and
-       Energy YANG Module [PowerAndEnergy] to record the result of
+    <p>This document defines a YANG module that augments the GREEN network
+       controller YANG model [GreenController] to record the result of
        provenance verification for each Energy Object.
 
        The augmentation builds on the COSE-based signing mechanism defined
-       in [ProvenanceDraft].  For each Energy Object, it records whether the
-       most recent provenance signature was valid, which key was used to
-       sign it, and who is responsible for that key, whether the device
+       in [ProvenanceDraft].  The controller verifies each signature it
+       receives against a key it trusts.  For each node or component, it
+       records whether the most recent signature was valid, which key was
+       used to sign it, and who is responsible for that key: the device
        itself, the network controller acting on its behalf, or an external
-       authority such as a grid energy provider.
+       authority such as a grid energy provider.  A signature that cannot be
+       verified, for example because the key is unknown or the signature is
+       missing, is recorded as a failure, with the reason.
 
-       This allows operators and auditors to verify not just that energy
-       data is correct, but that it came from where it claims to have come
-       from, and to understand the level of trust that applies to each
-       source.</p>
+       This allows operators and auditors to check not just that energy data
+       is correct, but where it came from, and how much trust applies to
+       each source.</p>
 relation:
 - type: includes
   bibitem:
@@ -46,6 +48,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-madpr-green-provenance-00
     docidentifier:
     - content: draft-madpr-green-provenance-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-madpr-green-provenance-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-madpr-green-provenance-01
+    docidentifier:
+    - content: draft-madpr-green-provenance-01
       type: Internet-Draft
       primary: true
 ext:

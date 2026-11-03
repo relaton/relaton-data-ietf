@@ -1,0 +1,55 @@
+---
+id: drafthenrypqstcohort
+schema_version: v1.5.6
+formattedref:
+  content: draft-henry-pqst-cohort
+title:
+- language: en
+  script: Latn
+  content: The Cohort Layer of Post-Quantum Secure Transport (PQST)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-henry-pqst-cohort-00
+docidentifier:
+- content: draft-henry-pqst-cohort
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-02'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the cohort layer of Post-Quantum Secure
+       Transport (PQST).  With it, PQST provides independently migrating and
+       recoverable post-quantum sessions within a persistent cohort
+       authorization context.  A cohort member's sessions move, sleep,
+       recover and re-key on their own, and none of those events by itself
+       requires a change of the cohort's membership.  One sequencer commits
+       the membership, the policy, and a membership epoch together with that
+       epoch's key, and only on security events; members receive them inside
+       their pairwise sessions, keep them through partitions, and return
+       after dormancy or a restart without readmission, unless they were
+       away longer than the group's expiry.  This version specifies the
+       group's control plane: membership, policy, reachability and member
+       discovery.  It describes, as the direction of the next version, a
+       group data plane under keys derived from the epoch key, which would
+       give the members one secure session among themselves.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-henry-pqst-cohort-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-henry-pqst-cohort-00
+    docidentifier:
+    - content: draft-henry-pqst-cohort-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

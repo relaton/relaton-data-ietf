@@ -9,14 +9,14 @@ title:
   content: 'RICH: RESTful Interface for the Control-plane of Harnesses'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-pelov-rich-architecture-00
+  content: https://datatracker.ietf.org/doc/html/draft-pelov-rich-architecture-01
 docidentifier:
 - content: draft-pelov-rich-architecture
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-06'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
@@ -28,9 +28,12 @@ abstract:
        REST-addressable control plane for managing capability lifecycles
        while preserving native protocol execution in the data plane.  It
        defines immutable capability and contract revisions, evidence
-       provenance, deterministic connector classes, compiled binding
-       lockfiles, and runtime validation rules designed to contain drift and
-       prevent confused deputy attacks in agentic systems.</p>
+       provenance, connector transformation classes, compiled binding
+       lockfiles, admission of bindings against an authorization, and
+       runtime validation rules designed to contain drift and prevent
+       confused deputy attacks in agentic systems.  RICH does not make model
+       behavior deterministic: it bounds what each admitted call can do, and
+       makes every step on the connector path checkable and refusable.</p>
 relation:
 - type: includes
   bibitem:
@@ -41,6 +44,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-pelov-rich-architecture-00
     docidentifier:
     - content: draft-pelov-rich-architecture-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-pelov-rich-architecture-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-pelov-rich-architecture-01
+    docidentifier:
+    - content: draft-pelov-rich-architecture-01
       type: Internet-Draft
       primary: true
 ext:

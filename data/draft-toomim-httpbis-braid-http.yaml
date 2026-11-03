@@ -6,25 +6,30 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: 'Braid-HTTP: Synchronization for HTTP'
+  content: 'Braid-HTTP: State Synchronization for HTTP'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-toomim-httpbis-braid-http-04
+  content: https://datatracker.ietf.org/doc/html/draft-toomim-httpbis-braid-http-05
 docidentifier:
 - content: draft-toomim-httpbis-braid-http
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2023-11-18'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>Braid is a set of extensions that generalize HTTP from a state
-       *transfer* protocol into a full state *synchronization* protocol.
-
-       Braid is composed of four independent extensions to HTTP:</p>
+    <p>HTTP transfers the state of a resource once, and leaves programmers
+       to keep it up to date as it changes.  Braid-HTTP extends HTTP from
+       *transferring* state to *synchronizing* it, with a set of independent
+       extensions, each of which addresses a limitation of HTTP on its own.
+       When used together, a website can synchronize with any other
+       website's state by its URL, just as a page on today's web can link to
+       any other page.  This document introduces the extensions, shows how
+       they work alone and together, and points to the documents that define
+       them.</p>
 relation:
 - type: includes
   bibitem:
@@ -79,6 +84,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-toomim-httpbis-braid-http-04
     docidentifier:
     - content: draft-toomim-httpbis-braid-http-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-toomim-httpbis-braid-http-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-toomim-httpbis-braid-http-05
+    docidentifier:
+    - content: draft-toomim-httpbis-braid-http-05
       type: Internet-Draft
       primary: true
 ext:

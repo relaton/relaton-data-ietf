@@ -9,27 +9,26 @@ title:
   content: The ipn.arpa Zone and IPN DNS Operations
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ek-dtn-ipn-arpa-00
+  content: https://datatracker.ietf.org/doc/html/draft-ek-dtn-ipn-arpa-01
 docidentifier:
 - content: draft-ek-dtn-ipn-arpa
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2025-11-04'
+  at: '2026-11-02'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document requests a DNS parent for IPN addresses, discusses the
-       registration procedures and management of the DNS zone, as well as
-       some operational recommendations.  This document specifies that IPN
-       addresses may have a DNS representation of the form
-       1.978879.ipn.arpa, for IPN node 1 under IPN Allocator 978879.
-
-       This document also describes how this DNS structure can be useful in
-       locating the Bundle Protocol (BP) Convergence Layer (CL) endpoint(s)
-       of the BP Agent responsible for a given IPN address.</p>
+    <p>This document requests the creation of ipn.arpa, an infrastructure
+       DNS namespace for the IPN node identifiers used by the Bundle
+       Protocol (BP).  Each Fully Qualified Node Number has a canonical name
+       of the form N.A.ipn.arpa, where A is the Allocator Identifier and N
+       is the Node Number.  A BP Agent can query directly beneath that name
+       for records specified by a convergence-layer discovery binding, such
+       as SRV or SVCB records.  The DNS records identify convergence-layer
+       endpoints advertised for reaching a destination, including relays.</p>
 relation:
 - type: includes
   bibitem:
@@ -40,6 +39,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ek-dtn-ipn-arpa-00
     docidentifier:
     - content: draft-ek-dtn-ipn-arpa-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ek-dtn-ipn-arpa-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ek-dtn-ipn-arpa-01
+    docidentifier:
+    - content: draft-ek-dtn-ipn-arpa-01
       type: Internet-Draft
       primary: true
 ext:
