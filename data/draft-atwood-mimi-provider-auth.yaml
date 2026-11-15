@@ -1,0 +1,51 @@
+---
+id: draftatwoodmimiproviderauth
+schema_version: v1.5.6
+formattedref:
+  content: draft-atwood-mimi-provider-auth
+title:
+- language: en
+  script: Latn
+  content: Provider Authentication for More Instant Messaging Interoperability (MIMI)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-atwood-mimi-provider-auth-00
+docidentifier:
+- content: draft-atwood-mimi-provider-auth
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-15'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The MIMI protocol requires each provider to authenticate the provider
+       that sends it a request.  It specifies mutually authenticated TLS for
+       this, but not where the client certificates come from or which trust
+       anchors check them.  The public Web PKI has stopped issuing such
+       certificates.  This document defines how MIMI providers authenticate
+       each other without it.  The mechanism every provider implements is a
+       key published in DNS under the provider's domain, used to sign each
+       request with HTTP Message Signatures.  DANE client certificates,
+       client certificates from configured PKIX trust anchors, and locally
+       configured trust lists are defined as additional mechanisms that a
+       provider can accept by local policy.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-atwood-mimi-provider-auth-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-atwood-mimi-provider-auth-00
+    docidentifier:
+    - content: draft-atwood-mimi-provider-auth-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

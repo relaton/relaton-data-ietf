@@ -1,0 +1,80 @@
+---
+id: draftatwoodmimiproviderauth00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Provider Authentication for More Instant Messaging Interoperability (MIMI)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-atwood-mimi-provider-auth-00
+docidentifier:
+- content: draft-atwood-mimi-provider-auth
+  type: Internet-Draft
+- content: draft-atwood-mimi-provider-auth-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.atwood-mimi-provider-auth
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Mark
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Atwood
+      completename:
+        language: en
+        content: Mark Atwood
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Review Commit, LLC
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>The MIMI protocol requires each provider to authenticate the provider
+       that sends it a request.  It specifies mutually authenticated TLS for
+       this, but not where the client certificates come from or which trust
+       anchors check them.  The public Web PKI has stopped issuing such
+       certificates.  This document defines how MIMI providers authenticate
+       each other without it.  The mechanism every provider implements is a
+       key published in DNS under the provider's domain, used to sign each
+       request with HTTP Message Signatures.  DANE client certificates,
+       client certificates from configured PKIX trust anchors, and locally
+       configured trust lists are defined as additional mechanisms that a
+       provider can accept by local policy.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-atwood-mimi-provider-auth-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

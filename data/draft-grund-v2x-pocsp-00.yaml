@@ -1,0 +1,172 @@
+---
+id: draftgrundv2xpocsp00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Pseudonymous Stapled Certificate Status Evidence for V2X and TLS with ITS
+    Certificates (pOCSP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-grund-v2x-pocsp-00
+docidentifier:
+- content: draft-grund-v2x-pocsp
+  type: Internet-Draft
+- content: draft-grund-v2x-pocsp-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.grund-v2x-pocsp
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Grund
+      completename:
+        language: en
+        content: Jean-Jacques Grund
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telecom Paris, Institut Polytechnique de Paris
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Rida
+      - language: en
+        script: Latn
+        initial: R
+      formatted_initials:
+        language: en
+        content: R.
+      surname:
+        language: en
+        content: Khatoun
+      completename:
+        language: en
+        content: Rida Khatoun
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telecom Paris, Institut Polytechnique de Paris
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guy
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Pujolle
+      completename:
+        language: en
+        content: Guy Pujolle
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Sorbonne Universite, CNRS, LIP6
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Ahmed
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Serhrouchni
+      completename:
+        language: en
+        content: Ahmed Serhrouchni
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Telecom Paris, Institut Polytechnique de Paris, and Institut CyberIA
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Vehicle-to-Everything (V2X) systems authenticate broadcast and
+       unicast messages with short-lived pseudonymous certificates.
+       Revocation status validation is difficult in this environment:
+       Certificate Revocation Lists (CRLs) can be costly to distribute at
+       pseudonym scale, while verifier-initiated OCSP requests introduce
+       online dependencies, latency, metadata leakage, and denial-of-service
+       exposure.
+
+       This document specifies pOCSP, an OCSP-derived response type and a
+       set of deployment profiles for short-lived certificate-status
+       evidence that is obtained by the certificate holder and stapled to an
+       authenticated message or TLS CertificateEntry.  A verifier validates
+       pOCSP evidence locally, without contacting a responder at message-
+       reception time.  pOCSP retains the OCSP status semantics good,
+       revoked, and unknown; defines an explicit signed usage context;
+       defines a compact context-specific certificate identifier; and
+       specifies deterministic, bounded validation, caching, and failure
+       behavior. pOCSP does not claim that its identifier is unlinkable.
+       The identifier is deterministic and can be correlated whenever the
+       underlying certificate is observable or inferable.  The V2X profiles
+       therefore require single-certificate evidence and prohibit
+       transmitting pOCSP evidence more frequently than the corresponding
+       full certificate.  The document prohibits future-active good
+       evidence, bounds replay by mandatory thisUpdate and nextUpdate
+       values, and makes an authenticated revocation terminal at the
+       verifier: omitted, expired, unknown, or higher-versioned good
+       evidence cannot mask it.  It defines profiles for ETSI CAM/DENM, SAE
+       J2735 messages, and TLS 1.3 with ITS certificates, requests an OCSP
+       response-type object identifier, and establishes a registry of pOCSP
+       profile identifiers.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-grund-v2x-pocsp-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

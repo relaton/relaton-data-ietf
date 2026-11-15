@@ -1,0 +1,77 @@
+---
+id: draftdvojmocreceptionforwardinglimits00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Depth and Fanout Bounding for Agent-to-Agent Discovery Forwarding
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-dvojmoc-reception-forwarding-limits-00
+docidentifier:
+- content: draft-dvojmoc-reception-forwarding-limits
+  type: Internet-Draft
+- content: draft-dvojmoc-reception-forwarding-limits-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.dvojmoc-reception-forwarding-limits
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Viljem
+      - language: en
+        script: Latn
+        initial: V
+      formatted_initials:
+        language: en
+        content: V.
+      surname:
+        language: en
+        content: Dvojmoč
+      completename:
+        language: en
+        content: Viljem Dvojmoč
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document describes a mechanism, deployed in production as
+       part of the "AI Docking Port" discovery protocol, for bounding the
+       traffic cost of stateless agent-to-agent forwarding across a
+       network of independent nodes with no central registry.  When a
+       node forwards a request to its neighbors, and those neighbors may
+       forward again, request cost grows as fanout^depth; absent an
+       explicit bound this cost is paid by relaying operators rather than
+       the requester.  This document specifies two operator-controlled
+       limits, max_depth and max_fanout, published in a node's discovery
+       manifest, and the forwarding behavior they constrain.  It is
+       submitted for discussion as a possible contribution to ongoing
+       community work on agent discovery and invocation protocols,
+       including the W3C Community Group "AI Agent Protocol".</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-dvojmoc-reception-forwarding-limits-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

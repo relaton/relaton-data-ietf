@@ -9,36 +9,26 @@ title:
   content: Trust-Governed Resource Identity and Discovery Architecture for OpenAgenet
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-xu-oan-resource-identity-discovery-01
+  content: https://datatracker.ietf.org/doc/html/draft-xu-oan-resource-identity-discovery-02
 docidentifier:
 - content: draft-xu-oan-resource-identity-discovery
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-29'
+  at: '2026-11-15'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>Open agent ecosystems increasingly include heterogeneous resource
-       products: callable agents, skills, Model Context Protocol (MCP)
-       servers, ordinary tools, and application programming interfaces.  A
-       user or orchestrator often needs to discover such resources before it
-       can decide which interaction protocol, credential, endpoint, or
-       artifact to use.  Discovery alone is not sufficient: the relying
-       party also needs to know which resource identity was registered,
-       which authority accepted it, whether the accepted package is current,
-       and whether the Discovery service is authorized to expose it.
-
-       This document describes a trust-governed resource identity and
-       discovery architecture for OpenAgenet (OAN).  The architecture
-       separates resource subjects, resource providers, Registrar Nodes, a
-       Root Node, Discovery Nodes, content distribution, and resource
-       consumers.  It defines architectural roles, trust boundaries,
-       resource identity expectations, Root-verified package semantics,
-       registration and verification behavior, authorization-aware
-       Discovery, and pre-use verification requirements.
+    <p>This document describes a trust-governed resource identity and
+       discovery architecture for OpenAgenet (OAN).  It covers callable
+       agents, skills, Model Context Protocol (MCP) servers, tools, and
+       application programming interfaces.  Registrars verify registration
+       authority, a Root accepts versioned resource packages, and authorized
+       Discovery Nodes expose verified candidates.  Consumers verify package
+       integrity, acceptance, and current state before using a resource
+       through its native protocol or artifact format.
 
        The architecture can be profiled with Decentralized Identifier (DID)
        document concepts and credential-based assertions.  This document
@@ -66,6 +56,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-xu-oan-resource-identity-discovery-01
     docidentifier:
     - content: draft-xu-oan-resource-identity-discovery-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-xu-oan-resource-identity-discovery-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-xu-oan-resource-identity-discovery-02
+    docidentifier:
+    - content: draft-xu-oan-resource-identity-discovery-02
       type: Internet-Draft
       primary: true
 ext:

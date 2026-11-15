@@ -1,0 +1,93 @@
+---
+id: draftsrivastavaagentprotohandoffcontext02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Signed Handoff Context for Agentic Dialogs
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-srivastava-agentproto-handoff-context-02
+docidentifier:
+- content: draft-srivastava-agentproto-handoff-context
+  type: Internet-Draft
+- content: draft-srivastava-agentproto-handoff-context-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.srivastava-agentproto-handoff-context
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Kumar
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Srivastava
+      completename:
+        language: en
+        content: Kumar Srivastava
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Quantum Learning Machines
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When one agent hands a task to another, the receiver needs to know
+       who handed it over, on whose behalf, through which earlier agents,
+       and which prior context the work depends on.  It needs to know the
+       handoff is fresh and meant for it, and the sender needs a clear
+       answer back.  This document defines a small, transport-neutral
+       handoff context: a signed offer, a signed status reply, and the chain
+       of earlier offers that led to the current one, in CDDL for JSON and
+       CBOR, with a lifecycle that maps to Agent2Agent task states.  Each
+       offer names the one before it by hash, so a dropped or reordered
+       intermediate hop is detectable when the chain is carried.  Prior
+       context is named by digest only.  The document is input to the
+       agentproto working group's use cases and dialog-context work.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-srivastava-agentproto-handoff-context-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-srivastava-agentproto-handoff-context-01
+    docidentifier:
+    - content: draft-srivastava-agentproto-handoff-context-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-srivastava-agentproto-handoff-context-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

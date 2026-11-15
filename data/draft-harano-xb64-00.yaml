@@ -1,0 +1,80 @@
+---
+id: draftharanoxb6400
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'XB64: A Lightweight Reversible Obfuscation Encoding'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-harano-xb64-00
+docidentifier:
+- content: draft-harano-xb64
+  type: Internet-Draft
+- content: draft-harano-xb64-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.harano-xb64
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Takashi
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Harano
+      completename:
+        language: en
+        content: Takashi Harano
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies XB64 (XORed Base64), a lightweight reversible
+       obfuscation encoding scheme for situations where immediate
+       readability of source data is undesirable but cryptographic
+       confidentiality is not required.
+
+       To provide a key-dependent yet fully reversible representation, XB64
+       applies repeating-key XOR to arbitrary octet sequences and encodes
+       the result as printable ASCII text using Base64 as specified in RFC
+       4648.  The resulting text itself preserves the source information,
+       allowing exact reconstruction with the same key without external data
+       lookup, while remaining suitable for human handling and exchange
+       through text-oriented systems.
+
+       By specifying a common encoding format for this level of obfuscation,
+       this document aims to enable interoperable use across different
+       applications, platforms, and implementations.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-harano-xb64-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

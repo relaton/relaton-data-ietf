@@ -1,0 +1,57 @@
+---
+id: draftatwoodjmapupdates
+schema_version: v1.5.6
+formattedref:
+  content: draft-atwood-jmap-updates
+title:
+- language: en
+  script: Latn
+  content: 'Updates to JMAP: Localized Display Text, Text Handling, URIs, and Problem
+    Details'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-atwood-jmap-updates-00
+docidentifier:
+- content: draft-atwood-jmap-updates
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-15'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>JMAP (RFC 8620) carries all data as UTF-8 I-JSON, lets a client name
+       a collation for sorting, and lets a server localize user-visible
+       strings from the request's Accept-Language header.  It has no way to
+       store or return display text, such as the name of a mailbox, address
+       book, or quota, in more than one language, and no way to say which
+       language a stored string is in.  This document defines the
+       urn:ietf:params:jmap:i18n capability, which adds locale and
+       localizations properties, modelled on JSCalendar (RFC 8984), to the
+       display text of existing JMAP data types, and a language argument
+       with which a client asks for one language.  For clients that use that
+       argument, this document updates RFC 9425, which selects the Quota
+       description by Accept-Language.  It also updates RFC 8620 with
+       guidance for all JMAP specifications on text profiles, Unicode
+       normalization, truncation, and the use of display text, and asks that
+       URI-valued properties follow RFC 3986 and that every JMAP HTTP
+       resource report errors as RFC 9457 problem details.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-atwood-jmap-updates-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-atwood-jmap-updates-00
+    docidentifier:
+    - content: draft-atwood-jmap-updates-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
