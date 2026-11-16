@@ -1,0 +1,57 @@
+---
+id: draftbainsnltp
+schema_version: v1.5.6
+formattedref:
+  content: draft-bains-nltp
+title:
+- language: en
+  script: Latn
+  content: 'NeckLink Transport Protocol (NLTP): Loss-Healing Authenticated Telemetry
+    and Reflex Transport for Constrained Networks'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bains-nltp-00
+docidentifier:
+- content: draft-bains-nltp
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-16'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the NeckLink Transport Protocol (NLTP), a
+       lightweight, loss-healing, forward-secret transport protocol designed
+       for microcontrollers, autonomous sensors, and edge gateways operating
+       over lossy wireless links (including IEEE 802.11 vendor action frames
+       such as ESP-NOW v1 and v2) and Carrier-Grade NAT (CGNAT) UDP paths.
+       NLTP combines systematic Galois Field GF(2^8) algebraic Cauchy
+       erasure coding with a single-round-trip (1-RTT) X25519 and pre-shared
+       key (PSK) session handshake, ChaCha20-Poly1305 authenticated
+       encryption with associated data (AEAD), a 512-packet sliding anti-
+       replay window, optional pre-encryption zero-heap LZ4 block
+       compression, integer delivery-rate pacing, and a confirmed out-of-
+       line reflex channel that eliminates head-of-line (HOL) blocking for
+       urgent actuator commands.  The entire protocol executes with zero
+       dynamic heap allocation and zero floating-point operations, fitting
+       within 4,760 octets of static RAM in transmit-plus-reflex sensor
+       configurations.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bains-nltp-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bains-nltp-00
+    docidentifier:
+    - content: draft-bains-nltp-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

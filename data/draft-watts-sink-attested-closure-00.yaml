@@ -1,0 +1,86 @@
+---
+id: draftwattssinkattestedclosure00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Sink-Attested Closure Evidence (SACE): Signed Epoch Acknowledgements and
+    Accountable Revocation Closure'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-watts-sink-attested-closure-00
+docidentifier:
+- content: draft-watts-sink-attested-closure
+  type: Internet-Draft
+- content: draft-watts-sink-attested-closure-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.watts-sink-attested-closure
+date:
+- type: published
+  at: '2026-11-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        initial: D
+      formatted_initials:
+        language: en
+        content: D.
+      surname:
+        language: en
+        content: Watts
+      completename:
+        language: en
+        content: Deonté Watts
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: GoodShyt Group Inc.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Revoking delegated authority in an agentic system is complete only
+       when every place that can still act on that authority has stopped.
+       Existing work defines the states of that process but leaves its
+       evidence format open.  This document defines Sink-Attested Closure
+       Evidence (SACE): a small set of COSE-signed objects and one
+       deterministic algorithm.  An authority root signs a Scope Manifest
+       naming the sinks a closure claim covers, and a Cut Statement raising
+       the minimum admissible authority epoch.  Each sink signs an Epoch
+       Acknowledgement with its own key, binding the cut to the sequence
+       number of the last effect it committed before applying it.  Each
+       committed effect yields a signed Effect Receipt.  From these objects
+       any party can compute one of three verdicts: CLOSED, UNKNOWN, or
+       VIOLATED.  A VIOLATED verdict comes with a transferable proof
+       consisting of two signatures by the same sink.  A sink that never
+       acknowledges blocks CLOSED until it is removed from scope.  An
+       optional binding ties the acknowledging key to remote attestation
+       evidence.  This document makes no claim that a sink which signs an
+       acknowledgement actually enforces it; it makes a sink that does not
+       enforce it provably accountable for every effect it receipts.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-watts-sink-attested-closure-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

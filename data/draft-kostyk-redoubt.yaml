@@ -1,0 +1,53 @@
+---
+id: draftkostykredoubt
+schema_version: v1.5.6
+formattedref:
+  content: draft-kostyk-redoubt
+title:
+- language: en
+  script: Latn
+  content: 'Redoubt/1: Authorised Control of Modbus-Era PLCs'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kostyk-redoubt-00
+docidentifier:
+- content: draft-kostyk-redoubt
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-15'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Redoubt/1, a control channel for programmable
+       logic controllers that sits in front of Modbus/TCP and decides, per
+       operation, whether a request may reach the controller.  Modbus has no
+       authentication, no authorisation and no replay protection; the TLS-
+       based Modbus Security profile adds a protected channel but still lets
+       any authenticated client invoke any function code.  Redoubt/1 adds a
+       decision per operation rather than per connection, a replay window
+       that survives a controller reboot, a three-valued outcome that can
+       drive outputs to a safe state instead of merely refusing, dual
+       control for critical outputs, reversible batches, and an audit chain
+       that fails closed.  The decision core is formalised in Lean 4 and
+       twenty of its properties are machine-checked; the proof artefacts are
+       published with the implementation.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-kostyk-redoubt-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-kostyk-redoubt-00
+    docidentifier:
+    - content: draft-kostyk-redoubt-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,77 @@
+---
+id: draftkostykredoubt00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Redoubt/1: Authorised Control of Modbus-Era PLCs'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-kostyk-redoubt-00
+docidentifier:
+- content: draft-kostyk-redoubt
+  type: Internet-Draft
+- content: draft-kostyk-redoubt-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.kostyk-redoubt
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Konstantin
+      - language: en
+        script: Latn
+        initial: K
+      formatted_initials:
+        language: en
+        content: K.
+      surname:
+        language: en
+        content: Parashchuk
+      completename:
+        language: en
+        content: Konstantin Parashchuk
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies Redoubt/1, a control channel for programmable
+       logic controllers that sits in front of Modbus/TCP and decides, per
+       operation, whether a request may reach the controller.  Modbus has no
+       authentication, no authorisation and no replay protection; the TLS-
+       based Modbus Security profile adds a protected channel but still lets
+       any authenticated client invoke any function code.  Redoubt/1 adds a
+       decision per operation rather than per connection, a replay window
+       that survives a controller reboot, a three-valued outcome that can
+       drive outputs to a safe state instead of merely refusing, dual
+       control for critical outputs, reversible batches, and an audit chain
+       that fails closed.  The decision core is formalised in Lean 4 and
+       twenty of its properties are machine-checked; the proof artefacts are
+       published with the implementation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-kostyk-redoubt-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

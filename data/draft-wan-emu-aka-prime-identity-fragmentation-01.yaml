@@ -1,0 +1,98 @@
+---
+id: draftwanemuakaprimeidentityfragmentation01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: EAP-AKA' Large Identity
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-wan-emu-aka-prime-identity-fragmentation-01
+docidentifier:
+- content: draft-wan-emu-aka-prime-identity-fragmentation
+  type: Internet-Draft
+- content: draft-wan-emu-aka-prime-identity-fragmentation-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.wan-emu-aka-prime-identity-fragmentation
+date:
+- type: published
+  at: '2026-11-16'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Tao
+      - language: en
+        script: Latn
+        initial: T
+      formatted_initials:
+        language: en
+        content: T.
+      surname:
+        language: en
+        content: Wan
+      completename:
+        language: en
+        content: Tao Wan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: CableLabs
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document updates EAP-AKA’ (RFC 9048) so that a peer can send an
+       identity that is too large for the initial EAP-Response/Identity
+       packet, such as a Subscription Concealed Identifier (SUCI) in Network
+       Access Identifier (NAI) format protected by a Post-Quantum
+       Cryptography (PQC) scheme.  The peer sends a realm-only identity in
+       EAP-Response/Identity and the large identity in EAP-Response/AKA-
+       Identity.  If the identity fits in an AT_IDENTITY attribute, the peer
+       sends it there.  Otherwise, the peer sends it in a new attribute,
+       AT_LARGE_IDENTITY, which is fragmented using the AT_FRAGMENT
+       attribute defined in I-D.ietf-emu-pqc-eapaka.  A peer that supports
+       several SUCI protection schemes (for example PQC and classical
+       schemes) uses the presence or absence of the
+       AT_LARGE_IDENTITY_SUPPORTED attribute in the server’s request to
+       select a scheme whose SUCI can be carried in an identity attribute
+       that the server can process.  These procedures support large SUCI
+       values, and do not change the EAP-AKA’ authentication or key
+       derivation.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-wan-emu-aka-prime-identity-fragmentation-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wan-emu-aka-prime-identity-fragmentation-00
+    docidentifier:
+    - content: draft-wan-emu-aka-prime-identity-fragmentation-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-wan-emu-aka-prime-identity-fragmentation-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

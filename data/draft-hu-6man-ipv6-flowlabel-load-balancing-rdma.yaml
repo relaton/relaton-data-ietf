@@ -9,14 +9,14 @@ title:
   content: A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-03
+  content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
 docidentifier:
 - content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-27'
+  at: '2026-11-16'
 abstract:
 - language: en
   script: Latn
@@ -27,16 +27,17 @@ abstract:
        cannot distinguish between different RDMA sessions that share the
        same 5-tuple.  This causes "elephant flows" to be hashed to the same
        path, leading to network congestion.  This method resolves this issue
-       by having the ingress network device (e.g., a top-of-rack switch or
-       router) parse the QP (Queue Pair) information from the IB BTH (Base
-       Transport Header) and IB DETH (Datagram Extended Transport Header)
-       headers of the RoCEv2 packet.  By combining this with portions of the
-       IPv6 source and destination addresses as an entropy source, a CRC32
-       hash algorithm generates a 20-bit value, which is then written into
-       the Flow Label field of the IPv6 header.  Network devices can
-       subsequently use the updated "5-tuple + Flow Label" for more granular
-       flow-level load balancing, thereby effectively improving transmission
-       efficiency in high-performance networks such as AI computing.</p>
+       by having the ingress network device (e.g., a data center gateway or
+       DCI edge router) parse the QP (Queue Pair) information from the IB
+       BTH (Base Transport Header) and IB DETH (Datagram Extended Transport
+       Header, when present) of the RoCEv2 packet.  By combining this with
+       portions of the IPv6 source and destination addresses as an entropy
+       source, a CRC32 hash algorithm generates a 32-bit value, the low 20
+       bits of which are then written into the Flow Label field of the IPv6
+       header.  Network devices can subsequently use the updated "5-tuple +
+       Flow Label" for more granular flow-level load balancing, thereby
+       effectively improving transmission efficiency in high-performance
+       networks for workloads such as AI computing.</p>
 relation:
 - type: includes
   bibitem:
@@ -80,6 +81,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-03
     docidentifier:
     - content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
+    docidentifier:
+    - content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
       type: Internet-Draft
       primary: true
 ext:

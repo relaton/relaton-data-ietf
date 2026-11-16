@@ -1,0 +1,75 @@
+---
+id: draftraduschoauthsubjectproof
+schema_version: v1.5.6
+formattedref:
+  content: draft-radusch-oauth-subject-proof
+title:
+- language: en
+  script: Latn
+  content: OAuth 2.0 Subject-Proof Callers for Token Introspection and Revocation
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-radusch-oauth-subject-proof-02
+docidentifier:
+- content: draft-radusch-oauth-subject-proof
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-16'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>OAuth 2.0 Token Introspection (RFC 7662) and Token Revocation (RFC
+       7009) recognize two kinds of caller: the client a token was issued
+       to, and (for introspection) a protected resource the authorization
+       server chooses to trust.  Neither covers a common case: a client that
+       acts for the end user and wants to see, or end, a grant that the same
+       user gave to a different client, for example a user disconnecting one
+       AI agent from inside a web application.  This document defines a
+       third kind of caller, the subject-proof caller.  The caller presents
+       a token that the authorization server issued to that same caller for
+       the same end user.  If the proof is valid and names the same subject
+       as the target grant, the authorization server discloses the grant's
+       delegation metadata at the introspection endpoint, or revokes exactly
+       that one grant at the revocation endpoint.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-radusch-oauth-subject-proof-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-radusch-oauth-subject-proof-00
+    docidentifier:
+    - content: draft-radusch-oauth-subject-proof-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-radusch-oauth-subject-proof-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-radusch-oauth-subject-proof-01
+    docidentifier:
+    - content: draft-radusch-oauth-subject-proof-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-radusch-oauth-subject-proof-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-radusch-oauth-subject-proof-02
+    docidentifier:
+    - content: draft-radusch-oauth-subject-proof-02
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

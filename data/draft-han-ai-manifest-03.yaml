@@ -1,0 +1,107 @@
+---
+id: drafthanaimanifest03
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'AI Manifest: Site-Published Friction-Recovery Descriptors for AI Agents'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-han-ai-manifest-03
+docidentifier:
+- content: draft-han-ai-manifest
+  type: Internet-Draft
+- content: draft-han-ai-manifest-03
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.han-ai-manifest
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Wonpyo
+      - language: en
+        script: Latn
+        initial: W
+      formatted_initials:
+        language: en
+        content: W.
+      surname:
+        language: en
+        content: Han
+      completename:
+        language: en
+        content: Wonpyo Han
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Individual
+version:
+- content: '03'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the AI Manifest, a JSON format with which a
+       website operator publishes an AI Friction-Recovery Manifest (AFRM): a
+       description of the user-interface (UI) patterns on its own origin
+       that predictably stall autonomous AI agents, together with
+       constrained recovery steps and site-specific input hints.  An agent
+       that drives a browser on behalf of a user retrieves the manifest from
+       a well-known URI and consults it when it encounters friction, instead
+       of rediscovering the same site-specific behavior by trial and error.
+
+       The manifest is untrusted input, interpreted by the agent's runtime
+       and never shown to its language model.  Its operative content is
+       drawn from a closed vocabulary that cannot enter text, upload files,
+       or reach another origin.  Every action derived from a manifest passes
+       through a policy enforcement point that is not a language model, and
+       steps conventionally bound to a decision require the user's
+       confirmation by default.  Security controls such as access denials,
+       rate limits, CAPTCHAs, authentication challenges, and confirmation
+       dialogs are stop conditions, never traps to be recovered from.
+       Optional publisher signatures and agent-configured reputation
+       services provide authenticity but never imply safety and never relax
+       these requirements.
+
+       This -03 revision replaces the trust model of draft-han-ai-manifest-
+       02, removes the inline and vendor-path discovery methods from the
+       protocol, and restructures the schema around a closed action
+       vocabulary.  Preliminary measurements are reported in an appendix.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-han-ai-manifest-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-han-ai-manifest-02
+    docidentifier:
+    - content: draft-han-ai-manifest-02
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-han-ai-manifest-03
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

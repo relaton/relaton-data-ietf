@@ -9,14 +9,14 @@ title:
   content: Homing Pigeon Message Protocol, Version 1
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-03
+  content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-04
 docidentifier:
 - content: draft-slutsky-homing-pigeon
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-02'
+  at: '2026-11-15'
 abstract:
 - language: en
   script: Latn
@@ -27,14 +27,15 @@ abstract:
        signed JSON object to a mailbox; a runner polls that mailbox,
        verifies the signature, executes the job, and returns a signed
        result; the other bindings carry the same objects unchanged.  The
-       signature is the only authorization.  The job object is protected end
-       to end by per-job AEAD encryption, a required part of the protocol:
-       implementations MUST support it, the reference software sends
-       encrypted by default, and a receiver refuses a cleartext job unless
-       the operator has explicitly enabled cleartext acceptance - in the
-       reference software, only by a command-line parameter.  The store-and-
-       forward bindings open no inbound listener on the host that runs the
-       job.
+       signature is the object's only authorization: a binding may add a
+       gate of its own, but no gate replaces it.  The job object is
+       protected end to end by per-job AEAD encryption, a required part of
+       the protocol: implementations MUST support it, the reference software
+       sends encrypted by default, and a receiver refuses a cleartext job
+       unless the operator has explicitly enabled cleartext acceptance - in
+       the reference software, only by a command-line parameter.  The store-
+       and-forward bindings open no inbound listener on the host that runs
+       the job.
 
        The DTLS binding changes the binding and not the messages: the same
        signed objects travel inside a direct DTLS 1.3 session between the
@@ -92,6 +93,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-03
     docidentifier:
     - content: draft-slutsky-homing-pigeon-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-slutsky-homing-pigeon-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-slutsky-homing-pigeon-04
+    docidentifier:
+    - content: draft-slutsky-homing-pigeon-04
       type: Internet-Draft
       primary: true
 ext:

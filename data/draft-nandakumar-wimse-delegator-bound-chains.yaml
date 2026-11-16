@@ -1,0 +1,54 @@
+---
+id: draftnandakumarwimsedelegatorboundchains
+schema_version: v1.5.6
+formattedref:
+  content: draft-nandakumar-wimse-delegator-bound-chains
+title:
+- language: en
+  script: Latn
+  content: Delegator-Bound Delegation Chains for AI Agents
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-nandakumar-wimse-delegator-bound-chains-00
+docidentifier:
+- content: draft-nandakumar-wimse-delegator-bound-chains
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-16'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Attenuated delegation chains let a verifier check, without contacting
+       any server, that no hop of a chain of AI agents holds more authority
+       than the root granted.  They do not show that each hop was granted by
+       the agent before it: a child token can be signed by any key the
+       verifier accepts.  This document defines an extension that requires
+       each child token to be signed with the key that its parent token
+       confirms, so that every hop provably granted the next, with no
+       authorization server in the path.  The extension also defines a per-
+       chain pseudonym for the principal, a rule that rejects chains in
+       which an agent appears twice, a rule that keeps a child's audience
+       within its parent's, and a claim that binds a chain to the dialog or
+       transaction it was issued for.  The extension builds on an existing
+       attenuated delegation token format and can be mapped to other
+       chained-token formats.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-nandakumar-wimse-delegator-bound-chains-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-nandakumar-wimse-delegator-bound-chains-00
+    docidentifier:
+    - content: draft-nandakumar-wimse-delegator-bound-chains-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

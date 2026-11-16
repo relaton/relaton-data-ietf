@@ -9,14 +9,14 @@ title:
   content: CBOR Serialization and Determinism
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-12
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-13
 docidentifier:
 - content: draft-ietf-cbor-serialization
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-30'
+  at: '2026-11-15'
 abstract:
 - language: en
   script: Latn
@@ -24,14 +24,15 @@ abstract:
     <p>RFC 8949 defines CBOR, a standard for serializing data types such as
        integers, strings, and arrays into encoded bytes.  CBOR serialization
        is flexible, allowing data types to be encoded in multiple ways to
-       accommodate deployment in constrained environments.  This document
-       normatively defines one particular serialization, called "preferred-
-       plus serialization," that is suitable for the majority of CBOR-based
-       protocols.  Protocol designers and implementers who choose it need
-       not understand or specify serialization details themselves.  This
-       document also normatively defines a deterministic serialization.
-       These serializations are largely compatible with those widely
-       implemented by the CBOR community.
+       accommodate deployment in constrained environments.
+
+       This document introduces the term “general serialization” for the
+       full set of encodings permitted by RFC 8949, and formally defines two
+       specific serializations: preferred-plus serialization, which differs
+       from preferred serialization only in cases rarely encountered in
+       practice and is recommended for broad use; and deterministic
+       serialization, which likewise differs only in rarely encountered
+       cases from core deterministic encoding defined in RFC 8949.
 
        This document updates RFC 8949 with a new rule that limits how new
        tag definitions can affect the CBOR data model.
@@ -182,6 +183,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-12
     docidentifier:
     - content: draft-ietf-cbor-serialization-12
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-cbor-serialization-13
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-cbor-serialization-13
+    docidentifier:
+    - content: draft-ietf-cbor-serialization-13
       type: Internet-Draft
       primary: true
 ext:

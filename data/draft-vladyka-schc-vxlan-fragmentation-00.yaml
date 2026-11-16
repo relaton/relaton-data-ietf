@@ -1,0 +1,100 @@
+---
+id: draftvladykaschcvxlanfragmentation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: SCHC No-ACK Fragmentation of VXLAN Payloads
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-vladyka-schc-vxlan-fragmentation-00
+docidentifier:
+- content: draft-vladyka-schc-vxlan-fragmentation
+  type: Internet-Draft
+- content: draft-vladyka-schc-vxlan-fragmentation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.vladyka-schc-vxlan-fragmentation
+date:
+- type: published
+  at: '2026-11-15'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Andrii
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Vladyka
+      completename:
+        language: en
+        content: Andrii Vladyka
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Alexander
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Pelov
+      completename:
+        language: en
+        content: Alexander Pelov
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: IMT Atlantique
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document proposes a SCHC No-ACK profile for carrying VXLAN
+       payloads, including those larger than the path MTU, over a managed
+       UDP path.  On a configured peer association every frame is carried as
+       a SCHC Packet made of a NoCompress rule identifier, the uncompressed
+       VXLAN header and the Ethernet frame.  The packet is sent unfragmented
+       when it fits the path MTU and fragmented otherwise.  A four-bit
+       fragment counter supports up to eight fragments.  An optional
+       receiver procedure for reordering is described separately because it
+       changes the RFC 8724 No-ACK receiver behavior.  The earlier indexed
+       fragmentation proposal is retained in an appendix for comparison.
+       The mapping and operational parameters require working group review.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-vladyka-schc-vxlan-fragmentation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

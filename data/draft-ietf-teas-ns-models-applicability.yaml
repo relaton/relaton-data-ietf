@@ -10,38 +10,27 @@ title:
     Slice Service Management
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-ns-models-applicability-02
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-ns-models-applicability-03
 docidentifier:
 - content: draft-ietf-teas-ns-models-applicability
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-06'
+  at: '2026-11-16'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document exemplifies how the various data models that are
-       produced in the IETF can be combined in the context of Network Slice
-       Services delivery.
-
-       Specifically, this document describes the relationship between the
-       Network Slice Service models for requesting Network Slice Services
-       and both Service (e.g., the L3VPN Service Model, the L2VPN Service
-       Model) and Network (e.g., the L3VPN Network Model, the L2VPN Network
-       Model) models used during their realization.  In addition, this
-       document describes the communication between a Network Slice
-       Controller (NSC) and the network controllers for the realization of
-       Network Slices.
-
-       The Network Slice Service YANG model provides a customer-oriented
-       view of the intended Network Slice Service.  Thus, once an NSC
-       receives a request for a Slice Service request, the NSC has to map it
-       to accomplish the specific objectives expected by the network
-       controllers.  Existing YANG network models are analyzed against
-       Network Slice requirements, and the gaps in existing models are
-       identified.</p>
+    <p>This document describes how IETF-defined YANG data models can be used
+       together to manage RFC 9543 Network Slice Services.  It explains how
+       a Network Slice Controller (NSC) translates a customer-facing Network
+       Slice Service request into requests based on network models, such as
+       the L3VPN and L2VPN Network Models, and how these relate to the
+       corresponding service models.  The document compares these models
+       against Network Slice Service requirements, identifies gaps, and
+       shows how the models apply in different controller architectures,
+       including multi-domain deployments.</p>
 relation:
 - type: includes
   bibitem:
@@ -74,6 +63,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-ns-models-applicability-02
     docidentifier:
     - content: draft-ietf-teas-ns-models-applicability-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-teas-ns-models-applicability-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-teas-ns-models-applicability-03
+    docidentifier:
+    - content: draft-ietf-teas-ns-models-applicability-03
       type: Internet-Draft
       primary: true
 ext:

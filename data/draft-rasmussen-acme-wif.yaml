@@ -6,49 +6,39 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: A Federated Workload Identity Challenge for the Automated Certificate Management
-    Environment (ACME)
+  content: Workload Identity Tokens in Automated Certificate Management Environment
+    (ACME) Orders
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-rasmussen-acme-wif-00
+  content: https://datatracker.ietf.org/doc/html/draft-rasmussen-acme-wif-01
 docidentifier:
 - content: draft-rasmussen-acme-wif
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-06'
+  at: '2026-11-16'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>The Automated Certificate Management Environment (ACME, RFC 8555)
-       establishes that a requester has authority over an identifier by
-       means of a challenge that demonstrates control of that identifier,
-       such as publishing a DNS record or serving an HTTP resource.  It
-       authenticates the requester by means of an account key whose
-       provenance is outside the protocol's scope.
+    <p>Enterprises hold large certificate inventories, yet few of their
+       certificates are managed through ACME.  Many workloads, such as CI/CD
+       jobs, containers, virtual machines, cloud services and the automation
+       that manages appliances, cannot complete ACME's challenges.
+       Certification Authorities (CAs) and Certificate Lifecycle Management
+       (CLM) systems that serve them fall back to External Account Binding
+       (EAB) with long-lived shared secrets, or to proprietary APIs.
 
-       Neither mechanism is a good fit for automated workloads running in
-       continuous-integration systems, container orchestrators, and cloud
-       compute platforms.  Such workloads typically possess no long-lived
-       secret and no ability to publish DNS records, but they do possess a
-       short-lived, cryptographically verifiable identity assertion issued
-       by their execution platform.
-
-       This document defines a new ACME challenge type, "wif-01", by which
-       an ACME server authorizes issuance for an identifier on the basis of
-       a platform-issued identity token.  The token is bound to the ACME
-       account key, and to the specific authorization it satisfies, using
-       the token's audience claim.  The mechanism therefore requires no new
-       claims, no new endpoints, and no changes of any kind to existing
-       identity providers.
-
-       Because the workload's identity is established for each
-       authorization, the mechanism also removes any need for External
-       Account Binding: an ordinary ACME account, created by the workload
-       with no pre-shared secret, suffices.  The mechanism uses only
-       extension points that ACME already defines.</p>
+       OpenID Connect (OIDC) provides a short-lived cryptographically
+       verified identity token to the workload.  This document lets an ACME
+       client send that token with each newOrder request.  The token can be
+       bound to the request's nonce and account key through its audience
+       claim, so identity providers need no changes.  The CA/CLM verifies
+       the token and, under its own policy, may pre-authorize the identifier
+       in the order, as RFC 8555 already allows.  This replaces the EAB
+       secret with a fresh, per-order proof of workload identity.  It does
+       not change how CAs validate control of identifiers.</p>
 relation:
 - type: includes
   bibitem:
@@ -59,6 +49,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-rasmussen-acme-wif-00
     docidentifier:
     - content: draft-rasmussen-acme-wif-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-rasmussen-acme-wif-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-rasmussen-acme-wif-01
+    docidentifier:
+    - content: draft-rasmussen-acme-wif-01
       type: Internet-Draft
       primary: true
 ext:

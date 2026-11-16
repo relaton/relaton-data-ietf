@@ -6,17 +6,17 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Safe(r) Limited Domains
+  content: Fail-closed Limited Domains
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-wkumari-intarea-safe-limited-domains-07
+  content: https://datatracker.ietf.org/doc/html/draft-wkumari-intarea-safe-limited-domains-08
 docidentifier:
 - content: draft-wkumari-intarea-safe-limited-domains
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-08-30'
+  at: '2026-11-16'
 abstract:
 - language: en
   script: Latn
@@ -24,17 +24,18 @@ abstract:
     <p>Documents describing protocols intended solely for use within
        "limited domains" often rely on edge filtering at every boundary node
        to prevent domain-internal traffic from leaking to the global
-       Internet (and vice versa).  Relying purely on administrative
-       filtering creates "fail-open" designs that are susceptible to
-       configuration errors, ACL bypass, and hardware table exhaustion.
+       Internet (and vice versa).  While edge filtering is a critical and
+       standard operational practice, relying solely on administrative
+       policies can create "fail-open" designs if configuration errors, ACL
+       bypass, or hardware table limitations occur.
 
        This document describes design principles and concrete mechanisms
        that allow limited-domain protocols to "fail-closed" by default.  By
        leveraging Layer-2 encapsulation identifiers (such as dedicated or
-       extended EtherTypes), link-local address scoping, and / or Hop-Limit
-       boundaries, protocol designers can significantly reduce the
-       operational and security risks associated with limited domain
-       protocols.
+       extended EtherTypes), local address scoping, and / or Hop-Limit
+       boundaries, protocol designers can provide robust defense-in-depth
+       and significantly reduce the operational and security risks
+       associated with limited-domain protocol leakage.
 
        These mechanisms are not applicable to all protocols intended for use
        in a limited domain, but if implemented on certain classes of
@@ -126,6 +127,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-wkumari-intarea-safe-limited-domains-07
     docidentifier:
     - content: draft-wkumari-intarea-safe-limited-domains-07
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-wkumari-intarea-safe-limited-domains-08
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-wkumari-intarea-safe-limited-domains-08
+    docidentifier:
+    - content: draft-wkumari-intarea-safe-limited-domains-08
       type: Internet-Draft
       primary: true
 ext:

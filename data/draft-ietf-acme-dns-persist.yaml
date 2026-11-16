@@ -10,32 +10,27 @@ title:
     DNS TXT Record Validation
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ietf-acme-dns-persist-02
+  content: https://datatracker.ietf.org/doc/html/draft-ietf-acme-dns-persist-03
 docidentifier:
 - content: draft-ietf-acme-dns-persist
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-20'
+  at: '2026-11-15'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies "dns-persist-01", a new validation method for
-       the Automated Certificate Management Environment (ACME) protocol.
-       This method allows a Certification Authority (CA) to verify control
-       over a domain by confirming the presence of a persistent DNS TXT
-       record containing CA and account identification information.  This
-       method is particularly suited for environments where traditional
-       challenge methods are impractical, such as multi-tenant hosting
-       platforms, enterprise DNS environments, and IoT deployments.  The
-       validation method is designed with a strong focus on security and
-       robustness, incorporating widely adopted industry best practices for
-       persistent domain control validation.  This design aims to make it
-       suitable for Certification Authorities operating under various policy
-       environments, including those that align with the CA/Browser Forum
-       Baseline Requirements.</p>
+    <p>This document specifies "dns-persist-01", an Automated Certificate
+       Management Environment (ACME) challenge that verifies domain or IP
+       address control using a persistent DNS TXT record.  The record
+       identifies a certification authority (CA) and binds validation to an
+       ACME account.  It can be published before certificate requests and
+       reused without per-request DNS changes, including when different
+       parties perform DNS publication and ACME operation.  Use under a
+       certificate policy or trust program remains subject to that policy's
+       requirements.</p>
 relation:
 - type: includes
   bibitem:
@@ -68,6 +63,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ietf-acme-dns-persist-02
     docidentifier:
     - content: draft-ietf-acme-dns-persist-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ietf-acme-dns-persist-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ietf-acme-dns-persist-03
+    docidentifier:
+    - content: draft-ietf-acme-dns-persist-03
       type: Internet-Draft
       primary: true
 ext:
