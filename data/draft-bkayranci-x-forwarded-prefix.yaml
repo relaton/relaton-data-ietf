@@ -1,0 +1,59 @@
+---
+id: draftbkayrancixforwardedprefix
+schema_version: v1.5.6
+formattedref:
+  content: draft-bkayranci-x-forwarded-prefix
+title:
+- language: en
+  script: Latn
+  content: The X-Forwarded-Prefix HTTP Header Field
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-bkayranci-x-forwarded-prefix-00
+docidentifier:
+- content: draft-bkayranci-x-forwarded-prefix
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-18'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies the X-Forwarded-Prefix HTTP header field, a
+       widely deployed de-facto standard used by reverse proxies, API
+       gateways, load balancers, and ingress controllers to communicate the
+       original URI path prefix that was stripped, rewritten, or matched
+       prior to forwarding a request to an upstream service.  Standardizing
+       this header provides normative behavior across HTTP intermediaries
+       and origin servers, enabling upstream applications to reliably
+       reconstruct original client-facing target URIs, issue accurate HTTP
+       redirects, generate self-referential hypermedia links, configure
+       application base paths, and mitigate security vulnerabilities arising
+       from improper path handling and header injection.  Furthermore, this
+       document establishes the requirement for reverse proxy
+       implementations to emit this header unless explicitly configured
+       otherwise, specifies deterministic prefix concatenation for multi-
+       proxy chaining, defines strict percent-encoding preservation,
+       establishes atomic trust boundaries for the forwarded header family,
+       specifies structured field mapping in accordance with RFC 9651, and
+       registers the field in the IANA HTTP Field Name Registry along with
+       an extension parameter for the RFC 7239 Forwarded header.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-bkayranci-x-forwarded-prefix-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-bkayranci-x-forwarded-prefix-00
+    docidentifier:
+    - content: draft-bkayranci-x-forwarded-prefix-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

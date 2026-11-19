@@ -1,0 +1,89 @@
+---
+id: draftsogomonianaiid00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Autonomous Agent Identity and Runtime Control Status (AIID)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sogomonian-aiid-00
+docidentifier:
+- content: draft-sogomonian-aiid
+  type: Internet-Draft
+- content: draft-sogomonian-aiid-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.sogomonian-aiid
+date:
+- type: published
+  at: '2026-11-17'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Aram
+      - language: en
+        script: Latn
+        initial: A
+      formatted_initials:
+        language: en
+        content: A.
+      surname:
+        language: en
+        content: Sogomonian
+      completename:
+        language: en
+        content: Aram Sogomonian
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Artificial Intelligence Internet Foundation (AIIF)
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Autonomous software agents increasingly take consequential actions on
+       behalf of people and organizations.  Existing identity systems (OAuth
+       2.0, SPIFFE, and the WIMSE workload identity architecture)
+       authenticate such agents, but they do not define a common, vendor-
+       neutral way for an accountable owner to place a running agent into a
+       restricted state, nor a common way for a relying party to check that
+       state immediately before acting.
+
+       This document defines AIID: a durable identifier for an autonomous
+       agent, a small runtime control state machine (active, safe_mode,
+       suspended, revoked), an asymmetric authority model in which automated
+       monitors may only tighten state and only the accountable owner may
+       loosen it, a namespace-wide freeze, and a pre-action status check
+       with fail-closed semantics.  AIID is designed to bind to, not
+       replace, existing identity: it defines an "aiid" claim for OAuth 2.0
+       access tokens and corresponding token introspection members, bindings
+       for SPIFFE and WIMSE identifiers, a mapping onto the OAuth Token
+       Status List, and change notification using the OpenID Shared Signals
+       Framework.  It also defines compact signed action receipts, and an
+       OPTIONAL enforcement gateway deployment profile.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-sogomonian-aiid-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

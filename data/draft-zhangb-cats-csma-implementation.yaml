@@ -6,35 +6,32 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: CATS C-SMA Nomination Snapshot and C-SMA-to-C-PS Transport Bindings
+  content: CATS C-SMA Service-Metrics Snapshots and C-SMA-to-C-PS Transport Bindings
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-csma-implementation-03
+  content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-csma-implementation-04
 docidentifier:
 - content: draft-zhangb-cats-csma-implementation
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-25'
+  at: '2026-11-18'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document defines a nomination snapshot published by a CATS
+    <p>This document defines a service-metrics snapshot published by a CATS
        Service Metric Agent (C-SMA) to a CATS Path Selector (C-PS).  The
-       snapshot carries aggregated service metrics together with a nominated
-       service candidate set.
+       snapshot conveys service-metric records and their observation window,
+       together with publication context supporting versioning and the FULL,
+       INVALIDATE, and WITHDRAW operations.
 
-       The document defines the snapshot contract and two proposed transport
-       bindings for the C-SMA-to-C-PS interface: a YANG-modeled snapshot
-       delivered using gNMI for centralized C-PS deployments, and a BGP-LS
-       service-metadata mapping for distributed deployments in which a C-PS
-       is located at an ingress CATS-Forwarder.
-
-       The SCI-to-C-SMA interface, individual metric definitions, management
-       models, generic OAM, and the C-SMA's internal aggregation, ranking,
-       and caching methods are outside the scope of this document.</p>
+       The document defines the snapshot contract and two transport modes
+       for the C-SMA-to-C-PS interface: Centralized Mode, using YANG-modeled
+       operational state delivered by gNMI, and Distribution Mode, proposing
+       a BGP-LS service-metadata mapping.  The BGP-LS mapping is
+       illustrative until its wire encoding and code points are specified.</p>
 relation:
 - type: includes
   bibitem:
@@ -78,6 +75,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-csma-implementation-03
     docidentifier:
     - content: draft-zhangb-cats-csma-implementation-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-zhangb-cats-csma-implementation-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-zhangb-cats-csma-implementation-04
+    docidentifier:
+    - content: draft-zhangb-cats-csma-implementation-04
       type: Internet-Draft
       primary: true
 ext:

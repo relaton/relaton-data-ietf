@@ -1,0 +1,110 @@
+---
+id: draftnandakumaroauthdelegationrevocation00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Security Events for Revocation of Agent Delegations
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-nandakumar-oauth-delegation-revocation-00
+docidentifier:
+- content: draft-nandakumar-oauth-delegation-revocation
+  type: Internet-Draft
+- content: draft-nandakumar-oauth-delegation-revocation-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.nandakumar-oauth-delegation-revocation
+date:
+- type: published
+  at: '2026-11-19'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Suhas
+      - language: en
+        script: Latn
+        initial: S
+      formatted_initials:
+        language: en
+        content: S.
+      surname:
+        language: en
+        content: Nandakumar
+      completename:
+        language: en
+        content: Suhas Nandakumar
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Cullen
+      - language: en
+        script: Latn
+        initial: C
+      - language: en
+        script: Latn
+        initial: F
+      formatted_initials:
+        language: en
+        content: C. F.
+      surname:
+        language: en
+        content: Jennings
+      completename:
+        language: en
+        content: Cullen Fluffy Jennings
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Cisco Systems
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When a person withdraws a task from an agent, or a delegating agent
+       is compromised, every credential delegated below that point has to
+       stop working, and the agents holding those credentials have to stop
+       the work they were doing under them.  Token status lists and token
+       introspection tell a verifier that asks whether one token is still
+       valid.  They do not tell the agents further down a delegation chain,
+       which may be in other organizations and which the revoking party may
+       not know.  This document defines a Security Event Token that revokes
+       a delegation and everything delegated from it, a subject identifier
+       format that names a delegation token, the parties entitled to issue
+       the event, how agents propagate it down the chain, and how verifiers
+       check the status of a whole chain so that revocation reaches them
+       even when the event does not.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-nandakumar-oauth-delegation-revocation-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

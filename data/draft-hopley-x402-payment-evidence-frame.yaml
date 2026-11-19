@@ -9,14 +9,14 @@ title:
   content: Payment Evidence Frame for Agentic-Payment Lifecycle Receipts
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-payment-evidence-frame-00
+  content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-payment-evidence-frame-01
 docidentifier:
 - content: draft-hopley-x402-payment-evidence-frame
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-05-30'
+  at: '2026-11-17'
 abstract:
 - language: en
   script: Latn
@@ -42,7 +42,19 @@ abstract:
        The format uses the same JCS canonicalisation discipline (draft-
        hopley-x402-canonicalisation-jcs) as the five inner receipt formats
        it envelopes, so implementations require only one canonicalisation
-       primitive for the full receipt stack.</p>
+       primitive for the full receipt stack.
+
+       This revision additionally specifies an operator-independent audit
+       chain construction over PEF frames (Section 7.5): an append-only,
+       content-addressed chain in which each row is a PEF frame contributed
+       and signed by its own operator, with no shared trusted root.  Rows
+       are linked by the deterministic frame_id of the preceding row, and
+       each row carries a post-quantum signature (draft-hopley-x402-pqc-
+       credential-binding) over the row's linkage and content identity.  The
+       whole chain is verifiable offline from the bytes alone -- recompute
+       the linkage, then verify each operator's signature against the public
+       key carried in that row -- with no callback to, and no trust in, any
+       operator.</p>
 relation:
 - type: includes
   bibitem:
@@ -53,6 +65,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-payment-evidence-frame-00
     docidentifier:
     - content: draft-hopley-x402-payment-evidence-frame-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hopley-x402-payment-evidence-frame-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hopley-x402-payment-evidence-frame-01
+    docidentifier:
+    - content: draft-hopley-x402-payment-evidence-frame-01
       type: Internet-Draft
       primary: true
 ext:

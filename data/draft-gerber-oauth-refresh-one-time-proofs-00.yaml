@@ -1,0 +1,85 @@
+---
+id: draftgerberoauthrefreshonetimeproofs00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: OAuth 2.0 One-Time Refresh Proofs
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-gerber-oauth-refresh-one-time-proofs-00
+docidentifier:
+- content: draft-gerber-oauth-refresh-one-time-proofs
+  type: Internet-Draft
+- content: draft-gerber-oauth-refresh-one-time-proofs-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.gerber-oauth-refresh-one-time-proofs
+date:
+- type: published
+  at: '2026-11-18'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Maxwell
+      - language: en
+        script: Latn
+        initial: M
+      formatted_initials:
+        language: en
+        content: M.
+      surname:
+        language: en
+        content: Gerber
+      completename:
+        language: en
+        content: Maxwell Gerber
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Twilio
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Refresh token rotation asks the authorization server to deliver a new
+       secret to the client in every refresh response, and then treats any
+       later appearance of the old secret as evidence of theft.  When a
+       response is lost, the legitimate client's retry is indistinguishable
+       from token theft, and the grant is revoked.
+
+       This document defines an alternative for clients that are unable or
+       unwilling to implement DPoP.  The client generates a key pair,
+       registers the public key when it redeems the authorization code, and
+       thereafter accompanies each use of a non-rotating refresh token with
+       a signature over a strictly increasing counter and a nonce.
+       Everything the client needs in order to retry is something the client
+       itself generated, so a lost response can no longer desynchronize the
+       two parties.  Replay of a captured request yields nothing, and
+       concurrent use of a copied key is detected in the same way that
+       rotation detects reuse.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-gerber-oauth-refresh-one-time-proofs-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
