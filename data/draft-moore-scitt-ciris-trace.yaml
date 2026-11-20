@@ -1,0 +1,57 @@
+---
+id: draftmoorescittciristrace
+schema_version: v1.5.6
+formattedref:
+  content: draft-moore-scitt-ciris-trace
+title:
+- language: en
+  script: Latn
+  content: Signed Reasoning Traces of CIRIS Agents
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-moore-scitt-ciris-trace-00
+docidentifier:
+- content: draft-moore-scitt-ciris-trace
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-20'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An AI agent that acts on a person's behalf reaches each action
+       through a sequence of steps: it gathers context, runs several
+       evaluations, selects an action, submits the selection to checks that
+       can veto it, and then acts.  Most of those steps are calls to
+       language models.
+
+       This document specifies the CIRIS reasoning trace: one signed record
+       per unit of agent work (a thought), sealed when the action is taken.
+       The trace lists every step and every model call in the order the
+       recording component received them, with scores, outcomes, sizes,
+       costs and durations, and, at higher disclosure levels, reasoning text
+       and the prompts and completions themselves.  It specifies three
+       disclosure levels, the exact bytes the agent's Ed25519 signature
+       covers, how a trace is carried as a row of the CIRIS Epistemic
+       Grammar (CEG), when a trace exists at all, and the checks a consumer
+       runs before relying on one.  It records where the published
+       specification and the shipping implementation disagree.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-moore-scitt-ciris-trace-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-moore-scitt-ciris-trace-00
+    docidentifier:
+    - content: draft-moore-scitt-ciris-trace-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

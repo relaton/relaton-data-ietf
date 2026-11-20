@@ -1,0 +1,60 @@
+---
+id: draftsweeneyoauthbrokeredauthorization
+schema_version: v1.5.6
+formattedref:
+  content: draft-sweeney-oauth-brokered-authorization
+title:
+- language: en
+  script: Latn
+  content: 'OAuth Brokered Authorization: Grant Custody for Short-Lived Client Instances'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-sweeney-oauth-brokered-authorization-00
+docidentifier:
+- content: draft-sweeney-oauth-brokered-authorization
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-19'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An OAuth client identifier names a registration.  It does not name
+       the running instance that presents a token.  Where one registered
+       client runs as many short-lived instances, as agent platforms do,
+       work now in progress binds refresh tokens to the instance.  Where a
+       refresh token is bound to the instance, an authorization that a user
+       gave through one instance ends with that instance, and no
+       specification says how the next instance comes to act under it.
+
+       This document specifies one answer.  A broker is the single, durable
+       OAuth client of an upstream resource.  It holds the grant and the
+       credential for that resource and makes each request itself.  A
+       resource owner authorizes a registered client to use that grant
+       through the broker, and the authorization server records the
+       authorization against the client and not against any instance.  Each
+       instance obtains a short-lived, sender-constrained access token for
+       the broker with the client credentials grant.  An instance never
+       holds a grant, a refresh token, or the upstream credential, and no
+       instance is registered anywhere.  This document defines the
+       authorization details type that carries this authority, the checks
+       the broker makes before it acts, and one error code.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-sweeney-oauth-brokered-authorization-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-sweeney-oauth-brokered-authorization-00
+    docidentifier:
+    - content: draft-sweeney-oauth-brokered-authorization-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

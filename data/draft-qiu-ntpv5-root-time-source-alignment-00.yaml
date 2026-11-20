@@ -1,0 +1,83 @@
+---
+id: draftqiuntpv5roottimesourcealignment00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Root Time Source Alignment Signature and Transport Protocol for NTPv5
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-qiu-ntpv5-root-time-source-alignment-00
+docidentifier:
+- content: draft-qiu-ntpv5-root-time-source-alignment
+  type: Internet-Draft
+- content: draft-qiu-ntpv5-root-time-source-alignment-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.qiu-ntpv5-root-time-source-alignment
+date:
+- type: published
+  at: '2026-11-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: XIMING
+      - language: en
+        script: Latn
+        initial: Q
+      formatted_initials:
+        language: en
+        content: Q.
+      surname:
+        language: en
+        content: Ximing
+      completename:
+        language: en
+        content: XIMING QIU
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Tianshu Shiyuan Technology Co., Ltd.
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document defines an NTPv5 extension that turns a time value's
+       provenance from a _claim_ into _evidence_. A pre-trusted Root Time
+       Source attests that a given time service instance's clock has been
+       checked for alignment against a physical source; that instance then
+       signs the time value itself.  A client holding only the root public
+       key verifies both signatures offline, so it can tell a time value
+       that carries verifiable provenance apart from one that merely claims
+       it.
+
+       The extension deliberately does one thing and no more: it proves
+       _where a signed time value came from_. It does not adjust clocks, it
+       does not rate sources, and it has no revocation -- a signed proof is
+       unilateral, it exists once signed.  It is opt-in, uses two extension
+       fields, and touches nothing in the core protocol.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-qiu-ntpv5-root-time-source-alignment-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
