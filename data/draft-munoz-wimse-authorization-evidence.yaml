@@ -6,34 +6,33 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Signed Authorization-Evidence Records for WIMSE-Authorized AI Agent Actions
+  content: Signed Authorization-Evidence Records for AI Agent Actions Using WIMSE
+    Workload Identity
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-munoz-wimse-authorization-evidence-01
+  content: https://datatracker.ietf.org/doc/html/draft-munoz-wimse-authorization-evidence-02
 docidentifier:
 - content: draft-munoz-wimse-authorization-evidence
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-07-19'
+  at: '2026-11-20'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies a companion profile to the AI Agent
-       Authentication and Authorization draft [I-D.klrc-aiagent-auth],
-       defining a signed authorization-evidence record produced by WIMSE-
-       authorized AI agent actions.  The evidence record (referred to as a
-       Permit) cryptographically commits to the canonical bytes of the
-       request authorized before dispatch and, via a paired Closure Record,
-       to the recorded dispatched-request digest; it maps to and can satisfy
-       the audit minimum requirements enumerated in Section 11 of the
-       companion draft, and composes with HTTP Message Signatures, OAuth
-       access tokens, and Shared Signals Framework eventing without
-       requiring modifications to those existing standards.  The profile is
-       anchored in the SCITT profile defined in
-       [I-D.munoz-scitt-permit-profile].
+    <p>This companion to the WIMSE AI Identity Management System (AIMS)
+       document specifies how an Issuer records a pre-execution
+       authorization decision for an AI agent using WIMSE workload identity.
+       The signed record, called a Permit, can bind the decision to a
+       canonical request body.  For a dispatched allow with a request-body
+       commitment, a paired Closure Record carries the recorded dispatch
+       digest.  The profile maps these and related records to the audit
+       requirements in Section 11 of AIMS and describes optional composition
+       with HTTP Message Signatures, OAuth access tokens and Shared Signals
+       Framework events.  The companion SCITT profile (draft-munoz-scitt-
+       permit-profile) specifies the Permit and Closure Record.
 
        This revision also describes how WIMSE deployments compose with
        authorization-lineage evidence defined by the companion SCITT
@@ -61,6 +60,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-munoz-wimse-authorization-evidence-01
     docidentifier:
     - content: draft-munoz-wimse-authorization-evidence-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-munoz-wimse-authorization-evidence-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-munoz-wimse-authorization-evidence-02
+    docidentifier:
+    - content: draft-munoz-wimse-authorization-evidence-02
       type: Internet-Draft
       primary: true
 ext:

@@ -9,14 +9,14 @@ title:
   content: 'The rttp and iqa URI Schemes: Derived-Address Intent and Attestation Addressing'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-li-rttp-iqa-addressing-02
+  content: https://datatracker.ietf.org/doc/html/draft-li-rttp-iqa-addressing-03
 docidentifier:
 - content: draft-li-rttp-iqa-addressing
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-10-31'
+  at: '2026-11-21'
 abstract:
 - language: en
   script: Latn
@@ -46,10 +46,15 @@ abstract:
        128-octet pulse header of the "rttp" scheme and the 128-octet
        attestation envelope of the "iqa" scheme; and a closed refusal
        vocabulary with grant references for attestation responses.  This
-       revision adds to these the rules for when the facts a verification
-       consumes are evaluated — at the moment of use, not the moment of
-       grant — and how any policy interpreter relates to the answer it
-       consumes.
+       revision adds to these the rules that fix when the facts a
+       verification consumes are evaluated — at the moment of use, not the
+       moment of grant — and how any policy interpreter relates to the
+       answer it consumes.  It further restricts the grammar so that no
+       component begins with a hyphen, tightens the response semantics and
+       the wire-format checks that the public conformance runs exercise,
+       states what a response owes its reader when members are omitted or a
+       refusal is recorded on a label, and adds a practice guide for testing
+       an implementation against this text.
 
        This document is not an Internet Standard.  It is an Informational
        specification of two experimental addressing schemes, published for
@@ -86,6 +91,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-li-rttp-iqa-addressing-02
     docidentifier:
     - content: draft-li-rttp-iqa-addressing-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-li-rttp-iqa-addressing-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-li-rttp-iqa-addressing-03
+    docidentifier:
+    - content: draft-li-rttp-iqa-addressing-03
       type: Internet-Draft
       primary: true
 ext:

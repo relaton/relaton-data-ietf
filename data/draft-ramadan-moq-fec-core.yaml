@@ -9,14 +9,14 @@ title:
   content: 'Forward Error Correction for Media over QUIC: Core Mechanism'
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-fec-core-00
+  content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-fec-core-01
 docidentifier:
 - content: draft-ramadan-moq-fec-core
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-02'
+  at: '2026-11-20'
 abstract:
 - language: en
   script: Latn
@@ -33,9 +33,11 @@ abstract:
        and in layers, the repair object format, repair Group IDs that make
        repair fetchable by block, and equal and unequal protection driven
        only by metadata that MoQ Transport exposes, so that FEC works when
-       payloads are encrypted end to end.  Relays need no FEC knowledge.
-       Specific FEC schemes, catalog bindings, packaging-specific profiles
-       and multicast delivery are left to companion documents.</p>
+       payloads are encrypted end to end.  Relays need no FEC knowledge, and
+       a relay that has it can rebuild source objects missing from its cache
+       when the publisher records how each object is sent.  Specific FEC
+       schemes, catalog bindings, packaging-specific profiles and multicast
+       delivery are left to companion documents.</p>
 relation:
 - type: includes
   bibitem:
@@ -46,6 +48,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-fec-core-00
     docidentifier:
     - content: draft-ramadan-moq-fec-core-00
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-ramadan-moq-fec-core-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-ramadan-moq-fec-core-01
+    docidentifier:
+    - content: draft-ramadan-moq-fec-core-01
       type: Internet-Draft
       primary: true
 ext:

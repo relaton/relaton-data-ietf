@@ -1,0 +1,106 @@
+---
+id: draftmunozscittpermitprofile02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: A SCITT Profile for Pre-Execution AI Action Authorization Records
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-munoz-scitt-permit-profile-02
+docidentifier:
+- content: draft-munoz-scitt-permit-profile
+  type: Internet-Draft
+- content: draft-munoz-scitt-permit-profile-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.munoz-scitt-permit-profile
+date:
+- type: published
+  at: '2026-11-20'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Christian
+      - language: en
+        script: Latn
+        initial: C
+      formatted_initials:
+        language: en
+        content: C.
+      surname:
+        language: en
+        content: Munoz
+      completename:
+        language: en
+        content: Christian Munoz
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Keel API, Inc.
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This document specifies a SCITT (Supply Chain Integrity,
+       Transparency, and Trust) profile for pre-execution authorization
+       records of AI agent actions.  The profile defines a Signed Statement
+       type, the "Pre-Execution Authorization Record" (also called a
+       Permit), that records a policy-evaluated decision to allow, deny or
+       challenge a proposed AI agent action.  A Permit can commit to the
+       canonical request body.  For a dispatched allow with a body
+       commitment, the profile pairs the Permit with a Closure Record.  The
+       Verifier compares the recorded digests.  The reference Issuer checks
+       the body binding before managed dispatch.  This document
+       distinguishes RFC 9942 COSE Receipts from the reference
+       implementation's provisional linked-chain inclusion proof.
+
+       This profile also defines authorization-lineage vocabulary.  It
+       defines how a Verifier can determine whether the authority conveyed
+       by a child Permit is equal to or narrower than the authority conveyed
+       by its parent (attenuation), given a signed or chain-committed
+       Authority Representation and a declared Comparator Profile.  The
+       Permit remains an evidence artifact; this profile specifies the
+       evidence a Verifier needs to make that determination, not a
+       delegation or policy protocol.
+
+       The profile composes with adjacent profiles for human-authority
+       binding, post-execution material-action evidence, and content-refusal
+       events, referenced rather than replicated.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-munoz-scitt-permit-profile-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-munoz-scitt-permit-profile-01
+    docidentifier:
+    - content: draft-munoz-scitt-permit-profile-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-munoz-scitt-permit-profile-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
