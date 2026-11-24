@@ -1,0 +1,60 @@
+---
+id: draftdecisiumauthorizationdisposition
+schema_version: v1.5.6
+formattedref:
+  content: draft-decisium-authorization-disposition
+title:
+- language: en
+  script: Latn
+  content: An Authorization Disposition Object for Agent Decision Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-decisium-authorization-disposition-00
+docidentifier:
+- content: draft-decisium-authorization-disposition
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-23'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A verification check that has completed and a human authorization
+       that is still outstanding can coexist for the same proposed action.
+       Receipt formats that carry only a claim-state enumeration cannot
+       express the second condition, because it is not a statement about the
+       claim: it is a statement about what must happen before the action.
+
+       This document specifies an authorization disposition, a sibling
+       object carried alongside check results, and the processing rules by
+       which a consumer derives a fail-closed decision about whether an
+       action may be initiated.  The disposition carries a named holder, two
+       distinct deadlines, an action-instance binding, and a detached signed
+       decision.
+
+       The document treats receipt integrity, the decision recorded at
+       issuance, and present actionability as separate questions.  It
+       distinguishes insufficient evidence from conflicting evidence,
+       prohibits treating an unevaluated authorization requirement as "not
+       required", and specifies requirements for historical verification,
+       replay prevention, and tenant-scoped instance ownership.  It records
+       what the object establishes and, equally, what it does not.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-decisium-authorization-disposition-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-decisium-authorization-disposition-00
+    docidentifier:
+    - content: draft-decisium-authorization-disposition-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

@@ -1,0 +1,89 @@
+---
+id: draftdecisiumauthorizationdisposition00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: An Authorization Disposition Object for Agent Decision Receipts
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-decisium-authorization-disposition-00
+docidentifier:
+- content: draft-decisium-authorization-disposition
+  type: Internet-Draft
+- content: draft-decisium-authorization-disposition-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.decisium-authorization-disposition
+date:
+- type: published
+  at: '2026-11-23'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Gary
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: Hoareau
+      completename:
+        language: en
+        content: Gary Hoareau
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Decisium
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>A verification check that has completed and a human authorization
+       that is still outstanding can coexist for the same proposed action.
+       Receipt formats that carry only a claim-state enumeration cannot
+       express the second condition, because it is not a statement about the
+       claim: it is a statement about what must happen before the action.
+
+       This document specifies an authorization disposition, a sibling
+       object carried alongside check results, and the processing rules by
+       which a consumer derives a fail-closed decision about whether an
+       action may be initiated.  The disposition carries a named holder, two
+       distinct deadlines, an action-instance binding, and a detached signed
+       decision.
+
+       The document treats receipt integrity, the decision recorded at
+       issuance, and present actionability as separate questions.  It
+       distinguishes insufficient evidence from conflicting evidence,
+       prohibits treating an unevaluated authorization requirement as "not
+       required", and specifies requirements for historical verification,
+       replay prevention, and tenant-scoped instance ownership.  It records
+       what the object establishes and, equally, what it does not.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-decisium-authorization-disposition-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

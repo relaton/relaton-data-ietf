@@ -9,29 +9,29 @@ title:
   content: A YANG Extension for Declaring the Comparability Scope of Operational State
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-dikshit-netmod-comparability-scope-extension-04
+  content: https://datatracker.ietf.org/doc/html/draft-dikshit-netmod-comparability-scope-extension-05
 docidentifier:
 - content: draft-dikshit-netmod-comparability-scope-extension
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-18'
+  at: '2026-11-23'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>A value exported from a YANG data tree is often unique only
-       within its parent, for example an entry numbered 0 under two
-       different parents. Once the value is exported without the
-       parent's key, a collector cannot tell whether two such values
-       refer to the same thing, and no collector-side normalization can
-       recover the missing key. YANG (RFC 7950) has no way to state this
-       dependency in the schema. This document defines a YANG extension
-       statement, "csc:comparability-scope", a four-level scope lattice,
-       a compatibility rule, and an export rule, so that the key needed
-       to compare a value travels with it, and a schema-aware tool can
-       detect an invalid comparison before any data is exported.</p>
+    <p>A value exported from a YANG data tree is often unique only within
+       its parent, for example an entry numbered 0 under two different
+       parents.  Once the value is exported without the parent's key, a
+       collector cannot tell whether two such values refer to the same
+       thing, and no collector-side normalization can recover the missing
+       key.  YANG (RFC 7950) has no way to state this dependency in the
+       schema.  This document defines a YANG extension statement,
+       "csc:comparability-scope", a four-level scope lattice, a
+       compatibility rule, and an export rule, so that the key needed to
+       compare a value travels with it, and a schema-aware tool can detect
+       an invalid comparison before any data is exported.</p>
 relation:
 - type: includes
   bibitem:
@@ -86,6 +86,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-dikshit-netmod-comparability-scope-extension-04
     docidentifier:
     - content: draft-dikshit-netmod-comparability-scope-extension-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-dikshit-netmod-comparability-scope-extension-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-dikshit-netmod-comparability-scope-extension-05
+    docidentifier:
+    - content: draft-dikshit-netmod-comparability-scope-extension-05
       type: Internet-Draft
       primary: true
 ext:

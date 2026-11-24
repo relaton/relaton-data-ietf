@@ -1,0 +1,155 @@
+---
+id: draftchenemuteapnotificationaction00
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Protected User Notification Extension for Tunnel Extensible Authentication
+    Protocol (TEAP)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-chen-emu-teap-notification-action-00
+docidentifier:
+- content: draft-chen-emu-teap-notification-action
+  type: Internet-Draft
+- content: draft-chen-emu-teap-notification-action-00
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.chen-emu-teap-notification-action
+date:
+- type: published
+  at: '2026-11-22'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Junjun
+      - language: en
+        script: Latn
+        initial: J
+      formatted_initials:
+        language: en
+        content: J.
+      surname:
+        language: en
+        content: Chen
+      completename:
+        language: en
+        content: Junjun Chen
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Peking University
+- role:
+  - type: author
+  person:
+    name:
+      formatted_initials:
+        language: en
+      surname:
+        language: en
+        content: FuZhongnan
+      completename:
+        language: en
+        content: FuZhongnan
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Peking University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Hao
+      - language: en
+        script: Latn
+        initial: H
+      formatted_initials:
+        language: en
+        content: H.
+      surname:
+        language: en
+        content: Ma
+      completename:
+        language: en
+        content: Hao Ma
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Peking University
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Guilin
+      - language: en
+        script: Latn
+        initial: G
+      formatted_initials:
+        language: en
+        content: G.
+      surname:
+        language: en
+        content: WANG
+      completename:
+        language: en
+        content: Guilin WANG
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Huawei
+version:
+- content: '00'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>When IEEE 802.1X network access is denied or restricted, clients
+       usually show only a generic message such as "Authentication Failed",
+       even when the authentication server knows the specific reason.
+       Existing mechanisms either do not reach the client (RADIUS Reply-
+       Message), are not protected (EAP Notification), or are not designed
+       for presentation to users (the TEAP Error TLV and inner method error
+       messages).
+
+       This document defines an optional extension to Tunnel Extensible
+       Authentication Protocol (TEAP) Version 1 (RFC 9930) that allows the
+       EAP server to send a notification to the user inside the TEAP TLS
+       tunnel.  The peer advertises the reason codes it supports and the
+       user's preferred languages in a Notification Capabilities TLV.  The
+       server sends a reason code, a recommended action, and optional text
+       and remediation URI in a User-Notification TLV.  The peer can
+       acknowledge it with a Notification-Acknowledgement TLV.  The
+       extension only provides information and does not change
+       authentication results, authorization decisions, or key derivation.</p>
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-chen-emu-teap-notification-action-00
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

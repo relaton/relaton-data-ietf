@@ -9,31 +9,31 @@ title:
   content: Deterministic Encodings for COSE
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-cose-deterministic-encodings-02
+  content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-cose-deterministic-encodings-04
 docidentifier:
 - content: draft-mih-sokolov-cose-deterministic-encodings
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-21'
+  at: '2026-11-23'
 abstract:
 - language: en
   script: Latn
   content: |-
     <p>A COSE Hash Envelope signs the digest of a preimage, not the preimage
-       itself.  When the preimage is the encoding of a structured value,
-       such as a CBOR data item, and a verifier holds that value but not the
-       bytes that were hashed, the verifier has to encode the value again,
-       and the digest matches only if it applies the same deterministic
-       encoding as the producer.  CBOR permits more than one encoding of the
-       same data item, and the preimage content type does not identify the
-       encoding that was applied.  This document defines a COSE Hash
-       Envelope protected-header parameter that identifies the encoding by a
-       URL, and lists one URL, for CBOR content: the URL of the Core
-       Deterministic Encoding Requirements of RFC 8949.  Other URLs are
-       named by the application profiles that use the parameter.  A verifier
-       ignores a value that is not the URL of an encoding it implements.</p>
+       itself.  A verifier that holds the content as a decoded value, such
+       as a CBOR data item, rather than the bytes that were hashed has to
+       encode the value again, and nothing in the Hash Envelope says how the
+       producer encoded it.  CBOR permits more than one encoding of the same
+       data item, so a digest mismatch cannot tell a modified value from a
+       value encoded another way.  This document defines a COSE Hash
+       Envelope protected-header parameter in which the producer states the
+       deterministic encoding it applied.  It defines one value, the integer
+       1, for the Core Deterministic Encoding Requirements of RFC 8949, and
+       no encoding of its own; an application profile can identify another
+       encoding by a URL.  A verifier ignores a value that does not identify
+       an encoding it implements.</p>
 relation:
 - type: includes
   bibitem:
@@ -66,6 +66,28 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-cose-deterministic-encodings-02
     docidentifier:
     - content: draft-mih-sokolov-cose-deterministic-encodings-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mih-sokolov-cose-deterministic-encodings-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-cose-deterministic-encodings-03
+    docidentifier:
+    - content: draft-mih-sokolov-cose-deterministic-encodings-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-mih-sokolov-cose-deterministic-encodings-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-mih-sokolov-cose-deterministic-encodings-04
+    docidentifier:
+    - content: draft-mih-sokolov-cose-deterministic-encodings-04
       type: Internet-Draft
       primary: true
 ext:
