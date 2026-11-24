@@ -10,14 +10,14 @@ title:
     Using WireGuard
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-wireguard-02
+  content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-wireguard-03
 docidentifier:
 - content: draft-liu-iotops-pqc-wireguard
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-22'
+  at: '2026-11-24'
 abstract:
 - language: en
   script: Latn
@@ -25,15 +25,18 @@ abstract:
     <p>This document discusses post-quantum key provisioning and lifecycle
        operations for Internet of Things (IoT) deployments that already use
        WireGuard, such as fleets of industrial gateways and capable managed
-       devices with little or no local user interface.  It describes
-       operational requirements for authorized tunnel onboarding, identity-
-       to-key binding, preshared-key rotation, failure recovery, quarantine,
-       and decommissioning.
+       devices with little or no local user interface.  It addresses
+       authorized tunnel onboarding, identity-to-key binding, preshared-key
+       rotation, installation-state reconciliation, failure remediation,
+       quarantine, and decommissioning at a scale that makes manual
+       maintenance impractical.
 
-       The operational model assumes an existing authorized management
-       channel and independently provisioned trust.  It uses the existing
-       WireGuard PresharedKey configuration interface and leaves the native
-       WireGuard handshake and transport format unchanged.  WireGuard
+       The operational model assumes independently provisioned trust and
+       authorized management that remains reachable when the target tunnel
+       fails.  It relates provisioning to inventory, separate access policy,
+       observable readiness, and device lifecycle decisions.  It uses the
+       existing WireGuard PresharedKey configuration interface and leaves
+       the native handshake and transport format unchanged.  WireGuard
        remains an externally maintained dependency.
 
        An appendix retains a candidate ML-KEM-768 and ML-DSA bootstrap
@@ -73,6 +76,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-wireguard-02
     docidentifier:
     - content: draft-liu-iotops-pqc-wireguard-02
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-liu-iotops-pqc-wireguard-03
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-wireguard-03
+    docidentifier:
+    - content: draft-liu-iotops-pqc-wireguard-03
       type: Internet-Draft
       primary: true
 ext:

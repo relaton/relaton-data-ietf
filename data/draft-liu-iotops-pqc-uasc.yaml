@@ -6,37 +6,44 @@ formattedref:
 title:
 - language: en
   script: Latn
-  content: Post-Quantum Cryptographic Protection Profile for OPC UA Secure Conversation
+  content: Post-Quantum SecureChannel Profiles and Lifecycle Operations for IoT Deployments
+    Using OPC UA
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-uasc-01
+  content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-uasc-02
 docidentifier:
 - content: draft-liu-iotops-pqc-uasc
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-18'
+  at: '2026-11-24'
 abstract:
 - language: en
   script: Latn
   content: |-
-    <p>This document specifies a post-quantum cryptographic protection
-       profile for the OPC Unified Architecture Secure Conversation protocol
-       (OPC UA UASC) carried over the opc.tcp transport.  The profile uses
-       ML-KEM-768 for SecureChannel key establishment, ML-DSA for asymmetric
-       signatures, HKDF-SHA-256 for key derivation, and AES-256-GCM for
-       symmetric message protection.  It defines the profile identifiers,
-       nonce encoding, key schedule, authenticated-encryption inputs,
-       certificate and public-key binding requirements, token rollover
-       behavior, and conformance requirements.
+    <p>This document addresses post-quantum SecureChannel migration for
+       Internet of Things (IoT) deployments that already use OPC Unified
+       Architecture (OPC UA), including fleets of capable controllers and
+       industrial gateways with limited local user interfaces.  It describes
+       authorized application onboarding, credential and policy
+       provisioning, bounded key use, renewal, failure recovery, quarantine,
+       and retirement under existing device and application authorization.
 
-       This Internet-Draft is a proposal for Standards Track publication.
-       Permanent OPC UA SecurityPolicy and algorithm identifiers require
-       coordination with the OPC Foundation; the private identifiers
-       documented here remain provisional.  This document does not assign
-       official OPC UA identifiers or claim conformance with an OPC
-       Foundation specification.</p>
+       A cryptographic protection profile for OPC UA Secure Conversation
+       (UASC) over opc.tcp uses ML-KEM-768, ML-DSA, HKDF-SHA-256, and AES-
+       256-GCM.  It specifies profile identifiers, nonce encoding, key
+       derivation, authenticated encryption, identity binding, sequence and
+       SecurityToken processing, per-key usage limits, and conformance
+       requirements supporting those operations.
+
+       This individual submission proposes Standards Track publication and
+       requests IOTOPS review of its IoT operational requirements.  The
+       appropriate venue for new protocol work requires separate
+       determination.  Permanent OPC UA SecurityPolicy and algorithm
+       identifiers require coordination with the OPC Foundation; the private
+       identifiers remain provisional and do not establish OPC Foundation
+       conformance.</p>
 relation:
 - type: includes
   bibitem:
@@ -58,6 +65,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-uasc-01
     docidentifier:
     - content: draft-liu-iotops-pqc-uasc-01
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-liu-iotops-pqc-uasc-02
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-liu-iotops-pqc-uasc-02
+    docidentifier:
+    - content: draft-liu-iotops-pqc-uasc-02
       type: Internet-Draft
       primary: true
 ext:
