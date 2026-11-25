@@ -1,0 +1,95 @@
+---
+id: draftmorrisonclaimcurrency02
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: 'Claim Currency: A Read-Time Currency Band for Claims Held in a Shared
+    Append-Only Store'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-claim-currency-02
+docidentifier:
+- content: draft-morrison-claim-currency
+  type: Internet-Draft
+- content: draft-morrison-claim-currency-02
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-claim-currency
+date:
+- type: published
+  at: '2026-11-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+version:
+- content: '02'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Software agents that read a shared, append-only store of claims can
+       cite an aged claim as though it were current, and can write new
+       claims grounded on it.  This memo defines the one element two parties
+       would have to agree on, the envelope a read returns for a claim.  It
+       carries the assertion, the time of its grounding observation, its
+       basis set, a three-state currency band (FRESH, AGING, STALE) derived
+       at read time and never stored, and the evidence from which the band
+       was derived.  A relying party can re-derive the band from that
+       evidence.  It also states the rules under which a reader may emit an
+       aged claim and under which a store must refuse a new claim that cites
+       an out-of-date basis.  The memo is an Informational problem statement
+       and description of one design.  It has no second implementer yet, and
+       it is offered for review as an Independent Submission.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-claim-currency-01
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-claim-currency-01
+    docidentifier:
+    - content: draft-morrison-claim-currency-01
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-claim-currency-02
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

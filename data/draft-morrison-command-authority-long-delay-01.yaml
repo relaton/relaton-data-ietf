@@ -1,0 +1,97 @@
+---
+id: draftmorrisoncommandauthoritylongdelay01
+schema_version: v1.5.6
+type: standard
+title:
+- language: en
+  script: Latn
+  content: Command Authority Across Long Delay and Intermittent Contact
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-command-authority-long-delay-01
+docidentifier:
+- content: draft-morrison-command-authority-long-delay
+  type: Internet-Draft
+- content: draft-morrison-command-authority-long-delay-01
+  type: Internet-Draft
+  primary: true
+docnumber: I-D.morrison-command-authority-long-delay
+date:
+- type: published
+  at: '2026-11-25'
+contributor:
+- role:
+  - type: author
+  person:
+    name:
+      forename:
+      - language: en
+        script: Latn
+        content: Blake
+      - language: en
+        script: Latn
+        initial: B
+      formatted_initials:
+        language: en
+        content: B.
+      surname:
+        language: en
+        content: Morrison
+      completename:
+        language: en
+        content: Blake Morrison
+    affiliation:
+    - organization:
+        name:
+        - language: en
+          content: Alter Meridian Pty Ltd
+version:
+- content: '01'
+language:
+- en
+script:
+- Latn
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>An enforcement point that checks agent-originated commands offline
+       can be out of contact with the party that issues authority for
+       anything from about 2.6 seconds to about two weeks, and learns of no
+       revocation in that time.  This document profiles the Command
+       Authority Envelope of the operational-technology command authority
+       profile for that case.  Two implementations have to agree on how an
+       enforcement point decides, from a signed revocation status and a
+       monotonic counter, that revocation status has gone silent past a
+       declared budget, and on what a grant written in advance, a
+       contingency grant, permits during that silence.  The profile adds one
+       grant field and one declared bound, a second revocation latency
+       budget for the grants that field marks.  It also states how expiry
+       and maximum age are checked against a declared clock uncertainty,
+       which way an unknown revocation check fails for each action class,
+       and how a human approval signed before a command departs stays bound
+       to one action.</p>
+relation:
+- type: updates
+  bibitem:
+    formattedref:
+      content: draft-morrison-command-authority-long-delay-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-command-authority-long-delay-00
+    docidentifier:
+    - content: draft-morrison-command-authority-long-delay-00
+      type: Internet-Draft
+      primary: true
+series:
+- type: main
+  title:
+  - language: en
+    script: Latn
+    content: Internet-Draft
+  number: draft-morrison-command-authority-long-delay-01
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf

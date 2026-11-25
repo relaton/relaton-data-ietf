@@ -1,0 +1,58 @@
+---
+id: draftmorrisonsubstratewake
+schema_version: v1.5.6
+formattedref:
+  content: draft-morrison-substrate-wake
+title:
+- language: en
+  script: Latn
+  content: 'Substrate Wake: Armed-Wait Liveness Without Addressability'
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-morrison-substrate-wake-00
+docidentifier:
+- content: draft-morrison-substrate-wake
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-25'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>This memo specifies the armed wait, a way for a turn-based agent
+       session to be re-entered by an incoming message without becoming a
+       network-addressable endpoint and without polling any remote party.
+       At the end of a turn a session suspends onto a substrate its own host
+       already maintains: a local projection of the frames delivered to its
+       principal's identity handle.  An observer on the same host watches
+       that projection and re-enters the session the moment a frame of a
+       wake class arrives, or when a bounded window closes.  The session
+       holds no socket, publishes no address and carries no session
+       identifier on any wire.  The memo defines the wake class, the arm and
+       wake procedure, the three outcomes of an arm, the delivery and
+       ordering properties a woken session can rely on, and the failure
+       behaviour.  It builds on the agent-channel frame of draft-morrison-
+       agent-channel-fan-out and the coordination posture of draft-morrison-
+       substrate-observation.  Under the agent-channel memo's rule for new
+       kinds, it defines the four frame kinds it relies on that the agent-
+       channel memo does not define.  Liveness obtained this way is an
+       optimisation over asynchronous delivery and never replaces it.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-morrison-substrate-wake-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-morrison-substrate-wake-00
+    docidentifier:
+    - content: draft-morrison-substrate-wake-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
