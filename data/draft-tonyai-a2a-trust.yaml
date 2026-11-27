@@ -9,14 +9,14 @@ title:
   content: Agent-to-Agent Trust, Identity, and Verifiable Provenance
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-tonyai-a2a-trust-03
+  content: https://datatracker.ietf.org/doc/html/draft-tonyai-a2a-trust-04
 docidentifier:
 - content: draft-tonyai-a2a-trust
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-09-04'
+  at: '2026-11-27'
 abstract:
 - language: en
   script: Latn
@@ -29,10 +29,16 @@ abstract:
        organizational agent interactions are explicitly authorized.  The
        model applies existing PKI primitives (X.509, CRL, CSR) and
        established identity patterns (OAuth 2.0, On-Behalf-Of) to the
-       problem of agent provenance.  This document does not address agent-
-       to-resource access control, human-in-the-loop orchestration, or agent
-       behavior, as those concerns belong to the resource enforcement layer
-       and the orchestration layer respectively.</p>
+       problem of agent provenance.  It complements the workload identity
+       and OAuth delegation work in progress, supplying what that work
+       leaves to the deployment: who signs an agent's bounds, how agents
+       that create other agents are bounded, and per-call proof that the
+       agent presenting a token is the one it names.  It addresses non-human
+       identity only.  This document does not address agent-to-resource
+       access control, human-in-the-loop orchestration, agent behavior, or
+       the identity of the person an agent acts for, as those concerns
+       belong to the resource enforcement layer, the orchestration layer,
+       and the delegation layer respectively.</p>
 relation:
 - type: includes
   bibitem:
@@ -76,6 +82,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-tonyai-a2a-trust-03
     docidentifier:
     - content: draft-tonyai-a2a-trust-03
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-tonyai-a2a-trust-04
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-tonyai-a2a-trust-04
+    docidentifier:
+    - content: draft-tonyai-a2a-trust-04
       type: Internet-Draft
       primary: true
 ext:

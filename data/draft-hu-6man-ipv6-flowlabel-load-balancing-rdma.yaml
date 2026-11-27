@@ -9,14 +9,14 @@ title:
   content: A RoCEv2 Flow-Level Load Balancing Method Based on the IPv6 Flow Label
 source:
 - type: src
-  content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
+  content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-05
 docidentifier:
 - content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma
   type: Internet-Draft
   primary: true
 date:
 - type: published
-  at: '2026-11-16'
+  at: '2026-11-26'
 abstract:
 - language: en
   script: Latn
@@ -32,10 +32,10 @@ abstract:
        BTH (Base Transport Header) and IB DETH (Datagram Extended Transport
        Header, when present) of the RoCEv2 packet.  By combining this with
        portions of the IPv6 source and destination addresses as an entropy
-       source, a CRC32 hash algorithm generates a 32-bit value, the low 20
-       bits of which are then written into the Flow Label field of the IPv6
-       header.  Network devices can subsequently use the updated "5-tuple +
-       Flow Label" for more granular flow-level load balancing, thereby
+       source, a hash function generates a value, the low 20 bits of which
+       are then written into the Flow Label field of the IPv6 header.
+       Network devices can subsequently use the updated "5-tuple + Flow
+       Label" for more granular flow-level load balancing, thereby
        effectively improving transmission efficiency in high-performance
        networks for workloads such as AI computing.</p>
 relation:
@@ -92,6 +92,17 @@ relation:
       content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
     docidentifier:
     - content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-04
+      type: Internet-Draft
+      primary: true
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-05
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-05
+    docidentifier:
+    - content: draft-hu-6man-ipv6-flowlabel-load-balancing-rdma-05
       type: Internet-Draft
       primary: true
 ext:

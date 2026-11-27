@@ -1,0 +1,79 @@
+---
+id: draftelekularatsattestationtransition
+schema_version: v1.5.6
+formattedref:
+  content: draft-elekula-rats-attestation-transition
+title:
+- language: en
+  script: Latn
+  content: Post-Quantum Attestation Identity Transition Assurance for Remote Attestation
+    Procedures (RATS)
+source:
+- type: src
+  content: https://datatracker.ietf.org/doc/html/draft-elekula-rats-attestation-transition-00
+docidentifier:
+- content: draft-elekula-rats-attestation-transition
+  type: Internet-Draft
+  primary: true
+date:
+- type: published
+  at: '2026-11-27'
+abstract:
+- language: en
+  script: Latn
+  content: |-
+    <p>Remote ATtestation procedureS (RATS) establish confidence in the
+       trustworthiness of remote system components through the appraisal of
+       Evidence by Verifiers and the subsequent consumption of Attestation
+       Results by Relying Parties.
+
+       The transition from classical public-key cryptography to post-quantum
+       cryptography introduces a challenge that is not limited to replacing
+       signature algorithms or key material.
+
+       An attestation identity can change its cryptographic representation
+       while retaining an asserted association with the same physical system
+       component and Attesting Environment.  Establishing that association
+       requires more than validating a signature produced by the replacement
+       key.
+
+       In particular, a transition that relies exclusively on the
+       cryptographic authority of a retiring classical key can inherit the
+       security weakness that motivated the transition.
+
+       This document investigates an independent transition-assurance model
+       for RATS.  It examines how transition authorization, hardware-root
+       evidence, identity binding, migration history, anti-rollback
+       protection, and verifier validation can be represented as
+       independently assessable trust information.
+
+       The document introduces a conceptual Attestation Identity Transition
+       Statement (AITS), a transition-lineage model, and a verifier-side
+       transition validation procedure.
+
+       These constructs are intended to support the investigation of
+       interoperable RATS information models and associated procedures.
+       They do not constitute a new cryptographic algorithm, nor do they
+       establish that a replacement key is trustworthy merely because it
+       possesses a valid signature.
+
+       The document identifies security requirements and open
+       implementation questions for post-quantum attestation migration,
+       particularly for long-lived and hardware-rooted systems.</p>
+relation:
+- type: includes
+  bibitem:
+    formattedref:
+      content: draft-elekula-rats-attestation-transition-00
+    source:
+    - type: src
+      content: https://datatracker.ietf.org/doc/html/draft-elekula-rats-attestation-transition-00
+    docidentifier:
+    - content: draft-elekula-rats-attestation-transition-00
+      type: Internet-Draft
+      primary: true
+ext:
+  schema_version: v1.1.2
+  doctype:
+    content: internet-draft
+  flavor: ietf
